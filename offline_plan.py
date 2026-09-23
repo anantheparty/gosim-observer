@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plan a public-weather Playground trace without an LLM.
+"""Plan a public-weather Playground trace.
 
 For each tile, enumerate safe slot-boundary exposures and calculate the exact
 science value using the frozen scorer's geometry and weather interfaces. Place

@@ -1,5 +1,7 @@
 # 巡天调度方案
 
+完整题面和逐项评分公式见 [PROBLEM_ZH.md](PROBLEM_ZH.md)；复杂度与状态推导见 [THEORY_ZH.md](THEORY_ZH.md)。
+
 比赛要求智能体在连续的观测时隙中，为望远镜选择天区、观测项目、临时请求，或等待。天区有可见时间、曝光时长和优先级，天气和仪器状态会影响得分。完成必做天区、各分区的覆盖指标和限时请求很重要；正式场景还奖励覆盖均匀性。每一步只能使用当时公开的信息。
 
 ## 在线提交
@@ -18,9 +20,18 @@ python3 build_submission.py
 
 `offline_plan.py` 用已公开的天气和几何信息，枚举安全的观测时间段，按科学收益及必做天区的时间紧迫度做区间装箱，再安排限时请求。它只适用于公开天气的练习场景，不用于正式隐藏天气场景。
 
+整数规划版见 [MODEL_ZH.md](MODEL_ZH.md)。它将天区首次观测、请求复访和望远镜独占约束放进同一模型，在本机 CPU 上用 OR-Tools CP-SAT 求解；求解后的决策仍用官方评分器验证。此求解器是离线实验依赖，不在上传的智能体包里。
+
 ```sh
 python3 offline_plan.py --scenario scenarios/dev-reference --out run_plan/decisions.csv
 python3 score_decisions.py --scenario scenarios/dev-reference --decisions run_plan/decisions.csv --out run_plan/score_report.json
 ```
 
-本地 `dev-reference` 评分为 15533.87（64 个天区、全部可完成请求）；压缩包在网站练习场两场景平均 9400.10。正式比赛尚未开放，正式场景表现不能由练习分直接推断。
+```sh
+python3 -m venv .venv-solver
+.venv-solver/bin/python -m pip install ortools
+.venv-solver/bin/python optimize_public.py --scenario scenarios/dev-reference --out run_cp/decisions.csv --time-limit 90
+python3 score_decisions.py --scenario scenarios/dev-reference --decisions run_cp/decisions.csv --out run_cp/score_report.json
+```
+
+网站已核实贪心构造器的 `dev-reference` 本地评分与在线评分一致；之后的整数规划版只在本地验证，暂不再上传。正式比赛尚未开放，正式场景表现不能由练习分直接推断。
