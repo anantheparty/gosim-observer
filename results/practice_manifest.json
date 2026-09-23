@@ -6,25 +6,25 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_offline": {
-    "completed_observations": 5763,
-    "method": "cross-basin event-level LNS plus full-night restricted CP recombination; scorer verified",
-    "observations": 5823,
+    "completed_observations": 5714,
+    "method": "diverse surrogate-seeded first order plus exact witness-free six-tile event LNS; scorer verified",
+    "observations": 5773,
     "path": "results/practice_best.csv",
     "score": {
-      "base_science": 15467.601436,
+      "base_science": 15469.606253,
       "penalties": {
-        "avoidable_wait": 2123.25,
+        "avoidable_wait": 2123.4,
         "flexible_shortfall": 0.0,
         "request_miss": 0.0,
         "required_miss": 0.0
       },
-      "program_bonus": 3852.787094,
+      "program_bonus": 3853.288298,
       "request_reward": 3920.0,
-      "science": 19320.38853,
-      "total": 21117.138531
+      "science": 19322.894551,
+      "total": 21119.494551
     },
-    "sha256": "674287da2060f2a3c4a8ec2112a2b49b2272763b20c66a291b66179dfe7d1269",
-    "weather_interrupted_observations": 60
+    "sha256": "ce637a3d24c879d13a73e4001f8f06b0f05405cbf9df2e21264abfb9d564852c",
+    "weather_interrupted_observations": 59
   },
   "branch": "research/structured-optimizer",
   "core": {
