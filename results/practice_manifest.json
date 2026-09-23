@@ -6,26 +6,25 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_offline": {
-    "completed_observations": 5723,
-    "method": "multi-start cross-basin construction followed by exact six-tile event-level large-neighborhood DP; free first visits and affected request witnesses across the entire season; official local replay",
-    "observations": 5782,
+    "completed_observations": 5763,
+    "method": "cross-basin event-level LNS plus full-night restricted CP recombination; scorer verified",
+    "observations": 5823,
     "path": "results/practice_best.csv",
-    "required_events": 89,
     "score": {
-      "base_science": 15474.21914,
+      "base_science": 15467.601436,
       "penalties": {
-        "avoidable_wait": 2134.95,
+        "avoidable_wait": 2123.25,
         "flexible_shortfall": 0.0,
         "request_miss": 0.0,
         "required_miss": 0.0
       },
-      "program_bonus": 3854.44152,
+      "program_bonus": 3852.787094,
       "request_reward": 3920.0,
-      "science": 19328.66066,
-      "total": 21113.71066
+      "science": 19320.38853,
+      "total": 21117.138531
     },
-    "sha256": "c963bc8522daf5076d404cc93ae0d836cf919eb25fc98ec8386b7b5dbd2301e2",
-    "weather_interrupted_observations": 59
+    "sha256": "674287da2060f2a3c4a8ec2112a2b49b2272763b20c66a291b66179dfe7d1269",
+    "weather_interrupted_observations": 60
   },
   "branch": "research/structured-optimizer",
   "core": {
