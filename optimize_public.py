@@ -206,7 +206,7 @@ def write_decisions(path, plan):
             writer.writerow({"decision_id": f"D{index:06d}", "slot_id": row.slot_id,
                              "action": "observe", "tile_id": row.tile_id,
                              "program": row.program, "request_id": row.request_id,
-                             "reason": "integer interval schedule"})
+                             "reason": ""})
 
 
 def main():

@@ -184,7 +184,7 @@ def main():
             writer.writerow({"decision_id": f"D{index:06d}", "slot_id": option.slot_id,
                              "action": "observe", "tile_id": option.tile_id,
                              "program": option.program, "request_id": option.request_id,
-                             "reason": "public-weather interval plan"})
+                             "reason": ""})
     print(f"wrote {len(plan)} observations to {args.out}")
 
 

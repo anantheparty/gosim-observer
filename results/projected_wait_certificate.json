@@ -1,0 +1,77 @@
+{
+  "complete_arc_count": 918757,
+  "impossible_requests": [
+    "RQ0015"
+  ],
+  "price_certificate": "runs/practice_bound/resource_prices.npz",
+  "price_sha256": "4579a5dc602003c4e843bfc9ad6b4335ffed67f395d73ae621cd6314fb1aef6a",
+  "resource_plus_request_cents": 2434816,
+  "results": [
+    {
+      "external_science_cents": 2042816,
+      "key_tiles": [],
+      "projected_dp_cents": 0,
+      "request_cents": 392000,
+      "required_key_mask": 0,
+      "theta_constant_cents": 0,
+      "theta_uniform_cents": 0,
+      "total_upper_bound": 24348.16,
+      "total_upper_bound_cents": 2434816
+    },
+    {
+      "external_science_cents": 2042816,
+      "key_tiles": [],
+      "projected_dp_cents": 0,
+      "request_cents": 392000,
+      "required_key_mask": 0,
+      "theta_constant_cents": 8576,
+      "theta_uniform_cents": 134,
+      "total_upper_bound": 24433.92,
+      "total_upper_bound_cents": 2443392
+    },
+    {
+      "external_science_cents": 1889098,
+      "key_tiles": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031"
+      ],
+      "projected_dp_cents": 153715,
+      "request_cents": 392000,
+      "required_key_mask": 1,
+      "theta_constant_cents": 0,
+      "theta_uniform_cents": 0,
+      "total_upper_bound": 24348.13,
+      "total_upper_bound_cents": 2434813
+    },
+    {
+      "external_science_cents": 1889098,
+      "key_tiles": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031"
+      ],
+      "projected_dp_cents": 43389,
+      "request_cents": 392000,
+      "required_key_mask": 1,
+      "theta_constant_cents": 8040,
+      "theta_uniform_cents": 134,
+      "total_upper_bound": 23325.27,
+      "total_upper_bound_cents": 2332527
+    }
+  ],
+  "scalar_audit": {
+    "max_envelope_violation_cents": 0,
+    "minimum_envelope_slack_cents": 0,
+    "omitted_scalar_legal_arcs": 0,
+    "omitted_weather_interruption_arcs": 0,
+    "scalar_checked_arcs": 918757,
+    "scalar_checked_start_points": 3044352,
+    "scalar_weather_interruption_cases": 12030
+  },
+  "scenario": "scenarios/dev-reference",
+  "time_units": 47568,
+  "weather_interruption_arc_count": 850
+}

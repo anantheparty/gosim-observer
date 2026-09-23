@@ -1,11 +1,12 @@
 # 练习场可复算结果
 
-这里保留两份有区别的决策序列，而非每轮搜索的回放目录：
+这里保留用于复算和继续搜索的决策序列，而非每轮搜索的回放目录：
 
 - `practice_reference.csv`：92 次观测的参考计划，用于分析等待费用与固定顺序计时。
-- `practice_best.csv`：当前最好的**离线练习场**计划，857 次观测。它的天气来自公开的 `dev-reference` 真值，不能视作正式赛场可执行的在线策略。
+- `practice_core.csv`：89 个必需事件，作为全游标路径 DP 与块内排列 DP 的输入。
+- `practice_best.csv`：当前最好的**离线练习场**计划，4,824 次合法观测，其中 4,783 次完整成功、41 次合法天气中断，回放得 21,016.570923。它使用公开的 `dev-reference` 天气真值，不能视作正式赛场可执行的在线策略。
 
-`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。官方评分器可直接复算：
+`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。[ACTIVE_REQUEST_DP_ZH.md](../ACTIVE_REQUEST_DP_ZH.md) 记录当前可行路径算法，[REQUEST_UNCONDITIONAL_BOUND_ZH.md](../REQUEST_UNCONDITIONAL_BOUND_ZH.md) 证明全局上界。官方评分器可直接复算：
 
 ```sh
 python3 score_decisions.py --scenario scenarios/dev-reference --decisions results/practice_reference.csv --out runs/practice_reference_score.json

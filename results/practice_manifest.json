@@ -1,21 +1,58 @@
 {
+  "all_requests_conditional_bound": {
+    "request_reward": 3920.0,
+    "science": 19551.77,
+    "total": 23471.77,
+    "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
+  },
   "best_offline": {
-    "method": "857-event fixed-order exact timing DP over the full 150-second grid; source order from the denser exact-wait CP model",
+    "completed_observations": 4783,
+    "method": "64 fixed first-visit order, exact all-cursor active-request-mask DP with all legal tagged revisits and weather-interrupted arcs; all 17 feasible requests enforced",
+    "observations": 4824,
+    "optional_tagged_revisits": 4719,
     "path": "results/practice_best.csv",
+    "required_events": 64,
     "score": {
+      "base_science": 15163.10735,
       "penalties": {
-        "avoidable_wait": 4520.25,
+        "avoidable_wait": 1843.2,
         "flexible_shortfall": 0.0,
         "request_miss": 0.0,
         "required_miss": 0.0
       },
+      "program_bonus": 3776.663573,
       "request_reward": 3920.0,
-      "science": 18776.216985,
-      "total": 18175.966985
+      "science": 18939.770923,
+      "total": 21016.570923
     },
-    "sha256": "865fb2d9cf6386d085110d97465b89c1994c91e690e8673b77d6c438e300511c"
+    "sha256": "dcbe30ae62d8bea83ba234d6acf7092bbc4139f9456bb161a0429297e2f9c648",
+    "weather_interrupted_observations": 41
   },
   "branch": "research/structured-optimizer",
+  "core": {
+    "events": 89,
+    "path": "results/practice_core.csv",
+    "sha256": "b14e5b08fde63c2a8950aa1309b6080abb9b7cdf4b1981d428f100c95351fdcb"
+  },
+  "full_problem_projected_wait_bound": {
+    "certificate": "results/projected_wait_certificate.json",
+    "key_tiles": [
+      "T00018",
+      "T00029",
+      "T00030",
+      "T00031"
+    ],
+    "theta_cents": 134,
+    "total": 23325.27,
+    "verification": "python3 bounds_practice_projection.py --prices runs/practice_bound/resource_prices.npz --key-set T00018,T00029,T00030,T00031 --theta-cents 134 --audit"
+  },
+  "full_problem_request_projected_bound": {
+    "branch_cases": 196608,
+    "certificate": "results/practice_request_unconditional.json",
+    "request_subsets": 131072,
+    "total": 22524.73,
+    "verification": "python3 bounds_request_unconditional.py --out results/practice_request_unconditional.json"
+  },
   "full_problem_resource_bound": {
     "certificate": "runs/practice_bound/resource_prices.npz",
     "total": 24348.16,
