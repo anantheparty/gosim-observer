@@ -108,5 +108,5 @@ def choose_action(candidates, snapshot, memory):
             best_rate, best = rate, candidate
 
     memory["pending"] = {"tile_id": best["tile_id"], "program": best["program"]}
-    best["reason"] = "deterministic marginal score, deadline, and coverage"
+    best["reason"] = ""
     return best
