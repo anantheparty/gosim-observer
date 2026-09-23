@@ -156,8 +156,8 @@ def run(args):
 
 if __name__ == "__main__":
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--traces",type=Path,default=Path("runs/surrogate_training"))
-    parser.add_argument("--frozen-orders",type=Path,default=Path("runs/surrogate_proposals_frozen.json"))
-    parser.add_argument("--frozen-scores",type=Path,default=Path("runs/surrogate_frozen_eval.json"))
-    parser.add_argument("--out",type=Path,default=Path("runs/pairwise_surrogate_study.json"))
+    parser.add_argument("--traces",type=Path,default=Path("results/practice_order_training.npz"))
+    parser.add_argument("--frozen-orders",type=Path,default=Path("results/practice_order_frozen_proposals.json"))
+    parser.add_argument("--frozen-scores",type=Path,default=Path("results/practice_order_frozen_scores.json"))
+    parser.add_argument("--out",type=Path,default=Path("results/practice_pairwise_surrogate_study.json"))
     run(parser.parse_args())

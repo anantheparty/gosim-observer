@@ -140,15 +140,18 @@ def _request_hyperedges(model: PracticeModel) -> list[set[int]]:
 
 def _rank_windows(model: PracticeModel, oracle: Oracle, source: Path):
     """Conservative rank windows from public availability and request deadlines."""
-    rows = load_decisions(source, allow_reports=False)
+    report = model.authoritative_score(source)
     first = {}
-    for row in rows:
-        i = model.tile_index[row.tile_id]
+    for action in report["actions"]:
+        if action["action"] != "observe" or action["outcome"] != "completed":
+            continue
+        i = model.tile_index[action["tile_id"]]
         if i not in first:
-            first[i] = model.scorer.slot_indices[row.slot_id] * 6
+            instant = datetime.fromisoformat(action["start_utc"].replace("Z", "+00:00")).timestamp()
+            first[i] = int(np.searchsorted(model.instants, instant, side="left"))
     if len(first) != len(model.tiles):
         raise ValueError("seed does not contain all first visits")
-    order = active._first_order(model, source)
+    order = sorted(first, key=lambda i: first[i])
     reference_times = np.array([first[i] for i in order], dtype=np.int32)
     minimum = np.zeros(len(model.tiles), dtype=np.int32)
     maximum = np.full(len(model.tiles), model.n_units, dtype=np.int32)
@@ -162,6 +165,8 @@ def _rank_windows(model: PracticeModel, oracle: Oracle, source: Path):
     # the exact oracle still decides feasibility and labels.
     for rid, request in model.scorer.requests.items():
         if rid == "RQ0015":
+            continue
+        if request.required_tile_count != len(model.scorer.request_tiles[rid]):
             continue
         deadline = request.deadline_utc.timestamp()
         for tile_id in model.scorer.request_tiles[rid]:

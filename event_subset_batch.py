@@ -24,7 +24,10 @@ from multistart_large_neighborhood import Oracle, REFERENCE, SCENARIO
 from practice_lns import PracticeModel
 
 
-def candidate_groups(model: PracticeModel, oracle: Oracle, incumbent: Path, seed: int):
+def candidate_groups(
+    model: PracticeModel, oracle: Oracle, incumbent: Path,
+    seed: int, size_ten: bool = False,
+):
     rng = random.Random(seed)
     events, report = _core_events(model, incumbent)
     first_order = [e["tile"] for e in events if e["first"]]
@@ -44,13 +47,13 @@ def candidate_groups(model: PracticeModel, oracle: Oracle, incumbent: Path, seed
         for rid in sorted(model.scorer.requests) if rid != "RQ0015"
     ]
     group_specs = []
-    for length in (6, 8):
+    for length in ((10,) if size_ten else (6, 8)):
         for start in range(0, 65 - length, 2):
             group_specs.append((f"rank_window_{length}_{start}", set(first_order[start:start + length])))
     for a in range(len(req_sets)):
         for b in range(a + 1, min(a + 4, len(req_sets))):
             group = req_sets[a] | req_sets[b]
-            if len(group) > 8:
+            if len(group) > (10 if size_ten else 8):
                 continue
             # Fill to 6 with tiles near the group's median first-visit rank.
             ranks = [first_order.index(i) for i in group]
@@ -59,11 +62,12 @@ def candidate_groups(model: PracticeModel, oracle: Oracle, incumbent: Path, seed
                 (i for i in first_order if i not in group),
                 key=lambda i: (abs(first_order.index(i) - pivot), -regret[i]),
             )
-            group.update(nearby[:max(0, 6 - len(group))])
+            group.update(nearby[:max(0, (10 if size_ten else 6) - len(group))])
             group_specs.append((f"request_union_{a}_{b}", group))
     high_regret = list(np.argsort(-regret))[:24]
-    for start in range(0, 19, 2):
-        group_specs.append((f"regret_{start}", set(map(int, high_regret[start:start + 6]))))
+    for start in range(0, 19 if not size_ten else 15, 2):
+        width = 10 if size_ten else 6
+        group_specs.append((f"regret_{start}", set(map(int, high_regret[start:start + width]))))
     closure = [
         "T00002", "T00003", "T00005", "T00006", "T00013", "T00014",
         "T00027", "T00031", "T00032", "T00039", "T00042", "T00044",
@@ -71,9 +75,11 @@ def candidate_groups(model: PracticeModel, oracle: Oracle, incumbent: Path, seed
     ]
     closure_ids = [model.tile_index[t] for t in closure]
     for j in range(32):
-        group_specs.append((f"closure_sample_{j}", set(rng.sample(closure_ids, 6 if j % 2 else 8))))
+        width = 10 if size_ten else (6 if j % 2 else 8)
+        group_specs.append((f"closure_sample_{j}", set(rng.sample(closure_ids, width))))
     for j in range(40):
-        group = set(rng.sample(first_order, 6 if j % 2 else 8))
+        width = 10 if size_ten else (6 if j % 2 else 8)
+        group = set(rng.sample(first_order, width))
         group_specs.append((f"nonlocal_{j}", group))
     unique = []
     seen_groups = set()
@@ -85,6 +91,28 @@ def candidate_groups(model: PracticeModel, oracle: Oracle, incumbent: Path, seed
     return unique
 
 
+def external_groups(path: Path, model: PracticeModel):
+    """Load tile groups proposed by an independent mathematical selector."""
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(payload, dict):
+        payload = payload["groups"]
+    groups = []
+    seen = set()
+    for ordinal, item in enumerate(payload, 1):
+        name = item.get("name", f"external_{ordinal}") if isinstance(item, dict) else f"external_{ordinal}"
+        tile_ids = item.get("tiles", item.get("tile_ids")) if isinstance(item, dict) else item
+        if tile_ids is None:
+            raise ValueError(f"group {ordinal} has no tiles")
+        tiles = sorted({model.tile_index[t] if isinstance(t, str) else int(t) for t in tile_ids})
+        if not 1 <= len(tiles) <= 11:
+            raise ValueError(f"group {ordinal} size {len(tiles)} is outside 1..11")
+        key = tuple(tiles)
+        if key not in seen:
+            seen.add(key)
+            groups.append((str(name), tiles))
+    return groups
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--incumbent", type=Path, required=True)
@@ -92,6 +120,14 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=85001)
     parser.add_argument("--rounds", type=int, default=2)
     parser.add_argument("--max-groups", type=int, default=300)
+    parser.add_argument("--skip-groups", type=int, default=0,
+                        help="skip this many structured groups in each round")
+    parser.add_argument("--size-ten", action="store_true",
+                        help="release ten tiles per exact neighborhood")
+    parser.add_argument("--groups-json", type=Path,
+                        help="JSON list of independent tile groups; bypass generated groups")
+    parser.add_argument("--release-witnesses", action="store_true",
+                        help="also release every nonfirst request witness event")
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     best_path = args.out / "best.csv"
@@ -104,14 +140,22 @@ def main() -> None:
     with trace.open("w", encoding="utf-8") as log:
         count = 0
         for round_no in range(args.rounds):
-            groups = candidate_groups(model, oracle, best_path, args.seed + round_no)
-            for name, selected in groups:
+            groups = (
+                external_groups(args.groups_json, model) if args.groups_json
+                else candidate_groups(model, oracle, best_path, args.seed + round_no, args.size_ten)
+            )
+            for ordinal, (name, selected) in enumerate(groups, 1):
+                if ordinal <= args.skip_groups:
+                    continue
                 if count >= args.max_groups:
                     break
                 count += 1
                 temporary = args.out / "candidate.csv"
                 t0 = time.monotonic()
-                result = solve(model, oracle, best_path, selected, temporary)
+                result = solve(
+                    model, oracle, best_path, selected, temporary,
+                    release_witnesses=args.release_witnesses,
+                )
                 score = float(result.get("candidate_total", -np.inf))
                 record = {
                     "index": count, "round": round_no, "group": name,
@@ -120,6 +164,7 @@ def main() -> None:
                     "best_before": best,
                     "seconds": time.monotonic() - t0,
                     "status": result["status"],
+                    "release_witnesses": args.release_witnesses,
                 }
                 if score > best + 1e-6:
                     best = score

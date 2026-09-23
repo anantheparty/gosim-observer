@@ -2,7 +2,7 @@
 
 ## 本仓库的研究结果
 
-比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,113.710660**，文件为 [results/practice_best.csv](results/practice_best.csv)，多起点及事件层精确大邻域搜索见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md)；**这条先知路径使用了整季公开天气真值与全部请求**。对任意合法路径的最新无条件上界为 **21,796.70**，关键天区投影与请求集合证书见 [GLOBAL_INTERVAL_BOUND_ZH.md](GLOBAL_INTERVAL_BOUND_ZH.md)。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
+比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,119.494551**，文件为 [results/practice_best.csv](results/practice_best.csv)；多起点、事件层精确大邻域搜索与受限列 CP 重组见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md) 和 [POPULATION_CP_ZH.md](POPULATION_CP_ZH.md)。**这条先知路径使用了整季公开天气真值与全部请求**。对任意合法路径的最新无条件上界为 **21,796.70**，关键天区投影与请求集合证书见 [GLOBAL_INTERVAL_BOUND_ZH.md](GLOBAL_INTERVAL_BOUND_ZH.md)。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
 
 只使用已发布快照的在线策略为 [agent/model_policy.py](agent/model_policy.py)，模型及独立场景验证见 [MODEL_POLICY_ZH.md](MODEL_POLICY_ZH.md)。`python3 build_submission.py` 从版本化源码构建可执行包；包是可再生输出，不保存在 Git。离线求解脚本额外需要 [requirements-research.txt](requirements-research.txt) 所列依赖，可用 `python3 -m venv .venv-solver` 后运行 `.venv-solver/bin/python -m pip install -r requirements-research.txt` 重建本地求解环境。
 

@@ -23,6 +23,20 @@ KNOTS = 7
 
 
 def load_traces(directory: Path):
+    if directory.is_file():
+        with np.load(directory, allow_pickle=False) as data:
+            indices = np.asarray(data["order_indices"], dtype=np.uint8)
+            y = np.asarray(data["scores"], dtype=np.float64)
+            family = np.asarray(data["families"])
+            total = int(data["raw_rows"])
+        if indices.ndim != 2 or indices.shape[1] != 64 or len(indices) != len(y) or len(y) != len(family):
+            raise ValueError("scored-order dataset has inconsistent dimensions")
+        if np.any(np.sort(indices, axis=1) != np.arange(64, dtype=np.uint8)):
+            raise ValueError("scored-order dataset contains an invalid permutation")
+        orders = [tuple(TILES[int(i)] for i in row) for row in indices]
+        if len(set(orders)) != len(orders) or not np.all(np.isfinite(y)):
+            raise ValueError("scored-order dataset has duplicates or nonfinite scores")
+        return orders, y, family, total
     scored: dict[tuple[str, ...], tuple[float, str]] = {}
     total = 0
     for path in sorted(directory.glob("*/trace_*.jsonl")):
@@ -364,7 +378,7 @@ def propose_subset(orders: list[tuple[str, ...]], y: np.ndarray,
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--traces", type=Path,
-                        default=ROOT / "runs" / "surrogate_training")
+                        default=ROOT / "results" / "practice_order_training.npz")
     parser.add_argument("--out", type=Path,
                         default=ROOT / "runs" / "surrogate_proposals.json")
     parser.add_argument("--ridge", type=float, default=200.0)

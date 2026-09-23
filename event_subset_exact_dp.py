@@ -92,13 +92,24 @@ def _core_events(model: PracticeModel, path: Path):
     return events, report
 
 
-def _fixed_arrays(model: PracticeModel, data: dict, events: list[dict], selected: list[int]):
+def _fixed_arrays(
+    model: PracticeModel, data: dict, events: list[dict], selected: list[int],
+    release_witnesses: bool = False,
+):
     n = model.n_units
     selected_set = set(selected)
-    fixed = [e for e in events if e["tile"] not in selected_set]
+    fixed = [
+        e for e in events
+        if e["tile"] not in selected_set and (e["first"] or not release_witnesses)
+    ]
     fixed_end = np.full(n + 1, -1, dtype=np.int32)
     fixed_tile = np.full(n + 1, -1, dtype=np.int16)
     fixed_link = np.full(n + 1, -1, dtype=np.int8)
+    fixed_options = np.full(
+        (n + 1, int(data["tile_links"].shape[1]) + 1),
+        -1, dtype=np.int8,
+    )
+    fixed_option_count = np.zeros(n + 1, dtype=np.uint8)
     fixed_first = np.zeros(n + 1, dtype=np.uint8)
     fixed_gain = np.zeros(n + 1, dtype=np.float64)
     occupied = np.zeros(n + 1, dtype=np.int32)
@@ -125,11 +136,24 @@ def _fixed_arrays(model: PracticeModel, data: dict, events: list[dict], selected
             if len(matches) != 1:
                 raise AssertionError("mandatory request link missing")
             fixed_link[u] = matches[0]
+        options = ([-1] if e["first"] else []) + [
+            int(data["tile_links"][i, j])
+            for j in range(int(data["tile_link_count"][i]))
+            if data["local_bit"][u, int(data["tile_links"][i, j])] != -1
+        ]
+        if not options or (fixed_link[u] >= 0 and fixed_link[u] not in options):
+            raise AssertionError("fixed observation lost its original valid label")
+        fixed_option_count[u] = len(options)
+        fixed_options[u, :len(options)] = options
     occupied_prefix = np.zeros(n + 2, dtype=np.int32)
     np.cumsum(occupied, out=occupied_prefix[1:])
     done_fixed = np.bitwise_or.accumulate(complete_at)
     last_fixed_end = max((e["end"] for e in fixed), default=0)
-    return fixed, fixed_end, fixed_tile, fixed_link, fixed_first, fixed_gain, occupied_prefix, done_fixed, last_fixed_end
+    return (
+        fixed, fixed_end, fixed_tile, fixed_link, fixed_options,
+        fixed_option_count, fixed_first, fixed_gain,
+        occupied_prefix, done_fixed, last_fixed_end,
+    )
 
 
 @njit(cache=True)
@@ -137,7 +161,8 @@ def _solve_graph(
     dp, parent_source, parent_action,
     nstates, selected, selected_global,
     scores, exposure_units,
-    fixed_end, fixed_tile, fixed_link, fixed_first, fixed_gain,
+    fixed_end, fixed_tile, fixed_options, fixed_option_count,
+    fixed_first, fixed_gain,
     occupied_prefix, done_fixed,
     actionable, offsets, active_count, epochs, next_deadline,
     active_global, local_bit, local_global,
@@ -163,19 +188,21 @@ def _solve_graph(
                 if not np.isfinite(value):
                     continue
                 if fixed_v >= 0:
-                    mapped = active._map_mask(
-                        u, fixed_v, mask, int(fixed_link[u]),
-                        epochs, next_deadline, active_global, local_bit,
-                        local_global, active_count, req_deadline,
-                        req_mask, req_need,
-                    )
-                    if mapped >= 0:
-                        target = subset * nstates + offsets[fixed_v] + mapped
-                        proposal = value + fixed_gain[u]
-                        if proposal > dp[target] + 1e-9:
-                            dp[target] = proposal
-                            parent_source[target] = source
-                            parent_action[target] = FIXED
+                    for option in range(fixed_option_count[u]):
+                        link = int(fixed_options[u, option])
+                        mapped = active._map_mask(
+                            u, fixed_v, mask, link,
+                            epochs, next_deadline, active_global, local_bit,
+                            local_global, active_count, req_deadline,
+                            req_mask, req_need,
+                        )
+                        if mapped >= 0:
+                            target = subset * nstates + offsets[fixed_v] + mapped
+                            proposal = value + fixed_gain[u]
+                            if proposal > dp[target] + 1e-9:
+                                dp[target] = proposal
+                                parent_source[target] = source
+                                parent_action[target] = FIXED + link + 1
                     continue
                 if free_wait:
                     mapped = active._map_mask(
@@ -270,22 +297,27 @@ def _solve_graph(
                             parent_action[target] = FIRST_BASE + i * CODE_WIDTH + link + 1
 
 
-def solve(model: PracticeModel, oracle: Oracle, incumbent: Path, selected: list[int], out: Path):
-    if len(set(selected)) != len(selected) or not 1 <= len(selected) <= 10:
-        raise ValueError("selected tile set must contain 1 to 10 distinct tiles")
+def solve(
+    model: PracticeModel, oracle: Oracle, incumbent: Path,
+    selected: list[int], out: Path, release_witnesses: bool = False,
+):
+    if len(set(selected)) != len(selected) or not 0 <= len(selected) <= 11:
+        raise ValueError("selected tile set must contain 0 to 11 distinct tiles")
     data = oracle.data
     core, original = _core_events(model, incumbent)
     (
-        fixed, fixed_end, fixed_tile, fixed_link, fixed_first, fixed_gain,
+        fixed, fixed_end, fixed_tile, fixed_link,
+        fixed_options, fixed_option_count,
+        fixed_first, fixed_gain,
         occupied_prefix, done_fixed, last_fixed_end,
-    ) = _fixed_arrays(model, data, core, selected)
+    ) = _fixed_arrays(model, data, core, selected, release_witnesses)
     for event in fixed:
         if event["first"]:
             fixed_gain[event["start"]] = float(oracle.scores[event["tile"], event["start"]])
     nstates = int(data["offsets"][-1])
     total = nstates * (1 << len(selected))
-    if total > 900_000_000:
-        raise ValueError("dense selected-state table exceeds 900 million entries")
+    if total > 2_000_000_000:
+        raise ValueError("dense selected-state table exceeds two billion entries")
     dp = np.full(total, -np.inf, dtype=np.float64)
     parent_source = np.full(total, -1, dtype=np.int32)
     parent_action = np.zeros(total, dtype=np.uint16)
@@ -301,7 +333,8 @@ def solve(model: PracticeModel, oracle: Oracle, incumbent: Path, selected: list[
         dp, parent_source, parent_action,
         nstates, np.asarray(selected, dtype=np.int16), selected_global,
         oracle.scores, model.exposure_units,
-        fixed_end, fixed_tile, fixed_link, fixed_first, fixed_gain,
+        fixed_end, fixed_tile, fixed_options, fixed_option_count,
+        fixed_first, fixed_gain,
         occupied_prefix, done_fixed,
         model.actionable, data["offsets"], data["active_count"],
         data["epochs"], data["next_deadline"], data["active_global"],
@@ -359,7 +392,7 @@ def solve(model: PracticeModel, oracle: Oracle, incumbent: Path, selected: list[
             partial_flags.append(False)
         else:
             i = int(fixed_tile[u])
-            link = int(fixed_link[u])
+            link = action - FIXED - 1
             rid = "" if link < 0 else data["tag_names"][int(data["link_req"][link])]
             path.append((u, i, rid, PROGRAMS[int(oracle.programs[i, u])], bool(fixed_first[u])))
             partial_flags.append(False)
@@ -382,6 +415,7 @@ def solve(model: PracticeModel, oracle: Oracle, incumbent: Path, selected: list[
         raise AssertionError("event-level DP objective differs from scorer")
     return {
         "status": "OPTIMAL_RESTRICTED", "selected_tiles": [model.tile_ids[i] for i in selected],
+        "release_witnesses": release_witnesses,
         "fixed_events": len(fixed), "released_core_events": len(core) - len(fixed),
         "states": total, "search_seconds": search_seconds,
         "original_total": original["score"]["total"],
@@ -395,14 +429,18 @@ def solve(model: PracticeModel, oracle: Oracle, incumbent: Path, selected: list[
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--incumbent", type=Path, default=Path("results/practice_best.csv"))
-    parser.add_argument("--tiles", nargs="+", required=True)
+    parser.add_argument("--tiles", nargs="*", default=[],
+                        help="released tiles; omit for fixed-core filler diagnostic")
+    parser.add_argument("--release-witnesses", action="store_true",
+                        help="release all nonfirst request witness events as well")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
     args.out.parent.mkdir(parents=True, exist_ok=True)
     model = PracticeModel(SCENARIO, REFERENCE)
     oracle = Oracle(model)
     selected = [model.tile_index[t] for t in args.tiles]
-    result = solve(model, oracle, args.incumbent, selected, args.out)
+    result = solve(model, oracle, args.incumbent, selected, args.out,
+                   release_witnesses=args.release_witnesses)
     args.out.with_suffix(".json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
