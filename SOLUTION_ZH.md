@@ -1,6 +1,6 @@
 # 巡天调度方案
 
-完整题面和逐项评分公式见 [PROBLEM_ZH.md](PROBLEM_ZH.md)；复杂度与状态推导见 [THEORY_ZH.md](THEORY_ZH.md)。
+完整题面和逐项评分公式见 [PROBLEM_ZH.md](PROBLEM_ZH.md)；复杂度与状态推导见 [THEORY_ZH.md](THEORY_ZH.md)；正式场景的可证明分数上界与在线期望模型见 [BOUNDS_ZH.md](BOUNDS_ZH.md)。
 
 比赛要求智能体在连续的观测时隙中，为望远镜选择天区、观测项目、临时请求，或等待。天区有可见时间、曝光时长和优先级，天气和仪器状态会影响得分。完成必做天区、各分区的覆盖指标和限时请求很重要；正式场景还奖励覆盖均匀性。每一步只能使用当时公开的信息。
 
@@ -35,3 +35,12 @@ python3 score_decisions.py --scenario scenarios/dev-reference --decisions run_cp
 ```
 
 网站已核实贪心构造器的 `dev-reference` 本地评分与在线评分一致；之后的整数规划版只在本地验证，暂不再上传。正式比赛尚未开放，正式场景表现不能由练习分直接推断。
+
+正式场景的公开数据分数上界可在本地复算：
+
+```sh
+python3 bounds_public.py
+.venv-solver/bin/python bounds_night_lp.py
+```
+
+逐夜容量脚本使用上文 `.venv-solver` 中的 OR-Tools。两个数值都是乐观天气、正确异常报告与请求全完成情况下的数学上界，不是正式智能体的预计得分。[BOUNDS_ZH.md](BOUNDS_ZH.md) 给出证明及在线期望决策模型。
