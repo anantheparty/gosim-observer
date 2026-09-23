@@ -4,6 +4,8 @@
 
 2026-09-24 起的系统化练习场研究见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)：它给出完整状态、等待 OR 与请求整包耦合、固定顺序的精确计时 DP、0/1 路径整数规划骨架，以及“受限求解器 bound 不能充当原题上界”的判别。练习场的资源对偶证明、数值审计与价格证书见 [PRACTICE_MODEL_ZH.md](PRACTICE_MODEL_ZH.md)。两份用户思路的勘误与合并见 [SYNTHESIS_ZH.md](SYNTHESIS_ZH.md)。研究代码和证书由本地 Git 分支 `research/structured-optimizer` 管理；仓库没有远端。
 
+只保留两份可复算的练习场决策文件：[参考排程](results/practice_reference.csv)、[当前本地最优排程](results/practice_best.csv)；分数、哈希与适用范围在 [实验记录](results/practice_manifest.json)。其它 `run_*` 回放是可重新生成的中间产物，已清理。压缩包由 `build_submission.py` 临时打包生成，不纳入 Git。
+
 比赛要求智能体在连续的观测时隙中，为望远镜选择天区、观测项目、临时请求，或等待。天区有可见时间、曝光时长和优先级，天气和仪器状态会影响得分。完成必做天区、各分区的覆盖指标和限时请求很重要；正式场景还奖励覆盖均匀性。每一步只能使用当时公开的信息。
 
 ## 在线提交

@@ -192,10 +192,10 @@ def solve_order(
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scenario", type=Path, default=Path("scenarios/dev-reference"))
-    parser.add_argument("--input", type=Path, default=Path("run_cp_reference_v2/decisions.csv"))
+    parser.add_argument("--input", type=Path, default=Path("results/practice_reference.csv"))
     parser.add_argument("--model-seed", type=Path,
                         help="observation-only seed for shared precomputation")
-    parser.add_argument("--out", type=Path, default=Path("run_sequence_dp/decisions.csv"))
+    parser.add_argument("--out", type=Path, default=Path("runs/practice_timing/decisions.csv"))
     args = parser.parse_args()
     model = PracticeModel(args.scenario, args.model_seed or args.input)
     scores, programs = score_table(model)

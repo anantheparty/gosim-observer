@@ -5,6 +5,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parent
 FILES = (
@@ -20,15 +21,15 @@ FILES = (
 
 
 def main():
-    target = ROOT / "submission"
-    target.mkdir(exist_ok=True)
-    for name in FILES:
-        shutil.copy2(ROOT / "agent" / name, target / name)
-    subprocess.run(
-        [sys.executable, str(ROOT / "pack_agent.py"), "--agent", str(target),
-         "--out", str(ROOT / "observer-deterministic.zip"), "--no-env"],
-        check=True,
-    )
+    with tempfile.TemporaryDirectory(prefix="gosim-submit-") as directory:
+        target = Path(directory)
+        for name in FILES:
+            shutil.copy2(ROOT / "agent" / name, target / name)
+        subprocess.run(
+            [sys.executable, str(ROOT / "pack_agent.py"), "--agent", str(target),
+             "--out", str(ROOT / "observer-deterministic.zip"), "--no-env"],
+            check=True,
+        )
 
 
 if __name__ == "__main__":

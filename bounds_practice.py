@@ -177,7 +177,7 @@ def analyze(scenario_root: Path, report_path: Path | None) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scenario", type=Path, default=Path("scenarios/dev-reference"))
-    parser.add_argument("--report", type=Path, default=Path("run_cp_reference_v2/score_report.json"))
+    parser.add_argument("--report", type=Path, default=None)
     args = parser.parse_args()
     print(json.dumps(analyze(args.scenario, args.report), ensure_ascii=False, sort_keys=True))
 

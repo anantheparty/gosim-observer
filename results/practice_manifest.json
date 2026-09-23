@@ -1,0 +1,89 @@
+{
+  "best_offline": {
+    "method": "857-event fixed-order exact timing DP over the full 150-second grid; source order from the denser exact-wait CP model",
+    "path": "results/practice_best.csv",
+    "score": {
+      "penalties": {
+        "avoidable_wait": 4520.25,
+        "flexible_shortfall": 0.0,
+        "request_miss": 0.0,
+        "required_miss": 0.0
+      },
+      "request_reward": 3920.0,
+      "science": 18776.216985,
+      "total": 18175.966985
+    },
+    "sha256": "865fb2d9cf6386d085110d97465b89c1994c91e690e8673b77d6c438e300511c"
+  },
+  "branch": "research/structured-optimizer",
+  "full_problem_resource_bound": {
+    "certificate": "runs/practice_bound/resource_prices.npz",
+    "total": 24348.16,
+    "verification": "python3 bounds_practice_resource.py --verify-certificate runs/practice_bound/resource_prices.npz"
+  },
+  "public_leaderboard_snapshot": {
+    "date": "2026-09-24",
+    "score": 21104.12
+  },
+  "recorded_at": "2026-09-24",
+  "reference": {
+    "path": "results/practice_reference.csv",
+    "score": {
+      "penalties": {
+        "avoidable_wait": 6409.35,
+        "flexible_shortfall": 0.0,
+        "request_miss": 0.0,
+        "required_miss": 0.0
+      },
+      "request_reward": 3920.0,
+      "science": 18386.890998,
+      "total": 15897.540998
+    },
+    "sha256": "bd32821e21a67cb2ba40e2c1e472f05211baaa72c4630757ba108ce1cba20477"
+  },
+  "restricted_cp": {
+    "model": "exact wait on a sampled slot-boundary action graph",
+    "summary": {
+      "experiments": [
+        {
+          "avoidable_wait": 4774.8,
+          "candidate_options": 4503,
+          "charged_wait_nodes": 9520,
+          "feasible_score": 17184.91368,
+          "per_night": 1,
+          "per_week": 2,
+          "request_reward": 3920.0,
+          "science": 18039.71368,
+          "scope": "restricted full-season exact-wait CP; prior baseline",
+          "solve_limit_seconds": 600,
+          "solver_upper_bound": 20280.44762,
+          "status": "FEASIBLE",
+          "wait_implications": 191642
+        },
+        {
+          "avoidable_wait": 4590.75,
+          "build_seconds": 42.59667129209265,
+          "candidate_options": 7175,
+          "charged_wait_nodes": 10466,
+          "feasible_score": 18013.974136,
+          "observations": 857,
+          "per_night": 2,
+          "per_week": 4,
+          "request_reward": 3920.0,
+          "science": 18684.724136,
+          "scope": "restricted full-season exact-wait CP; authoritative local replay",
+          "solve_limit_seconds": 360,
+          "solve_seconds": 364.478007,
+          "solver_upper_bound": 20603.467123,
+          "status": "FEASIBLE",
+          "total_seconds": 409.397285,
+          "wait_implications": 210401
+        }
+      ],
+      "online_submissions": 0,
+      "scenario": "dev-reference"
+    }
+  },
+  "scenario": "scenarios/dev-reference",
+  "scope": "Local public-truth practice research only. Not an online or official evaluation score; no website submission."
+}

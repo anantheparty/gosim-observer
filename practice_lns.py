@@ -527,8 +527,8 @@ def search(model: PracticeModel, seconds: float, seed: int, per_week: int) -> tu
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scenario", type=Path, default=ROOT / "scenarios" / "dev-reference")
-    parser.add_argument("--seed-plan", type=Path, default=ROOT / "run_cp_reference_v2" / "decisions.csv")
-    parser.add_argument("--out", type=Path, default=ROOT / "run_lns_practice" / "decisions.csv")
+    parser.add_argument("--seed-plan", type=Path, default=ROOT / "results" / "practice_reference.csv")
+    parser.add_argument("--out", type=Path, default=ROOT / "runs" / "practice_lns" / "decisions.csv")
     parser.add_argument("--seconds", type=float, default=120.0)
     parser.add_argument("--seed", type=int, default=20260924)
     parser.add_argument("--per-week", type=int, default=8)
