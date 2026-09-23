@@ -10,7 +10,7 @@
 
 ## 如何使用及验证
 
-版本化的 [89 事件核心](results/practice_core.csv) 给出一个首访顺序和请求见证；[当前最好完整路径](results/practice_best.csv)由活动请求 DP 在此首访顺序上重选实际标签、时间与复访，再由官方本地评分器独立回放。重新评分：
+版本化的 [89 事件核心](results/practice_core.csv) 给出一个首访顺序和请求见证；活动请求 DP 在此首访顺序上得到 21,016.570923 的历史初解。当前[最好完整路径](results/practice_best.csv)由[事件层精确大邻域搜索](EVENT_LNS_ZH.md)进一步重排六块天区及其请求见证，再由官方本地评分器独立回放。重新评分：
 
 ```sh
 python3 score_decisions.py --scenario scenarios/dev-reference --decisions results/practice_best.csv --out runs/practice_best_score.json
