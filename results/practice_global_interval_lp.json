@@ -1,0 +1,68 @@
+{
+  "candidate_count": 918757,
+  "capacity_cells": 47568,
+  "certification": {
+    "all_columns_checked": 1011521,
+    "base_price_microcents": 2107883812500,
+    "miss_penalty_residual_microcents": 0,
+    "positive_first_reduced_columns": 7,
+    "positive_first_tag_reduced_columns": 0,
+    "positive_repeat_reduced_columns": 0,
+    "request_residual_microcents": 97153500000
+  },
+  "certified_upper_cents_ceiling": 2340245,
+  "certified_upper_microcents": 2340244750000,
+  "certified_upper_points": 23402.45,
+  "full_action_column_count": 1011521,
+  "glop_objective_cents": 2340244.75,
+  "glop_status": "OPTIMAL",
+  "impossible_requests": [
+    "RQ0015"
+  ],
+  "inevitable_miss_implication_count": 129,
+  "integer_microcents_per_cent": 1000000,
+  "model": "complete order-free interval LP; first science plus tagged revisits; request access constraints; nonnegative penalties relaxed",
+  "model_constraints": 181537,
+  "model_variables": 1056127,
+  "prefix_checkpoint_count": 44572,
+  "price_digest_sha256": "32a9d9d4ac96f9f153f405d2ba5e73c0733eba20b3bc0c873118b1e7f617fbf8",
+  "price_nonzero": {
+    "access": 1,
+    "capacity": 220,
+    "early_first": 15,
+    "first_tag_link": 11387,
+    "inevitable_miss": 15,
+    "prefix_repeat": 41,
+    "tile": 64
+  },
+  "projection_capacity_price_file": "/Users/kamico/work/GOSIM/OBSERVER/results/practice_global_interval_prices.npz",
+  "projection_capacity_price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "request_award_lp_values": {
+    "RQ0001": 1.0,
+    "RQ0002": 1.0,
+    "RQ0003": 1.0,
+    "RQ0004": 1.0,
+    "RQ0005": 1.0,
+    "RQ0006": 1.0,
+    "RQ0007": 1.0,
+    "RQ0008": 1.0,
+    "RQ0009": 1.0,
+    "RQ0010": 1.0,
+    "RQ0011": 1.0,
+    "RQ0012": 1.0,
+    "RQ0013": 1.0,
+    "RQ0014": 1.0,
+    "RQ0015": 0.0,
+    "RQ0016": 1.0,
+    "RQ0017": 1.0,
+    "RQ0018": 1.0
+  },
+  "request_count": 18,
+  "request_group_count": 30,
+  "runtime_seconds": {
+    "build": 14.605216250056401,
+    "solve_and_certify": 44.08216229197569
+  },
+  "scope": "all valid decision traces for the public dev-reference practice instance",
+  "tag_copy_count": 46382
+}

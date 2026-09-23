@@ -1,0 +1,39 @@
+{
+  "complete_arc_count": 918757,
+  "impossible_requests": [
+    "RQ0015"
+  ],
+  "price_certificate": "results/practice_global_interval_prices.npz",
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "resource_plus_request_cents": 2442810,
+  "results": [
+    {
+      "external_science_cents": 1892482,
+      "key_tiles": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031"
+      ],
+      "projected_dp_cents": 43371,
+      "request_cents": 392000,
+      "required_key_mask": 1,
+      "theta_constant_cents": 8040,
+      "theta_uniform_cents": 134,
+      "total_upper_bound": 23358.93,
+      "total_upper_bound_cents": 2335893
+    }
+  ],
+  "scalar_audit": {
+    "max_envelope_violation_cents": 0,
+    "minimum_envelope_slack_cents": 0,
+    "omitted_scalar_legal_arcs": 0,
+    "omitted_weather_interruption_arcs": 0,
+    "scalar_checked_arcs": 918757,
+    "scalar_checked_start_points": 3044352,
+    "scalar_weather_interruption_cases": 12030
+  },
+  "scenario": "scenarios/dev-reference",
+  "time_units": 47568,
+  "weather_interruption_arc_count": 850
+}

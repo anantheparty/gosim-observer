@@ -54,12 +54,14 @@ def _verify_existing_audits(
     candidate_count: int,
     partial_count: int,
     base_cents: int,
+    audited_projection: Path,
+    audited_conditional: Path,
 ) -> dict:
     projection_cert = json.loads(
-        AUDITED_PROJECTION.read_text(encoding="utf-8")
+        audited_projection.read_text(encoding="utf-8")
     )
     conditional_cert = json.loads(
-        AUDITED_CONDITIONAL.read_text(encoding="utf-8")
+        audited_conditional.read_text(encoding="utf-8")
     )
     if projection_cert["price_sha256"] != price_sha256:
         raise AssertionError("projection audit used different capacity prices")
@@ -85,13 +87,13 @@ def _verify_existing_audits(
     if len(matching) != 1 or matching[0]["total_upper_bound_cents"] != base_cents:
         raise AssertionError("current projection did not reproduce audited bound")
     return {
-        "projection_certificate": str(AUDITED_PROJECTION.relative_to(ROOT)),
+        "projection_certificate": str(audited_projection.relative_to(ROOT)),
         "projection_certificate_sha256": hashlib.sha256(
-            AUDITED_PROJECTION.read_bytes()
+            audited_projection.read_bytes()
         ).hexdigest(),
-        "conditional_certificate": str(AUDITED_CONDITIONAL.relative_to(ROOT)),
+        "conditional_certificate": str(audited_conditional.relative_to(ROOT)),
         "conditional_certificate_sha256": hashlib.sha256(
-            AUDITED_CONDITIONAL.read_bytes()
+            audited_conditional.read_bytes()
         ).hexdigest(),
     }
 
@@ -99,7 +101,11 @@ def _verify_existing_audits(
 def certify(
     prices: Path,
     audit: bool,
+    audited_projection: Path = AUDITED_PROJECTION,
+    audited_conditional: Path = AUDITED_CONDITIONAL,
 ) -> dict:
+    audited_projection = audited_projection.resolve()
+    audited_conditional = audited_conditional.resolve()
     data = projection.build_data(PRACTICE, prices, audit)
     scorer = data["scorer"]
     if scorer.mechanics or scorer.tile_anomalies:
@@ -113,6 +119,7 @@ def certify(
     prior = _verify_existing_audits(
         price_sha256, data["complete_arc_count"],
         data["partial_arc_count"], base_cents,
+        audited_projection, audited_conditional,
     )
 
     requests_with_options = request_branches(scorer, data["impossible_requests"])
@@ -296,7 +303,7 @@ def certify(
 
     all_awarded = by_awarded_count[17]["upper_cents"]
     independent_conditional = json.loads(
-        AUDITED_CONDITIONAL.read_text(encoding="utf-8")
+        audited_conditional.read_text(encoding="utf-8")
     )["conditional_total_upper_cents"]
     if all_awarded != independent_conditional:
         raise AssertionError(
@@ -380,12 +387,17 @@ def main() -> None:
         default=ROOT / "runs" / "practice_bound" / "resource_prices.npz",
     )
     parser.add_argument("--audit", action="store_true")
+    parser.add_argument("--projection-certificate", type=Path,
+                        default=AUDITED_PROJECTION)
+    parser.add_argument("--conditional-certificate", type=Path,
+                        default=AUDITED_CONDITIONAL)
     parser.add_argument(
         "--out", type=Path,
         default=ROOT / "results" / "practice_request_unconditional.json",
     )
     args = parser.parse_args()
-    result = certify(args.prices, args.audit)
+    result = certify(args.prices, args.audit,
+                     args.projection_certificate, args.conditional_certificate)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(
         json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2) + "\n",

@@ -34,6 +34,15 @@
     "path": "results/practice_core.csv",
     "sha256": "b14e5b08fde63c2a8950aa1309b6080abb9b7cdf4b1981d428f100c95351fdcb"
   },
+  "full_problem_global_interval_price_bound": {
+    "branch_cases": 196608,
+    "capacity_price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+    "capacity_prices": "results/practice_global_interval_prices.npz",
+    "certificate": "results/practice_global_interval_unconditional.json",
+    "request_subsets": 131072,
+    "total": 22417.13,
+    "verification": "python3 bounds_request_unconditional.py --prices results/practice_global_interval_prices.npz --projection-certificate results/projected_wait_global_interval_certificate.json --conditional-certificate results/practice_request_global_interval_conditional.json --out results/practice_global_interval_unconditional.json"
+  },
   "full_problem_projected_wait_bound": {
     "certificate": "results/projected_wait_certificate.json",
     "key_tiles": [
