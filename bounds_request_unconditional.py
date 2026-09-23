@@ -56,6 +56,8 @@ def _verify_existing_audits(
     base_cents: int,
     audited_projection: Path,
     audited_conditional: Path,
+    key_tiles: tuple[str, ...],
+    theta_cents: int,
 ) -> dict:
     projection_cert = json.loads(
         audited_projection.read_text(encoding="utf-8")
@@ -81,8 +83,8 @@ def _verify_existing_audits(
             raise AssertionError(f"prior scalar audit did not pass: {key}")
     matching = [
         row for row in projection_cert["results"]
-        if tuple(row["key_tiles"]) == KEY_TILES
-        and row["theta_uniform_cents"] == THETA_CENTS
+        if tuple(row["key_tiles"]) == key_tiles
+        and row["theta_uniform_cents"] == theta_cents
     ]
     if len(matching) != 1 or matching[0]["total_upper_bound_cents"] != base_cents:
         raise AssertionError("current projection did not reproduce audited bound")
@@ -103,6 +105,8 @@ def certify(
     audit: bool,
     audited_projection: Path = AUDITED_PROJECTION,
     audited_conditional: Path = AUDITED_CONDITIONAL,
+    key_tiles: tuple[str, ...] = KEY_TILES,
+    theta_cents: int = THETA_CENTS,
 ) -> dict:
     audited_projection = audited_projection.resolve()
     audited_conditional = audited_conditional.resolve()
@@ -113,13 +117,18 @@ def certify(
     if tuple(data["impossible_requests"]) != ("RQ0015",):
         raise AssertionError("impossible request set changed")
     price_sha256 = hashlib.sha256(prices.read_bytes()).hexdigest()
-    base = projection.calculate(data, list(KEY_TILES), THETA_CENTS)
+    if not 1 <= len(key_tiles) <= 8 or len(set(key_tiles)) != len(key_tiles):
+        raise ValueError("key set must contain 1 to 8 distinct tiles")
+    if theta_cents < 0:
+        raise ValueError("theta must be nonnegative")
+    base = projection.calculate(data, list(key_tiles), theta_cents)
     base_cents = base["total_upper_bound_cents"]
     without_request_cents = base_cents - int(data["request_cents"])
     prior = _verify_existing_audits(
         price_sha256, data["complete_arc_count"],
         data["partial_arc_count"], base_cents,
         audited_projection, audited_conditional,
+        key_tiles, theta_cents,
     )
 
     requests_with_options = request_branches(scorer, data["impossible_requests"])
@@ -149,7 +158,7 @@ def certify(
         np.arange(data["n"], dtype=np.int32),
         np.diff(data["complete_ptr"]),
     )
-    key_set = set(KEY_TILES)
+    key_set = set(key_tiles)
     by_tile: dict[str, tuple[np.ndarray, np.ndarray, int]] = {}
     for i, tile_id in enumerate(data["tile_ids"]):
         if tile_id in key_set:
@@ -338,8 +347,8 @@ def certify(
             if prices.is_relative_to(ROOT) else str(prices)
         ),
         "capacity_price_sha256": price_sha256,
-        "key_tiles": list(KEY_TILES),
-        "theta_uniform_cents": THETA_CENTS,
+        "key_tiles": list(key_tiles),
+        "theta_uniform_cents": theta_cents,
         "candidate_count": data["complete_arc_count"],
         "weather_interruption_arc_count": data["partial_arc_count"],
         "resource_and_wait_base_cents_without_request_rewards": without_request_cents,
@@ -387,6 +396,9 @@ def main() -> None:
         default=ROOT / "runs" / "practice_bound" / "resource_prices.npz",
     )
     parser.add_argument("--audit", action="store_true")
+    parser.add_argument("--keys", default=",".join(KEY_TILES),
+                        help="comma-separated key tiles, same order as projection certificates")
+    parser.add_argument("--theta-cents", type=int, default=THETA_CENTS)
     parser.add_argument("--projection-certificate", type=Path,
                         default=AUDITED_PROJECTION)
     parser.add_argument("--conditional-certificate", type=Path,
@@ -397,7 +409,9 @@ def main() -> None:
     )
     args = parser.parse_args()
     result = certify(args.prices, args.audit,
-                     args.projection_certificate, args.conditional_certificate)
+                     args.projection_certificate, args.conditional_certificate,
+                     tuple(part for part in args.keys.split(",") if part),
+                     args.theta_cents)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(
         json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2) + "\n",
