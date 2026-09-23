@@ -2,12 +2,13 @@
 """Recombine public-practice schedules in a restricted exact time-graph CP.
 
 Every observation start in the input schedules is a candidate. Optional shifts
-of their first-completion starts add nearby exact 150-second starts. The model
-may choose any order, first/revisit identity, and legal request tag. Its time
-graph, all-request constraints, completion precedence, and OR waiting charge
-are exact for the chosen action columns. Since the column set is restricted,
-its CP objective is not an upper bound on the unrestricted competition problem.
-Only the authoritative replay score is reported as a feasible lower bound.
+of first completions and actions adjacent to paid waits, per-night top first
+starts, and complete legal columns on selected nights expand the catalog. The
+model may choose any order, first/revisit identity, and legal request tag. Its
+time graph, all-request constraints, completion precedence, and OR waiting
+charge are exact for the chosen action columns. Since the column set is
+restricted, its CP objective is not an upper bound on the unrestricted
+competition problem. Only authoritative replay gives a feasible lower bound.
 """
 
 from __future__ import annotations
@@ -69,16 +70,34 @@ def build_catalog(
     programs: np.ndarray,
     seeds: list[Path],
     shift_units: int,
+    wait_neighbor_shift_units: int = 0,
+    wait_neighbor_limit: int = 256,
+    global_first_tiles: int = 0,
+    global_first_per_night: int = 1,
+    open_regret_nights: int = 0,
+    open_nights: list[str] | None = None,
+    priced_first_tiles: int = 0,
+    priced_nights_per_tile: int = 0,
+    price_file: Path | None = None,
+    all_weather_partials: bool = False,
 ) -> tuple[list[Arc], list[dict], dict]:
     arcs: dict[tuple[int, int, int, bool], Arc] = {}
     donor_actions = []
     first_starts = set()
     donor_scores = {}
+    wait_neighbor_priority: dict[tuple[int, int], float] = defaultdict(float)
+    seed_first_scores: dict[str, dict[int, float]] = {}
+    seed_first_starts: dict[str, dict[int, int]] = {}
     for path in seeds:
         report = model.authoritative_score(path)
         donor_scores[str(path)] = report["score"]["total"]
         seen = set()
         actions = [a for a in report["actions"] if a["action"] == "observe"]
+        local_arcs: list[Arc] = []
+        first_scores: dict[int, float] = {}
+        first_origins: dict[int, int] = {}
+        cursor = 0
+        completed = 0
         for a in actions:
             if a["outcome"] not in ("completed", "weather_interrupted"):
                 raise ValueError(f"seed has penalized observation: {path} {a['outcome']}")
@@ -88,6 +107,21 @@ def build_catalog(
             complete = a["outcome"] == "completed"
             if a["elapsed_seconds"] % 150 or v <= u:
                 raise AssertionError("donor arc duration is off grid")
+            while cursor < u:
+                boundary = ((cursor // POINTS_PER_SLOT) + 1) * POINTS_PER_SLOT
+                if int(model.actionable[cursor]) & ~completed:
+                    # Only actions adjacent to an actually charged wait are
+                    # mutated. Each shifted completed arc is validated against
+                    # the exact public legal-start/science catalog below.
+                    weight = (boundary - cursor) * 0.15
+                    if local_arcs and local_arcs[-1].complete:
+                        prev = local_arcs[-1]
+                        wait_neighbor_priority[(prev.tile, prev.start)] += weight
+                    if complete:
+                        wait_neighbor_priority[(i, u)] += weight
+                cursor = boundary
+            if cursor != u:
+                raise AssertionError("donor action times overlap")
             if complete:
                 if not np.isfinite(scores[i, u]) or v != u + int(model.exposure_units[i]):
                     raise AssertionError("donor completion missing from exact catalog")
@@ -97,16 +131,23 @@ def build_catalog(
                 score, program = 0.0, "DARK"
             arc = Arc(u, v, i, complete, score, program)
             arcs[(u, v, i, complete)] = arc
+            local_arcs.append(arc)
             first = complete and i not in seen
             if first:
                 first_starts.add((i, u))
                 seen.add(i)
+                completed |= 1 << i
+                first_scores[i] = float(score)
+                first_origins[i] = u
             donor_actions.append({
                 "seed": str(path), "start": u, "end": v, "tile": i,
                 "complete": complete, "first": first, "tag": a["request_id"],
             })
+            cursor = v
         if len(seen) != len(model.tiles):
             raise ValueError(f"seed does not complete all tiles: {path}")
+        seed_first_scores[str(path)] = first_scores
+        seed_first_starts[str(path)] = first_origins
         if report["score"]["request_reward"] != 3920.0:
             raise ValueError(f"seed does not earn all 17 feasible requests: {path}")
     if shift_units:
@@ -120,6 +161,144 @@ def build_catalog(
                     u, v, i, True, float(scores[i, u]),
                     PROGRAMS[int(programs[i, u])],
                 )
+    if wait_neighbor_shift_units:
+        selected = sorted(
+            wait_neighbor_priority.items(), key=lambda item: item[1], reverse=True
+        )[:wait_neighbor_limit]
+        for (i, origin), _ in selected:
+            for delta in range(-wait_neighbor_shift_units, wait_neighbor_shift_units + 1):
+                u = origin + delta
+                if not (0 <= u < model.n_units) or not np.isfinite(scores[i, u]):
+                    continue
+                v = u + int(model.exposure_units[i])
+                arcs[(u, v, i, True)] = Arc(
+                    u, v, i, True, float(scores[i, u]),
+                    PROGRAMS[int(programs[i, u])],
+                )
+    regret = []
+    if global_first_tiles or open_regret_nights:
+        best_seed = max(seeds, key=lambda p: donor_scores[str(p)])
+        achieved = seed_first_scores[str(best_seed)]
+        for i in range(len(model.tiles)):
+            legal = scores[i, np.isfinite(scores[i])]
+            regret.append((float(np.max(legal) - achieved[i]), i))
+        regret.sort(reverse=True)
+    if global_first_tiles:
+        chosen_tiles = [i for _, i in regret[:global_first_tiles]]
+        per_night = defaultdict(list)
+        for i in chosen_tiles:
+            for u in np.flatnonzero(np.isfinite(scores[i])):
+                night = model.slots[int(u) // POINTS_PER_SLOT]["night_id"]
+                per_night[(i, night)].append(int(u))
+        for (i, _night), starts in per_night.items():
+            starts.sort(key=lambda u: scores[i, u], reverse=True)
+            chosen = starts[:global_first_per_night]
+            # A slot-boundary candidate can always be reached by legal waits;
+            # a numerically better mid-slot start might lack an incoming arc.
+            boundaries = [u for u in starts if u % POINTS_PER_SLOT == 0]
+            if boundaries and boundaries[0] not in chosen:
+                chosen = chosen[:-1] + [boundaries[0]]
+            for u in chosen:
+                v = u + int(model.exposure_units[i])
+                arcs[(u, v, i, True)] = Arc(
+                    u, v, i, True, float(scores[i, u]),
+                    PROGRAMS[int(programs[i, u])],
+                )
+    selected_nights = set(open_nights or [])
+    if open_regret_nights:
+        for _, i in regret:
+            legal = np.flatnonzero(np.isfinite(scores[i]))
+            boundary = legal[legal % POINTS_PER_SLOT == 0]
+            if len(boundary) == 0:
+                continue
+            u = int(boundary[np.argmax(scores[i, boundary])])
+            selected_nights.add(model.slots[u // POINTS_PER_SLOT]["night_id"])
+            if len(selected_nights) >= open_regret_nights:
+                break
+    if selected_nights:
+        night_by_unit = np.asarray([
+            model.slots[u // POINTS_PER_SLOT]["night_id"]
+            for u in range(model.n_units)
+        ])
+        open_units = np.flatnonzero(np.isin(night_by_unit, list(selected_nights)))
+        before = len(arcs)
+        for i in range(len(model.tiles)):
+            for u in open_units[np.isfinite(scores[i, open_units])]:
+                start = int(u)
+                v = start + int(model.exposure_units[i])
+                arcs[(start, v, i, True)] = Arc(
+                    start, v, i, True, float(scores[i, start]),
+                    PROGRAMS[int(programs[i, start])],
+                )
+        print(json.dumps({
+            "phase": "open_nights", "nights": sorted(selected_nights),
+            "additional_arcs": len(arcs) - before,
+        }), flush=True)
+    if priced_first_tiles:
+        if price_file is None or priced_nights_per_tile <= 0:
+            raise ValueError("priced starts require a price file and positive night cap")
+        with np.load(price_file) as price_data:
+            prices = np.asarray(price_data["prices_cents"], dtype=np.float64) / 100.0
+        if len(prices) != model.n_units:
+            raise ValueError("capacity price grid differs from public scenario")
+        prefix = np.empty(model.n_units + 1, dtype=np.float64)
+        prefix[0] = 0.0
+        np.cumsum(prices, out=prefix[1:])
+        best_seed = max(seeds, key=lambda p: donor_scores[str(p)])
+        before = len(arcs)
+        ranked = []
+        best_night_arcs = {}
+        for i in range(len(model.tiles)):
+            legal = np.flatnonzero(np.isfinite(scores[i]))
+            d = int(model.exposure_units[i])
+            reduced = scores[i, legal] - (prefix[legal + d] - prefix[legal])
+            origin = seed_first_starts[str(best_seed)][i]
+            incumbent_reduced = (
+                seed_first_scores[str(best_seed)][i]
+                - (prefix[origin + d] - prefix[origin])
+            )
+            ranked.append((float(np.max(reduced) - incumbent_reduced), i))
+            best_by_night: dict[str, tuple[float, int]] = {}
+            for u, value in zip(legal, reduced):
+                if int(u) % POINTS_PER_SLOT:
+                    continue
+                night = model.slots[int(u) // POINTS_PER_SLOT]["night_id"]
+                if night not in best_by_night or value > best_by_night[night][0]:
+                    best_by_night[night] = (float(value), int(u))
+            best_night_arcs[i] = sorted(
+                best_by_night.values(), reverse=True
+            )[:priced_nights_per_tile]
+        ranked.sort(reverse=True)
+        selected = ranked[:priced_first_tiles]
+        for _, i in selected:
+            d = int(model.exposure_units[i])
+            for _, u in best_night_arcs[i]:
+                arcs[(u, u + d, i, True)] = Arc(
+                    u, u + d, i, True, float(scores[i, u]),
+                    PROGRAMS[int(programs[i, u])],
+                )
+        print(json.dumps({
+            "phase": "priced_first", "selected_tiles": [
+                model.tile_ids[i] for _, i in selected
+            ], "capacity_adjusted_regret": [round(g, 6) for g, _ in selected],
+            "additional_arcs": len(arcs) - before,
+        }), flush=True)
+    if all_weather_partials:
+        import sequence_active_requests_dp as active
+
+        before = len(arcs)
+        data = active._request_data(model, scores)
+        for u, v, i in zip(
+            data["partial_start"], data["partial_end"], data["partial_tile"]
+        ):
+            start, end, tile = int(u), int(v), int(i)
+            arcs[(start, end, tile, False)] = Arc(
+                start, end, tile, False, 0.0, "DARK"
+            )
+        print(json.dumps({
+            "phase": "all_weather_partials", "additional_arcs": len(arcs) - before,
+            "enumerated_arcs": len(data["partial_start"]),
+        }), flush=True)
     return sorted(arcs.values(), key=lambda a: (a.start, a.end, a.tile)), donor_actions, donor_scores
 
 
@@ -129,6 +308,12 @@ def solve(args: argparse.Namespace) -> dict:
     scores, programs = score_table(model)
     arcs, donor_actions, donor_scores = build_catalog(
         model, scores, programs, args.seeds, args.shift_units,
+        args.wait_neighbor_shift_units, args.wait_neighbor_limit,
+        args.global_first_tiles, args.global_first_per_night,
+        args.open_regret_nights, args.open_nights,
+        args.priced_first_tiles, args.priced_nights_per_tile,
+        args.price_file,
+        args.all_weather_partials,
     )
     scorer = model.scorer
     n = model.n_units
@@ -370,6 +555,17 @@ def main() -> None:
         ROOT / 'runs' / 'global_interval_seed' / 'decisions.csv',
     ])
     parser.add_argument('--shift-units', type=int, default=0)
+    parser.add_argument('--wait-neighbor-shift-units', type=int, default=0)
+    parser.add_argument('--wait-neighbor-limit', type=int, default=256)
+    parser.add_argument('--global-first-tiles', type=int, default=0)
+    parser.add_argument('--global-first-per-night', type=int, default=1)
+    parser.add_argument('--open-regret-nights', type=int, default=0)
+    parser.add_argument('--open-nights', nargs='*', default=[])
+    parser.add_argument('--priced-first-tiles', type=int, default=0)
+    parser.add_argument('--priced-nights-per-tile', type=int, default=0)
+    parser.add_argument('--price-file', type=Path,
+                        default=ROOT / 'results' / 'practice_global_interval_prices.npz')
+    parser.add_argument('--all-weather-partials', action='store_true')
     parser.add_argument('--time-limit', type=float, default=600)
     parser.add_argument('--workers', type=int, default=12)
     parser.add_argument('--seed', type=int, default=1)
