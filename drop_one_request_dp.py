@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Exact fixed-first-order DP after deliberately omitting one practice request.
+"""Exact fixed-first-order DP for the no-tag dropped-request subfamily.
 
 The scenario is public dev-reference. A dropped request cannot receive a tag;
 its reward is omitted and its official deadline miss penalty is charged only
 when the reconstructed schedule ends after the deadline. All other feasible
-requests are still required. Every candidate is replayed by the scorer.
+requests are still required. Partial tagging of an ultimately missed request
+is outside this subfamily. Every candidate is replayed by the scorer.
 """
 
 from __future__ import annotations
@@ -280,7 +281,7 @@ def main() -> None:
             print(json.dumps(result, sort_keys=True), flush=True)
     results.sort(key=lambda row: (row["source_order"], row["dropped_request"]))
     output = {
-        "scope": "public dev-reference; exact DP conditional on each supplied 64-tile first order and exactly one request deliberately untagged",
+        "scope": "public dev-reference; exact DP conditional on each supplied 64-tile first order and one request never tagged (a subfamily of all missed-request paths)",
         "baseline_scores": {
             name: data.get("score") for name, data in order_data.items()
         },
