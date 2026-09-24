@@ -44,10 +44,20 @@ def main() -> None:
     parser.add_argument("run_dir", type=Path)
     args = parser.parse_args()
     run_dir = args.run_dir.resolve()
+    outputs_dir = run_dir / "outputs"
     sources = [("seed", run_dir / "seed.csv")]
-    sources.extend((name, run_dir / name / "best.csv") for name in WORKERS)
-    candidates = []
+    sources.extend((name, outputs_dir / name / "best.csv") for name in WORKERS)
     errors = []
+    drop_summary = outputs_dir / "drop_one" / "summary.json"
+    if drop_summary.is_file():
+        try:
+            drop_path = Path(json.loads(drop_summary.read_text(encoding="utf-8"))["best"]["decision_file"])
+            if not drop_path.is_absolute():
+                drop_path = drop_summary.parent / drop_path
+            sources.append(("drop_one", drop_path))
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            errors.append({"worker": "drop_one", "path": str(drop_summary), "error": str(exc)})
+    candidates = []
     for name, path in sources:
         if not path.is_file():
             errors.append({"worker": name, "path": str(path), "error": "missing checkpoint"})
