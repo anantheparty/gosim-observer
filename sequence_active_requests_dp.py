@@ -19,7 +19,6 @@ import numpy as np
 from numba import njit
 
 import bounds_public as geometry
-from challenge.scoring_core import load_decisions
 from practice_lns import PracticeModel
 from sequence_block_dp import _write
 from sequence_dp import PROGRAMS, score_table
@@ -258,17 +257,19 @@ def _terminal_ok(
 
 
 def _first_order(model: PracticeModel, source: Path) -> list[int]:
+    """Order tiles by first successful completion, ignoring weather partials."""
     result = []
     seen = set()
-    for row in load_decisions(source, allow_reports=False):
-        if row.action != "observe":
-            raise ValueError("source must contain only observations")
-        i = model.tile_index[row.tile_id]
+    report = model.authoritative_score(source)
+    for action in report["actions"]:
+        if action["action"] != "observe" or action["outcome"] != "completed":
+            continue
+        i = model.tile_index[action["tile_id"]]
         if i not in seen:
             seen.add(i)
             result.append(i)
     if len(result) != len(model.tiles):
-        raise ValueError("source must visit all 64 tiles")
+        raise ValueError("source must complete all 64 tiles")
     return result
 
 
