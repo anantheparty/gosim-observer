@@ -1,5 +1,7 @@
 # 两份求解思路的核对与进一步化简
 
+**赛制更新：**本篇部分段落研究逐步发布快照的交互式智能体接口。参赛者已澄清正式赛事允许对完整实例做离线先知计算；正式参赛优化的主线应参见 [ORACLE_ITERATION_ZH.md](ORACLE_ITERATION_ZH.md)。
+
 本文对照工作区的《GOSIM 巡天比赛_完整求解思路.md》和用户提供的《GOSIM 巡天比赛_完整求解思路_3600s版.md》。完整规则和逐项得分见 [PROBLEM_ZH.md](PROBLEM_ZH.md)；已有的状态 DP、复杂度证明及公开信息上界见 [THEORY_ZH.md](THEORY_ZH.md) 和 [BOUNDS_ZH.md](BOUNDS_ZH.md)。下面只写经过核对的结论、新的精确化简，以及仍待证明或实测的部分。
 
 ## 1. 两份思路应如何合并
