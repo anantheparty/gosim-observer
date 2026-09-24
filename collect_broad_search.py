@@ -15,7 +15,7 @@ from challenge.scoring_core import ChallengeScorer, load_decisions
 
 ROOT = Path(__file__).resolve().parent
 SCENARIO = ROOT / "scenarios" / "dev-reference"
-WORKERS = ("conflict", "diverse", "window")
+WORKERS = ("conflict", "diverse", "window", "conflict_alt", "window_alt")
 
 
 def verify(path: Path) -> dict:

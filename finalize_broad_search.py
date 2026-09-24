@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-WORKERS = ("window", "conflict", "diverse")
+WORKERS = ("window", "conflict", "diverse", "window_alt", "conflict_alt")
 
 
 def active_sessions(run_id: str) -> list[str]:
