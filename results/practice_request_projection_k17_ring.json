@@ -1,0 +1,208 @@
+{
+  "all_awarded_upper_cents": 2130417,
+  "base_branches": [
+    {
+      "conditional_upper_cents": 2133024,
+      "dp_cents": 325074,
+      "dp_wall_seconds": 125.96541758393869,
+      "external_cents": 1409470,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590
+      ],
+      "mandatory_key_mask": 50692,
+      "peak_rss_mib": 199.328125,
+      "request_cents": 392000,
+      "required_key_mask": 2049,
+      "rq0004_tile": [
+        "T00004"
+      ],
+      "theta_constant_cents": 6480
+    },
+    {
+      "conditional_upper_cents": 2133124,
+      "dp_cents": 325074,
+      "dp_wall_seconds": 109.08275941689499,
+      "external_cents": 1409570,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590
+      ],
+      "mandatory_key_mask": 50692,
+      "peak_rss_mib": 199.328125,
+      "request_cents": 392000,
+      "required_key_mask": 2049,
+      "rq0004_tile": [
+        "T00012"
+      ],
+      "theta_constant_cents": 6480
+    }
+  ],
+  "base_keys": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015",
+    "T00048",
+    "T00032",
+    "T00016",
+    "T00010",
+    "T00047",
+    "T00011",
+    "T00027",
+    "T00062"
+  ],
+  "cases": [
+    {
+      "all_awarded_upper_cents": 2130417,
+      "branches": [
+        {
+          "conditional_upper_cents": 2130317,
+          "dp_cents": 349863,
+          "dp_wall_seconds": 228.9442674999591,
+          "external_cents": 1382109,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "peak_rss_mib": 199.328125,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2130417,
+          "dp_cents": 349863,
+          "dp_wall_seconds": 239.57666508294642,
+          "external_cents": 1382209,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "peak_rss_mib": 199.328125,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "keys": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031",
+        "T00024",
+        "T00021",
+        "T00040",
+        "T00015",
+        "T00048",
+        "T00032",
+        "T00016",
+        "T00010",
+        "T00047",
+        "T00011",
+        "T00027",
+        "T00062",
+        "T00043"
+      ]
+    }
+  ],
+  "certificates": {
+    "all_subsets_certificate_sha256": "5e6a3aac67266a5f0bab2b3624c01db4ca34afb75efd33f71ee13be2b0c737d0",
+    "conditional_certificate_sha256": "e81686ff1270a821e4ebf1c8626ac60ee1bd70a991e1735a39ede7c17a7c898f",
+    "other_award_subsets_upper_cents": 2161431,
+    "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+    "projection_certificate_sha256": "f8c9992cce867f14f2fb0b388c6a77b624704727ce7280f6182df49f69626fdc",
+    "scalar_audit": {
+      "max_envelope_violation_cents": 0,
+      "minimum_envelope_slack_cents": 0,
+      "omitted_scalar_legal_arcs": 0,
+      "omitted_weather_interruption_arcs": 0,
+      "scalar_checked_arcs": 918757,
+      "scalar_checked_start_points": 3044352,
+      "scalar_weather_interruption_cases": 12030
+    }
+  },
+  "complete_arc_count": 918757,
+  "full_time_rows": 47569,
+  "peak_rss_mib": 199.328125,
+  "prior_certificate_sha256": "bf4c3fb2e6231b0a21fe21c47ea70ec835f7e4cf0247c65e7a9f7016fddb8521",
+  "ring_time_rows": 10,
+  "runtime_seconds": 783.5975083748344,
+  "scope": "public dev-reference; conditional on all 17 feasible request rewards",
+  "theta_uniform_cents": 135,
+  "weather_interruption_arc_count": 850
+}
