@@ -25,3 +25,9 @@
 若部分 worker 失败或超时，`status.json` 标为 incomplete 并保留失败详情；再次运行相同命令会校验并复用成功的检查点。扫描中各候选只是全 17 请求分支的上界；与已有恰 16、至多 15 请求证书取最大值，才是无条件上界。
 
 远端 preflight 已复算 K14/K15/K16，整数结果和每个 DP 输入 SHA256 均与本地完全相同。远端核验账本、48 候选计划分别复制为 `results/parallel_key_scan_remote_verify.json`、`results/parallel_key_scan_remote_plan.json`；计划 SHA256 是 `892619e30eeffcb8cce7fe9fbde014a80ad3a2b5ac1fd78b81340cc36aadbc0b`。24 个 worker 已全部实际启动。
+
+## 全候选结果
+
+扫描已 **48/48 完成、0 失败**。用 `aggregate_parallel_key_scan.py` 对每个原子结果重新核验整数分项、输入哈希、分支共享条件、候选覆盖及最终排序后，汇成 `results/practice_parallel_k17_all_candidates.json`（SHA256 `edbaa0aca6f28ad18238ef059539b0099489b8293ab6ccf3196bef0358c81f7b`），其中包含 48 条候选的完整整数摘要及每个远端 case 文件的 SHA256。最佳完整账本单独保存为 `results/practice_parallel_k17_best_t45.json`（SHA256 `1e599c6cdcc4eee11d55864df4e63e21ff1576330b16b9c9188e9eb5596985bc`）。
+
+最佳新增 key 是 `T00045`，全 17 请求上界为 **21,301.92**；两分支整数分项分别是 `1,381,835 / 1,381,935` 外部项、同一个 `349,912` 投影 DP 根值、`392,000` 请求奖励及 `6,345` theta 常数，合计 `2,130,092 / 2,130,192` 个百分之一分。紧随其后的是 `T00001=21,302.26`、`T00043=21,304.17`。结合恰 16 请求上界 `21,238.47` 与至多 15 请求上界 `21,236.70`，当前无条件严格上界是 **21,301.92**；与已有可行分数 `21,119.494551` 的间隙是 `182.425449`。

@@ -1,0 +1,5184 @@
+{
+  "all_awarded_upper_cents": 2130192,
+  "base_certificate_sha256": "bf4c3fb2e6231b0a21fe21c47ea70ec835f7e4cf0247c65e7a9f7016fddb8521",
+  "base_keys": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015",
+    "T00048",
+    "T00032",
+    "T00016",
+    "T00010",
+    "T00047",
+    "T00011",
+    "T00027",
+    "T00062"
+  ],
+  "best_case_file_sha256": "1e599c6cdcc4eee11d55864df4e63e21ff1576330b16b9c9188e9eb5596985bc",
+  "best_case_output_file": "results/practice_parallel_k17_best_t45.json",
+  "best_extra_tile": "T00045",
+  "candidate_count": 48,
+  "failed_count": 0,
+  "input_manifest_file_sha256": "564c31b4ae49e3c37af58ba7036b9494054f98e58147eb8e5b1ce9252e7e6f30",
+  "plan_file_sha256": "9cc5037dea4c4c781a493dbd1f4cc85e07de27b5337cf242a15563c832703008",
+  "plan_sha256": "892619e30eeffcb8cce7fe9fbde014a80ad3a2b5ac1fd78b81340cc36aadbc0b",
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "proof_note": "All 48 candidates use the audited complete graph, price file and K16 key set. Each row is a strict all-17 request upper bound. The minimum of these independent valid bounds is also valid. Cases with an RQ0004 alternative as a key compute both branches; the others reuse a DP root only after every DP input is checked. Request counts below 17 require separate subset certificates.",
+  "rows": [
+    {
+      "all_awarded_upper_cents": 2130192,
+      "branch_input_sha256": [
+        "b4dd093caf82d0edfb8d6f2752b32a33674f5c8349eac7e1d142476effa92731",
+        "cabf9910cf5ecb53b40eb7acbe11b5db22d60861cd5b5a22a5224497376ddd5c"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 349912,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01974067898117937,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2130092,
+          "dp_cents": 349912,
+          "external_cents": 1381835,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2130192,
+          "dp_cents": 349912,
+          "external_cents": 1381935,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "1e599c6cdcc4eee11d55864df4e63e21ff1576330b16b9c9188e9eb5596985bc",
+      "case_input_sha256": "19b67808c8d5f021fbd47878333c127a869b6fa99dd225e27d005df1cdfcbcda",
+      "dp_input_sha256": [
+        "c22d3df9aae11b603198a57448c5a1caf2a2bd2df741a90bf6aa63cafa5e215b",
+        "c22d3df9aae11b603198a57448c5a1caf2a2bd2df741a90bf6aa63cafa5e215b"
+      ],
+      "extra_tile": "T00045",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 284.9833818039915
+    },
+    {
+      "all_awarded_upper_cents": 2130226,
+      "branch_input_sha256": [
+        "ab14d70a11b46d73aeed6bfa96c5c240c2683551be65c30f4c3697232998afa1",
+        "28a21149a8f79c2a944a9a4f1c56ad5a58ef6321006fa32a768a9c38f66eaf60"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 342575,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019576445018174127,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2130126,
+          "dp_cents": 342575,
+          "external_cents": 1389206,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2130226,
+          "dp_cents": 342575,
+          "external_cents": 1389306,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "9f097c70666e97c94186593eba32bc40343ce069e787c4498336ed1c5df99197",
+      "case_input_sha256": "0c9dde5c442338c30b75f3b91ccb6edeacad748baa2e05c83f9f4cced33dfce6",
+      "dp_input_sha256": [
+        "c36015cdd23828572d175acfec561d0c3cddb1667ef5669d5217240bdb387538",
+        "c36015cdd23828572d175acfec561d0c3cddb1667ef5669d5217240bdb387538"
+      ],
+      "extra_tile": "T00001",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 273.03257819399005
+    },
+    {
+      "all_awarded_upper_cents": 2130417,
+      "branch_input_sha256": [
+        "ddb25302cc28f8f30034effaeb1e997c1e501f72178e727d1e024896c2d01481",
+        "15f5024e002e5ee108ee237b8d7048ecc869b0e406f87ff147abd9ac931db467"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 349863,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019591132004279643,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2130317,
+          "dp_cents": 349863,
+          "external_cents": 1382109,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2130417,
+          "dp_cents": 349863,
+          "external_cents": 1382209,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "e087224b06f865fa4b907b3cd849c164b3a92fbfcc5fb514525a154908009e9a",
+      "case_input_sha256": "d316554faf2ea525e1a632c5952beb36fb722a858a4766abe23595631c90272d",
+      "dp_input_sha256": [
+        "6754e42ea64ecbd2cae8b9b76620a53b457bb813c783cb1c3ae88e526947c31c",
+        "6754e42ea64ecbd2cae8b9b76620a53b457bb813c783cb1c3ae88e526947c31c"
+      ],
+      "extra_tile": "T00043",
+      "peak_rss_mib": 205.88671875,
+      "worker_wall_seconds": 268.77085451001767
+    },
+    {
+      "all_awarded_upper_cents": 2131434,
+      "branch_input_sha256": [
+        "030467e1283d23632715b60d892ef3bf8a62abb8e99e53531788d7f6f5645694",
+        "35c4477b7ff72848ed8ba05058c4c956e21ca705529e5a5bbb9bd889c468b598"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 343167,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01886869000736624,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2131334,
+          "dp_cents": 343167,
+          "external_cents": 1389822,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            29862
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2131434,
+          "dp_cents": 343167,
+          "external_cents": 1389922,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            29862
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "44a0f4c7977dc20af2e3699725ac6c42e68db8afd07ba60b22332ea2b15ba80d",
+      "case_input_sha256": "322f8d13c7d479124098c7a1478e5a9589bba48b47c655b6f3d5014ce947b7f7",
+      "dp_input_sha256": [
+        "354cb8bbab6e2de431d4194db05e3c17d230fcbf811c96c29058999c20e5e172",
+        "354cb8bbab6e2de431d4194db05e3c17d230fcbf811c96c29058999c20e5e172"
+      ],
+      "extra_tile": "T00009",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 196.19116047100397
+    },
+    {
+      "all_awarded_upper_cents": 2131599,
+      "branch_input_sha256": [
+        "4c042b4d10d36b269f0727194f686db03691ebf899a42cb95bf0618af3d8cec1",
+        "0f4096fc116db43177208392650ef776faa5f0c989c7a9c4cbc51f8a5d86ce76"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 365789,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019907545996829867,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2131499,
+          "dp_cents": 365789,
+          "external_cents": 1367365,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2131599,
+          "dp_cents": 365789,
+          "external_cents": 1367465,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "01a1c9de6244603793215c8d86e85ddc115636f1b0280a6f84f17ae36d1dd4be",
+      "case_input_sha256": "4bb4b4ac863824af32101d64acca4a9c24a7d0bf6ce2826e22c8e792d4ef5f53",
+      "dp_input_sha256": [
+        "acba08c46262af1778a7e54233e653eef69e74685d1c916cfc8f49025fef991b",
+        "acba08c46262af1778a7e54233e653eef69e74685d1c916cfc8f49025fef991b"
+      ],
+      "extra_tile": "T00041",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 188.8346109680133
+    },
+    {
+      "all_awarded_upper_cents": 2131829,
+      "branch_input_sha256": [
+        "86b520774f7126e115e9e3db491b3b8d09d2c17ea1e1eb4a8fc93a20dae200e7",
+        "3787751910bb1fbd58aea5c61913fe873434158df355351a2405b60266d1b778"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 353990,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018232536007417366,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2131729,
+          "dp_cents": 353990,
+          "external_cents": 1379394,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            46338
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2131829,
+          "dp_cents": 353990,
+          "external_cents": 1379494,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            46338
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "a38aee2f1e0cb5287e335f4ac69e19c563d696181ecba487799dfd33deebced8",
+      "case_input_sha256": "e97dac2b56acfefaf5ea951f3346cf5fec2332e46302d5c28cb852a09be20dec",
+      "dp_input_sha256": [
+        "4e4777b049972d65942f7920c79467888f12ed3836a97a222ac47c69d9b60db8",
+        "4e4777b049972d65942f7920c79467888f12ed3836a97a222ac47c69d9b60db8"
+      ],
+      "extra_tile": "T00008",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.5949368829897
+    },
+    {
+      "all_awarded_upper_cents": 2131869,
+      "branch_input_sha256": [
+        "8934bb252a99278ff28daaf5b9331cc57d6043392ceebff390d8a223eaf9c1e0",
+        "1aa05d90c317a0a81319f3742e11e8a444a77a56174114b22e0d14b7db5768f5"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 356331,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019033541990211233,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2131769,
+          "dp_cents": 356331,
+          "external_cents": 1377093,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2131869,
+          "dp_cents": 356331,
+          "external_cents": 1377193,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "cbcf64c9b70128fdd16dad26069c0185c5a1bce0978194eba79e1a828d28d27e",
+      "case_input_sha256": "e491a6b969ccb1902799856b64666ecd166a404d67ffd03dbcab537d15fe43cb",
+      "dp_input_sha256": [
+        "f69ae6ea614e451c678a10772e346f509c83651c53618e94e48f0a6066a70a6f",
+        "f69ae6ea614e451c678a10772e346f509c83651c53618e94e48f0a6066a70a6f"
+      ],
+      "extra_tile": "T00052",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 283.8856820339861
+    },
+    {
+      "all_awarded_upper_cents": 2132388,
+      "branch_input_sha256": [
+        "b82376650a2f28825f993b67ec145ac23c9866d1001a0eb2a38c4cecaba294bd",
+        "494a7ea70e8fd852d7c185f7ecb3770ba51192e27d647566fc1f56f1a667f688"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 364806,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019643389008706436,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132288,
+          "dp_cents": 364806,
+          "external_cents": 1369137,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132388,
+          "dp_cents": 364806,
+          "external_cents": 1369237,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "af8db1b87c03994a6542066a15730000ddbee1566a121b1c824c2099be14b0e6",
+      "case_input_sha256": "5be7d32863adc41ef27b6a5d25c2593cee979ce8e351a2827e1a9620d4e5f257",
+      "dp_input_sha256": [
+        "43d9d64b394328dfdc1d876c714dbba50112ec7f3d352587f4dbea9f374e7ca5",
+        "43d9d64b394328dfdc1d876c714dbba50112ec7f3d352587f4dbea9f374e7ca5"
+      ],
+      "extra_tile": "T00033",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 224.6729011129937
+    },
+    {
+      "all_awarded_upper_cents": 2132419,
+      "branch_input_sha256": [
+        "99b2d33a59af5fc85f0254d5bf299949f75c1d01ee9c59bf8bde66aec9fe032a",
+        "68749e7f88bc13b3944a1be4392f0a48d62dbd74a21d92a17238533ebf76a512"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 349236,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.020576762006385252,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132319,
+          "dp_cents": 349236,
+          "external_cents": 1384738,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132419,
+          "dp_cents": 349236,
+          "external_cents": 1384838,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "f05a8192c964a566c1d4b77481722190e2b9a65c5710eb1edb646d0e735e61cc",
+      "case_input_sha256": "9e1eb658b8898f9afe47bf2b5a8d60cd4a6843fd725a2301a553b48ee12c4572",
+      "dp_input_sha256": [
+        "08214ab07c100a48b1a3e2689c5f7b8863c741f06a73170090b933241821c74b",
+        "08214ab07c100a48b1a3e2689c5f7b8863c741f06a73170090b933241821c74b"
+      ],
+      "extra_tile": "T00007",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 300.31901546398876
+    },
+    {
+      "all_awarded_upper_cents": 2132483,
+      "branch_input_sha256": [
+        "471c95d5c9bb9cb97e9a66d4a035838b75f905035ea93a41f69e2053b29f50c1",
+        "8c456358a380cc4c2e2a9d21d2dc21527ba0143d516d1dc18ce575390a64eaab"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 353618,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01924632998998277,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132383,
+          "dp_cents": 353618,
+          "external_cents": 1380420,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132483,
+          "dp_cents": 353618,
+          "external_cents": 1380520,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "5544b6a4a8d12ff4ad0a7cb664dd87eed28217643c1ac9bc77787cfa79fda19a",
+      "case_input_sha256": "14be425c944f4c3797d350a5cbb7f1cc64ce50c250ad6c43c9651ab008d87f7c",
+      "dp_input_sha256": [
+        "19bfb5b5872f889babe1c227b79a0a06ba10627067f3939087842a675e5c0f83",
+        "19bfb5b5872f889babe1c227b79a0a06ba10627067f3939087842a675e5c0f83"
+      ],
+      "extra_tile": "T00056",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.5630239130114
+    },
+    {
+      "all_awarded_upper_cents": 2132543,
+      "branch_input_sha256": [
+        "35d0871cf22c7fddeafd5a5021fcdd4bf7f54f64330fe57793aa34c8873025f6",
+        "ae3d11e0872c76f5c45254e53ac2d6d2dc23a78b349b4da8a2cedfcc45829c9f"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 354338,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.02136123101809062,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132443,
+          "dp_cents": 354338,
+          "external_cents": 1379760,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132543,
+          "dp_cents": 354338,
+          "external_cents": 1379860,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "42349dd0124e9bcf7cc5273c1f0c93771269f2dd66e85bc1a9da853efd7f52ce",
+      "case_input_sha256": "c21c31cee1556938699895550c7cdab1e2ae2d9f140db518c19bc9016ec58e64",
+      "dp_input_sha256": [
+        "915d9462a123b8cbee4ab2cf593ceb6336434e16c933f16724d77b583589026f",
+        "915d9462a123b8cbee4ab2cf593ceb6336434e16c933f16724d77b583589026f"
+      ],
+      "extra_tile": "T00034",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 339.74845235599787
+    },
+    {
+      "all_awarded_upper_cents": 2132544,
+      "branch_input_sha256": [
+        "4e923e3a778c53de340812d21b212bfcb27ddd22cef21ba6668e2fdccb136dca",
+        "1555a051a656dffc89f848d7ebee1e2ed0e790117b074a3a5cb5dec40ef9c731"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 362888,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.021549384982790798,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132444,
+          "dp_cents": 362888,
+          "external_cents": 1371211,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132544,
+          "dp_cents": 362888,
+          "external_cents": 1371311,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "c3e679c9a9d576972777c18b15eb7f5b4c686c15d50c8aaca4f073d59a2e1891",
+      "case_input_sha256": "105b4590bd6ffee6dbfeb6d7c7f7a45e251d29c3fa10c3f52828239fff835606",
+      "dp_input_sha256": [
+        "442257e7b508b6127ad18882a234f178502712492056ac4a8d717591d19356d8",
+        "442257e7b508b6127ad18882a234f178502712492056ac4a8d717591d19356d8"
+      ],
+      "extra_tile": "T00039",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 322.68676759899245
+    },
+    {
+      "all_awarded_upper_cents": 2132548,
+      "branch_input_sha256": [
+        "b4bfea0a865048cba9d3a7512f23b33a79b0360030defeed232ba7027c1e6c6c",
+        "474f1d54aadb02db7da37ee188e98b1831a4e9aed6705e795967176ac30f7f24"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 358657,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01861061601084657,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132448,
+          "dp_cents": 358657,
+          "external_cents": 1375446,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            31830
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132548,
+          "dp_cents": 358657,
+          "external_cents": 1375546,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            31830
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "e07dac740b0714c43a3d719c78ef380b2f2758abab23e27c284b758854973d9b",
+      "case_input_sha256": "a97982daac183c5b85e929d27638de6566aa52cbcd2fbcb7f714c7a009f5b0b8",
+      "dp_input_sha256": [
+        "345189636991e8a28d09a2a65d9868d516f02ea909788a7ab0d6f1ffe08190c3",
+        "345189636991e8a28d09a2a65d9868d516f02ea909788a7ab0d6f1ffe08190c3"
+      ],
+      "extra_tile": "T00061",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.6266064099909
+    },
+    {
+      "all_awarded_upper_cents": 2132629,
+      "branch_input_sha256": [
+        "9d89df83337b4d5b1e9e7d4f689c41cb3bfd23d88ede561348a61c2f538e99cd",
+        "989f920e833d0c945d30801f6da098b742a722ca95129d20506a527d70e9a285"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 346688,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.020115256018470973,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132529,
+          "dp_cents": 346688,
+          "external_cents": 1387496,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132629,
+          "dp_cents": 346688,
+          "external_cents": 1387596,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "d56338ec4fe19be2a964deff5b41e513d2e34186e23be046d6a4bd8645e14093",
+      "case_input_sha256": "494521576e932b11289a193834ea087bb76133fe4609b630047d4c150c3459f1",
+      "dp_input_sha256": [
+        "1bfc7321af12631f86d99992439fd5474dcd41765d6da238cb6c7a288cdc936a",
+        "1bfc7321af12631f86d99992439fd5474dcd41765d6da238cb6c7a288cdc936a"
+      ],
+      "extra_tile": "T00003",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 281.86912469301024
+    },
+    {
+      "all_awarded_upper_cents": 2132649,
+      "branch_input_sha256": [
+        "17573e711ac01b682c0c80402fc6485a613f24dbb916d0ebbfb8111ee3479134",
+        "eeed81b3ea596c2d616d2bb1649743414ad250cacbc4efb54009ba80a5ce05b2"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 363264,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.020015702000819147,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132549,
+          "dp_cents": 363264,
+          "external_cents": 1370940,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132649,
+          "dp_cents": 363264,
+          "external_cents": 1371040,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "57e3b1d4766167147440962c17128ce388e493dc46ea100d3f0deaec814b6fe2",
+      "case_input_sha256": "fb0e249d96a5029cc12f49d8c68e072ae198b72eb3c121dcd74c9bec21976342",
+      "dp_input_sha256": [
+        "44e4d99fb2405ad3713c64ccde80db2542c8fe88e95585208903e27dec8a6653",
+        "44e4d99fb2405ad3713c64ccde80db2542c8fe88e95585208903e27dec8a6653"
+      ],
+      "extra_tile": "T00020",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.94591677200515
+    },
+    {
+      "all_awarded_upper_cents": 2132679,
+      "branch_input_sha256": [
+        "6b97d51c605fafeddf67e4d860125e7a6a0b90408ef66755e64d6cb27d716013",
+        "d0acefdd6343d617f8e0f29c13653be6363e5b7799faebc1fe6904901560e27d"
+      ],
+      "branch_sharing_audit": {
+        "reason": "one RQ0004 alternative is a projected key",
+        "second_dp_reused": false
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132679,
+          "dp_cents": 357865,
+          "external_cents": 1376469,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            8346
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132679,
+          "dp_cents": 357865,
+          "external_cents": 1376469,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "192ba3ed674abcd95582724b3545f5d8f801369f3d8377726d90ecc61864c164",
+      "case_input_sha256": "6ff4941067a0960a55a12644582692aeb18a3aee5edfb846ac25318c72bddaaf",
+      "dp_input_sha256": [
+        "4020dc18ac4e249ebdc14e2f0e9f3b3614daf1fe79ca73b831fcc71f01f15392",
+        "89b9612a1c7a49823eb9f2779d325ce9905cf8f0d06c38b2641478d801b0d8f0"
+      ],
+      "extra_tile": "T00004",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 374.6605953249964
+    },
+    {
+      "all_awarded_upper_cents": 2132714,
+      "branch_input_sha256": [
+        "c97f1f6e61c61541996181b18d1ed07c107871737b467d4648195b638fc526ca",
+        "c613032a87a44e61df3cffb606024c190997abf2189c1fdc0380f5d192d83c38"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 353618,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01986405299976468,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132614,
+          "dp_cents": 353618,
+          "external_cents": 1380651,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132714,
+          "dp_cents": 353618,
+          "external_cents": 1380751,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "e1d070e74ca6c4e50cb0a7d6c434e7d1fb5b609d660f5cf80c3b112175e8976b",
+      "case_input_sha256": "67e2a0acf8161237af3c4b89162eadcda2b926c34225a818a2dc50fe45a78e68",
+      "dp_input_sha256": [
+        "972c6af1770bf3f1ab5c7440d3c212ba7a375e905058fb7ae0413bef1214aebe",
+        "972c6af1770bf3f1ab5c7440d3c212ba7a375e905058fb7ae0413bef1214aebe"
+      ],
+      "extra_tile": "T00042",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 283.19236059099785
+    },
+    {
+      "all_awarded_upper_cents": 2132719,
+      "branch_input_sha256": [
+        "1d25e79d42bf5a5263373e42a1527ed522739ddb2f3aa76fc07265ebcd55b836",
+        "8e7322a56e83145b71267cedbe188aeb76979530440740f8083300fcd3e83411"
+      ],
+      "branch_sharing_audit": {
+        "reason": "one RQ0004 alternative is a projected key",
+        "second_dp_reused": false
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132619,
+          "dp_cents": 352967,
+          "external_cents": 1381307,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            23376
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132719,
+          "dp_cents": 352967,
+          "external_cents": 1381407,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            8346
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "b1bc645232aa62e9654b850d4008a80c746b141806028a989c64dc790efc59eb",
+      "case_input_sha256": "fc453b71786e1d2ed553eb752c23e631a2afc7631c8aeace3cec8cdefb12f2ec",
+      "dp_input_sha256": [
+        "f6ee9f61a003779e05816bd06457f54e09a5231c039b4b4864c88c7b83eb8dc4",
+        "c75d2e815161e7cf49981259da6591ac949ec226d29dd1c753345851b9be49e7"
+      ],
+      "extra_tile": "T00012",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 330.2468898570223
+    },
+    {
+      "all_awarded_upper_cents": 2132723,
+      "branch_input_sha256": [
+        "005cfd27e97183de6fef63b51e1908642211dbab13400a5f1c82379a57e632aa",
+        "1c77d5487992df6bb23da6fc2265320dc97b0f3272b222a90646cca1bd5e3996"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 350922,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01893166798981838,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132623,
+          "dp_cents": 350922,
+          "external_cents": 1383356,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132723,
+          "dp_cents": 350922,
+          "external_cents": 1383456,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "917a7b44dd39d37c5160bd33747a6af58c664d6653ae4faf1bbffb8f140cb5a9",
+      "case_input_sha256": "9b0b64a136bd1679777b96f097ac861dfa035a39941e40167a45fae659c84b0e",
+      "dp_input_sha256": [
+        "cf536685bbf8856a2a43d394f0d5492801cb7eb3476f2150ec5fac69af06a2f4",
+        "cf536685bbf8856a2a43d394f0d5492801cb7eb3476f2150ec5fac69af06a2f4"
+      ],
+      "extra_tile": "T00051",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 299.0555758769915
+    },
+    {
+      "all_awarded_upper_cents": 2132825,
+      "branch_input_sha256": [
+        "a27a70290fe2c1ca9d410c6ecadbf1d2767c6b3e9f52d7fb9be636a3ebdde74a",
+        "c5edc220bca54848a12763e5ae6cd75effd5100a9098cc0693f780b9b5ded934"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 346234,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019371457980014384,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132725,
+          "dp_cents": 346234,
+          "external_cents": 1388146,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            29862
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132825,
+          "dp_cents": 346234,
+          "external_cents": 1388246,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            29862
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "93465812218b046516b0dac29c8c76e846d0f094b6a409d849e855cdd1821b01",
+      "case_input_sha256": "6d02014b89defa58ef29181e4854b054eff0246dfc349b182c78cc379d8e78f3",
+      "dp_input_sha256": [
+        "77d57f77f18724cde812c6da9252547e092a2aeda67a8cabb7da46f99db770e2",
+        "77d57f77f18724cde812c6da9252547e092a2aeda67a8cabb7da46f99db770e2"
+      ],
+      "extra_tile": "T00006",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 260.8721333119902
+    },
+    {
+      "all_awarded_upper_cents": 2132830,
+      "branch_input_sha256": [
+        "91de6b7ed54f16a55a337a7235ae73ce52fa513907995f3505181fbd32ff6d42",
+        "c159aa5da2db377ebf04d8bdbb2939e1adf59c21ca014de3b663c2b3c1553224"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 345960,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01899290198343806,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132730,
+          "dp_cents": 345960,
+          "external_cents": 1388425,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            4896
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132830,
+          "dp_cents": 345960,
+          "external_cents": 1388525,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            4896
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "7d148f6914ba8164cf7f9bd31c749496372b3b8f9a127c6f0880be7a415f3ae8",
+      "case_input_sha256": "9f5369165cc405fe7b78b5da44e2ff8a1f5eabbb2da5a60421171b12c289fe7b",
+      "dp_input_sha256": [
+        "8b93f55cc27f90eada8d75552b245de80eb82db6a66fde943bae6480754edce3",
+        "8b93f55cc27f90eada8d75552b245de80eb82db6a66fde943bae6480754edce3"
+      ],
+      "extra_tile": "T00046",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 188.52840964999632
+    },
+    {
+      "all_awarded_upper_cents": 2132935,
+      "branch_input_sha256": [
+        "348f6adeab698bcdc00f10520056f1a7bce7065789928bc7f7454b9931e3ff2b",
+        "98473bc97c3042647369db01316f7a1a0f0ac4d10affed4928ce527b9c282bd6"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 350165,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019215393986087292,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132835,
+          "dp_cents": 350165,
+          "external_cents": 1384325,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            1590
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132935,
+          "dp_cents": 350165,
+          "external_cents": 1384425,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            1590
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "5d9dc50dae1941c19c4f34905f9d062c995bc2ef1b222e54a1285b539652163d",
+      "case_input_sha256": "50e5bdb763e8ffc7ba3096c4390c95576367d878736c94aee0b67e738a9205e3",
+      "dp_input_sha256": [
+        "fa5eaa0907963611ffdb8db123659df46fe9f5458e3229f55e606ebddbca484e",
+        "fa5eaa0907963611ffdb8db123659df46fe9f5458e3229f55e606ebddbca484e"
+      ],
+      "extra_tile": "T00013",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 184.79160167599912
+    },
+    {
+      "all_awarded_upper_cents": 2132935,
+      "branch_input_sha256": [
+        "b7c1fffaf50ce2c061bea021aed26421a086a019750a1efe5aa6278bfdc5ba75",
+        "054b7b82b9b797a0e0b6589ebaa81ac066fcdcf2c5c1fc94805e60f88ddb7929"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 345949,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.02926952700363472,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132835,
+          "dp_cents": 345949,
+          "external_cents": 1388541,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            1590
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132935,
+          "dp_cents": 345949,
+          "external_cents": 1388641,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            1590
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "1fadb3d550fcf8f2c57ea06221e96f5c73d0ae60be315122e2c8e43a0328cb44",
+      "case_input_sha256": "30fad7c5d025af1fb14c84b44321146a8dad9bc89b50c8705b2905eb07cd19ca",
+      "dp_input_sha256": [
+        "fc00cbe28009960089fcade1dcd5dd31a9d90b6a071bf0c29a3735763f5616b4",
+        "fc00cbe28009960089fcade1dcd5dd31a9d90b6a071bf0c29a3735763f5616b4"
+      ],
+      "extra_tile": "T00014",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 214.9732937339868
+    },
+    {
+      "all_awarded_upper_cents": 2132936,
+      "branch_input_sha256": [
+        "92129dbda2871c6f5a2dcbabd3e8ddda5183c1e6fbdeb237be0e382e7db610fa",
+        "8ec589be2b2d78012d7aea6176cfbd51233228e20f0943a4fe82dd6ba9885eff"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 348047,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019844362017465755,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132836,
+          "dp_cents": 348047,
+          "external_cents": 1386444,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132936,
+          "dp_cents": 348047,
+          "external_cents": 1386544,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "34da99fed35e082195fe8782defc8cb051937baf5d00ae62bd65b5d33354a49c",
+      "case_input_sha256": "f6da9ca139e14999ba189d9bcffbeea5516077840d042418cdfd5fde5a345ee5",
+      "dp_input_sha256": [
+        "da0e0ad56910c7f8eec1d52d7ec4aafb2c1e3f5cc97db07b1854d7406e36ea5a",
+        "da0e0ad56910c7f8eec1d52d7ec4aafb2c1e3f5cc97db07b1854d7406e36ea5a"
+      ],
+      "extra_tile": "T00049",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 280.70740224499605
+    },
+    {
+      "all_awarded_upper_cents": 2132944,
+      "branch_input_sha256": [
+        "3714ca58e68b39a65afd95648447956804ccc3d2ef7bde501aa7545e9a2d15b9",
+        "e34c1fbf86f610548e46e033bb4fda1ab44916e872171fcc1ba646628b337217"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 359700,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.026340117008658126,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132844,
+          "dp_cents": 359700,
+          "external_cents": 1374799,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            39012
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132944,
+          "dp_cents": 359700,
+          "external_cents": 1374899,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            39012
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "e0da84e08a0149824f215476078e08a092756a996f7d7dd87f91be8a5518446e",
+      "case_input_sha256": "e2b51a8091b2fd3279a3a821ae8e1e377d082b7fb4edb83ea1bfd93d0d233e22",
+      "dp_input_sha256": [
+        "a3679c2c4dd59a441466c9a5773ffd058dc06a036cad354a9946529bc048eeb0",
+        "a3679c2c4dd59a441466c9a5773ffd058dc06a036cad354a9946529bc048eeb0"
+      ],
+      "extra_tile": "T00036",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 278.14515121799195
+    },
+    {
+      "all_awarded_upper_cents": 2132959,
+      "branch_input_sha256": [
+        "04643008d13877b5672691b1d4bba4953436a2bc2cbfdbf9de4fd2ea0310e47a",
+        "c3e49f3653e85858875a2b34f8acc052bb8499587f5e90e0f2fa262fcd2ac425"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 348693,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018926408025436103,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132859,
+          "dp_cents": 348693,
+          "external_cents": 1385821,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132959,
+          "dp_cents": 348693,
+          "external_cents": 1385921,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "0d62e26a842f2d0e8ff3d95fdbd1c06d092a37f5239d4306ed7abd1e02f81f5c",
+      "case_input_sha256": "7f49821a0c8c7a6a2f7167e2a4b569e19243068f8f50a318923beb79b964eacc",
+      "dp_input_sha256": [
+        "774ea96d6042c752cc525ffec4ddc60dbd683bb856254df2a23de30a31d321bb",
+        "774ea96d6042c752cc525ffec4ddc60dbd683bb856254df2a23de30a31d321bb"
+      ],
+      "extra_tile": "T00060",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 300.1182783510012
+    },
+    {
+      "all_awarded_upper_cents": 2132974,
+      "branch_input_sha256": [
+        "feccb35d8be00da043058add76bfb4dd498db3eef0137eef36e4754249336013",
+        "39a5db53bebb361ebe4951104720b37e61d4fbffdaf5c36c208b581b2652ea96"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 345581,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01997714099707082,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132874,
+          "dp_cents": 345581,
+          "external_cents": 1388948,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132974,
+          "dp_cents": 345581,
+          "external_cents": 1389048,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "f892c32e83298a551a7227c231ad017eaea0307d9fa1c7a717fe208c4747d8c0",
+      "case_input_sha256": "499a37ff6319ad85229056fdc3af9ab7795b9a5a6d45b91adcb084dcf0fc5942",
+      "dp_input_sha256": [
+        "d2ed2bfa394397b756ba8363d0b274273a516ec19673f1d19a368873a84f2e1d",
+        "d2ed2bfa394397b756ba8363d0b274273a516ec19673f1d19a368873a84f2e1d"
+      ],
+      "extra_tile": "T00005",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 288.2905018120073
+    },
+    {
+      "all_awarded_upper_cents": 2132979,
+      "branch_input_sha256": [
+        "3515d5452793198d912928606b349f61a14391f6efca7e2843b588c53850a08e",
+        "266d4a291b59f72943da9354a1ad65201cfa3f0e321b90d006b99f4235c37e70"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 355971,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018018863978795707,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132879,
+          "dp_cents": 355971,
+          "external_cents": 1378563,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            37122
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132979,
+          "dp_cents": 355971,
+          "external_cents": 1378663,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            37122
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "2cde76a156887a8e0f17ee7d34e89eea82f83691f00c24814283052f826613c7",
+      "case_input_sha256": "cefb2fbd6256d336ab907eb9ffcbfaf828b46a348a0512cd75c4c433666c3a26",
+      "dp_input_sha256": [
+        "872ac78bafa2b4d2f9b00fe772994f9e35c3d7cea4f0ad100ca40856007c7dab",
+        "872ac78bafa2b4d2f9b00fe772994f9e35c3d7cea4f0ad100ca40856007c7dab"
+      ],
+      "extra_tile": "T00059",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 283.03233936900506
+    },
+    {
+      "all_awarded_upper_cents": 2132988,
+      "branch_input_sha256": [
+        "b3db09432adc48221c2e9b953476bd886ba5c79d8c001fc0d184f22c4aae74d8",
+        "79afe6121e7e439193bd3a12901d80d6d38aba2509636e97d64116047b1040b8"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 347394,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018858374998671934,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132888,
+          "dp_cents": 347394,
+          "external_cents": 1387149,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132988,
+          "dp_cents": 347394,
+          "external_cents": 1387249,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "ba44a722368de3873cb7929c918636984a8c26b655f64a967996571198569969",
+      "case_input_sha256": "159a151913d2060bc5227c76a5ea5c302f12e8a9f03551c946d17f68226ed6bf",
+      "dp_input_sha256": [
+        "c75d60dc2ca970eb7deefc923c8ed39a60b1658222acfbf2e7e7dbcb3625474b",
+        "c75d60dc2ca970eb7deefc923c8ed39a60b1658222acfbf2e7e7dbcb3625474b"
+      ],
+      "extra_tile": "T00064",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 295.93944852999994
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "3190c12ea3bbde9717ad012645e35aad847fd1eb6d7cf484d9f76929d124fdf3",
+        "79de133dd4ced4b96961dc477b734e32a3cb1dd426359540d858e233191fbf4c"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 345665,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019718961004400626,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 345665,
+          "external_cents": 1388879,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            19494
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 345665,
+          "external_cents": 1388979,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            19494
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "4259ebc1d2cbcada8e768f0a76b2cd592781558b3473a494989d3797601c7b8c",
+      "case_input_sha256": "de2b4ece28d24a67d6dc5573be6d0095485f3f095fb63e00d27cd6ac4ff4af0e",
+      "dp_input_sha256": [
+        "3a21a0e860c49004e1ecf20eebe6abab0a358317fbfa6ce5393541fa5057370b",
+        "3a21a0e860c49004e1ecf20eebe6abab0a358317fbfa6ce5393541fa5057370b"
+      ],
+      "extra_tile": "T00002",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 245.83455145100015
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "bc503d29f42db308cda7e769da2bcc1a42c9c0533deb51461f0cf9b22ae84106",
+        "97241cb7da1a44ffb72281cf0f9d0e4843aa3d28d8d3f5e4fe12e474b09e4af2"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 340993,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.03249459498329088,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 340993,
+          "external_cents": 1393551,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 340993,
+          "external_cents": 1393651,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "ea48675e07b837070d1b16234c1f975772361330d739d982deb313b492a864c1",
+      "case_input_sha256": "d539a86287e41779abe94faaf373a8f37553df8116f63c77a07710e979b9d8ae",
+      "dp_input_sha256": [
+        "dcbd31848c7ca77d31d7c98e33c21a3be9f5d75ef55061255111200cc3af7a4a",
+        "dcbd31848c7ca77d31d7c98e33c21a3be9f5d75ef55061255111200cc3af7a4a"
+      ],
+      "extra_tile": "T00017",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 268.63091851002537
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "df9248fd59fc95dd1485e8b77f2fd3b9e26642bbb94634c50d8d3676abe23d72",
+        "b260fa5ea50f5a93671b0859943fd94b1343f05ea3820c4e74e88364c40999e0"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 351269,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018482776009477675,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 351269,
+          "external_cents": 1383275,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            42738
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 351269,
+          "external_cents": 1383375,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            42738
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "b5d77644c6e8e44a742edd908ef7a306b052b0755b3892215dfae565fba3a28b",
+      "case_input_sha256": "3b726864abb80640fbc79ef2bc5839361eaad31e14c7888562b86ca4c64d63fb",
+      "dp_input_sha256": [
+        "51307173561c794065a85dda4d47d48be012e7e9d0aa8214724230c09a22315b",
+        "51307173561c794065a85dda4d47d48be012e7e9d0aa8214724230c09a22315b"
+      ],
+      "extra_tile": "T00025",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 189.03952453800594
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "d7baaef9e8d0755a4876a152fd25639ce1d59dcd1161feeccc24f9cde311bb3f",
+        "e43a1a92c6229dcb51daaa1f57392f70176238d232e22d63c3a9e8e70bdde6ae"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 346983,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019946579996030778,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 346983,
+          "external_cents": 1387561,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            39012
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 346983,
+          "external_cents": 1387661,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            39012
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "316cb0242e33dd698467903018649f7aefb2d40306ba8ca3274b1c18369b985e",
+      "case_input_sha256": "3718efe8388026581b9dbf54dc8cd0dd41c5660b8ce67c0fc65e36e7c3b5d731",
+      "dp_input_sha256": [
+        "16be1a3c2fea56627ace2b42fa031d620a0295b505bb9362fb1c0d61ea70ebc6",
+        "16be1a3c2fea56627ace2b42fa031d620a0295b505bb9362fb1c0d61ea70ebc6"
+      ],
+      "extra_tile": "T00035",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 237.97410805299296
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "e823b6dcb909cc9f6ab4b85b95c71613cde20993d3f20a72c84a26a68ea37a6f",
+        "2f64ce1c20975f43cc2851c20e99d73722e0aa317a9cb75f6e89bd3d5cf32795"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 353978,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019159596995450556,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 353978,
+          "external_cents": 1380566,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            42738
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 353978,
+          "external_cents": 1380666,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            42738
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "1bbb97add602f71240d6eb0ea00de46786b2fa7678ba1ef3f02f15d184bcb431",
+      "case_input_sha256": "f50336a8658c22340754144225878261dfad05f812f4835747d8fd5630f6bc0c",
+      "dp_input_sha256": [
+        "003ae804f3819d5f7741e8e2ae2ee680a6e1713a2f16c71afdb4451a46e6b0b5",
+        "003ae804f3819d5f7741e8e2ae2ee680a6e1713a2f16c71afdb4451a46e6b0b5"
+      ],
+      "extra_tile": "T00037",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.26475817500614
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "92933abb9de0d9c29c4f7315e1c66c2a643ab4969761d5cdd8054d9f7edda034",
+        "aae7f985060168e9d40a681e0f1a258ff3be915d8073866b7e461b4b1161c0d1"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 345363,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01929786300752312,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 345363,
+          "external_cents": 1389181,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            6588
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 345363,
+          "external_cents": 1389281,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            6588
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "844b3e166fb186f501d1791346df07eec0b33b79ddcfb12012fa24603314943a",
+      "case_input_sha256": "fdfd909ba8f42d1bf7395c96ce5747495ce24a462d1b0b833f000ab8c682a015",
+      "dp_input_sha256": [
+        "b878aaee9e4539da4530138555f5bf919aade3bdb083314f1b8dd642b1d3341a",
+        "b878aaee9e4539da4530138555f5bf919aade3bdb083314f1b8dd642b1d3341a"
+      ],
+      "extra_tile": "T00050",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 195.29335462799645
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "abb740bf73336fb36d5b09b86c2111a9991ebe49abdfc5232c4081e37aa11875",
+        "924ce9c47f2e0edfaac6f88300fb003b1f04400fd8df03acb153949007a29381"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 358697,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019912274001399055,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 358697,
+          "external_cents": 1375847,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 358697,
+          "external_cents": 1375947,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "36c6026cdb635ff83dfc883d0e8b558077ee5b2bb104d6419fef96ee46ba32c3",
+      "case_input_sha256": "3417e89dc48482b75ae8f71be3d7733fb3110f8050c680953681b4c926fc6328",
+      "dp_input_sha256": [
+        "dbddb7a90b502b31d936b77e9ed746fe369170908e12491c4497d70c418f1d4f",
+        "dbddb7a90b502b31d936b77e9ed746fe369170908e12491c4497d70c418f1d4f"
+      ],
+      "extra_tile": "T00053",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 280.0374030370149
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "d14867d58f9b651750f76f0d8180170bff58bee80776fc3de9f07d4a59320b15",
+        "54ec4c8d3ffeb2b2a06053461c32d228fe3547cea98fd22632ef1a568cde1da5"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 352176,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01906333302031271,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 352176,
+          "external_cents": 1382368,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 352176,
+          "external_cents": 1382468,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "63ccadc00998ce99920524b7a7fdd9bb6c01dd2bbea31cfa47c19007acf3ebce",
+      "case_input_sha256": "1d9e703474e1ef1f679708872958db485989816585709275c6562228d6cdfe2e",
+      "dp_input_sha256": [
+        "0c89b4a2782dd5d452efa1d1c0f3ae5230041892c0ea3249facfea246c9a65eb",
+        "0c89b4a2782dd5d452efa1d1c0f3ae5230041892c0ea3249facfea246c9a65eb"
+      ],
+      "extra_tile": "T00054",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 303.03803672702634
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "1a880e388fa3826ba828c1272cc32ebfaed6a7392b17a3e6960e40f3a972c7c9",
+        "0256018ce8f7b73ec9ff68bb3b524bccbb6fea4975ca8d16fb99e582be2ee443"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 355483,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018282275006640702,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 355483,
+          "external_cents": 1379061,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            46338
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 355483,
+          "external_cents": 1379161,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            46338
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "02b015cb328f9436ff5072fd0d766a941be240f91bbe3b668242545e4c738a80",
+      "case_input_sha256": "a3744a3f976da2829f4f42d1ab31d41f72fd825daf737ea6fbed36c96e0dcc86",
+      "dp_input_sha256": [
+        "f757928776c124834278ff16d9135be62710b73863b796954c69747c4ade4662",
+        "f757928776c124834278ff16d9135be62710b73863b796954c69747c4ade4662"
+      ],
+      "extra_tile": "T00055",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 280.3930949640053
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "afa1bbdc744984c8e5e07a34f3a8ada04d43e2f314da37947bdd07c0ca741800",
+        "73a41b64a6e5e75f89c252487a04bceb82c1ba4f93deeb1820c9a082100e2948"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 351490,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.02015035299700685,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 351490,
+          "external_cents": 1383054,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 351490,
+          "external_cents": 1383154,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "417ff87ffa76cffbef5d8540889eebf47f411a9374d9afc4d47a39157517896e",
+      "case_input_sha256": "5f9fe6836de6694484da5491384b379a023ee880a743e89528f732ba5eb33772",
+      "dp_input_sha256": [
+        "9df0c8b656f2f100cd1787afad656a0e3ed0b93f12a26def1ce7f0f180e420e5",
+        "9df0c8b656f2f100cd1787afad656a0e3ed0b93f12a26def1ce7f0f180e420e5"
+      ],
+      "extra_tile": "T00057",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.49606521899113
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "33e8c907d9e1b2e4e3a017a81b4c863113aa3b7d90c8f03353bd0b5f6384833b",
+        "e42896121d69ef8a216aacc56eb791abf5e058558e1d68e4ab8c0c1b0ea3b4b7"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 353066,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019252869999036193,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 353066,
+          "external_cents": 1381478,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 353066,
+          "external_cents": 1381578,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "fc727d1c693e9e52ce05cc7a7a9583745338b1b82b8bde98beea5f4d85d664a5",
+      "case_input_sha256": "618336798a758e33ed3dec0c0e586e09004e7b414d33df55edf941d3fee9161e",
+      "dp_input_sha256": [
+        "c685a1cf8d3c6d534dab9c99f511dc61667b8206c4f371a76bcf4270a40624fd",
+        "c685a1cf8d3c6d534dab9c99f511dc61667b8206c4f371a76bcf4270a40624fd"
+      ],
+      "extra_tile": "T00058",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.9367762860202
+    },
+    {
+      "all_awarded_upper_cents": 2132989,
+      "branch_input_sha256": [
+        "177811faed7aac8fed273b3d9a348cf77bb685344f9a50548e18183f07c31eb1",
+        "4a276f61ada3484412c3825b050ef788d4da1ab350c0bc0979d6e6705103e6d5"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 343030,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018041995994281024,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132889,
+          "dp_cents": 343030,
+          "external_cents": 1391514,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            18120
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2132989,
+          "dp_cents": 343030,
+          "external_cents": 1391614,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            18120
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "314ba0dab78984b7667efb8d252a676054f2157807a0abb8912f1006b46e755c",
+      "case_input_sha256": "1f1dcadcfc0fae769b6cefcc5b7663484c4ac367baa00ae1cf7e841839bc18a6",
+      "dp_input_sha256": [
+        "8d2dc7171e017b0e617279d6ca7281732c00bfffd59c3b6e11a7f31368670ef0",
+        "8d2dc7171e017b0e617279d6ca7281732c00bfffd59c3b6e11a7f31368670ef0"
+      ],
+      "extra_tile": "T00063",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 242.79179621799267
+    },
+    {
+      "all_awarded_upper_cents": 2133047,
+      "branch_input_sha256": [
+        "0ba289ae9d0c7b810110670f2b6ae3f675bc3baecb35baa68061b566c29aea80",
+        "d4bad1f41331734038962de48d6ef956c31908ededa4bb030650687055ed2d2a"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 359601,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.021536087995627895,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132947,
+          "dp_cents": 359601,
+          "external_cents": 1375001,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133047,
+          "dp_cents": 359601,
+          "external_cents": 1375101,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "638dd2ac13b1b6e377680fa03c76b78709fa1ddd2f89cf61e32c812d755f74a6",
+      "case_input_sha256": "fc61a946993efa10fa66a10e9ab2f6b9984ce2069725394d754b0b26433d76c5",
+      "dp_input_sha256": [
+        "3aeef857cdab5300350418384ef03f374b7ff014e9a7b9ef5ee97402257bf53c",
+        "3aeef857cdab5300350418384ef03f374b7ff014e9a7b9ef5ee97402257bf53c"
+      ],
+      "extra_tile": "T00023",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.7321509810281
+    },
+    {
+      "all_awarded_upper_cents": 2133076,
+      "branch_input_sha256": [
+        "270148cb4c0c821166dc7af1c3c3c684270456d1c28542dbf29f0e42e5721d26",
+        "f0a9a868bf4c63ab8e44e0ace37138f2370d1abe542878d4ea3eb6ed43282b55"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 344196,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.018582037999294698,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132976,
+          "dp_cents": 344196,
+          "external_cents": 1390435,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            27324
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133076,
+          "dp_cents": 344196,
+          "external_cents": 1390535,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            27324
+          ],
+          "mandatory_key_mask": 116228,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "7d72d70e821b8e571df39df8cf25f19a983c0d090f435e42bad4d1b7a8059cda",
+      "case_input_sha256": "8f070c13645e020e2be272416004a6700c52175e4bd4553a6bd0cb821c2e6e68",
+      "dp_input_sha256": [
+        "bb5f8b8ba0cc97600c4ae15b61f73f70df1be37556040d5efe1f51a8ecfd4519",
+        "bb5f8b8ba0cc97600c4ae15b61f73f70df1be37556040d5efe1f51a8ecfd4519"
+      ],
+      "extra_tile": "T00022",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 283.6204166820098
+    },
+    {
+      "all_awarded_upper_cents": 2133077,
+      "branch_input_sha256": [
+        "b149a3b0067fe86bd10f74fe36e5e536164ec665d5aa8256a1f7e03aec9355d8",
+        "5a8c5e0d2d335d774446c482437571dce275f1797d2c8e7c439738ed96a939f2"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 357539,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019584991998272017,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132977,
+          "dp_cents": 357539,
+          "external_cents": 1377093,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133077,
+          "dp_cents": 357539,
+          "external_cents": 1377193,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "25e50642fb37ece133f0ce30398c5d0fae18cc37cc46d4642c14d61ab55e5c8f",
+      "case_input_sha256": "9ffb66bb56b92ac824afd3fe9e4dd11dc3701889bf85b35600a07d42357f93be",
+      "dp_input_sha256": [
+        "be31c0fd385c9beff637609154e4d0da2b0bcf4e91065b87e2d96695f7f75feb",
+        "be31c0fd385c9beff637609154e4d0da2b0bcf4e91065b87e2d96695f7f75feb"
+      ],
+      "extra_tile": "T00044",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 316.698995061015
+    },
+    {
+      "all_awarded_upper_cents": 2133079,
+      "branch_input_sha256": [
+        "f6fa7a848ac4b6eebd63358ab95fbf5e8e50a1d52a05c7c1b06b8d045c9d78a7",
+        "2f193bf19930fdb2bb1c8c1aea0542901c30eda111aa5a6659d709ecb1e3f73d"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 363026,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.02161501900991425,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2132979,
+          "dp_cents": 363026,
+          "external_cents": 1371608,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133079,
+          "dp_cents": 363026,
+          "external_cents": 1371708,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "b3b94a74ecb44435891e43e4731319e26d1322d05f1923990fb0f2bafb01d7e5",
+      "case_input_sha256": "f459e7a5eb6a9d8049a4034c834dc7799fda29b58f83fa60ca0a58cbba285c30",
+      "dp_input_sha256": [
+        "0594b38aaf58c4ada87991d4d3e6d0001c1b8795bbf2d4c4dd4fa60621c563b0",
+        "0594b38aaf58c4ada87991d4d3e6d0001c1b8795bbf2d4c4dd4fa60621c563b0"
+      ],
+      "extra_tile": "T00038",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 260.45629459098564
+    },
+    {
+      "all_awarded_upper_cents": 2133109,
+      "branch_input_sha256": [
+        "30613a4e23efebe3c1c928b486043244f6613928b3407d68259bbf391777a94c",
+        "1879f605f26f8c7a172bb95f05148c760d0338a8330edceab9fa7a1a0d33517d"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 364791,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019663479004520923,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2133009,
+          "dp_cents": 364791,
+          "external_cents": 1369873,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133109,
+          "dp_cents": 364791,
+          "external_cents": 1369973,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 67585,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "193223052d9672200e30445d97fd8fb07e7586943f9817dcf55fbb56ebc5aadb",
+      "case_input_sha256": "9274ce2c86efca69c98532dd21be1fccda2f681b041e750b111b7ff2eca909e8",
+      "dp_input_sha256": [
+        "142ff3b0f6532c2cd839e3d06a82b788a9e372de57931d13ff5ca8b953e1e67c",
+        "142ff3b0f6532c2cd839e3d06a82b788a9e372de57931d13ff5ca8b953e1e67c"
+      ],
+      "extra_tile": "T00026",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 274.77184522300377
+    },
+    {
+      "all_awarded_upper_cents": 2133109,
+      "branch_input_sha256": [
+        "ee4c5f38ca1df55101ecc6dace332e13817692f5c64af99b7c830730317c2585",
+        "b61ba51858a01a993e197435d09fa984ae326efa9e80a9f70430f46ab6d194aa"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 359424,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.01964592802687548,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2133009,
+          "dp_cents": 359424,
+          "external_cents": 1375240,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133109,
+          "dp_cents": 359424,
+          "external_cents": 1375340,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "bbd3e5f1c41e211f85f5e153971454b2133c5c78792ead68c91918c3cd956ed5",
+      "case_input_sha256": "673f0058bf3bc4981d94200ee7b88f495baeac582eafacfbf9922baf561dfe64",
+      "dp_input_sha256": [
+        "449c126b8effba1c13ed5f0b7587da35e5119eb013b269ce5535f375b8f712cb",
+        "449c126b8effba1c13ed5f0b7587da35e5119eb013b269ce5535f375b8f712cb"
+      ],
+      "extra_tile": "T00028",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 266.1926643430197
+    },
+    {
+      "all_awarded_upper_cents": 2133124,
+      "branch_input_sha256": [
+        "21990d72689754fbd34f3a0d838a51fa35a9c5cf4eaf2fb1615f93daa3e9a2e6",
+        "2cd561031427dc931bf3e950a12214fcf9f9e1dda6ed4a769339effbc79ec3b9"
+      ],
+      "branch_sharing_audit": {
+        "equal_array_argument_checks": [
+          8,
+          9,
+          12,
+          14
+        ],
+        "equal_scalar_argument_checks": [
+          0,
+          10,
+          11,
+          13,
+          15
+        ],
+        "first_dp_cents": 354283,
+        "graph_argument_identity_checks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "second_branch_external_difference_cents": 100,
+        "second_branch_wall_seconds": 0.019803774019237608,
+        "second_dp_reused": true
+      },
+      "branches": [
+        {
+          "conditional_upper_cents": 2133024,
+          "dp_cents": 354283,
+          "external_cents": 1380396,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 6345
+        },
+        {
+          "conditional_upper_cents": 2133124,
+          "dp_cents": 354283,
+          "external_cents": 1380496,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568,
+            47568,
+            47568,
+            29862,
+            1590,
+            47568
+          ],
+          "mandatory_key_mask": 50692,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 6345
+        }
+      ],
+      "case_file_sha256": "9da2f747c72aedbe60cb98e1eabb36fd477679287c60266353ca38c7a8f2e093",
+      "case_input_sha256": "03312a859c0ae40350e51266879f7cfab7f676c51bb7dcdb289a57d2d85e6e6c",
+      "dp_input_sha256": [
+        "bc754f454f18077177e71b837ac09026fd72a10b1363660e3ded8f6cb984d2a3",
+        "bc754f454f18077177e71b837ac09026fd72a10b1363660e3ded8f6cb984d2a3"
+      ],
+      "extra_tile": "T00019",
+      "peak_rss_mib": 230.5078125,
+      "worker_wall_seconds": 279.6450376389839
+    }
+  ],
+  "scan_elapsed_seconds": 636.5027223400248,
+  "scope": "public dev-reference; all 17 request rewards; 48 K17 one-key extensions",
+  "source_sha256": {
+    "bounds_practice_projection.py": "7b11fba86c591881f8c93417ba53d796b78c212e8c9a89cea5b303cd03b84583",
+    "bounds_request_conditioned.py": "207d1a15c1882924bc84c7bb71e4ba18f5cf0bc80ce578e307aa5fae523fb991",
+    "bounds_request_projection_k10.py": "5aff4f4fcda5d3c66d07857d0365055b06c6a73fbc2e76f086534d8fe5712b61",
+    "bounds_request_projection_ring.py": "4edff373fcbf3708bfc3b62856dda27b235bab397e39ff998ab15498bd5c5353",
+    "challenge/scoring_core.py": "abb3e2758b11380f1b894d8eb743a220e4384f0b55f964cac51a6d19eca93b65",
+    "parallel_key_extension_scan.py": "c54e153c48133224b4568c82a335f7b8a57c77b9e268b1bb4ed61f3cb1b46ba2",
+    "projection_branch_merge.py": "b47b2219c674568ac47746bacf333567080890eb2d5d51b1fff095dc2219ae38",
+    "projection_ring_state_pruning.py": "f031d8ee5701bd1495019b69aab51377636ebfc5c0ba37dfb7ad8d0bb23cf92b"
+  },
+  "sum_worker_wall_seconds": 12989.126787057088,
+  "verification_file_sha256": "cda33c565b3e619b636abe541dc28567b33dab52b878bf29b6d71f5b9e6816f0"
+}
