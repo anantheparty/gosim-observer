@@ -54,7 +54,9 @@ def two_equivalent_branches(
             if args[index] != first_args[index]:
                 raise AssertionError(f"projection scalar argument {index} changed")
         for index in _BRANCH_ARRAY_ARGUMENTS:
-            if not np.array_equal(args[index], first_args[index]):
+            if (args[index].dtype != first_args[index].dtype
+                    or args[index].shape != first_args[index].shape
+                    or not np.array_equal(args[index], first_args[index])):
                 raise AssertionError(f"projection array argument {index} changed")
         compared = True
         return first_value
