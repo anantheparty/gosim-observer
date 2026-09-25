@@ -2,9 +2,9 @@
 
 ## 本仓库的研究结果
 
-比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,119.494551**，文件为 [results/practice_best.csv](results/practice_best.csv)；多起点、事件层精确大邻域搜索与受限列 CP 重组见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md) 和 [POPULATION_CP_ZH.md](POPULATION_CP_ZH.md)。**这条先知路径使用了整季公开天气真值与全部请求**。对任意合法路径的最新无条件上界为 **21,796.70**，关键天区投影与请求集合证书见 [GLOBAL_INTERVAL_BOUND_ZH.md](GLOBAL_INTERVAL_BOUND_ZH.md)。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
+比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,119.494551**，文件为 [results/practice_best.csv](results/practice_best.csv)；多起点、事件层精确大邻域搜索与受限列 CP 重组见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md) 和 [POPULATION_CP_ZH.md](POPULATION_CP_ZH.md)。**这条先知路径使用了整季公开天气真值与全部请求**。当前对任意合法路径的无条件上界为 **21,415.15**：全 17 个请求由 [14 天区投影](REQUEST_PROJECTION_K14_PILOT_ZH.md)及[非关键天区配对](NONKEY_PAIR_MATCHING_BOUND_ZH.md)约束，少于 17 个请求由 [16 请求证书](SIXTEEN_REQUEST_RESIDUAL_ZH.md)与 [15 请求证书](FIFTEEN_REQUEST_K13_TARGETED_ZH.md)覆盖；未闭合差距为 295.655449 分。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
 
-**赛制澄清（2026-09-24）：**据参赛者确认，正式比赛也允许在取得完整实例真值后离线计算并提交先知决策轨迹。本仓库早期关于“正式必须在线决策”的判断只适用于所附交互式 `challenge_workflow` 输入接口，不能作为赛事离线提交的限制。当前 21,119.494551 分与 21,796.70 上界只对应 `dev-reference` 这一份实例；正式实例到手后须按其评分配置重新建模和计算。
+**赛制澄清（2026-09-24）：**据参赛者确认，正式比赛也允许在取得完整实例真值后离线计算并提交先知决策轨迹。本仓库早期关于“正式必须在线决策”的判断只适用于所附交互式 `challenge_workflow` 输入接口，不能作为赛事离线提交的限制。当前 21,119.494551 分与 21,415.15 上界只对应 `dev-reference` 这一份实例；正式实例到手后须按其评分配置重新建模和计算。
 
 冲击离线最优的实验顺序、验收指标与上下界账本见 [ORACLE_ITERATION_ZH.md](ORACLE_ITERATION_ZH.md)。
 
