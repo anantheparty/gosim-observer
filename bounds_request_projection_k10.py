@@ -235,8 +235,8 @@ def _conditional_bound(
     data: dict, inputs: dict, keys: tuple[str, ...], theta_cents: int,
     branch_index: int,
 ) -> dict:
-    if len(keys) > 11 or len(keys) < 8 or theta_cents < 0:
-        raise ValueError("requires 8 <= k <= 11 and nonnegative theta")
+    if len(keys) > 12 or len(keys) < 8 or theta_cents < 0:
+        raise ValueError("requires 8 <= k <= 12 and nonnegative theta")
     tile_ids = data["tile_ids"]
     key_index = np.full(len(tile_ids), -1, dtype=np.int8)
     for bit, key in enumerate(keys):

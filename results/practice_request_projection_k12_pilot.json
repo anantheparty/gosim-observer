@@ -1,0 +1,333 @@
+{
+  "all_awarded_upper_cents": 2151744,
+  "base_k11": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015",
+    "T00048",
+    "T00032",
+    "T00016"
+  ],
+  "base_k11_branches": [
+    {
+      "conditional_upper_cents": 2157373,
+      "dp_cents": 211519,
+      "dp_wall_seconds": 2.61662320792675,
+      "external_cents": 1546699,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012
+      ],
+      "mandatory_key_mask": 1540,
+      "peak_rss_mib": 892.6875,
+      "request_cents": 392000,
+      "required_key_mask": 1,
+      "rq0004_tile": [
+        "T00004"
+      ],
+      "theta_constant_cents": 7155
+    },
+    {
+      "conditional_upper_cents": 2157473,
+      "dp_cents": 211519,
+      "dp_wall_seconds": 2.4980964169371873,
+      "external_cents": 1546799,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012
+      ],
+      "mandatory_key_mask": 1540,
+      "peak_rss_mib": 895.359375,
+      "request_cents": 392000,
+      "required_key_mask": 1,
+      "rq0004_tile": [
+        "T00012"
+      ],
+      "theta_constant_cents": 7155
+    }
+  ],
+  "candidate_selection": "T00010 and T00047 are the next-best eleventh keys; T00011 is the next-best alternative tenth key after T00047",
+  "capacity_units": 47568,
+  "cases": [
+    {
+      "all_awarded_upper_cents": 2151744,
+      "branches": [
+        {
+          "conditional_upper_cents": 2151644,
+          "dp_cents": 242695,
+          "dp_wall_seconds": 4.9796756252180785,
+          "external_cents": 1509929,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1570.140625,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 7020
+        },
+        {
+          "conditional_upper_cents": 2151744,
+          "dp_cents": 242695,
+          "dp_wall_seconds": 4.697961499914527,
+          "external_cents": 1510029,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1573.578125,
+          "request_cents": 392000,
+          "required_key_mask": 2049,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 7020
+        }
+      ],
+      "keys": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031",
+        "T00024",
+        "T00021",
+        "T00040",
+        "T00015",
+        "T00048",
+        "T00032",
+        "T00016",
+        "T00010"
+      ]
+    },
+    {
+      "all_awarded_upper_cents": 2152291,
+      "branches": [
+        {
+          "conditional_upper_cents": 2152191,
+          "dp_cents": 232027,
+          "dp_wall_seconds": 4.672861499944702,
+          "external_cents": 1521144,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1577.578125,
+          "request_cents": 392000,
+          "required_key_mask": 1,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 7020
+        },
+        {
+          "conditional_upper_cents": 2152291,
+          "dp_cents": 232027,
+          "dp_wall_seconds": 4.691371459048241,
+          "external_cents": 1521244,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1577.578125,
+          "request_cents": 392000,
+          "required_key_mask": 1,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 7020
+        }
+      ],
+      "keys": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031",
+        "T00024",
+        "T00021",
+        "T00040",
+        "T00015",
+        "T00048",
+        "T00032",
+        "T00016",
+        "T00047"
+      ]
+    },
+    {
+      "all_awarded_upper_cents": 2152427,
+      "branches": [
+        {
+          "conditional_upper_cents": 2152327,
+          "dp_cents": 234839,
+          "dp_wall_seconds": 4.640663707861677,
+          "external_cents": 1518468,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1577.578125,
+          "request_cents": 392000,
+          "required_key_mask": 1,
+          "rq0004_tile": [
+            "T00004"
+          ],
+          "theta_constant_cents": 7020
+        },
+        {
+          "conditional_upper_cents": 2152427,
+          "dp_cents": 234839,
+          "dp_wall_seconds": 4.648559625027701,
+          "external_cents": 1518568,
+          "feasible_relaxation": true,
+          "key_deadline_unit": [
+            47568,
+            47568,
+            42738,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            47568,
+            37122,
+            39012,
+            47568
+          ],
+          "mandatory_key_mask": 1540,
+          "peak_rss_mib": 1577.578125,
+          "request_cents": 392000,
+          "required_key_mask": 1,
+          "rq0004_tile": [
+            "T00012"
+          ],
+          "theta_constant_cents": 7020
+        }
+      ],
+      "keys": [
+        "T00018",
+        "T00029",
+        "T00030",
+        "T00031",
+        "T00024",
+        "T00021",
+        "T00040",
+        "T00015",
+        "T00048",
+        "T00032",
+        "T00016",
+        "T00011"
+      ]
+    }
+  ],
+  "certificates": {
+    "all_subsets_certificate_sha256": "5e6a3aac67266a5f0bab2b3624c01db4ca34afb75efd33f71ee13be2b0c737d0",
+    "conditional_certificate_sha256": "e81686ff1270a821e4ebf1c8626ac60ee1bd70a991e1735a39ede7c17a7c898f",
+    "other_award_subsets_upper_cents": 2161431,
+    "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+    "projection_certificate_sha256": "f8c9992cce867f14f2fb0b388c6a77b624704727ce7280f6182df49f69626fdc",
+    "scalar_audit": {
+      "max_envelope_violation_cents": 0,
+      "minimum_envelope_slack_cents": 0,
+      "omitted_scalar_legal_arcs": 0,
+      "omitted_weather_interruption_arcs": 0,
+      "scalar_checked_arcs": 918757,
+      "scalar_checked_start_points": 3044352,
+      "scalar_weather_interruption_cases": 12030
+    }
+  },
+  "complete_arc_count": 918757,
+  "old_less_than_17_upper_cents": 2161431,
+  "peak_rss_mib": 1577.578125,
+  "prior_k11_certificate_sha256": "14ff1366d27e8c422336c6cd291c7ece337cf47aec6afb42b896f8355091aa8b",
+  "runtime_seconds": 74.46643529110588,
+  "scope": "public dev-reference; all-17 request conditional bound",
+  "theta_uniform_cents": 135,
+  "weather_interruption_arc_count": 850
+}
