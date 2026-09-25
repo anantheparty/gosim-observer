@@ -30,6 +30,10 @@ def main() -> None:
                         default=full.ROOT / "results" / "practice_request_projection_k16_ring.json")
     parser.add_argument("--base-certificate", type=Path,
                         default=full.ROOT / "results" / "practice_request_projection_k15_ring.json")
+    parser.add_argument("--prior-k15-full", type=Path,
+                        default=full.ROOT / "results" / "practice_request_projection_k15_certified.json")
+    parser.add_argument("--skip-baseline", action="store_true",
+                        help="reuse the already verified K15 full/ring certificate")
     parser.add_argument("--out", type=Path,
                         default=full.ROOT / "results" / "practice_request_projection_k16_full_check.json")
     args = parser.parse_args()
@@ -51,18 +55,29 @@ def main() -> None:
     if len(base_cases) != 1:
         raise AssertionError("K15 baseline key set missing")
     base_branches = []
-    for i in range(2):
-        row = full._conditional_bound(data, inputs, BASE_KEYS, 135, i)
-        old = base_cases[0]["branches"][i]
-        if {field: row[field] for field in FIELDS} != {field: old[field] for field in FIELDS}:
-            raise AssertionError(f"K15 baseline full/ring mismatch in branch {i}")
-        base_branches.append(row)
-        print(json.dumps({
-            "baseline_branch_index": i,
-            "upper_cents": row["conditional_upper_cents"],
-            "elapsed_seconds": time.monotonic() - started,
-            "peak_rss_mib": full._rss_mib(),
-        }), flush=True)
+    baseline_source = "fresh full matrix"
+    baseline_reference_sha256 = None
+    if args.skip_baseline:
+        prior_full = json.loads(args.prior_k15_full.read_text())
+        if (prior_full["all_awarded_upper_cents"] != 2137159
+                or prior_full["ring_certificate_sha256"]
+                != hashlib.sha256(args.base_certificate.read_bytes()).hexdigest()):
+            raise AssertionError("prior K15 full/ring cross-check differs")
+        baseline_source = "previous independent full/ring K15 certificate"
+        baseline_reference_sha256 = hashlib.sha256(args.prior_k15_full.read_bytes()).hexdigest()
+    else:
+        for i in range(2):
+            row = full._conditional_bound(data, inputs, BASE_KEYS, 135, i)
+            old = base_cases[0]["branches"][i]
+            if {field: row[field] for field in FIELDS} != {field: old[field] for field in FIELDS}:
+                raise AssertionError(f"K15 baseline full/ring mismatch in branch {i}")
+            base_branches.append(row)
+            print(json.dumps({
+                "baseline_branch_index": i,
+                "upper_cents": row["conditional_upper_cents"],
+                "elapsed_seconds": time.monotonic() - started,
+                "peak_rss_mib": full._rss_mib(),
+            }), flush=True)
     branches = []
     for i in range(2):
         row = full._conditional_bound(data, inputs, KEYS, 135, i)
@@ -84,6 +99,8 @@ def main() -> None:
         "keys": list(KEYS),
         "base_keys": list(BASE_KEYS),
         "base_branches": base_branches,
+        "baseline_source": baseline_source,
+        "baseline_reference_sha256": baseline_reference_sha256,
         "theta_cents": 135,
         "complete_arc_count": data["complete_arc_count"],
         "weather_interruption_arc_count": data["partial_arc_count"],
