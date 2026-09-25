@@ -23,3 +23,5 @@
 - 输入快照 SHA 清单：同一状态目录的 `input_files.sha256`，文件本身 SHA256 为 `564c31b4ae49e3c37af58ba7036b9494054f98e58147eb8e5b1ce9252e7e6f30`。
 
 若部分 worker 失败或超时，`status.json` 标为 incomplete 并保留失败详情；再次运行相同命令会校验并复用成功的检查点。扫描中各候选只是全 17 请求分支的上界；与已有恰 16、至多 15 请求证书取最大值，才是无条件上界。
+
+远端 preflight 已复算 K14/K15/K16，整数结果和每个 DP 输入 SHA256 均与本地完全相同。远端核验账本、48 候选计划分别复制为 `results/parallel_key_scan_remote_verify.json`、`results/parallel_key_scan_remote_plan.json`；计划 SHA256 是 `892619e30eeffcb8cce7fe9fbde014a80ad3a2b5ac1fd78b81340cc36aadbc0b`。24 个 worker 已全部实际启动。
