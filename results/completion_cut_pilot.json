@@ -1,0 +1,98 @@
+{
+  "fresh_scalar_audit": {},
+  "key_tiles": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015"
+  ],
+  "other_request_subsets_upper_cents": 2161431,
+  "pairs": [
+    {
+      "baseline_projection_upper_cents": 2273850,
+      "children": {
+        "early": {
+          "conditional_all_awarded_upper_cents": 2179570,
+          "prunable_at_21119_494551": false,
+          "request_choice_branches": [
+            {
+              "choice_by_request": {
+                "RQ0004": [
+                  "T00004"
+                ]
+              },
+              "external_science_cents": 1639160,
+              "feasible_relaxation": true,
+              "projected_dp_cents": 140570,
+              "target_eligible_first_arc_count": 6022,
+              "target_mandatory_for_request": true,
+              "target_reduced_envelope_cents": 33001,
+              "upper_cents_all_awarded": 2179570
+            },
+            {
+              "choice_by_request": {
+                "RQ0004": [
+                  "T00012"
+                ]
+              },
+              "external_science_cents": 1639160,
+              "feasible_relaxation": true,
+              "projected_dp_cents": 140570,
+              "target_eligible_first_arc_count": 14254,
+              "target_mandatory_for_request": false,
+              "target_reduced_envelope_cents": 33001,
+              "upper_cents_all_awarded": 2179570
+            }
+          ],
+          "unconditional_upper_cents": 2179570
+        },
+        "late_or_never": {
+          "conditional_all_awarded_upper_cents": 2144118,
+          "prunable_at_21119_494551": false,
+          "request_choice_branches": [
+            {
+              "feasible_relaxation": false,
+              "missing_tile": "T00004"
+            },
+            {
+              "choice_by_request": {
+                "RQ0004": [
+                  "T00012"
+                ]
+              },
+              "external_science_cents": 1639260,
+              "feasible_relaxation": true,
+              "projected_dp_cents": 105018,
+              "target_eligible_first_arc_count": 8398,
+              "target_mandatory_for_request": false,
+              "target_reduced_envelope_cents": 33101,
+              "upper_cents_all_awarded": 2144118
+            }
+          ],
+          "unconditional_upper_cents": 2161431
+        }
+      },
+      "cut_unit": 20000,
+      "cut_utc": "2026-11-25T11:05:00",
+      "max_child_unconditional_upper_cents": 2179570,
+      "other_request_subsets_upper_cents": 2161431,
+      "reproduced_all_awarded_choice_upper_cents": [
+        2179570,
+        2179670
+      ],
+      "target": "T00004",
+      "target_actionable_starts_through_cut": 14186
+    }
+  ],
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "prior_conditional_certificate_sha256": "e81686ff1270a821e4ebf1c8626ac60ee1bd70a991e1735a39ede7c17a7c898f",
+  "prior_projection_certificate_sha256": "f8c9992cce867f14f2fb0b388c6a77b624704727ce7280f6182df49f69626fdc",
+  "prior_unconditional_certificate_sha256": "5e6a3aac67266a5f0bab2b3624c01db4ca34afb75efd33f71ee13be2b0c737d0",
+  "published_unconditional_upper_cents": 2179670,
+  "scope": "dev-reference fixed public instance; both children cover all first-completion outcomes",
+  "theta_cents": 140
+}
