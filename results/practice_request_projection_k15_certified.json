@@ -1,0 +1,231 @@
+{
+  "all_awarded_upper_cents": 2137159,
+  "complete_arc_count": 918757,
+  "exact_branch_comparisons": [
+    {
+      "branch_index": 0,
+      "extra_key": "T00027",
+      "full_dp_seconds": 115.85704027899192,
+      "ring_dp_seconds": 50.58029366703704,
+      "upper_cents": 2137059
+    },
+    {
+      "branch_index": 1,
+      "extra_key": "T00027",
+      "full_dp_seconds": 116.46073659701506,
+      "ring_dp_seconds": 49.22863879101351,
+      "upper_cents": 2137159
+    },
+    {
+      "branch_index": 0,
+      "extra_key": "T00062",
+      "full_dp_seconds": 107.34749881699099,
+      "ring_dp_seconds": 45.509368874831125,
+      "upper_cents": 2137381
+    },
+    {
+      "branch_index": 1,
+      "extra_key": "T00062",
+      "full_dp_seconds": 107.15990499401232,
+      "ring_dp_seconds": 45.03216658299789,
+      "upper_cents": 2137481
+    }
+  ],
+  "full_remote_trials": [
+    {
+      "all_awarded_upper_cents": 2137159,
+      "case": {
+        "all_awarded_upper_cents": 2137159,
+        "branches": [
+          {
+            "conditional_upper_cents": 2137059,
+            "dp_cents": 305806,
+            "dp_wall_seconds": 115.85704027899192,
+            "external_cents": 1432638,
+            "feasible_relaxation": true,
+            "key_deadline_unit": [
+              47568,
+              47568,
+              42738,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              37122,
+              39012,
+              47568,
+              47568,
+              47568,
+              29862
+            ],
+            "mandatory_key_mask": 17924,
+            "peak_rss_mib": 12084.98046875,
+            "request_cents": 392000,
+            "required_key_mask": 2049,
+            "rq0004_tile": [
+              "T00004"
+            ],
+            "theta_constant_cents": 6615
+          },
+          {
+            "conditional_upper_cents": 2137159,
+            "dp_cents": 305806,
+            "dp_wall_seconds": 116.46073659701506,
+            "external_cents": 1432738,
+            "feasible_relaxation": true,
+            "key_deadline_unit": [
+              47568,
+              47568,
+              42738,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              37122,
+              39012,
+              47568,
+              47568,
+              47568,
+              29862
+            ],
+            "mandatory_key_mask": 17924,
+            "peak_rss_mib": 12085.1484375,
+            "request_cents": 392000,
+            "required_key_mask": 2049,
+            "rq0004_tile": [
+              "T00012"
+            ],
+            "theta_constant_cents": 6615
+          }
+        ],
+        "keys": [
+          "T00018",
+          "T00029",
+          "T00030",
+          "T00031",
+          "T00024",
+          "T00021",
+          "T00040",
+          "T00015",
+          "T00048",
+          "T00032",
+          "T00016",
+          "T00010",
+          "T00047",
+          "T00011",
+          "T00027"
+        ]
+      },
+      "extra_key": "T00027",
+      "peak_rss_mib": 12085.1484375,
+      "runtime_seconds": 431.120648659009,
+      "source_sha256": "0a73b4e78c69a0212bf1100dfc84f7e8a8cd88fb0273bca6e2cd62b6b682ca7a"
+    },
+    {
+      "all_awarded_upper_cents": 2137481,
+      "case": {
+        "all_awarded_upper_cents": 2137481,
+        "branches": [
+          {
+            "conditional_upper_cents": 2137381,
+            "dp_cents": 305791,
+            "dp_wall_seconds": 107.34749881699099,
+            "external_cents": 1432975,
+            "feasible_relaxation": true,
+            "key_deadline_unit": [
+              47568,
+              47568,
+              42738,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              37122,
+              39012,
+              47568,
+              47568,
+              47568,
+              1590
+            ],
+            "mandatory_key_mask": 17924,
+            "peak_rss_mib": 12085.97265625,
+            "request_cents": 392000,
+            "required_key_mask": 2049,
+            "rq0004_tile": [
+              "T00004"
+            ],
+            "theta_constant_cents": 6615
+          },
+          {
+            "conditional_upper_cents": 2137481,
+            "dp_cents": 305791,
+            "dp_wall_seconds": 107.15990499401232,
+            "external_cents": 1433075,
+            "feasible_relaxation": true,
+            "key_deadline_unit": [
+              47568,
+              47568,
+              42738,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              47568,
+              37122,
+              39012,
+              47568,
+              47568,
+              47568,
+              1590
+            ],
+            "mandatory_key_mask": 17924,
+            "peak_rss_mib": 12085.97265625,
+            "request_cents": 392000,
+            "required_key_mask": 2049,
+            "rq0004_tile": [
+              "T00012"
+            ],
+            "theta_constant_cents": 6615
+          }
+        ],
+        "keys": [
+          "T00018",
+          "T00029",
+          "T00030",
+          "T00031",
+          "T00024",
+          "T00021",
+          "T00040",
+          "T00015",
+          "T00048",
+          "T00032",
+          "T00016",
+          "T00010",
+          "T00047",
+          "T00011",
+          "T00062"
+        ]
+      },
+      "extra_key": "T00062",
+      "peak_rss_mib": 12085.97265625,
+      "runtime_seconds": 413.38028813301935,
+      "source_sha256": "7eb94b34455050cd1f70fcbe0752a54c9c8930a70702ae48fc0a49c5c0ed9a46"
+    }
+  ],
+  "full_time_rows": 47569,
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "prior_k14_sha256": "ad56f7029eee5933ce93dcc797e62a86ed7c5af3bc75d973fed518a4fd405781",
+  "ring_certificate_sha256": "a6a2dd5357efadb0da48dac496fd07771aadd112bdb3f3fcdf77beb43e8a9e0b",
+  "ring_peak_rss_mib": 202.25,
+  "ring_runtime_seconds": 284.37604583404027,
+  "ring_time_rows": 10,
+  "scope": "public dev-reference; conditional on all 17 feasible request rewards",
+  "weather_interruption_arc_count": 850
+}

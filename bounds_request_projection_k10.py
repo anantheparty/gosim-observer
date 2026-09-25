@@ -233,10 +233,10 @@ def _instance_inputs(data: dict) -> dict:
 
 def _conditional_bound(
     data: dict, inputs: dict, keys: tuple[str, ...], theta_cents: int,
-    branch_index: int,
+    branch_index: int, dp_function=conditional_projected_dp16,
 ) -> dict:
-    if len(keys) > 14 or len(keys) < 8 or theta_cents < 0:
-        raise ValueError("requires 8 <= k <= 14 and nonnegative theta")
+    if len(keys) > 16 or len(keys) < 8 or theta_cents < 0:
+        raise ValueError("requires 8 <= k <= 16 and nonnegative theta")
     tile_ids = data["tile_ids"]
     key_index = np.full(len(tile_ids), -1, dtype=np.int8)
     for bit, key in enumerate(keys):
@@ -280,7 +280,7 @@ def _conditional_bound(
         external_cents += int(np.max(data["complete_reduced"][allowed]))
 
     started = time.monotonic()
-    dp_cents = conditional_projected_dp16(
+    dp_cents = dp_function(
         data["n"], data["complete_ptr"], data["complete_end"],
         data["complete_tile"], data["complete_reduced"],
         data["complete_tagged"], data["partial_ptr"], data["partial_end"],
