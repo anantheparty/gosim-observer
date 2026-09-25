@@ -6,12 +6,12 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_certified_bound": {
-    "all_seventeen_upper": 21331.24,
+    "all_seventeen_upper": 21304.17,
     "at_most_fifteen_upper": 21255.71,
     "components": {
-      "all_seventeen_k16": {
-        "path": "results/practice_request_projection_k16_ring.json",
-        "sha256": "bf4c3fb2e6231b0a21fe21c47ea70ec835f7e4cf0247c65e7a9f7016fddb8521"
+      "all_seventeen_k17": {
+        "path": "results/practice_request_projection_k17_ring.json",
+        "sha256": "243505f8675de80959689f55799451363a38d5cc66669adf6b188c09f51727c6"
       },
       "at_most_fifteen": {
         "path": "results/practice_fifteen_request_grouped_k13.json",
@@ -23,9 +23,9 @@
       }
     },
     "exactly_sixteen_upper": 21283.23,
-    "gap_to_best_offline": 211.745449,
+    "gap_to_best_offline": 184.675449,
     "scope": "public dev-reference, every valid decision trace",
-    "total": 21331.24
+    "total": 21304.17
   },
   "best_offline": {
     "completed_observations": 5714,
