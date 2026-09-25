@@ -6,26 +6,26 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_certified_bound": {
-    "all_seventeen_upper": 21301.92,
+    "all_seventeen_upper": 21282.84,
     "at_most_fifteen_upper": 21175.17,
     "components": {
-      "all_seventeen_k17": {
-        "path": "results/practice_parallel_k17_best_t45.json",
-        "sha256": "1e599c6cdcc4eee11d55864df4e63e21ff1576330b16b9c9188e9eb5596985bc"
+      "all_seventeen_k18": {
+        "path": "results/practice_k18_t45_t1_pilot.json",
+        "sha256": "adc45ccb4b71b6b86d65d954494ccee0e619bfe49f132fb386d207c43042e645"
       },
       "at_most_fifteen": {
         "path": "results/practice_fifteen_request_reuse_k13_round2.json",
         "sha256": "865862b3eb16a2bf168d90c61685bf563ee586dc25340cf1c3da96caead5c7a6"
       },
       "exactly_sixteen": {
-        "path": "results/practice_sixteen_request_reuse_k16_round2.json",
-        "sha256": "1e188f7e6fa7cfe4c94ae5d05b17705243e3a980fd707258eb4d8f2f218d92e0"
+        "path": "results/practice_sixteen_request_rq18_k16.json",
+        "sha256": "0b0b41fe4003bab7d159e1d51fec197c6961022bd440041faaa2b63cf30fb8f9"
       }
     },
-    "exactly_sixteen_upper": 21185.62,
-    "gap_to_best_offline": 182.425449,
+    "exactly_sixteen_upper": 21148.85,
+    "gap_to_best_offline": 163.345449,
     "scope": "public dev-reference, every valid decision trace",
-    "total": 21301.92
+    "total": 21282.84
   },
   "best_offline": {
     "completed_observations": 5714,
