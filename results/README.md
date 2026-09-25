@@ -9,7 +9,7 @@
 - `practice_order_training.npz`：4,070 条互异首访顺序及其精确 DP 分数、轨迹族；由 6,915 条搜索记录去重压缩而来，供排名代理实验复算。
 - `practice_order_frozen_proposals.json`、`practice_order_frozen_scores.json`、`practice_pairwise_surrogate_study.json`：60 条高分局部候选及独立评分、二阶代理的分组验证结果。
 
-`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。[EVENT_LNS_ZH.md](../EVENT_LNS_ZH.md) 记录当前可行路径算法；[18 块投影](../K18_BEAM_SCAN_ZH.md)、[16 请求](../SIXTEEN_REQUEST_REUSE_K16_ROUND3_ZH.md)与[至多 15 请求](../FIFTEEN_REQUEST_REUSE_K16_ROUND3_ZH.md)三份证书合成当前 **21,282.84** 无条件上界。至多 15 请求的上界 **21,107.16** 已低于当前可行分。早期 [八块证书](../GLOBAL_INTERVAL_BOUND_ZH.md)保留算法演进记录。官方评分器可直接复算：
+`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。[EVENT_LNS_ZH.md](../EVENT_LNS_ZH.md) 记录当前可行路径算法；[18 块投影](../K18_BEAM_SCAN_ZH.md)给出全 17 请求分支的 **21,282.84** 上界。[至多 16 请求](../SIXTEEN_REQUEST_REUSE_K18_ZH.md)的完整分支证书给出 **21,119.25**，两者合成当前无条件上界 **21,282.84**；后者低于当前可行分，因此最优路径必定拿满 17 个可获奖请求。早期 [八块证书](../GLOBAL_INTERVAL_BOUND_ZH.md)保留算法演进记录。官方评分器可直接复算：
 
 ```sh
 python3 score_decisions.py --scenario scenarios/dev-reference --decisions results/practice_reference.csv --out runs/practice_reference_score.json
