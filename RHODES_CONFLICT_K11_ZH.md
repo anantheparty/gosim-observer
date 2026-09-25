@@ -9,11 +9,11 @@
 ## 启动核验
 
 - 输入决策 SHA-256：`ce637a3d24c879d13a73e4001f8f06b0f05405cbf9df2e21264abfb9d564852c`。
-- 本机与 Rhodes1 的 `conflict_group_search.py` SHA-256 均为 `2caf24c6874950e666648874827e01bf8a1a5eea3e45b596e765ca5228396239`；`event_subset_exact_dp.py` 均为 `19c4a1396632f6cc458f5a468c5e3e1ef673ed6586f601aade8ec0a93d7593d7`。
+- 首次启动时本机与 Rhodes1 的 `conflict_group_search.py` SHA-256 均为 `2caf24c6874950e666648874827e01bf8a1a5eea3e45b596e765ca5228396239`；增加停滞停止条件后两端 SHA-256 均为 `599fc0692351681b511455af25d308540966a19fc04c0b9f0078456f7e79465b`。`event_subset_exact_dp.py` 始终为 `19c4a1396632f6cc458f5a468c5e3e1ef673ed6586f601aade8ec0a93d7593d7`。
 - 候选生成器从真实合法增分弧、首访阻塞与 2,123.40 分等待罚中取证，生成 120 个不同的 11 块组，覆盖等待、冲突、跨夜双弧和请求四类锚点。
 - 最强等待组覆盖原轨迹中 538.95 分的收费等待；远端单组端到端试运行 214.24 秒、约 21 GiB、结果 `OPTIMAL_RESTRICTED` 且仍为 `21,119.494551`。这只说明该组无提升。
 
-九小时结构化搜索于 2026-09-25 07:06 UTC 在 Rhodes1 的 tmux 会话 `gosim_conflict_k11_20260925` 启动，目录 `/home/shu/gosim-observer-research/conflict_20260925/`，输出 `results/conflict_k11_long/{trace.jsonl,best.csv,summary.json}`，日志 `results/conflict_k11_long.log`。它排除已测单组，并按 11 块集合去重；若运行中更换最优路径，旧组不会自动重访。结束后须取回最佳 CSV、逐行核对远端轨迹与实例 SHA、在本地原评分器复算，再决定是否更新仓库下界。任何阶段均不向排行榜提交。
+九小时结构化搜索于 2026-09-25 07:06 UTC 在 Rhodes1 的 tmux 会话 `gosim_conflict_k11_20260925` 启动，目录 `/home/shu/gosim-observer-research/conflict_20260925/`，输出 `results/conflict_k11_long/{trace.jsonl,best.csv,summary.json}`，日志 `results/conflict_k11_long.log`。07:12 UTC 完成 4 组后，增加“连续 100 个受限最优组不涨分则提前停”的规则，在同一输出目录恢复运行；这一停止只节省重复分布算力，不构成全局最优证明。它排除已测单组，并按 11 块集合去重；若运行中更换最优路径，旧组不会自动重访。结束后须取回最佳 CSV、逐行核对远端轨迹与实例 SHA、在本地原评分器复算，再决定是否更新仓库下界。任何阶段均不向排行榜提交。
 
 ```sh
 ssh rhodes1 'tmux list-sessions'

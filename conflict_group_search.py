@@ -457,6 +457,8 @@ def _atomic_copy(source: Path, destination: Path) -> None:
 
 
 def _search(args: argparse.Namespace) -> None:
+    if args.max_stagnant_groups < 1:
+        raise ValueError("max_stagnant_groups must be positive")
     out = args.out
     out.mkdir(parents=True, exist_ok=True)
     best_path = out / "best.csv"
@@ -469,12 +471,18 @@ def _search(args: argparse.Namespace) -> None:
     trace = out / "trace.jsonl"
     if trace.exists():
         excluded |= _read_excluded([trace], model)
+    stagnant = 0
+    if trace.exists():
+        for line in trace.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            stagnant = 0 if json.loads(line).get("accepted") else stagnant + 1
     start = time.monotonic()
     deadline = start + args.hours * 3600.0
     index = sum(1 for line in trace.open(encoding="utf-8")) if trace.exists() else 0
     round_no = 0
     with trace.open("a", encoding="utf-8") as log:
-        while time.monotonic() < deadline:
+        while time.monotonic() < deadline and stagnant < args.max_stagnant_groups:
             round_no += 1
             groups, diagnostics = generate_groups(
                 model, oracle, best_path, args.sizes,
@@ -515,10 +523,15 @@ def _search(args: argparse.Namespace) -> None:
                     _atomic_copy(candidate, best_path)
                     row["accepted"] = True
                     row["score_breakdown"] = result["score"]
+                    stagnant = 0
                     print(json.dumps({"accepted": best, "index": index,
                                       "name": group["name"]}), flush=True)
+                else:
+                    stagnant += 1
                 log.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
                 log.flush()
+                if stagnant >= args.max_stagnant_groups:
+                    break
             print(json.dumps({"round": round_no, "groups_solved": index,
                               "best": best, "elapsed_seconds": time.monotonic() - start}),
                   flush=True)
@@ -528,6 +541,10 @@ def _search(args: argparse.Namespace) -> None:
         "deadline_hours": args.hours, "release_witnesses": True,
         "sizes": args.sizes, "seed": args.seed,
         "best_sha256": hashlib.sha256(best_path.read_bytes()).hexdigest(),
+        "max_stagnant_groups": args.max_stagnant_groups,
+        "stagnant_groups": stagnant,
+        "stopped_reason": ("stagnation" if stagnant >= args.max_stagnant_groups
+                           else "deadline_or_no_groups"),
     }
     (out / "summary.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -551,6 +568,7 @@ def main() -> None:
     search.add_argument("--out", type=Path, required=True)
     search.add_argument("--hours", type=float, default=9.0)
     search.add_argument("--groups-per-round", type=int, default=500)
+    search.add_argument("--max-stagnant-groups", type=int, default=100)
     args = parser.parse_args()
     if args.command == "search":
         _search(args)
