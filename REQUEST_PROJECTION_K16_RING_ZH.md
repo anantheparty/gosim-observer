@@ -13,6 +13,8 @@
 
 [程序](scan_ring_key_extension.py)在本机完成这组扩展，[数值证书](results/practice_request_projection_k16_ring.json)绑定十五块证书 SHA-256、价格证书、弧数与 10 行跨度。总耗时 **325.23 秒**，进程峰值 **191.6 MiB**；十六块每个请求选择分支的 DP 约 91 秒。下一步若增加第十七块，行动掩码须扩成 `uint32`；否则高位会被截断。没有在线提交。
 
+另在 Rhodes1 用 [完整时间矩阵实现](validate_k16_full_matrix.py)独立复算 K16，继承此前已逐分核验的 K15 双实现证书 SHA。`RQ0004=T00004/T00012` 分别得到 **2,133,024 / 2,133,124** 百分之一分；与本机环形版的总分、外部残差、奖励、θ 常数、DP 根值、请求掩码和截止时间数组逐字段相同。[远端结果证书](results/practice_request_projection_k16_full_check.json)记录容量价 SHA、完整弧数、前证书 SHA、**512.00 秒**耗时及 **23,978 MiB** 峰值内存。这是 K16 真实图高位的独立存储布局对拍；没有重复进行 K17 全表复算。
+
 ```sh
 python3 test_projection_high_bit.py
 python3 scan_ring_key_extension.py --base-keys T00018,T00029,T00030,T00031,T00024,T00021,T00040,T00015,T00048,T00032,T00016,T00010,T00047,T00011,T00027 --extra T00062 --prior-certificate results/practice_request_projection_k15_ring.json --expected-base-cents 2137159 --out results/practice_request_projection_k16_ring.json
