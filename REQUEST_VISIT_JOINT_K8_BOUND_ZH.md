@@ -25,4 +25,6 @@ $$G_i=\max\left(q_f-\sum_{e\in\{f\}\cup\{w_r\}}\lambda_e\right),$$
 
 这说明当前价向量未对请求复访产生有用的时间压力，不说明请求复访不影响真实最优值。下一步要针对八关键投影目标重新寻找容量价格，再用同一个块内联合 DP 验证；少于 17 个请求的旧子集证书始终可以作为独立的分情形上界，因为其有效性不依赖新分支使用哪组价格。
 
+后续已按 [容量价格优化](PROJECTED_PRICE_SEARCH_ZH.md) 得到的新价格文件重新运行同一个联合见证 DP；[结果](results/practice_request_visit_joint_k8_prox.json)仍显示两个全获奖分支的额外见证损失均为 **0**。其 21,792.96 条件界来自新容量价格与统一 θ=135，而不是联合见证约束本身。请求复访占时这条松弛在当前稀疏价格下继续未触及瓶颈。
+
 复算原证书：`python3 bounds_request_visit_joint_k8.py`。复算新参数：`python3 bounds_request_visit_joint_k8.py --theta-cents 135 --out results/practice_request_visit_joint_k8_theta135.json`。该结论只针对公开 `dev-reference` 实例；没有在线提交。
