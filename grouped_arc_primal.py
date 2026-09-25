@@ -169,6 +169,7 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--max-seconds", type=float, default=300)
     parser.add_argument("--anchor-cents-per-unit", type=float, default=0.0005)
+    parser.add_argument("--anchor-grid", type=float, nargs="+")
     parser.add_argument("--only-free", action="store_true")
     args = parser.parse_args()
     started = time.monotonic()
@@ -184,20 +185,23 @@ def main() -> None:
               "incumbent_score": incumbent_score, "online_submissions": 0,
               "trace_sha256": hashlib.sha256(TRACE.read_bytes()).hexdigest(), "cases": []}
     args.run_dir.mkdir(parents=True, exist_ok=True)
-    for fixed_keys in ((False,) if args.only_free else (True, False)):
+    anchors = args.anchor_grid or [args.anchor_cents_per_unit]
+    configurations = ([(False, anchor) for anchor in anchors] if args.only_free
+                      else [(True, anchors[0])] + [(False, anchor) for anchor in anchors])
+    for fixed_keys, anchor in configurations:
         if time.monotonic() - started > args.max_seconds - 55:
             break
         case, picked = packing(data, inputs, choices, trace, incumbent,
                                fixed_keys=fixed_keys, seconds=args.cp_seconds,
                                workers=args.workers,
-                               anchor_cents_per_unit=args.anchor_cents_per_unit)
-        case["anchor_cents_per_unit"] = args.anchor_cents_per_unit
+                               anchor_cents_per_unit=anchor)
+        case["anchor_cents_per_unit"] = anchor
         if picked:
             order = [int(data["complete_tile"][j]) for j in picked]
             try:
                 path, partial, predicted, optional_count, partial_count, req_data = active.solve(
                     practice, scores, programs, order)
-                csv_path = args.run_dir / ("fixed_keys.csv" if fixed_keys else "free_keys.csv")
+                csv_path = args.run_dir / f"{'fixed' if fixed_keys else 'free'}_anchor_{anchor:g}.csv"
                 _write(practice, csv_path, path)
                 scored = practice.authoritative_score(csv_path)
                 case.update({"exact_dp_status": "feasible", "official_score": scored["score"]["total"],
