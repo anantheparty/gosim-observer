@@ -235,8 +235,8 @@ def _conditional_bound(
     data: dict, inputs: dict, keys: tuple[str, ...], theta_cents: int,
     branch_index: int, dp_function=conditional_projected_dp16,
 ) -> dict:
-    if len(keys) > 16 or len(keys) < 8 or theta_cents < 0:
-        raise ValueError("requires 8 <= k <= 16 and nonnegative theta")
+    if len(keys) > 17 or len(keys) < 8 or theta_cents < 0:
+        raise ValueError("requires 8 <= k <= 17 and nonnegative theta")
     tile_ids = data["tile_ids"]
     key_index = np.full(len(tile_ids), -1, dtype=np.int8)
     for bit, key in enumerate(keys):
@@ -255,9 +255,10 @@ def _conditional_bound(
             key_deadline_unit[bit] = np.searchsorted(
                 inputs["instants"], deadlines[key], side="left",
             )
-    actionable_mask = np.zeros(data["n"], dtype=np.uint16)
+    mask_dtype = np.uint32 if len(keys) > 16 else np.uint16
+    actionable_mask = np.zeros(data["n"], dtype=mask_dtype)
     for bit, key in enumerate(keys):
-        actionable_mask[data["actionable_cache"][key]] |= np.uint16(1 << bit)
+        actionable_mask[data["actionable_cache"][key]] |= mask_dtype(1 << bit)
     theta = np.full(len(tile_ids), theta_cents, dtype=np.int64)
     theta[key_index >= 0] = 0
 

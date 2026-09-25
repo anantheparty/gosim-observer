@@ -14,8 +14,12 @@ from bounds_request_projection_ring import conditional_projected_dp_ring
 
 def solve(*, tagged_repeat: bool, deadline_unit: int,
           include_first: bool = True, required: bool = False,
-          mandatory: bool = True) -> tuple[int, int]:
+          mandatory: bool = True, bit_index: int = 15) -> tuple[int, int]:
     n = 12
+    if bit_index not in (15, 16):
+        raise ValueError("focused test only covers bit15/bit16")
+    high_bit = 1 << bit_index
+    mask_dtype = np.uint32 if bit_index == 16 else np.uint16
     starts = [0, 3] if include_first else []
     complete_ptr = np.zeros(n + 1, dtype=np.int64)
     for u in starts:
@@ -27,19 +31,19 @@ def solve(*, tagged_repeat: bool, deadline_unit: int,
     complete_tagged = np.array([False, tagged_repeat] if include_first else [], dtype=np.bool_)
     partial_ptr = np.zeros(n + 1, dtype=np.int64)
     partial_end = np.empty(0, dtype=np.int32)
-    actionable_mask = np.zeros(n, dtype=np.uint16)
-    actionable_mask[0] = np.uint16(32768)
-    actionable_mask[3] = np.uint16(1)
-    key_index = np.array([15, 0], dtype=np.int8)
-    key_deadline_unit = np.full(16, n, dtype=np.int32)
-    key_deadline_unit[15] = deadline_unit
+    actionable_mask = np.zeros(n, dtype=mask_dtype)
+    actionable_mask[0] = mask_dtype(high_bit)
+    actionable_mask[3] = mask_dtype(1)
+    key_index = np.array([bit_index, 0], dtype=np.int8)
+    key_deadline_unit = np.full(bit_index + 1, n, dtype=np.int32)
+    key_deadline_unit[bit_index] = deadline_unit
     theta = np.zeros(2, dtype=np.int64)
     kwargs = (
         n, complete_ptr, complete_end, complete_tile, complete_reduced,
         complete_tagged, partial_ptr, partial_end, actionable_mask,
-        key_index, 32768 if required else 0,
-        32768 if mandatory else 0,
-        key_deadline_unit, 9 if mandatory else 0, theta, 16,
+        key_index, high_bit if required else 0,
+        high_bit if mandatory else 0,
+        key_deadline_unit, 9 if mandatory else 0, theta, bit_index + 1,
     )
     return conditional_projected_dp16(*kwargs), conditional_projected_dp_ring(*kwargs)
 
