@@ -6,30 +6,26 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_certified_bound": {
-    "all_seventeen_upper": 21415.15,
-    "at_most_fifteen_upper": 21334.31,
+    "all_seventeen_upper": 21371.59,
+    "at_most_fifteen_upper": 21289.55,
     "components": {
-      "all_seventeen_k14": {
-        "path": "results/practice_request_projection_k14_pilot.json",
-        "sha256": "ad56f7029eee5933ce93dcc797e62a86ed7c5af3bc75d973fed518a4fd405781"
-      },
-      "all_seventeen_pair_matching": {
-        "path": "results/practice_nonkey_pair_matching.json",
-        "sha256": "bfa821d3978e4ad7943f549251a03f2ace96496c6f7d930a37166e95659cdfd4"
+      "all_seventeen_k15": {
+        "path": "results/practice_request_projection_k15_certified.json",
+        "sha256": "4609ba17b9acb5b026317a1dae027630b93a72b6f165baf56da44ed743acfd77"
       },
       "at_most_fifteen": {
-        "path": "results/practice_fifteen_request_k13_targeted.json",
-        "sha256": "d32a60d0e91d4c5af9fb8d608856861073e1c9acbf8e1f6727ec11381d4276e6"
+        "path": "results/practice_fifteen_request_residual.json",
+        "sha256": "71e8c019ffc28189792aa5b2e068514e28f7dbe6e1b1cbac2df18face549b556"
       },
       "exactly_sixteen": {
-        "path": "results/practice_sixteen_request_residual.json",
-        "sha256": "a2f986ac5d1a536d543dd33807aa995050b3cd1f39cb040b038fa61e8cd399c6"
+        "path": "results/practice_sixteen_request_grouped_k13.json",
+        "sha256": "a6f2c111de10a245312fe2d4e97f6105f638971bdb085c272fff96942db42cc8"
       }
     },
-    "exactly_sixteen_upper": 21304.66,
-    "gap_to_best_offline": 295.655449,
+    "exactly_sixteen_upper": 21283.23,
+    "gap_to_best_offline": 252.095449,
     "scope": "public dev-reference, every valid decision trace",
-    "total": 21415.15
+    "total": 21371.59
   },
   "best_offline": {
     "completed_observations": 5714,

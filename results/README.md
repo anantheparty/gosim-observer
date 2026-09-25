@@ -9,7 +9,7 @@
 - `practice_order_training.npz`：4,070 条互异首访顺序及其精确 DP 分数、轨迹族；由 6,915 条搜索记录去重压缩而来，供排名代理实验复算。
 - `practice_order_frozen_proposals.json`、`practice_order_frozen_scores.json`、`practice_pairwise_surrogate_study.json`：60 条高分局部候选及独立评分、二阶代理的分组验证结果。
 
-`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。[EVENT_LNS_ZH.md](../EVENT_LNS_ZH.md) 记录当前可行路径算法；[14 块投影](../REQUEST_PROJECTION_K14_PILOT_ZH.md)、[非关键块配对](../NONKEY_PAIR_MATCHING_BOUND_ZH.md)、[16 请求](../SIXTEEN_REQUEST_RESIDUAL_ZH.md)与[15 请求](../FIFTEEN_REQUEST_K13_TARGETED_ZH.md)四份独立证书合成当前 **21,415.15** 无条件上界。早期 [八块证书](../GLOBAL_INTERVAL_BOUND_ZH.md)保留算法演进记录。官方评分器可直接复算：
+`practice_manifest.json` 保存得分分解、决策文件 SHA-256、所用受限求解器配置和独立上界。[EVENT_LNS_ZH.md](../EVENT_LNS_ZH.md) 记录当前可行路径算法；[15 块环形投影](../RING_PROJECTED_DP_ZH.md)、[16 请求](../SIXTEEN_REQUEST_GROUPED_K13_ZH.md)与[15 请求](../FIFTEEN_REQUEST_RESIDUAL_ZH.md)三份证书合成当前 **21,371.59** 无条件上界。早期 [八块证书](../GLOBAL_INTERVAL_BOUND_ZH.md)保留算法演进记录。官方评分器可直接复算：
 
 ```sh
 python3 score_decisions.py --scenario scenarios/dev-reference --decisions results/practice_reference.csv --out runs/practice_reference_score.json
