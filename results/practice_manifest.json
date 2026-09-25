@@ -6,16 +6,16 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_certified_bound": {
-    "all_seventeen_upper": 21371.59,
-    "at_most_fifteen_upper": 21289.55,
+    "all_seventeen_upper": 21331.24,
+    "at_most_fifteen_upper": 21255.71,
     "components": {
-      "all_seventeen_k15": {
-        "path": "results/practice_request_projection_k15_certified.json",
-        "sha256": "4609ba17b9acb5b026317a1dae027630b93a72b6f165baf56da44ed743acfd77"
+      "all_seventeen_k16": {
+        "path": "results/practice_request_projection_k16_ring.json",
+        "sha256": "bf4c3fb2e6231b0a21fe21c47ea70ec835f7e4cf0247c65e7a9f7016fddb8521"
       },
       "at_most_fifteen": {
-        "path": "results/practice_fifteen_request_residual.json",
-        "sha256": "71e8c019ffc28189792aa5b2e068514e28f7dbe6e1b1cbac2df18face549b556"
+        "path": "results/practice_fifteen_request_grouped_k13.json",
+        "sha256": "952683c6b5e74145ac4a976ee39f81d4aca7d62e3d25f965da030c3ff4b284a6"
       },
       "exactly_sixteen": {
         "path": "results/practice_sixteen_request_grouped_k13.json",
@@ -23,9 +23,9 @@
       }
     },
     "exactly_sixteen_upper": 21283.23,
-    "gap_to_best_offline": 252.095449,
+    "gap_to_best_offline": 211.745449,
     "scope": "public dev-reference, every valid decision trace",
-    "total": 21371.59
+    "total": 21331.24
   },
   "best_offline": {
     "completed_observations": 5714,
