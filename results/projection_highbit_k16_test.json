@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "case": "first_and_tagged_revisit",
+      "expected_cents": 100,
+      "full_cents": 100,
+      "ring_cents": 100
+    },
+    {
+      "case": "untagged_revisit_disallowed",
+      "expected_cents": 55,
+      "full_cents": 55,
+      "ring_cents": 55
+    },
+    {
+      "case": "first_after_deadline_forbidden",
+      "expected_cents": -1000000000000000,
+      "full_cents": -1000000000000000,
+      "ring_cents": -1000000000000000
+    },
+    {
+      "case": "required_high_bit_terminal_penalty",
+      "expected_cents": -100000,
+      "full_cents": -100000,
+      "ring_cents": -100000
+    }
+  ],
+  "high_bit": 32768,
+  "key_bit_index": 15,
+  "mask_checks": [
+    {
+      "high_bit_actionable_and_unfinished": true,
+      "mask": 0
+    },
+    {
+      "high_bit_actionable_and_unfinished": false,
+      "mask": 32768
+    },
+    {
+      "high_bit_actionable_and_unfinished": false,
+      "mask": 65535
+    }
+  ],
+  "scope": "focused synthetic 12-cell K16 DAG"
+}
