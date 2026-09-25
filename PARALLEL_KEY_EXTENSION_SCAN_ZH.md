@@ -11,3 +11,15 @@
 远端运行目录为 `/home/shu/gosim-observer-research/key_projection_20260925`，扫描状态目录为 `results/parallel_k17_scan_20260925`。先单独计算 `T00043`，必须与原 ring 的两分支 `2,130,317 / 2,130,417` 分完全一致；再启动全部候选。全扫后按照上界值和 key 集合差异选择少量种子考虑 K18 扩块；是否继续取决于实测的单位计算成本与上界下降量。
 
 远端运行快照的 40 个场景、评分器、价格和基线证书文件的 SHA256 清单保存在 `results/parallel_key_scan_local_verify/input_files.sha256`，已在本地逐项 `sha256sum -c` 核验一致。它与各候选结果内的完整 DP 参数 SHA256、源码 SHA256 一起固定本轮复算输入。
+
+## 2026-09-25 远端长任务
+
+单 worker 先导 `T00043` 已完成，与独立原 ring 的两分支结果逐项相同：整数上界 `2,130,317 / 2,130,417`，外部约化得分 `1,382,109 / 1,382,209`，共用 DP 根值 `349,863`，请求奖励 `392,000`，theta 常数 `6,345`。候选输入 SHA256 为 `d316554faf2ea525e1a632c5952beb36fb722a858a4766abe23595631c90272d`，worker 耗时 `268.8s`。单独原子检查点在远端 `results/parallel_k17_scan_20260925/cases/T00043.json`。
+
+48 个候选的全扫已在 Rhodes1 的 tmux `gosim_k17_scan_20260925` 启动；24 个 worker，每候选 `7200s` 超时，preflight 通过后总搜索截止 `32400s`（9 小时）。它会复用上述先导检查点。远端绝对目录：
+
+- 状态与逐候选账本：`/home/shu/gosim-observer-research/key_projection_20260925/results/parallel_k17_scan_20260925`，其中 `status.json` 实时汇总、`cases/Txxxxx.json` 各自原子落盘；
+- 日志：`/home/shu/gosim-observer-research/key_projection_20260925/k17_scan.log`；
+- 输入快照 SHA 清单：同一状态目录的 `input_files.sha256`，文件本身 SHA256 为 `564c31b4ae49e3c37af58ba7036b9494054f98e58147eb8e5b1ce9252e7e6f30`。
+
+若部分 worker 失败或超时，`status.json` 标为 incomplete 并保留失败详情；再次运行相同命令会校验并复用成功的检查点。扫描中各候选只是全 17 请求分支的上界；与已有恰 16、至多 15 请求证书取最大值，才是无条件上界。
