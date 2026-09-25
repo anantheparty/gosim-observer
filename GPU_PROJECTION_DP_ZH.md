@@ -4,7 +4,8 @@
 
 ## 依赖与运行
 
-- Python 3.12、`numpy==2.0.2`、`numba==0.60.0` 与可用的 CUDA 驱动。独立环境运行，避免改变 CPU 证书环境。
+- 使用独立 Python 环境及可用 CUDA 驱动，避免改变 CPU 证书环境。本地模拟测试使用 `numpy==2.0.2`、`numba==0.60.0`；Windows 原生最小 CUDA 核已在 `numba-cuda==0.30.4`、`numba==0.67.0`、`cuda-core==0.6.0`、`numpy==2.2.6` 环境运行。
+- Windows 没有 Unix `resource` 模块。GPU 原型入口仅为现有代码的峰值 RSS 读取补一个返回零的兼容模块，不影响评分或整数 DP 输入。
 - 没有 GPU 时可运行小图模拟测试：
 
   ```bash

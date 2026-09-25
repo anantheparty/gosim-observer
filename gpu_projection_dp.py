@@ -14,7 +14,21 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
+import types
+
+# The existing certificate loader imports ``resource`` solely for peak RSS.
+# Native Windows lacks that Unix module; keep the audited CPU code untouched.
+if sys.platform == "win32" and "resource" not in sys.modules:
+    resource_shim = types.ModuleType("resource")
+    resource_shim.RUSAGE_SELF = 0
+
+    def _getrusage(_which: int) -> types.SimpleNamespace:
+        return types.SimpleNamespace(ru_maxrss=0)
+
+    resource_shim.getrusage = _getrusage
+    sys.modules["resource"] = resource_shim
 
 import numpy as np
 from numba import cuda
