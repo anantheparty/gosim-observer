@@ -47,3 +47,5 @@ K20 扩展后的分数只作为上界。程序没有把它强行假定为不高�
 后两对的 RQ0004 分支分别运行两个不同 DP。当前先导最低上界比 K19 的 21,270.24 再低 12.55 分，与可行分 21,119.494551 尚差 138.195449 分。
 
 完整 1035 对扫描已在 `elevatia-wsl` 的 `tmux` 会话 `gosim_gpu_k20_all_20260926` 中运行，Windows 状态目录为 `C:/Users/hedge/gosim-observer-gpu-20260926/runs/gpu_k20_pairs`，WSL 日志为 `/home/trainer/gosim_gpu_k20_all_20260926.log`。主进程使用同一 Python、同一审计图和 CUDA 编译结果，逐对写检查点；中断后可用上文的 `all` 命令在同一状态目录续跑。完成前不把“当前最佳”称为 1035 对的最终最小值。
+
+运行期间 Windows 驱动报告当前/请求的软件功率上限 250 W、默认/最高上限 600 W，`SW Power Cap: Active`，无热降速；显存只用约 4.6/97.9 GB。按用户要求，当前扫描不调整功率。独立 `tmux` 会话 `gosim_gpu_power_after_k20_20260926` 运行 [完成后恢复脚本](gpu_k20_postrun_power.sh)：只有主扫描会话结束且 `status.json` 确认 1035/1035、失败 0、GPU 型号和默认上限仍吻合时，才尝试恢复默认 600 W。结果日志为 `/home/trainer/gosim_gpu_power_after_k20_20260926.log`；若 Windows 权限拒绝，脚本会记录错误并保留原设置。
