@@ -6,26 +6,26 @@
     "verification": "python3 bounds_request_conditioned.py --prices runs/practice_bound/resource_prices.npz"
   },
   "best_certified_bound": {
-    "all_seventeen_upper": 21304.17,
-    "at_most_fifteen_upper": 21255.71,
+    "all_seventeen_upper": 21301.92,
+    "at_most_fifteen_upper": 21175.17,
     "components": {
       "all_seventeen_k17": {
-        "path": "results/practice_request_projection_k17_ring.json",
-        "sha256": "243505f8675de80959689f55799451363a38d5cc66669adf6b188c09f51727c6"
+        "path": "results/practice_parallel_k17_best_t45.json",
+        "sha256": "1e599c6cdcc4eee11d55864df4e63e21ff1576330b16b9c9188e9eb5596985bc"
       },
       "at_most_fifteen": {
-        "path": "results/practice_fifteen_request_grouped_k13.json",
-        "sha256": "952683c6b5e74145ac4a976ee39f81d4aca7d62e3d25f965da030c3ff4b284a6"
+        "path": "results/practice_fifteen_request_reuse_k13_round2.json",
+        "sha256": "865862b3eb16a2bf168d90c61685bf563ee586dc25340cf1c3da96caead5c7a6"
       },
       "exactly_sixteen": {
-        "path": "results/practice_sixteen_request_grouped_k13.json",
-        "sha256": "a6f2c111de10a245312fe2d4e97f6105f638971bdb085c272fff96942db42cc8"
+        "path": "results/practice_sixteen_request_reuse_k16_round2.json",
+        "sha256": "1e188f7e6fa7cfe4c94ae5d05b17705243e3a980fd707258eb4d8f2f218d92e0"
       }
     },
-    "exactly_sixteen_upper": 21283.23,
-    "gap_to_best_offline": 184.675449,
+    "exactly_sixteen_upper": 21185.62,
+    "gap_to_best_offline": 182.425449,
     "scope": "public dev-reference, every valid decision trace",
-    "total": 21304.17
+    "total": 21301.92
   },
   "best_offline": {
     "completed_observations": 5714,
