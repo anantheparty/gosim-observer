@@ -1,0 +1,45 @@
+{
+  "actionable_mask_dtype": "uint32",
+  "cases": [
+    {
+      "case": "first_then_tagged_revisit",
+      "full_cents": 100,
+      "ring_cents": 100
+    },
+    {
+      "case": "untagged_revisit_forbidden",
+      "full_cents": 55,
+      "ring_cents": 55
+    },
+    {
+      "case": "first_after_deadline_forbidden",
+      "full_cents": -1000000000000000,
+      "ring_cents": -1000000000000000
+    },
+    {
+      "case": "required_miss_terminal_penalty",
+      "full_cents": -100000,
+      "ring_cents": -100000
+    }
+  ],
+  "high_bit": 131072,
+  "key_bit_index": 17,
+  "mask_checks": [
+    {
+      "unfinished": true,
+      "visited_mask": 0
+    },
+    {
+      "unfinished": true,
+      "visited_mask": 65536
+    },
+    {
+      "unfinished": false,
+      "visited_mask": 131072
+    },
+    {
+      "unfinished": false,
+      "visited_mask": 262143
+    }
+  ]
+}

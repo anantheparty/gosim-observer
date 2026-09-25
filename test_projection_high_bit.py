@@ -16,10 +16,10 @@ def solve(*, tagged_repeat: bool, deadline_unit: int,
           include_first: bool = True, required: bool = False,
           mandatory: bool = True, bit_index: int = 15) -> tuple[int, int]:
     n = 12
-    if bit_index not in (15, 16):
-        raise ValueError("focused test only covers bit15/bit16")
+    if bit_index not in (15, 16, 17):
+        raise ValueError("focused test only covers bit15/bit16/bit17")
     high_bit = 1 << bit_index
-    mask_dtype = np.uint32 if bit_index == 16 else np.uint16
+    mask_dtype = np.uint32 if bit_index >= 16 else np.uint16
     starts = [0, 3] if include_first else []
     complete_ptr = np.zeros(n + 1, dtype=np.int64)
     for u in starts:
