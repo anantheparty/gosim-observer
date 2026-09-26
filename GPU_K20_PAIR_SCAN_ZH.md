@@ -62,4 +62,4 @@ python3 audit_gpu_k20_results.py
 
 与现有合法路径 **21,119.494551** 的未闭合差距为 **138.195449**。本次只收紧了上界，没有生成更高分的可行决策表，也没有在线提交。
 
-运行期间 Windows 驱动报告当前/请求的软件功率上限 250 W、默认/最高上限 600 W，`SW Power Cap: Active`，无热降速；显存只用约 4.6/97.9 GB。按用户要求，扫描期间没有调整功率。独立 `tmux` 会话 `gosim_gpu_power_after_k20_20260926` 运行[完成后恢复脚本](gpu_k20_postrun_power.sh)；扫描结束后的功率设置应以其日志 `/home/trainer/gosim_gpu_power_after_k20_20260926.log` 及驱动实测为准。
+运行期间 Windows 驱动报告当前/请求的软件功率上限 250 W、默认/最高上限 600 W，`SW Power Cap: Active`，无热降速；显存只用约 4.6/97.9 GB。按用户要求，扫描期间没有调整功率。独立 `tmux` 会话 `gosim_gpu_power_after_k20_20260926` 运行[完成后恢复脚本](gpu_k20_postrun_power.sh)。扫描后查明旧电源保护计划任务会定期重设 250 W；用户授权后已关闭，详情及备份见[功率限制记录](GPU_POWER_LIMIT_ZH.md)。
