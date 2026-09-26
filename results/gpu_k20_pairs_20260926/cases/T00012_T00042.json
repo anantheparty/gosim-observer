@@ -1,0 +1,142 @@
+{
+  "all_awarded_upper_cents": 2128103,
+  "at_most_sixteen_upper_cents": 2111925,
+  "base_certificate_sha256": "adc45ccb4b71b6b86d65d954494ccee0e619bfe49f132fb386d207c43042e645",
+  "branch_input_sha256": [
+    "2b5aa7a24447b39f1a0d5ecf461ea88bf7c9000f86feab54b279b58a25e844a2",
+    "76b79c5a65c802dfe447e8d74deaa94b3b2c88be4f6a8ac74deb0d11af6b11ef"
+  ],
+  "branch_sharing_audit": {
+    "reason": "one RQ0004 alternative is a projected key",
+    "second_dp_reused": false
+  },
+  "branches": [
+    {
+      "conditional_upper_cents": 2128003,
+      "dp_cents": 425474,
+      "dp_wall_seconds": 3.1317496999399737,
+      "external_cents": 1304589,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590,
+        47568,
+        47568,
+        23376,
+        47568
+      ],
+      "mandatory_key_mask": 312836,
+      "peak_rss_mib": 0.0,
+      "request_cents": 392000,
+      "required_key_mask": 657409,
+      "rq0004_tile": [
+        "T00004"
+      ],
+      "theta_constant_cents": 5940
+    },
+    {
+      "conditional_upper_cents": 2128103,
+      "dp_cents": 425474,
+      "dp_wall_seconds": 3.154051600024104,
+      "external_cents": 1304689,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590,
+        47568,
+        47568,
+        8346,
+        47568
+      ],
+      "mandatory_key_mask": 312836,
+      "peak_rss_mib": 0.0,
+      "request_cents": 392000,
+      "required_key_mask": 657409,
+      "rq0004_tile": [
+        "T00012"
+      ],
+      "theta_constant_cents": 5940
+    }
+  ],
+  "case_input_sha256": "64e8a9a596b515fb53cb08c136dfad36ef1e30150a24011b4001900e73e94c0b",
+  "completed_utc": "2026-09-25T19:50:03.495803+00:00",
+  "dp_input_sha256": [
+    "e5d1d9ec1befa1050cc169fe14453eff74972780469c805fb04e00d14a25587e",
+    "82b6cabfdb8b635552ff7314e842378cfe3a331f488bc6ede209170acc720b9d"
+  ],
+  "key_count": 20,
+  "key_tiles": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015",
+    "T00048",
+    "T00032",
+    "T00016",
+    "T00010",
+    "T00047",
+    "T00011",
+    "T00027",
+    "T00062",
+    "T00045",
+    "T00001",
+    "T00012",
+    "T00042"
+  ],
+  "launch_mode": "auto",
+  "pair": [
+    "T00012",
+    "T00042"
+  ],
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "sixteen_request_certificate_sha256": "e4b23757bf57e78c3556e815325ca437378bdc00e4ae1ed202fb51a8f8d45e05",
+  "source_sha256": {
+    "bounds_practice_projection.py": "7b11fba86c591881f8c93417ba53d796b78c212e8c9a89cea5b303cd03b84583",
+    "bounds_request_conditioned.py": "207d1a15c1882924bc84c7bb71e4ba18f5cf0bc80ce578e307aa5fae523fb991",
+    "bounds_request_projection_k10.py": "e724bf29edacabd3f78408090feb4144c0cd44f1941930eb95c33cc0e943bf9d",
+    "bounds_request_projection_ring.py": "4edff373fcbf3708bfc3b62856dda27b235bab397e39ff998ab15498bd5c5353",
+    "challenge/scoring_core.py": "abb3e2758b11380f1b894d8eb743a220e4384f0b55f964cac51a6d19eca93b65",
+    "gpu_k19_extension_scan.py": "cbe2174111a951ed2e3d91fc4173a991d923288bc8bd3114b55eecb7e2679f23",
+    "gpu_k20_pair_scan.py": "e00547d1329501054bfa1e50786677d0a5761d879b3efe6a8210030f894ce143",
+    "gpu_projection_dp.py": "1b68df012445fd2589af6b880280dbe786619d87698a212dacef3f18ee9043f8",
+    "parallel_key_extension_scan.py": "c54e153c48133224b4568c82a335f7b8a57c77b9e268b1bb4ed61f3cb1b46ba2",
+    "projection_branch_merge.py": "b47b2219c674568ac47746bacf333567080890eb2d5d51b1fff095dc2219ae38",
+    "projection_ring_state_pruning.py": "f031d8ee5701bd1495019b69aab51377636ebfc5c0ba37dfb7ad8d0bb23cf92b"
+  },
+  "status": "completed",
+  "theta_uniform_cents": 135,
+  "unconditional_upper_cents": 2128103,
+  "wall_seconds": 6.337518899934366
+}

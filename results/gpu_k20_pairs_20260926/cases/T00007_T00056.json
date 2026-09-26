@@ -1,0 +1,166 @@
+{
+  "all_awarded_upper_cents": 2127316,
+  "at_most_sixteen_upper_cents": 2111925,
+  "base_certificate_sha256": "adc45ccb4b71b6b86d65d954494ccee0e619bfe49f132fb386d207c43042e645",
+  "branch_input_sha256": [
+    "8887ca21b20c696b34d2561cf584f97a8a9d0d7f74802cd4a5baa861b93bf788",
+    "75d72fdbe30bd54aefa5a359935128b4febf2f920c6a809cd3b3102b99e44425"
+  ],
+  "branch_sharing_audit": {
+    "equal_array_argument_checks": [
+      8,
+      9,
+      12,
+      14
+    ],
+    "equal_scalar_argument_checks": [
+      0,
+      10,
+      11,
+      13,
+      15
+    ],
+    "first_dp_cents": 421487,
+    "graph_argument_identity_checks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "second_branch_external_difference_cents": 100,
+    "second_branch_wall_seconds": 0.027326999930664897,
+    "second_dp_reused": true
+  },
+  "branches": [
+    {
+      "conditional_upper_cents": 2127216,
+      "dp_cents": 421487,
+      "dp_wall_seconds": 3.0269387000007555,
+      "external_cents": 1307789,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590,
+        47568,
+        47568,
+        47568,
+        47568
+      ],
+      "mandatory_key_mask": 50692,
+      "peak_rss_mib": 0.0,
+      "request_cents": 392000,
+      "required_key_mask": 133121,
+      "rq0004_tile": [
+        "T00004"
+      ],
+      "theta_constant_cents": 5940
+    },
+    {
+      "conditional_upper_cents": 2127316,
+      "dp_cents": 421487,
+      "dp_wall_seconds": 0.00010079995263367891,
+      "external_cents": 1307889,
+      "feasible_relaxation": true,
+      "key_deadline_unit": [
+        47568,
+        47568,
+        42738,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        47568,
+        37122,
+        39012,
+        47568,
+        47568,
+        47568,
+        29862,
+        1590,
+        47568,
+        47568,
+        47568,
+        47568
+      ],
+      "mandatory_key_mask": 50692,
+      "peak_rss_mib": 0.0,
+      "request_cents": 392000,
+      "required_key_mask": 133121,
+      "rq0004_tile": [
+        "T00012"
+      ],
+      "theta_constant_cents": 5940
+    }
+  ],
+  "case_input_sha256": "b3ff1f2aa17611807dd7e87a13003b88996ad4b9515bc785a42a07fcd3579f49",
+  "completed_utc": "2026-09-25T19:31:58.970524+00:00",
+  "dp_input_sha256": [
+    "b30b508dbeaa4b03b76db264dc09b0b70d40c00da4c572b0e0e69f479305be08",
+    "b30b508dbeaa4b03b76db264dc09b0b70d40c00da4c572b0e0e69f479305be08"
+  ],
+  "key_count": 20,
+  "key_tiles": [
+    "T00018",
+    "T00029",
+    "T00030",
+    "T00031",
+    "T00024",
+    "T00021",
+    "T00040",
+    "T00015",
+    "T00048",
+    "T00032",
+    "T00016",
+    "T00010",
+    "T00047",
+    "T00011",
+    "T00027",
+    "T00062",
+    "T00045",
+    "T00001",
+    "T00007",
+    "T00056"
+  ],
+  "launch_mode": "auto",
+  "pair": [
+    "T00007",
+    "T00056"
+  ],
+  "price_sha256": "a4c1b7f9904a1ec0ae9074c349197231274e492676098614fc81cf32888ae480",
+  "sixteen_request_certificate_sha256": "e4b23757bf57e78c3556e815325ca437378bdc00e4ae1ed202fb51a8f8d45e05",
+  "source_sha256": {
+    "bounds_practice_projection.py": "7b11fba86c591881f8c93417ba53d796b78c212e8c9a89cea5b303cd03b84583",
+    "bounds_request_conditioned.py": "207d1a15c1882924bc84c7bb71e4ba18f5cf0bc80ce578e307aa5fae523fb991",
+    "bounds_request_projection_k10.py": "e724bf29edacabd3f78408090feb4144c0cd44f1941930eb95c33cc0e943bf9d",
+    "bounds_request_projection_ring.py": "4edff373fcbf3708bfc3b62856dda27b235bab397e39ff998ab15498bd5c5353",
+    "challenge/scoring_core.py": "abb3e2758b11380f1b894d8eb743a220e4384f0b55f964cac51a6d19eca93b65",
+    "gpu_k19_extension_scan.py": "cbe2174111a951ed2e3d91fc4173a991d923288bc8bd3114b55eecb7e2679f23",
+    "gpu_k20_pair_scan.py": "e00547d1329501054bfa1e50786677d0a5761d879b3efe6a8210030f894ce143",
+    "gpu_projection_dp.py": "1b68df012445fd2589af6b880280dbe786619d87698a212dacef3f18ee9043f8",
+    "parallel_key_extension_scan.py": "c54e153c48133224b4568c82a335f7b8a57c77b9e268b1bb4ed61f3cb1b46ba2",
+    "projection_branch_merge.py": "b47b2219c674568ac47746bacf333567080890eb2d5d51b1fff095dc2219ae38",
+    "projection_ring_state_pruning.py": "f031d8ee5701bd1495019b69aab51377636ebfc5c0ba37dfb7ad8d0bb23cf92b"
+  },
+  "status": "completed",
+  "theta_uniform_cents": 135,
+  "unconditional_upper_cents": 2127316,
+  "wall_seconds": 3.078453700058162
+}
