@@ -1,10 +1,14 @@
 # Agent Observer — starter kit (challenge v3)
 
+## 正式赛 v4（2026-10-03 核实）
+
+**正式规则已经改变任务和提交方式。**完整核实见 [FORMAL_RULES_20261003_ZH.md](FORMAL_RULES_20261003_ZH.md)：只收完整项目、v4 自选指向与光纤目标、逐轮提供信息、每卡 900 秒、平台 2 核 CPU/2 GB，允许外部算力；评奖要求至少两个大模型驱动环节，最终排名只看隐藏卡 E–H。本仓库现有求解代码与下文的分数、上界仍属于旧 v3 实例，不能直接提交或用于估计正式成绩。
+
 ## 本仓库的研究结果
 
 比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,119.494551**，文件为 [results/practice_best.csv](results/practice_best.csv)；多起点、事件层精确大邻域搜索与受限列 CP 重组见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md) 和 [POPULATION_CP_ZH.md](POPULATION_CP_ZH.md)。**这条先知路径使用了整季公开天气真值与全部请求**。GPU 完整扫描固定 K18 基础上的 1035 个 K20 双天区扩块后，全 17 请求的[最紧上界](GPU_K20_PAIR_SCAN_ZH.md)为 **21,257.69**；[少于 17 请求的完整分支证书](SIXTEEN_REQUEST_REUSE_K18_ZH.md)给出 **21,119.25** 上界。两者合成对任意合法路径的无条件上界 **21,257.69**，与可行分尚差 **138.195449** 分；少于 17 请求的界低于可行分，因此全局最优解必定拿满 17 个可获奖请求。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
 
-**赛制澄清（2026-09-24）：**据参赛者确认，正式比赛也允许在取得完整实例真值后离线计算并提交先知决策轨迹。本仓库早期关于“正式必须在线决策”的判断只适用于所附交互式 `challenge_workflow` 输入接口，不能作为赛事离线提交的限制。当前 21,119.494551 分与 21,257.69 上界只对应 `dev-reference` 这一份实例；正式实例到手后须按其评分配置重新建模和计算。
+**历史赛制说明已被取代：**2026-09-24 曾按当时参赛者提供的信息，将正式赛理解为可取得完整真值后提交先知轨迹。2026-10-03 核实的官网正式规则 2.0 明确只接受完整项目，并保密未来天气、事件和故障；当前研究结果只对应旧 `dev-reference`。正式 v4 必须重新建模，详见上方新规则记录。
 
 冲击离线最优的实验顺序、验收指标与上下界账本见 [ORACLE_ITERATION_ZH.md](ORACLE_ITERATION_ZH.md)。
 
