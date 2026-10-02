@@ -44,6 +44,9 @@ The optional remote-call allocator now reserves local completion time and
 uses measured complete network round trips rather than GPU kernel time.
 Its deadline forecast is empirical, not a hard runtime bound. Platform egress
 has not yet been verified; the private upload/interface-check step is pending.
+An independent CD2 HTTPS relay reduced measured warm full-decision round trips
+from .8711s to .4916s. It is being verified in a complete local replay; network
+measurements and deployment boundaries are in `research/REMOTE_COMPUTE_ZH.md`.
 
 The separately downloaded alpha–delta ZIPs on 2026-10-03 contained six public
 configuration/catalog/calendar files each. They did not contain weather, events
