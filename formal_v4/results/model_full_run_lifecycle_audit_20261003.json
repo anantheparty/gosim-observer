@@ -1,0 +1,224 @@
+{
+  "schema_version": "official-full-run-startup-lifecycle-readonly-audit-v1",
+  "audited_at_utc": "2026-10-02T23:48:02.721896+00:00",
+  "pinned_official_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+  "official_repository": "https://github.com/gosimfoundation/hackathon-survey26",
+  "sources": {
+    "web/src/components/competition/ProjectWorkflow.vue": {
+      "sha256": "f2e28404d8a569264ecc6b614de7cdb8f84318bce5f2e6cd623f34161aa7fba1",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/web/src/components/competition/ProjectWorkflow.vue"
+    },
+    "web/src/composables/usePersonalModel.ts": {
+      "sha256": "ecf207eaee0a446b78b20316fe8ec1dc05c5e8c907029b544a4a63847d2df70a",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/web/src/composables/usePersonalModel.ts"
+    },
+    "supabase/migrations/20260925001100_private_project_diagnostics.sql": {
+      "sha256": "6bb8e2670eb4146c4c4e44e02bb5560e16022cca06ca9ff631ed2bb9c96bd63a",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260925001100_private_project_diagnostics.sql"
+    },
+    "supabase/migrations/20260927000200_project_eval_ux.sql": {
+      "sha256": "a6631b1b68068df5fbcb723d29e18b9b5e23b28f5c449f8f165542a93351a618",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260927000200_project_eval_ux.sql"
+    },
+    "supabase/migrations/20260927001100_colocated_schedule.sql": {
+      "sha256": "c719eb79eb946316e3563ae0c37b0585b60acfaefe5e63c723578871bfa5f49d",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260927001100_colocated_schedule.sql"
+    },
+    "supabase/migrations/20260925000100_project_platform.sql": {
+      "sha256": "ce1e5609ca573de28f43977aa58609d3a7feda2a267b7539c255285ac7032af5",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260925000100_project_platform.sql"
+    },
+    "supabase/migrations/20260926000200_stored_model_keys.sql": {
+      "sha256": "7f1298e690acc17aba4a403282b5dc288f3772499d93cb47664832c6d67d2e5c",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260926000200_stored_model_keys.sql"
+    },
+    "supabase/migrations/20261002000500_public_runner_pool.sql": {
+      "sha256": "2b2a6db5fea951269965a6e40cea78a93981a6b9e6857ef43361a87884a0b638",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20261002000500_public_runner_pool.sql"
+    },
+    "supabase/functions/_shared/observer-orchestrate.ts": {
+      "sha256": "10b6bc64dac6c48cdd29e733bb645419308565cee458e8758db2809ab42ae7d3",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/_shared/observer-orchestrate.ts"
+    },
+    "project_platform/job_runner.py": {
+      "sha256": "81cda2488ac3305ebdbb9741a25e0b90e3d2cf081c49c0a304a91c89b63b0748",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/job_runner.py"
+    },
+    "project_platform/docker_runtime.py": {
+      "sha256": "578ca25abaa755b8976f1655984a2e4dafda745d9a3a8f4cae5818b964e28f18",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/docker_runtime.py"
+    },
+    "project_platform/trusted_engine.py": {
+      "sha256": "b852d075813698247861ea42d157e42d05effe064405888591e1834e7b3fae01",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/trusted_engine.py"
+    },
+    "project_platform/transport.py": {
+      "sha256": "e704392660c8651d58da0413ab7fd548fda86c9062cb8f7e4030c33176bfedc3",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/transport.py"
+    },
+    "challenge/v4_workflow.py": {
+      "sha256": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/challenge/v4_workflow.py"
+    }
+  },
+  "evidence": [
+    {
+      "finding": "engine claimed claimed is normally one diagnostics entry rendered as kind/status/code; code defaults to status when no diagnostic/error exists.",
+      "sources": [
+        {
+          "path": "web/src/components/competition/ProjectWorkflow.vue",
+          "line": 511
+        },
+        {
+          "path": "supabase/migrations/20260925001100_private_project_diagnostics.sql",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "finding": "All scenario run rows are inserted atomically by create_batch before job claim; relay routes include queued, starting, ready, running.",
+      "sources": [
+        {
+          "path": "supabase/migrations/20260927000200_project_eval_ux.sql",
+          "line": 99
+        },
+        {
+          "path": "supabase/migrations/20260926000200_stored_model_keys.sql",
+          "line": 197
+        }
+      ]
+    },
+    {
+      "finding": "Opening session marks run starting and batch running, while deadline is still unset. Actual run running and deadline arise only in begin.",
+      "sources": [
+        {
+          "path": "supabase/migrations/20260925000100_project_platform.sql",
+          "line": 289
+        },
+        {
+          "path": "supabase/migrations/20260925000100_project_platform.sql",
+          "line": 337
+        }
+      ]
+    },
+    {
+      "finding": "Colocated v4 needs one engine job, not a separate execute job.",
+      "sources": [
+        {
+          "path": "supabase/migrations/20260927001100_colocated_schedule.sql",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "finding": "After claim, source/scenario downloads, image pull, project build, forwarder pull/start occur before run_session begins.",
+      "sources": [
+        {
+          "path": "project_platform/job_runner.py",
+          "line": 136
+        },
+        {
+          "path": "project_platform/job_runner.py",
+          "line": 158
+        },
+        {
+          "path": "project_platform/docker_runtime.py",
+          "line": 119
+        }
+      ]
+    },
+    {
+      "finding": "900-second clock begins after publication send/ready/begin; sending initialize is not waiting for participant policy health to complete.",
+      "sources": [
+        {
+          "path": "project_platform/trusted_engine.py",
+          "line": 124
+        },
+        {
+          "path": "project_platform/transport.py",
+          "line": 151
+        },
+        {
+          "path": "challenge/v4_workflow.py",
+          "line": 243
+        }
+      ]
+    },
+    {
+      "finding": "Runtime model health/initialize/choose are charged to ongoing actual decision wallclock, and server deadline caps local clock.",
+      "sources": [
+        {
+          "path": "challenge/v4_workflow.py",
+          "line": 252
+        },
+        {
+          "path": "project_platform/trusted_engine.py",
+          "line": 140
+        }
+      ]
+    },
+    {
+      "finding": "Colocated build+agent log is stored in result only after workflow and runtime.close; currently empty diagnostics log is not proof of missing health connection.",
+      "sources": [
+        {
+          "path": "project_platform/job_runner.py",
+          "line": 178
+        }
+      ]
+    },
+    {
+      "finding": "claim is idempotent for same exact GitHub run/attempt, but duplicates are not implied by the three-word display.",
+      "sources": [
+        {
+          "path": "supabase/migrations/20261002000500_public_runner_pool.sql",
+          "line": 242
+        }
+      ]
+    }
+  ],
+  "startup_order": [
+    "evaluate creates batch and all queued run rows",
+    "schedule_run opens session (starting) and enqueues one colocated engine job per card",
+    "Github job claim verifies ownership and returns encrypted input",
+    "download/validate/extract public scenario and frozen source; pull image; build; start restricted forwarder",
+    "participant process starts when transport first sends initialize",
+    "initialize publication send then ready then begin fixes server900s deadline",
+    "local workflow900s clock begins and first decision is sent; participant health may still be finishing",
+    "run scores; finish grace; runtime.close; write agent.log into private output; publish result"
+  ],
+  "limits_from_public_code": {
+    "image_pull_timeout_seconds": 300,
+    "default_project_build_timeout_seconds": 600,
+    "colocated_startup_seconds": 900,
+    "formal_card_clock_seconds": 900,
+    "public_card_clock_seconds": 300,
+    "browser_route_refresh_interval_seconds": 15
+  },
+  "interpretation": {
+    "current_claimed_display_is_not_two_claim_events": true,
+    "current_claimed_display_does_not_locate_actual_startup_stage": true,
+    "lack_of_live_agent_log_does_not_prove_health_timeout": true,
+    "queued_run_routes_are_available_before_runner_claim": true,
+    "new60_health_not_yet_validated_by_current_running_card_outputs": true,
+    "all_four_live_subscriptions_or_live_health_success_confirmed": false,
+    "actual_live_timing_cause_confirmed": false
+  },
+  "existing_evidence": {
+    "request_public_test_path": "formal_v4/results/cloud_request_gpu_public_test_20261003/download_manifest.json",
+    "request_public_health_seconds": 4.841,
+    "request_public_GPU_baselines": 6,
+    "prior_full_batch_path": "formal_v4/results/cloud_phase_gpu_batch_20261003.json",
+    "prior_full_health_timeout_seconds": 12,
+    "prior_full_GPU_calls": 0
+  },
+  "scope": {
+    "UI_reads_or_changes": 0,
+    "new_connections": 0,
+    "hidden_requests": 0,
+    "credentials_read_or_output": 0,
+    "production_service_changes": 0,
+    "GPU_choose_calls": 0,
+    "source_changes": 0,
+    "deployed_platform_version_independently_verified": false
+  }
+}

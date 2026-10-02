@@ -1,0 +1,58 @@
+{
+  "schema": "finite-profile-prior-independent-gates-v1",
+  "identity": [
+    {
+      "card": "alpha",
+      "identify_and_load_seconds": 0.02957504102960229,
+      "compact_profile_bytes": 22785
+    },
+    {
+      "card": "beta",
+      "identify_and_load_seconds": 0.03228962514549494,
+      "compact_profile_bytes": 22041
+    },
+    {
+      "card": "gamma",
+      "identify_and_load_seconds": 0.030708499951288104,
+      "compact_profile_bytes": 23738
+    },
+    {
+      "card": "delta",
+      "identify_and_load_seconds": 0.027072499971836805,
+      "compact_profile_bytes": 20379
+    }
+  ],
+  "unknown_catalog_rejected": true,
+  "raw_six_file_digest_not_reconstructed_from_initialize": true,
+  "identity_alone_does_not_activate_profile": true,
+  "clean_positive_compatible_feedback_activates": true,
+  "conflicting_feedback_disables_and_falls_back": true,
+  "repair_epoch_mismatch_rejected": true,
+  "correct_report_resets_live_compatibility": true,
+  "paired_geometry_max_error": 0.0,
+  "batch_midpoint_integration_max_error": 3.3306690738754696e-16,
+  "CPU_pricing_cost": [
+    {
+      "columns": 100,
+      "target_integrals": 1600,
+      "elapsed_seconds": 0.006187916034832597,
+      "columns_per_second": 16160.52956069326,
+      "payload_bytes": 14400
+    },
+    {
+      "columns": 1000,
+      "target_integrals": 16000,
+      "elapsed_seconds": 0.027218374889343977,
+      "columns_per_second": 36739.88634756813,
+      "payload_bytes": 144000
+    },
+    {
+      "columns": 10000,
+      "target_integrals": 160000,
+      "elapsed_seconds": 0.2745048329234123,
+      "columns_per_second": 36429.23111226253,
+      "payload_bytes": 1440000
+    }
+  ],
+  "scope": "public/synthetic independent gate; no wholecard, network, GPU or production changes"
+}

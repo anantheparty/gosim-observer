@@ -1,0 +1,25 @@
+{
+  "schema": "global-finite-column-pricing-gate-v1",
+  "hardware_gpu_used": false,
+  "production_or_service_modified": false,
+  "hidden_inputs_read": false,
+  "finite_grid_only_not_continuous_global_certificate": true,
+  "oracle": "official FiberGrid tangent_offsets and classify_offset, independent per-fiber enumeration",
+  "rows": [
+    {
+      "gap": 0.15,
+      "finite_columns": 36,
+      "cpu_max_error": 2.842170943040401e-14,
+      "cuda_simulator_max_error": 0.0,
+      "official_assignment_gates": 36
+    },
+    {
+      "gap": 0.0,
+      "finite_columns": 36,
+      "cpu_max_error": 5.684341886080802e-14,
+      "cuda_simulator_max_error": 0.0,
+      "official_assignment_gates": 36
+    }
+  ],
+  "seconds": 0.1286671250127256
+}
