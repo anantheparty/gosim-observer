@@ -1,0 +1,46 @@
+{
+  "agent": "formal_v4/research/reference_agent.py",
+  "cards": {
+    "L1": {
+      "decision_requests": 620,
+      "observation_request_reward": 0.0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 2,
+      "observe_actions": 553,
+      "report_settlement": 0.0,
+      "required_missing": 2,
+      "required_penalty": -100.0,
+      "runner_seconds": 14.704,
+      "sum_best_scores": 4448.334706,
+      "targets_observed": 5161,
+      "termination_reason": "survey_complete",
+      "total": 4345.449534,
+      "uniformity_penalty": -2.885171,
+      "wall_seconds": 14.608
+    },
+    "L2": {
+      "decision_requests": 584,
+      "observation_request_reward": 0.0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 2,
+      "observe_actions": 501,
+      "report_settlement": 100.0,
+      "required_missing": 4,
+      "required_penalty": -200.0,
+      "runner_seconds": 13.586,
+      "sum_best_scores": 4166.879403,
+      "targets_observed": 5119,
+      "termination_reason": "survey_complete",
+      "total": 4062.915709,
+      "uniformity_penalty": -3.963695,
+      "wall_seconds": 13.492
+    }
+  },
+  "mean_score": 4204.1826215,
+  "sha256": {
+    "formal_v4/research/reference_agent.py": "56f944a6bfd8421830400eaa5416153605dcbad7fe5b14ae76f93d799aa6fea0",
+    "formal_v4/upstream/gosim-observer-examples/python/agent_core/planner.py": "a7447798f19d0dbc82ef39cc6d523826d17bd91278a6e1aca0b85aa0674377ad",
+    "formal_v4/upstream/gosim-observer-examples/python/agent_core/state.py": "bdb2e3c0fd03fb8de8c541c8ca2713a5b25521f2d7d1ba9137b5ce0db414b7e6"
+  },
+  "wallclock_budget_seconds": 900
+}

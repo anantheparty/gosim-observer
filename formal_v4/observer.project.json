@@ -1,0 +1,13 @@
+{
+  "schema_version": "observer-project-v1",
+  "protocol": "jsonl-v4",
+  "image": "python:3.12-slim",
+  "build": [["python3", "-m", "pip", "install", "--no-cache-dir", "numpy==2.2.6"]],
+  "run": ["python3", "-u", "agent.py"],
+  "working_directory": ".",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  }
+}

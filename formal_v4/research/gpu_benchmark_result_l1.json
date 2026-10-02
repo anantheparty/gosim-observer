@@ -1,0 +1,313 @@
+{
+  "runs": [
+    {
+      "elapsed_seconds": 1.465790999995079,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 5120,
+        "gpu_durations": 19,
+        "cpu_refinements": 192,
+        "useful_targets": 4442,
+        "prepare_seconds": 0.011692100029904395,
+        "gpu_scan_seconds": 1.3081076000235043,
+        "refine_seconds": 0.14504639996448532,
+        "planning_seconds": 1.4648464000201784
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      }
+    },
+    {
+      "elapsed_seconds": 0.17445809999480844,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 5120,
+        "gpu_durations": 19,
+        "cpu_refinements": 192,
+        "useful_targets": 4442,
+        "prepare_seconds": 0.008033599995542318,
+        "gpu_scan_seconds": 0.018826299987267703,
+        "refine_seconds": 0.14661649998743087,
+        "planning_seconds": 0.1734765999717638
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      }
+    },
+    {
+      "elapsed_seconds": 0.1745315999723971,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 5120,
+        "gpu_durations": 19,
+        "cpu_refinements": 192,
+        "useful_targets": 4442,
+        "prepare_seconds": 0.010025300027336925,
+        "gpu_scan_seconds": 0.02032309997593984,
+        "refine_seconds": 0.1429529000306502,
+        "planning_seconds": 0.17330170003697276
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      }
+    }
+  ],
+  "crosscheck_centers": 40,
+  "crosscheck_max_absolute_error": 2.220446049250313e-16,
+  "crosscheck_gpu_seconds": 0.0034767999895848334,
+  "crosscheck_cpu_seconds": 0.01606220001121983,
+  "prediction": {
+    "V4T000506": {
+      "index": 505,
+      "fiber_id": 0,
+      "factor": 0.22301916783891015,
+      "public_quality": 1.4087025651741063,
+      "quality": 0.7747864108457586,
+      "directional_scale": 1.0000000000000002,
+      "predicted_band": "DARK",
+      "alt_deg": 68.54167761078092,
+      "az_deg": 84.75241370162176
+    },
+    "V4T003162": {
+      "index": 3161,
+      "fiber_id": 1,
+      "factor": 0.1466925346270933,
+      "public_quality": 1.407501339105668,
+      "quality": 0.7741257365081176,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 68.33511590373911,
+      "az_deg": 86.60079568067073
+    },
+    "V4T006622": {
+      "index": 6621,
+      "fiber_id": 2,
+      "factor": 0.7737409047350801,
+      "public_quality": 1.4095071504727403,
+      "quality": 0.7752289327600073,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 68.68116595237314,
+      "az_deg": 88.68083577438418
+    },
+    "V4T003309": {
+      "index": 3308,
+      "fiber_id": 3,
+      "factor": 1.0,
+      "public_quality": 1.4088133035904986,
+      "quality": 0.7748473169747743,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 68.5608214774451,
+      "az_deg": 89.58676427928086
+    },
+    "V4T005082": {
+      "index": 5081,
+      "fiber_id": 4,
+      "factor": 0.8379586075615124,
+      "public_quality": 1.4134635789598007,
+      "quality": 0.7774049684278904,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 69.38096467507877,
+      "az_deg": 85.01980982661254
+    },
+    "V4T000214": {
+      "index": 213,
+      "fiber_id": 5,
+      "factor": 0.3378344037500937,
+      "public_quality": 1.4113482754484639,
+      "quality": 0.7762415514966551,
+      "directional_scale": 0.9999999999999999,
+      "predicted_band": "DARK",
+      "alt_deg": 69.00388301796617,
+      "az_deg": 85.85077632019899
+    },
+    "V4T004689": {
+      "index": 4688,
+      "fiber_id": 6,
+      "factor": 0.17852745062418787,
+      "public_quality": 1.4119109445177969,
+      "quality": 0.7765510194847883,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 69.10351479749755,
+      "az_deg": 88.15972334353725
+    },
+    "V4T000968": {
+      "index": 967,
+      "fiber_id": 7,
+      "factor": 0.24757860826888722,
+      "public_quality": 1.4140119548972188,
+      "quality": 0.7777065751934704,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 69.47986368184141,
+      "az_deg": 89.50693907132049
+    },
+    "V4T000305": {
+      "index": 304,
+      "fiber_id": 8,
+      "factor": 1.0,
+      "public_quality": 1.417385835085232,
+      "quality": 0.7795622092968777,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.09926721664004,
+      "az_deg": 84.95412280855622
+    },
+    "V4T004057": {
+      "index": 4056,
+      "fiber_id": 9,
+      "factor": 0.7266397611211529,
+      "public_quality": 1.4149752528146557,
+      "quality": 0.7782363890480607,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 69.65476995998732,
+      "az_deg": 85.21195237323636
+    },
+    "V4T006676": {
+      "index": 6675,
+      "fiber_id": 10,
+      "factor": 0.5553887956885237,
+      "public_quality": 1.4170556111135046,
+      "quality": 0.7793805861124277,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.03778474853983,
+      "az_deg": 88.12457492748975
+    },
+    "V4T000165": {
+      "index": 164,
+      "fiber_id": 11,
+      "factor": 1.0,
+      "public_quality": 1.4177567339400063,
+      "quality": 0.7797662036670036,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.16855227159797,
+      "az_deg": 89.00230282985787
+    },
+    "V4T001815": {
+      "index": 1814,
+      "fiber_id": 12,
+      "factor": 0.5327398723671659,
+      "public_quality": 1.4182682266876256,
+      "quality": 0.7800475246781942,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.26450371547418,
+      "az_deg": 83.50023866462226
+    },
+    "V4T003573": {
+      "index": 3572,
+      "fiber_id": 13,
+      "factor": 0.1345367698874274,
+      "public_quality": 1.4183069002594737,
+      "quality": 0.7800687951427105,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.27177769516916,
+      "az_deg": 85.99431642704505
+    },
+    "V4T005506": {
+      "index": 5505,
+      "fiber_id": 14,
+      "factor": 0.22459870910845428,
+      "public_quality": 1.4181648821341715,
+      "quality": 0.7799906851737943,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.2450792636575,
+      "az_deg": 87.29968827454816
+    },
+    "V4T000855": {
+      "index": 854,
+      "fiber_id": 15,
+      "factor": 0.23596102080645295,
+      "public_quality": 1.421121711215982,
+      "quality": 0.7816169411687901,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 70.80868050482998,
+      "az_deg": 89.05600330605571
+    }
+  },
+  "now_utc": "2026-11-02T00:30:00Z"
+}

@@ -1,0 +1,54 @@
+{
+  "agent_error_log_lines": [],
+  "agent_kind": "current",
+  "card": "L2",
+  "completed_cleanly": true,
+  "elapsed_seconds": 159.352,
+  "exit_code": 0,
+  "process_error": null,
+  "raw_outputs": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2",
+  "report_penalty_count": 0,
+  "report_penalty_sum": 0,
+  "report_results": [
+    {
+      "correct": false,
+      "issued_at_utc": "2026-11-19T06:05:52Z",
+      "repaired": false,
+      "score_delta": 0.0
+    },
+    {
+      "correct": true,
+      "issued_at_utc": "2026-11-21T06:08:42Z",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ],
+  "summary": {
+    "card": "L2",
+    "decision_requests": 1223,
+    "note": "Local scores are for debugging; official results come from the platform. \u672c\u5730\u5206\u6570\u7528\u6765\u8c03\u8bd5\uff0c\u6b63\u5f0f\u6210\u7ee9\u4ee5\u5e73\u53f0\u4e3a\u51c6\u3002",
+    "observation_request_reward": 200.0,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observe_actions": 1103,
+    "outputs": {
+      "agent.log": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2/agent.log",
+      "decisions.csv": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2/decisions.csv",
+      "observations.csv": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2/observations.csv",
+      "score_report.json": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2/score_report.json",
+      "workflow_result.json": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calibrated_b22_s110_20261003/L2/workflow_result.json"
+    },
+    "report_settlement": 100.0,
+    "required_missing": 3,
+    "required_penalty": -150.0,
+    "runner_seconds": 159.252,
+    "sum_best_scores": 6469.203679,
+    "targets_observed": 8285,
+    "termination_detail": "",
+    "termination_reason": "survey_complete",
+    "total": 6618.021215,
+    "uniformity_penalty": -1.182464,
+    "wall_seconds": 159.136
+  },
+  "wallclock_budget_seconds": 900.0
+}
