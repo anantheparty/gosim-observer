@@ -24,6 +24,14 @@ CPU_ENTRIES = {
 }
 MODEL_ENTRY = ("research.agent_model_gpu", ["research/cpu_phase_candidates.py",
                "research/agent_model_gpu.py", "research/model_gpu_transport.py"])
+MODEL_ENTRIES = {
+    "model-gpu": MODEL_ENTRY,
+    "request-model-gpu": ("research.agent_request_distributed", MODEL_ENTRY[1] + [
+        "research/agent_request_distributed.py", "research/request_remote_planner.py",
+        "research/request_deadline_common.py", "research/request_mask_dp.py",
+        "research/request_future_field.py", "research/terrain_policy.py",
+        "research/terrain_version_space.py"]),
+}
 
 
 def main():
@@ -31,7 +39,7 @@ def main():
     parser.add_argument("--out", required=True)
     parser.add_argument("--remote-config")
     parser.add_argument("--policy-config")
-    parser.add_argument("--planner", choices=("default", *CPU_ENTRIES, "model-gpu"), default="default")
+    parser.add_argument("--planner", choices=("default", *CPU_ENTRIES, *MODEL_ENTRIES), default="default")
     args = parser.parse_args()
     if args.planner != "default" and args.remote_config:
         parser.error("This entry does not accept a private remote configuration")
@@ -39,7 +47,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     manifest = {}
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as archive:
-        extra = MODEL_ENTRY if args.planner == "model-gpu" else CPU_ENTRIES.get(args.planner)
+        extra = MODEL_ENTRIES.get(args.planner) or CPU_ENTRIES.get(args.planner)
         for name in FILES + (extra[1] if extra else []):
             path = ROOT / name
             if path.exists():
@@ -55,7 +63,7 @@ def main():
         if args.remote_config:
             archive.write(args.remote_config, "remote_runtime.json")
             manifest["remote_runtime.json"] = "separate ephemeral service credential"
-        elif args.planner == "model-gpu":
+        elif args.planner in MODEL_ENTRIES:
             data = (json.dumps({"enable_search": True, "health_timeout_seconds": 12,
                                "initialize_timeout_seconds": 75,
                                "timeout_seconds": 10}, sort_keys=True) + "\n").encode()
