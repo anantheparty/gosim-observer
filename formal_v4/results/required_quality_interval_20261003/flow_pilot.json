@@ -1,0 +1,394 @@
+{
+  "scope": "exact finite shared-required coverage pilot; ignores competing science and REQ; original E path/reference geometry conditional",
+  "finite_lp_not_global_upper": true,
+  "hidden_inputs_read": false,
+  "cards": {
+    "alpha": {
+      "finite_columns": 16,
+      "time_nodes": 17,
+      "variables": 35,
+      "formerly_missing": 3,
+      "maximum_shared_required_per_column": 1,
+      "integer_covered": 3,
+      "integer_objective": 150.0,
+      "lp_upper_for_this_column_pool": 150.0,
+      "mip_status": 0,
+      "mip_gap": 0.0,
+      "solver_seconds": 0.010124958120286465,
+      "selected_columns": [
+        {
+          "start": 1791183600.0,
+          "end": 1791187200.0,
+          "mask": 2,
+          "assignments": {
+            "0": "V4T005424"
+          },
+          "pointing": [
+            66.77820755503042,
+            101.22198865264234
+          ],
+          "start_utc": "2026-10-05T07:00:00Z",
+          "end_utc": "2026-10-05T08:00:00Z"
+        },
+        {
+          "start": 1791187200.0,
+          "end": 1791190800.0,
+          "mask": 1,
+          "assignments": {
+            "0": "V4T001295"
+          },
+          "pointing": [
+            67.7031858267908,
+            94.26967644456455
+          ],
+          "start_utc": "2026-10-05T08:00:00Z",
+          "end_utc": "2026-10-05T09:00:00Z"
+        },
+        {
+          "start": 1791263700.0,
+          "end": 1791267300.0,
+          "mask": 4,
+          "assignments": {
+            "0": "V4T008897"
+          },
+          "pointing": [
+            61.10714268865942,
+            177.55404310385904
+          ],
+          "start_utc": "2026-10-06T05:15:00Z",
+          "end_utc": "2026-10-06T06:15:00Z"
+        }
+      ],
+      "uncovered_ids": []
+    },
+    "beta": {
+      "finite_columns": 22,
+      "time_nodes": 20,
+      "variables": 50,
+      "formerly_missing": 9,
+      "maximum_shared_required_per_column": 1,
+      "integer_covered": 4,
+      "integer_objective": 200.0,
+      "lp_upper_for_this_column_pool": 200.0,
+      "mip_status": 0,
+      "mip_gap": 0.0,
+      "solver_seconds": 0.0023691251408308744,
+      "selected_columns": [
+        {
+          "start": 1792371600.0,
+          "end": 1792375200.0,
+          "mask": 8,
+          "assignments": {
+            "0": "V4T003951"
+          },
+          "pointing": [
+            70.74781373344798,
+            67.1041761297498
+          ],
+          "start_utc": "2026-10-19T01:00:00Z",
+          "end_utc": "2026-10-19T02:00:00Z"
+        },
+        {
+          "start": 1792382400.0,
+          "end": 1792386000.0,
+          "mask": 4,
+          "assignments": {
+            "0": "V4T002591"
+          },
+          "pointing": [
+            77.23585599529942,
+            292.17691118196046
+          ],
+          "start_utc": "2026-10-19T04:00:00Z",
+          "end_utc": "2026-10-19T05:00:00Z"
+        },
+        {
+          "start": 1792394100.0,
+          "end": 1792397700.0,
+          "mask": 256,
+          "assignments": {
+            "0": "V4T008668"
+          },
+          "pointing": [
+            62.25564078700464,
+            78.84518191428738
+          ],
+          "start_utc": "2026-10-19T07:15:00Z",
+          "end_utc": "2026-10-19T08:15:00Z"
+        },
+        {
+          "start": 1792740600.0,
+          "end": 1792744200.0,
+          "mask": 128,
+          "assignments": {
+            "0": "V4T007381"
+          },
+          "pointing": [
+            68.61875177039198,
+            97.93701897456897
+          ],
+          "start_utc": "2026-10-23T07:30:00Z",
+          "end_utc": "2026-10-23T08:30:00Z"
+        }
+      ],
+      "uncovered_ids": [
+        "V4T001367",
+        "V4T002036",
+        "V4T004301",
+        "V4T004497",
+        "V4T005798"
+      ]
+    },
+    "gamma": {
+      "finite_columns": 16,
+      "time_nodes": 22,
+      "variables": 40,
+      "formerly_missing": 3,
+      "maximum_shared_required_per_column": 1,
+      "integer_covered": 3,
+      "integer_objective": 150.0,
+      "lp_upper_for_this_column_pool": 150.0,
+      "mip_status": 0,
+      "mip_gap": 0.0,
+      "solver_seconds": 0.002117499941959977,
+      "selected_columns": [
+        {
+          "start": 1791602100.0,
+          "end": 1791605700.0,
+          "mask": 2,
+          "assignments": {
+            "0": "V4T002774"
+          },
+          "pointing": [
+            82.47552171103835,
+            278.8875221072491
+          ],
+          "start_utc": "2026-10-10T03:15:00Z",
+          "end_utc": "2026-10-10T04:15:00Z"
+        },
+        {
+          "start": 1791615600.0,
+          "end": 1791619200.0,
+          "mask": 4,
+          "assignments": {
+            "0": "V4T003775"
+          },
+          "pointing": [
+            53.536445271468,
+            180.81824120637523
+          ],
+          "start_utc": "2026-10-10T07:00:00Z",
+          "end_utc": "2026-10-10T08:00:00Z"
+        },
+        {
+          "start": 1791679500.0,
+          "end": 1791683100.0,
+          "mask": 1,
+          "assignments": {
+            "0": "V4T000824"
+          },
+          "pointing": [
+            84.30824582805177,
+            126.27603902672742
+          ],
+          "start_utc": "2026-10-11T00:45:00Z",
+          "end_utc": "2026-10-11T01:45:00Z"
+        }
+      ],
+      "uncovered_ids": []
+    },
+    "delta": {
+      "finite_columns": 248,
+      "time_nodes": 46,
+      "variables": 312,
+      "formerly_missing": 19,
+      "maximum_shared_required_per_column": 2,
+      "integer_covered": 15,
+      "integer_objective": 750.0,
+      "lp_upper_for_this_column_pool": 750.0,
+      "mip_status": 0,
+      "mip_gap": 0.0,
+      "solver_seconds": 0.005834416951984167,
+      "selected_columns": [
+        {
+          "start": 1792912500.0,
+          "end": 1792916100.0,
+          "mask": 1,
+          "assignments": {
+            "0": "V4T000504"
+          },
+          "pointing": [
+            56.321922650778376,
+            199.41380725691747
+          ],
+          "start_utc": "2026-10-25T07:15:00Z",
+          "end_utc": "2026-10-25T08:15:00Z"
+        },
+        {
+          "start": 1792916100.0,
+          "end": 1792917000.0,
+          "mask": 8,
+          "assignments": {
+            "0": "V4T001699"
+          },
+          "pointing": [
+            62.98741934929682,
+            77.73837703842533
+          ],
+          "start_utc": "2026-10-25T08:15:00Z",
+          "end_utc": "2026-10-25T08:30:00Z"
+        },
+        {
+          "start": 1792998000.0,
+          "end": 1793001600.0,
+          "mask": 2,
+          "assignments": {
+            "0": "V4T001465"
+          },
+          "pointing": [
+            51.301611248036906,
+            98.36253668378286
+          ],
+          "start_utc": "2026-10-26T07:00:00Z",
+          "end_utc": "2026-10-26T08:00:00Z"
+        },
+        {
+          "start": 1793001600.0,
+          "end": 1793003400.0,
+          "mask": 128,
+          "assignments": {
+            "0": "V4T003563"
+          },
+          "pointing": [
+            52.882643578966785,
+            55.00589418051801
+          ],
+          "start_utc": "2026-10-26T08:00:00Z",
+          "end_utc": "2026-10-26T08:30:00Z"
+        },
+        {
+          "start": 1793063700.0,
+          "end": 1793067300.0,
+          "mask": 131072,
+          "assignments": {
+            "0": "V4T007159"
+          },
+          "pointing": [
+            69.94358265305182,
+            67.20050497085256
+          ],
+          "start_utc": "2026-10-27T01:15:00Z",
+          "end_utc": "2026-10-27T02:15:00Z"
+        },
+        {
+          "start": 1793072700.0,
+          "end": 1793076300.0,
+          "mask": 32768,
+          "assignments": {
+            "0": "V4T005522"
+          },
+          "pointing": [
+            56.20920608632019,
+            155.41933875778656
+          ],
+          "start_utc": "2026-10-27T03:45:00Z",
+          "end_utc": "2026-10-27T04:45:00Z"
+        },
+        {
+          "start": 1793077200.0,
+          "end": 1793080800.0,
+          "mask": 32,
+          "assignments": {
+            "0": "V4T002467"
+          },
+          "pointing": [
+            51.709200777706855,
+            147.54886123611152
+          ],
+          "start_utc": "2026-10-27T05:00:00Z",
+          "end_utc": "2026-10-27T06:00:00Z"
+        },
+        {
+          "start": 1793084400.0,
+          "end": 1793088000.0,
+          "mask": 4096,
+          "assignments": {
+            "0": "V4T005259"
+          },
+          "pointing": [
+            60.24141886229889,
+            98.2510377360687
+          ],
+          "start_utc": "2026-10-27T07:00:00Z",
+          "end_utc": "2026-10-27T08:00:00Z"
+        },
+        {
+          "start": 1793088000.0,
+          "end": 1793089800.0,
+          "mask": 16448,
+          "assignments": {
+            "12": "V4T002777",
+            "0": "V4T005419"
+          },
+          "pointing": [
+            59.579974760437665,
+            73.6498674319331
+          ],
+          "start_utc": "2026-10-27T08:00:00Z",
+          "end_utc": "2026-10-27T08:30:00Z"
+        },
+        {
+          "start": 1793174400.0,
+          "end": 1793176200.0,
+          "mask": 4,
+          "assignments": {
+            "0": "V4T001669"
+          },
+          "pointing": [
+            57.68101136505201,
+            57.76306635954522
+          ],
+          "start_utc": "2026-10-28T08:00:00Z",
+          "end_utc": "2026-10-28T08:30:00Z"
+        },
+        {
+          "start": 1794899700.0,
+          "end": 1794903300.0,
+          "mask": 3072,
+          "assignments": {
+            "12": "V4T004281",
+            "2": "V4T004900"
+          },
+          "pointing": [
+            63.793418795923536,
+            63.095020354011574
+          ],
+          "start_utc": "2026-11-17T07:15:00Z",
+          "end_utc": "2026-11-17T08:15:00Z"
+        },
+        {
+          "start": 1795935071.0,
+          "end": 1795938671.0,
+          "mask": 262400,
+          "assignments": {
+            "0": "V4T004188",
+            "11": "V4T008767"
+          },
+          "pointing": [
+            63.51911415311148,
+            48.814581257238466
+          ],
+          "start_utc": "2026-11-29T06:51:11Z",
+          "end_utc": "2026-11-29T07:51:11Z"
+        }
+      ],
+      "uncovered_ids": [
+        "V4T001951",
+        "V4T004230",
+        "V4T005314",
+        "V4T006597"
+      ]
+    }
+  },
+  "elapsed_seconds": 0.4425054171588272
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-02T23:39:45.697745+00:00",
+  "source": "free platform public interface test",
+  "project": "Observer Request GPU",
+  "submission_file": "observer_request_phase_gpu.zip",
+  "submission_zip_sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+  "platform_source_digest": "75fa4058539fbe28fafd0e56d4fab0cc8af0108d7cbb6ec87ee1f268a126c0d5",
+  "source_digest_evidence": {
+    "root_UI_confirmed_project_and_fingerprint": true,
+    "root_UI_fingerprint": "75fa4058539fbe28fafd0e56d4fab0cc8af0108d7cbb6ec87ee1f268a126c0d5",
+    "local_package_gate_path": "formal_v4/results/request_model_gpu_health60_package_gates_20261003.json",
+    "local_package_gate_sha256": "55ef44c3fc119f045100fa87954e2ad2b36a6318e6730fdf3fac06d234134706",
+    "download_outputs_contain_source_fingerprint": false
+  },
+  "download_file": "gosim_request_gpu_public_test.zip",
+  "download_zip_sha256": "335f82c349f9292f009cd6407a8e5478e71459888185fc58dd826bedb3559a88",
+  "download_bytes": 85876,
+  "download_root": "AGENTIC-OBSERVER26-runner-10-participant-7afaf76f63f441738f78439d9ed3bbe6-990428ebce27e3d2d7512e93886ab625643cbf74",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "20455ff78ada28ab80031cf79257db1c9157b2978e00c1fd7b0e6375a6359276",
+    "agent.log": "2b989a114e907fee156990edc291dc1d52f98ec964d612e062e9d691ca65bab3",
+    "decisions.csv": "f94766f799d9bc9e547e26f222a50de3628841057e365c2b057aee4ddac3c327",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "0ca2a441755e6f37678f12a2e57a4ad3640c7c69283cd26cbd1bcf3aa54c5493",
+    "score_report.json": "4ae06100ca31fb8138ee882138714b655bc2c5566d6cb6061e9a2ca075cf6934",
+    "workflow_result.json": "f80dfb8d91798db9b3607328c1386f7a33945fd00d33291c2fc0870ea28ddfb7"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "20455ff78ada28ab80031cf79257db1c9157b2978e00c1fd7b0e6375a6359276",
+    "agent.log": "2b989a114e907fee156990edc291dc1d52f98ec964d612e062e9d691ca65bab3",
+    "decisions.csv": "f94766f799d9bc9e547e26f222a50de3628841057e365c2b057aee4ddac3c327",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "0ca2a441755e6f37678f12a2e57a4ad3640c7c69283cd26cbd1bcf3aa54c5493",
+    "score_report.json": "4ae06100ca31fb8138ee882138714b655bc2c5566d6cb6061e9a2ca075cf6934",
+    "workflow_result.json": "f80dfb8d91798db9b3607328c1386f7a33945fd00d33291c2fc0870ea28ddfb7"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 97045,
+    "agent.log": 2763,
+    "decisions.csv": 36864,
+    "messages.jsonl": 41518,
+    "observations.csv": 181658,
+    "score_report.json": 1406,
+    "workflow_result.json": 1979
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 97045,
+    "agent.log": 2763,
+    "decisions.csv": 36864,
+    "messages.jsonl": 41518,
+    "observations.csv": 181658,
+    "score_report.json": 1406,
+    "workflow_result.json": 1979
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-public-test",
+    "total": 430.598521,
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -700.0,
+      "sum_best_scores": 1164.694613,
+      "uniformity_penalty": -34.096092
+    },
+    "counts": {
+      "decisions": 426,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 2904,
+      "observe_actions": 284,
+      "required_missing": 14,
+      "targets_observed": 1589
+    },
+    "completion": {
+      "termination_reason": "survey_complete",
+      "ignored_in_flight_response": false,
+      "finish_summary_present": true,
+      "traceback_present": false,
+      "remote_close_ack_not_logged": true
+    },
+    "public_wallclock_limit_seconds": 300.0,
+    "accounted_wallclock_seconds": 125.814,
+    "agent_wallclock_seconds": 124.872,
+    "configured_health_timeout_seconds": 60,
+    "remote_check": {
+      "remote_check": "ok",
+      "transport": "official-compatible-api",
+      "model": "traditional-cuda-planner",
+      "gpu_available": true,
+      "gpu_backend_ready": true,
+      "seconds": 4.841
+    },
+    "remote_calls": 6,
+    "remote_seconds": 37.735,
+    "remote_budget": {
+      "accepted": 6,
+      "skipped": 287,
+      "fraction": 0.8397,
+      "cpu_p90": 0.2845,
+      "remote_p90": 5.7891,
+      "completion_reserve": 30.0,
+      "estimated_remaining_decisions": 30.0,
+      "initialization_seconds": 10.025,
+      "observed_remote_seconds": 37.735,
+      "failed_initializations": 0
+    },
+    "compatible_api": {
+      "chat_calls": 9,
+      "chat_seconds": 42.555660154
+    },
+    "distributed_request": {
+      "remote_baselines": 6,
+      "cpu_baselines": 287,
+      "forced_cpu_crops": 0,
+      "transport_failures": 0,
+      "cpu_baseline_seconds": 76.2647914989999,
+      "remote_baseline_seconds": 37.735050932000036,
+      "budget": {
+        "accepted": 6,
+        "skipped": 287,
+        "fraction": 0.8397,
+        "cpu_p90": 0.2845,
+        "remote_p90": 5.7891,
+        "completion_reserve": 30.0,
+        "estimated_remaining_decisions": 30.0,
+        "initialization_seconds": 10.025,
+        "observed_remote_seconds": 37.735,
+        "failed_initializations": 0
+      },
+      "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+    },
+    "request_dp": {
+      "builds": 0,
+      "build_seconds": 0.0,
+      "dp_solves": 0,
+      "dp_seconds": 0.0,
+      "request_observes": 0,
+      "boundary_waits": 0,
+      "clipped_baselines": 0,
+      "rejected_by_cost": 0,
+      "infeasible": 0,
+      "forecast_failures": 0,
+      "cached_requests": 0,
+      "model": "full-deadline finite columns; frozen same-duration scientific regret"
+    },
+    "cpu_phase": {
+      "choose_calls": 287,
+      "phase_calls": 279,
+      "phase_candidates": 2234862,
+      "phase_exact_evaluations": 4464,
+      "phase_emergency_count": 0,
+      "phase_improvements": 228
+    },
+    "terrain": {
+      "schema": "terrain-positive-version-space-v1",
+      "directions": [
+        "S",
+        "SW"
+      ],
+      "width_range": [
+        30.0,
+        70.0
+      ],
+      "altitude_range": [
+        35.0,
+        50.0
+      ],
+      "boxes_per_family": 540,
+      "remaining_boxes": {
+        "S": 540,
+        "SW": 427
+      },
+      "positive_count": 2736,
+      "zero_feedback_ignored": 168,
+      "conditional_domain_conflicts": [],
+      "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+    },
+    "terrain_feedback_exposures": 284,
+    "comparison": {
+      "CPU_phase": {
+        "path": "formal_v4/results/cloud_cpu_phase_public_test_20261003/score_report.json",
+        "score_report_sha256": "0321f14086d71f43e3c6b8511f250504d5c46b6759f37667d6bc022d727e1d17",
+        "total": 248.067256,
+        "total_delta": 182.531265,
+        "different_program_and_trajectory": true,
+        "causal_GPU_or_REQ_gain_claimed": false
+      },
+      "prior_Phase_GPU": {
+        "path": "formal_v4/results/cloud_phase_gpu_public_test_20261003/score_report.json",
+        "score_report_sha256": "28a9f48538f9c16915313c237968945b18f0cf5faa1059372df5bd395c3a0aa3",
+        "total": 236.561912,
+        "total_delta": 194.036609,
+        "different_program_and_trajectory": true,
+        "causal_GPU_or_REQ_gain_claimed": false
+      }
+    }
+  },
+  "interpretation": {
+    "baseline_GPU_supported_api_and_CPU_fallback_path_validated": true,
+    "no_transport_failure_in_this_public_run": true,
+    "request_DP_path_validated": false,
+    "reason_REQ_not_validated": "public test issued zero requests; DP build/solve/override all zero",
+    "health60_was_not_fully_consumed": true,
+    "previous_four_card_timeout_cause_proven": false,
+    "formal_four_card_network_or_score_validated": false,
+    "GPU_causal_gain_claimed": false
+  },
+  "evaluation_scope": {
+    "free_public_test": true,
+    "formal_four_card_quota_consumed": false,
+    "quota_evidence": "root confirmed free public-test platform workflow",
+    "formal_wallclock_limit_seconds": 900
+  },
+  "archive_operation": {
+    "UI_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}
