@@ -1,0 +1,33 @@
+{
+  "schema": "terrain-version-space-delta-postrun-v1",
+  "scope": "own completed feedback replay only; no production future input",
+  "snapshot": {
+    "schema": "terrain-positive-version-space-v1",
+    "directions": [
+      "NE",
+      "E",
+      "NW"
+    ],
+    "width_range": [
+      30.0,
+      70.0
+    ],
+    "altitude_range": [
+      35.0,
+      50.0
+    ],
+    "boxes_per_family": 540,
+    "remaining_boxes": {
+      "NE": 528,
+      "E": 392,
+      "NW": 367
+    },
+    "positive_count": 12739,
+    "zero_feedback_ignored": 0,
+    "conditional_domain_conflicts": [],
+    "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+  },
+  "positive_observations": 12739,
+  "parameter_boxes_removed": 333,
+  "elapsed_seconds": 1.1143257499206811
+}

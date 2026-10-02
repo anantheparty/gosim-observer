@@ -96,3 +96,19 @@ scores/factors 使用精确 overwrite delta：初始化服务器零数组；每�
 `python3 -m formal_v4.research.model_gpu_transport_checks`：16项本地 stub 门检全部通过，2.567秒。覆盖分块最后一块直接计算、重复nonce不重算、数据/SHA损坏、解压上限、TTL/容量/并发、协议错误、认证/CORS/路径/大小、session隔离、陈旧sequence、状态下降、ACK丢失后的精确复位、2次失败回退。含10,000目标质量数组+16目标delta的一块请求检查。
 
 这只证明本地兼容传输与状态同步，不证明真实GPU收益或平台代理可用。测试只建立自动关闭的随机本地端口 stub，没有部署19928、改变队伍密钥或消费评测次数。
+
+## 7. 后续 owned-endpoint GPU smoke
+
+root随后部署了 CD2 loopback19928 和独立 `/gosim-observer-gpu/v1/` nginx 路径。使用公开 α 目标、日历和配置，通过该正常兼容接口完成真实 PRO6000 health、初始化、三次 choose 及 close；没有读取隐藏天气、操作网页或重启服务。
+
+- 初始化10000目标：7块，每块小于64KiB，总往返0.453668秒。
+- 同一固定状态三次 choose：0.561362 / 0.600453 / 0.644746秒，每次1个chat；GPU后端计算约0.44秒。
+- 后端明确为 `numba-cuda-float64`、RTX PRO6000；三次 `fixed_workload=true`、无emergency。
+- 三次结果与原直接RPC的独立session结果动作完全相同，动作SHA-256为 `67a41551115a5e969e9ab5a603a78892301e620335f59723ec8a3617f6c523bb`。
+- 上传包 `2409c64e...` 本身完成缺少model环境变量时的 CPUphase fallback gate：正常返回observe、无异常；全部归档文件未包含私有GPU bearer，运行配置只含开关和timeout，无端点或密钥。
+
+记录：`results/model_gpu_owned_smoke_20261003.json`；可复现脚本：`model_gpu_owned_smoke.py`。10000个常量质量值改用 constant encoding、长度及完整数值JSON哈希记录，信息没有减少。
+
+上传包比最初未加policy配置的审计包多 `policy_config.json`，同时修改其 `build_manifest.json` 哈希；共同算法文件逐字节相同。ZIP日期也不同，不能把全部包差异只归因于日期。
+
+这验证了 owned HTTPS→兼容adapter→GPU 的真实路径。官方 model gateway 的额外延迟、四卡并发和完整比赛分数仍需平台免费接口检查与完整评测验证。

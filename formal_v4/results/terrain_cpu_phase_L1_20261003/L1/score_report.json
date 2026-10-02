@@ -1,0 +1,112 @@
+{
+  "by_class": {
+    "BGS": 879.191201,
+    "ELG": 2687.920183,
+    "LRG": 1285.513224,
+    "QSO": 1041.326006,
+    "Star": 207.272376
+  },
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 100.0,
+    "required_penalty": -100.0,
+    "sum_best_scores": 6101.222991,
+    "uniformity_penalty": -0.366213
+  },
+  "counts": {
+    "decisions": 1585,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 2,
+    "observations": 13490,
+    "observe_actions": 989,
+    "required_missing": 2,
+    "targets_observed": 7634
+  },
+  "invalidations": [],
+  "observation_requests": [
+    {
+      "completed": false,
+      "completed_count": 4,
+      "completed_target_ids": [
+        "V4T000594",
+        "V4T007219",
+        "V4T001127",
+        "V4T001995"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-04T08:30:00Z",
+      "issued_at_utc": "2026-11-03T00:30:00Z",
+      "minimum_completed": 6,
+      "request_id": "V4RQ0001",
+      "reward": 0.0,
+      "target_ids": [
+        "V4T000594",
+        "V4T003544",
+        "V4T007198",
+        "V4T007219",
+        "V4T004700",
+        "V4T001127",
+        "V4T001995",
+        "V4T000983"
+      ]
+    },
+    {
+      "completed": true,
+      "completed_count": 6,
+      "completed_target_ids": [
+        "V4T000666",
+        "V4T007404",
+        "V4T003411",
+        "V4T003566",
+        "V4T003761",
+        "V4T005005"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-12-02T08:15:00Z",
+      "issued_at_utc": "2026-12-01T00:45:00Z",
+      "minimum_completed": 6,
+      "request_id": "V4RQ0002",
+      "reward": 100.0,
+      "target_ids": [
+        "V4T000666",
+        "V4T007404",
+        "V4T003411",
+        "V4T003317",
+        "V4T003566",
+        "V4T004172",
+        "V4T003761",
+        "V4T005005"
+      ]
+    }
+  ],
+  "scenario": "v4-l1",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "7695f38a48937c2dae7a5c34b90039d0cb98888dc5ed7f664a539488b211baeb",
+    "messages": "acb8665e547ded84be3c05dc279dbc38c44bd60ed7ac418c2bed8afeada831fb",
+    "observations": "164c92ce4529c850f03fd095ef2a30bda336f30fa9d94d25b4328da5ca41a585",
+    "scenario": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "total": 6200.856777,
+  "uniformity_bands": {
+    "ra_0_10": 0.83153,
+    "ra_100_110": 0.834372,
+    "ra_10_20": 0.825279,
+    "ra_110_120": 0.83549,
+    "ra_20_30": 0.754098,
+    "ra_30_40": 0.847561,
+    "ra_350_360": 0.821002,
+    "ra_40_50": 0.896432,
+    "ra_50_60": 0.789842,
+    "ra_60_70": 0.779018,
+    "ra_70_80": 0.842975,
+    "ra_90_100": 0.804527
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "public_card": "alpha",
+  "sources": {
+    "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c"
+  },
+  "catalog_targets": 10000,
+  "initialization_sha256": "81c8f18ed7125523f5ff16ea08950b8867d25817c0e681a18a1ed50e7124d6a9",
+  "initialization_chunks": 7,
+  "initialization_chat_sizes": [
+    43462,
+    43462,
+    43462,
+    43462,
+    43462,
+    43462,
+    32150
+  ],
+  "endpoint": "https://elevatia.cn/gosim-observer-gpu/v1",
+  "hidden_inputs_read": false,
+  "credentials_recorded": false,
+  "frozen_environment": {
+    "quality_scale": 0.55,
+    "program_band_quality_scale": 0.5789473684210527,
+    "target_quality_scale": {
+      "encoding": "constant",
+      "size": 10000,
+      "value": 1.0,
+      "sha256_compact_json": "1c87c646f9212fc2d0ae0efbb7cead4fcff645ef786ba60fba2e34b018d0658d"
+    },
+    "gpu_anchor_count": 1024,
+    "gpu_max_candidates": 32768,
+    "gpu_refine_count": 64,
+    "gpu_refine_budget_seconds": 0.3,
+    "gpu_fixed_workload": true,
+    "gpu_exact_candidate_count": 256,
+    "gpu_refinement_steps": 32,
+    "gpu_emergency_seconds": 3.0
+  },
+  "runs": [
+    {
+      "transport": "compatible",
+      "seconds": 0.5613622500095516,
+      "chat_calls": 1,
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.0268019,
+          "az_deg": 90.5006995
+        },
+        "assignments": {
+          "0": "V4T009877",
+          "1": "V4T008386",
+          "2": "V4T007673",
+          "3": "V4T000521",
+          "4": "V4T007216",
+          "5": "V4T005195",
+          "6": "V4T000926",
+          "8": "V4T000766",
+          "9": "V4T009990",
+          "10": "V4T002281",
+          "11": "V4T008000",
+          "12": "V4T004897",
+          "13": "V4T005510",
+          "14": "V4T006127",
+          "15": "V4T009199"
+        },
+        "duration_seconds": 65,
+        "program": "DARK"
+      },
+      "action_sha256": "67a41551115a5e969e9ab5a603a78892301e620335f59723ec8a3617f6c523bb",
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 252,
+        "useful_targets": 4101,
+        "fixed_workload": true,
+        "exact_candidates": 229,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8847322607258071,
+        "selected_exact_rate": 1.601545079099484,
+        "protected_exact_rate": 1.601545079099484,
+        "prepare_seconds": 0.030588199966587126,
+        "gpu_scan_seconds": 0.07895360002294183,
+        "refine_seconds": 0.3289472999749705,
+        "planning_seconds": 0.4384892999660224
+      },
+      "backend_seconds": 0.44089560001157224
+    },
+    {
+      "transport": "compatible",
+      "seconds": 0.600452542072162,
+      "chat_calls": 1,
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.0268019,
+          "az_deg": 90.5006995
+        },
+        "assignments": {
+          "0": "V4T009877",
+          "1": "V4T008386",
+          "2": "V4T007673",
+          "3": "V4T000521",
+          "4": "V4T007216",
+          "5": "V4T005195",
+          "6": "V4T000926",
+          "8": "V4T000766",
+          "9": "V4T009990",
+          "10": "V4T002281",
+          "11": "V4T008000",
+          "12": "V4T004897",
+          "13": "V4T005510",
+          "14": "V4T006127",
+          "15": "V4T009199"
+        },
+        "duration_seconds": 65,
+        "program": "DARK"
+      },
+      "action_sha256": "67a41551115a5e969e9ab5a603a78892301e620335f59723ec8a3617f6c523bb",
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 252,
+        "useful_targets": 4101,
+        "fixed_workload": true,
+        "exact_candidates": 229,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8847322607258071,
+        "selected_exact_rate": 1.601545079099484,
+        "protected_exact_rate": 1.601545079099484,
+        "prepare_seconds": 0.029686300025787205,
+        "gpu_scan_seconds": 0.0772061999887228,
+        "refine_seconds": 0.33493040001485497,
+        "planning_seconds": 0.44182310003088787
+      },
+      "backend_seconds": 0.444303399999626
+    },
+    {
+      "transport": "compatible",
+      "seconds": 0.6447456658352166,
+      "chat_calls": 1,
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.0268019,
+          "az_deg": 90.5006995
+        },
+        "assignments": {
+          "0": "V4T009877",
+          "1": "V4T008386",
+          "2": "V4T007673",
+          "3": "V4T000521",
+          "4": "V4T007216",
+          "5": "V4T005195",
+          "6": "V4T000926",
+          "8": "V4T000766",
+          "9": "V4T009990",
+          "10": "V4T002281",
+          "11": "V4T008000",
+          "12": "V4T004897",
+          "13": "V4T005510",
+          "14": "V4T006127",
+          "15": "V4T009199"
+        },
+        "duration_seconds": 65,
+        "program": "DARK"
+      },
+      "action_sha256": "67a41551115a5e969e9ab5a603a78892301e620335f59723ec8a3617f6c523bb",
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 252,
+        "useful_targets": 4101,
+        "fixed_workload": true,
+        "exact_candidates": 229,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8847322607258071,
+        "selected_exact_rate": 1.601545079099484,
+        "protected_exact_rate": 1.601545079099484,
+        "prepare_seconds": 0.03032830002484843,
+        "gpu_scan_seconds": 0.07754929998191074,
+        "refine_seconds": 0.3357780000078492,
+        "planning_seconds": 0.44365580001613125
+      },
+      "backend_seconds": 0.44608029996743426
+    }
+  ],
+  "health": {
+    "remote_check": "ok",
+    "transport": "official-compatible-api",
+    "model": "traditional-cuda-planner",
+    "gpu_available": true,
+    "gpu_backend_ready": true,
+    "seconds": 0.218
+  },
+  "initialization_seconds": 0.4536683331243694,
+  "direct_reference": {
+    "seconds_including_initialize": 0.9944309159182012,
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 57.0268019,
+        "az_deg": 90.5006995
+      },
+      "assignments": {
+        "0": "V4T009877",
+        "1": "V4T008386",
+        "2": "V4T007673",
+        "3": "V4T000521",
+        "4": "V4T007216",
+        "5": "V4T005195",
+        "6": "V4T000926",
+        "8": "V4T000766",
+        "9": "V4T009990",
+        "10": "V4T002281",
+        "11": "V4T008000",
+        "12": "V4T004897",
+        "13": "V4T005510",
+        "14": "V4T006127",
+        "15": "V4T009199"
+      },
+      "duration_seconds": 65,
+      "program": "DARK"
+    },
+    "action_sha256": "67a41551115a5e969e9ab5a603a78892301e620335f59723ec8a3617f6c523bb",
+    "stats": {
+      "backend": "numba-cuda-float64",
+      "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+      "gpu_candidates": 16384,
+      "gpu_durations": 19,
+      "cpu_refinements": 252,
+      "useful_targets": 4101,
+      "fixed_workload": true,
+      "exact_candidates": 229,
+      "refinement_probes": 32,
+      "emergency_triggered": false,
+      "max_coarse_rate": 0.8847322607258071,
+      "selected_exact_rate": 1.601545079099484,
+      "protected_exact_rate": 1.601545079099484,
+      "prepare_seconds": 0.029653800011146814,
+      "gpu_scan_seconds": 0.07876390003366396,
+      "refine_seconds": 0.3315934999845922,
+      "planning_seconds": 0.44001140003092587
+    },
+    "backend_seconds": 0.44254239997826517
+  },
+  "identical_actions": true,
+  "all_fixed_workload": true,
+  "entry_package_gates": {
+    "zip_sha256": "5ea8ab4f98afb825fbfb3b609650646316c9c7de2f5634451b2f94cd05728023",
+    "files": 18,
+    "private_credential_found": false,
+    "remote_runtime": {
+      "enable_search": true,
+      "health_timeout_seconds": 6,
+      "initialize_timeout_seconds": 25,
+      "timeout_seconds": 4
+    },
+    "server_or_hidden_files_found": false,
+    "missing_env_cpu_phase_fallback": true,
+    "fallback_seconds": 0.3956854999996722,
+    "fallback_action": "observe",
+    "source_sha256": {
+      "formal_v4/pack_submission.py": "97a932121bde1fb366cc6d8f6d02bc573b3028a07332dd7278bacc701b5cf849",
+      "formal_v4/research/agent_model_gpu.py": "59c52969327c4eecb1b2177381cc790d480a493900dba3fd08b2bfd05bedcbbf"
+    }
+  },
+  "close_invoked": true,
+  "source_sha256": {
+    "model_gpu_transport.py": "70a7c72240ea589c0aa2a510d10c1f2f6b3f9ea722f2bd13b6939f13e84bb11b",
+    "model_gpu_adapter.py": "678061e52db5edc7bca36f20c13a579ee15318dfcccc5bec7d57316fa2b5804f",
+    "model_gpu_owned_smoke.py": "08ce6b4746dd414c16d449af69e81ec8c1d4bda22b9c597f68f7b86b5c956873"
+  },
+  "uploaded_zip_comparison": {
+    "audit_zip_sha256": "5ea8ab4f98afb825fbfb3b609650646316c9c7de2f5634451b2f94cd05728023",
+    "uploaded_zip_sha256": "2409c64e4c1435139d659f211dce2523fd478ee5d4216a36b320a4528c6d2ff8",
+    "common_algorithm_files_identical": true,
+    "audit_only": [],
+    "uploaded_only": [
+      "policy_config.json"
+    ],
+    "file_content_differences": [
+      "build_manifest.json"
+    ],
+    "policy_config_sha256": "93ba6490438f9f550d9adaaca3fc291a8d62ca779e76ea931c4477acd4fff67a",
+    "different_zip_entry_timestamps": 18,
+    "note": "Uploaded package adds policy_config.json and its manifest hash; all common algorithm/config files except build_manifest.json are byte-identical."
+  },
+  "uploaded_entry_package_gates": {
+    "zip_sha256": "2409c64e4c1435139d659f211dce2523fd478ee5d4216a36b320a4528c6d2ff8",
+    "files": 19,
+    "private_credential_found": false,
+    "remote_runtime": {
+      "enable_search": true,
+      "health_timeout_seconds": 6,
+      "initialize_timeout_seconds": 25,
+      "timeout_seconds": 4
+    },
+    "server_or_hidden_files_found": false,
+    "missing_env_cpu_phase_fallback": true,
+    "fallback_seconds": 0.7646178340073675,
+    "fallback_action": "observe",
+    "source_sha256": {
+      "formal_v4/pack_submission.py": "97a932121bde1fb366cc6d8f6d02bc573b3028a07332dd7278bacc701b5cf849",
+      "formal_v4/research/agent_model_gpu.py": "59c52969327c4eecb1b2177381cc790d480a493900dba3fd08b2bfd05bedcbbf"
+    }
+  },
+  "verified_at_utc": "2026-10-02T22:16:26.553443+00:00"
+}
