@@ -1,0 +1,119 @@
+{
+  "project": "Observer Search CD2",
+  "mean": 6198.39046425,
+  "evaluation_quota_remaining_observed": 4,
+  "cards": [
+    {
+      "card": "alpha",
+      "total": 7094.664204,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 7045.172638,
+        "uniformity_penalty": -0.508434
+      },
+      "counts": {
+        "decisions": 1879,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15843,
+        "observe_actions": 1194,
+        "required_missing": 3,
+        "targets_observed": 9480
+      },
+      "accounted_wallclock_seconds": 230.894,
+      "termination_reason": "survey_complete",
+      "remote_check": {
+        "remote_check": "failed",
+        "exception": "gaierror",
+        "seconds": 0.012
+      }
+    },
+    {
+      "card": "beta",
+      "total": 6333.107019,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -450.0,
+        "sum_best_scores": 6584.004137,
+        "uniformity_penalty": -0.897119
+      },
+      "counts": {
+        "decisions": 1854,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 14986,
+        "observe_actions": 1146,
+        "required_missing": 9,
+        "targets_observed": 9024
+      },
+      "accounted_wallclock_seconds": 254.541,
+      "termination_reason": "survey_complete",
+      "remote_check": {
+        "remote_check": "failed",
+        "exception": "gaierror",
+        "seconds": 0.013
+      }
+    },
+    {
+      "card": "gamma",
+      "total": 6547.568316,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6500.0317,
+        "uniformity_penalty": -2.463384
+      },
+      "counts": {
+        "decisions": 1876,
+        "invalidated_observations": 274,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15434,
+        "observe_actions": 1207,
+        "required_missing": 3,
+        "targets_observed": 9155
+      },
+      "accounted_wallclock_seconds": 317.276,
+      "termination_reason": "survey_complete",
+      "remote_check": {
+        "remote_check": "failed",
+        "exception": "gaierror",
+        "seconds": 0.018
+      }
+    },
+    {
+      "card": "delta",
+      "total": 4818.222318,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -950.0,
+        "sum_best_scores": 5581.02908,
+        "uniformity_penalty": -12.806762
+      },
+      "counts": {
+        "decisions": 1823,
+        "invalidated_observations": 213,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 13365,
+        "observe_actions": 1053,
+        "required_missing": 19,
+        "targets_observed": 7969
+      },
+      "accounted_wallclock_seconds": 276.141,
+      "termination_reason": "survey_complete",
+      "remote_check": {
+        "remote_check": "failed",
+        "exception": "gaierror",
+        "seconds": 0.017
+      }
+    }
+  ]
+}

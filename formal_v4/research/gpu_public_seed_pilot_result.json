@@ -1,0 +1,84 @@
+{
+  "schema": "public-catalog-seed-scan-v1",
+  "identity": {
+    "mode": "sha256-v1",
+    "start": 0,
+    "stop_exclusive": 16777216,
+    "pool_range": [
+      3,
+      16
+    ],
+    "phase_tolerance_rad": 0.0001,
+    "fingerprint_sha256": "b8d26d9d816994f97d697ef4ba8154a457466bc967e21bd82a311acdf12e2269",
+    "scanner_sha256": "a9ad8e34caf099a767eb486b7d0aec38406632ded8c2cfb737266db67a8e0919",
+    "rng_helper_sha256": "25ef28efbcce635c8e71799fa4dd340cad3359909eef74a15e7ac91b0f0711de"
+  },
+  "completed_until": 16777216,
+  "searched_seed_count": 16777216,
+  "batches": 64,
+  "overflow_pairs": 0,
+  "phase_candidates": [],
+  "public_signature_matches": [],
+  "elapsed_seconds": 0.48565039999084547,
+  "status": "complete",
+  "created_utc": "2026-10-02T20:44:27.684392+00:00",
+  "positive_controls": [
+    {
+      "hashed": true,
+      "known_seed": 5021,
+      "known_pool": 7,
+      "exact_cpu_candidate_set": true,
+      "matches": 4,
+      "kernel_seconds": 0.0002661759853363037
+    },
+    {
+      "hashed": true,
+      "known_seed": 1234567,
+      "known_pool": 16,
+      "exact_cpu_candidate_set": true,
+      "matches": 7,
+      "kernel_seconds": 0.0002078399956226349
+    },
+    {
+      "hashed": true,
+      "known_seed": 4294967295,
+      "known_pool": 4,
+      "exact_cpu_candidate_set": true,
+      "matches": 5,
+      "kernel_seconds": 0.00018963199853897094
+    },
+    {
+      "hashed": false,
+      "known_seed": 5021,
+      "known_pool": 7,
+      "exact_cpu_candidate_set": true,
+      "matches": 6,
+      "kernel_seconds": 0.00015827199816703796
+    },
+    {
+      "hashed": false,
+      "known_seed": 1234567,
+      "known_pool": 16,
+      "exact_cpu_candidate_set": true,
+      "matches": 14,
+      "kernel_seconds": 0.00018201600015163423
+    },
+    {
+      "hashed": false,
+      "known_seed": 4294967295,
+      "known_pool": 4,
+      "exact_cpu_candidate_set": true,
+      "matches": 1,
+      "kernel_seconds": 0.00015187199413776398
+    }
+  ],
+  "device": "<CUDA device 0 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition'>",
+  "batch_size": 262144,
+  "yield_seconds": 0.002,
+  "median_kernel_seconds": 0.003657792091369629,
+  "max_kernel_seconds": 0.011495264053344726,
+  "median_batch_end_to_end_seconds": 0.004062749969307333,
+  "seed_per_second_including_yield": 34722281.205803856,
+  "remaining_seconds_estimate": 0.0,
+  "updated_utc": "2026-10-02T20:44:29.761909+00:00"
+}

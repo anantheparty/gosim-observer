@@ -1,0 +1,522 @@
+{
+  "schema": "public-rng-audit-summary-v1",
+  "completed": true,
+  "scope": "public generator and catalogue fingerprints only",
+  "master_range": [
+    0,
+    4294967295
+  ],
+  "center_pool_range": [
+    3,
+    4294967295
+  ],
+  "models": [
+    "sha256-v1",
+    "legacy"
+  ],
+  "unknown_master_entropy": true,
+  "seed_recovered": false,
+  "future_weather_recovered": false,
+  "conclusion": "No nine-phase candidates under either specified master-range/derivation/consumption model; does not exclude other seeds or generator versions.",
+  "files": {
+    "GPU_PUBLIC_SEED_MODEL_ZH.md": "47919b3611254706843838f3e5e8acde14cea18e544192c54afcaf7a22187ceb",
+    "gpu_seed_throughput.py": "25ef28efbcce635c8e71799fa4dd340cad3359909eef74a15e7ac91b0f0711de",
+    "gpu_seed_throughput_result.json": "1bf35e7cbfdd09bd0e17285a7ad6443dfa9169970d3e5dea1fe8ced90e3de802",
+    "gpu_public_seed_scan.py": "a9ad8e34caf099a767eb486b7d0aec38406632ded8c2cfb737266db67a8e0919",
+    "gpu_public_seed_pilot_result.json": "106b48b76c13091c2e46504ec264e7be8b11472c54e1fec745886c8472bf15b9",
+    "gpu_public_seed_sha256_32bit_result.json": "02fcdfea8da05deaa40ef7396d1f287bc8fd97baed3499ed58e843e3cbefded0",
+    "public_seed_fingerprints.json": "b8d26d9d816994f97d697ef4ba8154a457466bc967e21bd82a311acdf12e2269",
+    "offset_coverage_model.py": "8f65962a9096fd1e63ece54c1abcc68011e70a665026b703d44633835875086e",
+    "offset_coverage_model_result.json": "5187c344faaf33e38f32b3e94c552b345dec434671f4f7973dad33aea3bc90c3",
+    "gpu_offset_seed_model.py": "5d5dff53f6c18fc6213f4d657159505aba88c9399f5c54fc4430e5c543ddcf55",
+    "gpu_offset_seed_model_result.json": "8cea8413b800f9702fa50b70af0f35e72d22692e25e452457abf2fc96d7f890c",
+    "gpu_public_offset_scan.py": "b63c526c32a00a1c2c57f879a6d1292f8f37fe5fe6f4ed0986689681f1b439b2",
+    "gpu_public_seed_sha256_allpool_32bit_result.json": "848f715dc6909205691147b84da4416a598fe6a3f713ab26e19597c806fb08f8",
+    "gpu_public_seed_legacy_allpool_pilot_result.json": "ce32d68d9ac3d9bd3ec87cd132e717e912c08df58fa3351c8eb2e30d922fe122",
+    "gpu_public_seed_legacy_allpool_32bit_result.json": "a235e85b7db56db9a8692dccf10e391ba54553063b42790ba79d254bbc66fe86",
+    "phase_rounding_bound.py": "67a5fda8e12180ec6a3550dcfd8e71d504cc8ce73058785779852484351b4761",
+    "phase_rounding_bound_result.json": "6b1601b6f7f89ece4ee11310cd12cabc257db817d893ceb9b1a03ae00c50c56c"
+  },
+  "runs": {
+    "sha256_allpool": {
+      "schema": "public-catalog-offset-scan-v1",
+      "identity": {
+        "mode": "sha256-v1",
+        "start": 0,
+        "stop_exclusive": 4294967296,
+        "pool_range": [
+          3,
+          4294967295
+        ],
+        "phase_tolerance_rad": 0.0001,
+        "fingerprint_sha256": "b8d26d9d816994f97d697ef4ba8154a457466bc967e21bd82a311acdf12e2269",
+        "source_sha256": {
+          "gpu_public_offset_scan.py": "b63c526c32a00a1c2c57f879a6d1292f8f37fe5fe6f4ed0986689681f1b439b2",
+          "gpu_offset_seed_model.py": "5d5dff53f6c18fc6213f4d657159505aba88c9399f5c54fc4430e5c543ddcf55",
+          "offset_coverage_model.py": "8f65962a9096fd1e63ece54c1abcc68011e70a665026b703d44633835875086e",
+          "gpu_public_seed_scan.py": "a9ad8e34caf099a767eb486b7d0aec38406632ded8c2cfb737266db67a8e0919",
+          "gpu_seed_throughput.py": "25ef28efbcce635c8e71799fa4dd340cad3359909eef74a15e7ac91b0f0711de"
+        }
+      },
+      "completed_until": 4294967296,
+      "searched_seed_count": 4294967296,
+      "batches": 16384,
+      "fallback_seeds": 0,
+      "phase_candidates": [],
+      "public_signature_matches": [],
+      "elapsed_seconds": 126.65847730002133,
+      "status": "complete",
+      "created_utc": "2026-10-02T21:07:25.432352+00:00",
+      "offset_set_controls": {
+        "public_synthetic_seeds": 256,
+        "models": 2,
+        "all_offset_sets_exact": true,
+        "fallback_flags_exact": true
+      },
+      "positive_controls": [
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              3,
+              0
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0003536959886550903,
+          "end_to_end_seconds": 0.0008673000265844166
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              5,
+              1
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0003187519907951355,
+          "end_to_end_seconds": 0.0007447999669238925
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              15,
+              2
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0003327359855175018,
+          "end_to_end_seconds": 0.0008239999879151583
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              3,
+              0
+            ]
+          ],
+          "fallback_seed_count": 6,
+          "kernel_seconds": 0.00023318399488925933,
+          "end_to_end_seconds": 0.00242979999165982
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              5,
+              1
+            ]
+          ],
+          "fallback_seed_count": 9,
+          "kernel_seconds": 0.0002648000121116638,
+          "end_to_end_seconds": 0.0033718000049702823
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              15,
+              2
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.0002730560004711151,
+          "end_to_end_seconds": 0.0025234000058844686
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              4,
+              0
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0002560960054397583,
+          "end_to_end_seconds": 0.000609499984420836
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              4,
+              1
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.00027478399872779845,
+          "end_to_end_seconds": 0.0007035000016912818
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              7,
+              2
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.00026630398631095886,
+          "end_to_end_seconds": 0.0006431000074371696
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              4,
+              0
+            ]
+          ],
+          "fallback_seed_count": 6,
+          "kernel_seconds": 0.00022096000611782074,
+          "end_to_end_seconds": 0.0022430000244639814
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              4,
+              1
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.0002645120024681091,
+          "end_to_end_seconds": 0.0020478999940678477
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              7,
+              2
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.00023465600609779357,
+          "end_to_end_seconds": 0.0019429000094532967
+        }
+      ],
+      "device": "<CUDA device 0 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition'>",
+      "batch_size": 262144,
+      "yield_seconds": 0.002,
+      "stop_file": "C:\\Users\\hedge\\gosim-public-seed-pilot-20261003\\STOP_PUBLIC_OFFSET_SCAN",
+      "median_kernel_seconds": 0.003753983974456787,
+      "max_kernel_seconds": 0.01881167984008789,
+      "median_batch_end_to_end_seconds": 0.004287249990738928,
+      "seed_per_second_including_yield": 33910444.83194235,
+      "remaining_seconds_estimate": 0.0,
+      "updated_utc": "2026-10-02T21:09:36.936326+00:00"
+    },
+    "legacy_allpool": {
+      "schema": "public-catalog-offset-scan-v1",
+      "identity": {
+        "mode": "legacy",
+        "start": 0,
+        "stop_exclusive": 4294967296,
+        "pool_range": [
+          3,
+          4294967295
+        ],
+        "phase_tolerance_rad": 0.0001,
+        "fingerprint_sha256": "b8d26d9d816994f97d697ef4ba8154a457466bc967e21bd82a311acdf12e2269",
+        "source_sha256": {
+          "gpu_public_offset_scan.py": "b63c526c32a00a1c2c57f879a6d1292f8f37fe5fe6f4ed0986689681f1b439b2",
+          "gpu_offset_seed_model.py": "5d5dff53f6c18fc6213f4d657159505aba88c9399f5c54fc4430e5c543ddcf55",
+          "offset_coverage_model.py": "8f65962a9096fd1e63ece54c1abcc68011e70a665026b703d44633835875086e",
+          "gpu_public_seed_scan.py": "a9ad8e34caf099a767eb486b7d0aec38406632ded8c2cfb737266db67a8e0919",
+          "gpu_seed_throughput.py": "25ef28efbcce635c8e71799fa4dd340cad3359909eef74a15e7ac91b0f0711de"
+        }
+      },
+      "completed_until": 4294967296,
+      "searched_seed_count": 4294967296,
+      "batches": 16384,
+      "fallback_seeds": 0,
+      "phase_candidates": [],
+      "public_signature_matches": [],
+      "elapsed_seconds": 122.61104469996644,
+      "status": "complete",
+      "created_utc": "2026-10-02T21:11:21.893275+00:00",
+      "offset_set_controls": {
+        "public_synthetic_seeds": 256,
+        "models": 2,
+        "all_offset_sets_exact": true,
+        "fallback_flags_exact": true
+      },
+      "positive_controls": [
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              3,
+              0
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0003712640106678009,
+          "end_to_end_seconds": 0.0008453000336885452
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              5,
+              1
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.00030454400181770323,
+          "end_to_end_seconds": 0.0007495000027120113
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 227,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              15,
+              2
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.00030048000812530517,
+          "end_to_end_seconds": 0.0007074999739415944
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              3,
+              0
+            ]
+          ],
+          "fallback_seed_count": 6,
+          "kernel_seconds": 0.00022176000475883484,
+          "end_to_end_seconds": 0.002368600049521774
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              5,
+              1
+            ]
+          ],
+          "fallback_seed_count": 9,
+          "kernel_seconds": 0.00024844799935817716,
+          "end_to_end_seconds": 0.003458599967416376
+        },
+        {
+          "hashed": true,
+          "prefix_limit": 4,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              15,
+              2
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.0002798080146312714,
+          "end_to_end_seconds": 0.002255900006275624
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              4,
+              0
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.00028569599986076356,
+          "end_to_end_seconds": 0.000674000009894371
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              4,
+              1
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0002938559949398041,
+          "end_to_end_seconds": 0.0007589999586343765
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 227,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              7,
+              2
+            ]
+          ],
+          "fallback_seed_count": 0,
+          "kernel_seconds": 0.0001645440012216568,
+          "end_to_end_seconds": 0.0018419999978505075
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 5021,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              5021,
+              4,
+              0
+            ]
+          ],
+          "fallback_seed_count": 6,
+          "kernel_seconds": 0.00021904000639915466,
+          "end_to_end_seconds": 0.0022919000475667417
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 1234567,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              1234567,
+              4,
+              1
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.00024409599602222441,
+          "end_to_end_seconds": 0.0019637999939732254
+        },
+        {
+          "hashed": false,
+          "prefix_limit": 4,
+          "known_seed": 4294967295,
+          "exact_cpu_candidate_set": true,
+          "matches": [
+            [
+              4294967295,
+              7,
+              2
+            ]
+          ],
+          "fallback_seed_count": 5,
+          "kernel_seconds": 0.00021142399311065675,
+          "end_to_end_seconds": 0.00193349999608472
+        }
+      ],
+      "device": "<CUDA device 0 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition'>",
+      "batch_size": 262144,
+      "yield_seconds": 0.002,
+      "stop_file": "C:\\Users\\hedge\\gosim-public-seed-pilot-20261003\\STOP_PUBLIC_OFFSET_SCAN",
+      "median_kernel_seconds": 0.0038916480541229246,
+      "max_kernel_seconds": 0.02911248016357422,
+      "median_batch_end_to_end_seconds": 0.004504999989876524,
+      "seed_per_second_including_yield": 35029899.980453126,
+      "remaining_seconds_estimate": 0.0,
+      "updated_utc": "2026-10-02T21:13:27.502514+00:00"
+    }
+  }
+}

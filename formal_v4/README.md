@@ -42,9 +42,9 @@ seconds. A direct PRO6000 L1 replay of the older calibrated policy scored
 they are not a controlled comparison against the newer CPU table above.
 The optional remote-call allocator now reserves local completion time and
 uses measured complete network round trips rather than GPU kernel time.
-Its deadline forecast is empirical, not a hard runtime bound. Platform egress
-has not yet been verified; the private CD2 project has been uploaded and is
-being prepared before the free interface check.
+Its deadline forecast is empirical, not a hard runtime bound. The platform
+public check and first complete practice evaluation both failed CD2 DNS
+resolution and used the CPU fallback; online GPU access is not established.
 An independent CD2 HTTPS relay reduced measured warm full-decision round trips
 from .8711s to .4916s. Four complete local replays scored 6365.337882,
 6780.821386, 5679.216893 and 6038.977937 (mean 6216.0885245), in 354–448s
@@ -55,6 +55,27 @@ The separately downloaded alpha–delta ZIPs on 2026-10-03 contained six public
 configuration/catalog/calendar files each. They did not contain weather, events
 or forecast products; local exact replay of those cloud cards is therefore not
 available from these archives.
+
+## First platform practice evaluation
+
+The private project `Observer Search CD2` completed all four platform cards on
+2026-10-03 JST. One evaluation batch was used; the UI showed four daily attempts
+remaining after completion. No remarks or design materials were added.
+
+| Platform card | Total | Required missing | Requests | Accounted seconds |
+|---|---:|---:|---:|---:|
+| alpha | 7094.664204 | 3 | 1/2 | 230.894 |
+| beta | 6333.107019 | 9 | 1/2 | 254.541 |
+| gamma | 6547.568316 | 3 | 1/2 | 317.276 |
+| delta | 4818.222318 | 19 | 1/2 | 276.141 |
+| Mean | 6198.39046425 | | | |
+
+Every card reported `survey_complete`, +100 report settlement and zero remote
+calls. The first request failed on every card, while the second succeeded.
+Gamma and delta included retrospective data invalidation. Full official
+outputs, original download hashes and normalized archive hashes are in
+`results/cloud_cd2_{alpha,beta,gamma,delta}_20261003/`; the batch summary is in
+`results/cloud_cd2_practice_20261003/`. These are different datasets from L1–L4.
 
 ## Run and package
 

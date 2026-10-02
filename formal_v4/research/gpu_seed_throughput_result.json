@@ -1,0 +1,176 @@
+{
+  "schema": "public-seed-cuda-throughput-v1",
+  "scope": "positive controls and small synthetic batches only",
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "device": "<CUDA device 0 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition'>",
+  "source_sha256": "25ef28efbcce635c8e71799fa4dd340cad3359909eef74a15e7ac91b0f0711de",
+  "controls": {
+    "count": 256,
+    "known_demo_seed": 5021,
+    "pool_range": [
+      2,
+      16
+    ],
+    "sha256_full_digest_mismatches": 0,
+    "mt_first64_mismatches": 0,
+    "all_component_phase_mismatches": 0,
+    "max_phase_error_rad": 0.0,
+    "overflow_count": 0,
+    "cold_compile_control_seconds": 1.451481199997943
+  },
+  "benchmarks": [
+    {
+      "batch": 256,
+      "pools_per_seed": 14,
+      "elapsed_seconds": 0.0002945999731309712,
+      "trial_seconds": [
+        0.0032212999649345875,
+        0.00037239998346194625,
+        0.0002945999731309712,
+        0.0002834000042639673,
+        0.0002885999856516719
+      ],
+      "min_seconds": 0.0002834000042639673,
+      "max_seconds": 0.0032212999649345875,
+      "gpu_event_seconds": [
+        0.00047606399655342104,
+        0.0003413119912147522,
+        0.0002791039943695068,
+        0.00027324798703193666,
+        0.00027241599559783933
+      ],
+      "gpu_event_median_seconds": 0.0002791039943695068,
+      "seeds_per_second": 868974.9604498073,
+      "pool_checks_per_second": 12165649.446297303,
+      "projected_32bit_seconds": 4942.5673828125,
+      "overflow_count": 0,
+      "cpu_checked_seed_count": 32
+    },
+    {
+      "batch": 1024,
+      "pools_per_seed": 14,
+      "elapsed_seconds": 0.0002964999875985086,
+      "trial_seconds": [
+        0.0005110999918542802,
+        0.0003066000062972307,
+        0.0002964999875985086,
+        0.00029469997389242053,
+        0.0002964999875985086
+      ],
+      "min_seconds": 0.00029469997389242053,
+      "max_seconds": 0.0005110999918542802,
+      "gpu_event_seconds": [
+        0.0004952000081539154,
+        0.0002959359884262085,
+        0.00028611201047897336,
+        0.00028435200452804567,
+        0.00028780800104141236
+      ],
+      "gpu_event_median_seconds": 0.00028780800104141236,
+      "seeds_per_second": 3453625.776830052,
+      "pool_checks_per_second": 48350760.87562072,
+      "projected_32bit_seconds": 1243.611083984375,
+      "overflow_count": 0,
+      "cpu_checked_seed_count": 32
+    },
+    {
+      "batch": 4096,
+      "pools_per_seed": 14,
+      "elapsed_seconds": 0.0003445000038482249,
+      "trial_seconds": [
+        0.0004961999948136508,
+        0.00030420004623010755,
+        0.0003445000038482249,
+        0.00038489996222779155,
+        0.0003163999645039439
+      ],
+      "min_seconds": 0.00030420004623010755,
+      "max_seconds": 0.0004961999948136508,
+      "gpu_event_seconds": [
+        0.0004789760112762451,
+        0.0002839680016040802,
+        0.00031276801228523256,
+        0.000350847989320755,
+        0.0003001599907875061
+      ],
+      "gpu_event_median_seconds": 0.00031276801228523256,
+      "seeds_per_second": 11889695.077636516,
+      "pool_checks_per_second": 166455731.08691123,
+      "projected_32bit_seconds": 361.23443603515625,
+      "overflow_count": 0,
+      "cpu_checked_seed_count": 32
+    },
+    {
+      "batch": 16384,
+      "pools_per_seed": 14,
+      "elapsed_seconds": 0.0003060000017285347,
+      "trial_seconds": [
+        0.00037480000173673034,
+        0.0003032999811694026,
+        0.00030640000477433205,
+        0.0003056999994441867,
+        0.0003060000017285347
+      ],
+      "min_seconds": 0.0003032999811694026,
+      "max_seconds": 0.00037480000173673034,
+      "gpu_event_seconds": [
+        0.0003568960130214691,
+        0.00029283198714256286,
+        0.00029353600740432737,
+        0.0002930240035057068,
+        0.00029308798909187316
+      ],
+      "gpu_event_median_seconds": 0.00029308798909187316,
+      "seeds_per_second": 53542483.357679605,
+      "pool_checks_per_second": 749594767.0075145,
+      "projected_32bit_seconds": 80.216064453125,
+      "overflow_count": 0,
+      "cpu_checked_seed_count": 32
+    },
+    {
+      "batch": 32768,
+      "pools_per_seed": 14,
+      "elapsed_seconds": 0.0005357000045478344,
+      "trial_seconds": [
+        0.000588800001423806,
+        0.0005314000300131738,
+        0.0005357000045478344,
+        0.0005504000000655651,
+        0.0005151999648660421
+      ],
+      "min_seconds": 0.0005151999648660421,
+      "max_seconds": 0.000588800001423806,
+      "gpu_event_seconds": [
+        0.000572160005569458,
+        0.0005210239887237549,
+        0.0005203840136528015,
+        0.0005315520167350769,
+        0.0005004479885101318
+      ],
+      "gpu_event_median_seconds": 0.0005210239887237549,
+      "seeds_per_second": 61168563.97576162,
+      "pool_checks_per_second": 856359895.6606627,
+      "projected_32bit_seconds": 70.21527099609375,
+      "overflow_count": 0,
+      "cpu_checked_seed_count": 32
+    }
+  ],
+  "cuda_kernel_resources": {
+    "registers_per_thread": {
+      "(Array(uint64, 1, 'C', False, aligned=True), Array(float64, 2, 'C', False, aligned=True), Array(uint8, 2, 'C', False, aligned=True))": 37
+    },
+    "local_bytes_per_thread": {
+      "(Array(uint64, 1, 'C', False, aligned=True), Array(float64, 2, 'C', False, aligned=True), Array(uint8, 2, 'C', False, aligned=True))": 2800
+    },
+    "shared_bytes_per_block": {
+      "(Array(uint64, 1, 'C', False, aligned=True), Array(float64, 2, 'C', False, aligned=True), Array(uint8, 2, 'C', False, aligned=True))": 0
+    }
+  },
+  "limitations": [
+    "32-bit master range is an assumption, not public generator entropy",
+    "throughput extrapolation excludes match filtering, CPU full-signature validation and contention",
+    "center pools beyond 16 or generator consumption changes are untested",
+    "at 227 consumed MT words, flagged candidates require exact CPU fallback",
+    "CUDA helper contains no task-card fingerprints and does not scan them"
+  ]
+}
