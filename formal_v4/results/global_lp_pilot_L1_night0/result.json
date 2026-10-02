@@ -1,0 +1,121 @@
+{
+  "candidate_generation": {
+    "assignment": "one fixed utility-maximizing target per fiber per generated action",
+    "centers_per_start": 16,
+    "durations_seconds": [
+      600,
+      1200,
+      1800
+    ],
+    "programs": [
+      "DARK",
+      "BRIGHT",
+      "BACKUP"
+    ],
+    "start_step_seconds": 1800
+  },
+  "candidate_universe_complete": false,
+  "card": "L1",
+  "dual_repair_per_time_clique": "87/9007199254740992",
+  "frozen_full_score_upper_from_pool": -15615.612849222278,
+  "frozen_quality": {
+    "C": 1.0,
+    "E": 0.95,
+    "definition": "C=transparency*sky/(seeing*q0); E=instrument_efficiency"
+  },
+  "greedy": {
+    "candidate_indices": [
+      96,
+      240,
+      390,
+      543,
+      684,
+      834,
+      999,
+      1071,
+      1281,
+      1407,
+      1566,
+      1626,
+      1800,
+      1902,
+      2046,
+      2196
+    ],
+    "exposures": 16,
+    "frozen_model_full_score": -16115.876437744348,
+    "required_missing": 324,
+    "science": 212.42425592791207,
+    "uniformity_penalty": -128.30069367226028,
+    "utility": 3512.424255927912,
+    "utility_exact_rational": "31637105140328073069/9007199254740992"
+  },
+  "limits": [
+    "bounds apply to the finite candidate pool and specified frozen C/E model",
+    "no future weather truth, requests, faults, data-loss truth, or report rewards are used",
+    "uniformity omitted in optimization upper bound, evaluated for each feasible schedule"
+  ],
+  "lp_utility_upper_certificate_float": 3884.3871507777226,
+  "lp_utility_upper_exact_certificate": "139949796198442357091/36028797018963968",
+  "lp_utility_upper_numeric": 3884.3871507777226,
+  "mip_gap_numeric": 0.003999255484896769,
+  "mip_incumbent": {
+    "candidate_indices": [
+      93,
+      267,
+      390,
+      561,
+      582,
+      756,
+      960,
+      1113,
+      1272,
+      1395,
+      1545,
+      1653,
+      1866,
+      1989,
+      2145,
+      2283
+    ],
+    "exposures": 16,
+    "frozen_model_full_score": -15758.319486454591,
+    "required_missing": 317,
+    "science": 218.72233698994535,
+    "uniformity_penalty": -127.04182344453613,
+    "utility": 3868.7223369899452,
+    "utility_exact_rational": "69692705901071329263/18014398509481984"
+  },
+  "mip_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_requested_relative_gap": 0.005,
+  "mip_status": 0,
+  "mip_utility_upper_numeric": 3884.194346015695,
+  "model_size": {
+    "columns": 2301,
+    "coverage_layers": 4864,
+    "nonzeros": 530149,
+    "targets_covered_by_pool": 446,
+    "time_cliques": 48
+  },
+  "night_index": 0,
+  "night_seconds": 28800,
+  "pool_exact_optimum_proven": false,
+  "public_input_sha256": {
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_scenario.json": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+    "public/v4_night_calendar.csv": "9aa147ecf804e3473d73a32cce6ab4065e282ec0a974dbaf5e3c9f10a93a0a0e"
+  },
+  "runtime_seconds": {
+    "generation": 0.86090641701594,
+    "lp": 1.2090849580708891,
+    "mip": 4.452905792044476,
+    "rational_certificate": 0.8775028749369085,
+    "total": 7.617599042132497
+  },
+  "source_sha256": {
+    "global_lp_pilot.py": "a7671c451f59841550ae7950495199c7f48fd7de315500549275b15906d689f5",
+    "spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  }
+}

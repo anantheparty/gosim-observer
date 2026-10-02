@@ -106,7 +106,8 @@ def run_card(card: str, project: Path, run_root: Path, result_root: Path,
     raw.mkdir(parents=True, exist_ok=True)
     output.mkdir(parents=True, exist_ok=True)
     card_path = OFFICIAL / "local-cards" / card
-    entry = "agent.py" if agent_kind == "current" else "research/reference_agent.py"
+    entry = {"current": "agent.py", "reference": "research/reference_agent.py",
+             "rolling": "research/rolling_lp_agent.py"}[agent_kind]
     # run_local shlex-splits --agent itself; JSON-style double quoting is safe for
     # this command string because it is not evaluated by a shell.
     agent_command = f'{json.dumps(sys.executable)} -u {entry}'
@@ -181,7 +182,7 @@ def main() -> int:
     parser.add_argument("--label", required=True)
     parser.add_argument("--config", help="JSON object or path to a JSON object")
     parser.add_argument("--cards", nargs="+", default=["L1", "L2", "L3", "L4"])
-    parser.add_argument("--agent", choices=("current", "reference"), default="current")
+    parser.add_argument("--agent", choices=("current", "reference", "rolling"), default="current")
     parser.add_argument("--wallclock", type=float, default=900.0)
     parser.add_argument("--max-parallel", type=int, default=2)
     parser.add_argument("--reuse-snapshot", action="store_true")

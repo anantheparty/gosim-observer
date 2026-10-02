@@ -1,0 +1,53 @@
+{
+  "agent_kind": "rolling",
+  "all_completed_cleanly": true,
+  "cards": {
+    "L1": {
+      "agent_error_log_lines": [],
+      "agent_kind": "rolling",
+      "card": "L1",
+      "completed_cleanly": true,
+      "elapsed_seconds": 163.112,
+      "exit_code": 0,
+      "process_error": null,
+      "raw_outputs": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1",
+      "report_penalty_count": 0,
+      "report_penalty_sum": 0,
+      "report_results": [],
+      "summary": {
+        "card": "L1",
+        "decision_requests": 639,
+        "note": "Local scores are for debugging; official results come from the platform. \u672c\u5730\u5206\u6570\u7528\u6765\u8c03\u8bd5\uff0c\u6b63\u5f0f\u6210\u7ee9\u4ee5\u5e73\u53f0\u4e3a\u51c6\u3002",
+        "observation_request_reward": 0.0,
+        "observation_requests_completed": 0,
+        "observation_requests_issued": 2,
+        "observe_actions": 360,
+        "outputs": {
+          "agent.log": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1/agent.log",
+          "decisions.csv": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1/decisions.csv",
+          "observations.csv": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1/observations.csv",
+          "score_report.json": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1/score_report.json",
+          "workflow_result.json": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/rolling_coverage_L1_20261003/L1/workflow_result.json"
+        },
+        "report_settlement": 0.0,
+        "required_missing": 3,
+        "required_penalty": -150.0,
+        "runner_seconds": 163.014,
+        "sum_best_scores": 2775.523748,
+        "targets_observed": 2823,
+        "termination_detail": "",
+        "termination_reason": "survey_complete",
+        "total": 2614.224973,
+        "uniformity_penalty": -11.298775,
+        "wall_seconds": 162.677
+      },
+      "wallclock_budget_seconds": 900.0
+    }
+  },
+  "cards_finished": 1,
+  "cards_requested": [
+    "L1"
+  ],
+  "label": "rolling_coverage_L1_20261003",
+  "mean_available_score": 2614.224973
+}

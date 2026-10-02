@@ -1,0 +1,48 @@
+{
+  "tests": "public synthetic/master/adapter",
+  "first_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 31.564414,
+      "az_deg": 138.8700416
+    },
+    "assignments": {
+      "0": "V4T002019",
+      "1": "V4T006554",
+      "2": "V4T001828",
+      "3": "V4T003704",
+      "4": "V4T003683",
+      "5": "V4T001813",
+      "6": "V4T005605",
+      "7": "V4T000482",
+      "8": "V4T001777",
+      "9": "V4T006866",
+      "10": "V4T001040",
+      "11": "V4T001999",
+      "12": "V4T005030",
+      "13": "V4T000927",
+      "14": "V4T005449",
+      "15": "V4T001601"
+    },
+    "duration_seconds": 900,
+    "program": "DARK"
+  },
+  "stats": {
+    "planning_seconds": 0.345731790876016,
+    "columns": 300,
+    "layers": 900,
+    "nonzeros": 28079,
+    "solver_seconds": 0.1462112080771476,
+    "lp_success": true,
+    "mip_status": 0,
+    "mip_incumbent": true,
+    "feasible_frozen_utility": 898.4656831155244,
+    "rolling_rebuilds": 1
+  },
+  "frozen_quality": {
+    "quality_scale": 0.646,
+    "program_band_quality_scale": 0.68,
+    "duration_safety": 1.1
+  },
+  "future_truth_used": false
+}
