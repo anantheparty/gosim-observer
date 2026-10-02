@@ -1,0 +1,205 @@
+{
+  "schema_version": "phase-gpu-submission-deployment-record-v1",
+  "status": "READY",
+  "recorded_at_utc": "2026-10-02T22:51:50.242086+00:00",
+  "scope": "deployment/package archive only; no UI operation, performance test, evaluation or Git index mutation",
+  "upload": {
+    "file": "observer_phase_gpu.zip",
+    "sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+    "bytes": 46404,
+    "file_count": 19,
+    "source_fingerprint": "7f00671b877ee119c466e2dc234192d4ab580bbc6f4a1a18cc8379218d67fcda",
+    "fingerprint_implementation": "official project_platform.package.project_digest(read_project_zip(zip_bytes))",
+    "fingerprint_public_source_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+    "fingerprint_algorithm": "sorted validated paths; 8-byte big-endian length prefix for path, executable marker x/- and unmodified file content",
+    "files_sha256": {
+      "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+      "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+      "build_manifest.json": "76329c29796e084d8276824ba3efcf7f0783cfcda4c75b9ce76ef2294fe696e6",
+      "observer.project.json": "3c41804e45be0703bb6ebe4e868605e721d1b12775213ec8cdad642294eae6ac",
+      "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+      "policy_config.json": "5f50239e2a80ef37011e8fa8eabd9e22dc0cf1fa03776fca79a8e60e880012f2",
+      "remote_planner.py": "1edac49a8bef7f4a4d07ada6e74e2e8b250716fc4e9d4b1cdd4e6ab15635ee0b",
+      "remote_runtime.json": "0fa9d5aedf7cfbda1dbb95c25a19fef0801cb8bedf6103acb27efa744307f72c",
+      "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+      "research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+      "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+      "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+      "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+      "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+      "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+      "research/model_gpu_transport.py": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+      "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+      "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+      "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+    },
+    "files_bytes": {
+      "ATTRIBUTION.md": 375,
+      "agent.py": 1548,
+      "build_manifest.json": 1732,
+      "observer.project.json": 564,
+      "policy.py": 21545,
+      "policy_config.json": 795,
+      "remote_planner.py": 5420,
+      "remote_runtime.json": 111,
+      "requirements.txt": 13,
+      "research/agent_model_gpu.py": 4140,
+      "research/belief_clock.py": 4732,
+      "research/cpu_phase_candidates.py": 19097,
+      "research/efficiency_bounds.py": 3582,
+      "research/feedback_model.py": 8288,
+      "research/geometry.py": 10165,
+      "research/model_gpu_transport.py": 11175,
+      "research/pointing_calibration.py": 13984,
+      "research/remote_budget.py": 2815,
+      "research/spatial_candidates.py": 31189
+    },
+    "files_executable": {
+      "ATTRIBUTION.md": false,
+      "agent.py": false,
+      "build_manifest.json": false,
+      "observer.project.json": false,
+      "policy.py": false,
+      "policy_config.json": false,
+      "remote_planner.py": false,
+      "remote_runtime.json": false,
+      "requirements.txt": false,
+      "research/agent_model_gpu.py": false,
+      "research/belief_clock.py": false,
+      "research/cpu_phase_candidates.py": false,
+      "research/efficiency_bounds.py": false,
+      "research/feedback_model.py": false,
+      "research/geometry.py": false,
+      "research/model_gpu_transport.py": false,
+      "research/pointing_calibration.py": false,
+      "research/remote_budget.py": false,
+      "research/spatial_candidates.py": false
+    },
+    "build_manifest_all_18_files_verified": true,
+    "private_runtime_token_matches": 0,
+    "provenance": {
+      "policy_sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+      "cpu_phase_sha256": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+      "agent_model_gpu_sha256": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+      "model_gpu_transport_sha256": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+      "policy_config_sha256": "5f50239e2a80ef37011e8fa8eabd9e22dc0cf1fa03776fca79a8e60e880012f2",
+      "build_manifest_sha256": "76329c29796e084d8276824ba3efcf7f0783cfcda4c75b9ce76ef2294fe696e6"
+    }
+  },
+  "actual_package_config": {
+    "project_manifest": {
+      "schema_version": "observer-project-v1",
+      "protocol": "jsonl-v4",
+      "image": "python:3.12-slim",
+      "build": [
+        [
+          "python3",
+          "-m",
+          "pip",
+          "install",
+          "--no-cache-dir",
+          "--disable-pip-version-check",
+          "--target",
+          ".deps",
+          "numpy==2.2.6"
+        ]
+      ],
+      "run": [
+        "python3",
+        "-u",
+        "-m",
+        "research.agent_model_gpu"
+      ],
+      "working_directory": ".",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": ".deps",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1"
+      }
+    },
+    "remote_runtime": {
+      "enable_search": true,
+      "health_timeout_seconds": 12,
+      "initialize_timeout_seconds": 75,
+      "timeout_seconds": 10
+    },
+    "policy_config": {
+      "cpu_phase_fixed_workload": true,
+      "cpu_phase_top_count": 4,
+      "cpu_phase_local_target_count": 50,
+      "cpu_phase_boundary_target_count": 24,
+      "cpu_phase_exact_count": 16,
+      "duration_safety": 1.1,
+      "planning_budget_seconds": 0.22,
+      "repair_enabled": true,
+      "use_belief_clock": true,
+      "require_efficiency_witness": true,
+      "anchor_count": 24,
+      "cpu_phase_mode": "phase",
+      "gpu_anchor_count": 1024,
+      "gpu_max_candidates": 32768,
+      "gpu_refine_count": 64,
+      "gpu_refine_budget_seconds": 0.3,
+      "gpu_fixed_workload": true,
+      "gpu_exact_candidate_count": 256,
+      "gpu_refinement_steps": 32,
+      "gpu_emergency_seconds": 3.0,
+      "gpu_phase_top_count": 16,
+      "gpu_phase_local_target_count": 24,
+      "gpu_phase_exact_count": 64,
+      "gpu_phase_emergency_seconds": 3.0,
+      "gpu_phase_mode": "phase"
+    }
+  },
+  "deployment_topology": {
+    "evidence": "parent reported currently deployed topology; no new connection or health probe performed",
+    "participant_transport": "official-compatible-api; platform scoped environment credentials supplied at runtime",
+    "chrome_relay": {
+      "required_state": "keep existing Chrome relay connection; no UI touched"
+    },
+    "adapter": {
+      "listen_port": 19928,
+      "backend_timeout_seconds": 6,
+      "backend": "CD2 loopback forwarded port 19926"
+    },
+    "CD2_forward": {
+      "listen_port": 19926,
+      "forward_target_port": 19929,
+      "routing": "19926 forwards to PhaseGPU 19929"
+    },
+    "GPU_Phase_service": {
+      "port": 19929,
+      "mode": "phase"
+    },
+    "GPU_baseline_service": {
+      "port": 19924,
+      "state": "retained"
+    },
+    "client_timeouts_seconds": {
+      "health": 12,
+      "initialize": 75,
+      "choose": 10
+    }
+  },
+  "deadlines": {
+    "relay_and_adapter_expires_utc_approx": "2026-10-03T01:54:00Z",
+    "relay_and_adapter_expiry_is_approximate": true,
+    "key_expires_utc": "2026-10-03T02:00:00Z",
+    "deadline_evidence": "parent supplied active deployment deadline; no secret or key contents stored",
+    "formal_card_wallclock_seconds": 900,
+    "public_test_wallclock_seconds": 300,
+    "note": "Deadline records do not imply a currently completed cloud evaluation."
+  },
+  "prior_positive_control": {
+    "upload_file": "observer_model_gpu.zip",
+    "sha256": "2409c64e4c1435139d659f211dce2523fd478ee5d4216a36b320a4528c6d2ff8",
+    "source_fingerprint": "24dd46d6dd3c7dfc19538f3347d4413e4ffd674c4bdec502c6a154f62e6fe97a",
+    "role": "prior baseline GPU compatible-API public test; distinct from new PhaseGPU ZIP"
+  },
+  "claimed_results": {
+    "new_phase_cloud_score": null,
+    "new_phase_cloud_evaluation_complete": false,
+    "note": "Package uploaded/preparing according to parent; no cloud high-score claim."
+  }
+}
