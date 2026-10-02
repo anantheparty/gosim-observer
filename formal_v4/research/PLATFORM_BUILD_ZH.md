@@ -27,4 +27,16 @@ ERROR: Could not install packages due to an OSError: [Errno 30] Read-only file s
 9b78bd946e11c364be5c0967b98b97926f79417d3ec2c3d3481943f83a65c82e
 ```
 
-与首包逐项比较，只有 `observer.project.json` 和它在 `build_manifest.json` 中的哈希变化。修正包已由原生电脑控制选取并上传；云端构建结果待确认。
+与首包逐项比较，只有 `observer.project.json` 和它在 `build_manifest.json` 中的哈希变化。修正包已由原生电脑控制选取并上传，平台公开场景测试通过。
+
+## 免费接口检查结果
+
+下载平台准备后的项目，逐项比较，所有原始算法、配置和服务凭据均保持原字节；平台只规范化 `observer.project.json`，固定镜像digest，并把manifest协议字段规范化为 `jsonl-v2`。实际工作流仍为 `participant-agent-protocol-v4`，公开测试正常完成，没有新增适配文件。
+
+平台原始代码指纹：`25100d1f94fc6f8d929dff3052cd45f2d481e41f242a7bfbf55b390d24d4c93b`。
+
+准备后项目ZIP SHA256：`db48d90af13b502e0c01a000936076e32cc4184322df79969484302458dfdb61`。
+
+公开测试为 `v4-public-test`，预算300s，实际记账25.961s，363次请求，303次观测动作，全季完成。测试分314.782434不是云端α–δ成绩，也不是此前L1–L4同一数据集。
+
+该环境 `remote_check` 返回 `gaierror`（0.015s），`remote_calls=0`；无法解析CD2域名，程序自动用CPU完成。目前未证明云端可使用外部GPU，后续线上版本应具备独立CPU求解能力。原始下载输出保存于 `results/cloud_cd2_public_test_20261003/`。
