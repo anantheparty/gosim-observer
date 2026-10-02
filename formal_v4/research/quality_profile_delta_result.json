@@ -1,0 +1,76 @@
+{
+  "schema": "public-own-output-quality-inversion-v1",
+  "card": "delta",
+  "scope": "conditional reference-domain interval constraints; not weather truth; no production reuse",
+  "unknown": "Z=effectiveE*transparency*sky_quality/seeing; zero for nonobservable slot",
+  "conditional_reference_Z_cap": 3.0,
+  "geometry_reference_bounds": {
+    "terrain": [
+      70,
+      50
+    ],
+    "weather": [
+      120,
+      80
+    ],
+    "rocket": [
+      80,
+      60
+    ]
+  },
+  "uses_capped_factor_quality": true,
+  "zero_rows_not_forced_to_background_closure": true,
+  "counts": {
+    "observation_rows": 13365,
+    "factor_capped_rows": 3001,
+    "positive_rows": 12739,
+    "physical_invalidated_rows": 213,
+    "conditional_geometry_clear_rows": 10844,
+    "conditional_clear_positive_rows": 10372,
+    "ambiguous_zero_rows_excluded": 472,
+    "coefficient_nnz": 20951,
+    "single_cell_rows": 3757,
+    "public_calendar_cells": 1180,
+    "supported_cells": 944,
+    "unsupported_cells": 236,
+    "width_le_1e_4": 373,
+    "width_le_1e_3": 378,
+    "width_le_1e_2": 383
+  },
+  "max_output_normalized_quality": 1.335269,
+  "repair_timestamps_utc": [
+    "2026-11-29T06:51:11Z"
+  ],
+  "duration_mismatches": [],
+  "interval_iterations": 300,
+  "uncapped_nnls": {
+    "status": 0,
+    "success": false,
+    "max_abs_residual": 6.5737683161426474e-06,
+    "rms_residual": 3.425664914076242e-07,
+    "residual_over_rounding_radius": 487,
+    "scope": "uncapped NNLS point estimate on conditional clean geometry rows; unobserved/aliased cells are not identified"
+  },
+  "contradictory_cells": [],
+  "contradictory_row_keys": [],
+  "official_scenario_file_only_sha256": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+  "input_sha256": {
+    "formal_v4/practice_cards/delta/delta/public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+    "formal_v4/practice_cards/delta/delta/public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+    "formal_v4/practice_cards/delta/delta/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "formal_v4/results/cloud_cd2_delta_20261003/decisions.csv": "48f4bf252355d923c2ecbf0aefd21abbd21a4864b85bcd470b3e1353d402f09c",
+    "formal_v4/results/cloud_cd2_delta_20261003/observations.csv": "292169de1c9ae44b90603eb32a256abe0f89658223f80a17e3e9cbeac1987dd7",
+    "formal_v4/results/cloud_cd2_delta_20261003/messages.jsonl": "dae3b632007cba7d08a5d1c4290e2aa931ff55d280d39a232d297b38471b8a59"
+  },
+  "elapsed_seconds": 11.806756999809295,
+  "one_cell_whole_action_holdout": {
+    "held_out_observe_actions": 43,
+    "held_out_quality_rows_supported": 521,
+    "training_one_cell_anchors": 176,
+    "max_abs_residual": 8.20833287507039e-07,
+    "rms_residual": 3.0344732723745936e-07,
+    "scope": "whole-action holdout in one already completed realization; no claim about a second realization"
+  },
+  "no_interval_contradiction_detected": true,
+  "no_contradiction_is_not_a_global_feasibility_or_uniqueness_certificate": true
+}

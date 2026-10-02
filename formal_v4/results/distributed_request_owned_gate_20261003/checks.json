@@ -1,0 +1,535 @@
+{
+  "type": "public-single-step-integration-gate",
+  "whole_card_score": null,
+  "hidden_inputs_read": false,
+  "credential_recorded": false,
+  "budget_fixture": "credit=1 before each snapshot; not a whole-survey quota simulation",
+  "public_sources": {
+    "config/v4_scenario.json": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+    "public/v4_night_calendar.csv": "9aa147ecf804e3473d73a32cce6ab4065e282ec0a974dbaf5e3c9f10a93a0a0e"
+  },
+  "messages_sha256": "2d0fbe8be61462fd76c0ff8a00a9cfd1959826e9acd7d346391d856678955fa0",
+  "frozen_source_sha256": {
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "research/request_deadline_common.py": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+    "research/request_remote_planner.py": "fa0a2aef6ec095ca4d50b93e21b855faa5a97a48ced1ec1c401bf49a527b2654",
+    "research/model_gpu_transport.py": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+    "research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+    "policy_config.json": "ac2260ac271ab5bd22ee914a6f217e2cd92f3de5f33f6b2c19ad5440b9928f51"
+  },
+  "conditional_quality_scale": 0.55,
+  "runs": [
+    {
+      "request_id": "V4RQ0001",
+      "snapshot": {
+        "now_utc": "2026-11-03T00:30:00+00:00",
+        "latest_bulletin": {
+          "initial": false,
+          "issued_at_utc": "2026-11-03T00:30:00Z",
+          "night_id": "N20261102",
+          "notices": [],
+          "record_type": "bulletin",
+          "slot_id": "N20261102-S001"
+        },
+        "latest_forecast": {
+          "coverage_end_utc": "2026-11-09T00:30:00Z",
+          "coverage_start_utc": "2026-11-02T00:30:00Z",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "notices": [],
+          "record_type": "forecast"
+        },
+        "new_messages": [
+          {
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-03T00:30:00Z",
+            "minimum_completed": 6,
+            "reason": "time-critical follow-up",
+            "record_type": "observation_request",
+            "request_id": "V4RQ0001",
+            "schema_version": "v4-observation-request-v1",
+            "target_ids": [
+              "V4T000594",
+              "V4T003544",
+              "V4T007198",
+              "V4T007219",
+              "V4T004700",
+              "V4T001127",
+              "V4T001995",
+              "V4T000983"
+            ]
+          }
+        ],
+        "active_requests": [
+          {
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-03T00:30:00Z",
+            "minimum_completed": 6,
+            "reason": "time-critical follow-up",
+            "record_type": "observation_request",
+            "request_id": "V4RQ0001",
+            "schema_version": "v4-observation-request-v1",
+            "target_ids": [
+              "V4T000594",
+              "V4T003544",
+              "V4T007198",
+              "V4T007219",
+              "V4T004700",
+              "V4T001127",
+              "V4T001995",
+              "V4T000983"
+            ],
+            "completed_target_ids": []
+          }
+        ],
+        "wallclock": {
+          "remaining_seconds": 900
+        }
+      },
+      "seconds": 14.703903042012826,
+      "real_gpu_choose_calls": 1,
+      "gpu_baseline_gate": {
+        "action": "observe",
+        "assigned_targets": 16,
+        "official_fiber_geometry_passed": true,
+        "prediction_identity_passed": true,
+        "duration_and_night_passed": true
+      },
+      "final_gate": {
+        "action": "observe",
+        "assigned_targets": 16,
+        "official_fiber_geometry_passed": true,
+        "prediction_identity_passed": true,
+        "duration_and_night_passed": true
+      },
+      "baseline_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 70.0440166,
+          "az_deg": 86.1575455
+        },
+        "assignments": {
+          "0": "V4T005145",
+          "1": "V4T001551",
+          "2": "V4T005039",
+          "3": "V4T003018",
+          "4": "V4T000506",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T003309",
+          "8": "V4T000951",
+          "9": "V4T005082",
+          "10": "V4T002021",
+          "11": "V4T000968",
+          "12": "V4T001815",
+          "13": "V4T000305",
+          "14": "V4T006676",
+          "15": "V4T000165"
+        },
+        "duration_seconds": 116,
+        "program": "DARK"
+      },
+      "final_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 70.0440166,
+          "az_deg": 86.1575455
+        },
+        "assignments": {
+          "0": "V4T005145",
+          "1": "V4T001551",
+          "2": "V4T005039",
+          "3": "V4T003018",
+          "4": "V4T000506",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T003309",
+          "8": "V4T000951",
+          "9": "V4T005082",
+          "10": "V4T002021",
+          "11": "V4T000968",
+          "12": "V4T001815",
+          "13": "V4T000305",
+          "14": "V4T006676",
+          "15": "V4T000165"
+        },
+        "duration_seconds": 116,
+        "program": "DARK"
+      },
+      "backend_stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 265,
+        "useful_targets": 4545,
+        "fixed_workload": true,
+        "exact_candidates": 238,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8916316166486298,
+        "selected_exact_rate": 0.9197840082769794,
+        "protected_exact_rate": 0.9197840082769794,
+        "prepare_seconds": 0.029258200025651604,
+        "gpu_scan_seconds": 0.08149670000420883,
+        "refine_seconds": 0.401875099982135,
+        "planning_seconds": 14.70387850003317,
+        "phase_mode": "phase",
+        "phase_candidates": 40000,
+        "phase_seeds": 16,
+        "phase_local_counts": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_exact_evaluations": 64,
+        "phase_emergency_triggered": false,
+        "phase_build_seconds": 0.03284409997286275,
+        "phase_scan_seconds": 0.22739060001913458,
+        "phase_exact_seconds": 0.10937299998477101,
+        "base_exact_rate": 0.9197840082769794,
+        "phase_improved": false,
+        "service_gate_defaults_sha256": "9fdde225b2926106a208f6c6a8458a10bda5a1fd1ed75af9411bedc52b0e9f30",
+        "service_gate_default_keys": [
+          "gpu_anchor_count",
+          "gpu_emergency_seconds",
+          "gpu_exact_candidate_count",
+          "gpu_fixed_workload",
+          "gpu_max_candidates",
+          "gpu_phase_emergency_seconds",
+          "gpu_phase_exact_count",
+          "gpu_phase_local_target_count",
+          "gpu_phase_mode",
+          "gpu_phase_top_count",
+          "gpu_refine_budget_seconds",
+          "gpu_refine_count",
+          "gpu_refinement_steps"
+        ],
+        "request_dp_active": true,
+        "request_dp_id": "V4RQ0001",
+        "request_dp_cost": 15.934175914215775,
+        "request_dp_columns": 335,
+        "request_dp_first_utc": 1793686500.0
+      },
+      "request_dp": {
+        "builds": 1,
+        "build_seconds": 13.3147242909763,
+        "dp_solves": 1,
+        "dp_seconds": 0.020906625082716346,
+        "request_observes": 0,
+        "boundary_waits": 0,
+        "clipped_baselines": 0,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 0,
+        "cached_requests": 1,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed": {
+        "remote_baselines": 1,
+        "cpu_baselines": 0,
+        "forced_cpu_crops": 0,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 0.0,
+        "remote_baseline_seconds": 1.3677743750158697,
+        "budget": {
+          "accepted": 1,
+          "skipped": 0,
+          "fraction": 0.0398,
+          "cpu_p90": 0.26,
+          "remote_p90": 4.0,
+          "completion_reserve": 30.0,
+          "estimated_remaining_decisions": 2127.9,
+          "initialization_seconds": 0.393,
+          "observed_remote_seconds": 1.368,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      }
+    },
+    {
+      "request_id": "V4RQ0002",
+      "snapshot": {
+        "now_utc": "2026-12-01T00:45:00+00:00",
+        "latest_bulletin": {
+          "initial": false,
+          "issued_at_utc": "2026-12-01T00:45:00Z",
+          "night_id": "N20261130",
+          "notices": [],
+          "record_type": "bulletin",
+          "slot_id": "N20261130-S001"
+        },
+        "latest_forecast": {
+          "coverage_end_utc": "2026-12-07T00:45:00Z",
+          "coverage_start_utc": "2026-11-30T00:45:00Z",
+          "issued_at_utc": "2026-11-30T00:45:00Z",
+          "notices": [],
+          "record_type": "forecast"
+        },
+        "new_messages": [
+          {
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-12-02T08:15:00Z",
+            "issued_at_utc": "2026-12-01T00:45:00Z",
+            "minimum_completed": 6,
+            "reason": "time-critical follow-up",
+            "record_type": "observation_request",
+            "request_id": "V4RQ0002",
+            "schema_version": "v4-observation-request-v1",
+            "target_ids": [
+              "V4T000666",
+              "V4T007404",
+              "V4T003411",
+              "V4T003317",
+              "V4T003566",
+              "V4T004172",
+              "V4T003761",
+              "V4T005005"
+            ]
+          }
+        ],
+        "active_requests": [
+          {
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-12-02T08:15:00Z",
+            "issued_at_utc": "2026-12-01T00:45:00Z",
+            "minimum_completed": 6,
+            "reason": "time-critical follow-up",
+            "record_type": "observation_request",
+            "request_id": "V4RQ0002",
+            "schema_version": "v4-observation-request-v1",
+            "target_ids": [
+              "V4T000666",
+              "V4T007404",
+              "V4T003411",
+              "V4T003317",
+              "V4T003566",
+              "V4T004172",
+              "V4T003761",
+              "V4T005005"
+            ],
+            "completed_target_ids": []
+          }
+        ],
+        "wallclock": {
+          "remaining_seconds": 900
+        }
+      },
+      "seconds": 13.021799166919664,
+      "real_gpu_choose_calls": 1,
+      "gpu_baseline_gate": {
+        "action": "observe",
+        "assigned_targets": 15,
+        "official_fiber_geometry_passed": true,
+        "prediction_identity_passed": true,
+        "duration_and_night_passed": true
+      },
+      "final_gate": {
+        "action": "observe",
+        "assigned_targets": 15,
+        "official_fiber_geometry_passed": true,
+        "prediction_identity_passed": true,
+        "duration_and_night_passed": true
+      },
+      "baseline_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 52.6341187,
+          "az_deg": 148.0639718
+        },
+        "assignments": {
+          "0": "V4T005760",
+          "1": "V4T006656",
+          "2": "V4T000016",
+          "3": "V4T002825",
+          "4": "V4T003538",
+          "5": "V4T000080",
+          "7": "V4T001297",
+          "8": "V4T007071",
+          "9": "V4T004797",
+          "10": "V4T002531",
+          "11": "V4T003752",
+          "12": "V4T005331",
+          "13": "V4T007485",
+          "14": "V4T003030",
+          "15": "V4T003314"
+        },
+        "duration_seconds": 86,
+        "program": "DARK"
+      },
+      "final_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 52.6341187,
+          "az_deg": 148.0639718
+        },
+        "assignments": {
+          "0": "V4T005760",
+          "1": "V4T006656",
+          "2": "V4T000016",
+          "3": "V4T002825",
+          "4": "V4T003538",
+          "5": "V4T000080",
+          "7": "V4T001297",
+          "8": "V4T007071",
+          "9": "V4T004797",
+          "10": "V4T002531",
+          "11": "V4T003752",
+          "12": "V4T005331",
+          "13": "V4T007485",
+          "14": "V4T003030",
+          "15": "V4T003314"
+        },
+        "duration_seconds": 86,
+        "program": "DARK"
+      },
+      "backend_stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 269,
+        "useful_targets": 5650,
+        "fixed_workload": true,
+        "exact_candidates": 237,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 1.1375299862447312,
+        "selected_exact_rate": 1.5132035493769513,
+        "protected_exact_rate": 1.5132035493769513,
+        "prepare_seconds": 0.02886479999870062,
+        "gpu_scan_seconds": 0.0905172000057064,
+        "refine_seconds": 0.4283014999818988,
+        "planning_seconds": 13.021776292007416,
+        "phase_mode": "phase",
+        "phase_candidates": 40000,
+        "phase_seeds": 16,
+        "phase_local_counts": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_exact_evaluations": 64,
+        "phase_emergency_triggered": false,
+        "phase_build_seconds": 0.03208719997201115,
+        "phase_scan_seconds": 0.24612100003287196,
+        "phase_exact_seconds": 0.11000939999939874,
+        "base_exact_rate": 1.5132035493769513,
+        "phase_improved": false,
+        "service_gate_defaults_sha256": "9fdde225b2926106a208f6c6a8458a10bda5a1fd1ed75af9411bedc52b0e9f30",
+        "service_gate_default_keys": [
+          "gpu_anchor_count",
+          "gpu_emergency_seconds",
+          "gpu_exact_candidate_count",
+          "gpu_fixed_workload",
+          "gpu_max_candidates",
+          "gpu_phase_emergency_seconds",
+          "gpu_phase_exact_count",
+          "gpu_phase_local_target_count",
+          "gpu_phase_mode",
+          "gpu_phase_top_count",
+          "gpu_refine_budget_seconds",
+          "gpu_refine_count",
+          "gpu_refinement_steps"
+        ],
+        "request_dp_active": true,
+        "request_dp_id": "V4RQ0002",
+        "request_dp_cost": 9.20329986232159,
+        "request_dp_columns": 334,
+        "request_dp_first_utc": 1796086800.0
+      },
+      "request_dp": {
+        "builds": 2,
+        "build_seconds": 25.201930999057367,
+        "dp_solves": 2,
+        "dp_seconds": 0.038946333108469844,
+        "request_observes": 0,
+        "boundary_waits": 0,
+        "clipped_baselines": 0,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 0,
+        "cached_requests": 2,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed": {
+        "remote_baselines": 2,
+        "cpu_baselines": 0,
+        "forced_cpu_crops": 0,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 0.0,
+        "remote_baseline_seconds": 2.4839548328891397,
+        "budget": {
+          "accepted": 2,
+          "skipped": 0,
+          "fraction": 1.0,
+          "cpu_p90": 0.26,
+          "remote_p90": 0.9751,
+          "completion_reserve": 30.0,
+          "estimated_remaining_decisions": 200.4,
+          "initialization_seconds": 0.393,
+          "observed_remote_seconds": 2.484,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      }
+    }
+  ],
+  "health": {
+    "remote_check": "ok",
+    "transport": "official-compatible-api",
+    "model": "traditional-cuda-planner",
+    "gpu_available": true,
+    "gpu_backend_ready": true,
+    "seconds": 0.805
+  },
+  "failure_gate": {
+    "action": "observe",
+    "assigned_targets": 12,
+    "official_fiber_geometry_passed": true,
+    "prediction_identity_passed": true,
+    "duration_and_night_passed": true
+  },
+  "failure_fallback_passed": true,
+  "real_gpu_choose_total": 2,
+  "close_invoked": true,
+  "session_closed": true,
+  "passed": true,
+  "helper_sha256": "5b89d43c58e384d13b5e7b0e9b27d91080744176b87d6a37281f5a1d80784e9b",
+  "backend_stats_note": "Transport returned stats dict is shared with planner.stats; local REQ overlay mutates planning_seconds/request_dp_* after the GPU result. Use distributed.remote_baseline_seconds for transport latency, and individual GPU phase timing fields for backend timing.",
+  "cpu_warning_note": "NumPy emitted six floating-point warning lines from dot products during CPU pool construction; input vectors are public finite geometry and every emitted prediction passed finite validation. This helper imported NumPy before thread caps; future helper sets them earlier. Frozen production entry already caps BLAS threads before NumPy."
+}

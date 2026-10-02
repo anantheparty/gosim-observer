@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import zipfile
 
@@ -40,9 +41,16 @@ def main():
     parser.add_argument("--remote-config")
     parser.add_argument("--policy-config")
     parser.add_argument("--planner", choices=("default", *CPU_ENTRIES, *MODEL_ENTRIES), default="default")
+    parser.add_argument("--model-health-timeout-seconds", type=float,
+                        help="Initial compatible-API health timeout for model entries (default: 12)")
     args = parser.parse_args()
     if args.planner != "default" and args.remote_config:
         parser.error("This entry does not accept a private remote configuration")
+    if args.model_health_timeout_seconds is not None:
+        if args.planner not in MODEL_ENTRIES:
+            parser.error("The model health timeout applies only to model entries")
+        if not math.isfinite(args.model_health_timeout_seconds) or args.model_health_timeout_seconds <= 0:
+            parser.error("The model health timeout must be positive and finite")
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     manifest = {}
@@ -64,7 +72,8 @@ def main():
             archive.write(args.remote_config, "remote_runtime.json")
             manifest["remote_runtime.json"] = "separate ephemeral service credential"
         elif args.planner in MODEL_ENTRIES:
-            data = (json.dumps({"enable_search": True, "health_timeout_seconds": 12,
+            health_timeout = 12 if args.model_health_timeout_seconds is None else args.model_health_timeout_seconds
+            data = (json.dumps({"enable_search": True, "health_timeout_seconds": health_timeout,
                                "initialize_timeout_seconds": 75,
                                "timeout_seconds": 10}, sort_keys=True) + "\n").encode()
             archive.writestr("remote_runtime.json", data)

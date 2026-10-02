@@ -1,0 +1,230 @@
+{
+  "schema_version": "request-model-gpu-health60-offline-package-v1",
+  "verified_at_utc": "2026-10-02T23:21:44.801713+00:00",
+  "status": "READY_NOT_UPLOADED_OR_DEPLOYED",
+  "zip": {
+    "file": "/Users/kamico/Downloads/observer_request_phase_gpu.zip",
+    "sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+    "bytes": 67312,
+    "file_count": 26,
+    "source_fingerprint": "75fa4058539fbe28fafd0e56d4fab0cc8af0108d7cbb6ec87ee1f268a126c0d5",
+    "fingerprint_algorithm": "official project_platform.package.project_digest(read_project_zip(zip_bytes))",
+    "official_package_source_sha256": "17a9373a84111d88f7fc5c5fe01e743f15365d43b814b64f04294001d1053b44",
+    "files_sha256": {
+      "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+      "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+      "build_manifest.json": "e3a7ed42b5cdf80608b48d5ae8b720538075fddf7a757cc1324c56958937e4e9",
+      "observer.project.json": "9082a4bde518d3bf89e9f2c0196eab63411c4be6f675a649fdf995aa27c5bbbe",
+      "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+      "policy_config.json": "590da7144349854de6a5d19a233e1d68bd14ff638a41d851e31921d064ea2890",
+      "remote_planner.py": "1edac49a8bef7f4a4d07ada6e74e2e8b250716fc4e9d4b1cdd4e6ab15635ee0b",
+      "remote_runtime.json": "5d8200ba1fc52d8c4ddf96937777b3a78c7affe2d557090402d1360cf60cad9e",
+      "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+      "research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+      "research/agent_request_distributed.py": "238248530d9c62c0f85ae5a235504c7aad7bb523d34e27dfe909eb0b498393b5",
+      "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+      "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+      "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+      "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+      "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+      "research/model_gpu_transport.py": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+      "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+      "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+      "research/request_deadline_common.py": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+      "research/request_future_field.py": "5a9531c854b1541a0f56bcd62031281dcdba1c355c2eabd58758a7eef5d23489",
+      "research/request_mask_dp.py": "07195b89c184912fb196550f533739ae939ab7658f80188001329a5fab639163",
+      "research/request_remote_planner.py": "fa0a2aef6ec095ca4d50b93e21b855faa5a97a48ced1ec1c401bf49a527b2654",
+      "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+      "research/terrain_policy.py": "b49a85585ffdc6fab935a04dc0b47026de6837083896abaa970d353e8a019037",
+      "research/terrain_version_space.py": "82d7619dc55b94836a119b36e6aa41b88c7df30398bd449e899bc62721653008"
+    },
+    "files_executable": {
+      "ATTRIBUTION.md": false,
+      "agent.py": false,
+      "build_manifest.json": false,
+      "observer.project.json": false,
+      "policy.py": false,
+      "policy_config.json": false,
+      "remote_planner.py": false,
+      "remote_runtime.json": false,
+      "requirements.txt": false,
+      "research/agent_model_gpu.py": false,
+      "research/agent_request_distributed.py": false,
+      "research/belief_clock.py": false,
+      "research/cpu_phase_candidates.py": false,
+      "research/efficiency_bounds.py": false,
+      "research/feedback_model.py": false,
+      "research/geometry.py": false,
+      "research/model_gpu_transport.py": false,
+      "research/pointing_calibration.py": false,
+      "research/remote_budget.py": false,
+      "research/request_deadline_common.py": false,
+      "research/request_future_field.py": false,
+      "research/request_mask_dp.py": false,
+      "research/request_remote_planner.py": false,
+      "research/spatial_candidates.py": false,
+      "research/terrain_policy.py": false,
+      "research/terrain_version_space.py": false
+    },
+    "build_manifest_all_files_verified": true
+  },
+  "previous_health12_candidate": {
+    "zip_sha256": "9189060a20eaa4a77d26d8a0e18133e02931ce2a301e1c9d3e53ac75a85201e9",
+    "source_fingerprint": "074ab7955026553865c0921ddab33301ce476f3cf60ac02e11eff5911f41e962",
+    "gate_path": "formal_v4/results/request_model_gpu_package_gates_20261003.json",
+    "gate_sha256": "e2a19a6a4a6a8922a655e510ae7cd53d059502c5d8108b2dcffab09247db3bbf",
+    "source_and_hashes_in_Git_record": true,
+    "changed_package_entries_only": [
+      "build_manifest.json",
+      "remote_runtime.json"
+    ]
+  },
+  "remote_runtime": {
+    "enable_search": true,
+    "health_timeout_seconds": 60.0,
+    "initialize_timeout_seconds": 75,
+    "timeout_seconds": 10
+  },
+  "reason_for_60_second_health": "Official frontend discovers active run topics by 15-second polling; 12 seconds is shorter than one poll. 60 permits several route-refresh cycles, but the cause of this batch timeouts remains unproven. Actual startup waiting remains in 900-second clock.",
+  "source_policy_and_entry_and_transport_unchanged": true,
+  "policy_config_original_byte_sha256": "590da7144349854de6a5d19a233e1d68bd14ff638a41d851e31921d064ea2890",
+  "all_import_dependencies_unchanged_from_previous_AST_gate": true,
+  "private_runtime_token_matches": 0,
+  "server_or_hidden_files": [],
+  "offline_entry_gate": {
+    "openai_environment_absent": true,
+    "socket_network_blocked": true,
+    "initialize_choose_summary_finish_successful": true,
+    "exit_code": 0,
+    "response": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_response",
+      "decision_sequence": 1,
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 46.0195369,
+        "az_deg": 73.6429008
+      },
+      "assignments": {
+        "0": "V4T004757",
+        "1": "V4T008707",
+        "2": "V4T004499",
+        "3": "V4T009545",
+        "4": "V4T006600",
+        "5": "V4T007898",
+        "6": "V4T007030",
+        "7": "V4T007180",
+        "8": "V4T008681",
+        "9": "V4T009274",
+        "10": "V4T006584",
+        "11": "V4T008645",
+        "12": "V4T006305",
+        "13": "V4T001716",
+        "14": "V4T007507",
+        "15": "V4T005650"
+      },
+      "duration_seconds": 97,
+      "program": "DARK"
+    },
+    "remote_check": {
+      "remote_check": "unavailable",
+      "transport": "official-compatible-api",
+      "exception": "ValueError"
+    },
+    "summary": {
+      "decisions": 1,
+      "exposures": 0,
+      "reports": 0,
+      "correct_reports": 0,
+      "best_science_sum": 0.0,
+      "required_missing_bound": 500,
+      "planning_seconds": 0.238,
+      "C": 0.8617,
+      "E": 0.95,
+      "remote_check": {
+        "remote_check": "unavailable",
+        "transport": "official-compatible-api",
+        "exception": "ValueError"
+      },
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "cpu_phase": {
+        "choose_calls": 1,
+        "phase_calls": 1,
+        "phase_candidates": 13174,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_count": 0,
+        "phase_improvements": 0
+      },
+      "terrain": {
+        "schema": "terrain-positive-version-space-v1",
+        "directions": [],
+        "width_range": [
+          30.0,
+          70.0
+        ],
+        "altitude_range": [
+          35.0,
+          50.0
+        ],
+        "boxes_per_family": 540,
+        "remaining_boxes": {},
+        "positive_count": 0,
+        "zero_feedback_ignored": 0,
+        "conditional_domain_conflicts": [],
+        "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+      },
+      "terrain_feedback_exposures": 0,
+      "request_dp": {
+        "builds": 0,
+        "build_seconds": 0.0,
+        "dp_solves": 0,
+        "dp_seconds": 0.0,
+        "request_observes": 0,
+        "boundary_waits": 0,
+        "clipped_baselines": 0,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 0,
+        "cached_requests": 0,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed_request": {
+        "remote_baselines": 0,
+        "cpu_baselines": 1,
+        "forced_cpu_crops": 0,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 0.23752029216848314,
+        "remote_baseline_seconds": 0.0,
+        "budget": {
+          "accepted": 0,
+          "skipped": 0,
+          "initialization_seconds": 0.0,
+          "observed_remote_seconds": 0.0,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      }
+    },
+    "remote_session_created": false
+  },
+  "default_model_entry_unchanged_content_and_exec_flags": true,
+  "two_uploaded_ZIPs_unchanged": true,
+  "health_flag_rejected_for_nonmodel_entry": true,
+  "scope": {
+    "uploaded": false,
+    "deployed": false,
+    "network_calls": 0,
+    "gpu_choose_calls": 0,
+    "full_distributed_network_validated": false
+  },
+  "packer_sha256": "f5b5b98e9e5c0a042a2c5e6024f2aff26002b54b409c7576ab03065806d2d139",
+  "public_input_sha256": {
+    "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c"
+  }
+}

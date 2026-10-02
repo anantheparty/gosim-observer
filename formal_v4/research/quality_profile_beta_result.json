@@ -1,0 +1,76 @@
+{
+  "schema": "public-own-output-quality-inversion-v1",
+  "card": "beta",
+  "scope": "conditional reference-domain interval constraints; not weather truth; no production reuse",
+  "unknown": "Z=effectiveE*transparency*sky_quality/seeing; zero for nonobservable slot",
+  "conditional_reference_Z_cap": 3.0,
+  "geometry_reference_bounds": {
+    "terrain": [
+      70,
+      50
+    ],
+    "weather": [
+      120,
+      80
+    ],
+    "rocket": [
+      80,
+      60
+    ]
+  },
+  "uses_capped_factor_quality": true,
+  "zero_rows_not_forced_to_background_closure": true,
+  "counts": {
+    "observation_rows": 14986,
+    "factor_capped_rows": 3410,
+    "positive_rows": 14651,
+    "physical_invalidated_rows": 0,
+    "conditional_geometry_clear_rows": 13139,
+    "conditional_clear_positive_rows": 13001,
+    "ambiguous_zero_rows_excluded": 138,
+    "coefficient_nnz": 25438,
+    "single_cell_rows": 5034,
+    "public_calendar_cells": 1199,
+    "supported_cells": 1049,
+    "unsupported_cells": 150,
+    "width_le_1e_4": 434,
+    "width_le_1e_3": 437,
+    "width_le_1e_2": 442
+  },
+  "max_output_normalized_quality": 1.205826,
+  "repair_timestamps_utc": [
+    "2026-11-24T02:32:36Z"
+  ],
+  "duration_mismatches": [],
+  "interval_iterations": 300,
+  "uncapped_nnls": {
+    "status": 0,
+    "success": false,
+    "max_abs_residual": 2.1679493800164096e-06,
+    "rms_residual": 2.829570987586125e-07,
+    "residual_over_rounding_radius": 401,
+    "scope": "uncapped NNLS point estimate on conditional clean geometry rows; unobserved/aliased cells are not identified"
+  },
+  "contradictory_cells": [],
+  "contradictory_row_keys": [],
+  "official_scenario_file_only_sha256": "fbfc80887b0d50290d4bd20eb60a270111913c1cb6068a0b051010dd01c37c3c",
+  "input_sha256": {
+    "formal_v4/practice_cards/beta/beta/public/targets.csv": "4769aa6f76cd0225d58dff58e2cf8628ec4c95c9839d946bc8a80aa23cc0b166",
+    "formal_v4/practice_cards/beta/beta/public/v4_night_calendar.csv": "32813747337d6d2057a93ea7bb99e90fa52d0ea2b3701f0d87a0eaf135a577b5",
+    "formal_v4/practice_cards/beta/beta/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "formal_v4/results/cloud_cd2_beta_20261003/decisions.csv": "39592e141076b649decd4daa5ed26468d754399bf2eaf28880523008ade92e96",
+    "formal_v4/results/cloud_cd2_beta_20261003/observations.csv": "eab7c2c0024eb2480e20c2495547dad3503f49c13ec9b76004cf9ea35df89ed8",
+    "formal_v4/results/cloud_cd2_beta_20261003/messages.jsonl": "103b3b02abad237786fc93aa848a23012dc557293dd7d53ba2aaab85201a47e2"
+  },
+  "elapsed_seconds": 13.26854533306323,
+  "one_cell_whole_action_holdout": {
+    "held_out_observe_actions": 67,
+    "held_out_quality_rows_supported": 875,
+    "training_one_cell_anchors": 225,
+    "max_abs_residual": 7.163431458012681e-07,
+    "rms_residual": 3.083611675241401e-07,
+    "scope": "whole-action holdout in one already completed realization; no claim about a second realization"
+  },
+  "no_interval_contradiction_detected": true,
+  "no_contradiction_is_not_a_global_feasibility_or_uniqueness_certificate": true
+}

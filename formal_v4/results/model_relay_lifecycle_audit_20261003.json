@@ -1,0 +1,148 @@
+{
+  "schema_version": "official-model-relay-lifecycle-readonly-audit-v1",
+  "audited_at_utc": "2026-10-02T23:23:32.077573+00:00",
+  "official_repository": "https://github.com/gosimfoundation/hackathon-survey26",
+  "pinned_public_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+  "sources": {
+    "web/src/composables/usePersonalModel.ts": {
+      "sha256": "ecf207eaee0a446b78b20316fe8ec1dc05c5e8c907029b544a4a63847d2df70a",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/web/src/composables/usePersonalModel.ts"
+    },
+    "web/src/components/competition/ProjectWorkflow.vue": {
+      "sha256": "f2e28404d8a569264ecc6b614de7cdb8f84318bce5f2e6cd623f34161aa7fba1",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/web/src/components/competition/ProjectWorkflow.vue"
+    },
+    "supabase/functions/_shared/observer-prepare.ts": {
+      "sha256": "0168d02ddaad97be5be2de7c33c742f5e95bc182eb2915cd96cfd2a4ba8e81a5",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/_shared/observer-prepare.ts"
+    },
+    "project_platform/preparation.py": {
+      "sha256": "073387bca93ab51f82e192837f641e023e5dd70415896e8bf252534a1b5aa2d1",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/preparation.py"
+    },
+    "supabase/functions/_shared/observer-orchestrate.ts": {
+      "sha256": "10b6bc64dac6c48cdd29e733bb645419308565cee458e8758db2809ab42ae7d3",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/_shared/observer-orchestrate.ts"
+    },
+    "project_platform/job_runner.py": {
+      "sha256": "81cda2488ac3305ebdbb9741a25e0b90e3d2cf081c49c0a304a91c89b63b0748",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/project_platform/job_runner.py"
+    },
+    "supabase/functions/observer-model/index.ts": {
+      "sha256": "c66fc2f02232dd394ecf428276c01a3926127f675ff0c5bf5ae58b7270f2f1a3",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/observer-model/index.ts"
+    },
+    "supabase/functions/_shared/observer-personal-model.ts": {
+      "sha256": "be8d91d110e9d31058936b342aa4d3a70008cea1fa492ee9cac72483fb2d0b5a",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/_shared/observer-personal-model.ts"
+    },
+    "supabase/functions/_shared/observer-model-broadcast.ts": {
+      "sha256": "589d38df840167e0a6b6a58e8d13234720657e5eaa7f6c0554d7bb5f1e5393eb",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/functions/_shared/observer-model-broadcast.ts"
+    },
+    "supabase/migrations/20260925002100_ephemeral_personal_models.sql": {
+      "sha256": "401e99a056f9b3bf5cf98fb8dbf90e73dbd0274b3ce4bfb105b188ee9be78235",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260925002100_ephemeral_personal_models.sql"
+    },
+    "supabase/migrations/20260926000200_stored_model_keys.sql": {
+      "sha256": "7f1298e690acc17aba4a403282b5dc288f3772499d93cb47664832c6d67d2e5c",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260926000200_stored_model_keys.sql"
+    },
+    "supabase/migrations/20260927000200_project_eval_ux.sql": {
+      "sha256": "a6631b1b68068df5fbcb723d29e18b9b5e23b28f5c449f8f165542a93351a618",
+      "url": "https://github.com/gosimfoundation/hackathon-survey26/blob/e01939d060f304c2a7cf04d9b3e46009b564fc23/supabase/migrations/20260927000200_project_eval_ux.sql"
+    }
+  },
+  "evidence": [
+    {
+      "fact": "A local connect does not register a browser-specific relay identifier; it sets connected and refreshes routes. Page unmount clears local key and channels.",
+      "source": "web/src/composables/usePersonalModel.ts",
+      "lines": [
+        15,
+        42
+      ]
+    },
+    {
+      "fact": "Browser subscribes to all current team active run topics and sends its current endpoint/model/key per request; no prepared revision stores this browser key or connection ID.",
+      "source": "web/src/composables/usePersonalModel.ts",
+      "lines": [
+        19,
+        36
+      ]
+    },
+    {
+      "fact": "New full evaluation creates new observer_runs for each scenario, distinct from the preparation model_run_id.",
+      "source": "supabase/migrations/20260927000200_project_eval_ux.sql",
+      "lines": [
+        99,
+        104
+      ]
+    },
+    {
+      "fact": "Runtime model capability and model API base are constructed for each new run in the evaluation job; prepared payload does not bind browser connection.",
+      "source": "supabase/functions/_shared/observer-orchestrate.ts",
+      "lines": [
+        59,
+        93
+      ]
+    },
+    {
+      "fact": "The model route is resolved on each API request; relay topic is persisted by run_id, with no browser-session ID.",
+      "source": "supabase/migrations/20260926000200_stored_model_keys.sql",
+      "lines": [
+        175,
+        204
+      ]
+    },
+    {
+      "fact": "UI refresh interval is15 seconds and periodic reload is gated by not busy and document not hidden. The refresh invokes personal.refresh().",
+      "source": "web/src/components/competition/ProjectWorkflow.vue",
+      "lines": [
+        208,
+        214,
+        315,
+        326
+      ]
+    },
+    {
+      "fact": "UI connected flag is set before route refresh and before websocket subscription confirmation; it alone is not a model roundtrip proof.",
+      "source": "web/src/composables/usePersonalModel.ts",
+      "lines": [
+        9,
+        40
+      ]
+    },
+    {
+      "fact": "Gateway exchange retries request broadcast every2 seconds and waits up to125 seconds, longer than former12-second client health deadline.",
+      "source": "supabase/functions/_shared/observer-model-broadcast.ts",
+      "lines": [
+        25,
+        55
+      ]
+    }
+  ],
+  "findings": {
+    "prepared_snapshot_of_browser_relay_A_found": false,
+    "full_evaluation_per_run_model_capability": true,
+    "relay_topics_bound_to_run_not_browser_connection": true,
+    "reconnected_page_can_subscribe_existing_and_new_active_runs": true,
+    "12_second_health_shorter_than15_second_poll": true,
+    "actual_four_card_timeout_cause_proven": false,
+    "browser_model_connected_not_roundtrip_guarantee": true
+  },
+  "hypothesis": "A newly active run topic can be discovered only after the next UI refresh; subscription delay can exceed12 seconds. Hidden/busy pages can delay refresh further. This is a code-supported risk, not a reconstructed explanation of the actual batch.",
+  "minimum_normal_supported_correction": [
+    "Keep the connected Participate component mounted and page visible; do not navigate or reload until completion.",
+    "Use normal project refresh to request current team model routes; UI connected alone does not prove every run channel is subscribed.",
+    "Use candidate startup health60 seconds to allow several15-second route-refresh cycles; charge actual elapsed startup time to900-second budget. Initialization75 and choose10 remain unchanged.",
+    "Verify official remote_check ok and nonzero remote planning calls before judging GPU effect."
+  ],
+  "scope": {
+    "UI_reads_or_changes": 0,
+    "credentials_or_live_relay_topics_read": 0,
+    "service_changes": 0,
+    "network_performance_calls": 0,
+    "source_changes": 0,
+    "deployed_platform_version_verified": false
+  }
+}
