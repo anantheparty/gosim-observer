@@ -43,10 +43,13 @@ they are not a controlled comparison against the newer CPU table above.
 The optional remote-call allocator now reserves local completion time and
 uses measured complete network round trips rather than GPU kernel time.
 Its deadline forecast is empirical, not a hard runtime bound. Platform egress
-has not yet been verified; the private upload/interface-check step is pending.
+has not yet been verified; the private CD2 project has been uploaded and is
+being prepared before the free interface check.
 An independent CD2 HTTPS relay reduced measured warm full-decision round trips
-from .8711s to .4916s. It is being verified in a complete local replay; network
-measurements and deployment boundaries are in `research/REMOTE_COMPUTE_ZH.md`.
+from .8711s to .4916s. Four complete local replays scored 6365.337882,
+6780.821386, 5679.216893 and 6038.977937 (mean 6216.0885245), in 354–448s
+per card. These are local L1–L4 results; network measurements and deployment
+boundaries are in `research/REMOTE_COMPUTE_ZH.md`.
 
 The separately downloaded alpha–delta ZIPs on 2026-10-03 contained six public
 configuration/catalog/calendar files each. They did not contain weather, events
