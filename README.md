@@ -4,6 +4,8 @@
 
 **正式规则已经改变任务和提交方式。**完整核实见 [FORMAL_RULES_20261003_ZH.md](FORMAL_RULES_20261003_ZH.md)：只收完整项目、v4 自选指向与光纤目标、逐轮提供信息、每卡 900 秒、平台 2 核 CPU/2 GB，允许外部算力；评奖要求至少两个大模型驱动环节，最终排名只看隐藏卡 E–H。本仓库现有求解代码与下文的分数、上界仍属于旧 v3 实例，不能直接提交或用于估计正式成绩。
 
+**本队研究目标：**按用户 2026-10-03 的明确要求，不追求奖项，采用数学模型、传统算法或传统神经网络提高成绩，程序不使用大模型；同时研究可行分与可证明上界的差距。赛事的评奖资格要求不作为实现目标。
+
 ## 本仓库的研究结果
 
 比赛规则的完整中文抽象见 [PROBLEM_ZH.md](PROBLEM_ZH.md)，精确状态及复杂度见 [STRUCTURE_ZH.md](STRUCTURE_ZH.md)。公开练习场当前最好可行路径经官方本地评分器回放得 **21,119.494551**，文件为 [results/practice_best.csv](results/practice_best.csv)；多起点、事件层精确大邻域搜索与受限列 CP 重组见 [EVENT_LNS_ZH.md](EVENT_LNS_ZH.md) 和 [POPULATION_CP_ZH.md](POPULATION_CP_ZH.md)。**这条先知路径使用了整季公开天气真值与全部请求**。GPU 完整扫描固定 K18 基础上的 1035 个 K20 双天区扩块后，全 17 请求的[最紧上界](GPU_K20_PAIR_SCAN_ZH.md)为 **21,257.69**；[少于 17 请求的完整分支证书](SIXTEEN_REQUEST_REUSE_K18_ZH.md)给出 **21,119.25** 上界。两者合成对任意合法路径的无条件上界 **21,257.69**，与可行分尚差 **138.195449** 分；少于 17 请求的界低于可行分，因此全局最优解必定拿满 17 个可获奖请求。固定首访顺序的基础 DP 见 [PATH_DP_ZH.md](PATH_DP_ZH.md) 和 [ACTIVE_REQUEST_DP_ZH.md](ACTIVE_REQUEST_DP_ZH.md)，其他全局路线见 [MULTISTART_LNS_ZH.md](MULTISTART_LNS_ZH.md)。
