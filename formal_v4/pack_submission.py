@@ -22,8 +22,6 @@ CPU_ENTRIES = {
         "research/request_deadline_common.py", "research/request_deadline_cpu.py",
         "research/request_mask_dp.py"]),
 }
-MODEL_ENTRY = ("research.agent_model_gpu", ["research/cpu_phase_candidates.py",
-               "research/agent_model_gpu.py", "research/model_gpu_transport.py"])
 
 
 def main():
@@ -31,15 +29,15 @@ def main():
     parser.add_argument("--out", required=True)
     parser.add_argument("--remote-config")
     parser.add_argument("--policy-config")
-    parser.add_argument("--planner", choices=("default", *CPU_ENTRIES, "model-gpu"), default="default")
+    parser.add_argument("--planner", choices=("default", *CPU_ENTRIES), default="default")
     args = parser.parse_args()
     if args.planner != "default" and args.remote_config:
-        parser.error("This entry does not accept a private remote configuration")
+        parser.error("The isolated CPU entries do not accept a remote configuration")
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     manifest = {}
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as archive:
-        extra = MODEL_ENTRY if args.planner == "model-gpu" else CPU_ENTRIES.get(args.planner)
+        extra = CPU_ENTRIES.get(args.planner)
         for name in FILES + (extra[1] if extra else []):
             path = ROOT / name
             if path.exists():
@@ -55,12 +53,6 @@ def main():
         if args.remote_config:
             archive.write(args.remote_config, "remote_runtime.json")
             manifest["remote_runtime.json"] = "separate ephemeral service credential"
-        elif args.planner == "model-gpu":
-            data = (json.dumps({"enable_search": True, "health_timeout_seconds": 6,
-                               "initialize_timeout_seconds": 25,
-                               "timeout_seconds": 4}, sort_keys=True) + "\n").encode()
-            archive.writestr("remote_runtime.json", data)
-            manifest["remote_runtime.json"] = hashlib.sha256(data).hexdigest()
         if args.policy_config:
             archive.write(args.policy_config, "policy_config.json")
             manifest["policy_config.json"] = hashlib.sha256(Path(args.policy_config).read_bytes()).hexdigest()

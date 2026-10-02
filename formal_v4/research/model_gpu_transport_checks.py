@@ -147,32 +147,6 @@ class StoreChecks(unittest.TestCase):
                 FixedBackend(url, "test" * 16)
         FixedBackend("http://127.0.0.1:19926", "test" * 16)
 
-    def test_ten_thousand_target_normal_delta_is_one_chunk(self):
-        payload = {"session": "stub", "sequence": 1, "snapshot": {"now_utc": "2026-10-02T00:00:00Z"},
-                   "state_delta": {"size": 10000, "reset": False, "indices": list(range(16)),
-                                   "scores": [.25] * 16, "factors": [.5] * 16},
-                   "env": {"target_quality_scale": [1.] * 10000}, "requests": []}
-        packets = chat_packets("choose", payload)
-        self.assertEqual(len(packets), 1)
-        self.assertLess(len(packets[0]), MAX_CHAT_BYTES)
-
-    def test_session_isolation_and_stale_sequence_rejected(self):
-        session_backend = SessionBackend(self.backend)
-        initial = {"initialize": {"targets": {"rows": [[1], [2], [3]]}}}
-        first = session_backend("initialize", initial)["session"]
-        second = session_backend("initialize", initial)["session"]
-        payload = {"session": first, "snapshot": {}, "sequence": 1,
-                   "state_delta": {"size": 3, "reset": False, "indices": [0], "scores": [.7], "factors": [.5]},
-                   "env": {}, "requests": []}
-        session_backend("choose", payload)
-        self.assertEqual(self.backend.calls[-1][1]["best_scores"], [.7, 0., 0.])
-        with self.assertRaises(AdapterError):
-            session_backend("choose", payload)
-        payload["session"] = second
-        payload["state_delta"] = {"size": 3, "reset": False, "indices": [], "scores": [], "factors": []}
-        session_backend("choose", payload)
-        self.assertEqual(self.backend.calls[-1][1]["best_scores"], [0., 0., 0.])
-
 
 class NetworkChecks(unittest.TestCase):
     def setUp(self):

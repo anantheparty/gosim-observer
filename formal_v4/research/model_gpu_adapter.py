@@ -415,8 +415,7 @@ class AdapterHandler(BaseHTTPRequestHandler):
     do_PUT = do_DELETE = do_PATCH = do_GET
 
     def do_POST(self):
-        if not hmac.compare_digest(self.headers.get("Authorization", "").encode("utf-8"),
-                                   ("Bearer " + self.server.planner_token).encode("utf-8")):
+        if not hmac.compare_digest(self.headers.get("Authorization", ""), "Bearer " + self.server.planner_token):
             return self.error(401, "planner_unauthorized")
         origin = self.headers.get("Origin")
         if origin is not None and origin != ALLOWED_ORIGIN:
@@ -454,7 +453,7 @@ class AdapterServer(ThreadingHTTPServer):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="127.0.0.1", choices=("127.0.0.1",))
+    parser.add_argument("--host", default="127.0.0.1", choices=("127.0.0.1", "::1"))
     parser.add_argument("--port", type=int, default=19928)
     parser.add_argument("--token-file", required=True)
     parser.add_argument("--backend", default="http://127.0.0.1:19924")
