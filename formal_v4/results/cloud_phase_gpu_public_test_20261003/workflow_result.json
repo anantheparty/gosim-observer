@@ -1,0 +1,64 @@
+{
+  "accounted_wallclock_seconds": 145.672,
+  "agent_wallclock_seconds": 144.729,
+  "committed_action_count": 432,
+  "decision_requests": 346,
+  "global_wallclock_seconds": 300.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 346,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "v4-public-test",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 172.673223,
+      "ELG": 498.864668,
+      "LRG": 232.546044,
+      "QSO": 175.66058,
+      "Star": 44.539261
+    },
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1124.283776,
+      "uniformity_penalty": -37.721864
+    },
+    "counts": {
+      "decisions": 432,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 2928,
+      "observe_actions": 282,
+      "required_missing": 17,
+      "targets_observed": 1550
+    },
+    "invalidations": [],
+    "observation_requests": [],
+    "scenario": "v4-public-test",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "4533591cbc5e839ae2e9f4e3ac989ffab96b87a957c67645551721d6c67fde1d",
+      "messages": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+      "observations": "44ca3192b1950967ce0c8fa85f5e42b724aadf63f68379a61ec8f9c096b9aac4",
+      "scenario": "54167fcf02b693e697128e04bc2cac20f345f81c4893d67f6897c26ba5f6b7a2"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": 236.561912,
+    "uniformity_bands": {
+      "ra_120_130": 0.652778,
+      "ra_130_140": 0.253846,
+      "ra_140_150": 0.069565,
+      "ra_310_320": 0.769231,
+      "ra_320_330": 0.797721,
+      "ra_330_340": 0.816532,
+      "ra_340_350": 0.880503
+    }
+  },
+  "termination_detail": "",
+  "termination_reason": "survey_complete"
+}

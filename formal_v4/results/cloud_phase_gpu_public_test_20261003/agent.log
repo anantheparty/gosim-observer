@@ -1,0 +1,11 @@
+[platform] project build output
+Collecting numpy==2.2.6
+  Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 85.5 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-2.2.6
+[platform] project stderr
+{"remote_check":"ok","transport":"official-compatible-api","model":"traditional-cuda-planner","gpu_available":true,"gpu_backend_ready":true,"seconds":11.133}
+{"remote_failure":"TimeoutError"}
+{"decisions":346,"exposures":281,"reports":0,"correct_reports":0,"best_science_sum":1123.6822419999999,"required_missing_bound":17,"planning_seconds":78.018,"C":0.7286,"E":0.4873,"remote_check":{"remote_check":"ok","transport":"official-compatible-api","model":"traditional-cuda-planner","gpu_available":true,"gpu_backend_ready":true,"seconds":11.133},"remote_calls":5,"remote_seconds":42.117,"remote_budget":{"accepted":6,"skipped":286,"fraction":0.7628,"cpu_p90":0.2669,"remote_p90":5.789,"completion_reserve":30.0,"estimated_remaining_decisions":30.0,"initialization_seconds":14.812,"observed_remote_seconds":52.122,"failed_initializations":0},"cpu_phase":{"choose_calls":287,"phase_calls":277,"phase_candidates":2221163,"phase_exact_evaluations":4432,"phase_emergency_count":0,"phase_improvements":217},"compatible_api":{"chat_calls":8,"chat_seconds":53.235633286000024}}

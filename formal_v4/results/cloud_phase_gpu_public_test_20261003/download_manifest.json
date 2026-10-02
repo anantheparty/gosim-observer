@@ -1,0 +1,156 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-02T23:00:52.068314+00:00",
+  "source": "free platform public interface test",
+  "project": "Observer Phase GPU",
+  "submission_file": "observer_phase_gpu.zip",
+  "submission_zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+  "platform_source_digest": "7f00671b877ee119c466e2dc234192d4ab580bbc6f4a1a18cc8379218d67fcda",
+  "platform_digest_evidence": {
+    "ui": "parent task confirmed complete fingerprint from current public-test UI",
+    "local_record_path": "formal_v4/results/model_gpu_phase_submission_20261003.json",
+    "local_record_sha256": "2f99ded1971c43d56166d4feaba7e95b3b045aea373ffae87b5c066a7a3a9bcf",
+    "local_record_fingerprint_matches_ui": true,
+    "actual_submission_files_and_exec_flags_match_local_record": true,
+    "fingerprint_not_present_in_download_outputs": true,
+    "official_algorithm": "official project_platform.package.project_digest(read_project_zip(zip_bytes))",
+    "official_source_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23"
+  },
+  "download_file": "gosim_phase_gpu_public_test.zip",
+  "download_zip_sha256": "4ae17b4f2d97617a3c463a63c0b3f9c3b7164e8e190a5d02d12476c432e3c5ab",
+  "download_bytes": 84931,
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "33af8bc25fe4267c572a92de83ca8d254baa19cd3a236b0191ff4f13953eb6bf",
+    "agent.log": "22e76997a1a7ea28ed0b88d7557e0d2525cf90d90022592bbfa1757e3e3f935a",
+    "decisions.csv": "4533591cbc5e839ae2e9f4e3ac989ffab96b87a957c67645551721d6c67fde1d",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "44ca3192b1950967ce0c8fa85f5e42b724aadf63f68379a61ec8f9c096b9aac4",
+    "score_report.json": "28a9f48538f9c16915313c237968945b18f0cf5faa1059372df5bd395c3a0aa3",
+    "workflow_result.json": "6e0eb10eacaeec4adfac352253a97b88bf2f8a7011b69aa9f07cfcae147395be"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "33af8bc25fe4267c572a92de83ca8d254baa19cd3a236b0191ff4f13953eb6bf",
+    "agent.log": "22e76997a1a7ea28ed0b88d7557e0d2525cf90d90022592bbfa1757e3e3f935a",
+    "decisions.csv": "4533591cbc5e839ae2e9f4e3ac989ffab96b87a957c67645551721d6c67fde1d",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "44ca3192b1950967ce0c8fa85f5e42b724aadf63f68379a61ec8f9c096b9aac4",
+    "score_report.json": "28a9f48538f9c16915313c237968945b18f0cf5faa1059372df5bd395c3a0aa3",
+    "workflow_result.json": "6e0eb10eacaeec4adfac352253a97b88bf2f8a7011b69aa9f07cfcae147395be"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 97662,
+    "agent.log": 1576,
+    "decisions.csv": 37234,
+    "messages.jsonl": 41518,
+    "observations.csv": 183201,
+    "score_report.json": 1405,
+    "workflow_result.json": 1978
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 97662,
+    "agent.log": 1576,
+    "decisions.csv": 37234,
+    "messages.jsonl": 41518,
+    "observations.csv": 183201,
+    "score_report.json": 1405,
+    "workflow_result.json": 1978
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-public-test",
+    "total": 236.561912,
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1124.283776,
+      "uniformity_penalty": -37.721864
+    },
+    "termination_reason": "survey_complete",
+    "public_wallclock_limit_seconds": 300.0,
+    "accounted_wallclock_seconds": 145.672,
+    "agent_wallclock_seconds": 144.729,
+    "remote_check": {
+      "remote_check": "ok",
+      "transport": "official-compatible-api",
+      "model": "traditional-cuda-planner",
+      "gpu_available": true,
+      "gpu_backend_ready": true,
+      "seconds": 11.133
+    },
+    "successful_remote_calls": 5,
+    "successful_remote_seconds": 42.117,
+    "remote_failures": [
+      {
+        "remote_failure": "TimeoutError"
+      }
+    ],
+    "remote_budget": {
+      "accepted": 6,
+      "skipped": 286,
+      "fraction": 0.7628,
+      "cpu_p90": 0.2669,
+      "remote_p90": 5.789,
+      "completion_reserve": 30.0,
+      "estimated_remaining_decisions": 30.0,
+      "initialization_seconds": 14.812,
+      "observed_remote_seconds": 52.122,
+      "failed_initializations": 0
+    },
+    "compatible_api": {
+      "chat_calls": 8,
+      "chat_seconds": 53.235633286000024
+    },
+    "cpu_phase": {
+      "choose_calls": 287,
+      "phase_calls": 277,
+      "phase_candidates": 2221163,
+      "phase_exact_evaluations": 4432,
+      "phase_emergency_count": 0,
+      "phase_improvements": 217
+    },
+    "observation_requests_issued": 0,
+    "comparison_CPU_phase_public": {
+      "path": "formal_v4/results/cloud_cpu_phase_public_test_20261003/score_report.json",
+      "score_report_sha256": "0321f14086d71f43e3c6b8511f250504d5c46b6759f37667d6bc022d727e1d17",
+      "total": 248.067256,
+      "total_delta": -11.505344,
+      "improvement_claimed": false,
+      "scope": "different observed trajectories in free public test; not formal four-card score or causal ablation"
+    }
+  },
+  "evaluation_scope": {
+    "free_public_test": true,
+    "formal_four_card_quota_consumed": false,
+    "quota_evidence": "parent confirmed free-test platform workflow",
+    "formal_wallclock_limit_seconds": 900,
+    "request_DP_validated": false
+  },
+  "archive_operation": {
+    "ui_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}

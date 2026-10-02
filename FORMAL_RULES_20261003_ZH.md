@@ -48,6 +48,8 @@ E–H 使用与 A–D 相同的协议、计分规则、时间限制、望远镜�
 
 上手页也明确每队每天 5 次；正式阶段开赛后仍应核对提交页的实时额度。不能把上传次数与评分次数混为一谈。接口检查可以先完成，正式评分应留给已通过本地完整回放的版本。
 
+**07:55 JST 补充核实**：官网首页的“评测”条目将两种赛程分开写明：练习赛每队每天 **5 次**，正式比赛每队每天 **4 次**，正式每次在 A–D 四张卡各运行一次、每卡 900 秒。当前登录的练习赛提交页仍显示 5 次/天。开赛时按对应赛程提交页的实时额度执行。
+
 来源：[提交页](https://create.gosim.org/survey26/platform/compete)、[上手页](https://create.gosim.org/survey26/platform/start)、[规则第 3 节](https://create.gosim.org/survey26/platform/rules)。
 
 ## 4. 算力、时限及外部服务
@@ -59,6 +61,8 @@ E–H 使用与 A–D 相同的协议、计分规则、时间限制、望远镜�
 每张卡总真实运行时间 **900 秒**，从第一条 `decision_request` 开始；包含程序计算和平台处理，没有独立的单轮时限。900 秒是每卡预算，不能解释为每轮预算。等待远端计算或模型返回也会经过这个真实时钟。
 
 允许外部算力与实际网络可达性是需要分别核实的两项事实：官方[运行源码](https://github.com/gosimfoundation/hackathon-survey26/blob/main/project_platform/job_runner.py#L151)支持 `restricted_egress` 配置，[2026-10-01 数据库迁移](https://github.com/gosimfoundation/hackathon-survey26/blob/main/supabase/migrations/20261001000600_evaluation_hardening.sql)默认启用该限制；启用时仅允许访问模型代理。公开信息无法确认当前生产部署是否关闭此项。因此，现在还不能保证平台能够直接 SSH 到远端或访问任意自建 HTTP 服务。正式依赖远端服务前，需要在允许的接口检查流程中验证实际连接；如果连接不可用，再核实平台支持的接入方式。
+
+**实际接入验证补充**：本队后续公开接口测试中，直连公网 IP 在评测容器内返回 `ENETUNREACH`。通过平台提供的 OpenAI 兼容 HTTPS 代理，把有明确名称的传统 CUDA 求解接口配置为自有后端后，已成功完成 GPU 请求和整场公开短测试；未调用大模型，也未申报设计奖材料。实测和包来源见 `formal_v4/results/cloud_model_gpu_public_test_20261003/`、`formal_v4/results/model_gpu_phase_submission_20261003.json`。外部算力仍受每卡真实墙钟预算约束。
 
 配置在平台中的模型 API 要求 OpenAI 兼容、公网 HTTPS 域名、默认 443 端口，不接受 IP 或内网地址。该要求针对模型 API，不能擅自推断所有外部服务都只允许同一种协议。
 
