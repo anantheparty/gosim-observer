@@ -94,6 +94,9 @@ class ModelGPUTransport:
         self.previous_scores = None
         self.previous_factors = None
         self.sequence = 0
+        self.last_initialization_seconds = 0.
+        self.last_decision_seconds = 0.
+        self.last_failure_kind = None
 
     def _post(self, wire, timeout):
         if timeout <= 0:
@@ -158,13 +161,24 @@ class ModelGPUTransport:
         if not self.enabled:
             raise TransportError("planner_disabled")
         start = time.perf_counter()
+        self.last_initialization_seconds = 0.
+        self.last_decision_seconds = 0.
+        self.last_failure_kind = None
+        stage = "decision"
         try:
             if self.session is None:
-                self.session = self.request("initialize", {"initialize": self.initial},
-                                            timeout=float(self.config.get("initialize_timeout_seconds", 25)))["session"]
+                stage = "initialize"
+                initialize_start = time.perf_counter()
+                try:
+                    self.session = self.request("initialize", {"initialize": self.initial},
+                                                timeout=float(self.config.get("initialize_timeout_seconds", 25)))["session"]
+                finally:
+                    # Failed setup still consumes the real clock and is measured.
+                    self.last_initialization_seconds = time.perf_counter() - initialize_start
                 count = len(self.initial["targets"]["rows"])
                 self.previous_scores = [0.] * count
                 self.previous_factors = [0.] * count
+            stage = "decision"
             current_scores = scores.tolist() if hasattr(scores, "tolist") else list(scores)
             current_factors = factors.tolist() if hasattr(factors, "tolist") else list(factors)
             if len(current_scores) != len(current_factors):
@@ -191,6 +205,7 @@ class ModelGPUTransport:
             self.seconds += time.perf_counter() - start
             return result
         except Exception:
+            self.last_failure_kind = stage
             # An answer might have been lost after server-side state changed. A full
             # overwrite next time also restores entries that changed back to old values.
             self.previous_scores = self.previous_factors = None
@@ -198,6 +213,8 @@ class ModelGPUTransport:
             if self.failures >= 2:
                 self.enabled = False
             raise
+        finally:
+            self.last_decision_seconds = max(0., time.perf_counter() - start - self.last_initialization_seconds)
 
     def _disconnect(self):
         if self.connection:

@@ -56,9 +56,9 @@ def main():
             archive.write(args.remote_config, "remote_runtime.json")
             manifest["remote_runtime.json"] = "separate ephemeral service credential"
         elif args.planner == "model-gpu":
-            data = (json.dumps({"enable_search": True, "health_timeout_seconds": 6,
-                               "initialize_timeout_seconds": 25,
-                               "timeout_seconds": 4}, sort_keys=True) + "\n").encode()
+            data = (json.dumps({"enable_search": True, "health_timeout_seconds": 12,
+                               "initialize_timeout_seconds": 75,
+                               "timeout_seconds": 10}, sort_keys=True) + "\n").encode()
             archive.writestr("remote_runtime.json", data)
             manifest["remote_runtime.json"] = hashlib.sha256(data).hexdigest()
         if args.policy_config:

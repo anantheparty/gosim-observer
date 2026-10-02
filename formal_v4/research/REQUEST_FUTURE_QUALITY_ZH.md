@@ -21,3 +21,16 @@ CPU完整窗口DP只耗424秒，却与基础phase总分完全相同；70/92次�
 官方band_quality函数只用SlotTruth的全局transparency、sky_quality、seeing与公共H，未接收方向ScoreEvent，也不乘仪器E。方向地形/临时事件只乘raw factor侧。规划接口必须保留raw质量与program band质量的分离。
 
 有限列DP在给定情景/列费用下仍然精确；真实全局最优性仍受未来未知质量、空间时间离散和科学账本共享饱和限制。应先验证新场能解释CPU首REQ预测不可行，再做完整同源整卡，随后才考虑正式评测。
+
+## 已实现的独立候选
+
+`request_dp_future_field_mode=published` 加上 shared `terrain_model` 才启用未来场，默认旧模块行为不变。入口 `agent_request_future_cpu_direct.py` 通过 terrain Policy 子类共享过去反馈，稳定 Policy 文件不修改。
+
+- 逐官方分片对 `H/q0 × terrain × temporary` 求平均，用于 raw 因子；H 的独立积分仍决定 program band。
+- 相同时刻/时长的科学基线 B 和 REQ 列科学价值 S 使用同一方向积分，费用为 `max(0,B−S)`。B 是固定 2 anchors 科学候选族的最大值，不是完整科学子问题的严格最优值。
+- global raw/band 比例仍冻结；天气幅度 .55 与 terrain reference prior 是明确条件假设。列池因全局质量漂移超过 .15 重建；池内 terrain/forecast 是构建时冻结证据，执行动作使用最新公开信息重算。当前版本未保证每次新 bulletin/terrain 后验收缩立即重建全部列。
+- 时长从阈值的瞬时估计开始，最多 4 次积分修正；瞬时方向因子极小但以后改善时，先尝试允许的最大曝光。每个保留列重新验证积分阈值。这不是对所有连续时长的最短曝光证明。
+
+公开 L1 首 REQ 门检：按已发布 SE/SW 地形提示的参考域，动态未来场得到 335 列、6/8 完成条件计划、科学机会费用 15.9342，建列 15.526 秒。14 个指派全部通过官方 spherical fiber 几何；这里使用空科学账本、冻结 global .55，作用是模型/接口门检，不是整卡分数。
+
+此前把 8 个当下 SE 目标全部永久乘 .05 的同输入反例只有 0 列。因此当前无收益并不支持请求窗口不可完成的结论。

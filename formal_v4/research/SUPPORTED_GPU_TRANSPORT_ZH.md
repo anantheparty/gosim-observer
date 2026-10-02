@@ -112,3 +112,13 @@ root随后部署了 CD2 loopback19928 和独立 `/gosim-observer-gpu/v1/` nginx 
 上传包比最初未加policy配置的审计包多 `policy_config.json`，同时修改其 `build_manifest.json` 哈希；共同算法文件逐字节相同。ZIP日期也不同，不能把全部包差异只归因于日期。
 
 这验证了 owned HTTPS→兼容adapter→GPU 的真实路径。官方 model gateway 的额外延迟、四卡并发和完整比赛分数仍需平台免费接口检查与完整评测验证。
+
+## 8. 初始化预算与 Phase 四并发验证
+
+平台免费检查中，首次初始化与 choose 共约15秒；把这15秒当作后续每次搜索的预测成本，会过度减少GPU调用配额。现将实际成本分为一次 setup 与重复 decision。setup仍消耗平台真实剩余时间，后续配额按 decision 样本的p90计算。首次创建session前还须保有“结束预留 + 初始化超时75秒 + 决策超时10秒”。初始化失败的实耗保留为失败成本样本，不能注入零；成功初始化后决策失败只把决策实耗计入重复成本。
+
+21项门检（原16项传输 + 5项预算）通过，2.602秒。覆盖15秒初始化不污染3秒/4秒重复决策、75秒初始化失败完整计费、初始化成功后的10秒决策失败、首次与已有session的预留差异，以及真实wallclock仍扣除setup。
+
+四个公开α独立session同时调用Phase服务：往返3.519 / 2.666 / 0.964 / 1.820秒，GPU各约0.85秒；全成功，每次一个chat，动作一致，均小于adapter后端6秒超时。这是 owned HTTPS 队列门检，未包含官方gateway额外开销，也未遍历比赛全季状态。记录：`results/model_gpu_phase_four_concurrent_20261003.json`。
+
+新 `observer_phase_gpu.zip` 使用已门检的 CPU24 policy 配置，SHA-256为 `a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42`。实际私有bearer字节未在归档内出现；无endpoint/key/server/隐藏数据。缺少model环境变量时，解包入口0.373秒正常返回CPU Phase observe。预算及归档门检：`results/model_gpu_budget_gates_20261003.json`。原 `2409c64e...` 上传包保留，用于核对先前云端结果。

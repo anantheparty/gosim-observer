@@ -1,0 +1,64 @@
+{
+  "accounted_wallclock_seconds": 91.151,
+  "agent_wallclock_seconds": 90.427,
+  "committed_action_count": 434,
+  "decision_requests": 348,
+  "global_wallclock_seconds": 300.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 348,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "v4-public-test",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 172.102965,
+      "ELG": 505.308466,
+      "LRG": 236.613468,
+      "QSO": 177.012448,
+      "Star": 44.22454
+    },
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1135.261887,
+      "uniformity_penalty": -37.194632
+    },
+    "counts": {
+      "decisions": 434,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 2914,
+      "observe_actions": 282,
+      "required_missing": 17,
+      "targets_observed": 1527
+    },
+    "invalidations": [],
+    "observation_requests": [],
+    "scenario": "v4-public-test",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "f713bde58243f6feb9158d53fee19f22ae0b839f77046264627924e09b2760d2",
+      "messages": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+      "observations": "a0d49fc5d99771cd51c304a97efac556d8eea8adb20f0bd2ea0cc36417763d7c",
+      "scenario": "54167fcf02b693e697128e04bc2cac20f345f81c4893d67f6897c26ba5f6b7a2"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": 248.067256,
+    "uniformity_bands": {
+      "ra_120_130": 0.666667,
+      "ra_130_140": 0.269231,
+      "ra_140_150": 0.065217,
+      "ra_310_320": 0.769231,
+      "ra_320_330": 0.797721,
+      "ra_330_340": 0.8125,
+      "ra_340_350": 0.886792
+    }
+  },
+  "termination_detail": "",
+  "termination_reason": "survey_complete"
+}

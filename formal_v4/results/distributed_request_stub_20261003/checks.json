@@ -1,0 +1,25 @@
+{
+  "public_stub_passed": true,
+  "fallback_passed": true,
+  "reservation_crop_passed": true,
+  "cpu_sample_excludes_dp_build": true,
+  "single_remote_call_from_policy": true,
+  "original_pending_prediction_preserved": true,
+  "summary_close_facade_passed": true,
+  "entry_policy_binding_passed": true,
+  "crop_total_seconds": 0.20162308309227228,
+  "crop_cpu_baseline_seconds": 0.14643600000999868,
+  "counts": {
+    "remote_baselines": 2,
+    "cpu_baselines": 3,
+    "forced_cpu_crops": 1,
+    "transport_failures": 1,
+    "cpu_baseline_seconds": 0.6533323328476399,
+    "remote_baseline_seconds": 0.0024339170195162296,
+    "budget": {
+      "cpu_samples": 2,
+      "remote_samples": 4
+    },
+    "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+  }
+}

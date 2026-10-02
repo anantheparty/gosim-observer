@@ -1,0 +1,99 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "source": "free platform public interface test",
+  "submission_file": "observer_model_gpu.zip",
+  "submission_zip_sha256": "2409c64e4c1435139d659f211dce2523fd478ee5d4216a36b320a4528c6d2ff8",
+  "platform_source_digest": "24dd46d6dd3c7dfc19538f3347d4413e4ffd674c4bdec502c6a154f62e6fe97a",
+  "download_file": "gosim_model_gpu_public_test.zip",
+  "download_zip_sha256": "5108cb57abcb360a2037d571c4c8e610b18bd08b4631738dabb9e3349b5477be",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "014e745bb4c84c7738a4577e409205d8851d166d0a17d0cf65102ff3e7951949",
+    "agent.log": "e4192e1319c429500850b227a7a4bd53f1cfa8c947d700ee70809d83ac3aada7",
+    "decisions.csv": "f713bde58243f6feb9158d53fee19f22ae0b839f77046264627924e09b2760d2",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "a0d49fc5d99771cd51c304a97efac556d8eea8adb20f0bd2ea0cc36417763d7c",
+    "score_report.json": "d95abfe215650ed4b0ff9258e76972112f7c3e23db3156ddb36cf7547a8b60c6",
+    "workflow_result.json": "01e0cf00c885e558aef23fc2591e3efb487b1a22500a9dddf03ec1c739c1e8fc"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "014e745bb4c84c7738a4577e409205d8851d166d0a17d0cf65102ff3e7951949",
+    "agent.log": "e4192e1319c429500850b227a7a4bd53f1cfa8c947d700ee70809d83ac3aada7",
+    "decisions.csv": "f713bde58243f6feb9158d53fee19f22ae0b839f77046264627924e09b2760d2",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "a0d49fc5d99771cd51c304a97efac556d8eea8adb20f0bd2ea0cc36417763d7c",
+    "score_report.json": "d95abfe215650ed4b0ff9258e76972112f7c3e23db3156ddb36cf7547a8b60c6",
+    "workflow_result.json": "01e0cf00c885e558aef23fc2591e3efb487b1a22500a9dddf03ec1c739c1e8fc"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 97506,
+    "agent.log": 1448,
+    "decisions.csv": 37359,
+    "messages.jsonl": 41518,
+    "observations.csv": 182310,
+    "score_report.json": 1403,
+    "workflow_result.json": 1974
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 97506,
+    "agent.log": 1448,
+    "decisions.csv": 37359,
+    "messages.jsonl": 41518,
+    "observations.csv": 182310,
+    "score_report.json": 1403,
+    "workflow_result.json": 1974
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-public-test",
+    "total": 248.067256,
+    "termination_reason": "survey_complete",
+    "public_wallclock_limit_seconds": 300.0,
+    "accounted_wallclock_seconds": 91.151,
+    "agent_wallclock_seconds": 90.427,
+    "remote_check": {
+      "remote_check": "ok",
+      "transport": "official-compatible-api",
+      "model": "traditional-cuda-planner",
+      "gpu_available": true,
+      "gpu_backend_ready": true,
+      "seconds": 4.643
+    },
+    "remote_calls": 4,
+    "remote_seconds": 26.129,
+    "compatible_api": {
+      "chat_calls": 7,
+      "chat_seconds": 30.759469920999976
+    },
+    "observation_requests_issued": 0,
+    "score_equals_CPU_phase_public": true,
+    "trajectory_identical_to_CPU_phase_public": false
+  },
+  "evaluation_scope": {
+    "free_public_test": true,
+    "formal_four_card_quota_consumed": false,
+    "quota_evidence": "parent confirmed free-test platform workflow",
+    "formal_wallclock_limit_seconds": 900,
+    "request_DP_validated": false,
+    "earlier_wrong_old_zip_prepared_download_excluded": true
+  }
+}

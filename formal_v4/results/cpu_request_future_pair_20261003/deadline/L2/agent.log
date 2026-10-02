@@ -1,0 +1,13 @@
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:302: RuntimeWarning: divide by zero encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:302: RuntimeWarning: overflow encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:302: RuntimeWarning: invalid value encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:119: RuntimeWarning: divide by zero encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:119: RuntimeWarning: overflow encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/private/tmp/gosim-v4-request-future-pair-20261003/agents/deadline/research/request_deadline_common.py:119: RuntimeWarning: invalid value encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+{"decisions":1174,"exposures":1055,"reports":1,"correct_reports":1,"best_science_sum":6554.143408999999,"required_missing_bound":3,"planning_seconds":351.217,"C":1.0948,"E":0.9528,"remote_check":null,"remote_calls":0,"remote_seconds":0,"remote_budget":null,"terrain":{"schema":"terrain-positive-version-space-v1","directions":["E"],"width_range":[30.0,70.0],"altitude_range":[35.0,50.0],"boxes_per_family":540,"remaining_boxes":{"E":56},"positive_count":14255,"zero_feedback_ignored":277,"conditional_domain_conflicts":[],"prediction_assumption":"independent one sector per deduplicated direction; midpoint quadrature"},"terrain_feedback_exposures":1055,"cpu_phase":{"choose_calls":1055,"phase_calls":1055,"phase_candidates":13645027,"phase_exact_evaluations":16880,"phase_emergency_count":0,"phase_improvements":939},"request_dp":{"builds":5,"build_seconds":62.96609804127365,"dp_solves":23,"dp_seconds":0.3417422065977007,"request_observes":0,"boundary_waits":0,"clipped_baselines":0,"rejected_by_cost":0,"infeasible":0,"forecast_failures":0,"cached_requests":2,"model":"full-deadline finite columns; frozen same-duration scientific regret"}}

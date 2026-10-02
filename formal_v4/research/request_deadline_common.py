@@ -85,7 +85,8 @@ class RequestDeadlineMixin:
     """Same choose interface; request_dp_mode='bypass' retains the baseline.
 
     Public future geometry is deterministic; scalar weather/instrument quality
-    and per-target direction scales are frozen at column construction. Event
+    is frozen at column construction. An opt-in published future field recomputes
+    static terrain at future alt/az and limits temporary evidence to its support. Event
     starts use public night slots plus the current instant. Cached columns are
     re-solved with actual quota progress and refreshed after quality drift.
     """
@@ -94,6 +95,8 @@ class RequestDeadlineMixin:
         self._price_planner = _SciencePricePlanner(initial)
         self._request_pools = {}
         self._build_geometry = self._build_quality = None
+        self._build_raw_quality = None
+        self._active_future_field = None
         self._request_counts = {"builds":0,"build_seconds":0.,"dp_solves":0,"dp_seconds":0.,
                                 "request_observes":0,"boundary_waits":0,"clipped_baselines":0,
                                 "rejected_by_cost":0,"infeasible":0,"forecast_failures":0}
@@ -125,7 +128,7 @@ class RequestDeadlineMixin:
             return self._build_quality[key][idx]
         return self._integrated_public_quality(start,duration,idx)
 
-    def _integrated_public_quality(self,start,duration,idx):
+    def _integrated_public_quality(self,start,duration,idx,field=None):
         night = next(k for k,(a,b) in enumerate(self.nights) if a<=start<b)
         anchor = self.nights[night][0]
         end = start+timedelta(seconds=duration)
@@ -136,9 +139,30 @@ class RequestDeadlineMixin:
             segment_end = min(end,anchor+timedelta(seconds=(slot+1)*slot_seconds))
             while cursor<segment_end:
                 piece_end = min(segment_end,cursor+timedelta(seconds=120))
-                total += (piece_end-cursor).total_seconds()*self._subset_public_quality(cursor+(piece_end-cursor)/2,idx)
+                moment=cursor+(piece_end-cursor)/2
+                value=self._subset_public_quality(moment,idx)
+                if field is not None:value*=field.raw_scale_at(moment,idx)
+                total += (piece_end-cursor).total_seconds()*value
                 cursor = piece_end
         return total/duration
+
+    def _average_raw_quality(self,start,duration,idx):
+        """Public H/q0 times time-varying directional field; excludes global C/E."""
+        if self._active_future_field is None:return self._average_public_quality(start,duration,idx)
+        key=(start.timestamp(),int(duration))
+        if self._build_raw_quality is not None:
+            if key not in self._build_raw_quality:
+                self._build_raw_quality[key]=self._integrated_public_quality(start,duration,np.arange(self.n),self._active_future_field)
+            return self._build_raw_quality[key][idx]
+        return self._integrated_public_quality(start,duration,idx,self._active_future_field)
+
+    def _future_field(self,snapshot,env):
+        if env.get('request_dp_future_field_mode')!='published':return None
+        if not hasattr(self,'terrain_model'):raise ValueError('published future field needs shared terrain model')
+        from .request_future_field import PublishedFutureField
+        from .terrain_policy import temporary_weather_scale
+        return PublishedFutureField(self,snapshot,self.terrain_model,weather_scenario=temporary_weather_scale,
+                                    empirical_blocks=getattr(self,'terrain_empirical_blocks',()))
 
     def _geometry(self,start):
         key = start.timestamp()
@@ -168,8 +192,10 @@ class RequestDeadlineMixin:
         if not len(idx) or not set(forced).issubset(set(idx.tolist())):
             return []
         h = self._average_public_quality(start,duration,idx)
-        scale = self._quality_scales(env)[idx]
-        quality = h*scale
+        if self._active_future_field is None:
+            quality=h*self._quality_scales(env)[idx]
+        else:
+            quality=self._average_raw_quality(start,duration,idx)*max(.005,float(env.get('quality_scale',.55)))
         coefficient = self.flux[idx]*quality/self.f0t0
         raw = np.minimum(1.,coefficient*duration)
         safety = max(1.,float(env.get("duration_safety",1.1)))
@@ -218,7 +244,7 @@ class RequestDeadlineMixin:
                            "tie_utility":float(selection[selected].sum()),"prediction":prediction})
         return output
 
-    def _build_pool(self,request,now,scores,factors,env):
+    def _build_pool(self,request,now,scores,factors,env,snapshot=None):
         started = time.perf_counter()
         deadline = parse_utc(request["deadline_utc"])
         request_idx = np.asarray([self.index[t] for t in request["target_ids"] if t in self.index],dtype=int)
@@ -231,17 +257,21 @@ class RequestDeadlineMixin:
             while cursor<min(b,deadline):
                 if cursor>=now:starts.add(cursor)
                 cursor += timedelta(seconds=step)
-        scales = self._quality_scales(env)
+        field=self._future_field(snapshot or {'now_utc':now.isoformat()},env)
+        self._active_future_field=field
+        scales = self._quality_scales(env) if field is None else np.full(self.n,max(.005,float(env.get('quality_scale',.55))))
         safety = max(1.,float(env.get("duration_safety",1.1)))
         deduplicated = {}
         price_records = []
         self._build_geometry,self._build_quality = {},{}
+        self._build_raw_quality={} if field is not None else None
         for start in sorted(starts):
             night = next((k for k,(a,b) in enumerate(self.nights) if a<=start<b),None)
             if night is None:continue
             limit = min(self.tmax,int((min(self.nights[night][1],deadline)-start).total_seconds()))
             if limit<self.tmin:continue
-            price,frame = self._price_planner.price(start,scores,factors,env)
+            price_env=env if field is None else {**env,'target_quality_scale':field.raw_scale_at(start)}
+            price,frame = self._price_planner.price(start,scores,factors,price_env)
             if frame is None:continue
             vectors,up,k,*_ = frame
             alt,az,_,_ = self._geometry(start)
@@ -249,10 +279,13 @@ class RequestDeadlineMixin:
             fixed_baselines = {}
             for anchor in request_idx:
                 if alt[anchor]<self.min_alt+.04:continue
+                capacity=int(min(limit,up[anchor]-1))
+                if capacity<self.tmin:continue
                 duration = max(self.tmin,int(math.ceil(threshold*safety/max(k[anchor],1e-12))))
+                if field is not None:duration=min(duration,capacity)
                 for _ in range(4):
                     if duration>min(limit,up[anchor]):break
-                    h = self._average_public_quality(start,duration,np.asarray([anchor]))[0]
+                    h = (self._average_public_quality if field is None else self._average_raw_quality)(start,duration,np.asarray([anchor]))[0]
                     coefficient = self.flux[anchor]*h*scales[anchor]/self.f0t0
                     needed = max(self.tmin,int(math.ceil(threshold*safety/max(coefficient,1e-12))))
                     if needed<=duration:break
@@ -260,7 +293,11 @@ class RequestDeadlineMixin:
                 if duration>min(limit,up[anchor]):continue
                 if duration not in fixed_baselines:
                     h_all = self._average_public_quality(start,duration,np.arange(self.n))
-                    fixed_baselines[duration] = self._price_planner.fixed_value(start,duration,scores,factors,env,h_all)
+                    fixed_env=env
+                    if field is not None:
+                        raw_all=self._average_raw_quality(start,duration,np.arange(self.n))
+                        fixed_env={**env,'target_quality_scale':np.divide(raw_all,h_all,out=np.zeros(self.n),where=h_all>0)}
+                    fixed_baselines[duration] = self._price_planner.fixed_value(start,duration,scores,factors,fixed_env,h_all)
                 pool = np.flatnonzero((vectors[:,2]>=math.sin((self.min_alt+.04)*DEG))&(up>=duration+1)&
                                       ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
                 for f in range(self.nfib):
@@ -279,11 +316,13 @@ class RequestDeadlineMixin:
                                     tag["mask"],cost,tag)
         columns = list(deduplicated.values())
         self._build_geometry=self._build_quality=None
+        self._build_raw_quality=self._active_future_field=None
         elapsed = time.perf_counter()-started
         self._request_counts["builds"]+=1;self._request_counts["build_seconds"]+=elapsed
         return {"columns":columns,"idx":request_idx,"threshold":threshold,"deadline":deadline,
                 "scale":scales[request_idx].copy(),"band_scale":float(env.get("program_band_quality_scale",.55/.95)),
-                "prices":price_records,"build_seconds":elapsed}
+                "prices":price_records,"build_seconds":elapsed,
+                'future_field':field.summary() if field is not None else None}
 
     def _request_action(self,tag,now,pool_info,scores,factors,env,completed_mask):
         forced = [int(i) for bit,i in enumerate(pool_info["idx"]) if tag["mask"]&(1<<bit) and not completed_mask&(1<<bit)]
@@ -303,10 +342,14 @@ class RequestDeadlineMixin:
                 "duration_seconds":tag["duration"],"program":PROGRAMS[tag["program"]],
                 "assignments":{str(f):self.ids[int(i)] for i,f in zip(chosen["chosen"],chosen["fibers"])}}
 
+    def _choose_baseline(self,snapshot,best_scores,best_factors,env,active_requests):
+        """Independent hook; the default retains the existing planner call."""
+        return super().choose(snapshot,best_scores,best_factors,env,active_requests)
+
     def choose(self,snapshot,best_scores,best_factors,env_estimate=None,active_requests=None):
         env = dict(env_estimate or {})
         started = time.perf_counter()
-        baseline = super().choose(snapshot,best_scores,best_factors,env,active_requests)
+        baseline = self._choose_baseline(snapshot,best_scores,best_factors,env,active_requests)
         if env.get("request_dp_mode","deadline")=="bypass":return baseline
         now = parse_utc(snapshot["now_utc"])
         scores,factors = self._array(best_scores),self._array(best_factors)
@@ -320,12 +363,13 @@ class RequestDeadlineMixin:
             rid = req["request_id"]
             info = self._request_pools.get(rid)
             req_idx = np.asarray([self.index[t] for t in req["target_ids"] if t in self.index],dtype=int)
-            scale = self._quality_scales(env)[req_idx]
+            published=env.get('request_dp_future_field_mode')=='published'
+            scale = (np.full(len(req_idx),max(.005,float(env.get('quality_scale',.55)))) if published else self._quality_scales(env)[req_idx])
             tolerance = float(env.get("request_dp_quality_tolerance",.15))
             changed = info is not None and (np.max(np.abs(scale/np.maximum(info["scale"],1e-12)-1))>tolerance or abs(float(env.get("program_band_quality_scale",.55/.95))/max(info["band_scale"],1e-12)-1)>tolerance)
             if info is None or changed:
                 if float((snapshot.get("wallclock") or {}).get("remaining_seconds",900))<30:continue
-                info = self._build_pool(req,now,scores,factors,env);self._request_pools[rid]=info
+                info = self._build_pool(req,now,scores,factors,env,snapshot);self._request_pools[rid]=info
             completed_mask = sum(1<<bit for bit,i in enumerate(info["idx"]) if self.ids[int(i)] in done)
             dstart = time.perf_counter()
             plan = solve_request_columns(info["columns"],target_count=len(info["idx"]),quorum=quorum,
@@ -346,7 +390,9 @@ class RequestDeadlineMixin:
                           planning_seconds=time.perf_counter()-started)
         delay = first.start-now.timestamp()
         if delay<=.5:
-            action = self._request_action(first.tag,now,info,scores,factors,env,completed_mask)
+            self._active_future_field=self._future_field(snapshot,env)
+            try:action = self._request_action(first.tag,now,info,scores,factors,env,completed_mask)
+            finally:self._active_future_field=None
             if action:
                 self._request_counts["request_observes"]+=1
                 self.stats["planning_seconds"]=time.perf_counter()-started
@@ -364,7 +410,7 @@ class RequestDeadlineMixin:
             original = self.tmax
             try:
                 self.tmax=min(original,int(math.floor(delay)))
-                cropped = super().choose(snapshot,best_scores,best_factors,env,active_requests)
+                cropped = self._choose_baseline(snapshot,best_scores,best_factors,env,active_requests)
             finally:self.tmax=original
             self._request_counts["clipped_baselines"]+=1
             self.stats["planning_seconds"]=time.perf_counter()-started

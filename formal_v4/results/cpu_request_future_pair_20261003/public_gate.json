@@ -1,0 +1,65 @@
+{
+  "request_id": "V4RQ0001",
+  "columns": 335,
+  "quota": 6,
+  "final_mask_bits": 6,
+  "minimum_conditional_regret": 15.934175914215775,
+  "build_seconds": 15.526382792042568,
+  "total_seconds": 15.588624708121642,
+  "first_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 63.2876399,
+      "az_deg": 205.9921075
+    },
+    "duration_seconds": 188,
+    "program": "DARK",
+    "assignments": {
+      "0": "V4T005266",
+      "1": "V4T002543",
+      "2": "V4T006088",
+      "3": "V4T005076",
+      "4": "V4T005351",
+      "5": "V4T002631",
+      "6": "V4T006100",
+      "7": "V4T003959",
+      "8": "V4T001837",
+      "9": "V4T003572",
+      "10": "V4T006700",
+      "12": "V4T000594",
+      "14": "V4T003535",
+      "15": "V4T006949"
+    }
+  },
+  "geometry_passed": true,
+  "future_field": {
+    "frozen_at_utc": "2026-11-03T00:30:00+00:00",
+    "current_slot_end_utc": "2026-11-03T00:45:00+00:00",
+    "weather_amplitude_model": "function",
+    "empirical_ttl_seconds": 1200.0,
+    "terrain_posterior": {
+      "schema": "terrain-positive-version-space-v1",
+      "directions": [
+        "SW",
+        "SE"
+      ],
+      "width_range": [
+        30.0,
+        70.0
+      ],
+      "altitude_range": [
+        35.0,
+        50.0
+      ],
+      "boxes_per_family": 540,
+      "remaining_boxes": {
+        "SW": 540,
+        "SE": 540
+      },
+      "positive_count": 0,
+      "zero_feedback_ignored": 0,
+      "conditional_domain_conflicts": [],
+      "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+    }
+  }
+}

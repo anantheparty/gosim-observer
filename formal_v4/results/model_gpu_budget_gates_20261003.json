@@ -1,0 +1,64 @@
+{
+  "schema": "model-gpu-setup-budget-and-package-gates-v1",
+  "verified_at_utc": "2026-10-02T22:42:25.955454+00:00",
+  "unit_gates": {
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 2.602,
+    "command": ".venv-solver/bin/python -m unittest formal_v4.research.model_gpu_transport_checks formal_v4.research.model_gpu_budget_checks -v",
+    "executed_once": true
+  },
+  "timing_model": {
+    "setup_consumes_actual_wallclock_once": true,
+    "successful_setup_excluded_from_recurring_prediction": true,
+    "failed_initialization_actual_cost_retained": true,
+    "first_session_guard_reserve_plus_setup_timeout_plus_decision_timeout": true,
+    "two_failures_disable_remote": true
+  },
+  "entry_package_gates": {
+    "zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+    "files": 19,
+    "private_credential_found": false,
+    "remote_runtime": {
+      "enable_search": true,
+      "health_timeout_seconds": 12,
+      "initialize_timeout_seconds": 75,
+      "timeout_seconds": 10
+    },
+    "server_or_hidden_files_found": false,
+    "missing_env_cpu_phase_fallback": true,
+    "fallback_seconds": 0.3726399999577552,
+    "fallback_action": "observe",
+    "source_sha256": {
+      "formal_v4/pack_submission.py": "dc3138a21993aefc680f23bfdd9ca6e0cf02162191fba3c3e12945e18cb90be7",
+      "formal_v4/research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218"
+    }
+  },
+  "public_input_sha256": {
+    "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c"
+  },
+  "source_sha256": {
+    "formal_v4/research/model_gpu_transport.py": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+    "formal_v4/research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+    "formal_v4/pack_submission.py": "dc3138a21993aefc680f23bfdd9ca6e0cf02162191fba3c3e12945e18cb90be7",
+    "formal_v4/research/model_gpu_budget_checks.py": "4396ce39a8f51d54c6162dbe76ee0c627613bb9e2dc1e486c38e043460d296f5",
+    "formal_v4/research/model_gpu_transport_checks.py": "507d3bb8b3be3981c870ae25e5a2f65f8f0e0ad1e4ffb322a3839d2238bfb7b2",
+    "formal_v4/research/model_gpu_adapter.py": "678061e52db5edc7bca36f20c13a579ee15318dfcccc5bec7d57316fa2b5804f",
+    "formal_v4/research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "formal_v4/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "formal_v4/results/gpu_phase_pair_20261003/gpu_phase_cpu24_policy_config.json": "5f50239e2a80ef37011e8fa8eabd9e22dc0cf1fa03776fca79a8e60e880012f2"
+  },
+  "four_concurrent_owned_phase": {
+    "path": "formal_v4/results/model_gpu_phase_four_concurrent_20261003.json",
+    "sha256": "58a41442051ce310cb85052443a6a1928b38717bd8812b6858606e9545de1caf",
+    "all_successful": true,
+    "max_roundtrip_seconds": 3.51862237486057,
+    "backend_timeout_seconds": 6
+  },
+  "credentials_recorded": false
+}

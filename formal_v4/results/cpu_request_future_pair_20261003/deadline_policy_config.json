@@ -1,0 +1,20 @@
+{
+  "cpu_phase_fixed_workload": true,
+  "cpu_phase_top_count": 4,
+  "cpu_phase_local_target_count": 50,
+  "cpu_phase_boundary_target_count": 24,
+  "cpu_phase_exact_count": 16,
+  "duration_safety": 1.1,
+  "planning_budget_seconds": 0.22,
+  "repair_enabled": true,
+  "use_belief_clock": true,
+  "require_efficiency_witness": true,
+  "anchor_count": 24,
+  "cpu_phase_mode": "phase",
+  "terrain_reference_prior": true,
+  "request_dp_future_field_mode": "published",
+  "request_dp_step_seconds": 900,
+  "request_dp_price_anchors": 2,
+  "request_dp_quality_tolerance": 0.15,
+  "request_dp_mode": "deadline"
+}
