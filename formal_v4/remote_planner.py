@@ -4,10 +4,35 @@ from __future__ import annotations
 import json
 import gzip
 import http.client
+import ipaddress
+import socket
 import time
 import urllib.error
 import urllib.request
 from urllib.parse import urlsplit
+
+
+class PinnedAddressHTTPSConnection(http.client.HTTPSConnection):
+    """Connect to a literal IP; retain the URL hostname for TLS and HTTP."""
+
+    def __init__(self, hostname, connect_ip, **kwargs):
+        super().__init__(hostname, **kwargs)
+        self.connect_ip = ipaddress.ip_address(connect_ip)
+        self._create_connection = self._connect_literal
+
+    def _connect_literal(self, address, timeout, source_address=None):
+        family = socket.AF_INET6 if self.connect_ip.version == 6 else socket.AF_INET
+        sock = socket.socket(family, socket.SOCK_STREAM)
+        try:
+            if timeout is not socket._GLOBAL_DEFAULT_TIMEOUT:
+                sock.settimeout(timeout)
+            if source_address is not None:
+                sock.bind(source_address)
+            sock.connect((str(self.connect_ip), address[1]))
+            return sock
+        except BaseException:
+            sock.close()
+            raise
 
 
 class RemotePlanner:
@@ -31,8 +56,15 @@ class RemotePlanner:
             data = gzip.compress(data, compresslevel=1)
             headers["Content-Encoding"] = "gzip"
         if self.connection is None:
-            connection_type = http.client.HTTPSConnection if target.scheme == "https" else http.client.HTTPConnection
-            self.connection = connection_type(target.hostname, port=target.port, timeout=timeout)
+            connect_ip = self.config.get("connect_ip")
+            if connect_ip:
+                if target.scheme != "https":
+                    raise ValueError("Literal-IP connections require verified HTTPS")
+                self.connection = PinnedAddressHTTPSConnection(target.hostname, connect_ip,
+                                                              port=target.port, timeout=timeout)
+            else:
+                connection_type = http.client.HTTPSConnection if target.scheme == "https" else http.client.HTTPConnection
+                self.connection = connection_type(target.hostname, port=target.port, timeout=timeout)
         self.connection.timeout = timeout
         if self.connection.sock is not None:
             self.connection.sock.settimeout(timeout)
@@ -59,6 +91,7 @@ class RemotePlanner:
         except Exception as exc:
             self.enabled = False
             return {"remote_check": "failed", "exception": type(exc).__name__,
+                    "errno": getattr(exc, "errno", None),
                     "seconds": round(time.perf_counter() - start, 3)}
 
     def choose(self, snapshot, scores, factors, env, requests):

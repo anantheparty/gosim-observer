@@ -1,0 +1,45 @@
+{
+  "closed_valid_runner": {
+    "night_seconds": 900,
+    "valid": true,
+    "actual_seconds": 60,
+    "hit_score": 0.0,
+    "feedback_keys": [
+      "action",
+      "assigned_count",
+      "hit_count",
+      "hits",
+      "observe_index"
+    ]
+  },
+  "short_night_clips_legal_exposure": {
+    "night_seconds": 20,
+    "valid": true,
+    "actual_seconds": 20,
+    "hit_score": 0.0,
+    "feedback_keys": []
+  },
+  "best_does_not_accumulate": {
+    "900_score": 0.2941176470588235,
+    "best_60_840_score": 0.2745098039215686
+  },
+  "crossing_probe_cannot_identify_initial_slot": {
+    "score": 0.0032679738562091496,
+    "closed_seconds": 50,
+    "open_seconds": 10
+  },
+  "zero_directional_probe_not_global_closure": {
+    "early": 0.0,
+    "later": 0.2745098039215686
+  },
+  "zero_probe_changes_invalidation": {
+    "baseline_N": 20,
+    "probe_N": 21,
+    "baseline_raw": 100.0,
+    "probe_raw": 0.0
+  },
+  "extra_completion_can_increase_jain_penalty": {
+    "before": 0.0,
+    "after": 19.999999999999996
+  }
+}

@@ -77,6 +77,11 @@ outputs, original download hashes and normalized archive hashes are in
 `results/cloud_cd2_{alpha,beta,gamma,delta}_20261003/`; the batch summary is in
 `results/cloud_cd2_practice_20261003/`. These are different datasets from L1–L4.
 
+A subsequent free public check used literal-IP TCP with verified hostname TLS.
+It failed immediately with `OSError errno=101` (network unreachable), not DNS;
+the quota remained four. See `research/IP_TRANSPORT_ZH.md`. The platform's
+current runtime cannot reach this external GPU route.
+
 ## Run and package
 
 ```sh

@@ -68,3 +68,5 @@ CD2版已完成官方本地评测器的四卡回放：
 这是带新信念/请求证据与固定搜索工作量的版本，不是只替换网络的消融。L3低于同阶段直接GPU方案，说明通信、预算分配和局部搜索改变路径后，整体得分不保证单调提高；请求deadline规划与故障辨识仍是实际缺口。以上均为本地卡结果，不能替代云端α–δ评分。
 
 平台首包在依赖构建阶段写只读`/.local`失败；改为项目`.deps`后公开测试通过。公开测试实际agent.log：`remote_check=failed, exception=gaierror, seconds=.015`，`remote_calls=0`；随后完整α–δ评测也全部DNS失败，四卡CPU分为7094.664204/6333.107019/6547.568316/4818.222318，均分6198.39046425，耗时231–317秒，均正常结束。详见 `PLATFORM_BUILD_ZH.md`。目前在线GPU尚不可依赖，PRO6000仍可用于离线研究、搜索、训练与生成提交材料。CPU版可在900秒预算内扩大算法搜索，下一包先验证离散几何相位候选和请求期限DP。
+
+随后完成不查DNS、保留TLS主机名及证书校验的IP直连免费测试。云端返回`OSError errno101`（Network is unreachable），仅.009秒，仍无GPU调用，配额仍4次。这证明不是单独DNS故障。官方源码的restricted-egress模式采用无外网路由的Docker internal network；详情、正负控和完整平台输出见 `IP_TRANSPORT_ZH.md`。
