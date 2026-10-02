@@ -102,7 +102,7 @@ MIP设0.5%相对gap；solver的“Optimal”只是达到该容差，**没有证�
 | 冻结回放 | L1官方本地分 | 科学分 | required缺失 | 请求 | wall秒 |
 |---|---:|---:|---:|---:|---:|
 | rolling_coverage_L1_20261003 | 2614.224973 | 2775.523748 | 3 | 0/2 | 163.112 |
-| rolling_model_audit_L1_20261003 | 2667.994380 | 2832.022071 | 3 | 0/2 | 约164 |
+| rolling_model_audit_L1_20261003 | 2667.994380 | 2832.022071 | 3 | 0/2 | 164.218 |
 | rolling_model_fullaudit_L1_20261003 | 2708.341316 | 2870.942385 | 3 | 0/2 | 168.864 |
 
 三次均survey_complete、没有agent错误、没有报告负罚；不应替换stable方案。首次采样RSS约267MB；当前900秒/2GB限制允许更完整模型。第二次stderr审计被官方日志尾部截断，第三次改为ignored快照目录内持久化jsonl，完整保存公共预测。三次build hashes已逐文件复核。第一/第二policy hash为bb9e5529…，第三次冻结时共享policy已有新增请求proof缓存，hash e7ab68f3…；第三次不是完全同源复跑。几何SpatialPlanner源hash均99b97b4a…，滚动规划参数未变。

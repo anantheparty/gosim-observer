@@ -14,6 +14,14 @@ FILES = ["agent.py", "policy.py", "observer.project.json", "requirements.txt", "
          "research/belief_clock.py", "research/efficiency_bounds.py",
          "research/remote_budget.py",
          "research/pointing_calibration.py", "ATTRIBUTION.md"]
+CPU_ENTRIES = {
+    "cpu-phase": ("research.agent_cpu_phase_direct", [
+        "research/cpu_phase_candidates.py", "research/agent_cpu_phase_direct.py"]),
+    "request-cpu-phase": ("research.agent_request_cpu_direct", [
+        "research/cpu_phase_candidates.py", "research/agent_request_cpu_direct.py",
+        "research/request_deadline_common.py", "research/request_deadline_cpu.py",
+        "research/request_mask_dp.py"]),
+}
 
 
 def main():
@@ -21,16 +29,27 @@ def main():
     parser.add_argument("--out", required=True)
     parser.add_argument("--remote-config")
     parser.add_argument("--policy-config")
+    parser.add_argument("--planner", choices=("default", *CPU_ENTRIES), default="default")
     args = parser.parse_args()
+    if args.planner != "default" and args.remote_config:
+        parser.error("The isolated CPU entries do not accept a remote configuration")
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     manifest = {}
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as archive:
-        for name in FILES:
+        extra = CPU_ENTRIES.get(args.planner)
+        for name in FILES + (extra[1] if extra else []):
             path = ROOT / name
             if path.exists():
-                archive.write(path, name)
-                manifest[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+                data = path.read_bytes()
+                if name == "observer.project.json" and extra:
+                    project = json.loads(data)
+                    project["run"] = ["python3", "-u", "-m", extra[0]]
+                    data = (json.dumps(project, indent=2) + "\n").encode()
+                archive.writestr(name, data)
+                manifest[name] = hashlib.sha256(data).hexdigest()
+            elif extra and name in extra[1]:
+                raise FileNotFoundError(path)
         if args.remote_config:
             archive.write(args.remote_config, "remote_runtime.json")
             manifest["remote_runtime.json"] = "separate ephemeral service credential"

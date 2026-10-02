@@ -1,0 +1,75 @@
+{
+  "request_id": "V4RQ0001",
+  "issued_at_utc": "2026-11-03T00:30:00Z",
+  "deadline_utc": "2026-11-04T08:30:00Z",
+  "public_quality_max_error": 0.0,
+  "build_seconds": 26.462349899986293,
+  "columns": 347,
+  "dp_min_cost": 15.468869526315881,
+  "dp_final_mask": 249,
+  "dp_quota": 6,
+  "selected_columns": 6,
+  "first_start": 1793668500.0,
+  "first_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 76.3656281,
+      "az_deg": 134.9524236
+    },
+    "duration_seconds": 595,
+    "program": "DARK",
+    "assignments": {
+      "0": "V4T004547",
+      "1": "V4T001861",
+      "2": "V4T005957",
+      "3": "V4T001888",
+      "4": "V4T005876",
+      "5": "V4T004008",
+      "6": "V4T001055",
+      "7": "V4T001086",
+      "8": "V4T000734",
+      "10": "V4T001859",
+      "12": "V4T006463",
+      "13": "V4T003654",
+      "14": "V4T002477",
+      "15": "V4T004700"
+    }
+  },
+  "planned_masks": [
+    16,
+    1,
+    8,
+    32,
+    128,
+    64
+  ],
+  "planned_intervals": [
+    [
+      1793668500.0,
+      1793669095.0
+    ],
+    [
+      1793683800.0,
+      1793683985.0
+    ],
+    [
+      1793691900.0,
+      1793692158.0
+    ],
+    [
+      1793693700.0,
+      1793694101.0
+    ],
+    [
+      1793769300.0,
+      1793771126.0
+    ],
+    [
+      1793780100.0,
+      1793780900.0
+    ]
+  ],
+  "official_geometry_passed": true,
+  "opportunity_model": "frozen same-duration scientific regret, no cumulative science credit",
+  "output_metadata_correction": "original checker label still called this a time price; the scored module uses max(0,B(t,d)-S(column))"
+}
