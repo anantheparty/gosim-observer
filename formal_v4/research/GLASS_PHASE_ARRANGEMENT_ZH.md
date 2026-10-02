@@ -34,3 +34,11 @@
 收益率含当前required奖励和科学增量的时间影子价；不能与整季总分直接相加。初始状态科学机会已很多，现有宽GPU动作在本候选族中足够好；中段出现更多因玻璃缺口与重复观测价值竞争造成的组合机会，相位枚举找到不同、更好的指向。
 
 脚本 `gpu_phase_benchmark.py`、完整四个状态与源码hash见 `gpu_phase_benchmark_results_l1.json`。全部输出光纤通过球面几何检查。下一步若纳入正式策略，需要完整同源回放验证总分、请求deadline与900秒预算；目前没有把4.07%单动作提升外推成全季提升。
+
+## 独立完整回放后端
+
+`gpu_phase_candidates.py` 的 `PhaseGPUSpatialPlanner` 先完整执行既有GPU算法，再扩充固定工作量的相位候选。只有球面精解价值严格增加时才改变动作和预测反馈；否则保留原动作。接口与现有planner相同。`gpu_phase_mode='bypass'` 完全旁路新增阶段，便于使用同一源码、同一policy和同一硬件进行比较。
+
+参数为 `gpu_phase_top_count=16`、`gpu_phase_local_target_count=24`、`gpu_phase_exact_count=64`；新增精解的3秒应急保护独立记录，正常结束按工作量。API短检验确认初始动作不变、中段收益相同，并在+.18/−.23度指向补偿后用官方FiberGrid检查全部14根光纤。
+
+2026-10-03已冻结包含请求proof缓存的最新policy，以phase/bypass成对直接回放L1，每模式900秒，输出 `results/gpu_phase_pair_20261003`。该回放不更新现有CD2 RPC服务或此前冻结的四卡基线。
