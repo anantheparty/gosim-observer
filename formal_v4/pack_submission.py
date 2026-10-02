@@ -11,6 +11,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 FILES = ["agent.py", "policy.py", "observer.project.json", "requirements.txt", "remote_planner.py",
          "research/geometry.py", "research/feedback_model.py", "research/spatial_candidates.py",
+         "research/belief_clock.py", "research/efficiency_bounds.py",
+         "research/remote_budget.py",
          "research/pointing_calibration.py", "ATTRIBUTION.md"]
 
 

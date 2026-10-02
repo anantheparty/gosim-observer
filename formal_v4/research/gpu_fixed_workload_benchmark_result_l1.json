@@ -1,0 +1,226 @@
+{
+  "parameters": {
+    "quality_scale": 0.55,
+    "program_band_quality_scale": 0.5789473684210527,
+    "gpu_anchor_count": 1024,
+    "gpu_max_candidates": 32768,
+    "gpu_refine_count": 64,
+    "gpu_refine_budget_seconds": 0.3,
+    "gpu_fixed_workload": true,
+    "gpu_exact_candidate_count": 256,
+    "gpu_refinement_steps": 32,
+    "gpu_emergency_seconds": 3.0
+  },
+  "runs": [
+    {
+      "delay_seconds_per_exact_eval": 0.0,
+      "elapsed_seconds": 0.7880493000266142,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 248,
+        "useful_targets": 4442,
+        "fixed_workload": true,
+        "exact_candidates": 225,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8908062749642446,
+        "selected_exact_rate": 0.9506273991805804,
+        "protected_exact_rate": 0.9506273991805804,
+        "prepare_seconds": 0.016078899963758886,
+        "gpu_scan_seconds": 0.5986934000393376,
+        "refine_seconds": 0.17223959998227656,
+        "planning_seconds": 0.7870120999868959
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      },
+      "action_sha256": "b99f18937a84eb56d32929274941d9945429796c6a57d6cf8f41538bc09f5cea"
+    },
+    {
+      "delay_seconds_per_exact_eval": 0.0,
+      "elapsed_seconds": 0.2475546000059694,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 248,
+        "useful_targets": 4442,
+        "fixed_workload": true,
+        "exact_candidates": 225,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8908062749642446,
+        "selected_exact_rate": 0.9506273991805804,
+        "protected_exact_rate": 0.9506273991805804,
+        "prepare_seconds": 0.015087799984030426,
+        "gpu_scan_seconds": 0.057949099980760366,
+        "refine_seconds": 0.17348420002963394,
+        "planning_seconds": 0.24652119999518618
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      },
+      "action_sha256": "b99f18937a84eb56d32929274941d9945429796c6a57d6cf8f41538bc09f5cea"
+    },
+    {
+      "delay_seconds_per_exact_eval": 0.002,
+      "elapsed_seconds": 0.8589329000096768,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 248,
+        "useful_targets": 4442,
+        "fixed_workload": true,
+        "exact_candidates": 225,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8908062749642446,
+        "selected_exact_rate": 0.9506273991805804,
+        "protected_exact_rate": 0.9506273991805804,
+        "prepare_seconds": 0.015337999968323857,
+        "gpu_scan_seconds": 0.05342060001567006,
+        "refine_seconds": 0.7890830000396818,
+        "planning_seconds": 0.8578417000244372
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      },
+      "action_sha256": "b99f18937a84eb56d32929274941d9945429796c6a57d6cf8f41538bc09f5cea"
+    },
+    {
+      "delay_seconds_per_exact_eval": 0.0,
+      "elapsed_seconds": 0.24986560002435,
+      "stats": {
+        "backend": "numba-cuda-float64",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_candidates": 16384,
+        "gpu_durations": 19,
+        "cpu_refinements": 248,
+        "useful_targets": 4442,
+        "fixed_workload": true,
+        "exact_candidates": 225,
+        "refinement_probes": 32,
+        "emergency_triggered": false,
+        "max_coarse_rate": 0.8908062749642446,
+        "selected_exact_rate": 0.9506273991805804,
+        "protected_exact_rate": 0.9506273991805804,
+        "prepare_seconds": 0.015016300021670759,
+        "gpu_scan_seconds": 0.057298999978229403,
+        "refine_seconds": 0.17654230003245175,
+        "planning_seconds": 0.2488578000338748
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5724057,
+          "az_deg": 86.9946852
+        },
+        "assignments": {
+          "0": "V4T000506",
+          "1": "V4T003162",
+          "2": "V4T006622",
+          "3": "V4T003309",
+          "4": "V4T005082",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T000968",
+          "8": "V4T000305",
+          "9": "V4T004057",
+          "10": "V4T006676",
+          "11": "V4T000165",
+          "12": "V4T001815",
+          "13": "V4T003573",
+          "14": "V4T005506",
+          "15": "V4T000855"
+        },
+        "duration_seconds": 112,
+        "program": "DARK"
+      },
+      "action_sha256": "b99f18937a84eb56d32929274941d9945429796c6a57d6cf8f41538bc09f5cea"
+    }
+  ],
+  "identical_actions": true,
+  "identical_work_counts": true,
+  "source_sha256": {
+    "gpu_spatial_candidates.py": "be40d57f254fdfbf04402c6978653bd5b88fd221e01e8a1c97cf330ed3c3eb7a",
+    "spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  }
+}

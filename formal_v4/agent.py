@@ -37,6 +37,8 @@ def main():
             if policy:
                 print(json.dumps(policy.summary(), separators=(",", ":")), file=sys.stderr, flush=True)
             break
+    if policy and policy.remote:
+        policy.remote.close()
 
 
 if __name__ == "__main__":

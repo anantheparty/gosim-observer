@@ -1,0 +1,353 @@
+{
+  "schema": "public-catalog-seed-pilot-v1",
+  "scope": "only public/config files; no truth or server reads",
+  "official_source_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+  "generator_sha256": "ffe70e0064b3b73fec787d4f3ab0895f5a4d816ab1c3888914fa4051248c8eb0",
+  "positive_control": {
+    "known_public_seed": 5021,
+    "phase_max_error_rad": 3.4988303010408117e-07,
+    "all_target_classes_exact": true,
+    "all_required_flags_exact": true,
+    "first_target_exact": true,
+    "full_targets_sha_exact": true,
+    "full_footprint_sha_exact": true
+  },
+  "seed_count": 10038,
+  "small_integer_seed_range": [
+    0,
+    10000
+  ],
+  "additional_public_date_candidates": [
+    202610,
+    20260929,
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261101,
+    20261108,
+    20261115,
+    20261122
+  ],
+  "center_pool_range": [
+    3,
+    16
+  ],
+  "modes": [
+    "sha256-v1",
+    "legacy"
+  ],
+  "phase_tolerance_rad": 0.0001,
+  "card_signature_checks": 1124256,
+  "matches": [],
+  "elapsed_seconds": 8.195,
+  "cards": {
+    "alpha": {
+      "footprint": [
+        {
+          "component_id": "C00",
+          "vertices": 40,
+          "center_ra_deg": 79.82,
+          "center_dec_deg": -17.300000119592344,
+          "harmonic_order": 3,
+          "phases_rad": [
+            4.854062176423259,
+            5.075767272533721,
+            2.5226769050628297
+          ],
+          "relative_amplitudes": [
+            0.05785245078255093,
+            0.04837081220819286,
+            0.012312164065586923
+          ],
+          "higher_amplitude_max": 9.360001567165204e-09
+        },
+        {
+          "component_id": "C01",
+          "vertices": 40,
+          "center_ra_deg": 350.32,
+          "center_dec_deg": -17.299999587152126,
+          "harmonic_order": 3,
+          "phases_rad": [
+            4.098517934337822,
+            0.28259275329808864,
+            4.776853044965751
+          ],
+          "relative_amplitudes": [
+            0.10236462934771007,
+            0.022965848609979026,
+            0.03439342070600539
+          ],
+          "higher_amplitude_max": 7.59802165123961e-09
+        },
+        {
+          "component_id": "C02",
+          "vertices": 40,
+          "center_ra_deg": 26.82,
+          "center_dec_deg": -50.39999975315941,
+          "harmonic_order": 3,
+          "phases_rad": [
+            4.451491205405719,
+            1.9273241384369064,
+            5.144706931502822
+          ],
+          "relative_amplitudes": [
+            0.13664142316056757,
+            0.08483183846806547,
+            0.0046781039193480815
+          ],
+          "higher_amplitude_max": 8.504460499004656e-09
+        }
+      ],
+      "first_night": "2026-10-04",
+      "last_night": "2026-11-10",
+      "public_file_sha256": {
+        "public/footprint.csv": "6f62b8733c3d0a405bde82a131110b28b383f01f91bac6e6324fb3f0661b8882",
+        "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+        "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+        "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd"
+      }
+    },
+    "beta": {
+      "footprint": [
+        {
+          "component_id": "C00",
+          "vertices": 40,
+          "center_ra_deg": 94.61,
+          "center_dec_deg": -14.200000470627273,
+          "harmonic_order": 3,
+          "phases_rad": [
+            3.390740630393314,
+            0.33459785834912853,
+            0.11704593013259725
+          ],
+          "relative_amplitudes": [
+            0.021206537737740203,
+            0.09960654733803341,
+            0.023052430427032283
+          ],
+          "higher_amplitude_max": 1.4123653360852081e-08
+        },
+        {
+          "component_id": "C01",
+          "vertices": 40,
+          "center_ra_deg": 356.11,
+          "center_dec_deg": -25.100000082782817,
+          "harmonic_order": 3,
+          "phases_rad": [
+            6.221962958716635,
+            5.7745924338350285,
+            3.2240119934335496
+          ],
+          "relative_amplitudes": [
+            0.14073026456398546,
+            0.00312325960042552,
+            0.055671718366191676
+          ],
+          "higher_amplitude_max": 1.4049651063715623e-08
+        },
+        {
+          "component_id": "C02",
+          "vertices": 40,
+          "center_ra_deg": 40.51,
+          "center_dec_deg": -54.09999965530881,
+          "harmonic_order": 3,
+          "phases_rad": [
+            5.7276161862914865,
+            0.3285775707506082,
+            0.006350522251900535
+          ],
+          "relative_amplitudes": [
+            0.005729665709900361,
+            0.07202509171797473,
+            0.042579554443196874
+          ],
+          "higher_amplitude_max": 8.51608559626211e-09
+        }
+      ],
+      "first_night": "2026-10-18",
+      "last_night": "2026-11-24",
+      "public_file_sha256": {
+        "public/footprint.csv": "6437c9db4bb9d71f432b5b10eb953b8df4995435b75b232734f3beb5b92bd960",
+        "public/targets.csv": "4769aa6f76cd0225d58dff58e2cf8628ec4c95c9839d946bc8a80aa23cc0b166",
+        "public/v4_night_calendar.csv": "32813747337d6d2057a93ea7bb99e90fa52d0ea2b3701f0d87a0eaf135a577b5",
+        "config/v4_scenario.json": "fbfc80887b0d50290d4bd20eb60a270111913c1cb6068a0b051010dd01c37c3c",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd"
+      }
+    },
+    "gamma": {
+      "footprint": [
+        {
+          "component_id": "C00",
+          "vertices": 40,
+          "center_ra_deg": 337.25,
+          "center_dec_deg": -18.599999704975797,
+          "harmonic_order": 3,
+          "phases_rad": [
+            4.4327341296451,
+            3.859276573988869,
+            0.9409279512641494
+          ],
+          "relative_amplitudes": [
+            0.016089623864029526,
+            0.012857976737280657,
+            0.04514822326329023
+          ],
+          "higher_amplitude_max": 1.273413015558223e-08
+        },
+        {
+          "component_id": "C01",
+          "vertices": 40,
+          "center_ra_deg": 45.75,
+          "center_dec_deg": -56.90000030653889,
+          "harmonic_order": 3,
+          "phases_rad": [
+            3.987555100562073,
+            1.2241631517669023,
+            1.3274887576317416
+          ],
+          "relative_amplitudes": [
+            0.05635830984373076,
+            0.09160055153221111,
+            0.032108358668915066
+          ],
+          "higher_amplitude_max": 1.5102689376992302e-08
+        },
+        {
+          "component_id": "C02",
+          "vertices": 40,
+          "center_ra_deg": 76.25,
+          "center_dec_deg": -15.40000048145828,
+          "harmonic_order": 3,
+          "phases_rad": [
+            1.4149079512830804,
+            5.870254579834201,
+            2.351749090284986
+          ],
+          "relative_amplitudes": [
+            0.026923357565149943,
+            0.05448302463368244,
+            0.019064138490342927
+          ],
+          "higher_amplitude_max": 1.2400801808051865e-08
+        }
+      ],
+      "first_night": "2026-10-09",
+      "last_night": "2026-11-15",
+      "public_file_sha256": {
+        "public/footprint.csv": "da1bcfe970819a110034caf5212eddad4c7342762f1f574fb90d5facbce4263b",
+        "public/targets.csv": "3de3c2e917fab98d0e81f8280f512f85dbebf4576cd611ea1efe52c8c9e2d488",
+        "public/v4_night_calendar.csv": "55da1bc4ab5dbbafd19c24abc01eedf5278b11552ecb04bd8a36c784734d6a16",
+        "config/v4_scenario.json": "2008e58fe43ed2c510466e626a1f00d52021a586f6fc6694f03fbf452e8335b1",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd"
+      }
+    },
+    "delta": {
+      "footprint": [
+        {
+          "component_id": "C00",
+          "vertices": 40,
+          "center_ra_deg": 64.78,
+          "center_dec_deg": -57.699999885784806,
+          "harmonic_order": 3,
+          "phases_rad": [
+            1.9283097412062093,
+            1.539826018169462,
+            2.169720217586446
+          ],
+          "relative_amplitudes": [
+            0.02371709081115438,
+            0.07299435907566229,
+            0.03628771468069858
+          ],
+          "higher_amplitude_max": 9.781846628571042e-09
+        },
+        {
+          "component_id": "C01",
+          "vertices": 40,
+          "center_ra_deg": 107.58,
+          "center_dec_deg": -11.000000036367709,
+          "harmonic_order": 3,
+          "phases_rad": [
+            3.469644323702184,
+            4.621273701670837,
+            3.7337304354100933
+          ],
+          "relative_amplitudes": [
+            0.02452794030561457,
+            0.06195763822913412,
+            0.05474905574441744
+          ],
+          "higher_amplitude_max": 1.3039678103787815e-08
+        },
+        {
+          "component_id": "C02",
+          "vertices": 40,
+          "center_ra_deg": 7.28,
+          "center_dec_deg": -17.19999980795475,
+          "harmonic_order": 3,
+          "phases_rad": [
+            0.03557653099475036,
+            1.203673916543166,
+            2.4506674405032203
+          ],
+          "relative_amplitudes": [
+            0.05206540725697584,
+            0.06279724369680485,
+            0.009885900141037574
+          ],
+          "higher_amplitude_max": 1.0240110669021456e-08
+        }
+      ],
+      "first_night": "2026-10-24",
+      "last_night": "2026-11-30",
+      "public_file_sha256": {
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd"
+      }
+    }
+  },
+  "unresolved_parameters": [
+    "master seed entropy/range",
+    "candidate center pool size outside tested range",
+    "possible generator version or RNG consumption changes",
+    "catalog clustering centers/count/sigma",
+    "exact flux distributions and rejection/window config",
+    "weather/request stream generator config"
+  ]
+}

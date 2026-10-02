@@ -98,6 +98,10 @@ class GPUSpatialPlanner(SpatialPlanner):
     env options: gpu_anchor_count=320, gpu_max_candidates=8192,
     gpu_refine_count=48, gpu_refine_budget_seconds=.30,
     gpu_candidate_centers (explicit centers for reproducible benchmarking).
+    gpu_fixed_workload=True replaces the normal wallclock cutoff with
+    gpu_exact_candidate_count=256 initial evaluations and
+    gpu_refinement_steps=32 spatial probes. gpu_emergency_seconds=3 is only
+    an emergency cutoff in that mode. Equal coarse rates use index order.
     CUDA context and kernels are initialized at first choose; warm up before
     allowing platform requests.  The best CPU-baseline candidates are always
     included in the refinement pool.
@@ -245,6 +249,13 @@ class GPUSpatialPlanner(SpatialPlanner):
             return None
         prepared = time.perf_counter()
         rates, durations = self.coarse_gpu(centers, useful, frame, env)
+        fixed_workload = bool(env.get("gpu_fixed_workload", False))
+
+        def ranked_top(values, maximum):
+            count = min(len(values), max(1, maximum))
+            if fixed_workload:
+                return np.lexsort((np.arange(len(values)), -values))[:count]
+            return np.argsort(values)[-count:][::-1]
         # Protect the smaller, validated candidate family from coarse-ranking
         # ties when widening the scan.  Its exact optimum and spatial refinement
         # are compared independently, so extra space candidates cannot replace
@@ -261,11 +272,11 @@ class GPUSpatialPlanner(SpatialPlanner):
                 base_rates = rates[positions]
             else:
                 base_rates, _ = self.coarse_gpu(base_centers, base_useful, frame, env)
-            base_top = np.argsort(base_rates)[-min(len(base_centers), int(env.get("gpu_refine_count", 48))):][::-1]
+            base_top = ranked_top(base_rates, int(env.get("gpu_refine_count", 48)))
             protected_centers = list(base_centers[base_top]) + self._cpu_centers
         scanned = time.perf_counter()
         self.last_candidate_centers, self.last_coarse_rates = centers, rates
-        top = np.argsort(rates)[-min(len(centers), int(env.get("gpu_refine_count", 48))):][::-1]
+        top = ranked_top(rates, int(env.get("gpu_refine_count", 48)))
         all_refinement_centers = np.round(np.asarray(protected_centers + list(centers[top]) + self._cpu_centers), 7)
         _, first_indices = np.unique(all_refinement_centers, axis=0, return_index=True)
         refinement_centers = all_refinement_centers[np.sort(first_indices)]
@@ -275,7 +286,23 @@ class GPUSpatialPlanner(SpatialPlanner):
         protected_best = None
         evaluated = 0
         refinement_budget = float(env.get("gpu_refine_budget_seconds", .30))
+        exact_limit = max(1, int(env.get("gpu_exact_candidate_count", 256)))
+        probe_limit = max(0, int(env.get("gpu_refinement_steps", 32)))
+        emergency_seconds = max(.1, float(env.get("gpu_emergency_seconds", 3.0)))
+        exact_candidates = 0
+        refinement_probes = 0
+        emergency_triggered = False
         cache = {}
+
+        def cutoff():
+            nonlocal emergency_triggered
+            elapsed = time.perf_counter() - scanned
+            if fixed_workload:
+                if elapsed > emergency_seconds:
+                    emergency_triggered = True
+                    return True
+                return False
+            return elapsed > refinement_budget
 
         def evaluate(center):
             nonlocal evaluated
@@ -289,25 +316,30 @@ class GPUSpatialPlanner(SpatialPlanner):
             return cache[key]
 
         for center in refinement_centers:
-            if best is not None and time.perf_counter() - scanned > refinement_budget:
+            if fixed_workload and exact_candidates >= exact_limit:
+                break
+            if (fixed_workload or best is not None) and cutoff():
                 break
             candidate = evaluate(center)
+            exact_candidates += 1
             if candidate and (best is None or candidate[0] > best[0]):
                 best = candidate
             if candidate and tuple(center) in protected_keys and (protected_best is None or candidate[0] > protected_best[0]):
                 protected_best = candidate
 
         def refine(seed):
+            nonlocal refinement_probes
             if seed is None:
                 return None
             local_best = seed
             for fraction in (.20, .07):
                 base = local_best[1]
                 for dn, de in ((0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (1, 1), (-1, 1), (1, -1)):
-                    if time.perf_counter() - scanned > refinement_budget:
+                    if (fixed_workload and refinement_probes >= probe_limit) or cutoff():
                         break
                     center = _shift_altaz(*base, dn * self.pitch * fraction, de * self.pitch * fraction)
                     candidate = evaluate(center)
+                    refinement_probes += 1
                     if candidate and candidate[0] > local_best[0]:
                         local_best = candidate
             return local_best
@@ -319,6 +351,8 @@ class GPUSpatialPlanner(SpatialPlanner):
         best = refine(best)
         self.stats = {"backend": "numba-cuda-float64", "device": self.device_name, "gpu_candidates": len(centers),
                       "gpu_durations": len(durations), "cpu_refinements": evaluated, "useful_targets": len(useful),
+                      "fixed_workload": fixed_workload, "exact_candidates": exact_candidates,
+                      "refinement_probes": refinement_probes, "emergency_triggered": emergency_triggered,
                       "max_coarse_rate": float(rates.max()), "selected_exact_rate": float(best[0]) if best is not None else None,
                       "protected_exact_rate": float(protected_best[0]) if protected_best is not None else None,
                       "prepare_seconds": prepared - started, "gpu_scan_seconds": scanned - prepared,

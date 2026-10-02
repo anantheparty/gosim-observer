@@ -33,3 +33,11 @@ L1公开初始化：7800目标，其中首轮4442个有价值且可见；19种�
 默认后端320 anchors、最多8192候选；服务可设置 `gpu_anchor_count=1024`、`gpu_max_candidates=32768`、`gpu_refine_count=64`、`gpu_refine_budget_seconds=0.4`，单轮约0.25秒。若实测剩余墙钟充裕，可用4096 anchors、`gpu_max_candidates=131072`，本例约0.45秒。
 
 初始化和 `choose(snapshot,best_scores,best_factors,env_estimate,active_requests)` 接口与CPU版本相同，输出动作字段和 `last_prediction` 也相同。HTTP入口需持久保留每卡的planner实例，预热CUDA，维持best-score/raw-factor反馈状态；同一planner调用应串行。
+
+## 固定工作量与复现性
+
+最初后端根据 `gpu_refine_budget_seconds` 的墙钟耗时停止CPU精解。即便数据与源码相同，机器负载也可能改变精解候选数和最终路径。2026-10-03的两套完整GPU direct回放均冻结了这一旧行为；它们衡量各自运行负载下的900秒可行结果，不能作为严格逐决策确定性的消融比较。
+
+现增加可选 `gpu_fixed_workload=True`。该模式按确定的coarse值与候选索引排序，最多精解 `gpu_exact_candidate_count=256` 个去重中心，再执行 `gpu_refinement_steps=32` 次空间探测。缓存命中不重复计算；候选不足时完成全部候选。`gpu_emergency_seconds=3.0` 只作精解阶段紧急保护，触发状态记录在stats；固定模式不再使用常规 `.3 s` 截断。默认未开启该模式，因此旧服务行为不变。新模式尚未部署到运行中的服务或完整回放套件。
+
+独立PRO6000微基准：16384候选，225个精解中心，32次空间探测，248次实际 `_evaluate`。冷热重复和人为给每次精解增加2 ms延迟后，四轮动作SHA256与工作计数完全一致；最终源码热态248–250 ms，人为减速859 ms，紧急保护均未触发。首轮含JIT788 ms。结果见 `gpu_fixed_workload_benchmark_result_l1.json`，其中保存完整源码hash。这一测试证明本状态的墙钟扰动未改变动作，不声称完整赛季已经完成逐决策复现。

@@ -112,6 +112,9 @@ class Handler(BaseHTTPRequestHandler):
                                             payload.get("env", {}), payload.get("requests", []))
                     return self.reply(200, {"action": action, "prediction": planner.last_prediction,
                                             "stats": planner.stats, "seconds": time.perf_counter() - start})
+                if self.path == "/close":
+                    SESSIONS.pop(payload.get("session"), None)
+                    return self.reply(200, {"closed": True})
                 return self.reply(404, {"error": "unknown endpoint"})
         except Exception as exc:
             # No payloads or credentials appear in logs or error replies.

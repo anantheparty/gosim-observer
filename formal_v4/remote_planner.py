@@ -81,3 +81,15 @@ class RemotePlanner:
             if self.failures >= 2:
                 self.enabled = False
             raise
+
+    def close(self):
+        try:
+            if self.session:
+                self.request("/close", {"session": self.session}, timeout=2)
+        except Exception:
+            pass
+        finally:
+            self.session = None
+            if self.connection:
+                self.connection.close()
+                self.connection = None

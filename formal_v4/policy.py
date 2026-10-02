@@ -5,6 +5,7 @@ import json
 import math
 import os
 import sys
+import time
 from collections import deque
 from datetime import timedelta
 from pathlib import Path
@@ -12,6 +13,9 @@ from pathlib import Path
 import numpy as np
 
 from research.feedback_model import ar_prior, fit_feedback, seasonal_quality
+from research.belief_clock import BeliefClock
+from research.efficiency_bounds import infer_efficiency_upper
+from research.remote_budget import RemoteBudget
 from research.geometry import (Moon, format_utc, local_sidereal_deg, lunar_factor,
                                normalized_airmass, parse_utc, radec_to_altaz)
 from research.spatial_candidates import SpatialPlanner, DIRECTION_AZ
@@ -32,20 +36,27 @@ class Policy:
         self.slot_seconds = int(initial["survey"].get("slot_seconds", 900))
         self.C, self.E = seasonal_quality(parse_utc(initial["survey"]["start_utc"]).timetuple().tm_yday, p.q0)
         self.last_feedback = None
+        self.belief_clock = BeliefClock(p.nights, self.slot_seconds,
+                                       initial_time=initial["survey"]["start_utc"])
         self.last_night = -1
         self.terrain = set()
         self.notices = []
+        self.request_thresholds = {}
+        self.request_completed = {}
+        self.request_proofs_changed = False
         self.false_since_correct = 0
         self.correct_reports = 0
         self.report_count = 0
         self.last_report = None
         self.low_efficiency = deque(maxlen=12)
+        self.efficiency_witnesses = deque(maxlen=16)
         self.blocked_spots = deque(maxlen=32)
         self.last_closed = False
         self.count = 0
         self.planning_seconds = 0.
         self.config = {"planning_budget_seconds": .22, "anchor_count": 24,
-                       "duration_safety": 1.10, "repair_enabled": True}
+                       "duration_safety": 1.10, "repair_enabled": True,
+                       "use_belief_clock": True, "require_efficiency_witness": True}
         config_path = Path(__file__).with_name("policy_config.json")
         if config_path.exists():
             self.config.update(json.loads(config_path.read_text()))
@@ -57,6 +68,7 @@ class Policy:
             pass
         self.remote = None
         self.remote_check = None
+        self.remote_budget = RemoteBudget(cpu_default=float(self.config["planning_budget_seconds"]) + .04)
         remote_path = Path(__file__).with_name("remote_runtime.json")
         if remote_path.exists():
             from remote_planner import RemotePlanner
@@ -107,6 +119,8 @@ class Policy:
                 self.E = .95
                 self.C = seasonal_quality(now.timetuple().tm_yday, self.planner.q0)[0]
             self.low_efficiency.clear()
+            self.efficiency_witnesses.clear()
+            self.belief_clock.mark(now)
             self.pending = None
             return
         if result.get("action") != "observe" or not self.pending:
@@ -130,7 +144,19 @@ class Policy:
         idx = np.asarray([p.index[str(h["target_id"])] for h in hits], dtype=int)
         h_model = self._geometric_H(start, duration, idx)
         fit = fit_feedback(hits, p.weight[idx], p.flux[idx], duration, h_model,
-                           action["program"], self.initial.get("scoring", {}), self.C, self.E)
+                           action["program"], self.initial.get("scoring", {}),
+                           self.pending.get("prior_C", self.C), self.pending.get("prior_E", self.E))
+        exposure_notices = list(self.pending["notices"])
+        for message in snapshot.get("new_messages", []):
+            if message.get("record_type") == "bulletin":
+                exposure_notices.extend(message.get("notices", []))
+        # This upper bound rules out normal reference efficiency only after
+        # excluding announced direction effects/earthquake confounders.
+        if not exposure_notices and np.all([self.pending["prediction"].get(p.ids[i], {}).get("alt_deg", 0) >= 65 for i in idx]):
+            bound = infer_efficiency_upper(hits, p.weight[idx], p.flux[idx], duration,
+                                           action["program"], self.initial.get("scoring", {}))
+            if bound["strong_count"] >= 1 and bound["E_upper"] is not None:
+                self.efficiency_witnesses.append((now, float(bound["E_upper"])))
         scores = np.asarray([float(h["score"]) for h in hits])
         factors = np.asarray(fit["factor_estimates"])
         lower = np.asarray(fit["factor_lower"])
@@ -146,6 +172,7 @@ class Policy:
         if fit["informative"] and fit["loss"] < 2:
             self.C, self.E = fit["C"], fit["E"]
             self.last_feedback = now
+            self.belief_clock.mark(start + timedelta(seconds=duration / 2))
             clean = not any(n.get("event_kind") in ("earthquake", "rain", "storm") and n.get("direction") == "ALL"
                             for n in self.pending["notices"])
             if clean and len(hits) >= 3:
@@ -185,17 +212,55 @@ class Policy:
         self.scores[:] = canonical
 
     def _messages(self, snapshot):
+        # An entire wait-until interval can deliver publication and settlement
+        # together after the request has already expired. Cache its threshold
+        # before processing completion evidence, even if it is no longer active.
+        for message in snapshot.get("new_messages", []):
+            if message.get("record_type") == "observation_request":
+                self._confirm_request(message)
         for message in snapshot.get("new_messages", []):
             if message.get("record_type") == "state_resync":
                 self._resync(message)
+                for request in message.get("observation_requests", []):
+                    self._confirm_request(request)
+            if message.get("record_type") == "observation_request_result":
+                self._confirm_request(message)
             if message.get("record_type") == "bulletin" and message.get("initial"):
                 self.terrain.update(n.get("direction") for n in message.get("notices", [])
                                     if n.get("event_kind") == "terrain_obstruction")
         self.notices = (snapshot.get("latest_bulletin") or {}).get("notices", [])
         self.terrain.update(n.get("direction") for n in self.notices if n.get("event_kind") == "terrain_obstruction")
         for req in snapshot.get("active_requests", []):
-            threshold = float(req.get("completion_factor_threshold", .5))
-            for target in req.get("completed_target_ids", []):
+            self._confirm_request(req)
+        self._apply_request_proofs()
+
+    def _confirm_request(self, request):
+        request_id = request.get("request_id")
+        threshold = float(request.get("completion_factor_threshold", self.request_thresholds.get(request_id, 0)))
+        if threshold <= 0:
+            return
+        self.request_thresholds[request_id] = threshold
+        if "completed_target_ids" in request:
+            completed = set(request["completed_target_ids"])
+            if completed != self.request_completed.get(request_id, set()):
+                self.request_proofs_changed = True
+            # Revised results replace the set; invalidated targets are revoked.
+            self.request_completed[request_id] = completed
+
+    def _apply_request_proofs(self):
+        if self.request_proofs_changed:
+            self.factors.fill(0)
+            self.factor_lower.fill(0)
+            for entry in self.ledger:
+                if entry["valid"]:
+                    np.maximum.at(self.factors, entry["idx"], entry["factor"])
+                    np.maximum.at(self.factor_lower, entry["idx"], entry["lower"])
+            self.request_proofs_changed = False
+        # Unchanged expired-request results are not re-announced by the engine.
+        # Their latest authoritative proof survives an unrelated invalidation.
+        for request_id, completed in self.request_completed.items():
+            threshold = self.request_thresholds[request_id]
+            for target in completed:
                 if target in self.planner.index:
                     i = self.planner.index[target]
                     self.factors[i] = max(self.factors[i], threshold)
@@ -214,11 +279,15 @@ class Policy:
         low = float(np.median([x[1] for x in evidence[-4:]]))
         free = int(self.initial.get("scoring", {}).get("reporting", {}).get("false_report_free_allowance", 0))
         allowed = self.false_since_correct < free
-        if allowed and low < .68:
+        witnesses = [x for x in self.efficiency_witnesses if (now - x[0]).total_seconds() <= 7200]
+        witnessed = len(witnesses) >= 2 and np.median([x[1] for x in witnesses[-3:]]) < .8
+        suspected = witnessed if self.config.get("require_efficiency_witness", True) else low < .68
+        if allowed and suspected:
             self.report_count += 1
             self.last_report = now
             self.pending = {"action": {"action": "report"}}
             self.low_efficiency.clear()
+            self.efficiency_witnesses.clear()
             return True
         return False
 
@@ -266,7 +335,9 @@ class Policy:
             return {"action": "wait", "until_utc": format_utc(p.nights[night][1])}
         seasonal_C, _ = seasonal_quality(now.timetuple().tm_yday, p.q0)
         elapsed_slots = ((now - self.last_feedback).total_seconds() / self.slot_seconds) if self.last_feedback else 0
-        C, E = ar_prior(self.C, self.E, elapsed_slots, seasonal_C, new_night=night != self.last_night)
+        C, E = (self.belief_clock.prior(self.C, self.E, now, seasonal_C)
+                if self.config.get("use_belief_clock", True)
+                else ar_prior(self.C, self.E, elapsed_slots, seasonal_C, new_night=night != self.last_night))
         self.last_night = night
         closed = any(n.get("event_kind") in ("rain", "storm") and n.get("direction") == "ALL" for n in self.notices)
         if closed or self.last_closed:
@@ -285,12 +356,15 @@ class Policy:
             env["pointing_offset_alt_deg"], env["pointing_offset_az_deg"] = estimate[:2]
         wallclock = snapshot.get("wallclock", {})
         time_remaining = float(wallclock.get("remaining_seconds", 900))
-        fraction_remaining = max(.01, (len(p.nights) - night - 1 + remaining / 28800) / len(p.nights))
+        observing_remaining = sum(max(0., (b - max(now, a)).total_seconds()) for a, b in p.nights)
+        observing_total = sum((b - a).total_seconds() for a, b in p.nights)
+        fraction_remaining = max(.01, observing_remaining / max(1., observing_total))
         estimated_decisions = max(30, 2200 * fraction_remaining)
         env["planning_budget_seconds"] = min(float(env["planning_budget_seconds"]), max(.012, .5 * time_remaining / estimated_decisions))
         action = None
         remote_success = False
-        if self.remote and self.remote.enabled and time_remaining > 10:
+        if self.remote and self.remote.enabled and self.remote_budget.allow(time_remaining, estimated_decisions):
+            remote_started = time.perf_counter()
             try:
                 remote_result = self.remote.choose(snapshot, self.scores, self.factor_lower, env,
                                                    snapshot.get("active_requests", []))
@@ -300,13 +374,18 @@ class Policy:
                 remote_success = True
             except Exception as exc:
                 print(json.dumps({"remote_failure": type(exc).__name__}, separators=(",", ":")), file=sys.stderr, flush=True)
+            finally:
+                self.remote_budget.record_remote(time.perf_counter() - remote_started)
         if not remote_success:
+            local_started = time.perf_counter()
             action = p.choose(snapshot, self.scores, self.factor_lower, env, snapshot.get("active_requests", []))
+            self.remote_budget.record_cpu(time.perf_counter() - local_started)
         self.planning_seconds += p.stats.get("planning_seconds", 0)
         if action is None:
             self.pending = None
             return {"action": "wait", "until_utc": format_utc(now + timedelta(seconds=min(900, remaining)))}
-        self.pending = {"action": action, "start": now, "prediction": dict(p.last_prediction), "notices": list(self.notices)}
+        self.pending = {"action": action, "start": now, "prediction": dict(p.last_prediction),
+                        "notices": list(self.notices), "prior_C": C, "prior_E": E}
         return action
 
     def summary(self):
@@ -316,4 +395,5 @@ class Policy:
                 "planning_seconds": round(self.planning_seconds, 3), "C": round(self.C, 4), "E": round(self.E, 4),
                 "remote_check": self.remote_check,
                 "remote_calls": self.remote.calls if self.remote else 0,
-                "remote_seconds": round(self.remote.seconds, 3) if self.remote else 0}
+                "remote_seconds": round(self.remote.seconds, 3) if self.remote else 0,
+                "remote_budget": self.remote_budget.summary() if self.remote else None}
