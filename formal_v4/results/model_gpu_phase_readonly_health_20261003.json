@@ -1,0 +1,147 @@
+{
+  "schema": "phase-service-relay-readonly-health-v1",
+  "checked_at_utc": "2026-10-02T22:53:43.663828+00:00",
+  "checks": {
+    "wsl_phase_service": {
+      "success": true,
+      "records": [
+        {
+          "status": 200,
+          "seconds": 0.0023679269943386316,
+          "health": {
+            "ok": true,
+            "gpu_available": true,
+            "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+            "gpu_backend_ready": true,
+            "protocol": "observer-search-rpc-v1",
+            "planner": "PhaseServicePlanner",
+            "phase_gate_defaults": {
+              "gpu_anchor_count": 1024,
+              "gpu_max_candidates": 32768,
+              "gpu_refine_count": 64,
+              "gpu_refine_budget_seconds": 0.3,
+              "gpu_fixed_workload": true,
+              "gpu_exact_candidate_count": 256,
+              "gpu_refinement_steps": 32,
+              "gpu_emergency_seconds": 3.0,
+              "gpu_phase_top_count": 16,
+              "gpu_phase_local_target_count": 24,
+              "gpu_phase_exact_count": 64,
+              "gpu_phase_emergency_seconds": 3.0,
+              "gpu_phase_mode": "phase"
+            },
+            "phase_gate_defaults_sha256": "9fdde225b2926106a208f6c6a8458a10bda5a1fd1ed75af9411bedc52b0e9f30"
+          }
+        }
+      ]
+    },
+    "cd2_relay": {
+      "success": true,
+      "records": [
+        {
+          "health_http": 200,
+          "seconds": 0.029761987272650003,
+          "health": {
+            "ok": true,
+            "gpu_available": true,
+            "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+            "gpu_backend_ready": true,
+            "protocol": "observer-search-rpc-v1",
+            "planner": "PhaseServicePlanner",
+            "phase_gate_defaults": {
+              "gpu_anchor_count": 1024,
+              "gpu_max_candidates": 32768,
+              "gpu_refine_count": 64,
+              "gpu_refine_budget_seconds": 0.3,
+              "gpu_fixed_workload": true,
+              "gpu_exact_candidate_count": 256,
+              "gpu_refinement_steps": 32,
+              "gpu_emergency_seconds": 3.0,
+              "gpu_phase_top_count": 16,
+              "gpu_phase_local_target_count": 24,
+              "gpu_phase_exact_count": 64,
+              "gpu_phase_emergency_seconds": 3.0,
+              "gpu_phase_mode": "phase"
+            },
+            "phase_gate_defaults_sha256": "9fdde225b2926106a208f6c6a8458a10bda5a1fd1ed75af9411bedc52b0e9f30"
+          },
+          "loopback_listeners": [
+            "LISTEN 0      5          127.0.0.1:19928      0.0.0.0:*    users:((\"python3\",pid=1802160,fd=3))",
+            "LISTEN 0      128        127.0.0.1:19926      0.0.0.0:*                                        "
+          ],
+          "adapter_lifetimes": [
+            {
+              "pid": 1802159,
+              "remaining_seconds": 10798,
+              "scheduled_expiry_utc": "2026-10-03T01:53:41.772057+00:00",
+              "backend_loopback19926": true,
+              "backend_timeout_seconds": 6
+            }
+          ],
+          "relay_key_expiry_times": [
+            "20261003020000Z"
+          ]
+        }
+      ]
+    },
+    "process_deadlines": {
+      "success": true,
+      "records": [
+        {
+          "now_utc": "2026-10-02T22:52:49.895756+00:00",
+          "lifetimes": [
+            {
+              "name": "Phase service19929",
+              "pid": 2582689,
+              "elapsed_seconds": 1704,
+              "remaining_seconds": 12696,
+              "scheduled_expiry_utc": "2026-10-03T02:24:25.895756+00:00"
+            },
+            {
+              "name": "CD2 relay19926\u219219929",
+              "pid": 2587056,
+              "elapsed_seconds": 1147,
+              "remaining_seconds": 10853,
+              "scheduled_expiry_utc": "2026-10-03T01:53:42.895756+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "owned_https_adapter": {
+      "success": true,
+      "health": {
+        "ok": true,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "gpu_backend_ready": true,
+        "protocol": "observer-search-rpc-v1",
+        "planner": "PhaseServicePlanner",
+        "phase_gate_defaults": {
+          "gpu_anchor_count": 1024,
+          "gpu_max_candidates": 32768,
+          "gpu_refine_count": 64,
+          "gpu_refine_budget_seconds": 0.3,
+          "gpu_fixed_workload": true,
+          "gpu_exact_candidate_count": 256,
+          "gpu_refinement_steps": 32,
+          "gpu_emergency_seconds": 3.0,
+          "gpu_phase_top_count": 16,
+          "gpu_phase_local_target_count": 24,
+          "gpu_phase_exact_count": 64,
+          "gpu_phase_emergency_seconds": 3.0,
+          "gpu_phase_mode": "phase"
+        },
+        "phase_gate_defaults_sha256": "9fdde225b2926106a208f6c6a8458a10bda5a1fd1ed75af9411bedc52b0e9f30"
+      },
+      "chat_seconds": 0.5048275410663337
+    },
+    "cd2_relay_initial_inspection_retry": {
+      "local_inspection_code_error": true,
+      "no_configuration_changes": true
+    }
+  },
+  "credentials_recorded": false,
+  "choose_calls": 0,
+  "configuration_changes": 0
+}

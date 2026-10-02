@@ -1,0 +1,19 @@
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:302: RuntimeWarning: divide by zero encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:302: RuntimeWarning: overflow encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:302: RuntimeWarning: invalid value encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:119: RuntimeWarning: divide by zero encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:119: RuntimeWarning: overflow encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:119: RuntimeWarning: invalid value encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:334: RuntimeWarning: divide by zero encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:334: RuntimeWarning: overflow encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+/private/tmp/gosim-v4-distributed-fallback-20261003/agent/research/request_deadline_common.py:334: RuntimeWarning: invalid value encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+{"decisions":1075,"exposures":979,"reports":1,"correct_reports":1,"best_science_sum":6086.403599,"required_missing_bound":2,"planning_seconds":290.225,"C":0.7662,"E":0.9434,"remote_check":null,"remote_calls":0,"remote_seconds":0,"remote_budget":null,"cpu_phase":{"choose_calls":983,"phase_calls":983,"phase_candidates":12613114,"phase_exact_evaluations":15728,"phase_emergency_count":0,"phase_improvements":860},"terrain":{"schema":"terrain-positive-version-space-v1","directions":["SW","SE"],"width_range":[30.0,70.0],"altitude_range":[35.0,50.0],"boxes_per_family":540,"remaining_boxes":{"SW":374,"SE":71},"positive_count":13194,"zero_feedback_ignored":222,"conditional_domain_conflicts":[],"prediction_assumption":"independent one sector per deduplicated direction; midpoint quadrature"},"terrain_feedback_exposures":979,"request_dp":{"builds":4,"build_seconds":48.13921866705641,"dp_solves":47,"dp_seconds":0.4515371238812804,"request_observes":2,"boundary_waits":1,"clipped_baselines":3,"rejected_by_cost":0,"infeasible":0,"forecast_failures":0,"cached_requests":2,"model":"full-deadline finite columns; frozen same-duration scientific regret"},"distributed_request":{"remote_baselines":0,"cpu_baselines":983,"forced_cpu_crops":3,"transport_failures":0,"cpu_baseline_seconds":241.6096343328245,"remote_baseline_seconds":0.0,"budget":{"accepted":0,"skipped":0,"initialization_seconds":0.0,"observed_remote_seconds":0.0,"failed_initializations":0},"cpu_sample_scope":"actual baseline search only; excludes transport, REQ pool and DP"}}
