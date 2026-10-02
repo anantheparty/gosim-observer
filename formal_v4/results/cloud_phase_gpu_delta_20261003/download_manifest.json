@@ -1,0 +1,150 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-02T23:12:04.700938+00:00",
+  "source": "private platform practice evaluation download",
+  "project": "Observer Phase GPU",
+  "task_card": "delta",
+  "submission_file": "observer_phase_gpu.zip",
+  "submission_zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+  "platform_source_digest": "7f00671b877ee119c466e2dc234192d4ab580bbc6f4a1a18cc8379218d67fcda",
+  "source_digest_evidence": "parent confirmed current full four-card evaluation uses the previously checked a6fc prepared candidate; download outputs do not contain fingerprint",
+  "deployment_record": {
+    "path": "formal_v4/results/model_gpu_phase_submission_20261003.json",
+    "sha256": "2f99ded1971c43d56166d4feaba7e95b3b045aea373ffae87b5c066a7a3a9bcf"
+  },
+  "download_file": "gosim_phase_gpu_delta_result.zip",
+  "download_zip_sha256": "4a0855d69339f4eee8b3e32d98489db637476c6590d56184c7d0e14c5fc08576",
+  "download_bytes": 434173,
+  "download_root": "AGENTIC-OBSERVER26-runner-10-participant-7afaf76f63f441738f78439d9ed3bbe6-9caa1b102f48579bebd752d4eb36fd931a6981c3",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "78a296a4dca7aeca114f8ae48c4a372281073f3b2916136981572bf6209e6f1c",
+    "agent.log": "88cc0ebbca2e02eb8bf26d0d127cdbb5014919f60903b4710a3183d4697bcfd8",
+    "decisions.csv": "2a0f98f0e1ac7ec97045580aa7c867237fd0a7bb655ce07f0b4f4f17d053daee",
+    "messages.jsonl": "1155c84610f2ca4120e1c25caba1e5e64e0aa6e9ba698f1c7ce39464454eb907",
+    "observations.csv": "d77819bc2f6b03426d6f951ee024ac4211a9c3508739a905a75969a8bf33f8ea",
+    "score_report.json": "9f1ef4b9547a7bc39389bb9533ffb4e851e92e52f31d99ef31bc34ab0e144332",
+    "workflow_result.json": "3055f34acaba65630a4f3388ea8ccba3864a221038a6f13dfd141ce9da44a6cf"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "78a296a4dca7aeca114f8ae48c4a372281073f3b2916136981572bf6209e6f1c",
+    "agent.log": "88cc0ebbca2e02eb8bf26d0d127cdbb5014919f60903b4710a3183d4697bcfd8",
+    "decisions.csv": "2a0f98f0e1ac7ec97045580aa7c867237fd0a7bb655ce07f0b4f4f17d053daee",
+    "messages.jsonl": "1155c84610f2ca4120e1c25caba1e5e64e0aa6e9ba698f1c7ce39464454eb907",
+    "observations.csv": "d77819bc2f6b03426d6f951ee024ac4211a9c3508739a905a75969a8bf33f8ea",
+    "score_report.json": "9f1ef4b9547a7bc39389bb9533ffb4e851e92e52f31d99ef31bc34ab0e144332",
+    "workflow_result.json": "3055f34acaba65630a4f3388ea8ccba3864a221038a6f13dfd141ce9da44a6cf"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 405843,
+    "agent.log": 1136,
+    "decisions.csv": 149413,
+    "messages.jsonl": 608983,
+    "observations.csv": 876942,
+    "score_report.json": 3031,
+    "workflow_result.json": 3754
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 405843,
+    "agent.log": 1136,
+    "decisions.csv": 149413,
+    "messages.jsonl": 608983,
+    "observations.csv": 876942,
+    "score_report.json": 3031,
+    "workflow_result.json": 3754
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-practice-delta",
+    "total": 5206.005545,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -950.0,
+      "sum_best_scores": 5965.7306,
+      "uniformity_penalty": -9.725055
+    },
+    "counts": {
+      "decisions": 1751,
+      "invalidated_observations": 252,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 13784,
+      "observe_actions": 1000,
+      "required_missing": 19,
+      "targets_observed": 8181
+    },
+    "termination_reason": "survey_complete",
+    "accounted_wallclock_seconds": 365.121,
+    "agent_wallclock_seconds": 357.649,
+    "wallclock_limit_seconds": 900.0,
+    "remote_check": {
+      "remote_check": "failed",
+      "transport": "official-compatible-api",
+      "exception": "TimeoutError",
+      "seconds": 12.009
+    },
+    "remote_calls": 0,
+    "remote_budget": null,
+    "cpu_phase": {
+      "choose_calls": 1000,
+      "phase_calls": 1000,
+      "phase_candidates": 12864601,
+      "phase_exact_evaluations": 16000,
+      "phase_emergency_count": 0,
+      "phase_improvements": 877
+    },
+    "actual_planning_path": "CPU Phase fallback after initial health failure; no GPU planning calls",
+    "prior_same_delta_comparison": {
+      "path": "formal_v4/results/cloud_cd2_delta_20261003/score_report.json",
+      "score_report_sha256": "46369b0ea6606984cd20133357f6afc9df005e6ed3fe968c1b209590741d0cc8",
+      "total": 4818.222318,
+      "total_delta": 387.783227,
+      "same_scenario_sha256": true,
+      "different_program_and_trajectory": true,
+      "GPU_gain_claimed": false
+    }
+  },
+  "startup_timeout_analysis": {
+    "facts": [
+      "Current check() marks transport disabled after one health error; Policy then sets its remote to None.",
+      "The two-failure rule applies only to choose attempts after successful health.",
+      "Free public-test health took 11.133 seconds; this card health timed out after 12.009 seconds with a 12-second configured limit.",
+      "Owned HTTPS four-concurrent choose gate max3.519 seconds does not measure official model-gateway/temporary-page-relay overhead."
+    ],
+    "inference": "Four-card gateway/temporary relay queueing or startup scheduling is compatible with these timings, but is not proven without matching gateway/page traces.",
+    "raising_health_timeout_alone": "May allow slow startup health to finish, but cannot guarantee later initialize/choose deadlines or prevent two choose failures from disabling remote. It consumes additional actual startup wallclock.",
+    "candidate_config_kept_unchanged": {
+      "health_timeout_seconds": 12,
+      "initialize_timeout_seconds": 75,
+      "timeout_seconds": 10
+    },
+    "wait_for_other_three_logs_before_changing_health": true
+  },
+  "archive_operation": {
+    "UI_changes": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "source_changes": 0,
+    "git_index_mutations": 0
+  }
+}

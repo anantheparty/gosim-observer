@@ -1,0 +1,134 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-02T23:18:57.832064+00:00",
+  "source": "private platform practice evaluation download",
+  "project": "Observer Phase GPU",
+  "task_card": "alpha",
+  "submission_file": "observer_phase_gpu.zip",
+  "submission_zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+  "platform_source_digest": "7f00671b877ee119c466e2dc234192d4ab580bbc6f4a1a18cc8379218d67fcda",
+  "source_digest_evidence": "parent confirmed current full four-card evaluation uses previously UI-checked a6fc prepared candidate; outputs do not contain fingerprint",
+  "deployment_record": {
+    "path": "formal_v4/results/model_gpu_phase_submission_20261003.json",
+    "sha256": "2f99ded1971c43d56166d4feaba7e95b3b045aea373ffae87b5c066a7a3a9bcf"
+  },
+  "download_file": "gosim_phase_gpu_alpha_result.zip",
+  "download_zip_sha256": "dff9ca97624628059f11e646cd7912c5b0e6ee68eeb8a40df201b7e92532aaec",
+  "download_bytes": 447966,
+  "download_root": "AGENTIC-OBSERVER26-runner-10-participant-7afaf76f63f441738f78439d9ed3bbe6-225e5f6bfd8f362612a42e07ab290b601d5e3175",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "4b5d9e79bceebe76e1d0ecdecc7c39bdbcc060ee72da3b34970e1259a6c60f85",
+    "agent.log": "faf09a4bb1c80a3a37ad9cb10be68c8aec47b19eb53a4042c9f2fe3339dee068",
+    "decisions.csv": "d7b4941c3066a9ced497c805e1e36ee8c4aa38dbc25cb03a19a3852e30a0b3a5",
+    "messages.jsonl": "10240003e846a7c7daed903babae5a9cc588107942a8f285512c6cfa2bf276b2",
+    "observations.csv": "1f924b4c4739f945c918974bea2b8f154e47a40fffe227b4be0e853804541cf0",
+    "score_report.json": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+    "workflow_result.json": "194a06c7e26821dd21e4b1bab0ea9595cdf0ea750936b3b1a86a04177b88e6e7"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "4b5d9e79bceebe76e1d0ecdecc7c39bdbcc060ee72da3b34970e1259a6c60f85",
+    "agent.log": "faf09a4bb1c80a3a37ad9cb10be68c8aec47b19eb53a4042c9f2fe3339dee068",
+    "decisions.csv": "d7b4941c3066a9ced497c805e1e36ee8c4aa38dbc25cb03a19a3852e30a0b3a5",
+    "messages.jsonl": "10240003e846a7c7daed903babae5a9cc588107942a8f285512c6cfa2bf276b2",
+    "observations.csv": "1f924b4c4739f945c918974bea2b8f154e47a40fffe227b4be0e853804541cf0",
+    "score_report.json": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+    "workflow_result.json": "194a06c7e26821dd21e4b1bab0ea9595cdf0ea750936b3b1a86a04177b88e6e7"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 475938,
+    "agent.log": 1135,
+    "decisions.csv": 163143,
+    "messages.jsonl": 265267,
+    "observations.csv": 1037807,
+    "score_report.json": 2935,
+    "workflow_result.json": 3644
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 475938,
+    "agent.log": 1135,
+    "decisions.csv": 163143,
+    "messages.jsonl": 265267,
+    "observations.csv": 1037807,
+    "score_report.json": 2935,
+    "workflow_result.json": 3644
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-practice-alpha",
+    "total": 7289.494481,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 7239.830435,
+      "uniformity_penalty": -0.335954
+    },
+    "counts": {
+      "decisions": 1877,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 16282,
+      "observe_actions": 1184,
+      "required_missing": 3,
+      "targets_observed": 9598
+    },
+    "termination_reason": "survey_complete",
+    "accounted_wallclock_seconds": 596.021,
+    "agent_wallclock_seconds": 581.654,
+    "wallclock_limit_seconds": 900.0,
+    "remote_check": {
+      "remote_check": "failed",
+      "transport": "official-compatible-api",
+      "exception": "TimeoutError",
+      "seconds": 12.02
+    },
+    "remote_calls": 0,
+    "remote_budget": null,
+    "cpu_phase": {
+      "choose_calls": 1184,
+      "phase_calls": 1184,
+      "phase_candidates": 15237982,
+      "phase_exact_evaluations": 18944,
+      "phase_emergency_count": 0,
+      "phase_improvements": 1075
+    },
+    "actual_planning_path": "CPU Phase fallback after initial health failure; no GPU planning calls",
+    "prior_same_card_comparison": {
+      "path": "formal_v4/results/cloud_cd2_alpha_20261003/score_report.json",
+      "score_report_sha256": "d92ba7092b045a24ccaceff972a6e17bbc16019ddd8d2409fd9a2fc3fa572065",
+      "total": 7094.664204,
+      "total_delta": 194.830277,
+      "same_scenario_sha256": true,
+      "different_program_and_trajectory": true,
+      "GPU_gain_claimed": false
+    }
+  },
+  "archive_operation": {
+    "UI_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}

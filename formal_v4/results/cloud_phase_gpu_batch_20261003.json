@@ -1,0 +1,206 @@
+{
+  "schema_version": "phase-gpu-four-card-official-archive-v1",
+  "archived_at_utc": "2026-10-02T23:18:57.957028+00:00",
+  "submission_zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+  "platform_source_digest": "7f00671b877ee119c466e2dc234192d4ab580bbc6f4a1a18cc8379218d67fcda",
+  "source_digest_evidence": "parent confirmed batch exact prepared version; fingerprint not in result outputs",
+  "cards": {
+    "alpha": {
+      "download_zip_sha256": "dff9ca97624628059f11e646cd7912c5b0e6ee68eeb8a40df201b7e92532aaec",
+      "output_directory": "formal_v4/results/cloud_phase_gpu_alpha_20261003",
+      "manifest_sha256": "2a03b4a4cb49a5ae718956f074189f9d4eacafdf6f7521a2e3780073199eb4ea",
+      "score_report_sha256": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+      "official_output_sha256_verified": {
+        "decisions": true,
+        "messages": true,
+        "observations": true
+      },
+      "workflow_embedded_report_matches": true,
+      "actual_runtime_token_matches": 0,
+      "total": 7289.494481,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 7239.830435,
+        "uniformity_penalty": -0.335954
+      },
+      "counts": {
+        "decisions": 1877,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 16282,
+        "observe_actions": 1184,
+        "required_missing": 3,
+        "targets_observed": 9598
+      },
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 596.021,
+      "agent_wallclock_seconds": 581.654,
+      "remote_check": {
+        "remote_check": "failed",
+        "transport": "official-compatible-api",
+        "exception": "TimeoutError",
+        "seconds": 12.02
+      },
+      "remote_calls": 0,
+      "prior_CD2_total": 7094.664204,
+      "total_delta_vs_prior_CD2": 194.830277,
+      "same_scenario_sha256": true
+    },
+    "beta": {
+      "download_zip_sha256": "2b63f5b53b8aafd7a184d29f537fef3e7dbe7cd4ed9753ce9c874844849ee072",
+      "output_directory": "formal_v4/results/cloud_phase_gpu_beta_20261003",
+      "manifest_sha256": "7e0699fdafb71d065faada5294b0c19191fe1e9b6ae3c170b0071234d09521a2",
+      "score_report_sha256": "d37b8ec3b2060c73bfdb887310cf3c2933beec73d386fbdbb5d86a049e25b387",
+      "official_output_sha256_verified": {
+        "decisions": true,
+        "messages": true,
+        "observations": true
+      },
+      "workflow_embedded_report_matches": true,
+      "actual_runtime_token_matches": 0,
+      "total": 6602.149692,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -450.0,
+        "sum_best_scores": 6853.011236,
+        "uniformity_penalty": -0.861544
+      },
+      "counts": {
+        "decisions": 1840,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15526,
+        "observe_actions": 1138,
+        "required_missing": 9,
+        "targets_observed": 9192
+      },
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 647.299,
+      "agent_wallclock_seconds": 631.639,
+      "remote_check": {
+        "remote_check": "failed",
+        "transport": "official-compatible-api",
+        "exception": "TimeoutError",
+        "seconds": 12.013
+      },
+      "remote_calls": 0,
+      "prior_CD2_total": 6333.107019,
+      "total_delta_vs_prior_CD2": 269.042673,
+      "same_scenario_sha256": true
+    },
+    "gamma": {
+      "download_zip_sha256": "d3be28ef86ef41f0506eee66f85322d43f01a2d788205bc43994835e9a3482c1",
+      "output_directory": "formal_v4/results/cloud_phase_gpu_gamma_20261003",
+      "manifest_sha256": "76c9fa05b90d9cdb4870321335a227eaa1fc44f96b482310d9548f4946a97c85",
+      "score_report_sha256": "22d3d779cc94512cf129cc91db8abfb73fbe2c430f6a966957887af8b757e781",
+      "official_output_sha256_verified": {
+        "decisions": true,
+        "messages": true,
+        "observations": true
+      },
+      "workflow_embedded_report_matches": true,
+      "actual_runtime_token_matches": 0,
+      "total": 7033.080199,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6984.890301,
+        "uniformity_penalty": -1.810101
+      },
+      "counts": {
+        "decisions": 1842,
+        "invalidated_observations": 313,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 16073,
+        "observe_actions": 1166,
+        "required_missing": 3,
+        "targets_observed": 9452
+      },
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 688.393,
+      "agent_wallclock_seconds": 672.119,
+      "remote_check": {
+        "remote_check": "failed",
+        "transport": "official-compatible-api",
+        "exception": "TimeoutError",
+        "seconds": 12.013
+      },
+      "remote_calls": 0,
+      "prior_CD2_total": 6547.568316,
+      "total_delta_vs_prior_CD2": 485.511883,
+      "same_scenario_sha256": true
+    },
+    "delta": {
+      "download_zip_sha256": "4a0855d69339f4eee8b3e32d98489db637476c6590d56184c7d0e14c5fc08576",
+      "output_directory": "formal_v4/results/cloud_phase_gpu_delta_20261003",
+      "manifest_sha256": "77962b75671ebc5f00a823e51c4786c6b5738abcbb7a240d67c8325462f4c0aa",
+      "score_report_sha256": "9f1ef4b9547a7bc39389bb9533ffb4e851e92e52f31d99ef31bc34ab0e144332",
+      "official_output_sha256_verified": {
+        "decisions": true,
+        "messages": true,
+        "observations": true
+      },
+      "workflow_embedded_report_matches": true,
+      "actual_runtime_token_matches": 0,
+      "total": 5206.005545,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -950.0,
+        "sum_best_scores": 5965.7306,
+        "uniformity_penalty": -9.725055
+      },
+      "counts": {
+        "decisions": 1751,
+        "invalidated_observations": 252,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 13784,
+        "observe_actions": 1000,
+        "required_missing": 19,
+        "targets_observed": 8181
+      },
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 365.121,
+      "agent_wallclock_seconds": 357.649,
+      "remote_check": {
+        "remote_check": "failed",
+        "transport": "official-compatible-api",
+        "exception": "TimeoutError",
+        "seconds": 12.009
+      },
+      "remote_calls": 0,
+      "prior_CD2_total": 4818.222318,
+      "total_delta_vs_prior_CD2": 387.783227,
+      "same_scenario_sha256": true
+    }
+  },
+  "aggregate": {
+    "mean_total": 6532.68247925,
+    "mean_total_exact": "6532.68247925",
+    "previous_CD2_mean_total": 6198.39046425,
+    "previous_CD2_mean_total_exact": "6198.39046425",
+    "mean_delta": 334.292015,
+    "mean_delta_exact": "334.29201500",
+    "all_four_complete": true,
+    "all_four_remote_check_timeout": true,
+    "remote_planning_calls_total": 0,
+    "all_official_hashes_verified": true,
+    "actual_runtime_token_matches": 0,
+    "interpretation": "CPU Phase fallback outcome on all cards. Difference from prior batch cannot be attributed to GPU."
+  },
+  "scope": {
+    "UI_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}
