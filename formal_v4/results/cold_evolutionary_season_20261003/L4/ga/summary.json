@@ -1,0 +1,198 @@
+{
+  "columns": 14043,
+  "delta_vs_initial_best": 63.40886100352509,
+  "delta_vs_production": 63.40886099999989,
+  "initial_best": {
+    "loss": {
+      "action_count_at_trigger": 520,
+      "end_exclusive": 237,
+      "invalidated_actions": 27,
+      "start": 210
+    },
+    "observe_actions": 951,
+    "report_settlement": 100.0,
+    "request_reward": 200.0,
+    "requests_completed": 2,
+    "required_missing": 1,
+    "science": 5622.0384151846665,
+    "total": 5869.556484996475,
+    "uniformity_penalty": 2.48193018819145
+  },
+  "limitations": [
+    "finite sampled columns; no global optimality certificate",
+    "report times fixed to unmodified production replay",
+    "L3/L4 exact loss count and local-truth offset; not online deployable",
+    "initial empty-season paths share candidate pool but do not inherit existing schedules"
+  ],
+  "method": "ga",
+  "native": {
+    "by_class": {
+      "BGS": 849.219567,
+      "ELG": 2519.550935,
+      "LRG": 1113.962818,
+      "QSO": 933.636098,
+      "Star": 219.167732
+    },
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 5635.53715,
+      "uniformity_penalty": -2.571804
+    },
+    "counts": {
+      "decisions": 1640,
+      "invalidated_observations": 355,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 12519,
+      "observe_actions": 927,
+      "required_missing": 0,
+      "targets_observed": 7968
+    },
+    "invalidations": [
+      {
+        "event_id": "V4ST0001",
+        "invalidated_observations": 355,
+        "window": [
+          206,
+          232
+        ]
+      }
+    ],
+    "observation_requests": [
+      {
+        "completed": true,
+        "completed_count": 6,
+        "completed_target_ids": [
+          "V4T003799",
+          "V4T001133",
+          "V4T003422",
+          "V4T003443",
+          "V4T001249",
+          "V4T002067"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-11-25T08:15:00Z",
+        "issued_at_utc": "2026-11-24T00:45:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0001",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T003513",
+          "V4T003799",
+          "V4T007731",
+          "V4T001133",
+          "V4T003422",
+          "V4T003443",
+          "V4T001249",
+          "V4T002067"
+        ]
+      },
+      {
+        "completed": true,
+        "completed_count": 7,
+        "completed_target_ids": [
+          "V4T003112",
+          "V4T001974",
+          "V4T006518",
+          "V4T002997",
+          "V4T004324",
+          "V4T006173",
+          "V4T003824"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-12-29T08:15:00Z",
+        "issued_at_utc": "2026-12-28T01:15:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0002",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T003112",
+          "V4T001974",
+          "V4T003989",
+          "V4T006518",
+          "V4T002997",
+          "V4T004324",
+          "V4T006173",
+          "V4T003824"
+        ]
+      }
+    ],
+    "organizer_only": {
+      "pointing_offset_deg": {
+        "alt": -0.04936833545965225,
+        "az": -0.025359112012490238
+      }
+    },
+    "scenario": "v4-l4",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "e1f2a9326c304bf22d769ba1bc2c17902ff39ec4e0749fd0f0fe261549f79df7",
+      "messages": "974a452f6e915fa3b76e6ad3e982f4b596323c603376779eb34e692047a5ac50",
+      "observations": "74707a69c4d051b934572544a65bb6d22f3a892caff5404217e8630ff4889e3f",
+      "scenario": "39c7355081024308ca027ea79f0708f77ad0ac272158aa3cc3c6f337ade07c4a"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": 5932.965346,
+    "uniformity_bands": {
+      "ra_100_110": 0.743902,
+      "ra_110_120": 0.63964,
+      "ra_120_130": 0.650273,
+      "ra_130_140": 0.555061,
+      "ra_140_150": 0.479167,
+      "ra_20_30": 0.657948,
+      "ra_30_40": 0.720982,
+      "ra_40_50": 0.743126,
+      "ra_50_60": 0.72619,
+      "ra_60_70": 0.652778,
+      "ra_70_80": 0.73956,
+      "ra_80_90": 0.725511,
+      "ra_90_100": 0.690691
+    }
+  },
+  "native_model_abs_error": 1.2215969036333263e-07,
+  "optimized_model": {
+    "loss": {
+      "action_count_at_trigger": 509,
+      "end_exclusive": 232,
+      "invalidated_actions": 26,
+      "start": 206
+    },
+    "observe_actions": 927,
+    "report_settlement": 100.0,
+    "request_reward": 200.0,
+    "requests_completed": 2,
+    "required_missing": 0,
+    "science": 5635.537149878639,
+    "total": 5932.96534587784,
+    "uniformity_penalty": 2.5718040007983722
+  },
+  "scope": "public local-card clairvoyant full-season finite candidate population experiment",
+  "seconds": 600.0,
+  "seed": 411,
+  "statistics": {
+    "crossovers": 13453,
+    "elapsed_seconds": 600.0063708748203,
+    "iterations": 24491,
+    "operators": {
+      "night": {
+        "best_improvements": 32,
+        "tries": 16026
+      },
+      "range": {
+        "best_improvements": 26,
+        "tries": 6023
+      },
+      "related": {
+        "best_improvements": 1,
+        "tries": 2442
+      }
+    }
+  }
+}

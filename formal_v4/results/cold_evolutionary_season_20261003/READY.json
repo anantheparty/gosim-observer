@@ -1,0 +1,46 @@
+{
+  "all_final_native_gates_pass": true,
+  "finished_utc": "2026-10-03T13:14:43.973077+00:00",
+  "negative_result": "GA loses to singletrajectory local search on L3 andL4; independent emptyseason seeds are also substantially weaker than production. Both are preserved.",
+  "next_step_from_profile": "CPU objective2-3ms is smaller than mutation/repair16-62ms. First accelerate interval repair/scoring of candidate marginal gains or reduce repeated occupancy scans. Batched GPU terminal scoring could process perindividual pertarget maxscore/maxfactor, valid-index masks, request bitsets, RA observedcounts, but does not address this main measured cost and changes sequential offspring cadence if batched.",
+  "same_wallclock_note": "percard GA vs local each600seconds, simultaneous8singleCPUprocesses; final iteration counts recorded separately; ps snapshots show eachpaired CPUtime differs less than1second at7min23/3min42 snapshot",
+  "search_processes_complete": true,
+  "source_sha256": {
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_profile.py": "4635267c4a23fb74535d348bf4d02d881ea9399f94a8f64ed632b9fe50f47805",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py": "499e621d5b5e495273ceaa2c932df92f6e6883594ade0b7d57008c7749696afb",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_summary.py": "4a19d388b8ccac744b8cc3e226b8a829d6ae9d40e96bf7c1e59846dd1b21ef6d"
+  },
+  "stage_paths": [
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_profile.py",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_summary.py",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003"
+  ],
+  "status": "READY",
+  "winners": {
+    "L1": {
+      "actions": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L1/ga/optimized_actions.jsonl",
+      "method": "ga",
+      "official_report": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L1/ga/optimized_native/score_report.json",
+      "total": 6418.234926
+    },
+    "L2": {
+      "actions": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L2/ga/optimized_actions.jsonl",
+      "method": "ga",
+      "official_report": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L2/ga/optimized_native/score_report.json",
+      "total": 7016.964672
+    },
+    "L3": {
+      "actions": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L3/local/optimized_actions.jsonl",
+      "method": "local",
+      "official_report": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L3/local/optimized_native/score_report.json",
+      "total": 5796.89409
+    },
+    "L4": {
+      "actions": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L4/local/optimized_actions.jsonl",
+      "method": "local",
+      "official_report": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_evolutionary_season_20261003/L4/local/optimized_native/score_report.json",
+      "total": 5937.710055
+    }
+  }
+}

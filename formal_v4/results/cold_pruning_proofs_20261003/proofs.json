@@ -1,0 +1,67 @@
+{
+  "independent_source_order": [
+    "v4_runner.py",
+    "v4_scorer.py",
+    "v4_fiber_map.py",
+    "local-cards/L1-L4 public and config",
+    "local-cards/L1-L4 truth for offline experiment",
+    "explicit incumbent observation outputs only after independent model sent"
+  ],
+  "full_problem": {
+    "controls": "Continuous commanded alt/az, integer requested duration 60..3600, one target per fiber, one program for the exposure; wait duration or wait-until; zero-time reports; early finish.",
+    "geometry": "Known per-card square 4x4 grid with gnomonic offsets, gap zero, 16 fibers, hit checked at exposure start after hidden offset. Assigned target must occupy its assigned fiber. Sidereal tracking; exact min altitude across full exposure must be >=30.",
+    "time": "Observation may span weather slots, but clips at current night end when it begins inside a slot, and at survey end. Starting in a daytime gap is legal but zero weather contribution in gap. Wait-until is expanded and messages are delivered afterwards.",
+    "science": "factor g=min(flux*duration*q/(0.5*900),1). Quality uses official finite quadrature with slot and event boundary splits, pieces <=120s, efficiency/seeing/transparency/sky/lunar/airmass and directional closures. Target science is maximum valid weight*g*program_multiplier, independent of maximum valid g.",
+    "penalties": "Required penalty 50 per required target without any valid factor>=.5; uniformity 200*(1-Jain) over per-RA-band fraction with factor>=.5. Jain is zero when all fractions zero.",
+    "requests": "Each REQ target is complete iff at least one valid exposure entirely inside [issued,deadline] has factor >= request-specific threshold. Reward is all-or-nothing once >=minimum targets complete. Expired rewards can be withdrawn or restored after data loss. Miss penalty is configured but not subtracted by current runner.",
+    "reports": "Correct report repairs one active unrepaired fault, gives +100, resets false-report count, affects future efficiency. Two subsequent false reports are free, further false reports cost150; max32 consecutive reports.",
+    "loss": "At first decision at or after trigger time, after an in-progress exposure finishes, freeze completed observe count N; invalidate indices [floor(aN),floor(bN)); no time refund. Offset is also stress truth. Only the first official data-loss row is processed.",
+    "information": "Production is partial information: bulletin/forecast/request/new messages/rounded scores, no truth, no fiber ID. Offline experiments below use allowed local truth; exact online state would additionally require current information/belief."
+  },
+  "proofs": [
+    {
+      "name": "Program profile dominance",
+      "claim": "For the same exposure time/pointing/assignments, factor and all threshold statuses are identical under each program. A componentwise greater score profile safely dominates. It preserves observe count and raw action index, so remains safe even before future data loss. If all positive-factor assigned targets have one actual band, its matching program dominates the other two."
+    },
+    {
+      "name": "Post-loss state dominance",
+      "claim": "With no future invalidation, equal time, observe count, hidden/environment information or belief, repair state, false-report/consecutive counts, and per-target threshold bits for required/Jain and each relevant request window, componentwise larger best science scores and no lower additive report settlement dominate under every common continuation. Equality of per-target bits is essential; Jain is not monotone in extra coverage."
+    },
+    {
+      "name": "Survival signature compression",
+      "claim": "For each stored exposure define its Boolean survival signature across all reachable frozen observe-count tuples at future loss triggers. Partition by target and signature; retain a representative of max score, max factor, and max factor in each relevant request window. Any concrete trigger tuple selects entire groups together, so official best, max_factors and request_factors are preserved. Observe actions themselves cannot be deleted because deletion changes future frozen N. Unknown future requests issued at/after now cannot use older exposures; already issued/expired requests need their windows preserved."
+    },
+    {
+      "name": "Science plus required resource upper bound",
+      "claim": "At a search state let b_i be best science and h_i indicate required target factor>=threshold. Per candidate a define nonnegative d_ia=max(score_ia-b_i,0)+P*1[required_i and not h_i and factor_ia>=threshold]. Any completion gain in science and required penalty relief is <= both sum_i max_remaining_a d_ia and sum_remaining_stages max_a sum_i d_ia. Taking the minimum is safe; repeats only loosen it. The implementation uses a slightly looser sum of separate per-target score and threshold maxima for the first expression. The first expression independently maximizes score and required threshold indicator over actions, which loosens rather than invalidates the bound."
+    },
+    {
+      "name": "Request reachability",
+      "claim": "A request can earn reward only if current completed targets plus union of targets with a future eligible factor>=threshold has size>=minimum. Otherwise its optimistic reward is zero. This is a necessary condition, not sufficient. No factor accumulation is allowed."
+    },
+    {
+      "name": "Jain box maximum",
+      "claim": "For bands, current threshold-covered ratios l and current-or-potentially-coverable ratios u bound every future ratio componentwise when no future invalidation. The continuous box maximum upper-bounds integer achievable counts. Set x=clip(c,l,u), with sum(x^2)=c*sum(x), found by bisection. For any feasible y, sum((x-c)*(y-x))>=0, hence x dot y>=c sum(y). Cauchy-Schwarz implies Jain(y)<=Jain(x). An intersecting positive common interval gives1; all upper bounds zero gives0. Lower ratios must be replaced by guaranteed survivors (or zero) when future loss may remove observations.",
+      "implementation_numerics": "For bisection pick c from the side Q-c*S>=0; Q/(K*c*c) is already an upper certificate before exact convergence. Add1e-12 to numerical Jain, clamp to1; all-zero lower bounds have closed form number of positive upper bands/K, fixed box uses direct Jain, and zero-c fallback uses1. B&B uses strict UB<incumbent-1e-9."
+    },
+    {
+      "name": "Finite family scope",
+      "claim": "Candidate centers/assignments/time stages are expressly prescribed. Exhaustive optimum and B&B correctness apply only to that family; neither an arrangement certificate for every continuous pointing nor a global optimum follows."
+    }
+  ],
+  "experiment": {
+    "script": "formal_v4/research/cold_pruning_proofs.py",
+    "stages": 5,
+    "duration_seconds": 900,
+    "centers": "eight REQ2 target centers plus two deterministic required target centers; all three programs and empty observe",
+    "prefix": "initial wait to REQ2 issue + 2 hours, no earlier observations or reports; no future loss; finish after five stages",
+    "validation": "Every retained full-family leaf exhaustively scored, every internal upper bound compared with exact descendant maximum, raw three-stage program family compared against reduced family, winner replayed through official runner."
+  },
+  "negative_results": [
+    "First L1 four-stage version with separate science and required bounds pruned zero internal nodes despite exact program reduction. Coupling science and required resource gains remedied this.",
+    "Final five-stage L1 B&B took9.335s versus6.316s exhaustive despite70.647% leaf pruning. Direct fixed-box Jain shortcut reduced overhead, but B&B still lost. L2/L3/L4 B&B was faster.",
+    "No claim of global continuous-pointing optimality, hidden-card quality bound, or improved production score is made."
+  ],
+  "online_conditions": "Use model bounds only when future candidate profiles are true upper bounds under all relevant hidden weather/offset/belief states. Actual local truth profiles do not certify unseen platform cards.",
+  "ledger_audit_precision": "Compression audit uses six-decimal observation factors/scores as written in native CSV, with exact Python comparison on those values. The survival-signature proof applies to unrounded real contributions as well."
+}

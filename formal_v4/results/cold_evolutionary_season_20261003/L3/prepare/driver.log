@@ -1,0 +1,39 @@
+{"pid": 80861, "args": {"card": "L3", "method": "prepare", "seconds": 600, "seed": 411, "anchors": 2}}
+{"build_start": 0, "starts": 973, "columns": 1015}
+{"build_start": 100, "starts": 973, "columns": 2601}
+{"build_start": 200, "starts": 973, "columns": 4195}
+{"build_start": 300, "starts": 973, "columns": 5785}
+{"build_start": 400, "starts": 973, "columns": 7369}
+{"build_start": 500, "starts": 973, "columns": 8945}
+{"build_start": 600, "starts": 973, "columns": 10533}
+{"build_start": 700, "starts": 973, "columns": 12093}
+{"build_start": 800, "starts": 973, "columns": 13667}
+{"build_start": 900, "starts": 973, "columns": 15229}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py", line 284, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py", line 278, in main
+    s,sp,cols,seeds,reports,expected=prepare(args.card,out,args.anchors);dump(out/'run_state.json',{'pid':os.getpid(),'stage':'prepared','seconds':time.monotonic()-t,'columns':len(cols)});return
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py", line 258, in prepare
+    gate={'expected_total':expected['total'],'native_total':native['total'],'model_total':model['total'],'native_matches_source':native['total']==expected['total'],'model_abs_error':abs(model['total']-native['total']),'loss':model['loss'],'native_invalidations':native['invalidations']};dump(out/'baseline_gate.json',gate);print(json.dumps({'gate':gate}),flush=True)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_evolutionary_season.py", line 32, in dump
+    def dump(path,obj):path.write_text(json.dumps(obj,indent=2,sort_keys=True)+'\n')
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+{"pid": 81622, "args": {"card": "L3", "method": "prepare", "seconds": 600, "seed": 411, "anchors": 2}}
+{"gate": {"expected_total": 5633.730701, "native_total": 5633.730701, "model_total": 5633.730701248446, "native_matches_source": true, "model_abs_error": 2.4844575818860903e-07, "loss": {"action_count_at_trigger": 728, "start": 87, "end_exclusive": 88, "invalidated_actions": 1}, "native_invalidations": [{"event_id": "V4ST0001", "invalidated_observations": 15, "window": [87, 88]}]}}
+{"seed_source": "independent empty-season science construction", "night_order": [25, 24, 28, 29, 20, 33, 3, 18, 9, 0, 32, 8, 14, 17, 12, 26, 4, 36, 10, 30, 22, 27, 6, 5, 21, 15, 13, 1, 16, 34, 35, 19, 31, 23, 2, 7, 11], "construction_seconds": 0.09255487518385053, "objective": {"total": 785.6823767434591, "science": 4790.109183762328, "required_missing": 82, "uniformity_penalty": 4.426807018868906, "request_reward": 100.0, "requests_completed": 1, "report_settlement": 0.0, "observe_actions": 858, "loss": {"action_count_at_trigger": 577, "start": 69, "end_exclusive": 70, "invalidated_actions": 1}}}
+{"seed_source": "independent empty-season complete construction", "night_order": [7, 13, 22, 36, 31, 34, 18, 29, 2, 16, 6, 26, 24, 8, 33, 20, 35, 23, 0, 21, 11, 3, 4, 1, 30, 5, 32, 25, 19, 17, 28, 14, 12, 27, 9, 15, 10], "construction_seconds": 0.25070808292366564, "objective": {"total": 3760.665262741476, "science": 4515.365184023761, "required_missing": 17, "uniformity_penalty": 4.69992128228478, "request_reward": 100.0, "requests_completed": 1, "report_settlement": 0.0, "observe_actions": 1004, "loss": {"action_count_at_trigger": 656, "start": 78, "end_exclusive": 79, "invalidated_actions": 1}}}

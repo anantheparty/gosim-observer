@@ -1,0 +1,64 @@
+{
+  "negative_examples": {
+    "best_score_factor": 0.49,
+    "independent_max_factor": 0.51,
+    "request_completed": false,
+    "score_after_loss": 0.51,
+    "best_only_score_after_loss": 0.0,
+    "jain_before": 1.0,
+    "jain_after_extra_coverage": 0.9
+  },
+  "cases": [
+    {
+      "card": "L1",
+      "scope": "Exact maxima and REQ-window maxima for a fixed raw history and enumerated possible frozen observe counts at one future loss; observation actions themselves are preserved.",
+      "raw_entries": 13587,
+      "compressed_entries": 8287,
+      "survival_target_groups": 7666,
+      "candidate_trigger_n_min": 0,
+      "candidate_trigger_n_max": 0,
+      "frozen_trigger_n_cases_checked": 1,
+      "mismatches": 0,
+      "seconds": 0.12920450000092387,
+      "input_sha256": {
+        "results/gpu_direct_20261003/L1/observations.csv": "f1363f9feb5fef5d67a888d48ca5b6fe80c1257b19ccbf8a5a84c22f644c7601",
+        "results/gpu_direct_20261003/L1/decisions.csv": "aee364f7514f42c2b7c04b46aff90064f4807828abf464f1113cf2d50cadcd62",
+        "results/gpu_direct_20261003/L1/messages.jsonl": "dea02a71a0b1b5bf1ae42df08bf1d894a293ee388a62ffad73d4d84269de9e9c"
+      }
+    },
+    {
+      "card": "L3",
+      "scope": "Exact maxima and REQ-window maxima for a fixed raw history and enumerated possible frozen observe counts at one future loss; observation actions themselves are preserved.",
+      "raw_entries": 8635,
+      "compressed_entries": 6597,
+      "survival_target_groups": 6556,
+      "candidate_trigger_n_min": 594,
+      "candidate_trigger_n_max": 807,
+      "frozen_trigger_n_cases_checked": 214,
+      "mismatches": 0,
+      "seconds": 6.85848725005053,
+      "input_sha256": {
+        "results/gpu_phase_followup_20261003/phase/L3/observations.csv": "9931e0249ed7e216894ed8df0c3e0b90948826ef2e9c299f201a48a51fc14ef5",
+        "results/gpu_phase_followup_20261003/phase/L3/decisions.csv": "537da3613a85837989df86c629a25bc868e20ecb419b19b8d88ef2e41c33a351",
+        "results/gpu_phase_followup_20261003/phase/L3/messages.jsonl": "38a612b642009760a17366b5a422bc55552879a614bcfd73281abd1f02b89a35"
+      }
+    },
+    {
+      "card": "L4",
+      "scope": "Exact maxima and REQ-window maxima for a fixed raw history and enumerated possible frozen observe counts at one future loss; observation actions themselves are preserved.",
+      "raw_entries": 6436,
+      "compressed_entries": 5899,
+      "survival_target_groups": 5858,
+      "candidate_trigger_n_min": 436,
+      "candidate_trigger_n_max": 609,
+      "frozen_trigger_n_cases_checked": 174,
+      "mismatches": 0,
+      "seconds": 4.323289416031912,
+      "input_sha256": {
+        "results/gpu_phase_followup_20261003/phase/L4/observations.csv": "8558f499c1073f476e30782a81b0a66f807e32321dd95221346ac49cf60c0bed",
+        "results/gpu_phase_followup_20261003/phase/L4/decisions.csv": "a594fc2e62a227c9aacad5eaa8097f413c66a4e87f782b0d0012c50fc011d202",
+        "results/gpu_phase_followup_20261003/phase/L4/messages.jsonl": "6d4a693dba284bd186857f021d6691995348bc60cf0144147201cc2b41f2b066"
+      }
+    }
+  ]
+}

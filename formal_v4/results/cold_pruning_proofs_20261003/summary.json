@@ -1,0 +1,341 @@
+{
+  "jain_validation": {
+    "boxes": 400,
+    "integer_vectors": 8119,
+    "largest_violation": 0.0
+  },
+  "cards": [
+    {
+      "card": "L1",
+      "scope": "finite, prescribed pointing centers and one prescribed assignment per center; empty initial ledger; no future loss; no reports; no continuation after interval",
+      "start_utc": "2026-12-01T02:45:00+00:00",
+      "stages": 5,
+      "duration_seconds": 900,
+      "target_universe": 178,
+      "geometry_on_glass_checked": 1732,
+      "raw_stage_counts": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "retained_stage_counts": [
+        10,
+        10,
+        12,
+        13,
+        11
+      ],
+      "raw_full_family_leaves": 28629151,
+      "retained_full_family_leaves": 171600,
+      "dominated_actions": 99,
+      "exhaustive_best": -19320.364054071048,
+      "branch_bound_best": -19320.364054071048,
+      "exhaustive": {
+        "nodes": 188511,
+        "leaves": 171600,
+        "bound_checks": 16911,
+        "bound_violations": 0,
+        "largest_violation": 0.0,
+        "seconds": 6.315937584033236
+      },
+      "branch_bound": {
+        "nodes": 67280,
+        "leaves": 50369,
+        "pruned_nodes": 11021,
+        "pruned_leaves": 121231,
+        "seconds": 9.334957415936515
+      },
+      "raw_short_interval": {
+        "stages": 3,
+        "raw_best": -19408.28607873888,
+        "reduced_best": -19408.28607873888,
+        "raw": {
+          "nodes": 30784,
+          "leaves": 29791,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.4290383751504123
+        },
+        "reduced": {
+          "nodes": 1311,
+          "leaves": 1200,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.015234916005283594
+        }
+      },
+      "native_total": -19320.364054,
+      "native_counts": {
+        "decisions": 704,
+        "observe_actions": 5,
+        "observations": 63,
+        "targets_observed": 63,
+        "required_missing": 385,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 2,
+        "observation_requests_completed": 0
+      },
+      "native_components": {
+        "sum_best_scores": 29.707279,
+        "required_penalty": -19250.0,
+        "uniformity_penalty": -100.071333,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "wall_seconds": 18.066732415929437
+    },
+    {
+      "card": "L2",
+      "scope": "finite, prescribed pointing centers and one prescribed assignment per center; empty initial ledger; no future loss; no reports; no continuation after interval",
+      "start_utc": "2026-12-12T03:00:00+00:00",
+      "stages": 5,
+      "duration_seconds": 900,
+      "target_universe": 168,
+      "geometry_on_glass_checked": 2032,
+      "raw_stage_counts": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "retained_stage_counts": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "raw_full_family_leaves": 28629151,
+      "retained_full_family_leaves": 161051,
+      "dominated_actions": 100,
+      "exhaustive_best": -21219.73705782556,
+      "branch_bound_best": -21219.73705782556,
+      "exhaustive": {
+        "nodes": 177156,
+        "leaves": 161051,
+        "bound_checks": 16105,
+        "bound_violations": 0,
+        "largest_violation": 0.0,
+        "seconds": 5.86667404207401
+      },
+      "branch_bound": {
+        "nodes": 3796,
+        "leaves": 1507,
+        "pruned_nodes": 1944,
+        "pruned_leaves": 159544,
+        "seconds": 1.1145360418595374
+      },
+      "raw_short_interval": {
+        "stages": 3,
+        "raw_best": -21352.919098282866,
+        "reduced_best": -21352.919098282866,
+        "raw": {
+          "nodes": 30784,
+          "leaves": 29791,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.46396283409558237
+        },
+        "reduced": {
+          "nodes": 1464,
+          "leaves": 1331,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.016829000087454915
+        }
+      },
+      "native_total": -21219.737058,
+      "native_counts": {
+        "decisions": 800,
+        "observe_actions": 5,
+        "observations": 68,
+        "targets_observed": 68,
+        "required_missing": 422,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 2,
+        "observation_requests_completed": 0
+      },
+      "native_components": {
+        "sum_best_scores": 32.574652,
+        "required_penalty": -21100.0,
+        "uniformity_penalty": -152.31171,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "wall_seconds": 9.655942999990657
+    },
+    {
+      "card": "L3",
+      "scope": "finite, prescribed pointing centers and one prescribed assignment per center; empty initial ledger; no future loss; no reports; no continuation after interval",
+      "start_utc": "2026-12-20T03:00:00+00:00",
+      "stages": 5,
+      "duration_seconds": 900,
+      "target_universe": 169,
+      "geometry_on_glass_checked": 2270,
+      "raw_stage_counts": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "retained_stage_counts": [
+        6,
+        8,
+        8,
+        9,
+        9
+      ],
+      "raw_full_family_leaves": 28629151,
+      "retained_full_family_leaves": 31104,
+      "dominated_actions": 115,
+      "exhaustive_best": -21410.920951679727,
+      "branch_bound_best": -21410.920951679727,
+      "exhaustive": {
+        "nodes": 34999,
+        "leaves": 31104,
+        "bound_checks": 3895,
+        "bound_violations": 0,
+        "largest_violation": 0.0,
+        "seconds": 1.2291182922199368
+      },
+      "branch_bound": {
+        "nodes": 235,
+        "leaves": 81,
+        "pruned_nodes": 127,
+        "pruned_leaves": 31023,
+        "seconds": 0.07183254091069102
+      },
+      "raw_short_interval": {
+        "stages": 3,
+        "raw_best": -21632.198962886763,
+        "reduced_best": -21632.198962886763,
+        "raw": {
+          "nodes": 30784,
+          "leaves": 29791,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.4317728749010712
+        },
+        "reduced": {
+          "nodes": 439,
+          "leaves": 384,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.009419000009074807
+        }
+      },
+      "native_total": -21410.920952,
+      "native_counts": {
+        "decisions": 824,
+        "observe_actions": 5,
+        "observations": 67,
+        "targets_observed": 67,
+        "required_missing": 426,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 2,
+        "observation_requests_completed": 0
+      },
+      "native_components": {
+        "sum_best_scores": 27.823598,
+        "required_penalty": -21300.0,
+        "uniformity_penalty": -138.744549,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "wall_seconds": 3.942381832981482
+    },
+    {
+      "card": "L4",
+      "scope": "finite, prescribed pointing centers and one prescribed assignment per center; empty initial ledger; no future loss; no reports; no continuation after interval",
+      "start_utc": "2026-12-28T03:15:00+00:00",
+      "stages": 5,
+      "duration_seconds": 900,
+      "target_universe": 185,
+      "geometry_on_glass_checked": 1991,
+      "raw_stage_counts": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "retained_stage_counts": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "raw_full_family_leaves": 28629151,
+      "retained_full_family_leaves": 161051,
+      "dominated_actions": 100,
+      "exhaustive_best": -21639.436705140946,
+      "branch_bound_best": -21639.436705140946,
+      "exhaustive": {
+        "nodes": 177156,
+        "leaves": 161051,
+        "bound_checks": 16105,
+        "bound_violations": 0,
+        "largest_violation": 0.0,
+        "seconds": 4.999122583074495
+      },
+      "branch_bound": {
+        "nodes": 7921,
+        "leaves": 1958,
+        "pruned_nodes": 5243,
+        "pruned_leaves": 159093,
+        "seconds": 2.0508340829983354
+      },
+      "raw_short_interval": {
+        "stages": 3,
+        "raw_best": -21780.040825209006,
+        "reduced_best": -21780.040825209006,
+        "raw": {
+          "nodes": 30784,
+          "leaves": 29791,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.3363155419938266
+        },
+        "reduced": {
+          "nodes": 1464,
+          "leaves": 1331,
+          "bound_checks": 0,
+          "bound_violations": 0,
+          "largest_violation": 0.0,
+          "seconds": 0.01536916708573699
+        }
+      },
+      "native_total": -21639.436705,
+      "native_counts": {
+        "decisions": 848,
+        "observe_actions": 5,
+        "observations": 64,
+        "targets_observed": 64,
+        "required_missing": 431,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 2,
+        "observation_requests_completed": 0
+      },
+      "native_components": {
+        "sum_best_scores": 36.832958,
+        "required_penalty": -21550.0,
+        "uniformity_penalty": -126.269663,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "wall_seconds": 9.64024320896715
+    }
+  ]
+}
