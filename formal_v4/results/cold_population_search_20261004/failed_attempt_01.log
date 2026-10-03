@@ -1,0 +1,14 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py:130: RuntimeWarning: divide by zero encountered in matmul
+  ids=np.flatnonzero(vectors@center>=math.cos(math.radians(radius)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py:130: RuntimeWarning: overflow encountered in matmul
+  ids=np.flatnonzero(vectors@center>=math.cos(math.radians(radius)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py:130: RuntimeWarning: invalid value encountered in matmul
+  ids=np.flatnonzero(vectors@center>=math.cos(math.radians(radius)))
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py", line 252, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py", line 243, in main
+    res=probe(card,offset);results.append(res)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_population_search_20261004/probe.py", line 208, in probe
+    if i is not None: assert i in es[f], (card,rank,f,tid)
+AssertionError: ('L1', 1, 13, 'V4T003030')

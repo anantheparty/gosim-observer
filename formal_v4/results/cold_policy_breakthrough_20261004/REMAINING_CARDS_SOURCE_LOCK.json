@@ -1,0 +1,274 @@
+{
+  "schema": "terminal-report-remaining-cards-preparation-source-lock-v1",
+  "status": "FROZEN_FOR_ROOT_EXECUTION",
+  "new_source_files": {
+    "run_remaining_cards.py": "abb75757f3b89ae852894f4a1a7016651480b50b8e4e719f877745cef153e091",
+    "REMAINING_CARDS_PACKET.md": "61cf0a178481e08ec7e0e6478d031daafe9c0e973ed06b5313af9d11d9c724f8"
+  },
+  "previous_four_running_sources_unchanged": {
+    "terminal_report_agent.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3",
+    "prepare_package.py": "708a58e7eb8b1e05a892a16912e97c3b3f334a57201db2d21d3c94a67c7476e4",
+    "run_protocol.py": "0990cc8c4d00dab936468d9d5d921c5cca6990a86cfa5f235b914696c1557002",
+    "full_l3_package/terminal_report_package_lock.json": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97"
+  },
+  "previous_package_current_files": {
+    "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+    "observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+    "research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "terminal_report_package_lock.json": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97",
+    "wrapper.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3"
+  },
+  "official_READY_source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "local_references_present_and_checked": true,
+  "per_card_bindings": {
+    "L1": {
+      "reference_relative_path": "protocol_gate_remaining/L1",
+      "remote_reference": "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_gate_remaining/L1",
+      "files": {
+        "actions.jsonl": "437747a91f601ed3ca8f401e1adc2bd98307310860b4bd854918b4fb6b3aa230",
+        "score_report.json": "4340dcc7243c8fe9b79891b78bf5a6dcfe57bc6fc278aec338082109093dda71",
+        "workflow_result.json": "50801d142cc0401be76f5876752e27543697baa9cfc5f0df5ba46cefc354bd90",
+        "decisions.csv": "752d0a0a7ae3dd2dcd473247fe565148c8fe622565e95629a786200ee9884d50",
+        "messages.jsonl": "c4140a46ff05b2bb431408e693515dac3db2189b96932a8f876f0fbea0cec0dd",
+        "gate_result.json": "e8852207f7d21217cac68609aad9c9ae536327c533c2d07eb40c1b25f2e1d636"
+      },
+      "total": 6362.021539,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 6162.33341,
+        "uniformity_penalty": -0.311871
+      },
+      "parity_receipt_sha256": "aefe9795dee297c846185551e2ff53a70398c2cbd41a4690acbbf046c7d834c8"
+    },
+    "L2": {
+      "reference_relative_path": "protocol_gate_retry/L2",
+      "remote_reference": "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_gate_retry/L2",
+      "files": {
+        "actions.jsonl": "c4c37d1a588d8f8b088eb07fd0e054832b65a096ee57d7bd7b0792ce5189ba0c",
+        "score_report.json": "dd1bbb338ca5aa617a6e0724cc07cd17d694df31f2fc6c87606b4b37ad224257",
+        "workflow_result.json": "c7e8534e47dc89bb1cc8988638806c1be256983af4903e03d07df614daaffc1d",
+        "decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+        "messages.jsonl": "4ed744d3a21a8f8c7493c9f79c7fa83b4455cd1327f75767ef6b8e5865e0aaca",
+        "gate_result.json": "3a177a1dea6c470475a0a2de48340ac4085adb394280e26d64959706e2e8aa53"
+      },
+      "total": 6823.661561,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6674.649933,
+        "uniformity_penalty": -0.988373
+      },
+      "parity_receipt_sha256": "b9d3558de11da719ea3843f4a3cdd8bd5082ce24a384092642f46c98462d9b99"
+    },
+    "L4": {
+      "reference_relative_path": "protocol_gate_retry/L4",
+      "remote_reference": "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_gate_retry/L4",
+      "files": {
+        "actions.jsonl": "d95fe09f5232fc2cd52ecc93d3d519589c46b410b05c3de35fa55fa6318fcb01",
+        "score_report.json": "6f80597b9f42dd9d91ce86598a9659131a99bd918bb76abcb4eb04c7706be6ff",
+        "workflow_result.json": "e4baf9169b0fa7be9415de5a979185e18d0bb2cd2a05a4cf73a5993ead761c1a",
+        "decisions.csv": "ccfcd6a36878b3ec6553b0d512fc4806c66d66e533d67cf3df31b396643e6d15",
+        "messages.jsonl": "8d62f896b9b4685172716846c323a86566c98cb6e29f22a19c6d685bafa8e3b3",
+        "gate_result.json": "908e69bb9b128c040586aedfacbfa5dbd883b69db8c3cc9f41e7f913783fd7c9"
+      },
+      "total": 5974.281941,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 5777.717412,
+        "uniformity_penalty": -3.435472
+      },
+      "parity_receipt_sha256": "2f90814551c814d9383623b4161848888d59ebc2120275c13c4deab013106f93"
+    }
+  },
+  "reference_reviews": {
+    "L1": {
+      "card": "L1",
+      "complete_same_source_reference_valid": true,
+      "original_gate_passed": false,
+      "original_exact_score_match": false,
+      "original_expected_score": "6378.655366",
+      "actual_reference_total": 6362.021539,
+      "actual_reference_components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 6162.33341,
+        "uniformity_penalty": -0.311871
+      },
+      "original_READY_source_files": 20,
+      "native_actions": 1073,
+      "committed_decisions": 1566,
+      "observe_actions": 981,
+      "accounted_seconds": 438.485,
+      "cross_receipt_READY_actions_and_score_bytes_equal": true,
+      "cross_receipt_sha256": "aefe9795dee297c846185551e2ff53a70398c2cbd41a4690acbbf046c7d834c8",
+      "labels_read": false
+    },
+    "L2": {
+      "card": "L2",
+      "complete_same_source_reference_valid": true,
+      "original_gate_passed": false,
+      "original_exact_score_match": false,
+      "original_expected_score": "6808.224288",
+      "actual_reference_total": 6823.661561,
+      "actual_reference_components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6674.649933,
+        "uniformity_penalty": -0.988373
+      },
+      "original_READY_source_files": 20,
+      "native_actions": 1231,
+      "committed_decisions": 1791,
+      "observe_actions": 1107,
+      "accounted_seconds": 522.12,
+      "cross_receipt_READY_actions_and_score_bytes_equal": true,
+      "cross_receipt_sha256": "b9d3558de11da719ea3843f4a3cdd8bd5082ce24a384092642f46c98462d9b99",
+      "labels_read": false
+    },
+    "L4": {
+      "card": "L4",
+      "complete_same_source_reference_valid": true,
+      "original_gate_passed": false,
+      "original_exact_score_match": false,
+      "original_expected_score": "6078.613462",
+      "actual_reference_total": 5974.281941,
+      "actual_reference_components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 5777.717412,
+        "uniformity_penalty": -3.435472
+      },
+      "original_READY_source_files": 20,
+      "native_actions": 1064,
+      "committed_decisions": 1656,
+      "observe_actions": 928,
+      "accounted_seconds": 433.629,
+      "cross_receipt_READY_actions_and_score_bytes_equal": true,
+      "cross_receipt_sha256": "2f90814551c814d9383623b4161848888d59ebc2120275c13c4deab013106f93",
+      "labels_read": false
+    }
+  },
+  "small_checks": {
+    "schema": "terminal-report-remaining-card-small-checks-v1",
+    "passed": true,
+    "checks": {
+      "L1_correct_card": true,
+      "L1_correct_cpu_pair": true,
+      "L1_frozen_actor_entry": true,
+      "L1_only_two_readonly_mounts": true,
+      "L1_pinned_resources": true,
+      "L1_network_none_no_auto_remove": true,
+      "L1_reject_shared_L3_pair": true,
+      "L2_correct_card": true,
+      "L2_correct_cpu_pair": true,
+      "L2_frozen_actor_entry": true,
+      "L2_only_two_readonly_mounts": true,
+      "L2_pinned_resources": true,
+      "L2_network_none_no_auto_remove": true,
+      "L2_reject_shared_L3_pair": true,
+      "L4_correct_card": true,
+      "L4_correct_cpu_pair": true,
+      "L4_frozen_actor_entry": true,
+      "L4_only_two_readonly_mounts": true,
+      "L4_pinned_resources": true,
+      "L4_network_none_no_auto_remove": true,
+      "L4_reject_shared_L3_pair": true,
+      "zero_insert_identity_gate": true,
+      "zero_insert_mutation_rejected": true,
+      "one_insert_strict_frozen_L3_gate": true
+    },
+    "checks_passed": 24,
+    "docker_calls": 0,
+    "ssh_calls": 0,
+    "seasons_launched": 0,
+    "teacher_labels_read": false
+  },
+  "zero_insert_verifier_checks": {
+    "schema": "remaining-cards-zero-verifier-synthetic-public-reference-check-v1",
+    "passed": true,
+    "checks": {
+      "L1_zero_insert_full_verifier_pass": true,
+      "L1_zero_insert_message_mutation_rejected": true,
+      "L2_zero_insert_full_verifier_pass": true,
+      "L2_zero_insert_message_mutation_rejected": true,
+      "L4_zero_insert_full_verifier_pass": true,
+      "L4_zero_insert_message_mutation_rejected": true
+    },
+    "source": "Actual reference outputs, explicitly synthetic zero-insertion terminal summary, and mocked successful host exit/cleanup. Not an actor or environment run.",
+    "temporary_files_removed": true
+  },
+  "cpu_pairs": {
+    "L1": "20,21",
+    "L2": "22,23",
+    "L4": "16,17"
+  },
+  "cpus": 2,
+  "memory_mib": 2048,
+  "official_wallclock_seconds": 900,
+  "pinned_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "numpy_version": "2.2.6",
+  "actor_network": "none",
+  "actor_input_mounts": [
+    "readonly frozen package",
+    "readonly dependencies"
+  ],
+  "actual_actor_entry": [
+    "python3",
+    "-u",
+    "/workspace/wrapper.py"
+  ],
+  "actor_base_root": "/workspace",
+  "default_mode": "plan",
+  "explicit_execute_required": true,
+  "intervention_enabled": true,
+  "accepted_terminal_insertions": [
+    0,
+    1
+  ],
+  "control_seasons_to_run": 0,
+  "owner_cleanup": "Reuse frozen successful L3 owner-label and immutable container ID cleanup.",
+  "reported_L3_complete_evidence": {
+    "reported_by": "root",
+    "remote_receipt": "/tmp/geometry_native_20261003/results/terminal_report_20261004/repaired_L3/gate_result.json",
+    "reference_total": 6004.504542,
+    "candidate_total": 6108.908435,
+    "actual_full_season_delta": 104.403893,
+    "original_actions_equal": 1141,
+    "inserted_reports": 1,
+    "accounted_seconds": 454.047,
+    "local_receipt_not_opened_or_overwritten": true
+  },
+  "this_preparation_seasons_launched": 0,
+  "this_preparation_docker_calls": 0,
+  "this_preparation_ssh_calls": 0,
+  "this_preparation_teacher_labels_read": false,
+  "this_preparation_truth_contents_interpreted": false,
+  "cloud_deployment_authorized": false,
+  "official_aggregate_score_claimed": false,
+  "failed_IMPLEMENTATION_and_L3_outputs_preserved": true
+}

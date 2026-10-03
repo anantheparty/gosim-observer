@@ -1,0 +1,586 @@
+{
+  "schema": "cold-multiexposure-matching-v1",
+  "sanity": {
+    "random_graphs": 100,
+    "brute_force_max_error": 0.0,
+    "separated_witness": {
+      "both": 0.588,
+      "best_single": 0.562,
+      "loss": 0.025999999999999912,
+      "science_factor": 0.49,
+      "science_multiplier": 1.2,
+      "completion_factor": 0.53,
+      "completion_multiplier": 1.06
+    }
+  },
+  "results": [
+    {
+      "card": "L1",
+      "offset_seconds": 0,
+      "start_utc": "2026-11-02T00:30:00Z",
+      "end_utc": "2026-11-02T01:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 11,
+      "resources": 176,
+      "edges": 906,
+      "targets": 848,
+      "reports": 0,
+      "baseline_misses": [
+        {
+          "rank": 1,
+          "fiber": 13,
+          "target_id": "V4T003030",
+          "region": "glass",
+          "actual_fiber": 9,
+          "minimum_altitude": 35.71877451213693
+        },
+        {
+          "rank": 3,
+          "fiber": 0,
+          "target_id": "V4T003446",
+          "region": "glass",
+          "actual_fiber": 1,
+          "minimum_altitude": 54.313048341414124
+        }
+      ],
+      "values": {
+        "strong_fixed": {
+          "total": -18219.45584698999,
+          "science": 51.00095982460174,
+          "required_penalty": 18150.0,
+          "required_missing": 363,
+          "uniformity_penalty": 120.45680681459388,
+          "observed_targets": 155,
+          "completed_targets": 82
+        },
+        "sequential": {
+          "total": -18213.09508632788,
+          "science": 51.44791854185181,
+          "required_penalty": 18150.0,
+          "required_missing": 363,
+          "uniformity_penalty": 114.5430048697345,
+          "observed_targets": 159,
+          "completed_targets": 79
+        },
+        "flow_once": {
+          "total": -18212.954991185135,
+          "science": 51.58801368459931,
+          "required_penalty": 18150.0,
+          "required_missing": 363,
+          "uniformity_penalty": 114.5430048697345,
+          "observed_targets": 160,
+          "completed_targets": 79
+        },
+        "flow_refill": {
+          "total": -18212.954991185135,
+          "science": 51.58801368459931,
+          "required_penalty": 18150.0,
+          "required_missing": 363,
+          "uniformity_penalty": 114.5430048697345,
+          "observed_targets": 160,
+          "completed_targets": 79
+        }
+      },
+      "selected": "flow_once",
+      "delta_vs_strong": 6.500855804853927,
+      "flow_core_weight": 1401.5880136846001,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 14,
+      "first_action_changes": 0,
+      "actor_seconds": 3.572898624930531,
+      "edge_seconds": 0.03229779307730496,
+      "flow_seconds": 0.0038724590558558702,
+      "total_seconds": 3.645872208988294
+    },
+    {
+      "card": "L1",
+      "offset_seconds": 7200,
+      "start_utc": "2026-11-02T02:30:00Z",
+      "end_utc": "2026-11-02T03:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 13,
+      "resources": 208,
+      "edges": 1010,
+      "targets": 993,
+      "reports": 0,
+      "baseline_misses": [],
+      "values": {
+        "strong_fixed": {
+          "total": -17907.464817438882,
+          "science": 62.59148371621527,
+          "required_penalty": 17850.0,
+          "required_missing": 357,
+          "uniformity_penalty": 120.05630115509986,
+          "observed_targets": 202,
+          "completed_targets": 105
+        },
+        "sequential": {
+          "total": -17906.235137148364,
+          "science": 62.87370987889589,
+          "required_penalty": 17850.0,
+          "required_missing": 357,
+          "uniformity_penalty": 119.10884702725777,
+          "observed_targets": 202,
+          "completed_targets": 105
+        },
+        "flow_once": {
+          "total": -17906.210844555426,
+          "science": 62.89800247183397,
+          "required_penalty": 17850.0,
+          "required_missing": 357,
+          "uniformity_penalty": 119.10884702725777,
+          "observed_targets": 202,
+          "completed_targets": 105
+        },
+        "flow_refill": {
+          "total": -17906.210844555426,
+          "science": 62.89800247183397,
+          "required_penalty": 17850.0,
+          "required_missing": 357,
+          "uniformity_penalty": 119.10884702725777,
+          "observed_targets": 202,
+          "completed_targets": 105
+        }
+      },
+      "selected": "flow_once",
+      "delta_vs_strong": 1.2539728834562993,
+      "flow_core_weight": 1712.8980024718344,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 6,
+      "first_action_changes": 0,
+      "actor_seconds": 4.067151333205402,
+      "edge_seconds": 0.03128208522684872,
+      "flow_seconds": 0.0033755421172827482,
+      "total_seconds": 4.139780750032514
+    },
+    {
+      "card": "L1",
+      "offset_seconds": 14400,
+      "start_utc": "2026-11-02T04:30:00Z",
+      "end_utc": "2026-11-02T05:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 14,
+      "resources": 224,
+      "edges": 1210,
+      "targets": 1074,
+      "reports": 0,
+      "baseline_misses": [],
+      "values": {
+        "strong_fixed": {
+          "total": -17991.105067050747,
+          "science": 62.17545460193196,
+          "required_penalty": 17950.0,
+          "required_missing": 359,
+          "uniformity_penalty": 103.28052165267923,
+          "observed_targets": 218,
+          "completed_targets": 98
+        },
+        "sequential": {
+          "total": -17988.393090770565,
+          "science": 62.95474968002047,
+          "required_penalty": 17950.0,
+          "required_missing": 359,
+          "uniformity_penalty": 101.34784045058467,
+          "observed_targets": 218,
+          "completed_targets": 100
+        },
+        "flow_once": {
+          "total": -17988.393090770565,
+          "science": 62.95474968002047,
+          "required_penalty": 17950.0,
+          "required_missing": 359,
+          "uniformity_penalty": 101.34784045058467,
+          "observed_targets": 218,
+          "completed_targets": 100
+        },
+        "flow_refill": {
+          "total": -17988.393090770565,
+          "science": 62.95474968002047,
+          "required_penalty": 17950.0,
+          "required_missing": 359,
+          "uniformity_penalty": 101.34784045058467,
+          "observed_targets": 218,
+          "completed_targets": 100
+        }
+      },
+      "selected": "sequential",
+      "delta_vs_strong": 2.7119762801812612,
+      "flow_core_weight": 1612.9547496800196,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 11,
+      "first_action_changes": 0,
+      "actor_seconds": 4.583018789067864,
+      "edge_seconds": 0.03604016569443047,
+      "flow_seconds": 0.0036661250051110983,
+      "total_seconds": 4.659008749993518
+    },
+    {
+      "card": "L1",
+      "offset_seconds": 21600,
+      "start_utc": "2026-11-02T06:30:00Z",
+      "end_utc": "2026-11-02T07:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 13,
+      "resources": 208,
+      "edges": 862,
+      "targets": 862,
+      "reports": 0,
+      "baseline_misses": [
+        {
+          "rank": 1,
+          "fiber": 13,
+          "target_id": "V4T002046",
+          "region": "glass",
+          "actual_fiber": 9,
+          "minimum_altitude": 39.64836358356141
+        },
+        {
+          "rank": 3,
+          "fiber": 7,
+          "target_id": "V4T002971",
+          "region": "glass",
+          "actual_fiber": 6,
+          "minimum_altitude": 44.04092003218461
+        }
+      ],
+      "values": {
+        "strong_fixed": {
+          "total": -17807.412417874562,
+          "science": 53.47993688482469,
+          "required_penalty": 17750.0,
+          "required_missing": 355,
+          "uniformity_penalty": 110.8923547593887,
+          "observed_targets": 200,
+          "completed_targets": 78
+        },
+        "sequential": {
+          "total": -17804.310136504402,
+          "science": 54.44665422175153,
+          "required_penalty": 17750.0,
+          "required_missing": 355,
+          "uniformity_penalty": 108.75679072615566,
+          "observed_targets": 202,
+          "completed_targets": 78
+        },
+        "flow_once": {
+          "total": -17804.310136504402,
+          "science": 54.44665422175153,
+          "required_penalty": 17750.0,
+          "required_missing": 355,
+          "uniformity_penalty": 108.75679072615566,
+          "observed_targets": 202,
+          "completed_targets": 78
+        },
+        "flow_refill": {
+          "total": -17804.310136504402,
+          "science": 54.44665422175153,
+          "required_penalty": 17750.0,
+          "required_missing": 355,
+          "uniformity_penalty": 108.75679072615566,
+          "observed_targets": 202,
+          "completed_targets": 78
+        }
+      },
+      "selected": "sequential",
+      "delta_vs_strong": 3.102281370160199,
+      "flow_core_weight": 1804.446654221752,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 7,
+      "first_action_changes": 0,
+      "actor_seconds": 3.4913612089585513,
+      "edge_seconds": 0.030237915460020304,
+      "flow_seconds": 0.0031149170827120543,
+      "total_seconds": 3.559783791890368
+    },
+    {
+      "card": "L2",
+      "offset_seconds": 0,
+      "start_utc": "2026-11-09T00:30:00Z",
+      "end_utc": "2026-11-09T01:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 9,
+      "resources": 144,
+      "edges": 565,
+      "targets": 529,
+      "reports": 0,
+      "baseline_misses": [],
+      "values": {
+        "strong_fixed": {
+          "total": -20492.499278775722,
+          "science": 50.354719408292226,
+          "required_penalty": 20400.0,
+          "required_missing": 408,
+          "uniformity_penalty": 142.8539981840138,
+          "observed_targets": 132,
+          "completed_targets": 60
+        },
+        "sequential": {
+          "total": -20487.590056621342,
+          "science": 51.65000390051804,
+          "required_penalty": 20400.0,
+          "required_missing": 408,
+          "uniformity_penalty": 139.24006052186257,
+          "observed_targets": 132,
+          "completed_targets": 62
+        },
+        "flow_once": {
+          "total": -20487.36045661194,
+          "science": 51.879603909922736,
+          "required_penalty": 20400.0,
+          "required_missing": 408,
+          "uniformity_penalty": 139.24006052186257,
+          "observed_targets": 135,
+          "completed_targets": 62
+        },
+        "flow_refill": {
+          "total": -20487.36045661194,
+          "science": 51.879603909922736,
+          "required_penalty": 20400.0,
+          "required_missing": 408,
+          "uniformity_penalty": 139.24006052186257,
+          "observed_targets": 135,
+          "completed_targets": 62
+        }
+      },
+      "selected": "flow_once",
+      "delta_vs_strong": 5.138822163782606,
+      "flow_core_weight": 1151.8796039099223,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 15,
+      "first_action_changes": 0,
+      "actor_seconds": 2.19780920795165,
+      "edge_seconds": 0.019824873190373182,
+      "flow_seconds": 0.0022102498915046453,
+      "total_seconds": 2.2582688748370856
+    },
+    {
+      "card": "L2",
+      "offset_seconds": 7200,
+      "start_utc": "2026-11-09T02:30:00Z",
+      "end_utc": "2026-11-09T03:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 8,
+      "resources": 128,
+      "edges": 575,
+      "targets": 573,
+      "reports": 0,
+      "baseline_misses": [
+        {
+          "rank": 2,
+          "fiber": 14,
+          "target_id": "V4T004422",
+          "region": "outside",
+          "actual_fiber": null,
+          "minimum_altitude": 84.6827828534615
+        }
+      ],
+      "values": {
+        "strong_fixed": {
+          "total": -20143.633657344606,
+          "science": 53.474349713383276,
+          "required_penalty": 20050.0,
+          "required_missing": 401,
+          "uniformity_penalty": 147.10800705798846,
+          "observed_targets": 120,
+          "completed_targets": 77
+        },
+        "sequential": {
+          "total": -20094.15050004061,
+          "science": 53.384164749984826,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 147.53466479059415,
+          "observed_targets": 121,
+          "completed_targets": 76
+        },
+        "flow_once": {
+          "total": -20094.15050004061,
+          "science": 53.384164749984826,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 147.53466479059415,
+          "observed_targets": 121,
+          "completed_targets": 76
+        },
+        "flow_refill": {
+          "total": -20094.15050004061,
+          "science": 53.384164749984826,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 147.53466479059415,
+          "observed_targets": 121,
+          "completed_targets": 76
+        }
+      },
+      "selected": "sequential",
+      "delta_vs_strong": 49.48315730399554,
+      "flow_core_weight": 1553.3841647499842,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 3,
+      "first_action_changes": 1,
+      "actor_seconds": 2.254961292259395,
+      "edge_seconds": 0.01977066695690155,
+      "flow_seconds": 0.001775749959051609,
+      "total_seconds": 2.311821041163057
+    },
+    {
+      "card": "L2",
+      "offset_seconds": 14400,
+      "start_utc": "2026-11-09T04:30:00Z",
+      "end_utc": "2026-11-09T05:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 11,
+      "resources": 176,
+      "edges": 817,
+      "targets": 784,
+      "reports": 0,
+      "baseline_misses": [],
+      "values": {
+        "strong_fixed": {
+          "total": -20049.340564953574,
+          "science": 56.50078878499068,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 105.84135373856323,
+          "observed_targets": 169,
+          "completed_targets": 81
+        },
+        "sequential": {
+          "total": -20049.75187069987,
+          "science": 56.561746104061406,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 106.31361680392959,
+          "observed_targets": 169,
+          "completed_targets": 80
+        },
+        "flow_once": {
+          "total": -20050.568021028746,
+          "science": 56.757844096910866,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 107.32586512566007,
+          "observed_targets": 170,
+          "completed_targets": 81
+        },
+        "flow_refill": {
+          "total": -20050.568021028746,
+          "science": 56.757844096910866,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 107.32586512566007,
+          "observed_targets": 170,
+          "completed_targets": 81
+        }
+      },
+      "selected": "strong_fixed",
+      "delta_vs_strong": 0.0,
+      "flow_core_weight": 1556.75784409691,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 5,
+      "first_action_changes": 0,
+      "actor_seconds": 3.140556042548269,
+      "edge_seconds": 0.026002623606473207,
+      "flow_seconds": 0.002583166817203164,
+      "total_seconds": 3.2089353329502046
+    },
+    {
+      "card": "L2",
+      "offset_seconds": 21600,
+      "start_utc": "2026-11-09T06:30:00Z",
+      "end_utc": "2026-11-09T07:00:00Z",
+      "scope": "declared conditional nominal world; fixed strong-native physical skeleton",
+      "actions": 12,
+      "resources": 192,
+      "edges": 989,
+      "targets": 989,
+      "reports": 0,
+      "baseline_misses": [],
+      "values": {
+        "strong_fixed": {
+          "total": -20039.557269061603,
+          "science": 59.046320062515285,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 98.60358912411978,
+          "observed_targets": 189,
+          "completed_targets": 100
+        },
+        "sequential": {
+          "total": -20037.014910463713,
+          "science": 59.54543241771618,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 96.56034288142683,
+          "observed_targets": 189,
+          "completed_targets": 98
+        },
+        "flow_once": {
+          "total": -20037.014910463713,
+          "science": 59.54543241771618,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 96.56034288142683,
+          "observed_targets": 189,
+          "completed_targets": 98
+        },
+        "flow_refill": {
+          "total": -20037.014910463713,
+          "science": 59.54543241771618,
+          "required_penalty": 20000.0,
+          "required_missing": 400,
+          "uniformity_penalty": 96.56034288142683,
+          "observed_targets": 189,
+          "completed_targets": 98
+        }
+      },
+      "selected": "sequential",
+      "delta_vs_strong": 2.542358597889688,
+      "flow_core_weight": 1559.5454324177151,
+      "witness_alignment_failure_targets": [],
+      "changed_assignments": 6,
+      "first_action_changes": 0,
+      "actor_seconds": 3.927804624196142,
+      "edge_seconds": 0.028849582420662045,
+      "flow_seconds": 0.003012124914675951,
+      "total_seconds": 3.9969544999767095
+    }
+  ],
+  "source_sha256": {
+    "runs/geometry_native_20261003/release/geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+    "runs/geometry_native_20261003/release/requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "runs/geometry_native_20261003/release/ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "runs/geometry_native_20261003/release/build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "runs/geometry_native_20261003/release/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "runs/geometry_native_20261003/release/agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "runs/geometry_native_20261003/release/policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "runs/geometry_native_20261003/release/observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+    "runs/geometry_native_20261003/release/research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+    "runs/geometry_native_20261003/release/research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+    "runs/geometry_native_20261003/release/research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "runs/geometry_native_20261003/release/research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "runs/geometry_native_20261003/release/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "runs/geometry_native_20261003/release/research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "runs/geometry_native_20261003/release/research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "runs/geometry_native_20261003/release/research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "runs/geometry_native_20261003/release/research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "runs/geometry_native_20261003/release/research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "runs/geometry_native_20261003/release/research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "runs/geometry_native_20261003/release/research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "results/cold_population_search_20261004/probe.py": "c897c9f1f9a9af88085a7c2fc67529322f3c8d513f30bc0c9e2bd0f581ec12dc"
+  },
+  "hidden_truth_reads": 0,
+  "actual_season_runs": 0,
+  "gpu_jobs": 0,
+  "ssh_jobs": 0,
+  "sealed_L4_reads": 0,
+  "nominal_weather": {
+    "seeing_arcsec": 1.1,
+    "transparency": 0.88,
+    "sky_quality": 1.0,
+    "instrument_efficiency": 0.95
+  },
+  "scope": "mechanism only; no actual hidden future outcome or strong full-season superiority claimed"
+}

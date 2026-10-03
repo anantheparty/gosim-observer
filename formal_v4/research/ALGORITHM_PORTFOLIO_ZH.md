@@ -126,3 +126,12 @@ L3在源/选择冻结后，官方局部末动作packet检验条件增益 **+104.
 ### 末动作策略完整L3实际通过（07:30 JST）
 
 修复后的2CPU/2GiB/900秒官方完整L3 **6004.504542→6108.908435（+104.403893）**，accounted454.047秒，42项门检全部通过。report+100、science+4.375265、Jain改善+0.028629，required/REQ不变。移除唯一新增终局report后原1141个动作逐项相同，完整prefix、frozen尾动作、observe rank、旧loss和其他messages都同reference；仅public输入，无truth挂载。`results/cold_policy_breakthrough_20261004/complete_L3/`已保留全部真实输出并核对gate列出的SHA。这个本地真实改善不能称正式alpha–delta均分提升。当前wrapper/参数冻结，剩余L1/L2/L4一次/卡的独立回放工具正在准备，不重复control，不修改L3已锁工具。
+
+
+### 剩余门检与新的无上下文方向（07:44 JST）
+
+同一末动作wrapper/参数冻结，L1/L2/L4已于2026-10-03 22:41:57 UTC在Rhodes1各启动一次2CPU/2GiB/900秒完整intervention：PID1633392/1633393/1633394，输出`terminal_report_20261004/remaining_L1|L2|L4`，物理核20,21/22,23/16,17。三卡原READY source及自然控制通过receipt的actions/score字节相同，原历史gate只因Mac旧期待分不符标false，原记录不改写。没有重复control或L3；最新检查三个owned容器仍运行。
+
+新无context跨曝光增广匹配已收束：8个L1/L2公开nominal条件微域27.78秒；相对同图逐曝光greedy三个区间science/完整条件净增0.140095/0.024293/0.229600，一处因Jain净减0.816150；8个起点首动作均未变。100图穷举与官方完整条件结算复算一致。不追加整季/GPU；范围仅为固定强时序的joint assignment，不能否定time/field或闭环遗传策略。来源`results/cold_population_search_20261004/`。
+
+新的`cold_closed_loop_evolution`又以fork_turns="none"实际启动，先独立读正式源码，研究群体方法对闭环构造策略/结构变量的搜索；独立判断后才查portfolio。本轮尚无策略或得分结果。

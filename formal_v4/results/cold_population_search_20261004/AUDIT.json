@@ -1,0 +1,365 @@
+{
+  "schema": "cold-matching-graph-audit-v1",
+  "cases": [
+    {
+      "case": "L1_00000.json",
+      "flow_minus_sequential": {
+        "total": 0.14009514274584944,
+        "science": 0.1400951427474979,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 1,
+        "completed_targets": 0
+      },
+      "changes": [
+        {
+          "resource": 19,
+          "exposure": 1,
+          "fiber": 3,
+          "start_utc": "2026-11-02T00:32:25Z",
+          "sequential": {
+            "target_id": "V4T000016",
+            "factor": 0.6481715893001913,
+            "score": 0.23334177214806884,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T002825",
+            "factor": 0.35011772899574484,
+            "score": 0.1890635736577022,
+            "required": false
+          }
+        },
+        {
+          "resource": 25,
+          "exposure": 1,
+          "fiber": 9,
+          "start_utc": "2026-11-02T00:32:25Z",
+          "sequential": {
+            "target_id": "V4T003030",
+            "factor": 0.5841854564681332,
+            "score": 0.21030676432852796,
+            "required": true
+          },
+          "flow": {
+            "target_id": "V4T000137",
+            "factor": 0.10255003008507162,
+            "score": 0.12306003610208593,
+            "required": false
+          }
+        },
+        {
+          "resource": 114,
+          "exposure": 7,
+          "fiber": 2,
+          "start_utc": "2026-11-02T00:50:20Z",
+          "sequential": null,
+          "flow": {
+            "target_id": "V4T000016",
+            "factor": 0.6371609326294099,
+            "score": 0.22937793574658755,
+            "required": false
+          }
+        },
+        {
+          "resource": 119,
+          "exposure": 7,
+          "fiber": 7,
+          "start_utc": "2026-11-02T00:50:20Z",
+          "sequential": {
+            "target_id": "V4T002825",
+            "factor": 0.34387464149652514,
+            "score": 0.1856923064081236,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T007791",
+            "factor": 0.2545793667367621,
+            "score": 0.13747285803785153,
+            "required": false
+          }
+        },
+        {
+          "resource": 125,
+          "exposure": 7,
+          "fiber": 13,
+          "start_utc": "2026-11-02T00:50:20Z",
+          "sequential": {
+            "target_id": "V4T002565",
+            "factor": 0.21471646199152886,
+            "score": 0.11594688947542559,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T003030",
+            "factor": 0.573356865453905,
+            "score": 0.20640847156340578,
+            "required": true
+          }
+        }
+      ],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L1_07200.json",
+      "flow_minus_sequential": {
+        "total": 0.02429259293785435,
+        "science": 0.024292592938081725,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 0,
+        "completed_targets": 0
+      },
+      "changes": [
+        {
+          "resource": 92,
+          "exposure": 5,
+          "fiber": 12,
+          "start_utc": "2026-11-02T02:44:04Z",
+          "sequential": {
+            "target_id": "V4T000305",
+            "factor": 1.0,
+            "score": 0.36,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T001979",
+            "factor": 0.20011193779484135,
+            "score": 0.2401343253538096,
+            "required": false
+          }
+        },
+        {
+          "resource": 130,
+          "exposure": 8,
+          "fiber": 2,
+          "start_utc": "2026-11-02T02:48:35Z",
+          "sequential": {
+            "target_id": "V4T001979",
+            "factor": 0.1316565816936126,
+            "score": 0.15798789803233512,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T000305",
+            "factor": 0.8392949044905982,
+            "score": 0.30214616561661534,
+            "required": false
+          }
+        }
+      ],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L1_14400.json",
+      "flow_minus_sequential": {
+        "total": 0.0,
+        "science": 0.0,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 0,
+        "completed_targets": 0
+      },
+      "changes": [],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L1_21600.json",
+      "flow_minus_sequential": {
+        "total": 0.0,
+        "science": 0.0,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 0,
+        "completed_targets": 0
+      },
+      "changes": [],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L2_00000.json",
+      "flow_minus_sequential": {
+        "total": 0.22960000940292957,
+        "science": 0.22960000940469882,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 3,
+        "completed_targets": 0
+      },
+      "changes": [
+        {
+          "resource": 44,
+          "exposure": 2,
+          "fiber": 12,
+          "start_utc": "2026-11-09T00:35:27Z",
+          "sequential": {
+            "target_id": "V4T005687",
+            "factor": 0.09380575315997558,
+            "score": 0.1125669037919707,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T005098",
+            "factor": 0.27358138164128604,
+            "score": 0.09848929739086297,
+            "required": false
+          }
+        },
+        {
+          "resource": 48,
+          "exposure": 3,
+          "fiber": 0,
+          "start_utc": "2026-11-09T00:36:27Z",
+          "sequential": {
+            "target_id": "V4T007076",
+            "factor": 0.17099793166492175,
+            "score": 0.09233888309905773,
+            "required": true
+          },
+          "flow": {
+            "target_id": "V4T007126",
+            "factor": 0.04795231500247226,
+            "score": 0.05754277800296671,
+            "required": false
+          }
+        },
+        {
+          "resource": 51,
+          "exposure": 3,
+          "fiber": 3,
+          "start_utc": "2026-11-09T00:36:27Z",
+          "sequential": {
+            "target_id": "V4T004921",
+            "factor": 0.1380497045838173,
+            "score": 0.16565964550058074,
+            "required": true
+          },
+          "flow": null
+        },
+        {
+          "resource": 52,
+          "exposure": 3,
+          "fiber": 4,
+          "start_utc": "2026-11-09T00:36:27Z",
+          "sequential": {
+            "target_id": "V4T001193",
+            "factor": 0.0945814514545523,
+            "score": 0.11349774174546275,
+            "required": true
+          },
+          "flow": null
+        },
+        {
+          "resource": 54,
+          "exposure": 3,
+          "fiber": 6,
+          "start_utc": "2026-11-09T00:36:27Z",
+          "sequential": {
+            "target_id": "V4T003595",
+            "factor": 0.2899334741726925,
+            "score": 0.15656407605325395,
+            "required": false
+          },
+          "flow": null
+        },
+        {
+          "resource": 55,
+          "exposure": 3,
+          "fiber": 7,
+          "start_utc": "2026-11-09T00:36:27Z",
+          "sequential": {
+            "target_id": "V4T004741",
+            "factor": 0.21277070941024645,
+            "score": 0.11489618308153308,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T000738",
+            "factor": 0.061306611675718145,
+            "score": 0.07356793401086177,
+            "required": false
+          }
+        }
+      ],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L2_07200.json",
+      "flow_minus_sequential": {
+        "total": 0.0,
+        "science": 0.0,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 0,
+        "completed_targets": 0
+      },
+      "changes": [],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L2_14400.json",
+      "flow_minus_sequential": {
+        "total": -0.8161503288756649,
+        "science": 0.1960979928494595,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 1.0122483217304818,
+        "observed_targets": 1,
+        "completed_targets": 1
+      },
+      "changes": [
+        {
+          "resource": 52,
+          "exposure": 3,
+          "fiber": 4,
+          "start_utc": "2026-11-09T04:36:13Z",
+          "sequential": {
+            "target_id": "V4T005321",
+            "factor": 0.2113942032589515,
+            "score": 0.2536730439107418,
+            "required": false
+          },
+          "flow": {
+            "target_id": "V4T006870",
+            "factor": 0.5447166468040574,
+            "score": 0.19609799284946064,
+            "required": false
+          }
+        }
+      ],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    },
+    {
+      "case": "L2_21600.json",
+      "flow_minus_sequential": {
+        "total": 0.0,
+        "science": 0.0,
+        "required_penalty": 0.0,
+        "required_missing": 0,
+        "uniformity_penalty": 0.0,
+        "observed_targets": 0,
+        "completed_targets": 0
+      },
+      "changes": [],
+      "first_action_changes": 0,
+      "all_targets_witness_alignment_failures": []
+    }
+  ],
+  "maximum_official_value_reconstruction_error": 0.0,
+  "seconds": 0.8357892502099276,
+  "all_future_hidden_reads": 0,
+  "statement": "reconstructs the predeclared eight frozen synthetic condition domains; not new search or real season evidence"
+}
