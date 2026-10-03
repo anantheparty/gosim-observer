@@ -1,0 +1,77 @@
+{
+  "card": "L4",
+  "exit_code": 0,
+  "host_seconds": 509.7146609509946,
+  "observed_score": 5970.553373,
+  "expected_score": "6095.293215",
+  "exact_score_match": false,
+  "termination": "survey_complete",
+  "agent_seconds": 496.298,
+  "accounted_seconds": 508.315,
+  "counts": {
+    "decisions": 1660,
+    "invalidated_observations": 393,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 13039,
+    "observe_actions": 932,
+    "required_missing": 1,
+    "targets_observed": 8081
+  },
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 100.0,
+    "required_penalty": -50.0,
+    "sum_best_scores": 5722.259001,
+    "uniformity_penalty": -1.705628
+  },
+  "traceback_in_agent_log": false,
+  "command": [
+    "/usr/bin/python3",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/run_local.py",
+    "--card",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/local-cards/L4",
+    "--agent",
+    "docker run --rm --interactive --user 1000:1000 --name geometry-phase-control-l4 --cpus 2 --cpuset-cpus 6,7 --memory 2048m --memory-swap 2048m --pids-limit 128 --cap-drop=ALL --security-opt=no-new-privileges --ulimit nofile=512:512 --ulimit fsize=268435456:268435456 --read-only --tmpfs /tmp:rw,nosuid,size=256m --network none --log-driver none --mount type=bind,src=/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control,dst=/workspace,readonly --mount type=bind,src=/tmp/geometry_native_20261003/.deps,dst=/deps,readonly --workdir /workspace --env PYTHONPATH=/deps --env PYTHONDONTWRITEBYTECODE=1 --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 --env MKL_NUM_THREADS=1 python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016 python3 -u -m research.geometry_native_phase_control",
+    "--agent-cwd",
+    "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+    "--wallclock",
+    "900",
+    "--out",
+    "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_phase_control/L4",
+    "--quiet"
+  ],
+  "container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "participant_mounts": [
+    "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+    "/tmp/geometry_native_20261003/.deps"
+  ],
+  "participant_has_card_truth_mount": false,
+  "protocol_resource_passed": true,
+  "passed": true,
+  "source_sha256": {
+    "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "build_manifest.json": "b27395259b5a7bdd630c83daa27dc1877ee3c295cf500aa59438f73ce8f1bd40",
+    "observer.project.json": "e663b574abe364d77140e1a5ddaffad2979e06ebf785a12dc47892aa71c7931f",
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/geometry_native_phase_control.py": "5b00f10d00b068e18f6f13ac3346be958c76dd277ef3f8c76717d8b12b416888",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  },
+  "output_sha256": {
+    "actions.jsonl": "a00e823d0ffbe59ed0e4d0a7b7003b3e03fc4fe1645cc3885205dc5d5a310b46",
+    "decisions.csv": "ada08bd31a43dd252d50b6258398b722c95ed3ae5b6b0b8a777ce5c8693d3550",
+    "observations.csv": "6d775a9e61c3ae5cc6d98a99da461bdd5374ab3c4c8ca613e552d16d8cfc1c1e",
+    "score_report.json": "56549782cdf2e9b537d6a2f637110d0a9ca367dc60c2c03f3e5a967ad08cc596",
+    "workflow_result.json": "ac748fa73a357b1b056db23cc5a9f22b1ff1800150d349b48fa50c42b6dc0b5d"
+  }
+}

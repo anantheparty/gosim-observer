@@ -1,0 +1,245 @@
+{
+  "deployment_rejected_on_fixed_L2_validation": true,
+  "validation_card": "L2",
+  "heldout_cards": [
+    "L3",
+    "L4"
+  ],
+  "no_heldout_parameter_selection": true,
+  "comparisons": [
+    {
+      "card": "L1",
+      "control": 6206.367823,
+      "allocation": 6205.798907,
+      "delta": -0.568916,
+      "component_delta": {
+        "sum_best_scores": -0.620541,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.051624,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "required_missing": [
+        2,
+        2
+      ],
+      "required_saved": [],
+      "required_lost": [],
+      "control_seconds": 246.57191383303143,
+      "allocation_seconds": 246.01273824996315,
+      "control_ledger_stats": {
+        "exposures": 998,
+        "exposure_seconds": 842352,
+        "below_300_seconds": 318,
+        "below_600_seconds": 519,
+        "targets_raw_half": 6480,
+        "targets_raw_full": 3374
+      },
+      "allocation_ledger_stats": {
+        "exposures": 1003,
+        "exposure_seconds": 839428,
+        "below_300_seconds": 312,
+        "below_600_seconds": 518,
+        "targets_raw_half": 6507,
+        "targets_raw_full": 3257
+      },
+      "calendar_stats": {
+        "graph_builds": 32,
+        "matches": 101,
+        "hard_jobs": 1,
+        "reservations": 1,
+        "unmatched": 0,
+        "force_actions": 13,
+        "barriers": 53,
+        "failed_due": 89,
+        "resync_matches": 0,
+        "build_seconds": 6.936439875280485,
+        "matching_seconds": 4.138428377686068
+      },
+      "expired_starts_in_match_history": 0,
+      "source_identical": true,
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    },
+    {
+      "card": "L2",
+      "control": 6808.597984,
+      "allocation": 6602.520628,
+      "delta": -206.077356,
+      "component_delta": {
+        "sum_best_scores": -206.290062,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.212706,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "required_missing": [
+        3,
+        3
+      ],
+      "required_saved": [],
+      "required_lost": [],
+      "control_seconds": 280.7728699159343,
+      "allocation_seconds": 290.1261438750662,
+      "control_ledger_stats": {
+        "exposures": 1090,
+        "exposure_seconds": 910758,
+        "below_300_seconds": 296,
+        "below_600_seconds": 502,
+        "targets_raw_half": 7040,
+        "targets_raw_full": 3618
+      },
+      "allocation_ledger_stats": {
+        "exposures": 1151,
+        "exposure_seconds": 908111,
+        "below_300_seconds": 334,
+        "below_600_seconds": 573,
+        "targets_raw_half": 6860,
+        "targets_raw_full": 3432
+      },
+      "calendar_stats": {
+        "graph_builds": 72,
+        "matches": 456,
+        "hard_jobs": 1,
+        "reservations": 1,
+        "unmatched": 0,
+        "force_actions": 15,
+        "barriers": 235,
+        "failed_due": 422,
+        "resync_matches": 0,
+        "build_seconds": 17.034847667440772,
+        "matching_seconds": 17.940139418002218
+      },
+      "expired_starts_in_match_history": 0,
+      "source_identical": true,
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    },
+    {
+      "card": "L3",
+      "control": 5910.930583,
+      "allocation": 5737.635073,
+      "delta": -173.29551,
+      "component_delta": {
+        "sum_best_scores": -72.825696,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.469814,
+        "report_settlement": 0.0,
+        "observation_request_reward": -100.0
+      },
+      "required_missing": [
+        5,
+        5
+      ],
+      "required_saved": [],
+      "required_lost": [],
+      "control_seconds": 246.19217737508006,
+      "allocation_seconds": 257.59249054198153,
+      "control_ledger_stats": {
+        "exposures": 991,
+        "exposure_seconds": 911513,
+        "below_300_seconds": 310,
+        "below_600_seconds": 517,
+        "targets_raw_half": 6427,
+        "targets_raw_full": 3039
+      },
+      "allocation_ledger_stats": {
+        "exposures": 1051,
+        "exposure_seconds": 905763,
+        "below_300_seconds": 322,
+        "below_600_seconds": 540,
+        "targets_raw_half": 6350,
+        "targets_raw_full": 2862
+      },
+      "calendar_stats": {
+        "graph_builds": 49,
+        "matches": 303,
+        "hard_jobs": 1,
+        "reservations": 1,
+        "unmatched": 0,
+        "force_actions": 20,
+        "barriers": 177,
+        "failed_due": 266,
+        "resync_matches": 1,
+        "build_seconds": 11.91279770550318,
+        "matching_seconds": 12.341031504329294
+      },
+      "expired_starts_in_match_history": 0,
+      "source_identical": true,
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    },
+    {
+      "card": "L4",
+      "control": 6095.293215,
+      "allocation": 5723.628729,
+      "delta": -371.664486,
+      "component_delta": {
+        "sum_best_scores": -222.355985,
+        "required_penalty": -150.0,
+        "uniformity_penalty": 0.691497,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "required_missing": [
+        0,
+        3
+      ],
+      "required_saved": [],
+      "required_lost": [
+        "V4T002279",
+        "V4T005316",
+        "V4T008740"
+      ],
+      "control_seconds": 236.4724792498164,
+      "allocation_seconds": 266.06355308298953,
+      "control_ledger_stats": {
+        "exposures": 944,
+        "exposure_seconds": 920095,
+        "below_300_seconds": 281,
+        "below_600_seconds": 461,
+        "targets_raw_half": 6247,
+        "targets_raw_full": 2790
+      },
+      "allocation_ledger_stats": {
+        "exposures": 1053,
+        "exposure_seconds": 925274,
+        "below_300_seconds": 291,
+        "below_600_seconds": 537,
+        "targets_raw_half": 5973,
+        "targets_raw_full": 2547
+      },
+      "calendar_stats": {
+        "graph_builds": 62,
+        "matches": 518,
+        "hard_jobs": 6,
+        "reservations": 3,
+        "unmatched": 3,
+        "force_actions": 26,
+        "barriers": 259,
+        "failed_due": 479,
+        "resync_matches": 1,
+        "build_seconds": 14.836439333623275,
+        "matching_seconds": 16.046328779309988
+      },
+      "expired_starts_in_match_history": 0,
+      "source_identical": true,
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    }
+  ],
+  "complete": true,
+  "source_identical_all": true,
+  "all_survey_complete": true,
+  "mean_control": "6255.29740125",
+  "mean_allocation": "6067.39583425",
+  "mean_delta": "-187.901567"
+}

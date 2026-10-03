@@ -1,0 +1,106 @@
+[
+  {
+    "card": "L1",
+    "name": "/geometry-phase-control-l1",
+    "id": "4c66349aea0995fc8f3840a3f6c1c42c2baae824b61122c9b868e0ca4840ae2c",
+    "pid": 260239,
+    "started_at": "2026-10-03T14:40:16.706943337Z",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "cpuset": "0,1",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  },
+  {
+    "card": "L2",
+    "name": "/geometry-phase-control-l2",
+    "id": "a34c6f9438044aa9df8dc73cb3b2b29aa4a43e23e741b30773f780078116d5cb",
+    "pid": 260401,
+    "started_at": "2026-10-03T14:40:16.828350704Z",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "cpuset": "2,3",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  },
+  {
+    "card": "L3",
+    "name": "/geometry-phase-control-l3",
+    "id": "75992ffd8f498f01465e44f0d2821de58de124bdc9cf8e9ed9a936cfff3ab51e",
+    "pid": 260297,
+    "started_at": "2026-10-03T14:40:16.753329458Z",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "cpuset": "4,5",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  },
+  {
+    "card": "L4",
+    "name": "/geometry-phase-control-l4",
+    "id": "def5380d7333dbc1f2af506b7cb91057107503951029e12db65b8a51790cc1d1",
+    "pid": 260394,
+    "started_at": "2026-10-03T14:40:16.819509051Z",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "cpuset": "6,7",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/phase_control",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  }
+]

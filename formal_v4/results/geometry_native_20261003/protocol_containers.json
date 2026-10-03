@@ -1,0 +1,160 @@
+[
+  {
+    "card": "L1",
+    "name": "/geometry-native-gate-l1",
+    "id": "7486428f38eb182ffb379a08ab3697338ea1a83c33f6a68a6d37c39ee36a544a",
+    "pid": 218748,
+    "started_at": "2026-10-03T14:22:40.927911183Z",
+    "status": "running",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "path": "python3",
+    "args": [
+      "-u",
+      "-m",
+      "research.agent_geometry_native"
+    ],
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "memory_swap_bytes": 2147483648,
+    "cpuset": "4,5",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  },
+  {
+    "card": "L2",
+    "name": "geometry-native-gate-l2",
+    "events": [
+      {
+        "status": "die",
+        "id": "4e0d9a292fa01b126440a50851efabeba76ddb8f1ed813a7292e2f43383029cb",
+        "from": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+        "Type": "container",
+        "Action": "die",
+        "Actor": {
+          "ID": "4e0d9a292fa01b126440a50851efabeba76ddb8f1ed813a7292e2f43383029cb",
+          "Attributes": {
+            "execDuration": "522",
+            "exitCode": "0",
+            "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+            "name": "geometry-native-gate-l2"
+          }
+        },
+        "scope": "local",
+        "time": 1791037694,
+        "timeNano": 1791037694834755981
+      },
+      {
+        "status": "destroy",
+        "id": "4e0d9a292fa01b126440a50851efabeba76ddb8f1ed813a7292e2f43383029cb",
+        "from": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+        "Type": "container",
+        "Action": "destroy",
+        "Actor": {
+          "ID": "4e0d9a292fa01b126440a50851efabeba76ddb8f1ed813a7292e2f43383029cb",
+          "Attributes": {
+            "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+            "name": "geometry-native-gate-l2"
+          }
+        },
+        "scope": "local",
+        "time": 1791037694,
+        "timeNano": 1791037694840170403
+      }
+    ],
+    "pid": null,
+    "pid_note": "Container was removed before PID metadata capture; no repeat run",
+    "status": "completed"
+  },
+  {
+    "card": "L3",
+    "name": "/geometry-native-gate-l3",
+    "id": "b126fb0a9b1e544adc7454e494b4e9086f30b64f9c4b50bafbb547ff783a31f8",
+    "pid": 218741,
+    "started_at": "2026-10-03T14:22:40.92416479Z",
+    "status": "running",
+    "image_id": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "path": "python3",
+    "args": [
+      "-u",
+      "-m",
+      "research.agent_geometry_native"
+    ],
+    "nano_cpus": 2000000000,
+    "memory_bytes": 2147483648,
+    "memory_swap_bytes": 2147483648,
+    "cpuset": "6,7",
+    "network": "none",
+    "read_only_rootfs": true,
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "destination": "/workspace",
+        "readwrite": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "readwrite": false
+      }
+    ]
+  },
+  {
+    "card": "L4",
+    "name": "geometry-native-gate-l4",
+    "events": [
+      {
+        "status": "die",
+        "id": "30d06e47b5192d2e24a2a3c506006c155b411465efb2425d5cda56d792ba4a1e",
+        "from": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+        "Type": "container",
+        "Action": "die",
+        "Actor": {
+          "ID": "30d06e47b5192d2e24a2a3c506006c155b411465efb2425d5cda56d792ba4a1e",
+          "Attributes": {
+            "execDuration": "433",
+            "exitCode": "0",
+            "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+            "name": "geometry-native-gate-l4"
+          }
+        },
+        "scope": "local",
+        "time": 1791037606,
+        "timeNano": 1791037606339108362
+      },
+      {
+        "status": "destroy",
+        "id": "30d06e47b5192d2e24a2a3c506006c155b411465efb2425d5cda56d792ba4a1e",
+        "from": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+        "Type": "container",
+        "Action": "destroy",
+        "Actor": {
+          "ID": "30d06e47b5192d2e24a2a3c506006c155b411465efb2425d5cda56d792ba4a1e",
+          "Attributes": {
+            "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+            "name": "geometry-native-gate-l4"
+          }
+        },
+        "scope": "local",
+        "time": 1791037606,
+        "timeNano": 1791037606344355098
+      }
+    ],
+    "pid": null,
+    "pid_note": "Container was removed before PID metadata capture; no repeat run",
+    "status": "completed"
+  }
+]

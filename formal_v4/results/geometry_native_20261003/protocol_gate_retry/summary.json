@@ -1,0 +1,170 @@
+{
+  "all_passed": false,
+  "expected_cards": [
+    "L2",
+    "L4"
+  ],
+  "completed_cards": 2,
+  "results": [
+    {
+      "card": "L4",
+      "exit_code": 0,
+      "host_seconds": 434.16372632898856,
+      "observed_score": 5974.281941,
+      "expected_score": "6078.613462",
+      "exact_score_match": false,
+      "termination": "survey_complete",
+      "agent_seconds": 421.881,
+      "accounted_seconds": 433.629,
+      "counts": {
+        "decisions": 1656,
+        "invalidated_observations": 412,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13071,
+        "observe_actions": 928,
+        "required_missing": 2,
+        "targets_observed": 8123
+      },
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 5777.717412,
+        "uniformity_penalty": -3.435472
+      },
+      "traceback_in_agent_log": false,
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/run_local.py",
+        "--card",
+        "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/local-cards/L4",
+        "--agent",
+        "docker run --rm --interactive --user 1000:1000 --name geometry-native-gate-l4 --cpus 2 --cpuset-cpus 2,3 --memory 2048m --memory-swap 2048m --pids-limit 128 --cap-drop=ALL --security-opt=no-new-privileges --ulimit nofile=512:512 --ulimit fsize=268435456:268435456 --read-only --tmpfs /tmp:rw,nosuid,size=256m --network none --log-driver none --mount type=bind,src=/tmp/geometry_native_20261003/runs/geometry_native_20261003/release,dst=/workspace,readonly --mount type=bind,src=/tmp/geometry_native_20261003/.deps,dst=/deps,readonly --workdir /workspace --env PYTHONPATH=/deps --env PYTHONDONTWRITEBYTECODE=1 --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 --env MKL_NUM_THREADS=1 python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016 python3 -u -m research.agent_geometry_native",
+        "--agent-cwd",
+        "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "--wallclock",
+        "900",
+        "--out",
+        "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_gate_retry/L4",
+        "--quiet"
+      ],
+      "container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "participant_mounts": [
+        "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "/tmp/geometry_native_20261003/.deps"
+      ],
+      "participant_has_card_truth_mount": false,
+      "passed": false,
+      "source_sha256": {
+        "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+        "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+        "build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+        "geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+        "observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+        "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+        "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+        "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+        "research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+        "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+        "research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+        "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+        "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+        "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+        "research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+        "research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+        "research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+        "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+        "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+        "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+      },
+      "output_sha256": {
+        "actions.jsonl": "d95fe09f5232fc2cd52ecc93d3d519589c46b410b05c3de35fa55fa6318fcb01",
+        "decisions.csv": "ccfcd6a36878b3ec6553b0d512fc4806c66d66e533d67cf3df31b396643e6d15",
+        "observations.csv": "6071f8c2deb6d5e02eeaae30d4ac7e21c84f34756bb2a6044d66d72bcdf08851",
+        "score_report.json": "6f80597b9f42dd9d91ce86598a9659131a99bd918bb76abcb4eb04c7706be6ff",
+        "workflow_result.json": "e4baf9169b0fa7be9415de5a979185e18d0bb2cd2a05a4cf73a5993ead761c1a"
+      }
+    },
+    {
+      "card": "L2",
+      "exit_code": 0,
+      "host_seconds": 522.6407287530019,
+      "observed_score": 6823.661561,
+      "expected_score": "6808.224288",
+      "exact_score_match": false,
+      "termination": "survey_complete",
+      "agent_seconds": 507.992,
+      "accounted_seconds": 522.12,
+      "counts": {
+        "decisions": 1791,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 15185,
+        "observe_actions": 1107,
+        "required_missing": 3,
+        "targets_observed": 8410
+      },
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6674.649933,
+        "uniformity_penalty": -0.988373
+      },
+      "traceback_in_agent_log": false,
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/run_local.py",
+        "--card",
+        "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/local-cards/L2",
+        "--agent",
+        "docker run --rm --interactive --user 1000:1000 --name geometry-native-gate-l2 --cpus 2 --cpuset-cpus 0,1 --memory 2048m --memory-swap 2048m --pids-limit 128 --cap-drop=ALL --security-opt=no-new-privileges --ulimit nofile=512:512 --ulimit fsize=268435456:268435456 --read-only --tmpfs /tmp:rw,nosuid,size=256m --network none --log-driver none --mount type=bind,src=/tmp/geometry_native_20261003/runs/geometry_native_20261003/release,dst=/workspace,readonly --mount type=bind,src=/tmp/geometry_native_20261003/.deps,dst=/deps,readonly --workdir /workspace --env PYTHONPATH=/deps --env PYTHONDONTWRITEBYTECODE=1 --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 --env MKL_NUM_THREADS=1 python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016 python3 -u -m research.agent_geometry_native",
+        "--agent-cwd",
+        "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "--wallclock",
+        "900",
+        "--out",
+        "/tmp/geometry_native_20261003/results/geometry_native_20261003/protocol_gate_retry/L2",
+        "--quiet"
+      ],
+      "container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "participant_mounts": [
+        "/tmp/geometry_native_20261003/runs/geometry_native_20261003/release",
+        "/tmp/geometry_native_20261003/.deps"
+      ],
+      "participant_has_card_truth_mount": false,
+      "passed": false,
+      "source_sha256": {
+        "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+        "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+        "build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+        "geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+        "observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+        "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+        "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+        "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+        "research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+        "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+        "research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+        "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+        "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+        "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+        "research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+        "research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+        "research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+        "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+        "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+        "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+      },
+      "output_sha256": {
+        "actions.jsonl": "c4c37d1a588d8f8b088eb07fd0e054832b65a096ee57d7bd7b0792ce5189ba0c",
+        "decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+        "observations.csv": "39f178c1f9381c479a416bcf319460326087d29430ece4aa1df00ee9c69255f2",
+        "score_report.json": "dd1bbb338ca5aa617a6e0724cc07cd17d694df31f2fc6c87606b4b37ad224257",
+        "workflow_result.json": "c7e8534e47dc89bb1cc8988638806c1be256983af4903e03d07df614daaffc1d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "geometry-native-build-provenance-v1",
+  "cpp_source_sha256": "9717065d6c84bee16d2d8a7267d2b30b562c03dab73378c5610898d2cf4d09a5",
+  "linux": {
+    "file": "geometry_native_linux_x86_64.so",
+    "sha256": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "bytes": 20176,
+    "build_host": "owned rhodes1",
+    "build_os": "Ubuntu 24.04 x86_64, glibc 2.39",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "command": "g++ -O3 -std=c++11 -ffp-contract=off -fno-exceptions -fno-rtti -fvisibility=hidden -fPIC -shared -Wl,--as-needed geometry_native.cpp -o geometry_native_linux_x86_64.so",
+    "DT_NEEDED": [
+      "libm.so.6",
+      "libc.so.6"
+    ],
+    "max_required_glibc_symbol": "GLIBC_2.3.4",
+    "cpp_runtime_needed": false,
+    "architecture_flags": "portable x86_64 baseline; no -march=native"
+  },
+  "darwin": {
+    "file": "geometry_native_darwin_arm64.dylib",
+    "sha256": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "bytes": 33840,
+    "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+    "target": "arm64-apple-darwin24.5.0",
+    "command": "clang++ -O3 -std=c++11 -ffp-contract=off -fno-exceptions -fno-rtti -fvisibility=hidden -dynamiclib geometry_native.cpp -o geometry_native_darwin_arm64.dylib"
+  },
+  "runtime_requirements": {
+    "python": "CPython with ctypes; release manifest python:3.12-slim",
+    "numpy": "numpy==2.2.6",
+    "deployment_compiler_needed": false,
+    "numba_needed": false,
+    "remote_service_needed": false,
+    "library_load": "native platform filename beside research/geometry_native.py"
+  },
+  "abi": {
+    "version": 1,
+    "function": "geometry_weighted_sweep",
+    "buffers": "float64, C-contiguous x/y[N], values[Q,N], outputs x/y/value[Q,keep]",
+    "visited": "int64",
+    "scalar_contract": "pitch>0, 0.016<glass<=pitch, side>=1, radius>0, keep>=1; finite arrays"
+  },
+  "official_participant_runtime_source": {
+    "cache": "runs/official_generator_e01939d0",
+    "sources_sha256": {
+      "project_platform/docker_runtime.py": "578ca25abaa755b8976f1655984a2e4dafda745d9a3a8f4cae5818b964e28f18",
+      "project_platform/preparation.py": "073387bca93ab51f82e192837f641e023e5dd70415896e8bf252534a1b5aa2d1",
+      "challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba"
+    },
+    "limits": {
+      "cpus": 2.0,
+      "memory_mb": 2048,
+      "global_wallclock_seconds": 900,
+      "read_only_rootfs": true,
+      "tmpfs_tmp_mb": 256
+    },
+    "compiler_is_not_promised_by_source": true,
+    "image_resolution": "participant supplied public image resolved to immutable reviewed digest"
+  },
+  "tested_container": {
+    "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+    "libc": [
+      "glibc",
+      "2.41"
+    ],
+    "architecture": "x86_64",
+    "numba_available": false,
+    "compilers": {
+      "cc": null,
+      "gcc": null,
+      "g++": null,
+      "clang++": null
+    },
+    "cpu_max": "200000 100000",
+    "memory_max": "2147483648",
+    "cpuset": "0-1"
+  },
+  "tested_container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016"
+}

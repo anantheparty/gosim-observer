@@ -1,0 +1,41 @@
+{
+  "protocol_source": "official v4 scorer/fiber map/runner; independent derivation before portfolio comparison",
+  "required_job": "one exposure must satisfy feature_flux * integral(Q(t), exposure) / (flux_zero_point * exposure_zero_point_seconds) >= 0.5; separate short exposures do not accumulate",
+  "calendar": "nonoverlapping <=3600s blocks anchored backwards from public night end; one required job per block",
+  "edge": "public lunar/airmass integrated on120s grid, sampled starts every300s, full exposure inside block and target altitude >= public limit+.04; favorable site scalar .85*(revealed efficiency/.95); target safety1.12",
+  "critical_jobs": "currently missing required, finite eligible edges, and either shortest edge duration>=1200s or <=6 remaining blocks",
+  "objective": "maximize matched critical jobs; then minimize predicted duration +120*days_until_block. Dummy cost=(number_jobs+1)*max_finite_edge_cost+1 gives a lexicographic cardinality construction.",
+  "assignment": "exact shortest augmenting path rectangular matching with NumPy potentials; each real calendar column has capacity1",
+  "execution": "full frozen CPUPhase first; cancel completed reservations; science action stops at a future reservation barrier; due target gets a threshold-forced field with normal companion assignment/programs; failed revealed condition blocks the edge and re-matches; state_resync triggers immediate re-match",
+  "spherical_and_settlement": "all selected actions use inherited spherical glass classification; complete untouched official run_scenario settles true weather, data loss, request quota, required and Jain",
+  "finite_model_scope": [
+    "sampled starts",
+    "one job per hour block",
+    "favorable unknown-weather hypothesis",
+    "no science continuation price in matching"
+  ],
+  "input_boundary": "participant reads protocol initialization, public calendar/catalogue and current/revealed snapshot/belief only; no future truth, unpublished requests, inference-time card IDs, LLM, external model/RPC",
+  "protocol_resource_gate": "not run; rejected on fixed L2 validation before deployment; no Rhodes process launched",
+  "split": {
+    "training": "L1",
+    "validation": "L2",
+    "locked_heldout": [
+      "L3",
+      "L4"
+    ]
+  },
+  "config": {
+    "favorable_scale": 0.85,
+    "hard_duration": 1200,
+    "scarce_blocks": 6,
+    "start_step": 300,
+    "safety": 1.12,
+    "early_cost": 120
+  },
+  "selection": "one fixed parameter configuration; v1->v2 correctness fixes and paired-altitude computational optimization; final adds resync re-match; no heldout tuning",
+  "source_final": {
+    "required_allocation_checks.py": "db2e734bc3dd0a99196f7ad1ed20f09cf7edd24ac525c93d7a21c81ffac31109",
+    "required_allocation_calendar.py": "7c8e71df42f443173ce5731200e186ae8d1e2cc55c41a383c8fc2b38cd67b19a",
+    "required_allocation_experiment.py": "704ea9d35841c5b5c1d445d4d736ce2a3da4094c7887628817ceb4b8f1d92169"
+  }
+}
