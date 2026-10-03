@@ -1,0 +1,530 @@
+{
+  "initial": {
+    "schema_version": "v4-initialize-v1",
+    "site": {
+      "name": "Paranal, Chile (virtual)",
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "utc_offset_hours": -4.0,
+      "minimum_altitude_deg": 30.0,
+      "sun_altitude_limit_deg": -18.0
+    },
+    "task_card": {
+      "card_id": "synthetic",
+      "scenario_slug": "request-topology",
+      "phase": "local"
+    },
+    "targets": {
+      "columns": [
+        "target_id",
+        "ra_deg",
+        "dec_deg",
+        "target_class",
+        "feature_flux",
+        "science_weight",
+        "required"
+      ],
+      "rows": [
+        [
+          "a",
+          8.25254974116666,
+          -6.339067854962575,
+          "Star",
+          100.0,
+          1.0,
+          false
+        ],
+        [
+          "b",
+          7.746864314543927,
+          -6.722964102664031,
+          "Star",
+          100.0,
+          1.0,
+          false
+        ],
+        [
+          "c",
+          8.639583864781514,
+          -6.841027385315051,
+          "Star",
+          100.0,
+          1.0,
+          false
+        ],
+        [
+          "d",
+          8.133665206857358,
+          -7.225432154031284,
+          "Star",
+          100.0,
+          1.0,
+          false
+        ]
+      ]
+    },
+    "scoring": {
+      "schema_version": "v4-score-v1",
+      "q0": 0.68,
+      "flux_zero_point": 0.5,
+      "exposure_zero_point_seconds": 900,
+      "airmass_exponent": 0.6,
+      "lunar_model": {
+        "angular_decay_scale_deg": 35.0,
+        "altitude_exponent": 1.0,
+        "maximum_penalty": 0.75
+      },
+      "program": {
+        "bands": {
+          "DARK": 0.65,
+          "BRIGHT": 0.4
+        },
+        "multipliers": {
+          "DARK": 1.2,
+          "BRIGHT": 1.12,
+          "BACKUP": 1.06
+        },
+        "mismatch_multiplier": 1.0
+      },
+      "required": {
+        "penalty_per_missing": 50,
+        "observed_factor_threshold": 0.5
+      },
+      "uniformity": {
+        "weight": 200.0,
+        "ra_band_width_deg": 10.0,
+        "observed_factor_threshold": 0.5
+      },
+      "reporting": {
+        "correct_reward": 100,
+        "false_penalty": -150,
+        "false_report_free_allowance": 2,
+        "max_consecutive_reports": 32
+      },
+      "observation_requests": {
+        "completion_factor_threshold": 0.5,
+        "miss_penalty": 0
+      }
+    },
+    "survey": {
+      "start_utc": "2026-11-02T00:30:00Z",
+      "end_utc": "2026-11-02T01:15:00Z",
+      "slot_seconds": 900,
+      "nights": [
+        {
+          "night_id": "N20261101",
+          "night_date": "2026-11-01",
+          "observing_start_utc": "2026-11-02T00:30:00Z",
+          "observing_end_utc": "2026-11-02T01:15:00Z",
+          "slot_count": 3
+        }
+      ]
+    },
+    "instrument": {
+      "n_fibers": 16,
+      "grid_side": 4,
+      "pitch_deg": 0.6324555320336759,
+      "fiber_area_deg2": 0.4,
+      "gap_deg": 0.0,
+      "glass_side_deg": 0.6324555320336759,
+      "fov_side_deg": 2.5298221281347035,
+      "exposure": {
+        "min_duration_seconds": 60,
+        "max_duration_seconds": 3600
+      }
+    },
+    "limits": {
+      "global_wallclock_seconds": 900,
+      "max_consecutive_reports": 32,
+      "response_max_bytes": 524288,
+      "decision_timeout": "global only (no per-decision timeout)"
+    },
+    "footprint": [
+      {
+        "component_id": "C00",
+        "vertices": [
+          [
+            7.246864314543927,
+            -7.725432154031284
+          ],
+          [
+            9.139583864781514,
+            -7.725432154031284
+          ],
+          [
+            9.139583864781514,
+            -5.839067854962575
+          ],
+          [
+            7.246864314543927,
+            -5.839067854962575
+          ]
+        ]
+      }
+    ]
+  },
+  "captures": {
+    "ab_cd": {
+      "feature_schema": "public-target-ledger-v1",
+      "target_ids": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "target_feature_names": [
+        "ra_fraction",
+        "dec_fraction",
+        "feature_flux",
+        "science_weight",
+        "required",
+        "best_science_score",
+        "max_factor_lower",
+        "max_factor_estimate",
+        "max_factor_upper_approx",
+        "alt_fraction",
+        "az_sin",
+        "az_cos",
+        "future_visible_days_approx",
+        "future_visible_night_fraction_approx"
+      ],
+      "rank": 1,
+      "now_utc": "2026-11-02T00:45:00Z",
+      "actions": {
+        "control": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 60.0,
+            "az_deg": 60.0
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "0": "a"
+          }
+        },
+        "field": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 60.0,
+            "az_deg": 60.0
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "1": "c"
+          }
+        }
+      },
+      "candidate_predictions": {
+        "control": {
+          "a": {
+            "index": 0,
+            "fiber_id": 0,
+            "factor": 1.0,
+            "public_quality": 1.0,
+            "quality": 1.0,
+            "directional_scale": 1.0,
+            "predicted_band": "DARK"
+          }
+        },
+        "field": {
+          "c": {
+            "index": 2,
+            "fiber_id": 1,
+            "factor": 1.0,
+            "public_quality": 1.0,
+            "quality": 1.0,
+            "directional_scale": 1.0,
+            "predicted_band": "DARK"
+          }
+        }
+      },
+      "public_history": [
+        {
+          "now_utc": "2026-11-02T00:30:00Z",
+          "observe_action_index": 0,
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 56.97823326333348,
+              "az_deg": 64.17785844969809
+            },
+            "duration_seconds": 900,
+            "program": "DARK",
+            "assignments": {
+              "5": "d"
+            }
+          },
+          "last_result": null
+        },
+        {
+          "now_utc": "2026-11-02T00:45:00Z",
+          "observe_action_index": 1,
+          "last_result": {
+            "action": "observe",
+            "observe_index": 0,
+            "assigned_count": 1,
+            "hit_count": 1,
+            "hits": [
+              {
+                "target_id": "d",
+                "score": 0.0
+              }
+            ]
+          }
+        }
+      ],
+      "C": 1.0,
+      "E": 1.0,
+      "notices": [],
+      "terrain": [],
+      "snapshot": {
+        "now_utc": "2026-11-02T00:45:00Z",
+        "survey_end_utc": "2026-11-02T01:15:00Z",
+        "observe_action_index": 1,
+        "running_total": 0.0,
+        "latest_bulletin": null,
+        "latest_forecast": null,
+        "new_messages": [],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 0,
+          "assigned_count": 1,
+          "hit_count": 1,
+          "hits": [
+            {
+              "target_id": "d",
+              "score": 0.0
+            }
+          ]
+        },
+        "active_requests": [
+          {
+            "schema_version": "v4-observation-request-v1",
+            "record_type": "observation_request",
+            "request_id": "Q1",
+            "issued_at_utc": "2026-11-02T00:45:00Z",
+            "deadline_utc": "2026-11-02T01:15:00Z",
+            "target_ids": [
+              "a",
+              "b"
+            ],
+            "minimum_completed": 2,
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "reason": "synthetic topology probe",
+            "completed_target_ids": [],
+            "completed_count": 0,
+            "remaining_count": 2
+          },
+          {
+            "schema_version": "v4-observation-request-v1",
+            "record_type": "observation_request",
+            "request_id": "Q2",
+            "issued_at_utc": "2026-11-02T00:45:00Z",
+            "deadline_utc": "2026-11-02T01:15:00Z",
+            "target_ids": [
+              "c",
+              "d"
+            ],
+            "minimum_completed": 2,
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "reason": "synthetic topology probe",
+            "completed_target_ids": [],
+            "completed_count": 0,
+            "remaining_count": 2
+          }
+        ]
+      }
+    },
+    "ad_bc": {
+      "feature_schema": "public-target-ledger-v1",
+      "target_ids": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "target_feature_names": [
+        "ra_fraction",
+        "dec_fraction",
+        "feature_flux",
+        "science_weight",
+        "required",
+        "best_science_score",
+        "max_factor_lower",
+        "max_factor_estimate",
+        "max_factor_upper_approx",
+        "alt_fraction",
+        "az_sin",
+        "az_cos",
+        "future_visible_days_approx",
+        "future_visible_night_fraction_approx"
+      ],
+      "rank": 1,
+      "now_utc": "2026-11-02T00:45:00Z",
+      "actions": {
+        "control": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 60.0,
+            "az_deg": 60.0
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "0": "a"
+          }
+        },
+        "field": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 60.0,
+            "az_deg": 60.0
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "1": "c"
+          }
+        }
+      },
+      "candidate_predictions": {
+        "control": {
+          "a": {
+            "index": 0,
+            "fiber_id": 0,
+            "factor": 1.0,
+            "public_quality": 1.0,
+            "quality": 1.0,
+            "directional_scale": 1.0,
+            "predicted_band": "DARK"
+          }
+        },
+        "field": {
+          "c": {
+            "index": 2,
+            "fiber_id": 1,
+            "factor": 1.0,
+            "public_quality": 1.0,
+            "quality": 1.0,
+            "directional_scale": 1.0,
+            "predicted_band": "DARK"
+          }
+        }
+      },
+      "public_history": [
+        {
+          "now_utc": "2026-11-02T00:30:00Z",
+          "observe_action_index": 0,
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 56.97823326333348,
+              "az_deg": 64.17785844969809
+            },
+            "duration_seconds": 900,
+            "program": "DARK",
+            "assignments": {
+              "5": "d"
+            }
+          },
+          "last_result": null
+        },
+        {
+          "now_utc": "2026-11-02T00:45:00Z",
+          "observe_action_index": 1,
+          "last_result": {
+            "action": "observe",
+            "observe_index": 0,
+            "assigned_count": 1,
+            "hit_count": 1,
+            "hits": [
+              {
+                "target_id": "d",
+                "score": 0.0
+              }
+            ]
+          }
+        }
+      ],
+      "C": 1.0,
+      "E": 1.0,
+      "notices": [],
+      "terrain": [],
+      "snapshot": {
+        "now_utc": "2026-11-02T00:45:00Z",
+        "survey_end_utc": "2026-11-02T01:15:00Z",
+        "observe_action_index": 1,
+        "running_total": 0.0,
+        "latest_bulletin": null,
+        "latest_forecast": null,
+        "new_messages": [],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 0,
+          "assigned_count": 1,
+          "hit_count": 1,
+          "hits": [
+            {
+              "target_id": "d",
+              "score": 0.0
+            }
+          ]
+        },
+        "active_requests": [
+          {
+            "schema_version": "v4-observation-request-v1",
+            "record_type": "observation_request",
+            "request_id": "Q1",
+            "issued_at_utc": "2026-11-02T00:45:00Z",
+            "deadline_utc": "2026-11-02T01:15:00Z",
+            "target_ids": [
+              "a",
+              "d"
+            ],
+            "minimum_completed": 2,
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "reason": "synthetic topology probe",
+            "completed_target_ids": [],
+            "completed_count": 0,
+            "remaining_count": 2
+          },
+          {
+            "schema_version": "v4-observation-request-v1",
+            "record_type": "observation_request",
+            "request_id": "Q2",
+            "issued_at_utc": "2026-11-02T00:45:00Z",
+            "deadline_utc": "2026-11-02T01:15:00Z",
+            "target_ids": [
+              "b",
+              "c"
+            ],
+            "minimum_completed": 2,
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "reason": "synthetic topology probe",
+            "completed_target_ids": [],
+            "completed_count": 0,
+            "remaining_count": 2
+          }
+        ]
+      }
+    }
+  },
+  "continuation": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 62.885532846468635,
+      "az_deg": 55.05976593289592
+    },
+    "duration_seconds": 900,
+    "program": "DARK",
+    "assignments": {
+      "4": "b"
+    }
+  }
+}

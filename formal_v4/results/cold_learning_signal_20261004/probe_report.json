@@ -1,0 +1,263 @@
+{
+  "schema": "request-topology-exact-feature-collision-v1",
+  "source_sha256": {
+    "research/structured_student_features.py": "ac5a6a09fc9cd559ad32559a0281ef71b2b25df13c91351c2d5efb6c918f0db0",
+    "research/structured_student_model.py": "612132459874a6869c76c18c21746c045f7235f47bcb64e444b3aebe3f887542",
+    "research/structured_student_train.py": "933e40c2e5399067f34a7d9ff67c7e8d0d3d28a852f1a4ba68c84b6f11249585",
+    "research/structured_student_runtime.py": "5b62f375e6746055814eaa81eee8f2ada596565a883ecf2f75ffc0e3450ffc35",
+    "research/structured_student_audit.py": "0a256dfc1f7f8901403af4da827872e0332a447016469e86f86bdae61779baed",
+    "upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "upstream/gosim-observer-examples/runner/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "upstream/gosim-observer-examples/local-cards/L1/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "upstream/gosim-observer-examples/local-cards/L1/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "results/cold_learning_signal_20261004/request_topology_probe.py": "3bf0c1aab514673fd762d7119955d1430aa31bdda1ff6645590acb2c3f79e626"
+  },
+  "upstream_student_sources_unchanged": true,
+  "features_all_equal": {
+    "target_nodes": true,
+    "global_features": true,
+    "flat": true,
+    "control.target_index": true,
+    "control.edges": true,
+    "control.scalars": true,
+    "control.coarse_utility": true,
+    "control.gain_per_second": true,
+    "control.native_utility": true,
+    "field.target_index": true,
+    "field.edges": true,
+    "field.scalars": true,
+    "field.coarse_utility": true,
+    "field.gain_per_second": true,
+    "field.native_utility": true
+  },
+  "official_legal_exposures": [
+    {
+      "world": "ab_cd",
+      "candidate": "control",
+      "rank": 0,
+      "target_id": "d",
+      "assigned_fiber": 5,
+      "actual_fiber": 5,
+      "min_altitude": 56.67787961784321,
+      "band": "BACKUP",
+      "factor": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "ab_cd",
+      "candidate": "control",
+      "rank": 1,
+      "target_id": "a",
+      "assigned_fiber": 0,
+      "actual_fiber": 0,
+      "min_altitude": 59.038314333995125,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ab_cd",
+      "candidate": "control",
+      "rank": 2,
+      "target_id": "b",
+      "assigned_fiber": 4,
+      "actual_fiber": 4,
+      "min_altitude": 62.49214687304273,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ab_cd",
+      "candidate": "field",
+      "rank": 0,
+      "target_id": "d",
+      "assigned_fiber": 5,
+      "actual_fiber": 5,
+      "min_altitude": 56.67787961784321,
+      "band": "BACKUP",
+      "factor": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "ab_cd",
+      "candidate": "field",
+      "rank": 1,
+      "target_id": "c",
+      "assigned_fiber": 1,
+      "actual_fiber": 1,
+      "min_altitude": 59.04994853252218,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ab_cd",
+      "candidate": "field",
+      "rank": 2,
+      "target_id": "b",
+      "assigned_fiber": 4,
+      "actual_fiber": 4,
+      "min_altitude": 62.49214687304273,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "control",
+      "rank": 0,
+      "target_id": "d",
+      "assigned_fiber": 5,
+      "actual_fiber": 5,
+      "min_altitude": 56.67787961784321,
+      "band": "BACKUP",
+      "factor": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "control",
+      "rank": 1,
+      "target_id": "a",
+      "assigned_fiber": 0,
+      "actual_fiber": 0,
+      "min_altitude": 59.038314333995125,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "control",
+      "rank": 2,
+      "target_id": "b",
+      "assigned_fiber": 4,
+      "actual_fiber": 4,
+      "min_altitude": 62.49214687304273,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "field",
+      "rank": 0,
+      "target_id": "d",
+      "assigned_fiber": 5,
+      "actual_fiber": 5,
+      "min_altitude": 56.67787961784321,
+      "band": "BACKUP",
+      "factor": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "field",
+      "rank": 1,
+      "target_id": "c",
+      "assigned_fiber": 1,
+      "actual_fiber": 1,
+      "min_altitude": 59.04994853252218,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    },
+    {
+      "world": "ad_bc",
+      "candidate": "field",
+      "rank": 2,
+      "target_id": "b",
+      "assigned_fiber": 4,
+      "actual_fiber": 4,
+      "min_altitude": 62.49214687304273,
+      "band": "DARK",
+      "factor": 1.0,
+      "score": 1.2
+    }
+  ],
+  "sun_altitudes": [
+    -20.4958948550314,
+    -23.47360640219352,
+    -26.38198278688603,
+    -29.210779675695342
+  ],
+  "official_settlement": {
+    "ab_cd": {
+      "control": {
+        "sum_best_scores": 2.4,
+        "required_penalty": -0.0,
+        "uniformity_penalty": -0.0,
+        "observation_request_reward": 100.0,
+        "report_settlement": 0.0,
+        "total": 102.4,
+        "completed_requests": [
+          "Q1"
+        ],
+        "uniformity_bands": {
+          "ra_0_10": 0.5
+        }
+      },
+      "field": {
+        "sum_best_scores": 2.4,
+        "required_penalty": -0.0,
+        "uniformity_penalty": -0.0,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "total": 2.4,
+        "completed_requests": [],
+        "uniformity_bands": {
+          "ra_0_10": 0.5
+        }
+      }
+    },
+    "ad_bc": {
+      "control": {
+        "sum_best_scores": 2.4,
+        "required_penalty": -0.0,
+        "uniformity_penalty": -0.0,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "total": 2.4,
+        "completed_requests": [],
+        "uniformity_bands": {
+          "ra_0_10": 0.5
+        }
+      },
+      "field": {
+        "sum_best_scores": 2.4,
+        "required_penalty": -0.0,
+        "uniformity_penalty": -0.0,
+        "observation_request_reward": 100.0,
+        "report_settlement": 0.0,
+        "total": 102.4,
+        "completed_requests": [
+          "Q2"
+        ],
+        "uniformity_bands": {
+          "ra_0_10": 0.5
+        }
+      }
+    }
+  },
+  "request_relation_statistic": {
+    "ab_cd": {
+      "control": 100.0,
+      "field": 0
+    },
+    "ad_bc": {
+      "control": 0,
+      "field": 100.0
+    }
+  },
+  "minimal_request_supplement_breaks_collision": {
+    "request_members_differ": true,
+    "control_request_local_pool_differs": true,
+    "field_request_local_pool_differs": true
+  },
+  "unavoidable_mean_regret_on_equal_world_mixture": 50.0,
+  "scope": "Existence/representation proof: one identical closed-slot prefix + two legal open-slot exposures, fixed public pi observes b next; no runner or training. Not actual L1-L4 benefit.",
+  "bulk_active_requests": "Not inspected or counted. No bulk labels/captures were loaded."
+}

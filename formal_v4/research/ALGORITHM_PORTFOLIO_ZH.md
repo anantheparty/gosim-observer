@@ -62,6 +62,8 @@
 
 - **真实学生数据运输与GPU比较工具已审查并预放置，尚未拟合**：新打包器必须等待driver终止记录，重新核对全部64组、28项v2门检、每个archive/member及原始公开capture字节；完整保留正、负、tie、absent、control-only和失败记录。L1/L2/L3与L4分别打包，候选不会自动接受。13项新合成流水线检查通过；root核对源码锁及凭据隔离。Rhodes1已放置打包器，PRO6000新独立目录已放置五个锁定学生模块和固定比较runner，未复制实际数据或执行训练。下一步由root审查真实终止批次，再仅运输fit/validation、固定单次训练DeepSets与flat，按L3决策收益对比ridge/native。来源见 `results/structured_student_dataset_20261004/ROOT_TOOL_REVIEW.json` 与 `README.md`。
 
+- **无context学习对象研究发现严格的请求关系信息丢失**：两个合法合成公开局面仅改变请求成员图，现有真实feature builder的target/global/edge/scalar/flat全部逐项相同；两个当前候选加同一固定公开续局，经官方动作/几何/曝光和终局结算为 **102.4/2.4** 与 **2.4/102.4**。两世界等权时任何当前表示上的选择器候选regret为50，增加宽度/训练步数不能修复该表示碰撞；这不是实际卡提分或全集最优证明。最小逐request节点与成员join已实际打破碰撞，五学生模块源锁保持不变。root另只读固定64个control的公开capture，训练32状态仅4个活动请求、3个还有剩余请求；数据不足以支持复杂请求模型的泛化，先准备小型关系adapter。来源见 `research/cold_learning_signal_20261004.md`、`results/cold_learning_signal_20261004/ROOT_REVIEW.json` 与 `results/student_public_coverage_20261004/`。
+
 已创建每小时运行的线程 heartbeat **GOSIM 独立算法探索**。每轮启动 `fork_turns="none"` 的代理：先给官方题目、评分与资源位置，不传旧推导；代理独立抽象后再与现有实验对照。轮换群体搜索、图/流松弛、可证剪枝、概率模型、NN/RL及混合方法。只对实质新结果、改进、证明、完成或失败通知，重复状态保持安静。
 
 持续目标已收窄研究优先级：以实际提分、数据规律和隐藏测试准备为中心，不再重复计算松弛得分上界；已有证明用于加速具体求解。算法方向的广度保持，不能反复训练同一失败教师或只扩大旧池搜索次数。
