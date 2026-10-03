@@ -9,6 +9,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 from pathlib import Path
 import sys
 import time
@@ -21,6 +22,25 @@ def sha(path):
 def require(condition, reason):
     if not condition:
         raise RuntimeError(reason)
+
+
+SELECTION_CANDIDATES = (
+    "native_control", "public_gain_per_second",
+    "public_terminal_components_one_step", "flat_pair_ridge", "structured", "flat",
+)
+MODEL_SELECTION_CONTRACT = "validation_regret_then_predeclared_simplicity_order"
+
+
+def select_method(comparison):
+    """Compare realized decision return; ranking units need not match."""
+    for name in SELECTION_CANDIDATES:
+        require(name in comparison, "Missing comparison method: " + name)
+        regret = comparison[name]["teacher_regret_mean"]
+        require(isinstance(regret, (int, float)) and math.isfinite(regret),
+                "Nonfinite validation teacher regret: " + name)
+    return min(SELECTION_CANDIDATES,
+               key=lambda name: (comparison[name]["teacher_regret_mean"],
+                                 SELECTION_CANDIDATES.index(name)))
 
 
 def main():
@@ -44,6 +64,10 @@ def main():
     require(all(sha(args.project / name) == value for name, value in lock["files"].items()), "Training source drift")
     require(lock["comparison_runner_sha256"] == sha(Path(__file__)), "Comparison runner drift")
     require(lock["selection_contract"] == "teacher_regret_mean_then_raw_advantage_mae", "Unreviewed selection amendment")
+    require(lock["model_selection_contract"] == MODEL_SELECTION_CONTRACT,
+            "Unreviewed cross-method selection contract")
+    require(lock["model_selection_candidates"] == list(SELECTION_CANDIDATES),
+            "Cross-method candidates or simplicity order drifted")
     require(sha(args.manifest) == args.manifest_sha256, "Unreviewed accepted manifest")
     require(args.manifest.resolve().parent == args.bundle.resolve(), "Accepted manifest must resolve its original relative files inside the fitting bundle")
     manifest = json.loads(args.manifest.read_text())
@@ -88,22 +112,18 @@ def main():
     require(sha(args.manifest) == args.manifest_sha256, "Accepted dataset changed during fitting")
     comparison = dict(reports["structured"]["baseline_comparisons"])
     comparison["flat"] = reports["flat"]["baseline_comparisons"]["flat"]
-    # The native/ridge baselines consume identical train/validation groups. Epoch
-    # and model selection use decisions, then MAE; L4 is inaccessible throughout.
-    selection_candidates = ("native_control", "flat_pair_ridge", "structured", "flat")
-    def criterion(name):
-        metrics = comparison[name]
-        mae = metrics.get("raw_advantage_mae")
-        return (metrics["teacher_regret_mean"], float("inf") if mae is None else mae,
-                selection_candidates.index(name))
-    selected = min(selection_candidates, key=criterion)
+    # Checkpoints compare predictions in identical raw-return units. Cross-method
+    # ranking includes both public baselines and uses a fixed simplicity tie-break.
+    selected = select_method(comparison)
     summary = dict(schema="structured-student-fixed-gpu-comparison-v1", completed_utc=datetime.now(timezone.utc).isoformat(),
                    manifest_sha256=args.manifest_sha256, source_lock_sha256=args.source_lock_sha256,
                    device=device, elapsed_seconds=time.monotonic() - started,
                    cuda_peak_allocated_bytes=torch.cuda.max_memory_allocated(), models=["structured", "flat"],
                    exact_parameters=dict(structured=6598, flat=6507), seed=20261004, epochs_cap=200,
                    patience=30, learning_rate=1e-3, weight_decay=1e-2,
-                   selection_contract=lock["selection_contract"], selection_candidates=list(selection_candidates),
+                   checkpoint_selection_contract=lock["selection_contract"],
+                   model_selection_contract=lock["model_selection_contract"],
+                   selection_candidates=list(SELECTION_CANDIDATES),
                    validation_comparison=comparison, research_selected=selected,
                    actual_training_completed=True, l4_label_files_opened=0,
                    deployment_calibrated=False, full_season_policy_score_evaluated=False,

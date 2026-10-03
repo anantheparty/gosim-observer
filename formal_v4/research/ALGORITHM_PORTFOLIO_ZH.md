@@ -78,3 +78,7 @@
 3. **部署与官方确认**：2核/2GB/900秒约束；完整包及public check通过后谨慎使用评测额度。最终只称官方整批实测均分，不能用跨批次单卡拼接。
 
 全部源码和有信息的结果进入本地Git及已有私有GitHub仓库。凭据继续隔离；不填写设计备注。
+
+## 固定学生比较的完整性修正（06:22 JST）
+
+在读取本批bulk训练/验证标签前，root把此前已计算但被最终选择遗漏的两种公共启发式纳入，六方案完整比较。NN checkpoint仍以L3候选teacher regret、同分MAE选择；跨方法按同一已实现收益的regret、同分预声明简洁顺序选择，避免用公共utility与NN raw-return不同单位的误差判胜。五训练模块、参数、数据划分与teacher源锁不变；5项合成选择检查通过，更新runner和锁已在PRO6000核对，仍未训练。新comparison锁SHA `1da99ce55032c29d672e236c5ae1d52a02a53de4bfb29b8c43d6b28c133bedd0`。原审查/预放置收据是历史观察；本次修改的前后hash和原因见 `results/structured_student_dataset_20261004/ROOT_MODEL_SELECTION_AMENDMENT.json`、`ROOT_SELECTION_PRESTAGE_RECEIPT.json`。
