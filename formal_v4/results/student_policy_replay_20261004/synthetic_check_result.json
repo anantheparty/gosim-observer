@@ -1,0 +1,63 @@
+{
+  "schema": "student-policy-synthetic-integration-v1",
+  "passed": true,
+  "checks": {
+    "native_first_action_identical": true,
+    "native_pending_control_identical": true,
+    "recording_mro_captures_refinements": true,
+    "native_family_nonempty_distinct": true,
+    "all_numpy_no_torch_numba_import": true,
+    "geometry_cache_matches_teacher_samples": true,
+    "negative_predictions_retained_and_abstain": true,
+    "ties_retain_control": true,
+    "strict_threshold_and_positive_selection": true,
+    "structured_uncalibrated_runtime_returns_control": true,
+    "structured_instrumented_control_action_identical": true,
+    "structured_export_metadata_unmodified": true,
+    "flat_uncalibrated_runtime_returns_control": true,
+    "flat_instrumented_control_action_identical": true,
+    "flat_export_metadata_unmodified": true,
+    "ridge_saved_format_exact_algebra": true,
+    "ridge_instrumented_native_control_action_identical": true,
+    "public_total_instrumented_native_control_action_identical": true,
+    "public_total_deltas_preserve_own_units": true,
+    "ridge_dimension_guard": true,
+    "native_after_actual_feedback_action_identical": true,
+    "empty_ledger_active_request_is_native_fallback": true,
+    "locked_empty_ledger_dtype_error_reproduced": true,
+    "research_sent_action_and_pending_same": true,
+    "research_preserves_native_pending_start_priors_notices": true,
+    "calibrator_receives_actual_branch_action_start": true,
+    "branch_feedback_is_ledger_then_normal_replan": true,
+    "research_deployment_flags_stay_false": true,
+    "research_l4_refused": true,
+    "research_missing_override_refused": true,
+    "diagnostic_cap_signed_candidates_and_full_counts": true,
+    "fabricated_late_state_features_and_numpy_finite": true
+  },
+  "actual_teacher_labels_read": 0,
+  "seasons_launched": 0,
+  "optimization_steps": 0,
+  "synthetic_decision_calls": 14,
+  "native_evaluations_recorded": 54,
+  "fabricated_late_state": {
+    "targets": 2000,
+    "past_observe_actions": 1000,
+    "ledger_rows": 16000,
+    "feature_seconds": [
+      0.005988707998767495,
+      0.005508749978616834,
+      0.005370749859139323
+    ],
+    "inference_seconds": [
+      0.0005160830914974213,
+      0.0004864581860601902,
+      0.0004719169810414314
+    ],
+    "valid_season": false,
+    "full_900s_budget_verified": false
+  },
+  "diagnostic_limit": 2048,
+  "deployment_calibrated": false,
+  "seconds": 0.6150948330760002
+}

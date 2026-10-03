@@ -1,0 +1,25 @@
+{
+  "schema": "student-policy-root-wrapper-review-v1",
+  "created_utc": "2026-10-03T21:31:13.911063+00:00",
+  "wrapper_sha256": "1e98746e9db1ff44ab010737fbb3a067d24ccc6481243585d5fa8b6e02f83af6",
+  "five_student_sources_unchanged": true,
+  "native_ready_20_files_unchanged": true,
+  "synthetic_checks_passed": 32,
+  "root_code_review": {
+    "native_recording_mro_does_not_replace_evaluation": true,
+    "candidate_family_predictions_match_frozen_teacher": true,
+    "history_preserves_every_actual_exposure_time_and_feedback_rank": true,
+    "intervention_updates_pending_and_native_prediction": true,
+    "public_scores_use_own_units": true,
+    "uncalibrated_exports_unchanged": true,
+    "numpy_only_runtime": true,
+    "active_request_empty_ledger_narrow_native_fallback": true
+  },
+  "accepted_for_explicit_official_l3_research_gate": true,
+  "official_full_season_parity_passed": false,
+  "cloud_deployment_authorized": false,
+  "bulk_label_files_opened": 0,
+  "threshold_first_candidate_test": 0,
+  "baseline_plan": "Native READY baseline without NN extra computation; intervention model/feature overhead counts against the same 2CPU/2GiB/900s limit. Optional instrumented control only if resolving a concrete integration discrepancy.",
+  "first_candidate_condition": "The frozen six-method L3 teacher comparison selects a nonnative method with strictly greater selected_teacher_advantage_mean than native_control. No L4 fitting or parameter rescue."
+}

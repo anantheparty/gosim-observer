@@ -1,0 +1,28 @@
+{
+  "schema": "student-policy-root-protocol-start-v1",
+  "created_utc": "2026-10-03T21:42:32.808950+00:00",
+  "job_pid": 1467968,
+  "actual_process_and_owned_container_observed": true,
+  "source_lock_sha256": "bf5ad42a6ddf22189229ed0e2fd54ccfb066b44302275d14cff84bd659e005fb",
+  "harness_sha256": "c175ea8d4a5fc47c930ab34a2745481b61b7eee74784ad0347b7f4208626997e",
+  "run_source_lock_sha256": "47307bcc6dd36d19e1a42a277f372293e2bd3521c6e3149040e9db14f932421c",
+  "package_lock_sha256": "b15652dab954257478a7d761dd7426569642153e90a4e2659e1b64bb7c081946",
+  "native_control_extra_nn_work": false,
+  "resource_limit": {
+    "cpus": 2,
+    "memory_mib": 2048,
+    "wallclock_seconds": 900,
+    "cpuset": "16,17"
+  },
+  "root_harness_review": {
+    "explicit_research_entry_correct": true,
+    "truth_only_on_host_never_participant_mount": true,
+    "source_hashes_before_and_after": true,
+    "owned_container_exit_and_cleanup": true,
+    "participant_summary_counts_actions_diagnostics_required": true,
+    "control_requires_exact_native_all_actions_score_components": true
+  },
+  "full_season_result_pending": true,
+  "actual_bulk_training_started": false,
+  "cloud_deployment_authorized": false
+}

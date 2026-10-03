@@ -82,3 +82,7 @@
 ## 固定学生比较的完整性修正（06:22 JST）
 
 在读取本批bulk训练/验证标签前，root把此前已计算但被最终选择遗漏的两种公共启发式纳入，六方案完整比较。NN checkpoint仍以L3候选teacher regret、同分MAE选择；跨方法按同一已实现收益的regret、同分预声明简洁顺序选择，避免用公共utility与NN raw-return不同单位的误差判胜。五训练模块、参数、数据划分与teacher源锁不变；5项合成选择检查通过，更新runner和锁已在PRO6000核对，仍未训练。新comparison锁SHA `1da99ce55032c29d672e236c5ae1d52a02a53de4bfb29b8c43d6b28c133bedd0`。原审查/预放置收据是历史观察；本次修改的前后hash和原因见 `results/structured_student_dataset_20261004/ROOT_MODEL_SELECTION_AMENDMENT.json`、`ROOT_SELECTION_PRESTAGE_RECEIPT.json`。
+
+## 完整学生策略回放已开始（06:40 JST）
+
+NumPy公共候选选择器已实际实现，支持六方法、正确替换sent action/pending prediction并按全部真实反馈重新规划。32项合成集成检查和22项harness argv守卫通过，五学生与20个native READY文件保持字节一致。root已在Rhodes1空闲16/17物理核启动L3 native_control完整官方parity，PID1467968和own-label容器已观察；2CPU/2GiB/900秒，无NN额外计算、无truth或prefix mount。候选参数首轮threshold0，待真实六方法验证选择后再跑；source/动作/score components/summary/diagnostics及退出状态全部核验，未把工具检查当真实提分。源码与收据见 `research/student_policy_agent.py`、`results/student_policy_replay_20261004/`。
