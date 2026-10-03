@@ -1,0 +1,56 @@
+{
+  "scope": "synthetic abstraction gates; no physical runtime policy or formal gain",
+  "card_truth_opened": false,
+  "full_seasons": 0,
+  "ssh_jobs": 0,
+  "policy_predicates": 4,
+  "package_operators": 3,
+  "binary_feature_states": 16,
+  "raw_depth_le_2_trees": 6123,
+  "unique_exact_abstract_behaviors": 1287,
+  "phenotype_reduction_fraction": 0.7898089171974523,
+  "canonical_reduction_preserves_all_declared_behaviors": true,
+  "mean_nodes_before": 6.66780989710926,
+  "mean_nodes_after": 5.280254777070064,
+  "latent_twins": [
+    {
+      "request_surplus": false,
+      "choice": "scarce_required"
+    },
+    {
+      "request_surplus": true,
+      "choice": "request_bundle"
+    }
+  ],
+  "synthetic_terminal_coupling": {
+    "control": {
+      "total": 1.0,
+      "science": 1.0,
+      "required_missing": 0,
+      "required_cost": 0.0,
+      "uniformity_cost": 0.0,
+      "request_reward": 0.0,
+      "request_count": 1
+    },
+    "challenger": {
+      "total": 51.0,
+      "science": 1.0,
+      "required_missing": 1,
+      "required_cost": 50.0,
+      "uniformity_cost": 0.0,
+      "request_reward": 100.0,
+      "request_count": 2
+    },
+    "delta": 50.0
+  },
+  "request_window_gate": true,
+  "separate_score_factor_ledger_gate": true,
+  "resync_invalidation_gate": true,
+  "ambiguous_factor_interval": {
+    "score": 0.588,
+    "lower": 0.49,
+    "upper": 0.588,
+    "threshold_status": "unknown"
+  },
+  "cpu_seconds": 0.400992
+}
