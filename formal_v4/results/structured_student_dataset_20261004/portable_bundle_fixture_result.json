@@ -1,0 +1,23 @@
+{
+  "schema": "portable-dataset-synthetic-e2e-v1",
+  "passed": true,
+  "checks": {
+    "candidate_stays_unaccepted": true,
+    "whole_card_fit_partition": true,
+    "candidate_cannot_trigger_fitting": true,
+    "synthetic_L1_capture_exact_after_move": true,
+    "synthetic_L2_capture_exact_after_move": true,
+    "synthetic_L3_capture_exact_after_move": true,
+    "positive_and_negative_preserved": true,
+    "tied_alternative_preserved": true,
+    "control_only_and_absent_preserved": true,
+    "failed_test_group_preserved_separately": true,
+    "fitting_partition_contains_no_l4_files": true,
+    "parent_index_exposes_no_l4_returns": true,
+    "opaque_terminal_bytes_not_parsed": true
+  },
+  "synthetic_only": true,
+  "actual_teacher_label_files_read": 0,
+  "optimization_steps": 0,
+  "seasons_launched": 0
+}
