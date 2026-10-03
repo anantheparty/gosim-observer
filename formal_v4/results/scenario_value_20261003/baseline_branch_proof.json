@@ -1,0 +1,12 @@
+{
+  "all_equal": true,
+  "original_source": "formal_v4/results/scenario_value_20261003/locked16x8/source_snapshot/scenario_value_model.py",
+  "corrected_source": "formal_v4/research/scenario_value_model.py",
+  "baseline_controlflow_ast_sha256": {
+    "choose_baseline_path": "5e2dca53dc43abec32c2ade10d675daf0dea33212df6c09d763fe3d6456f8ee6",
+    "evaluate": "5c65f8cf11d123b103f253213cf3aa625734a8fad6a71613eb3060c8c05f3f66",
+    "planner_init": "d11e633be5b5c88c5fcbab8a5e1e05a9e4caac208368f5843f9d037122ffe0c8",
+    "policy_installer": "81274eb5b2a1c8fdc480abd0226c717f260afd4186c30cfb34dae1bee0dd8acf"
+  },
+  "note": "prefix-bank, start-height and plateau fixes occur exclusively after the baseline branch returns or in finite_paths, which baseline never calls"
+}

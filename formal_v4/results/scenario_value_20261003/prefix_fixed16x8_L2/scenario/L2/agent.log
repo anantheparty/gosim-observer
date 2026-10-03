@@ -1,0 +1,11 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cold_neural_value_20261003/production_frozen/research/spatial_candidates.py:201: RuntimeWarning: invalid value encountered in cast
+  row = np.clip(np.floor(north_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cold_neural_value_20261003/production_frozen/research/spatial_candidates.py:202: RuntimeWarning: invalid value encountered in cast
+  col = np.clip(np.floor(east_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/scenario_value_model.py:82: RuntimeWarning: divide by zero encountered in matmul
+  separation=np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/scenario_value_model.py:82: RuntimeWarning: overflow encountered in matmul
+  separation=np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/scenario_value_model.py:82: RuntimeWarning: invalid value encountered in matmul
+  separation=np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+{"decisions": 1212, "exposures": 1089, "reports": 1, "correct_reports": 1, "best_science_sum": 6591.369618999999, "required_missing_bound": 3, "planning_seconds": 235.077, "C": 1.1789, "E": 0.9012, "remote_check": null, "remote_calls": 0, "remote_seconds": 0, "remote_budget": null, "cpu_phase": {"choose_calls": 1090, "phase_calls": 1090, "phase_candidates": 14060741, "phase_exact_evaluations": 17440, "phase_emergency_count": 0, "phase_improvements": 961}, "scenario_value": {"calls": 1090, "changes": 446, "seconds": 9.526697148336098, "fields": 8720, "actions": 154548, "duration_changes": 362, "program_changes": 24, "assignment_changes": 170}, "scenario_mode": "scenario", "scenario_params": {"paths": 16, "fields": 8, "quantiles": [0.75, 0.9], "seed": 909817, "observation_log_sigma": 0.06, "slot_log_sigma": 0.08, "night_log_sigma": 0.19, "slot_phi": 0.88, "efficiency_log_sigma": 0.0304}}

@@ -1,0 +1,90 @@
+{
+  "schema": "scenario-value-final-comparison-v1",
+  "status": "rejected_validation_failed",
+  "parameters_changed": false,
+  "source_fixes": [
+    "match source plateau tie rule",
+    "match source start-altitude visible filter",
+    "fixed legal-horizon prefix bank"
+  ],
+  "split": {
+    "development": [
+      "L1"
+    ],
+    "validation": [
+      "L2"
+    ],
+    "holdout_not_used": [
+      "L3",
+      "L4"
+    ]
+  },
+  "cards": {
+    "L1": {
+      "baseline_score": 6206.367823,
+      "scenario_score": 6232.156101,
+      "delta": 25.78827799999999,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 25.901480999999876,
+        "uniformity_penalty": -0.113203
+      },
+      "required_missing": [
+        2,
+        2
+      ],
+      "request_completed": [
+        1,
+        1
+      ],
+      "baseline_path": "locked16x8/baseline/L1",
+      "scenario_path": "prefix_fixed16x8/scenario/L1",
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    },
+    "L2": {
+      "baseline_score": 6808.597984,
+      "scenario_score": 6749.276565,
+      "delta": -59.32141899999988,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -59.44207000000006,
+        "uniformity_penalty": 0.12065100000000006
+      },
+      "required_missing": [
+        3,
+        3
+      ],
+      "request_completed": [
+        2,
+        2
+      ],
+      "baseline_path": "physical16x8_L2_baseline/baseline/L2",
+      "scenario_path": "prefix_fixed16x8_L2/scenario/L2",
+      "termination": [
+        "survey_complete",
+        "survey_complete"
+      ]
+    }
+  },
+  "mean_delta": -16.766570499999943,
+  "no_gpu": true,
+  "no_llm": true,
+  "no_truth_features": true,
+  "production_changed": false,
+  "git_index_changed": false,
+  "baseline_branch_proof": "baseline_branch_proof.json",
+  "prefix_and_scorer_check": "checks.json",
+  "source_snapshot": "final_source_snapshot",
+  "notes": [
+    "Initial larger gains belong to inconsistent implementations and are not adopted.",
+    "Original integrated ablation was +166.698785 versus initial scenario +161.416771; it was not strictly variance-only and used the pre-height/prefix source.",
+    "No additional ablation or parameter search after validation failure."
+  ]
+}
