@@ -1,0 +1,103 @@
+{
+  "lp_objective_without_constants": 32078.51073733339,
+  "seconds": 0.97952974983491,
+  "max_stationarity_residual": 2.1449508835758024e-13,
+  "dual_primal_objective_residual": 3.637978807091713e-11,
+  "max_inequality_marginal": -0.0,
+  "redundant_flow_and_winner_upper_bounds_removed": true,
+  "existing_columns": 1386,
+  "existing_nonbasic": 200,
+  "existing_nonbasic_max_reduced_profit": 0.0,
+  "existing_unfixed_max_reduced_profit": 2.1449508835758024e-13,
+  "pricing_candidates_tested": 150,
+  "best_new_column_reduced_profit": 56.863645729031795,
+  "best_new_column_parts": {
+    "science_residual": 13.230440729031704,
+    "required": 50.0,
+    "requests": 0.0,
+    "time_arc_cost": 6.366794999999911
+  },
+  "augmented_lp_objective_without_constants": 32078.51073733339,
+  "restricted_lp_improvement": 0.0,
+  "new_column_flow": -0.0,
+  "positive_column_improves_restricted_lp": false,
+  "batch_positive_columns": 20,
+  "batch_augmented_lp_objective_without_constants": 32119.204292873997,
+  "batch_restricted_lp_improvement": 40.69355554060894,
+  "batch_column_flows": [
+    -0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0
+  ],
+  "batch_strict_improvement": true,
+  "conservative_primal": {
+    "mip_status": 0,
+    "mip_gap": 0.0,
+    "stats": {
+      "variables": 21493,
+      "rows": 29578,
+      "nonzeros": 61762,
+      "time_nodes": 1271,
+      "seconds": 0.1303152919281274,
+      "mode": "lower"
+    },
+    "original_reconstruction": {
+      "total_conditional_conservative": 7094.664229682793,
+      "science": 7045.172663999754,
+      "required_missing": 3,
+      "missing_ids": [
+        "V4T001295",
+        "V4T005424",
+        "V4T008897"
+      ],
+      "request_rewards": [
+        0,
+        100.0
+      ],
+      "report_fixed": 100.0,
+      "uniformity_penalty": 0.5084343169606154,
+      "observe_columns": 1194
+    },
+    "candidate_with_actual_uniformity": {
+      "total_conditional_conservative": 7094.664229682794,
+      "science": 7045.172663999755,
+      "required_missing": 3,
+      "missing_ids": [
+        "V4T001295",
+        "V4T005424",
+        "V4T008897"
+      ],
+      "request_rewards": [
+        0,
+        100.0
+      ],
+      "report_fixed": 100.0,
+      "uniformity_penalty": 0.5084343169606154,
+      "observe_columns": 1169
+    },
+    "conditional_total_difference": 9.094947017729282e-13,
+    "science_change": 9.094947017729282e-13,
+    "required_reward_change": 0,
+    "request_reward_change": 0.0,
+    "new_priced_columns_selected": [],
+    "new_assignment_official_geometry_checks": 301
+  },
+  "elapsed_seconds": 5.402126207947731
+}
