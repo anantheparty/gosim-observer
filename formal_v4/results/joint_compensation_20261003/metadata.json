@@ -1,0 +1,216 @@
+{
+  "cases": [
+    {
+      "case": 0,
+      "start": 1791343036.0,
+      "start_utc": "2026-10-07T03:17:16Z",
+      "file": "case_0.npz",
+      "sha256": "21c35392deceb9a966116b0a57ee01259d44be1826b2b5f628ebf13965747779",
+      "D": 5,
+      "actual_visible_completable_targets": [
+        "V4T001031",
+        "V4T001352",
+        "V4T003480",
+        "V4T005488",
+        "V4T005564",
+        "V4T006885",
+        "V4T007565",
+        "V4T007746",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 1,
+      "start": 1791182882.0,
+      "start_utc": "2026-10-05T06:48:02Z",
+      "file": "case_1.npz",
+      "sha256": "a71f6a36b1439f8ad2a204db2fb4d4505ad3cc060c7c511c63b9171edae60192",
+      "D": 12,
+      "actual_visible_completable_targets": [
+        "V4T001328",
+        "V4T001825",
+        "V4T002322",
+        "V4T003239",
+        "V4T003424",
+        "V4T005488",
+        "V4T007935",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 2,
+      "start": 1791268587.0,
+      "start_utc": "2026-10-06T06:36:27Z",
+      "file": "case_2.npz",
+      "sha256": "14f0b62c990b20d40dc7eeea93547ec40e200ba886f53892dcbbcf336f234da0",
+      "D": 4,
+      "actual_visible_completable_targets": [
+        "V4T001328",
+        "V4T001825",
+        "V4T002322",
+        "V4T003239",
+        "V4T003424",
+        "V4T005488",
+        "V4T007935",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 3,
+      "start": 1791344703.0,
+      "start_utc": "2026-10-07T03:45:03Z",
+      "file": "case_3.npz",
+      "sha256": "532700cffdeffbeb7a956470ebc4454af22b03cfb513950237878eb07c579d50",
+      "D": 4,
+      "actual_visible_completable_targets": [
+        "V4T001031",
+        "V4T001352",
+        "V4T002322",
+        "V4T003424",
+        "V4T003480",
+        "V4T005488",
+        "V4T005564",
+        "V4T006885",
+        "V4T007565",
+        "V4T007746",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 4,
+      "start": 1791362451.0,
+      "start_utc": "2026-10-07T08:40:51Z",
+      "file": "case_4.npz",
+      "sha256": "edfddd16888e8a1896ecb9f35554e5f950edf84a1c7014a5d14f58485abe8bce",
+      "D": 3,
+      "actual_visible_completable_targets": [
+        "V4T002600",
+        "V4T007935",
+        "V4T008610"
+      ]
+    },
+    {
+      "case": 5,
+      "start": 1791266400.0,
+      "start_utc": "2026-10-06T06:00:00Z",
+      "file": "case_5.npz",
+      "sha256": "93beb4d8ca687da93f1d7037bf801d96a5bf245d302979af04013574322bd8c9",
+      "D": 11,
+      "actual_visible_completable_targets": [
+        "V4T001328",
+        "V4T001825",
+        "V4T002322",
+        "V4T003239",
+        "V4T003424",
+        "V4T005488",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 6,
+      "start": 1791266789.0,
+      "start_utc": "2026-10-06T06:06:29Z",
+      "file": "case_6.npz",
+      "sha256": "eb3abc378b0d4bb20cebf25043f614bd41a4fbde7368305b8cf88e6c69dd5627",
+      "D": 10,
+      "actual_visible_completable_targets": [
+        "V4T001328",
+        "V4T001825",
+        "V4T002322",
+        "V4T003239",
+        "V4T003424",
+        "V4T005488",
+        "V4T008112",
+        "V4T008528"
+      ]
+    },
+    {
+      "case": 7,
+      "start": 1791266050.0,
+      "start_utc": "2026-10-06T05:54:10Z",
+      "file": "case_7.npz",
+      "sha256": "650557137d65cd82a9e2ab32e7f52c139b938a32920e7864fbba33e7498a91bf",
+      "D": 12,
+      "actual_visible_completable_targets": [
+        "V4T001328",
+        "V4T001825",
+        "V4T002322",
+        "V4T003239",
+        "V4T003424",
+        "V4T005424",
+        "V4T005488",
+        "V4T008112",
+        "V4T008528",
+        "V4T008897"
+      ]
+    }
+  ],
+  "glass": 0.6324555320336759,
+  "pitch": 0.6324555320336759,
+  "nfib": 16,
+  "programs": [
+    "DARK",
+    "BRIGHT",
+    "BACKUP"
+  ],
+  "pricing_source_sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567",
+  "hypotheses": "frozen latest Phase alpha report/repair; narrow conditional profile; zerooffset; reference directional bounds; .03 margin; finite existing nodes",
+  "wanted_targets": [
+    "V4T001031",
+    "V4T001295",
+    "V4T001328",
+    "V4T001352",
+    "V4T001825",
+    "V4T002322",
+    "V4T002600",
+    "V4T003239",
+    "V4T003424",
+    "V4T003480",
+    "V4T005424",
+    "V4T005488",
+    "V4T005564",
+    "V4T006885",
+    "V4T007565",
+    "V4T007746",
+    "V4T007935",
+    "V4T008112",
+    "V4T008528",
+    "V4T008610",
+    "V4T008897"
+  ],
+  "covered_selected_start": {
+    "V4T001031": 0,
+    "V4T001295": 1,
+    "V4T001328": 2,
+    "V4T001352": 3,
+    "V4T001825": 2,
+    "V4T002322": 2,
+    "V4T002600": 4,
+    "V4T003239": 5,
+    "V4T003424": 6,
+    "V4T003480": 0,
+    "V4T005424": 7
+  },
+  "no_supported_clear_pair": [],
+  "unprocessed_at_case_cap": [
+    "V4T005488",
+    "V4T005564",
+    "V4T006885",
+    "V4T007565",
+    "V4T007746",
+    "V4T007935",
+    "V4T008112",
+    "V4T008528",
+    "V4T008610",
+    "V4T008897"
+  ],
+  "profile_sha256": "4dc18c53e0bf1f6dcba73d256820cefe8c66cb51ef0029d0dc47d9e09a09266a",
+  "dual_sha256": "018e0d16de62fab8fb7503c5f22059d2bf74a9d342863e3e37eef9a300ba9d19",
+  "source_pool_sha256": "a6effb27879a4b06c5b56f3629140e04af45b078c89de8a289a2f485f929c69f",
+  "prepare_seconds": 7.463775665964931
+}

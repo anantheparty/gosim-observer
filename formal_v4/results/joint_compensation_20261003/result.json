@@ -1,0 +1,80 @@
+{
+  "status": "READY_CONDITIONAL_RESEARCH",
+  "baseline_official_total": 7289.494481,
+  "baseline": {
+    "total_conditional_conservative": 7289.494439125726,
+    "science": 7239.8303929997555,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1184
+  },
+  "conditional_primal": {
+    "total_conditional_conservative": 7289.494439125726,
+    "science": 7239.8303929997555,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1156
+  },
+  "conditional_net_gain": 0.0,
+  "initial_pool": 1514,
+  "GPU_refined_columns": 120,
+  "forced_compensation_columns": 80,
+  "compensation_official_checks": 853,
+  "finite_LP_gain": 7.275957614183426e-12,
+  "selected_new_indices": [],
+  "mip": {
+    "status": 0,
+    "gap": 3.593921578744134e-14,
+    "stats": {
+      "variables": 26327,
+      "rows": 34236,
+      "nonzeros": 76698,
+      "time_nodes": 1266,
+      "seconds": 0.2832501658704132,
+      "mode": "lower"
+    }
+  },
+  "old_dual_audit": {
+    "lp_objective_without_constants": 32273.168525333393,
+    "seconds": 0.9880145420320332,
+    "max_stationarity_residual": 2.1938006966593093e-13,
+    "dual_primal_objective_residual": 5.093170329928398e-11,
+    "max_inequality_marginal": -0.0,
+    "redundant_flow_and_winner_upper_bounds_removed": true
+  },
+  "new_dual_audit": {
+    "lp_objective_without_constants": 32273.1685253334,
+    "seconds": 0.8627952081151307,
+    "max_stationarity_residual": 2.149391775674303e-13,
+    "dual_primal_objective_residual": 6.548361852765083e-11,
+    "max_inequality_marginal": 2.842170943040401e-14,
+    "redundant_flow_and_winner_upper_bounds_removed": true
+  },
+  "incumbent_kept": true,
+  "actual_Jain_after_solve": true,
+  "Jain_in_MIP_objective": false,
+  "new_official_score": false,
+  "global_certificate": false,
+  "finish_seconds": 2.7229970840271562,
+  "stop_reason": "One explicit blocking-set expansion completed; no further enumeration in this bounded study"
+}
