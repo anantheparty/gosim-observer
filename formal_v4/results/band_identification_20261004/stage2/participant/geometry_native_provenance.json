@@ -1,0 +1,38 @@
+{
+  "schema": "geometry-native-release-v1",
+  "mode": "sweep",
+  "policy_sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+  "spatial_sha256": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+  "geometry_source": "results/candidate_geometry_20261003/source_snapshot/candidate_geometry_sweep.py",
+  "transformation": {
+    "source_sha256": "3ebfb63c3477e3a4c8db8b38e70f4312233b0097bc0537d5ed33a13d447fbc18",
+    "output_sha256": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "removed": "Only from numba import njit and the decorated weighted_sweep definition",
+    "remaining_module_ast_identical": true
+  },
+  "protocol": "participant-agent-protocol-v4",
+  "no_secret_material": true,
+  "no_card_or_hidden_truth": true,
+  "no_numba_or_runtime_compiler": true,
+  "allowlist": [
+    "ATTRIBUTION.md",
+    "agent.py",
+    "observer.project.json",
+    "policy.py",
+    "policy_config.json",
+    "requirements.txt",
+    "research/agent_geometry_native.py",
+    "research/belief_clock.py",
+    "research/candidate_geometry_sweep.py",
+    "research/efficiency_bounds.py",
+    "research/feedback_model.py",
+    "research/geometry.py",
+    "research/geometry_native.py",
+    "research/geometry_native_darwin_arm64.dylib",
+    "research/geometry_native_linux_x86_64.so",
+    "research/pointing_calibration.py",
+    "research/remote_budget.py",
+    "research/spatial_candidates.py"
+  ],
+  "frozen_policy_config_sha256": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84"
+}

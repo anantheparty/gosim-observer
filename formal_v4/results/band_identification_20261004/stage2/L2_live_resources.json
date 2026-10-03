@@ -1,0 +1,46 @@
+[
+  {
+    "name": "/band-identification-control-l2",
+    "pid": 679083,
+    "status": "running",
+    "started_at": "2026-10-03T17:38:30.705342004Z",
+    "cpu_quota": 2000000000,
+    "cpu_set": "4,5",
+    "memory_bytes": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant",
+        "destination": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      }
+    ]
+  },
+  {
+    "name": "/band-identification-constraint-l2",
+    "pid": 679090,
+    "status": "running",
+    "started_at": "2026-10-03T17:38:30.708878623Z",
+    "cpu_quota": 2000000000,
+    "cpu_set": "6,7",
+    "memory_bytes": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant",
+        "destination": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      }
+    ]
+  }
+]

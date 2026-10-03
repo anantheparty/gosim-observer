@@ -1,0 +1,563 @@
+{
+  "mechanism": {
+    "checks": [
+      {
+        "n": 10,
+        "x": 0.05,
+        "indices": [
+          9
+        ],
+        "exact": 5.12817948675761e-07,
+        "mc": 0.0,
+        "error": 5.12817948675761e-07
+      },
+      {
+        "n": 10,
+        "x": 0.2,
+        "indices": [
+          4
+        ],
+        "exact": 0.1111111111111111,
+        "mc": 0.10942,
+        "error": 0.0016911111111111016
+      },
+      {
+        "n": 10,
+        "x": 0.2,
+        "indices": [
+          3,
+          6
+        ],
+        "exact": 0.0,
+        "mc": 0.0,
+        "error": 0.0
+      },
+      {
+        "n": 7,
+        "x": 0.75,
+        "indices": [
+          1,
+          4
+        ],
+        "exact": 0.10748325442186664,
+        "mc": 0.10722,
+        "error": 0.0002632544218666433
+      },
+      {
+        "n": 11,
+        "x": 1.0,
+        "indices": [
+          1,
+          8
+        ],
+        "exact": 0.06611593388449999,
+        "mc": 0.06638,
+        "error": 0.0002640661155000057
+      }
+    ],
+    "lower_score_fixed_n_delta": 0.0888888888888889,
+    "append_empty_observe_global_delta": -0.11111055555625005,
+    "append_empty_observe_other_history_delta": 0.059259140740266725,
+    "rounded_last_action_loss_probability": 5.12817948675761e-07,
+    "monte_carlo_seconds": 0.5704087498597801
+  },
+  "joint": {
+    "scope": "Synthetic common-window full official ledger settlement; no decision policy or season gain.",
+    "window_cells": 30,
+    "probability_mass": 1.0000000000000002,
+    "analytic_science": 1.9777777777777779,
+    "official_shared_science": 1.9777777777777785,
+    "official_shared_total": 76.1444444444445,
+    "official_shared_req": 88.88888888888891,
+    "incorrect_independent_req": 86.41975308641975,
+    "official_shared_jain_penalty": 13.333333333333334
+  },
+  "cards": [
+    {
+      "card": "L1",
+      "public_prefix_observe_count": 981,
+      "score_feedback_hits": 13428,
+      "lower_science_hits": 163,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 5,
+      "examples": [
+        {
+          "a": 926,
+          "target": "V4T003566",
+          "score": 0.31847,
+          "old_best": 0.534552,
+          "new_lower": 0.5897583333333333,
+          "old_lower": 0.9899101851851853,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 927,
+          "target": "V4T007404",
+          "score": 0.297506,
+          "old_best": 0.54,
+          "new_lower": 0.5509361111111111,
+          "old_lower": 0.9999990740740742,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 934,
+          "target": "V4T000666",
+          "score": 0.186498,
+          "old_best": 0.336,
+          "new_lower": 0.5550520833333333,
+          "old_lower": 0.9999985119047619,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 935,
+          "target": "V4T004172",
+          "score": 0.28649,
+          "old_best": 0.54,
+          "new_lower": 0.5684315476190475,
+          "old_lower": 0.9999990740740742,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 936,
+          "target": "V4T003411",
+          "score": 0.688522,
+          "old_best": 1.099561,
+          "new_lower": 0.5737679166666667,
+          "old_lower": 0.9163004166666666,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        }
+      ],
+      "public_resyncs": [],
+      "survival_enabled_in_local_card": false,
+      "conditional_model": {}
+    },
+    {
+      "card": "L2",
+      "public_prefix_observe_count": 1107,
+      "score_feedback_hits": 15185,
+      "lower_science_hits": 233,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 5,
+      "examples": [
+        {
+          "a": 115,
+          "target": "V4T004900",
+          "score": 0.282806,
+          "old_best": 0.309642,
+          "new_lower": 0.5237138888888888,
+          "old_lower": 0.573410185185185,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0001"
+          ]
+        },
+        {
+          "a": 1028,
+          "target": "V4T005594",
+          "score": 0.25039,
+          "old_best": 0.36,
+          "new_lower": 0.6955263888888888,
+          "old_lower": 0.9999986111111111,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 1029,
+          "target": "V4T006418",
+          "score": 0.297901,
+          "old_best": 0.54,
+          "new_lower": 0.5516675925925926,
+          "old_lower": 0.9999990740740742,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 1030,
+          "target": "V4T008392",
+          "score": 0.298713,
+          "old_best": 0.43755,
+          "new_lower": 0.5531712962962962,
+          "old_lower": 0.8102768518518517,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        },
+        {
+          "a": 1035,
+          "target": "V4T005689",
+          "score": 0.684029,
+          "old_best": 1.094901,
+          "new_lower": 0.57002375,
+          "old_lower": 0.9124170833333333,
+          "required": "false",
+          "new_request_witness": [
+            "V4RQ0002"
+          ]
+        }
+      ],
+      "public_resyncs": [],
+      "survival_enabled_in_local_card": false,
+      "conditional_model": {}
+    },
+    {
+      "card": "L3",
+      "public_prefix_observe_count": 739,
+      "score_feedback_hits": 10509,
+      "lower_science_hits": 99,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 0,
+      "examples": [],
+      "public_resyncs": [
+        {
+          "issued_at_utc": "2026-12-03T04:32:23Z",
+          "invalidated_window": {
+            "action_count_at_trigger": 740,
+            "action_index_end_exclusive": 89,
+            "action_index_start": 88,
+            "window_end_fraction": 0.121387,
+            "window_max_fraction": 0.045,
+            "window_start_fraction": 0.119871
+          }
+        }
+      ],
+      "survival_enabled_in_local_card": true,
+      "conditional_model": {
+        "scope": "Synthetic conditional survival model applied to public score history, no future truth; x=.05 and N=2*prefix_n are uncalibrated hypotheses.",
+        "n": 1478,
+        "x": 0.05,
+        "positive_lower_witnesses": 9,
+        "top": [
+          [
+            0.020787307692307744,
+            "V4T006679",
+            738,
+            0.810705
+          ],
+          [
+            0.009394205128205102,
+            "V4T004423",
+            692,
+            0.366374
+          ],
+          [
+            0.008579230769230728,
+            "V4T002374",
+            733,
+            0.33459
+          ],
+          [
+            0.0066760769230769235,
+            "V4T000164",
+            733,
+            0.260367
+          ],
+          [
+            0.005946974358974344,
+            "V4T004030",
+            692,
+            0.231932
+          ],
+          [
+            0.005553820512820495,
+            "V4T006133",
+            692,
+            0.442218
+          ],
+          [
+            0.0051312169721617895,
+            "V4T006951",
+            418,
+            0.3
+          ],
+          [
+            0.00425446153846154,
+            "V4T007930",
+            733,
+            0.165924
+          ],
+          [
+            0.002370326180202109,
+            "V4T003925",
+            631,
+            0.101343
+          ]
+        ],
+        "cpu_seconds": 0.013427541824057698
+      }
+    },
+    {
+      "card": "L4",
+      "public_prefix_observe_count": 509,
+      "score_feedback_hits": 7439,
+      "lower_science_hits": 14,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 0,
+      "examples": [],
+      "public_resyncs": [
+        {
+          "issued_at_utc": "2026-12-04T05:18:24Z",
+          "invalidated_window": {
+            "action_count_at_trigger": 510,
+            "action_index_end_exclusive": 233,
+            "action_index_start": 206,
+            "window_end_fraction": 0.457341,
+            "window_max_fraction": 0.06,
+            "window_start_fraction": 0.40475
+          }
+        }
+      ],
+      "survival_enabled_in_local_card": true,
+      "conditional_model": {
+        "scope": "Synthetic conditional survival model applied to public score history, no future truth; x=.05 and N=2*prefix_n are uncalibrated hypotheses.",
+        "n": 1018,
+        "x": 0.05,
+        "positive_lower_witnesses": 3,
+        "top": [
+          [
+            0.01336533952841823,
+            "V4T002459",
+            473,
+            0.685228
+          ],
+          [
+            0.002274641025641011,
+            "V4T002094",
+            508,
+            0.088711
+          ],
+          [
+            0.0001288111275500048,
+            "V4T007789",
+            421,
+            0.065195
+          ]
+        ],
+        "cpu_seconds": 0.009742667200043797
+      }
+    }
+  ],
+  "offline_factor_teacher": [
+    {
+      "card": "L1",
+      "scope": "Offline actual hit factor teacher audit, unavailable to participant; never used by public_history or action selection.",
+      "lower_science_raw_factor_improved": 31,
+      "lower_science_raw_factor_crossed_half": 0,
+      "examples": [
+        {
+          "a": 575,
+          "target": "V4T000614",
+          "c": 0.189347,
+          "old_best": 0.190789,
+          "g": 0.189347,
+          "old_g": 0.15899
+        },
+        {
+          "a": 625,
+          "target": "V4T003062",
+          "c": 0.582151,
+          "old_best": 0.645811,
+          "g": 0.582151,
+          "old_g": 0.538176
+        },
+        {
+          "a": 625,
+          "target": "V4T003588",
+          "c": 0.594246,
+          "old_best": 0.658899,
+          "g": 0.594246,
+          "old_g": 0.549082
+        },
+        {
+          "a": 671,
+          "target": "V4T003329",
+          "c": 0.3,
+          "old_best": 0.312921,
+          "g": 1.0,
+          "old_g": 0.869226
+        },
+        {
+          "a": 721,
+          "target": "V4T004979",
+          "c": 0.45,
+          "old_best": 0.536978,
+          "g": 1.0,
+          "old_g": 0.994403
+        },
+        {
+          "a": 743,
+          "target": "V4T001038",
+          "c": 0.354838,
+          "old_best": 0.392393,
+          "g": 0.354838,
+          "old_g": 0.326995
+        },
+        {
+          "a": 760,
+          "target": "V4T007649",
+          "c": 0.45,
+          "old_best": 0.519935,
+          "g": 1.0,
+          "old_g": 0.962843
+        },
+        {
+          "a": 760,
+          "target": "V4T001386",
+          "c": 1.0,
+          "old_best": 1.193942,
+          "g": 1.0,
+          "old_g": 0.994951
+        }
+      ]
+    },
+    {
+      "card": "L2",
+      "scope": "Offline actual hit factor teacher audit, unavailable to participant; never used by public_history or action selection.",
+      "lower_science_raw_factor_improved": 23,
+      "lower_science_raw_factor_crossed_half": 3,
+      "examples": [
+        {
+          "a": 308,
+          "target": "V4T003173",
+          "c": 0.163833,
+          "old_best": 0.192392,
+          "g": 0.546112,
+          "old_g": 0.534423
+        },
+        {
+          "a": 358,
+          "target": "V4T000465",
+          "c": 0.3,
+          "old_best": 0.357502,
+          "g": 1.0,
+          "old_g": 0.993062
+        },
+        {
+          "a": 439,
+          "target": "V4T001877",
+          "c": 0.209364,
+          "old_best": 0.210447,
+          "g": 0.209364,
+          "old_g": 0.175372
+        },
+        {
+          "a": 504,
+          "target": "V4T001179",
+          "c": 0.45,
+          "old_best": 0.494473,
+          "g": 1.0,
+          "old_g": 0.981098
+        },
+        {
+          "a": 523,
+          "target": "V4T005047",
+          "c": 0.256445,
+          "old_best": 0.260064,
+          "g": 0.569877,
+          "old_g": 0.4816
+        },
+        {
+          "a": 765,
+          "target": "V4T003132",
+          "c": 0.268834,
+          "old_best": 0.268975,
+          "g": 0.597408,
+          "old_g": 0.498101
+        },
+        {
+          "a": 769,
+          "target": "V4T005827",
+          "c": 1.0,
+          "old_best": 1.026797,
+          "g": 1.0,
+          "old_g": 0.916783
+        },
+        {
+          "a": 772,
+          "target": "V4T007955",
+          "c": 0.45,
+          "old_best": 0.488704,
+          "g": 1.0,
+          "old_g": 0.96965
+        }
+      ]
+    },
+    {
+      "card": "L3",
+      "scope": "Offline actual hit factor teacher audit, unavailable to participant; never used by public_history or action selection.",
+      "lower_science_raw_factor_improved": 4,
+      "lower_science_raw_factor_crossed_half": 0,
+      "examples": [
+        {
+          "a": 418,
+          "target": "V4T006951",
+          "c": 0.3,
+          "old_best": 0.303363,
+          "g": 1.0,
+          "old_g": 0.842674
+        },
+        {
+          "a": 419,
+          "target": "V4T001226",
+          "c": 0.666195,
+          "old_best": 0.733364,
+          "g": 0.666195,
+          "old_g": 0.611137
+        },
+        {
+          "a": 733,
+          "target": "V4T007930",
+          "c": 0.165924,
+          "old_best": 0.177484,
+          "g": 0.097603,
+          "old_g": 0.087002
+        },
+        {
+          "a": 733,
+          "target": "V4T001267",
+          "c": 0.107906,
+          "old_best": 0.115446,
+          "g": 0.063474,
+          "old_g": 0.056591
+        }
+      ]
+    },
+    {
+      "card": "L4",
+      "scope": "Offline actual hit factor teacher audit, unavailable to participant; never used by public_history or action selection.",
+      "lower_science_raw_factor_improved": 1,
+      "lower_science_raw_factor_crossed_half": 0,
+      "examples": [
+        {
+          "a": 508,
+          "target": "V4T002094",
+          "c": 0.088711,
+          "old_best": 0.093358,
+          "g": 0.088711,
+          "old_g": 0.077798
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.8725072499364614,
+  "source_sha256": "8ee0f390075f479e6ab6650c9af6a232f3d41214f2ab579d4c704daf7ca86e1e"
+}

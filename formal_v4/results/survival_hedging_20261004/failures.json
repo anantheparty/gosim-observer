@@ -1,0 +1,24 @@
+{
+  "shell_failures": [
+    {
+      "command": "rg with formal_v4/practice_cards/*/*.md",
+      "cause": "zsh unmatched glob; corrected to rg recursive explicit patterns"
+    },
+    {
+      "command": "rg runner/challenge/*platform*.py",
+      "cause": "zsh unmatched glob; inspected v4_workflow.py directly"
+    },
+    {
+      "command": "first redirect audit.log",
+      "cause": "Result directory did not yet exist; created directory then reran"
+    }
+  ],
+  "micro_design_revision": [
+    {
+      "issue": "Initial synthetic A backup at rank8 made A always safe in x=.2 continuous model, so independent-REQ approximation happened to match the joint request event.",
+      "fix": "Used backup rank5 to demonstrate correlated A/B losses; assertion requires independent/shared difference >1.",
+      "policy_experiments": 0
+    }
+  ],
+  "reruns": "Four subsecond local audit invocations during mechanical corrections; final full output in public_audit.json and audit.log. No failed season, unreported parameter rescue, or production modification."
+}

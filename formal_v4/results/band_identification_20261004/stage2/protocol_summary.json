@@ -1,0 +1,248 @@
+[
+  {
+    "mode": "control",
+    "card": "L2",
+    "total": 6823.661561,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6674.649933,
+      "uniformity_penalty": -0.988373
+    },
+    "counts": {
+      "decisions": 1791,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 15185,
+      "observe_actions": 1107,
+      "required_missing": 3,
+      "targets_observed": 8410
+    },
+    "termination": "survey_complete",
+    "exit_code": 0,
+    "host_seconds": 522.845497489965,
+    "accounted_seconds": 522.308,
+    "traceback": false,
+    "participant_has_truth_mount": false,
+    "source_lock_sha256": "600e2dcb1061bd4bfc35b37481fc9be3e75463c6785cd0c06243796a7948fca5",
+    "public_constraint_logs": [
+      {
+        "event": "band_constraint_projection",
+        "mode": "control",
+        "observe_action_index": 489,
+        "now_utc": "2026-11-20T06:43:01Z",
+        "C": 0.6776306282862244,
+        "E": 0.8916989671936985,
+        "projected_C": 0.6584720563124241,
+        "projected_E": 0.9162111913099674,
+        "source_indices": [
+          486,
+          487,
+          488
+        ],
+        "programs": [
+          "BRIGHT",
+          "DARK"
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 75.2167003,
+            "az_deg": 61.5350803
+          },
+          "assignments": {
+            "0": "V4T002508",
+            "1": "V4T004907",
+            "2": "V4T005883",
+            "3": "V4T002714",
+            "4": "V4T006773",
+            "5": "V4T004146",
+            "6": "V4T003602",
+            "7": "V4T005889",
+            "9": "V4T003623",
+            "10": "V4T000246",
+            "11": "V4T001885",
+            "13": "V4T008450",
+            "14": "V4T007699",
+            "15": "V4T004948"
+          },
+          "duration_seconds": 230,
+          "program": "DARK"
+        }
+      }
+    ],
+    "participant_summary": {
+      "decisions": 1231,
+      "exposures": 1107,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6674.649928999999,
+      "required_missing_bound": 3,
+      "planning_seconds": 473.631,
+      "C": 1.0948,
+      "E": 0.9527,
+      "remote_check": null,
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "band_identification_mode": "control",
+      "band_identification_stats": {
+        "accepted": 98,
+        "multiple_midpoints": 202,
+        "cross_slot_or_invalid": 676,
+        "few_positive_hits": 2,
+        "event_notice": 129,
+        "natural_multiprogram": 1,
+        "joint_only_conflicts": 1
+      },
+      "geometry": {
+        "calls": 1107,
+        "sweeps": 2214,
+        "arrangement_cells": 194554597,
+        "improvements": 1008,
+        "sweep_seconds": 149.4296210995526,
+        "exact_seconds": 12.054470933391713
+      }
+    },
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/run_local.py",
+      "--card",
+      "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/local-cards/L2",
+      "--agent",
+      "docker run --rm --interactive --user 1000:1000 --name band-identification-control-l2 --cpus 2 --cpuset-cpus 4,5 --memory 2048m --memory-swap 2048m --pids-limit 128 --cap-drop=ALL --security-opt=no-new-privileges --ulimit nofile=512:512 --read-only --tmpfs /tmp:rw,nosuid,size=256m --network none --log-driver none --mount type=bind,src=/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant,dst=/workspace,readonly --mount type=bind,src=/tmp/geometry_native_20261003/.deps,dst=/deps,readonly --workdir /workspace --env PYTHONPATH=/deps --env PYTHONDONTWRITEBYTECODE=1 --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 --env MKL_NUM_THREADS=1 --env BAND_IDENTIFICATION_MODE=control python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016 python3 -u -m research.band_identification_agent",
+      "--agent-cwd",
+      "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant",
+      "--wallclock",
+      "900",
+      "--out",
+      "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/protocol/control/L2",
+      "--quiet"
+    ],
+    "protocol_passed": true
+  },
+  {
+    "mode": "constraint",
+    "card": "L2",
+    "total": 6776.887746,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6627.655434,
+      "uniformity_penalty": -0.767689
+    },
+    "counts": {
+      "decisions": 1784,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 15076,
+      "observe_actions": 1099,
+      "required_missing": 3,
+      "targets_observed": 8383
+    },
+    "termination": "survey_complete",
+    "exit_code": 0,
+    "host_seconds": 521.4916599559947,
+    "accounted_seconds": 520.967,
+    "traceback": false,
+    "participant_has_truth_mount": false,
+    "source_lock_sha256": "600e2dcb1061bd4bfc35b37481fc9be3e75463c6785cd0c06243796a7948fca5",
+    "public_constraint_logs": [
+      {
+        "event": "band_constraint_projection",
+        "mode": "constraint",
+        "observe_action_index": 489,
+        "now_utc": "2026-11-20T06:43:01Z",
+        "C": 0.6776306282862244,
+        "E": 0.8916989671936985,
+        "projected_C": 0.6584720563124241,
+        "projected_E": 0.9162111913099674,
+        "source_indices": [
+          486,
+          487,
+          488
+        ],
+        "programs": [
+          "BRIGHT",
+          "DARK"
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 84.1576671,
+            "az_deg": 41.0389339
+          },
+          "assignments": {
+            "0": "V4T001075",
+            "1": "V4T002028",
+            "4": "V4T006107",
+            "5": "V4T002268",
+            "7": "V4T005707",
+            "8": "V4T006227",
+            "9": "V4T006820",
+            "11": "V4T000922",
+            "13": "V4T003895",
+            "14": "V4T008242",
+            "15": "V4T001419"
+          },
+          "duration_seconds": 174,
+          "program": "DARK"
+        }
+      }
+    ],
+    "participant_summary": {
+      "decisions": 1224,
+      "exposures": 1099,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6627.655393,
+      "required_missing_bound": 3,
+      "planning_seconds": 472.857,
+      "C": 1.1026,
+      "E": 0.946,
+      "remote_check": null,
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "band_identification_mode": "constraint",
+      "band_identification_stats": {
+        "accepted": 90,
+        "multiple_midpoints": 205,
+        "cross_slot_or_invalid": 677,
+        "few_positive_hits": 2,
+        "event_notice": 125,
+        "natural_multiprogram": 2,
+        "joint_only_conflicts": 1,
+        "current_fit_already_conflicts": 2
+      },
+      "geometry": {
+        "calls": 1099,
+        "sweeps": 2198,
+        "arrangement_cells": 199234031,
+        "improvements": 970,
+        "sweep_seconds": 153.8700261877966,
+        "exact_seconds": 12.105447895650286
+      }
+    },
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/run_local.py",
+      "--card",
+      "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/local-cards/L2",
+      "--agent",
+      "docker run --rm --interactive --user 1000:1000 --name band-identification-constraint-l2 --cpus 2 --cpuset-cpus 6,7 --memory 2048m --memory-swap 2048m --pids-limit 128 --cap-drop=ALL --security-opt=no-new-privileges --ulimit nofile=512:512 --read-only --tmpfs /tmp:rw,nosuid,size=256m --network none --log-driver none --mount type=bind,src=/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant,dst=/workspace,readonly --mount type=bind,src=/tmp/geometry_native_20261003/.deps,dst=/deps,readonly --workdir /workspace --env PYTHONPATH=/deps --env PYTHONDONTWRITEBYTECODE=1 --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 --env MKL_NUM_THREADS=1 --env BAND_IDENTIFICATION_MODE=constraint python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016 python3 -u -m research.band_identification_agent",
+      "--agent-cwd",
+      "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/participant",
+      "--wallclock",
+      "900",
+      "--out",
+      "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/protocol/constraint/L2",
+      "--quiet"
+    ],
+    "protocol_passed": true
+  }
+]

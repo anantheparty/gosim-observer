@@ -1,0 +1,199 @@
+{
+  "checks": {
+    "control_actions_match_READY": true,
+    "control_score_match_READY": true,
+    "source_lock_unchanged": true,
+    "both_protocol_complete": true,
+    "both_under_900_seconds": true,
+    "no_traceback": true,
+    "no_participant_truth_mount": true
+  },
+  "all_gates_passed": true,
+  "control_total": 6823.661561,
+  "constraint_total": 6776.887746,
+  "total_delta": -46.773815,
+  "component_deltas": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 0.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": -46.994499,
+    "uniformity_penalty": 0.220684
+  },
+  "control_counts": {
+    "decisions": 1791,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 15185,
+    "observe_actions": 1107,
+    "required_missing": 3,
+    "targets_observed": 8410
+  },
+  "constraint_counts": {
+    "decisions": 1784,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 15076,
+    "observe_actions": 1099,
+    "required_missing": 3,
+    "targets_observed": 8383
+  },
+  "common_prefix_action_count": 528,
+  "common_prefix_observe_count": 489,
+  "first_control_difference": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T002508",
+      "1": "V4T004907",
+      "10": "V4T000246",
+      "11": "V4T001885",
+      "13": "V4T008450",
+      "14": "V4T007699",
+      "15": "V4T004948",
+      "2": "V4T005883",
+      "3": "V4T002714",
+      "4": "V4T006773",
+      "5": "V4T004146",
+      "6": "V4T003602",
+      "7": "V4T005889",
+      "9": "V4T003623"
+    },
+    "duration_seconds": 230,
+    "pointing": {
+      "alt_deg": 75.2167003,
+      "az_deg": 61.5350803
+    },
+    "program": "DARK"
+  },
+  "first_constraint_difference": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T001075",
+      "1": "V4T002028",
+      "11": "V4T000922",
+      "13": "V4T003895",
+      "14": "V4T008242",
+      "15": "V4T001419",
+      "4": "V4T006107",
+      "5": "V4T002268",
+      "7": "V4T005707",
+      "8": "V4T006227",
+      "9": "V4T006820"
+    },
+    "duration_seconds": 174,
+    "pointing": {
+      "alt_deg": 84.1576671,
+      "az_deg": 41.0389339
+    },
+    "program": "DARK"
+  },
+  "control_constraint_events": [
+    {
+      "event": "band_constraint_projection",
+      "mode": "control",
+      "observe_action_index": 489,
+      "now_utc": "2026-11-20T06:43:01Z",
+      "C": 0.6776306282862244,
+      "E": 0.8916989671936985,
+      "projected_C": 0.6584720563124241,
+      "projected_E": 0.9162111913099674,
+      "source_indices": [
+        486,
+        487,
+        488
+      ],
+      "programs": [
+        "BRIGHT",
+        "DARK"
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 75.2167003,
+          "az_deg": 61.5350803
+        },
+        "assignments": {
+          "0": "V4T002508",
+          "1": "V4T004907",
+          "2": "V4T005883",
+          "3": "V4T002714",
+          "4": "V4T006773",
+          "5": "V4T004146",
+          "6": "V4T003602",
+          "7": "V4T005889",
+          "9": "V4T003623",
+          "10": "V4T000246",
+          "11": "V4T001885",
+          "13": "V4T008450",
+          "14": "V4T007699",
+          "15": "V4T004948"
+        },
+        "duration_seconds": 230,
+        "program": "DARK"
+      }
+    }
+  ],
+  "constraint_constraint_events": [
+    {
+      "event": "band_constraint_projection",
+      "mode": "constraint",
+      "observe_action_index": 489,
+      "now_utc": "2026-11-20T06:43:01Z",
+      "C": 0.6776306282862244,
+      "E": 0.8916989671936985,
+      "projected_C": 0.6584720563124241,
+      "projected_E": 0.9162111913099674,
+      "source_indices": [
+        486,
+        487,
+        488
+      ],
+      "programs": [
+        "BRIGHT",
+        "DARK"
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 84.1576671,
+          "az_deg": 41.0389339
+        },
+        "assignments": {
+          "0": "V4T001075",
+          "1": "V4T002028",
+          "4": "V4T006107",
+          "5": "V4T002268",
+          "7": "V4T005707",
+          "8": "V4T006227",
+          "9": "V4T006820",
+          "11": "V4T000922",
+          "13": "V4T003895",
+          "14": "V4T008242",
+          "15": "V4T001419"
+        },
+        "duration_seconds": 174,
+        "program": "DARK"
+      }
+    }
+  ],
+  "controlled_score_scope": "complete supplied local L2 season under pinned Linux protocol",
+  "source_lock_sha256": "600e2dcb1061bd4bfc35b37481fc9be3e75463c6785cd0c06243796a7948fca5",
+  "decision": "reject_no_parameter_rescue",
+  "output_sha256": {
+    "control/actions.jsonl": "c4c37d1a588d8f8b088eb07fd0e054832b65a096ee57d7bd7b0792ce5189ba0c",
+    "control/decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+    "control/observations.csv": "39f178c1f9381c479a416bcf319460326087d29430ece4aa1df00ee9c69255f2",
+    "control/score_report.json": "dd1bbb338ca5aa617a6e0724cc07cd17d694df31f2fc6c87606b4b37ad224257",
+    "control/workflow_result.json": "24db0bf6850c4d4647c5bae9328da2a7ae50580881013a12febb246005ca25d0",
+    "control/agent.log": "c50f39519c381e10f559e6d15037b3cf7445b6b33bfc2c22a47039acd71bf641",
+    "control/gate_result.json": "fce7fd71542407e546ded3d6a1d6b7ff889d7d79bbbf43ff8005207f96f90aa1",
+    "constraint/actions.jsonl": "db12f493d651b01cfb70a1aafc0ff5f9316c69b6805f4c4bc05dde1a36290da4",
+    "constraint/decisions.csv": "e15bd8b5b70f7ec8d008aa84cd60da59aa868455094ace011bc26dbad44beebb",
+    "constraint/observations.csv": "7f5aa593d2d5951737e732d42d1f79dfd495871eab26104b5d553334d96fdbf1",
+    "constraint/score_report.json": "be600a5ba2aa08801ee8e675fbe758d036c3e93cef73fcef0af1a2851a4a3213",
+    "constraint/workflow_result.json": "e355ddf121ae8dba6e7ea3306c18a7698d44e1c06be7e4e545eb87203e0af7cc",
+    "constraint/agent.log": "3e5b1faf20ca1f917b65d6d4d0e15989a9929ac5ea175d6343bd335849c55ad5",
+    "constraint/gate_result.json": "0ec9417e597b4d5008011cbaac703bada70ab5a95393a9f0599542db46aee3d0"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "seconds": 0.8725072499364614,
+  "mechanism": {
+    "checks": [
+      {
+        "n": 10,
+        "x": 0.05,
+        "indices": [
+          9
+        ],
+        "exact": 5.12817948675761e-07,
+        "mc": 0.0,
+        "error": 5.12817948675761e-07
+      },
+      {
+        "n": 10,
+        "x": 0.2,
+        "indices": [
+          4
+        ],
+        "exact": 0.1111111111111111,
+        "mc": 0.10942,
+        "error": 0.0016911111111111016
+      },
+      {
+        "n": 10,
+        "x": 0.2,
+        "indices": [
+          3,
+          6
+        ],
+        "exact": 0.0,
+        "mc": 0.0,
+        "error": 0.0
+      },
+      {
+        "n": 7,
+        "x": 0.75,
+        "indices": [
+          1,
+          4
+        ],
+        "exact": 0.10748325442186664,
+        "mc": 0.10722,
+        "error": 0.0002632544218666433
+      },
+      {
+        "n": 11,
+        "x": 1.0,
+        "indices": [
+          1,
+          8
+        ],
+        "exact": 0.06611593388449999,
+        "mc": 0.06638,
+        "error": 0.0002640661155000057
+      }
+    ],
+    "lower_score_fixed_n_delta": 0.0888888888888889,
+    "append_empty_observe_global_delta": -0.11111055555625005,
+    "append_empty_observe_other_history_delta": 0.059259140740266725,
+    "rounded_last_action_loss_probability": 5.12817948675761e-07,
+    "monte_carlo_seconds": 0.5704087498597801
+  },
+  "cards": [
+    {
+      "card": "L1",
+      "public_prefix_observe_count": 981,
+      "score_feedback_hits": 13428,
+      "lower_science_hits": 163,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 5,
+      "survival_enabled_in_local_card": false,
+      "conditional": {}
+    },
+    {
+      "card": "L2",
+      "public_prefix_observe_count": 1107,
+      "score_feedback_hits": 15185,
+      "lower_science_hits": 233,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 5,
+      "survival_enabled_in_local_card": false,
+      "conditional": {}
+    },
+    {
+      "card": "L3",
+      "public_prefix_observe_count": 739,
+      "score_feedback_hits": 10509,
+      "lower_science_hits": 99,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 0,
+      "survival_enabled_in_local_card": true,
+      "conditional": {
+        "scope": "Synthetic conditional survival model applied to public score history, no future truth; x=.05 and N=2*prefix_n are uncalibrated hypotheses.",
+        "n": 1478,
+        "x": 0.05,
+        "positive_lower_witnesses": 9,
+        "top": [
+          [
+            0.020787307692307744,
+            "V4T006679",
+            738,
+            0.810705
+          ],
+          [
+            0.009394205128205102,
+            "V4T004423",
+            692,
+            0.366374
+          ],
+          [
+            0.008579230769230728,
+            "V4T002374",
+            733,
+            0.33459
+          ],
+          [
+            0.0066760769230769235,
+            "V4T000164",
+            733,
+            0.260367
+          ],
+          [
+            0.005946974358974344,
+            "V4T004030",
+            692,
+            0.231932
+          ],
+          [
+            0.005553820512820495,
+            "V4T006133",
+            692,
+            0.442218
+          ],
+          [
+            0.0051312169721617895,
+            "V4T006951",
+            418,
+            0.3
+          ],
+          [
+            0.00425446153846154,
+            "V4T007930",
+            733,
+            0.165924
+          ],
+          [
+            0.002370326180202109,
+            "V4T003925",
+            631,
+            0.101343
+          ]
+        ],
+        "cpu_seconds": 0.013427541824057698
+      }
+    },
+    {
+      "card": "L4",
+      "public_prefix_observe_count": 509,
+      "score_feedback_hits": 7439,
+      "lower_science_hits": 14,
+      "lower_science_new_factor_certificate": 0,
+      "lower_science_new_req_window_witness": 0,
+      "survival_enabled_in_local_card": true,
+      "conditional": {
+        "scope": "Synthetic conditional survival model applied to public score history, no future truth; x=.05 and N=2*prefix_n are uncalibrated hypotheses.",
+        "n": 1018,
+        "x": 0.05,
+        "positive_lower_witnesses": 3,
+        "top": [
+          [
+            0.01336533952841823,
+            "V4T002459",
+            473,
+            0.685228
+          ],
+          [
+            0.002274641025641011,
+            "V4T002094",
+            508,
+            0.088711
+          ],
+          [
+            0.0001288111275500048,
+            "V4T007789",
+            421,
+            0.065195
+          ]
+        ],
+        "cpu_seconds": 0.009742667200043797
+      }
+    }
+  ]
+}

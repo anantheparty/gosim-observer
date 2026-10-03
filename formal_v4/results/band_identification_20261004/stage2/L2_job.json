@@ -1,0 +1,30 @@
+{
+  "pid": 678992,
+  "started_utc": "2026-10-03T17:38:30.408734+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/tmp/band_identification_20261004/research/band_identification_stage2_gate.py",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples"
+  ],
+  "log": "/tmp/band_identification_20261004/results/band_identification_20261004/stage2/L2_pair.log",
+  "source_lock_sha256": "600e2dcb1061bd4bfc35b37481fc9be3e75463c6785cd0c06243796a7948fca5",
+  "participant_cores": {
+    "control": [
+      4,
+      5
+    ],
+    "constraint": [
+      6,
+      7
+    ]
+  },
+  "per_participant_cpu": 2,
+  "per_participant_memory_bytes": 2147483648,
+  "global_protocol_wallclock_seconds": 900,
+  "per_subprocess_timeout_seconds": 990,
+  "driver_sha256": "3badbbdf7fa19acb78b53d8052260ca41ad376106c0b33bbbb0c03322b8fbe44"
+}

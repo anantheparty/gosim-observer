@@ -1,0 +1,124 @@
+{
+  "rows": [
+    {
+      "card": "L2",
+      "trace": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/geometry_native_20261003/protocol_gate_retry/L2",
+      "stats": {
+        "accepted": 98,
+        "multiple_midpoints": 202,
+        "cross_slot_or_invalid": 676,
+        "few_positive_hits": 2,
+        "event_notice": 129,
+        "natural_multiprogram": 1,
+        "joint_only_conflicts": 1
+      },
+      "accepted_truth_states_retained": 98,
+      "candidate_state_conflicts": [
+        {
+          "observe_index": "489",
+          "time": "2026-11-20T06:43:01Z",
+          "key": [
+            "N20261119",
+            23
+          ],
+          "original_C": 0.6776306282862244,
+          "original_E": 0.8916989671936983,
+          "projected_C": 0.6584720563124241,
+          "projected_E": 0.9162111913099674,
+          "source_indices": [
+            486,
+            487,
+            488
+          ],
+          "programs": [
+            "BRIGHT",
+            "DARK"
+          ],
+          "original_action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 75.2167003,
+              "az_deg": 61.5350803
+            },
+            "assignments": {
+              "0": "V4T002508",
+              "1": "V4T004907",
+              "2": "V4T005883",
+              "3": "V4T002714",
+              "4": "V4T006773",
+              "5": "V4T004146",
+              "6": "V4T003602",
+              "7": "V4T005889",
+              "9": "V4T003623",
+              "10": "V4T000246",
+              "11": "V4T001885",
+              "13": "V4T008450",
+              "14": "V4T007699",
+              "15": "V4T004948"
+            },
+            "duration_seconds": 230,
+            "program": "DARK"
+          },
+          "projected_action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 84.1576671,
+              "az_deg": 41.0389339
+            },
+            "assignments": {
+              "0": "V4T001075",
+              "1": "V4T002028",
+              "4": "V4T006107",
+              "5": "V4T002268",
+              "7": "V4T005707",
+              "8": "V4T006227",
+              "9": "V4T006820",
+              "11": "V4T000922",
+              "13": "V4T003895",
+              "14": "V4T008242",
+              "15": "V4T001419"
+            },
+            "duration_seconds": 174,
+            "program": "DARK"
+          },
+          "action_changed": true,
+          "original_matches_recorded_native": true,
+          "point_state_science_sum": 3213.1414050000003,
+          "original_rate": 0.013003326781197297,
+          "projected_rate": 0.012930713006106069,
+          "candidate_backend": "locked Darwin native, NumPy 2.0.2"
+        }
+      ],
+      "pointfit_final_C": 1.0947824286378145,
+      "pointfit_final_E": 0.9527481495403346,
+      "public_score_ledger_sum": 6674.649928999999,
+      "counts": {
+        "observe": 1107
+      },
+      "inference_reads_truth": false,
+      "validation_reads_truth": true
+    },
+    {
+      "card": "L2",
+      "trace": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/objective_graph_20261004/program_pair/control/L2",
+      "stats": {
+        "accepted": 82,
+        "multiple_midpoints": 199,
+        "cross_slot_or_invalid": 686,
+        "natural_multiprogram": 3,
+        "few_positive_hits": 2,
+        "event_notice": 127
+      },
+      "accepted_truth_states_retained": 82,
+      "candidate_state_conflicts": [],
+      "pointfit_final_C": 1.0947824286378145,
+      "pointfit_final_E": 0.9527508395267493,
+      "public_score_ledger_sum": 6643.070656,
+      "counts": {
+        "observe": 1096
+      },
+      "inference_reads_truth": false,
+      "validation_reads_truth": true
+    }
+  ]
+}
