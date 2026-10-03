@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "planning_seconds": 0.4391340829897672,
+    "candidates": 400,
+    "visible_useful": 3215,
+    "anchors": 24,
+    "cpu_phase_mode": "phase",
+    "phase_fixed_workload": true,
+    "phase_improved": true,
+    "phase_exact_evaluations": 16,
+    "phase_emergency_triggered": false,
+    "base_exact_rate": 1.0392553529672555,
+    "selected_exact_rate": 1.040747872749312,
+    "phase_candidates": 13749,
+    "phase_seeds": 4,
+    "phase_local_counts": [
+      40,
+      42,
+      47,
+      40
+    ],
+    "phase_full_local_counts": [
+      40,
+      42,
+      47,
+      40
+    ],
+    "phase_boundary_counts": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "phase_duration_count": 8,
+    "phase_durations": [
+      60,
+      100,
+      120,
+      240,
+      400,
+      900,
+      1800,
+      3600
+    ],
+    "phase_build_seconds": 0.004717708099633455,
+    "phase_exact_seed_counts": [
+      0,
+      0,
+      16,
+      0
+    ],
+    "phase_scan_seconds": 0.07380670798011124,
+    "phase_exact_seconds": 0.0036191248800605536,
+    "phase_geometry_target_pairs": 582961,
+    "choose_calls_total": 1,
+    "phase_calls_total": 1,
+    "phase_candidates_total": 13749,
+    "phase_exact_evaluations_total": 16,
+    "phase_emergency_count_total": 0,
+    "phase_improvements_total": 1,
+    "global_nodes": 512,
+    "global_roots": 21,
+    "global_matchings": 629,
+    "global_search_seconds": 0.2542984171304852,
+    "global_proposals": 0,
+    "global_exact": 0,
+    "global_improved": false,
+    "global_base_rate": 1.040747872749312,
+    "global_selected_rate": 1.040747872749312
+  },
+  "baseline_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 53.1422982,
+      "az_deg": 94.2879934
+    },
+    "assignments": {
+      "0": "V4T007727",
+      "1": "V4T000666",
+      "2": "V4T005258",
+      "3": "V4T002353",
+      "4": "V4T000554",
+      "5": "V4T005507",
+      "6": "V4T003774",
+      "8": "V4T003324",
+      "9": "V4T005244",
+      "10": "V4T005587",
+      "11": "V4T006265",
+      "13": "V4T005356",
+      "14": "V4T000665",
+      "15": "V4T007101"
+    },
+    "duration_seconds": 100,
+    "program": "DARK"
+  },
+  "selected_candidate": null,
+  "card": "L2",
+  "nodes": 512,
+  "seconds": 0.454530542017892,
+  "action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 53.1422982,
+      "az_deg": 94.2879934
+    },
+    "assignments": {
+      "0": "V4T007727",
+      "1": "V4T000666",
+      "2": "V4T005258",
+      "3": "V4T002353",
+      "4": "V4T000554",
+      "5": "V4T005507",
+      "6": "V4T003774",
+      "8": "V4T003324",
+      "9": "V4T005244",
+      "10": "V4T005587",
+      "11": "V4T006265",
+      "13": "V4T005356",
+      "14": "V4T000665",
+      "15": "V4T007101"
+    },
+    "duration_seconds": 100,
+    "program": "DARK"
+  },
+  "official_geometry_valid": true,
+  "summary": {
+    "calls": 1,
+    "searched": 1,
+    "improved": 0,
+    "roots": 21,
+    "nodes": 512,
+    "matchings": 629,
+    "proposals": 0,
+    "exact": 0,
+    "search_seconds": 0.2542984171304852
+  },
+  "source_lock": {
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/global_field_planner.py": "7d55e90730a52ae4e7c9c1d42775a1af017d58c9fa9dd483b41f33f8829def12",
+    "research/global_field_search_darwin_arm64.dylib": "5b695f2a8d097427fb48b056cfb270eb2151591c21c940565ff48cb2b8fc0d96",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  }
+}

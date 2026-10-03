@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "planning_seconds": 0.5052056659478694,
+    "candidates": 400,
+    "visible_useful": 4442,
+    "anchors": 24,
+    "cpu_phase_mode": "phase",
+    "phase_fixed_workload": true,
+    "phase_improved": true,
+    "phase_exact_evaluations": 16,
+    "phase_emergency_triggered": false,
+    "base_exact_rate": 0.7666211567376163,
+    "selected_exact_rate": 0.7679312115172131,
+    "phase_candidates": 13279,
+    "phase_seeds": 4,
+    "phase_local_counts": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "phase_full_local_counts": [
+      125,
+      124,
+      137,
+      118
+    ],
+    "phase_boundary_counts": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "phase_duration_count": 8,
+    "phase_durations": [
+      60,
+      120,
+      138,
+      240,
+      400,
+      900,
+      1800,
+      3600
+    ],
+    "phase_build_seconds": 0.005850707879289985,
+    "phase_exact_seed_counts": [
+      16,
+      0,
+      0,
+      0
+    ],
+    "phase_scan_seconds": 0.08459533308632672,
+    "phase_exact_seconds": 0.005570709006860852,
+    "phase_geometry_target_pairs": 663950,
+    "choose_calls_total": 1,
+    "phase_calls_total": 1,
+    "phase_candidates_total": 13279,
+    "phase_exact_evaluations_total": 16,
+    "phase_emergency_count_total": 0,
+    "phase_improvements_total": 1,
+    "global_nodes": 1024,
+    "global_roots": 39,
+    "global_matchings": 1257,
+    "global_search_seconds": 0.2726359579246491,
+    "global_proposals": 16,
+    "global_exact": 16,
+    "global_improved": true,
+    "global_base_rate": 0.7679312115172131,
+    "global_selected_rate": 1.0615893178801938
+  },
+  "baseline_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 38.3575723,
+      "az_deg": 135.6203192
+    },
+    "assignments": {
+      "0": "V4T006386",
+      "1": "V4T003555",
+      "2": "V4T001626",
+      "3": "V4T002723",
+      "4": "V4T001179",
+      "5": "V4T002603",
+      "6": "V4T003083",
+      "7": "V4T001671",
+      "8": "V4T004783",
+      "9": "V4T003638",
+      "10": "V4T006643",
+      "11": "V4T000493",
+      "12": "V4T000185",
+      "13": "V4T004417",
+      "14": "V4T002666",
+      "15": "V4T000976"
+    },
+    "duration_seconds": 138,
+    "program": "BRIGHT"
+  },
+  "selected_candidate": {
+    "rate": 1.0615893178801938,
+    "center": [
+      34.2553006,
+      140.0
+    ],
+    "duration": 98,
+    "program": 1
+  },
+  "card": "L1",
+  "nodes": 1024,
+  "seconds": 0.5193128329701722,
+  "action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 34.2553006,
+      "az_deg": 140.0
+    },
+    "assignments": {
+      "0": "V4T005760",
+      "1": "V4T006656",
+      "2": "V4T002366",
+      "5": "V4T004388",
+      "6": "V4T002825",
+      "7": "V4T001991",
+      "8": "V4T006176",
+      "9": "V4T001297",
+      "10": "V4T003003",
+      "11": "V4T000019",
+      "12": "V4T003030",
+      "13": "V4T003752",
+      "14": "V4T003016"
+    },
+    "duration_seconds": 98,
+    "program": "BRIGHT"
+  },
+  "official_geometry_valid": true,
+  "summary": {
+    "calls": 1,
+    "searched": 1,
+    "improved": 1,
+    "roots": 39,
+    "nodes": 1024,
+    "matchings": 1257,
+    "proposals": 16,
+    "exact": 16,
+    "search_seconds": 0.2726359579246491
+  },
+  "source_lock": {
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/global_field_planner.py": "7d55e90730a52ae4e7c9c1d42775a1af017d58c9fa9dd483b41f33f8829def12",
+    "research/global_field_search_darwin_arm64.dylib": "5b695f2a8d097427fb48b056cfb270eb2151591c21c940565ff48cb2b8fc0d96",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  }
+}

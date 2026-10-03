@@ -1,0 +1,48 @@
+[
+  {
+    "name": "global-field-control-l1",
+    "host_pid": 451844,
+    "started": "2026-10-03T16:00:39.78036723Z",
+    "cpus": 2.0,
+    "cpuset": "0,1",
+    "memory": 2147483648,
+    "swap": 2147483648,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [
+      {
+        "source": "/tmp/global_field_20261004/results/global_field_20261004/source_snapshot/participant",
+        "target": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "target": "/deps",
+        "rw": false
+      }
+    ]
+  },
+  {
+    "name": "global-field-search-l1",
+    "host_pid": 451850,
+    "started": "2026-10-03T16:00:39.787697724Z",
+    "cpus": 2.0,
+    "cpuset": "2,3",
+    "memory": 2147483648,
+    "swap": 2147483648,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [
+      {
+        "source": "/tmp/global_field_20261004/results/global_field_20261004/source_snapshot/participant",
+        "target": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "target": "/deps",
+        "rw": false
+      }
+    ]
+  }
+]
