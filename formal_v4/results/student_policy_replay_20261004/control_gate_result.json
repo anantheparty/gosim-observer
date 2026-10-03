@@ -1,0 +1,149 @@
+{
+  "schema": "student-policy-official-L3-gate-v1",
+  "card": "L3",
+  "mode": "control",
+  "selector": "native_control",
+  "passed": true,
+  "gates": {
+    "runner_exit_zero": true,
+    "container_exit_zero": true,
+    "owned_container_cleaned": true,
+    "complete_official_protocol": true,
+    "resource_budget": true,
+    "no_traceback": true,
+    "one_participant_summary": true,
+    "expected_student_configuration": true,
+    "deployment_remains_false": true,
+    "natural_replanning": true,
+    "no_unknown_student_errors": true,
+    "full_decision_bookkeeping": true,
+    "full_choice_bookkeeping": true,
+    "actual_action_digest": true,
+    "bounded_complete_diagnostics": true,
+    "source_and_inputs_unchanged": true,
+    "finite_official_score": true,
+    "native_no_intervention": true,
+    "actions_sha256_match": true,
+    "total_match": true,
+    "components_match": true,
+    "native_no_student_inference": true
+  },
+  "reference_parity": {
+    "actions_sha256_match": true,
+    "total_match": true,
+    "components_match": true
+  },
+  "total": 6004.504542,
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 0.0,
+    "required_penalty": -250.0,
+    "sum_best_scores": 6056.275492,
+    "uniformity_penalty": -1.77095
+  },
+  "termination": "survey_complete",
+  "termination_detail": "",
+  "runner_exit_code": 0,
+  "runner_timed_out": false,
+  "container_state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-03T21:40:26.750595196Z",
+    "FinishedAt": "2026-10-03T21:48:01.48033947Z"
+  },
+  "cleanup": {
+    "name": "student-l3-control-c8c0caecf80a",
+    "existed": true,
+    "removed": true,
+    "owner_match": true,
+    "container_id": "875edeb42ce3c2decc3771618ed753bd7a65d5db4cf62a8345f5ac619fadfa8f",
+    "exists_after_cleanup": false
+  },
+  "accounted_seconds": 454.603,
+  "agent_seconds": 441.896,
+  "student_policy": {
+    "schema": "student-policy-research-summary-v1",
+    "mode": "control",
+    "selector": "native_control",
+    "selection_units": "native_control",
+    "feature_schema": "structured-public-action-v1",
+    "deployment_calibrated": false,
+    "cloud_deployment_authorized": false,
+    "research_override": false,
+    "model_sha256": null,
+    "model_export_deployment_calibrated": false,
+    "minimum_advantage": null,
+    "native_manifest_sha256": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "counts": {
+      "decisions": 1141,
+      "observe_choices": 993,
+      "no_model_native_control": 993,
+      "diagnostic_rows": 993
+    },
+    "choices": {
+      "control": 993
+    },
+    "candidate_counts": {
+      "control": 993,
+      "field": 993,
+      "short": 939,
+      "long": 951,
+      "program": 993
+    },
+    "absent_counts": {
+      "control": 0,
+      "field": 0,
+      "short": 54,
+      "long": 42,
+      "program": 0
+    },
+    "candidate_predicted_signs": {
+      "control": {},
+      "field": {},
+      "short": {},
+      "long": {},
+      "program": {}
+    },
+    "errors": {},
+    "feature_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "max_feature_seconds": 0.0,
+    "max_inference_seconds": 0.0,
+    "diagnostic_limit": 2048,
+    "actions_sha256": "8573849cc7d67b2e6b45c4ec4e583dc4f6b2ad24160e67d53396339efa5d3674",
+    "native_actions_on_reached_states_sha256": "8573849cc7d67b2e6b45c4ec4e583dc4f6b2ad24160e67d53396339efa5d3674",
+    "interventions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix_mode": "natural_native_replan_after_every_actual_feedback",
+    "forced_prefix": false,
+    "forced_suffix": false,
+    "public_history_rows": 1141
+  },
+  "fallback_counts": {},
+  "interventions": 0,
+  "participant_summary_sha256": "7da19bdec84ad230e5294092b4775d57e3de6706146e6c0cbc29491a09f37787",
+  "diagnostics_sha256": {
+    "student_choices.jsonl": "288c615af62c4e833ccc73c6eb80b611509c913d697ef93d11d5eb2c1b45622c"
+  },
+  "output_sha256": {
+    "actions.jsonl": "9a15a598c604ccc94ce3e9c558a1a9331a116944025283bcf1c8da7a864a5d07",
+    "score_report.json": "f83da72c9e9804e3d5fc4362c420ae814d4225dc4f5fb4fca0400781fe6b7bd1",
+    "workflow_result.json": "abc66efc8d54d8b0e52d30426067de5a0e22605ef4e49ae53e7a2f2e76dbbf59",
+    "agent.log": "04f31789a4f19d1d8c5876030e6f7964792b276340ccaef414afff97f89616cd"
+  },
+  "participant_truth_mount": false,
+  "deployment_calibrated": false,
+  "cloud_deployment_authorized": false,
+  "host_seconds": 455.3588356229593,
+  "run_source_lock_sha256": "47307bcc6dd36d19e1a42a277f372293e2bd3521c6e3149040e9db14f932421c",
+  "harness_sha256": "c175ea8d4a5fc47c930ab34a2745481b61b7eee74784ad0347b7f4208626997e",
+  "package_lock_sha256": "b15652dab954257478a7d761dd7426569642153e90a4e2659e1b64bb7c081946",
+  "teacher_source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "model_sha256": null
+}

@@ -1,0 +1,9 @@
+# Actual CUDA comparison — 2026-10-04 JST
+
+The revision7 teacher batch completed 315 full episodes in 64 predeclared groups with no failed group. The locked dataset builder accepted all 48 L1/L2/L3 fit/validation states, preserving signs, ties and missing candidates. L1/L2 supply 32 training states, L3 supplies 16 validation states. `sealed_test.tar.gz` remains opaque L4 data: no test labels were inspected or transported to the GPU.
+
+`fit_validation.tar.gz` and `accepted_manifest.json` are the exact training input. `ROOT_ACTUAL_ACCEPTANCE.json` records the pre-training audit; its `actual_training_started=false` is historical, not current status. The actual Windows PRO6000 job and completion receipt are `fit_job*.json`. CUDA training took 86.741 seconds; `fit_output/` contains both fitted neural exports, ridge weights and all training/selection reports. No production package was changed.
+
+The fixed six-way comparison selected `native_control`. L3 teacher mean advantages: native/public gain per second 0, structured NN −4.182847, flat NN −0.292876, ridge −6.534911, public coarse value −15.501769. These are 16 independently evaluated decision continuation differences, not a whole-season policy improvement. The declared nonnative full-policy gate was not met. These weights are not adopted; this experiment does not reject neural methods generally.
+
+`ROOT_ACTUAL_COMPARISON_REVIEW.json` records the actual conclusion and report hash. `FILES_SHA256.json` binds all retained artifacts except itself. Fit and sealed archive members were scanned opaquely for the isolated GPU-service credential; zero matches, with no label parsing for L4. The complete original 315 episode archives are transported separately to `policy_iteration_20261004/bulk_terminal_archive/`; partial transport must not be mistaken for complete local archival.

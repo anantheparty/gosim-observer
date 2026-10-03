@@ -1,0 +1,1848 @@
+{
+  "schema": "structured-student-training-report-v1",
+  "provenance": {
+    "manifest_sha256": "4fd614402717dfaccc8f6121d5dff868941e463bdd15b734194be97102938365",
+    "untouched_test_group_count": 0,
+    "group_count": 48,
+    "trainable_group_count": 48,
+    "control_only_availability_record_count": 0,
+    "untrainable_availability_records": [],
+    "acceptance_note": "Root reviewed the terminal 315-episode / 64-group zero-failure batch and locked preparation results; accepts all 48 L1/L2/L3 groups without sign/return filtering. Original public captures, availability, full v2 audits, every original archive/member and portable hashes verified. L1/L2 fitting, L3 validation, L4 sealed. This admits fixed fitting only, not deployment."
+  },
+  "train_groups": 32,
+  "validation_groups": 16,
+  "broad_claim_minimum_training_states": 256,
+  "broad_claim_minimum_met": false,
+  "training_cards": [
+    "L1",
+    "L2"
+  ],
+  "validation_card": "L3",
+  "untouched_test_card": "L4",
+  "model": "structured",
+  "parameters": 6598,
+  "best_epoch": 45,
+  "output_scale": 19.849231719970703,
+  "checkpoint_selection": {
+    "primary": "validation teacher_regret_mean",
+    "tie_break": "validation raw_advantage_mae",
+    "scope": "Same fixed candidate sets; realized single-state teacher returns, not deployed whole-season value"
+  },
+  "baseline_comparisons": {
+    "native_control": {
+      "groups": 16,
+      "selected_teacher_advantage_mean": 0.0,
+      "selected_teacher_advantage_sum": 0.0,
+      "teacher_regret_mean": 6.174745254218578,
+      "teacher_regret_max": 43.526241302490234,
+      "best_candidate_fraction": 0.3125,
+      "raw_advantage_mae": null,
+      "scores_in_raw_teacher_return_units": false,
+      "pair_sign_accuracy": 0.2980132450331126,
+      "candidate_positive": 16,
+      "candidate_negative": 45,
+      "candidate_tie": 1,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    },
+    "public_gain_per_second": {
+      "groups": 16,
+      "selected_teacher_advantage_mean": 0.0,
+      "selected_teacher_advantage_sum": 0.0,
+      "teacher_regret_mean": 6.174745254218578,
+      "teacher_regret_max": 43.526241302490234,
+      "best_candidate_fraction": 0.3125,
+      "raw_advantage_mae": null,
+      "scores_in_raw_teacher_return_units": false,
+      "pair_sign_accuracy": 0.5629139072847682,
+      "candidate_positive": 16,
+      "candidate_negative": 45,
+      "candidate_tie": 1,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    },
+    "public_terminal_components_one_step": {
+      "groups": 16,
+      "selected_teacher_advantage_mean": -15.501769222319126,
+      "selected_teacher_advantage_sum": -248.02830755710602,
+      "teacher_regret_mean": 21.676514461636543,
+      "teacher_regret_max": 68.3386459350586,
+      "best_candidate_fraction": 0.1875,
+      "raw_advantage_mae": null,
+      "scores_in_raw_teacher_return_units": false,
+      "pair_sign_accuracy": 0.5298013245033113,
+      "candidate_positive": 16,
+      "candidate_negative": 45,
+      "candidate_tie": 1,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    },
+    "flat_pair_ridge": {
+      "groups": 16,
+      "selected_teacher_advantage_mean": -6.534911088645458,
+      "selected_teacher_advantage_sum": -104.55857741832733,
+      "teacher_regret_mean": 12.709656447172165,
+      "teacher_regret_max": 45.041996002197266,
+      "best_candidate_fraction": 0.125,
+      "raw_advantage_mae": 12.689458867999285,
+      "scores_in_raw_teacher_return_units": true,
+      "pair_sign_accuracy": 0.5364238410596026,
+      "candidate_positive": 16,
+      "candidate_negative": 45,
+      "candidate_tie": 1,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    },
+    "structured": {
+      "groups": 16,
+      "selected_teacher_advantage_mean": -4.182846777141094,
+      "selected_teacher_advantage_sum": -66.92554843425751,
+      "teacher_regret_mean": 10.357592061161995,
+      "teacher_regret_max": 61.73406982421875,
+      "best_candidate_fraction": 0.375,
+      "raw_advantage_mae": 12.692994110859358,
+      "scores_in_raw_teacher_return_units": true,
+      "pair_sign_accuracy": 0.5231788079470199,
+      "candidate_positive": 16,
+      "candidate_negative": 45,
+      "candidate_tie": 1,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    }
+  },
+  "calibration": {
+    "group_count": 16,
+    "coverage": 0.95,
+    "finite_sample_order": 17,
+    "group_max_error_threshold": null,
+    "finite_sample_quantile_available": false,
+    "deployment_calibrated": false,
+    "note": "Validation uses the same card/realized world, so exchangeability and policy-wide calibration are unproved; full official policy gates still required."
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "groupwise_train_loss": 0.601240991265513,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -19.655530720949173,
+        "selected_teacher_advantage_sum": -314.48849153518677,
+        "teacher_regret_mean": 25.83027572929859,
+        "teacher_regret_max": 92.38578796386719,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 14.247385339763683,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.4503311258278146,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        25.83027572929859,
+        14.247385339763683
+      ]
+    },
+    {
+      "epoch": 2,
+      "groupwise_train_loss": 0.5976939266547561,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -14.124243125319481,
+        "selected_teacher_advantage_sum": -225.9878900051117,
+        "teacher_regret_mean": 20.298988163471222,
+        "teacher_regret_max": 92.38578796386719,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 14.156323796568008,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.48344370860927155,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        20.298988163471222,
+        14.156323796568008
+      ]
+    },
+    {
+      "epoch": 3,
+      "groupwise_train_loss": 0.594515996723203,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -14.18919788300991,
+        "selected_teacher_advantage_sum": -227.02716612815857,
+        "teacher_regret_mean": 20.36394292116165,
+        "teacher_regret_max": 92.38578796386719,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 14.081734861987524,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.45695364238410596,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        20.36394292116165,
+        14.081734861987524
+      ]
+    },
+    {
+      "epoch": 4,
+      "groupwise_train_loss": 0.591208667436149,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -14.480477191507816,
+        "selected_teacher_advantage_sum": -231.68763506412506,
+        "teacher_regret_mean": 20.655222222208977,
+        "teacher_regret_max": 92.38578796386719,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.989915086577335,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.423841059602649,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        20.655222222208977,
+        13.989915086577335
+      ]
+    },
+    {
+      "epoch": 5,
+      "groupwise_train_loss": 0.58862407306151,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -12.97753045707941,
+        "selected_teacher_advantage_sum": -207.64048731327057,
+        "teacher_regret_mean": 19.15227584540844,
+        "teacher_regret_max": 91.06108856201172,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.906223462082636,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.4370860927152318,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        19.15227584540844,
+        13.906223462082636
+      ]
+    },
+    {
+      "epoch": 6,
+      "groupwise_train_loss": 0.585929089502315,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -12.97753045707941,
+        "selected_teacher_advantage_sum": -207.64048731327057,
+        "teacher_regret_mean": 19.15227584540844,
+        "teacher_regret_max": 91.06108856201172,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.8243383168219,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.45695364238410596,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        19.15227584540844,
+        13.8243383168219
+      ]
+    },
+    {
+      "epoch": 7,
+      "groupwise_train_loss": 0.5834357437852304,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -12.97753045707941,
+        "selected_teacher_advantage_sum": -207.64048731327057,
+        "teacher_regret_mean": 19.15227584540844,
+        "teacher_regret_max": 91.06108856201172,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.760842793931564,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5033112582781457,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        19.15227584540844,
+        13.760842793931564
+      ]
+    },
+    {
+      "epoch": 8,
+      "groupwise_train_loss": 0.5811399749218253,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.774053670465946,
+        "selected_teacher_advantage_sum": -124.38485872745514,
+        "teacher_regret_mean": 13.948799058794975,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.688869343640713,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.948799058794975,
+        13.688869343640713
+      ]
+    },
+    {
+      "epoch": 9,
+      "groupwise_train_loss": 0.5789356035675155,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.774053670465946,
+        "selected_teacher_advantage_sum": -124.38485872745514,
+        "teacher_regret_mean": 13.948799058794975,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.624935297725292,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.948799058794975,
+        13.624935297725292
+      ]
+    },
+    {
+      "epoch": 10,
+      "groupwise_train_loss": 0.5764153692289256,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.913838855922222,
+        "selected_teacher_advantage_sum": -126.62142169475555,
+        "teacher_regret_mean": 14.088584244251251,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.588024651297392,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5562913907284768,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.088584244251251,
+        13.588024651297392
+      ]
+    },
+    {
+      "epoch": 11,
+      "groupwise_train_loss": 0.5742380570300156,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.913838855922222,
+        "selected_teacher_advantage_sum": -126.62142169475555,
+        "teacher_regret_mean": 14.088584244251251,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.54426883514493,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.088584244251251,
+        13.54426883514493
+      ]
+    },
+    {
+      "epoch": 12,
+      "groupwise_train_loss": 0.5723410140635679,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.553748406469822,
+        "selected_teacher_advantage_sum": -120.85997450351715,
+        "teacher_regret_mean": 13.728493809700012,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.511031921952963,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.728493809700012,
+        13.511031921952963
+      ]
+    },
+    {
+      "epoch": 13,
+      "groupwise_train_loss": 0.5705148713823291,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -8.891562141478062,
+        "selected_teacher_advantage_sum": -142.264994263649,
+        "teacher_regret_mean": 15.066307544708252,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.1875,
+        "raw_advantage_mae": 13.471667857601856,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        15.066307544708252,
+        13.471667857601856
+      ]
+    },
+    {
+      "epoch": 14,
+      "groupwise_train_loss": 0.5684658956088242,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -8.49362800270319,
+        "selected_teacher_advantage_sum": -135.89804804325104,
+        "teacher_regret_mean": 14.66837340593338,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.453696942577759,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.66837340593338,
+        13.453696942577759
+      ]
+    },
+    {
+      "epoch": 15,
+      "groupwise_train_loss": 0.5666978523950092,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -11.308752752840519,
+        "selected_teacher_advantage_sum": -180.9400440454483,
+        "teacher_regret_mean": 17.48349815607071,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.1875,
+        "raw_advantage_mae": 13.428148414939642,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        17.48349815607071,
+        13.428148414939642
+      ]
+    },
+    {
+      "epoch": 16,
+      "groupwise_train_loss": 0.5648188213817775,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -8.416244320571423,
+        "selected_teacher_advantage_sum": -134.65990912914276,
+        "teacher_regret_mean": 14.590989723801613,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.401042786259682,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5496688741721855,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.590989723801613,
+        13.401042786259682
+      ]
+    },
+    {
+      "epoch": 17,
+      "groupwise_train_loss": 0.5631008183845552,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -8.559906892478466,
+        "selected_teacher_advantage_sum": -136.95851027965546,
+        "teacher_regret_mean": 14.734652280807495,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.380287065051306,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.734652280807495,
+        13.380287065051306
+      ]
+    },
+    {
+      "epoch": 18,
+      "groupwise_train_loss": 0.5612644258944783,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.082952432334423,
+        "selected_teacher_advantage_sum": -97.32723891735077,
+        "teacher_regret_mean": 12.257697820663452,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.364860101483572,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5629139072847682,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.257697820663452,
+        13.364860101483572
+      ]
+    },
+    {
+      "epoch": 19,
+      "groupwise_train_loss": 0.5594258175551658,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -8.559906892478466,
+        "selected_teacher_advantage_sum": -136.95851027965546,
+        "teacher_regret_mean": 14.734652280807495,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.346491446193212,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        14.734652280807495,
+        13.346491446193212
+      ]
+    },
+    {
+      "epoch": 20,
+      "groupwise_train_loss": 0.557862288391334,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -11.375031642615795,
+        "selected_teacher_advantage_sum": -182.00050628185272,
+        "teacher_regret_mean": 17.549777030944824,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.330016448807259,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        17.549777030944824,
+        13.330016448807259
+      ]
+    },
+    {
+      "epoch": 21,
+      "groupwise_train_loss": 0.5565138387828483,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -11.375031642615795,
+        "selected_teacher_advantage_sum": -182.00050628185272,
+        "teacher_regret_mean": 17.549777030944824,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.311441627163918,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        17.549777030944824,
+        13.311441627163918
+      ]
+    },
+    {
+      "epoch": 22,
+      "groupwise_train_loss": 0.5551256835460663,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -11.375031642615795,
+        "selected_teacher_advantage_sum": -182.00050628185272,
+        "teacher_regret_mean": 17.549777030944824,
+        "teacher_regret_max": 68.3386459350586,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 13.288592599236813,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        17.549777030944824,
+        13.288592599236813
+      ]
+    },
+    {
+      "epoch": 23,
+      "groupwise_train_loss": 0.5536740543502674,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.103866390883923,
+        "selected_teacher_advantage_sum": -113.66186225414276,
+        "teacher_regret_mean": 13.278611660003662,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.260384704153507,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.278611660003662,
+        13.260384704153507
+      ]
+    },
+    {
+      "epoch": 24,
+      "groupwise_train_loss": 0.5521486124416697,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.103866390883923,
+        "selected_teacher_advantage_sum": -113.66186225414276,
+        "teacher_regret_mean": 13.278611660003662,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.23277487137761,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.278611660003662,
+        13.23277487137761
+      ]
+    },
+    {
+      "epoch": 25,
+      "groupwise_train_loss": 0.5506179435833474,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.103866390883923,
+        "selected_teacher_advantage_sum": -113.66186225414276,
+        "teacher_regret_mean": 13.278611660003662,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.20839607486358,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.278611660003662,
+        13.20839607486358
+      ]
+    },
+    {
+      "epoch": 26,
+      "groupwise_train_loss": 0.5488853196729906,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.103866390883923,
+        "selected_teacher_advantage_sum": -113.66186225414276,
+        "teacher_regret_mean": 13.278611660003662,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 13.183233046378845,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.278611660003662,
+        13.183233046378845
+      ]
+    },
+    {
+      "epoch": 27,
+      "groupwise_train_loss": 0.5473913961868675,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 13.157092463511686,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        13.157092463511686
+      ]
+    },
+    {
+      "epoch": 28,
+      "groupwise_train_loss": 0.545883246602898,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 13.128674896099628,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        13.128674896099628
+      ]
+    },
+    {
+      "epoch": 29,
+      "groupwise_train_loss": 0.5443127206090139,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 13.095090023218058,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        13.095090023218058
+      ]
+    },
+    {
+      "epoch": 30,
+      "groupwise_train_loss": 0.5427815666007518,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 13.062674079950039,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        13.062674079950039
+      ]
+    },
+    {
+      "epoch": 31,
+      "groupwise_train_loss": 0.5412123122932826,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 13.025556809627092,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        13.025556809627092
+      ]
+    },
+    {
+      "epoch": 32,
+      "groupwise_train_loss": 0.5396858125641302,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.121387325227261,
+        "selected_teacher_advantage_sum": -97.94219720363617,
+        "teacher_regret_mean": 12.296132564544678,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.991955496561832,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.296132564544678,
+        12.991955496561832
+      ]
+    },
+    {
+      "epoch": 33,
+      "groupwise_train_loss": 0.5381333357290714,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.231976710259914,
+        "selected_teacher_advantage_sum": -99.71162736415863,
+        "teacher_regret_mean": 12.406721949577332,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.960246583590141,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.406721949577332,
+        12.960246583590141
+      ]
+    },
+    {
+      "epoch": 34,
+      "groupwise_train_loss": 0.5364331256496371,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.766052655875683,
+        "selected_teacher_advantage_sum": -92.25684249401093,
+        "teacher_regret_mean": 11.940797924995422,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.932529031466215,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.940797924995422,
+        12.932529031466215
+      ]
+    },
+    {
+      "epoch": 35,
+      "groupwise_train_loss": 0.5347101294737513,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.766052655875683,
+        "selected_teacher_advantage_sum": -92.25684249401093,
+        "teacher_regret_mean": 11.940797924995422,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.90931194791427,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.940797924995422,
+        12.90931194791427
+      ]
+    },
+    {
+      "epoch": 36,
+      "groupwise_train_loss": 0.5331282309416565,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.766052655875683,
+        "selected_teacher_advantage_sum": -92.25684249401093,
+        "teacher_regret_mean": 11.940797924995422,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.88812208863405,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.940797924995422,
+        12.88812208863405
+      ]
+    },
+    {
+      "epoch": 37,
+      "groupwise_train_loss": 0.5315615993822576,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.528706260025501,
+        "selected_teacher_advantage_sum": -88.45930016040802,
+        "teacher_regret_mean": 11.70345152914524,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.865789177326056,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.70345152914524,
+        12.865789177326056
+      ]
+    },
+    {
+      "epoch": 38,
+      "groupwise_train_loss": 0.5299336540265358,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.528706260025501,
+        "selected_teacher_advantage_sum": -88.45930016040802,
+        "teacher_regret_mean": 11.70345152914524,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.842248718707989,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.70345152914524,
+        12.842248718707989
+      ]
+    },
+    {
+      "epoch": 39,
+      "groupwise_train_loss": 0.5283729183247488,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.528706260025501,
+        "selected_teacher_advantage_sum": -88.45930016040802,
+        "teacher_regret_mean": 11.70345152914524,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.812835816389475,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.70345152914524,
+        12.812835816389475
+      ]
+    },
+    {
+      "epoch": 40,
+      "groupwise_train_loss": 0.5267284104484133,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.639295645058155,
+        "selected_teacher_advantage_sum": -90.22873032093048,
+        "teacher_regret_mean": 11.814040914177895,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.78736101434781,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.814040914177895,
+        12.78736101434781
+      ]
+    },
+    {
+      "epoch": 41,
+      "groupwise_train_loss": 0.5250431784243119,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.355847887694836,
+        "selected_teacher_advantage_sum": -85.69356620311737,
+        "teacher_regret_mean": 11.530593171715736,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.763882955679527,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.530593171715736,
+        12.763882955679527
+      ]
+    },
+    {
+      "epoch": 42,
+      "groupwise_train_loss": 0.5233257606287225,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.355847887694836,
+        "selected_teacher_advantage_sum": -85.69356620311737,
+        "teacher_regret_mean": 11.530593171715736,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.740317003085064,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.530593171715736,
+        12.740317003085064
+      ]
+    },
+    {
+      "epoch": 43,
+      "groupwise_train_loss": 0.5216097576267202,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.902538053691387,
+        "selected_teacher_advantage_sum": -94.4406088590622,
+        "teacher_regret_mean": 12.077283337712288,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.718646760934439,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.077283337712288,
+        12.718646760934439
+      ]
+    },
+    {
+      "epoch": 44,
+      "groupwise_train_loss": 0.5199398340155312,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.902538053691387,
+        "selected_teacher_advantage_sum": -94.4406088590622,
+        "teacher_regret_mean": 12.077283337712288,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.70321562122076,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.077283337712288,
+        12.70321562122076
+      ]
+    },
+    {
+      "epoch": 45,
+      "groupwise_train_loss": 0.5180581434633496,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -4.182846777141094,
+        "selected_teacher_advantage_sum": -66.92554843425751,
+        "teacher_regret_mean": 10.357592061161995,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.692994110859358,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        10.357592061161995,
+        12.692994110859358
+      ]
+    },
+    {
+      "epoch": 46,
+      "groupwise_train_loss": 0.5162722104887507,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.4870550557971,
+        "selected_teacher_advantage_sum": -87.7928808927536,
+        "teacher_regret_mean": 11.661800339818,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.687621045571108,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.661800339818,
+        12.687621045571108
+      ]
+    },
+    {
+      "epoch": 47,
+      "groupwise_train_loss": 0.5144772353560256,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.4870550557971,
+        "selected_teacher_advantage_sum": -87.7928808927536,
+        "teacher_regret_mean": 11.661800339818,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.68195957174668,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.661800339818,
+        12.68195957174668
+      ]
+    },
+    {
+      "epoch": 48,
+      "groupwise_train_loss": 0.5125432987424574,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.306495763361454,
+        "selected_teacher_advantage_sum": -84.90393221378326,
+        "teacher_regret_mean": 11.481241032481194,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.693440295946903,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.481241032481194,
+        12.693440295946903
+      ]
+    },
+    {
+      "epoch": 49,
+      "groupwise_train_loss": 0.5105301027178939,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.306495763361454,
+        "selected_teacher_advantage_sum": -84.90393221378326,
+        "teacher_regret_mean": 11.481241032481194,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.696294005864706,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.481241032481194,
+        12.696294005864706
+      ]
+    },
+    {
+      "epoch": 50,
+      "groupwise_train_loss": 0.508815119996143,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -4.841897942125797,
+        "selected_teacher_advantage_sum": -77.47036707401276,
+        "teacher_regret_mean": 11.016643211245537,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.679701772255775,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.016643211245537,
+        12.679701772255775
+      ]
+    },
+    {
+      "epoch": 51,
+      "groupwise_train_loss": 0.5069711600372102,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -4.841897942125797,
+        "selected_teacher_advantage_sum": -77.47036707401276,
+        "teacher_regret_mean": 11.016643211245537,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.654786003705782,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.016643211245537,
+        12.654786003705782
+      ]
+    },
+    {
+      "epoch": 52,
+      "groupwise_train_loss": 0.5049193039776583,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.350712634623051,
+        "selected_teacher_advantage_sum": -85.61140215396881,
+        "teacher_regret_mean": 11.52545790374279,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.626719522934694,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.52545790374279,
+        12.626719522934694
+      ]
+    },
+    {
+      "epoch": 53,
+      "groupwise_train_loss": 0.502924293929027,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.350712634623051,
+        "selected_teacher_advantage_sum": -85.61140215396881,
+        "teacher_regret_mean": 11.52545790374279,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.60737648453468,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5231788079470199,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.52545790374279,
+        12.60737648453468
+      ]
+    },
+    {
+      "epoch": 54,
+      "groupwise_train_loss": 0.5009588004159014,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -5.350712634623051,
+        "selected_teacher_advantage_sum": -85.61140215396881,
+        "teacher_regret_mean": 11.52545790374279,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.6021646910753,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        11.52545790374279,
+        12.6021646910753
+      ]
+    },
+    {
+      "epoch": 55,
+      "groupwise_train_loss": 0.49905681137715874,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -7.070403911173344,
+        "selected_teacher_advantage_sum": -113.1264625787735,
+        "teacher_regret_mean": 13.245149180293083,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.25,
+        "raw_advantage_mae": 12.597322574792765,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        13.245149180293083,
+        12.597322574792765
+      ]
+    },
+    {
+      "epoch": 56,
+      "groupwise_train_loss": 0.4967728925494157,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.602268019547829,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.602268019547829
+      ]
+    },
+    {
+      "epoch": 57,
+      "groupwise_train_loss": 0.4946458655012975,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.599763319278376,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.599763319278376
+      ]
+    },
+    {
+      "epoch": 58,
+      "groupwise_train_loss": 0.4926407744678727,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.58188008880004,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.58188008880004
+      ]
+    },
+    {
+      "epoch": 59,
+      "groupwise_train_loss": 0.4903754683382431,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.551691305178862,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.551691305178862
+      ]
+    },
+    {
+      "epoch": 60,
+      "groupwise_train_loss": 0.48820920230355114,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.539848167926838,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.539848167926838
+      ]
+    },
+    {
+      "epoch": 61,
+      "groupwise_train_loss": 0.48604121562311775,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.5291352386658,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.5291352386658
+      ]
+    },
+    {
+      "epoch": 62,
+      "groupwise_train_loss": 0.4836972339762724,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.524476891144728,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5099337748344371,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.524476891144728
+      ]
+    },
+    {
+      "epoch": 63,
+      "groupwise_train_loss": 0.4815895017254661,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.523462514846752,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5165562913907285,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.523462514846752
+      ]
+    },
+    {
+      "epoch": 64,
+      "groupwise_train_loss": 0.4795267369463545,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.52315028432088,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.52315028432088
+      ]
+    },
+    {
+      "epoch": 65,
+      "groupwise_train_loss": 0.47746280380852113,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.510268173920803,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.510268173920803
+      ]
+    },
+    {
+      "epoch": 66,
+      "groupwise_train_loss": 0.4755232520401478,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.483799196970768,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.483799196970768
+      ]
+    },
+    {
+      "epoch": 67,
+      "groupwise_train_loss": 0.4736730414260819,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.456393702672077,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.456393702672077
+      ]
+    },
+    {
+      "epoch": 68,
+      "groupwise_train_loss": 0.4717798626934382,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.605806089937687,
+        "selected_teacher_advantage_sum": -105.69289743900299,
+        "teacher_regret_mean": 12.780551359057426,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.431996833819609,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5298013245033113,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.780551359057426,
+        12.431996833819609
+      ]
+    },
+    {
+      "epoch": 69,
+      "groupwise_train_loss": 0.46975386794656515,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.580544337630272,
+        "selected_teacher_advantage_sum": -105.28870940208435,
+        "teacher_regret_mean": 12.755289614200592,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.411348233620325,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5364238410596026,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.755289614200592,
+        12.411348233620325
+      ]
+    },
+    {
+      "epoch": 70,
+      "groupwise_train_loss": 0.46783311496619717,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.580544337630272,
+        "selected_teacher_advantage_sum": -105.28870940208435,
+        "teacher_regret_mean": 12.755289614200592,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.396604726711908,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.755289614200592,
+        12.396604726711908
+      ]
+    },
+    {
+      "epoch": 71,
+      "groupwise_train_loss": 0.46604581490464625,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.580544337630272,
+        "selected_teacher_advantage_sum": -105.28870940208435,
+        "teacher_regret_mean": 12.755289614200592,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.392497063447268,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.543046357615894,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.755289614200592,
+        12.392497063447268
+      ]
+    },
+    {
+      "epoch": 72,
+      "groupwise_train_loss": 0.46389548227489286,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.580544337630272,
+        "selected_teacher_advantage_sum": -105.28870940208435,
+        "teacher_regret_mean": 12.755289614200592,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.412788686844019,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5562913907284768,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.755289614200592,
+        12.412788686844019
+      ]
+    },
+    {
+      "epoch": 73,
+      "groupwise_train_loss": 0.4614101016886707,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.580544337630272,
+        "selected_teacher_advantage_sum": -105.28870940208435,
+        "teacher_regret_mean": 12.755289614200592,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.3125,
+        "raw_advantage_mae": 12.427447854708403,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5562913907284768,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.755289614200592,
+        12.427447854708403
+      ]
+    },
+    {
+      "epoch": 74,
+      "groupwise_train_loss": 0.45969064889504807,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.117900088429451,
+        "selected_teacher_advantage_sum": -97.88640141487122,
+        "teacher_regret_mean": 12.292645364999771,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.430092389384905,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5695364238410596,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.292645364999771,
+        12.430092389384905
+      ]
+    },
+    {
+      "epoch": 75,
+      "groupwise_train_loss": 0.45793157957086805,
+      "validation": {
+        "groups": 16,
+        "selected_teacher_advantage_mean": -6.117900088429451,
+        "selected_teacher_advantage_sum": -97.88640141487122,
+        "teacher_regret_mean": 12.292645364999771,
+        "teacher_regret_max": 61.73406982421875,
+        "best_candidate_fraction": 0.375,
+        "raw_advantage_mae": 12.412576130567453,
+        "scores_in_raw_teacher_return_units": true,
+        "pair_sign_accuracy": 0.5629139072847682,
+        "candidate_positive": 16,
+        "candidate_negative": 45,
+        "candidate_tie": 1,
+        "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+      },
+      "decision_selection_key": [
+        12.292645364999771,
+        12.412576130567453
+      ]
+    }
+  ],
+  "effective_independent_unit": "whole state group; within-card futures are also dependent",
+  "full_season_policy_score_evaluated": false,
+  "per_target_auxiliary_training": false,
+  "note": "Five official terminal components are groupwise auxiliary outputs. Rounded sparse target factors are intentionally not reinterpreted as exact threshold labels."
+}
