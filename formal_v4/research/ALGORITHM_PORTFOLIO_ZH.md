@@ -163,3 +163,14 @@ root实际启动四条受限完整回放：2026-10-03 23:19:23 UTC，Rhodes1 PID
 末动作wrapper其余三卡已实际结束：L1/L2/L4增益均0；L3 +104.403893，固定四卡mean6291.11739575→6317.218369（+26.10097325），所有gates真，全部原始输出已本地核对SHA。没有平台alpha–delta增益。来源`results/cold_policy_breakthrough_20261004/FOUR_CARD_ACTUAL_RESULT.json`。
 
 新的并发分组闭环GA原型已停止：修正版8条人工微域平均仅+0.01488825，含负例，不扩大此版全季；真实未来机会和强生产对照仍是准入条件。全部正负/失败与实现保留，不能称否定遗传算法族。
+
+
+### 真实最强组合已拒绝；整季有限模型实际上GPU（2026-10-04 08:49 JST）
+
+四条RequestCache/native完整对照全部结束、survey_complete、2CPU/2GiB/900秒协议通过；本地再次核对每个gate中的全部原始输出SHA及锁定源。原真实RequestCache控制L1 **6267.103017**、L2 **6723.359693**；加native组合L1 **6264.719768（−2.383249）**、L2 **6667.983239（−55.376454）**，两卡平均 **−28.8798515**。science分别−2.341429/−54.870456，其余主要Jain变化，required/REQ/report不变。accounted control610.105/707.024秒、组合594.103/722.224秒。原控制完整结束，不能归因于超时。此composition停止，不用L3/L4救参或浪费线上额度；它不证明native/geometry族无用。完整原始输出、精确分项和拒绝决定在`results/request_geometry_integration_20261004/seasons/`与`ROOT_ACTUAL_RESULT.json`。此前08:19的“仍运行”记录现已终结。
+
+新目标quality-window控制完成独立数学报告、全δ公开目录原型、CPU冻结reference；参见`research/cold_quality_window_control_20261004.md`。状态为公开science best加raw完成概率π，先合并相同six-decimal公开score再更新π；完整belief关联、共享weather、Jain/REQ/loss仍未被消去。有限bilinear随机projection MDP具有凸fiber秒价格dual，不是原题上界。每target独立best-start/一夜一服务是明显机会近似；旧三步固定步长price过冲（38279→49912→55870）全部保留，不能采用。不同duration候选必须补全全目标时间机会损失与16μ容量消耗，不能仅用sum tail_delta/d；初期只准固定baseline duration的物理field/assignment分叉。真正准入控制改为上面获胜的原29-file RequestCache，report §8在组合结果出前写成“组合进行中”，该句由本记录更新。
+
+CUDA后端已实际在RTX PRO6000执行：首次job在Windows RSS计量HANDLE类型报OverflowError，128-target计算已执行，但没有记录gate/full结论；仅修计量后，同冻结输入新job通过。128targets×38夜、非零当前best/π、非零price的B25/P9门检policy差0、value最大差1.42e−14、demand最大差4.00e−11；全δ9400targets B25/P9零价backward1.8307秒+forward.6348秒，CUDA峰453442560B，采样功耗峰205.33W。F=38273.3092、demand37.6807M fiber秒、容量16.9776M；这是有限近似模型的数值，不是正式得分或较CPU B13/P5的改善。真实GPU计算资源并非此算子的瓶颈。接下来同冻结模型做uniform μ凸二分与38维Kelley cuts、明确数值误差与安全价格盒，禁止改分布/隐藏未来/大步长救参。实际价格job WSL PID3224489，独立Windows目录`C:/Users/hedge/gosim-quality-window-20261004`，backendSHA`db8c36ff5feab172861c0118d168f918a9b4c84745950a6d19ef068675d90506`；只在真实终局策略控制通过后才能谈提分。
+
+另独立代理将末动作report适配真实29-file RequestCache，原native四卡+26.10097325仅是不同包的旧结果，禁止迁移为本策略收益。先官方终局时点/公开quota/feedback合同证明与公开prefix action parity；当前未开新整季或提交。

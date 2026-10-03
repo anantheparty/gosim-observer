@@ -1,0 +1,46 @@
+{
+  "schema": "root-full-request-geometry-actual-comparison-v1",
+  "cards": [
+    {
+      "card": "L1",
+      "control_total": 6267.103017,
+      "geometry_total": 6264.719768,
+      "total_delta_exact": "-2.383249",
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -2.341429,
+        "uniformity_penalty": -0.04182
+      },
+      "control_accounted_seconds": 610.105,
+      "geometry_accounted_seconds": 594.103,
+      "both_complete": true,
+      "both_source_locks_and_output_hashes_verified": true
+    },
+    {
+      "card": "L2",
+      "control_total": 6723.359693,
+      "geometry_total": 6667.983239,
+      "total_delta_exact": "-55.376454",
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -54.870456,
+        "uniformity_penalty": -0.505998
+      },
+      "control_accounted_seconds": 707.024,
+      "geometry_accounted_seconds": 722.224,
+      "both_complete": true,
+      "both_source_locks_and_output_hashes_verified": true
+    }
+  ],
+  "mean_score_delta_exact": "-28.8798515",
+  "adoption": "reject-this-composition",
+  "reason": "Both predeclared complete same-source-framework L1/L2 comparisons lose score; no further L3/L4 rescue or cloud quota on this composition. Preserved terrain/request/cache contract does not prove geometry search improves whole-season policy.",
+  "is_cloud_alpha_delta_score": false,
+  "source_lock_sha256": "0f78e678e0be0253faa79f0a11beb4821f5e42d6c9428fd0d927518e03257278",
+  "all_four_protocol_passed": true,
+  "harness_pid_terminal": true
+}

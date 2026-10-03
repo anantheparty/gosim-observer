@@ -1,0 +1,71 @@
+{
+  "finite": {
+    "random_finite_cases": 100,
+    "max_exact_error": 4.440892098500626e-16,
+    "max_demand_derivative_error": 1.307512320636306e-07,
+    "ambiguous_public_score": 0.54,
+    "latent_factors": [
+      0.45,
+      0.54
+    ],
+    "posterior_completion_given_score": 0.5,
+    "prior_completion_probability": 0.2,
+    "posterior_historical_completion_probability": 0.6000000000000001
+  },
+  "official": {
+    "geometry_current_glass_hits_checked": 32,
+    "geometry_future_candidates_reclassified": 32,
+    "geometry_future_glass_hits_checked": 12,
+    "future_pointing": {
+      "alt_deg": 72.71123148290714,
+      "az_deg": 286.9195929802902
+    },
+    "future_assignment": {
+      "11": "repeatable_1",
+      "14": "repeatable_2",
+      "7": "repeatable_4",
+      "10": "repeatable_5",
+      "9": "repeatable_6",
+      "13": "repeatable_7",
+      "2": "repeatable_8",
+      "6": "repeatable_9",
+      "5": "repeatable_10",
+      "8": "repeatable_11",
+      "1": "repeatable_13",
+      "4": "repeatable_14"
+    },
+    "score_attempts": 78,
+    "official_score_kernel_calls": 62,
+    "current_field_science": [
+      10.80607636900154,
+      18.445234101474455
+    ],
+    "continuation_marginal": [
+      10.80607636900154,
+      4.610992798702454
+    ],
+    "fixed_two_stage_science": [
+      24.98073111465902,
+      18.785647544359932
+    ],
+    "scarce_first_advantage": 6.1950835702990865,
+    "official_ambiguous_raw_collision": [
+      {
+        "score": 0.54,
+        "raw_factor": 0.45,
+        "band_quality": 0.8,
+        "efficiency": 0.46875
+      },
+      {
+        "score": 0.5399999999999999,
+        "raw_factor": 0.5399999999999999,
+        "band_quality": 0.5,
+        "efficiency": 0.9000000000000001
+      }
+    ],
+    "interpretation": "artificial public geometry and declared deterministic future; mechanism check only"
+  },
+  "truth_input_files_read": [],
+  "full_season": false,
+  "deployed": false
+}
