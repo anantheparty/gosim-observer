@@ -1,0 +1,717 @@
+{
+  "card": "L2",
+  "rank": 1,
+  "prefix_actions": 1,
+  "now_utc": "2026-11-09T00:31:43Z",
+  "horizon_seconds": 797,
+  "source_action": {
+    "action": "observe",
+    "assignments": {
+      "1": "V4T007410",
+      "10": "V4T000254",
+      "11": "V4T004387",
+      "12": "V4T007515",
+      "13": "V4T007351",
+      "14": "V4T001022",
+      "2": "V4T007408",
+      "3": "V4T003312",
+      "4": "V4T000259",
+      "6": "V4T008375",
+      "7": "V4T001878",
+      "8": "V4T005466",
+      "9": "V4T002460"
+    },
+    "duration_seconds": 231,
+    "pointing": {
+      "alt_deg": 33.0082105,
+      "az_deg": 139.9571704
+    },
+    "program": "DARK"
+  },
+  "natural_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 33.0082105,
+      "az_deg": 139.9571704
+    },
+    "assignments": {
+      "1": "V4T007410",
+      "2": "V4T007408",
+      "3": "V4T003312",
+      "4": "V4T000259",
+      "6": "V4T008375",
+      "7": "V4T001878",
+      "8": "V4T005466",
+      "9": "V4T002460",
+      "10": "V4T000254",
+      "11": "V4T004387",
+      "12": "V4T007515",
+      "13": "V4T007351",
+      "14": "V4T001022"
+    },
+    "duration_seconds": 231,
+    "program": "DARK"
+  },
+  "natural_action_matches": true,
+  "prefix_sha256": "599f93363ec8fdb81642eb7a08a8425eae39f6f6698379b9e7f86f29c410163a",
+  "source_hash": {
+    "actions.jsonl": "c4c37d1a588d8f8b088eb07fd0e054832b65a096ee57d7bd7b0792ce5189ba0c",
+    "decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+    "observations.csv": "39f178c1f9381c479a416bcf319460326087d29430ece4aa1df00ee9c69255f2",
+    "messages.jsonl": "4ed744d3a21a8f8c7493c9f79c7fa83b4455cd1327f75767ef6b8e5865e0aaca",
+    "score_report.json": "dd1bbb338ca5aa617a6e0724cc07cd17d694df31f2fc6c87606b4b37ad224257"
+  },
+  "env": {
+    "planning_budget_seconds": 0.20456721252035087,
+    "anchor_count": 24,
+    "duration_safety": 1.1,
+    "repair_enabled": true,
+    "use_belief_clock": true,
+    "require_efficiency_witness": true,
+    "neural_continuation_strength": 0.3,
+    "quality_scale": 0.6171174866901783,
+    "program_band_quality_scale": 0.6485976230780006,
+    "use_bulletin_directional_prior": false,
+    "pointing_offset_alt_deg": -6.938893903907228e-18,
+    "pointing_offset_az_deg": 0.0
+  },
+  "search": {
+    "best": {
+      "model_terminal": -21523.434551075068,
+      "model_gain": 108.72803325826317,
+      "durations": [
+        689,
+        108
+      ],
+      "fields": [
+        1,
+        -2
+      ],
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 32.8371796,
+            "az_deg": 139.8701087
+          },
+          "assignments": {
+            "0": "V4T005186",
+            "1": "V4T007410",
+            "2": "V4T007408",
+            "4": "V4T000259",
+            "7": "V4T003312",
+            "8": "V4T006394",
+            "9": "V4T002460",
+            "10": "V4T008375",
+            "11": "V4T001360",
+            "12": "V4T007515",
+            "13": "V4T007351",
+            "14": "V4T006281",
+            "15": "V4T004387"
+          },
+          "duration_seconds": 689,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 34.9375841,
+            "az_deg": 139.8263935
+          },
+          "assignments": {
+            "3": "V4T001878",
+            "4": "V4T004001",
+            "7": "V4T000254",
+            "8": "V4T005466",
+            "9": "V4T004960",
+            "10": "V4T001022",
+            "12": "V4T001683"
+          },
+          "duration_seconds": 108,
+          "program": "DARK"
+        }
+      ]
+    },
+    "greedy": {
+      "model_terminal": -21523.684750693148,
+      "model_gain": 108.47783364018323,
+      "durations": [
+        230,
+        567
+      ],
+      "fields": [
+        0,
+        1
+      ],
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 33.0082105,
+            "az_deg": 139.9571704
+          },
+          "assignments": {
+            "1": "V4T007410",
+            "2": "V4T007408",
+            "3": "V4T003312",
+            "4": "V4T000259",
+            "6": "V4T008375",
+            "7": "V4T001878",
+            "8": "V4T005466",
+            "9": "V4T002460",
+            "10": "V4T000254",
+            "11": "V4T004387",
+            "12": "V4T007515",
+            "13": "V4T007351",
+            "14": "V4T001022"
+          },
+          "duration_seconds": 230,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 33.4000539,
+            "az_deg": 139.9057049
+          },
+          "assignments": {
+            "0": "V4T005186",
+            "1": "V4T007410",
+            "2": "V4T007408",
+            "4": "V4T000259",
+            "7": "V4T008066",
+            "8": "V4T006394",
+            "9": "V4T002460",
+            "10": "V4T008375",
+            "11": "V4T001360",
+            "12": "V4T006607",
+            "13": "V4T004960",
+            "14": "V4T006281",
+            "15": "V4T004387"
+          },
+          "duration_seconds": 567,
+          "program": "DARK"
+        }
+      ]
+    },
+    "strong_first": {
+      "model_terminal": -21523.68698242981,
+      "model_gain": 108.47560190352306,
+      "durations": [
+        231,
+        566
+      ],
+      "fields": [
+        0,
+        1
+      ],
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 33.0082105,
+            "az_deg": 139.9571704
+          },
+          "assignments": {
+            "1": "V4T007410",
+            "10": "V4T000254",
+            "11": "V4T004387",
+            "12": "V4T007515",
+            "13": "V4T007351",
+            "14": "V4T001022",
+            "2": "V4T007408",
+            "3": "V4T003312",
+            "4": "V4T000259",
+            "6": "V4T008375",
+            "7": "V4T001878",
+            "8": "V4T005466",
+            "9": "V4T002460"
+          },
+          "duration_seconds": 231,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 33.4025002,
+            "az_deg": 139.9058806
+          },
+          "assignments": {
+            "0": "V4T005186",
+            "1": "V4T007410",
+            "2": "V4T007408",
+            "4": "V4T000259",
+            "7": "V4T008066",
+            "8": "V4T006394",
+            "9": "V4T002460",
+            "10": "V4T008375",
+            "11": "V4T001360",
+            "12": "V4T006607",
+            "13": "V4T004960",
+            "14": "V4T006281",
+            "15": "V4T004387"
+          },
+          "duration_seconds": 566,
+          "program": "DARK"
+        }
+      ]
+    },
+    "top_candidates": [
+      {
+        "model_terminal": -21523.434551075068,
+        "model_gain": 108.72803325826317,
+        "durations": [
+          689,
+          108
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 689,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9375841,
+              "az_deg": 139.8263935
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 108,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.435609067452,
+        "model_gain": 108.72697526587945,
+        "durations": [
+          690,
+          107
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 690,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9400345,
+              "az_deg": 139.8266808
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 107,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.43666709212,
+        "model_gain": 108.7259172412123,
+        "durations": [
+          691,
+          106
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 691,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9424849,
+              "az_deg": 139.8269683
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 106,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.437725149666,
+        "model_gain": 108.7248591836651,
+        "durations": [
+          692,
+          105
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 692,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9449352,
+              "az_deg": 139.827256
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 105,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.438783239537,
+        "model_gain": 108.72380109379446,
+        "durations": [
+          693,
+          104
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 693,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9473855,
+              "az_deg": 139.8275439
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 104,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.439841361058,
+        "model_gain": 108.72274297227341,
+        "durations": [
+          694,
+          103
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 694,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9498357,
+              "az_deg": 139.827832
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 103,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.4408995173,
+        "model_gain": 108.72168481603148,
+        "durations": [
+          695,
+          102
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 695,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.952286,
+              "az_deg": 139.8281203
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 102,
+            "program": "DARK"
+          }
+        ]
+      },
+      {
+        "model_terminal": -21523.44195770399,
+        "model_gain": 108.72062662933968,
+        "durations": [
+          696,
+          101
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 696,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9547362,
+              "az_deg": 139.8284088
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 101,
+            "program": "DARK"
+          }
+        ]
+      }
+    ],
+    "baseline_terminal": -21632.16258433333,
+    "integer_duration_candidates": 269,
+    "field_centers": 12,
+    "relevant_targets": 47,
+    "pair_leaves": 347328,
+    "assignment_options": 357084,
+    "seconds": 3.868468541884795
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "status": "REJECTED_AS_STRONG_POLICY_IMPROVEMENT",
+  "scope": "Predeclared causal public prefix, frozen candidate search, official same-slot short-domain adjudication only; no full causal replan or season teacher.",
+  "runtime": {
+    "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+    "numpy": "2.0.2",
+    "machine": "Mac arm64"
+  },
+  "audit": {
+    "L1": {
+      "prefix_observation_rows": 16,
+      "all_prefix_scoring_and_hit_fields_exactly_match_source": true,
+      "row_id_order_differs_due_to_assignment_key_insertion": true,
+      "natural_next_action_exactly_matches_source": true,
+      "source_invalidations": 0,
+      "prefix_sha256": "ab366a2666a7effa52452b4ea20ac1864bf1a36c71bfc999c320de17d59f3180"
+    },
+    "L2": {
+      "prefix_observation_rows": 13,
+      "all_prefix_scoring_and_hit_fields_exactly_match_source": true,
+      "row_id_order_differs_due_to_assignment_key_insertion": true,
+      "natural_next_action_exactly_matches_source": true,
+      "source_invalidations": 0,
+      "prefix_sha256": "599f93363ec8fdb81642eb7a08a8425eae39f6f6698379b9e7f86f29c410163a"
+    }
+  },
+  "source_lock": {
+    "formal_v4/research/compound_time_graph_probe.py": "dd3d6d94bfc67e07cae3c506b0d1ac8d35fcf2d9355a49e8f5b18b549e6e0fc8",
+    "formal_v4/research/compound_time_graph_controls.py": "f62c47ef1698ca12887e9404dc16237092e46bd0a5fe1cc6d53175a2cf82490c",
+    "formal_v4/research/compound_time_graph_triple.py": "c67c5f0f4a0bd9ede6dad814e337f9270f21ad28edaa87e700a89f3420ae4dd9",
+    "formal_v4/research/compound_time_graph_model_20261004.md": "b17fd6742a7a8762e72fef14801b78c9f15effa330d21983c33b441d076fe7b4",
+    "formal_v4/runs/geometry_native_20261003/release/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "formal_v4/runs/geometry_native_20261003/release/research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "formal_v4/runs/geometry_native_20261003/release/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "formal_v4/runs/geometry_native_20261003/release/research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7"
+  },
+  "gpu_used": false,
+  "rhodes_cpu_used": false,
+  "full_causal_replanning_started": false,
+  "known_failed_attempts": [
+    "Initial capture recursion fixed by rebinding the isolated copy to CandidateGeometryPlanner.choose.",
+    "L1 scalar duplicate matching completed in49.78s; identical candidate batch produced exact same official differences in9.73s."
+  ],
+  "triple_status": "L2 bounded three-action job began before root steering; finished in27.74s before interruption was possible. Official held-out difference -1.459190; stopped without further jobs."
+}

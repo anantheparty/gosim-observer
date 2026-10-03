@@ -1,0 +1,206 @@
+{
+  "card": "L2",
+  "now_utc": "2026-11-09T00:31:43Z",
+  "horizon_seconds": 797,
+  "prefix_sha256": "599f93363ec8fdb81642eb7a08a8425eae39f6f6698379b9e7f86f29c410163a",
+  "native_prefix_match": true,
+  "field_centers": 16,
+  "relevant_targets": 155,
+  "public_rollout_seed": [
+    {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 33.0082105,
+        "az_deg": 139.9571704
+      },
+      "assignments": {
+        "1": "V4T007410",
+        "2": "V4T007408",
+        "3": "V4T003312",
+        "4": "V4T000259",
+        "6": "V4T008375",
+        "7": "V4T001878",
+        "8": "V4T005466",
+        "9": "V4T002460",
+        "10": "V4T000254",
+        "11": "V4T004387",
+        "12": "V4T007515",
+        "13": "V4T007351",
+        "14": "V4T001022"
+      },
+      "duration_seconds": 231,
+      "program": "DARK"
+    },
+    {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 34.8979012,
+        "az_deg": 128.2738452
+      },
+      "assignments": {
+        "0": "V4T006578",
+        "1": "V4T000337",
+        "2": "V4T007194",
+        "3": "V4T003711",
+        "4": "V4T002010",
+        "5": "V4T008555",
+        "6": "V4T005384",
+        "7": "V4T005486",
+        "8": "V4T008182",
+        "9": "V4T008210",
+        "10": "V4T007470",
+        "11": "V4T000763",
+        "12": "V4T003260",
+        "13": "V4T003197",
+        "14": "V4T006463",
+        "15": "V4T007535"
+      },
+      "duration_seconds": 390,
+      "program": "DARK"
+    }
+  ],
+  "search": {
+    "model_terminal": -21400.243603922998,
+    "model_gain": 231.91898041033346,
+    "durations": [
+      261,
+      407,
+      129
+    ],
+    "actions": [
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 33.0082105,
+          "az_deg": 139.9571704
+        },
+        "assignments": {
+          "1": "V4T007410",
+          "2": "V4T007408",
+          "3": "V4T003312",
+          "4": "V4T000259",
+          "6": "V4T008375",
+          "7": "V4T001878",
+          "8": "V4T005466",
+          "9": "V4T002460",
+          "10": "V4T000254",
+          "11": "V4T004387",
+          "12": "V4T007515",
+          "13": "V4T007351",
+          "14": "V4T001022"
+        },
+        "duration_seconds": 261,
+        "program": "DARK"
+      },
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 34.9877782,
+          "az_deg": 127.9312884
+        },
+        "assignments": {
+          "0": "V4T006578",
+          "1": "V4T000337",
+          "2": "V4T007194",
+          "3": "V4T005961",
+          "4": "V4T002010",
+          "5": "V4T003039",
+          "6": "V4T005384",
+          "7": "V4T005486",
+          "8": "V4T006326",
+          "9": "V4T008210",
+          "10": "V4T006488",
+          "11": "V4T000763",
+          "12": "V4T000576",
+          "13": "V4T003260",
+          "14": "V4T006463",
+          "15": "V4T007535"
+        },
+        "duration_seconds": 407,
+        "program": "DARK"
+      },
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 36.0653731,
+          "az_deg": 128.0716886
+        },
+        "assignments": {
+          "0": "V4T004412",
+          "1": "V4T006430",
+          "2": "V4T005150",
+          "4": "V4T008507",
+          "5": "V4T008555",
+          "6": "V4T004043",
+          "7": "V4T003711",
+          "8": "V4T002192",
+          "9": "V4T008427",
+          "10": "V4T007470",
+          "11": "V4T007854",
+          "12": "V4T002024",
+          "13": "V4T003197",
+          "14": "V4T005288"
+        },
+        "duration_seconds": 129,
+        "program": "DARK"
+      }
+    ],
+    "calls": 1213,
+    "beam": 6,
+    "passes": [
+      {
+        "fixed_index": 2,
+        "iterations": 502,
+        "best_value": -21400.318599756054,
+        "best_durations": [
+          235,
+          386,
+          176
+        ]
+      },
+      {
+        "fixed_index": 0,
+        "iterations": 443,
+        "best_value": -21400.259186752406,
+        "best_durations": [
+          235,
+          407,
+          155
+        ]
+      },
+      {
+        "fixed_index": 1,
+        "iterations": 271,
+        "best_value": -21400.243603922998,
+        "best_durations": [
+          261,
+          407,
+          129
+        ]
+      }
+    ],
+    "seconds": 27.22944191703573,
+    "assignment_options": 3202320
+  },
+  "scope": "three actions; continuous integer exchange, beam6 incomplete ledger DP, frozen public current-slot belief; no future truth candidates",
+  "official_micro_terminal": -21402.696161,
+  "official_components": {
+    "sum_best_scores": 16.435859,
+    "required_penalty": -21250.0,
+    "uniformity_penalty": -169.13202,
+    "report_settlement": 0.0,
+    "observation_request_reward": 0
+  },
+  "official_counts": {
+    "decisions": 4,
+    "observe_actions": 4,
+    "observations": 56,
+    "targets_observed": 55,
+    "required_missing": 425,
+    "invalidated_observations": 0,
+    "observation_requests_issued": 0,
+    "observation_requests_completed": 0
+  },
+  "official_minus_source_multifield": -1.4591900000013993,
+  "seconds": 27.744692374952137
+}

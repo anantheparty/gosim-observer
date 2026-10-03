@@ -1,0 +1,1869 @@
+{
+  "L1": {
+    "card": "L1",
+    "rank": 1,
+    "prefix_actions": 1,
+    "now_utc": "2026-11-02T00:31:58Z",
+    "horizon_seconds": 782,
+    "source_action": {
+      "action": "observe",
+      "assignments": {
+        "0": "V4T004149",
+        "1": "V4T001449",
+        "10": "V4T001114",
+        "11": "V4T002384",
+        "12": "V4T000374",
+        "13": "V4T002945",
+        "15": "V4T000744",
+        "2": "V4T002046",
+        "3": "V4T002124",
+        "4": "V4T003601",
+        "5": "V4T000219",
+        "6": "V4T005723",
+        "7": "V4T003697",
+        "8": "V4T001151",
+        "9": "V4T005444"
+      },
+      "duration_seconds": 292,
+      "pointing": {
+        "alt_deg": 54.5486307,
+        "az_deg": 83.7397269
+      },
+      "program": "DARK"
+    },
+    "natural_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 54.5486307,
+        "az_deg": 83.7397269
+      },
+      "assignments": {
+        "0": "V4T004149",
+        "1": "V4T001449",
+        "2": "V4T002046",
+        "3": "V4T002124",
+        "4": "V4T003601",
+        "5": "V4T000219",
+        "6": "V4T005723",
+        "7": "V4T003697",
+        "8": "V4T001151",
+        "9": "V4T005444",
+        "10": "V4T001114",
+        "11": "V4T002384",
+        "12": "V4T000374",
+        "13": "V4T002945",
+        "15": "V4T000744"
+      },
+      "duration_seconds": 292,
+      "program": "DARK"
+    },
+    "natural_action_matches": true,
+    "prefix_sha256": "ab366a2666a7effa52452b4ea20ac1864bf1a36c71bfc999c320de17d59f3180",
+    "source_hash": {
+      "actions.jsonl": "437747a91f601ed3ca8f401e1adc2bd98307310860b4bd854918b4fb6b3aa230",
+      "decisions.csv": "752d0a0a7ae3dd2dcd473247fe565148c8fe622565e95629a786200ee9884d50",
+      "observations.csv": "f1cf83f37f226bb734eb7401a51db0ea878bbced51703f668a92929e8643bc59",
+      "messages.jsonl": "c4140a46ff05b2bb431408e693515dac3db2189b96932a8f876f0fbea0cec0dd",
+      "score_report.json": "4340dcc7243c8fe9b79891b78bf5a6dcfe57bc6fc278aec338082109093dda71"
+    },
+    "env": {
+      "planning_budget_seconds": 0.20457290775040685,
+      "anchor_count": 24,
+      "duration_safety": 1.1,
+      "repair_enabled": true,
+      "use_belief_clock": true,
+      "require_efficiency_witness": true,
+      "neural_continuation_strength": 0.3,
+      "quality_scale": 0.631860937241972,
+      "program_band_quality_scale": 0.6653388929125589,
+      "use_bulletin_directional_prior": false,
+      "pointing_offset_alt_deg": 0.0,
+      "pointing_offset_az_deg": 0.0
+    },
+    "search": {
+      "best": {
+        "model_terminal": -19132.64979608802,
+        "model_gain": 430.9508131162693,
+        "durations": [
+          303,
+          479
+        ],
+        "fields": [
+          7,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 62.1831497,
+              "az_deg": 92.0546161
+            },
+            "assignments": {
+              "2": "V4T002559",
+              "3": "V4T004049",
+              "4": "V4T003955",
+              "5": "V4T002121",
+              "7": "V4T003653",
+              "8": "V4T005503",
+              "9": "V4T007475",
+              "10": "V4T000055",
+              "11": "V4T005432",
+              "12": "V4T003696",
+              "13": "V4T004849",
+              "15": "V4T006354"
+            },
+            "duration_seconds": 303,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 55.4976253,
+              "az_deg": 83.1039286
+            },
+            "assignments": {
+              "0": "V4T005572",
+              "1": "V4T001449",
+              "2": "V4T002046",
+              "3": "V4T002124",
+              "4": "V4T001141",
+              "5": "V4T004719",
+              "6": "V4T005723",
+              "7": "V4T005269",
+              "8": "V4T005444",
+              "9": "V4T004774",
+              "10": "V4T001114",
+              "11": "V4T002384",
+              "12": "V4T000374",
+              "13": "V4T002945"
+            },
+            "duration_seconds": 479,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -19132.495979,
+        "official_components": {
+          "sum_best_scores": 19.028878,
+          "required_penalty": -19000.0,
+          "uniformity_penalty": -151.524857,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 42,
+          "targets_observed": 42,
+          "required_missing": 380,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "greedy": {
+        "model_terminal": -19183.694692967176,
+        "model_gain": 379.90591623711225,
+        "durations": [
+          291,
+          491
+        ],
+        "fields": [
+          4,
+          7
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 54.3542058,
+              "az_deg": 83.8179287
+            },
+            "assignments": {
+              "0": "V4T005572",
+              "1": "V4T001449",
+              "2": "V4T002046",
+              "3": "V4T002124",
+              "4": "V4T003601",
+              "5": "V4T000219",
+              "6": "V4T005723",
+              "7": "V4T005269",
+              "8": "V4T005444",
+              "9": "V4T004774",
+              "10": "V4T001114",
+              "11": "V4T003697",
+              "12": "V4T000374",
+              "13": "V4T002945"
+            },
+            "duration_seconds": 291,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 63.2879074,
+              "az_deg": 91.6168843
+            },
+            "assignments": {
+              "2": "V4T002559",
+              "3": "V4T004049",
+              "4": "V4T003955",
+              "5": "V4T002121",
+              "7": "V4T003653",
+              "8": "V4T005503",
+              "9": "V4T007475",
+              "10": "V4T000055",
+              "11": "V4T005432",
+              "12": "V4T003696",
+              "13": "V4T004849",
+              "15": "V4T006354"
+            },
+            "duration_seconds": 491,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -19183.820604,
+        "official_components": {
+          "sum_best_scores": 17.855852,
+          "required_penalty": -19050.0,
+          "uniformity_penalty": -151.676455,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 42,
+          "targets_observed": 42,
+          "required_missing": 381,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "strong_first": {
+        "model_terminal": -19184.37372791134,
+        "model_gain": 379.2268812929469,
+        "durations": [
+          292,
+          490
+        ],
+        "fields": [
+          0,
+          7
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 54.5486307,
+              "az_deg": 83.7397269
+            },
+            "assignments": {
+              "0": "V4T004149",
+              "1": "V4T001449",
+              "10": "V4T001114",
+              "11": "V4T002384",
+              "12": "V4T000374",
+              "13": "V4T002945",
+              "15": "V4T000744",
+              "2": "V4T002046",
+              "3": "V4T002124",
+              "4": "V4T003601",
+              "5": "V4T000219",
+              "6": "V4T005723",
+              "7": "V4T003697",
+              "8": "V4T001151",
+              "9": "V4T005444"
+            },
+            "duration_seconds": 292,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 63.2917043,
+              "az_deg": 91.6153569
+            },
+            "assignments": {
+              "2": "V4T002559",
+              "3": "V4T004049",
+              "4": "V4T003955",
+              "5": "V4T002121",
+              "7": "V4T003653",
+              "8": "V4T005503",
+              "9": "V4T007475",
+              "10": "V4T000055",
+              "11": "V4T005432",
+              "12": "V4T003696",
+              "13": "V4T004849",
+              "15": "V4T006354"
+            },
+            "duration_seconds": 490,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -19184.286208,
+        "official_components": {
+          "sum_best_scores": 18.302198,
+          "required_penalty": -19050.0,
+          "uniformity_penalty": -152.588406,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 43,
+          "targets_observed": 43,
+          "required_missing": 381,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "top_candidates": [
+        {
+          "model_terminal": -19132.64979608802,
+          "model_gain": 430.9508131162693,
+          "durations": [
+            303,
+            479
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 303,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.4976253,
+                "az_deg": 83.1039286
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 479,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.650336121555,
+          "model_gain": 430.9502730827335,
+          "durations": [
+            304,
+            478
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 304,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5013964,
+                "az_deg": 83.1015245
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 478,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.65087626056,
+          "model_gain": 430.94973294372903,
+          "durations": [
+            305,
+            477
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 305,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5051672,
+                "az_deg": 83.0991202
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 477,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.651416508015,
+          "model_gain": 430.9491926962728,
+          "durations": [
+            306,
+            476
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 306,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5089381,
+                "az_deg": 83.0967156
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 476,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.651956859263,
+          "model_gain": 430.94865234502504,
+          "durations": [
+            307,
+            475
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 307,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5127089,
+                "az_deg": 83.0943107
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 475,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.65249731652,
+          "model_gain": 430.9481118877666,
+          "durations": [
+            308,
+            474
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 308,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5164797,
+                "az_deg": 83.0919054
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 474,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.653037878972,
+          "model_gain": 430.94757132531595,
+          "durations": [
+            309,
+            473
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 309,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5202504,
+                "az_deg": 83.0894998
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 473,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -19132.65357855013,
+          "model_gain": 430.9470306541589,
+          "durations": [
+            310,
+            472
+          ],
+          "fields": [
+            7,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 62.1831497,
+                "az_deg": 92.0546161
+              },
+              "assignments": {
+                "2": "V4T002559",
+                "3": "V4T004049",
+                "4": "V4T003955",
+                "5": "V4T002121",
+                "7": "V4T003653",
+                "8": "V4T005503",
+                "9": "V4T007475",
+                "10": "V4T000055",
+                "11": "V4T005432",
+                "12": "V4T003696",
+                "13": "V4T004849",
+                "15": "V4T006354"
+              },
+              "duration_seconds": 310,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 55.5240212,
+                "az_deg": 83.0870939
+              },
+              "assignments": {
+                "0": "V4T005572",
+                "1": "V4T001449",
+                "2": "V4T002046",
+                "3": "V4T002124",
+                "4": "V4T001141",
+                "5": "V4T004719",
+                "6": "V4T005723",
+                "7": "V4T005269",
+                "8": "V4T005444",
+                "9": "V4T004774",
+                "10": "V4T001114",
+                "11": "V4T002384",
+                "12": "V4T000374",
+                "13": "V4T002945"
+              },
+              "duration_seconds": 472,
+              "program": "DARK"
+            }
+          ]
+        }
+      ],
+      "baseline_terminal": -19563.600609204288,
+      "integer_duration_candidates": 601,
+      "field_centers": 12,
+      "relevant_targets": 237,
+      "pair_leaves": 777600,
+      "assignment_options": 799308,
+      "seconds": 9.229679249925539
+    },
+    "official_best_minus_greedy": 51.324625000001106,
+    "official_best_minus_strong_first": 51.790229000002,
+    "seconds": 9.733208833029494,
+    "source_multifield_control": {
+      "actions": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T004149",
+            "1": "V4T001449",
+            "10": "V4T001114",
+            "11": "V4T002384",
+            "12": "V4T000374",
+            "13": "V4T002945",
+            "15": "V4T000744",
+            "2": "V4T002046",
+            "3": "V4T002124",
+            "4": "V4T003601",
+            "5": "V4T000219",
+            "6": "V4T005723",
+            "7": "V4T003697",
+            "8": "V4T001151",
+            "9": "V4T005444"
+          },
+          "duration_seconds": 292,
+          "pointing": {
+            "alt_deg": 54.5486307,
+            "az_deg": 83.7397269
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T000055",
+            "1": "V4T006354",
+            "10": "V4T004158",
+            "11": "V4T006873",
+            "12": "V4T006059",
+            "13": "V4T001389",
+            "14": "V4T006140",
+            "15": "V4T001711",
+            "2": "V4T005888",
+            "4": "V4T002090",
+            "5": "V4T007645",
+            "6": "V4T006992",
+            "7": "V4T005309",
+            "8": "V4T007108",
+            "9": "V4T006661"
+          },
+          "duration_seconds": 64,
+          "pointing": {
+            "alt_deg": 65.0089666,
+            "az_deg": 94.596719
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T005616",
+            "1": "V4T001204",
+            "10": "V4T002512",
+            "11": "V4T000097",
+            "12": "V4T001593",
+            "13": "V4T001383",
+            "14": "V4T007104",
+            "15": "V4T002288",
+            "2": "V4T003915",
+            "3": "V4T006006",
+            "4": "V4T006059",
+            "5": "V4T005677",
+            "6": "V4T002471",
+            "7": "V4T007408",
+            "8": "V4T001994",
+            "9": "V4T006749"
+          },
+          "duration_seconds": 77,
+          "pointing": {
+            "alt_deg": 66.6809266,
+            "az_deg": 94.4191637
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T006140",
+            "1": "V4T007408",
+            "10": "V4T001478",
+            "11": "V4T004230",
+            "12": "V4T007256",
+            "14": "V4T006356",
+            "15": "V4T003715",
+            "2": "V4T006523",
+            "3": "V4T006510",
+            "4": "V4T004055",
+            "5": "V4T003809",
+            "6": "V4T005972",
+            "7": "V4T002906",
+            "8": "V4T007104",
+            "9": "V4T002722"
+          },
+          "duration_seconds": 178,
+          "pointing": {
+            "alt_deg": 67.6860628,
+            "az_deg": 98.2845276
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007006",
+            "1": "V4T001160",
+            "10": "V4T004645",
+            "11": "V4T007300",
+            "12": "V4T005660",
+            "13": "V4T001421",
+            "14": "V4T000511",
+            "15": "V4T007709",
+            "2": "V4T000065",
+            "3": "V4T002393",
+            "4": "V4T000855",
+            "5": "V4T003586",
+            "6": "V4T003857",
+            "7": "V4T006027",
+            "8": "V4T001541",
+            "9": "V4T007285"
+          },
+          "duration_seconds": 171,
+          "pointing": {
+            "alt_deg": 73.6927212,
+            "az_deg": 90.274837
+          },
+          "program": "DARK"
+        }
+      ],
+      "official_micro_terminal": -19079.144126,
+      "official_components": {
+        "sum_best_scores": 23.608131,
+        "required_penalty": -18950.0,
+        "uniformity_penalty": -152.752257,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      },
+      "official_counts": {
+        "decisions": 6,
+        "observe_actions": 6,
+        "observations": 93,
+        "targets_observed": 89,
+        "required_missing": 379,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 0,
+        "observation_requests_completed": 0
+      },
+      "final_action_clipped_to_public_slot_end": true,
+      "role": "held-out historical native action tape, final duration clipped; no candidate-selection role"
+    },
+    "official_best_minus_source_multifield": -53.35185300000012
+  },
+  "L2": {
+    "card": "L2",
+    "rank": 1,
+    "prefix_actions": 1,
+    "now_utc": "2026-11-09T00:31:43Z",
+    "horizon_seconds": 797,
+    "source_action": {
+      "action": "observe",
+      "assignments": {
+        "1": "V4T007410",
+        "10": "V4T000254",
+        "11": "V4T004387",
+        "12": "V4T007515",
+        "13": "V4T007351",
+        "14": "V4T001022",
+        "2": "V4T007408",
+        "3": "V4T003312",
+        "4": "V4T000259",
+        "6": "V4T008375",
+        "7": "V4T001878",
+        "8": "V4T005466",
+        "9": "V4T002460"
+      },
+      "duration_seconds": 231,
+      "pointing": {
+        "alt_deg": 33.0082105,
+        "az_deg": 139.9571704
+      },
+      "program": "DARK"
+    },
+    "natural_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 33.0082105,
+        "az_deg": 139.9571704
+      },
+      "assignments": {
+        "1": "V4T007410",
+        "2": "V4T007408",
+        "3": "V4T003312",
+        "4": "V4T000259",
+        "6": "V4T008375",
+        "7": "V4T001878",
+        "8": "V4T005466",
+        "9": "V4T002460",
+        "10": "V4T000254",
+        "11": "V4T004387",
+        "12": "V4T007515",
+        "13": "V4T007351",
+        "14": "V4T001022"
+      },
+      "duration_seconds": 231,
+      "program": "DARK"
+    },
+    "natural_action_matches": true,
+    "prefix_sha256": "599f93363ec8fdb81642eb7a08a8425eae39f6f6698379b9e7f86f29c410163a",
+    "source_hash": {
+      "actions.jsonl": "c4c37d1a588d8f8b088eb07fd0e054832b65a096ee57d7bd7b0792ce5189ba0c",
+      "decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+      "observations.csv": "39f178c1f9381c479a416bcf319460326087d29430ece4aa1df00ee9c69255f2",
+      "messages.jsonl": "4ed744d3a21a8f8c7493c9f79c7fa83b4455cd1327f75767ef6b8e5865e0aaca",
+      "score_report.json": "dd1bbb338ca5aa617a6e0724cc07cd17d694df31f2fc6c87606b4b37ad224257"
+    },
+    "env": {
+      "planning_budget_seconds": 0.20456721252035087,
+      "anchor_count": 24,
+      "duration_safety": 1.1,
+      "repair_enabled": true,
+      "use_belief_clock": true,
+      "require_efficiency_witness": true,
+      "neural_continuation_strength": 0.3,
+      "quality_scale": 0.6171174866901783,
+      "program_band_quality_scale": 0.6485976230780006,
+      "use_bulletin_directional_prior": false,
+      "pointing_offset_alt_deg": -6.938893903907228e-18,
+      "pointing_offset_az_deg": 0.0
+    },
+    "search": {
+      "best": {
+        "model_terminal": -21523.434551075068,
+        "model_gain": 108.72803325826317,
+        "durations": [
+          689,
+          108
+        ],
+        "fields": [
+          1,
+          -2
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 32.8371796,
+              "az_deg": 139.8701087
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T003312",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 689,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 34.9375841,
+              "az_deg": 139.8263935
+            },
+            "assignments": {
+              "3": "V4T001878",
+              "4": "V4T004001",
+              "7": "V4T000254",
+              "8": "V4T005466",
+              "9": "V4T004960",
+              "10": "V4T001022",
+              "12": "V4T001683"
+            },
+            "duration_seconds": 108,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -21523.429636,
+        "official_components": {
+          "sum_best_scores": 9.903697,
+          "required_penalty": -21350.0,
+          "uniformity_penalty": -183.333333,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 33,
+          "targets_observed": 32,
+          "required_missing": 427,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "greedy": {
+        "model_terminal": -21523.684750693148,
+        "model_gain": 108.47783364018323,
+        "durations": [
+          230,
+          567
+        ],
+        "fields": [
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 33.0082105,
+              "az_deg": 139.9571704
+            },
+            "assignments": {
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "3": "V4T003312",
+              "4": "V4T000259",
+              "6": "V4T008375",
+              "7": "V4T001878",
+              "8": "V4T005466",
+              "9": "V4T002460",
+              "10": "V4T000254",
+              "11": "V4T004387",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T001022"
+            },
+            "duration_seconds": 230,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 33.4000539,
+              "az_deg": 139.9057049
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T008066",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T006607",
+              "13": "V4T004960",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 567,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -21523.678272,
+        "official_components": {
+          "sum_best_scores": 9.655061,
+          "required_penalty": -21350.0,
+          "uniformity_penalty": -183.333333,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 39,
+          "targets_observed": 31,
+          "required_missing": 427,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "strong_first": {
+        "model_terminal": -21523.68698242981,
+        "model_gain": 108.47560190352306,
+        "durations": [
+          231,
+          566
+        ],
+        "fields": [
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 33.0082105,
+              "az_deg": 139.9571704
+            },
+            "assignments": {
+              "1": "V4T007410",
+              "10": "V4T000254",
+              "11": "V4T004387",
+              "12": "V4T007515",
+              "13": "V4T007351",
+              "14": "V4T001022",
+              "2": "V4T007408",
+              "3": "V4T003312",
+              "4": "V4T000259",
+              "6": "V4T008375",
+              "7": "V4T001878",
+              "8": "V4T005466",
+              "9": "V4T002460"
+            },
+            "duration_seconds": 231,
+            "program": "DARK"
+          },
+          {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 33.4025002,
+              "az_deg": 139.9058806
+            },
+            "assignments": {
+              "0": "V4T005186",
+              "1": "V4T007410",
+              "2": "V4T007408",
+              "4": "V4T000259",
+              "7": "V4T008066",
+              "8": "V4T006394",
+              "9": "V4T002460",
+              "10": "V4T008375",
+              "11": "V4T001360",
+              "12": "V4T006607",
+              "13": "V4T004960",
+              "14": "V4T006281",
+              "15": "V4T004387"
+            },
+            "duration_seconds": 566,
+            "program": "DARK"
+          }
+        ],
+        "official_micro_terminal": -21523.680506,
+        "official_components": {
+          "sum_best_scores": 9.652828,
+          "required_penalty": -21350.0,
+          "uniformity_penalty": -183.333333,
+          "report_settlement": 0.0,
+          "observation_request_reward": 0
+        },
+        "official_counts": {
+          "decisions": 3,
+          "observe_actions": 3,
+          "observations": 39,
+          "targets_observed": 31,
+          "required_missing": 427,
+          "invalidated_observations": 0,
+          "observation_requests_issued": 0,
+          "observation_requests_completed": 0
+        }
+      },
+      "top_candidates": [
+        {
+          "model_terminal": -21523.434551075068,
+          "model_gain": 108.72803325826317,
+          "durations": [
+            689,
+            108
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 689,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9375841,
+                "az_deg": 139.8263935
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 108,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.435609067452,
+          "model_gain": 108.72697526587945,
+          "durations": [
+            690,
+            107
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 690,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9400345,
+                "az_deg": 139.8266808
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 107,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.43666709212,
+          "model_gain": 108.7259172412123,
+          "durations": [
+            691,
+            106
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 691,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9424849,
+                "az_deg": 139.8269683
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 106,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.437725149666,
+          "model_gain": 108.7248591836651,
+          "durations": [
+            692,
+            105
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 692,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9449352,
+                "az_deg": 139.827256
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 105,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.438783239537,
+          "model_gain": 108.72380109379446,
+          "durations": [
+            693,
+            104
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 693,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9473855,
+                "az_deg": 139.8275439
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 104,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.439841361058,
+          "model_gain": 108.72274297227341,
+          "durations": [
+            694,
+            103
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 694,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9498357,
+                "az_deg": 139.827832
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 103,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.4408995173,
+          "model_gain": 108.72168481603148,
+          "durations": [
+            695,
+            102
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 695,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.952286,
+                "az_deg": 139.8281203
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 102,
+              "program": "DARK"
+            }
+          ]
+        },
+        {
+          "model_terminal": -21523.44195770399,
+          "model_gain": 108.72062662933968,
+          "durations": [
+            696,
+            101
+          ],
+          "fields": [
+            1,
+            -2
+          ],
+          "actions": [
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 32.8371796,
+                "az_deg": 139.8701087
+              },
+              "assignments": {
+                "0": "V4T005186",
+                "1": "V4T007410",
+                "2": "V4T007408",
+                "4": "V4T000259",
+                "7": "V4T003312",
+                "8": "V4T006394",
+                "9": "V4T002460",
+                "10": "V4T008375",
+                "11": "V4T001360",
+                "12": "V4T007515",
+                "13": "V4T007351",
+                "14": "V4T006281",
+                "15": "V4T004387"
+              },
+              "duration_seconds": 696,
+              "program": "DARK"
+            },
+            {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 34.9547362,
+                "az_deg": 139.8284088
+              },
+              "assignments": {
+                "3": "V4T001878",
+                "4": "V4T004001",
+                "7": "V4T000254",
+                "8": "V4T005466",
+                "9": "V4T004960",
+                "10": "V4T001022",
+                "12": "V4T001683"
+              },
+              "duration_seconds": 101,
+              "program": "DARK"
+            }
+          ]
+        }
+      ],
+      "baseline_terminal": -21632.16258433333,
+      "integer_duration_candidates": 269,
+      "field_centers": 12,
+      "relevant_targets": 47,
+      "pair_leaves": 347328,
+      "assignment_options": 357084,
+      "seconds": 3.868468541884795
+    },
+    "official_best_minus_greedy": 0.24863600000026054,
+    "official_best_minus_strong_first": 0.2508699999998498,
+    "seconds": 4.209594832966104,
+    "source_multifield_control": {
+      "actions": [
+        {
+          "action": "observe",
+          "assignments": {
+            "1": "V4T007410",
+            "10": "V4T000254",
+            "11": "V4T004387",
+            "12": "V4T007515",
+            "13": "V4T007351",
+            "14": "V4T001022",
+            "2": "V4T007408",
+            "3": "V4T003312",
+            "4": "V4T000259",
+            "6": "V4T008375",
+            "7": "V4T001878",
+            "8": "V4T005466",
+            "9": "V4T002460"
+          },
+          "duration_seconds": 231,
+          "pointing": {
+            "alt_deg": 33.0082105,
+            "az_deg": 139.9571704
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T000385",
+            "1": "V4T006578",
+            "10": "V4T008210",
+            "11": "V4T007470",
+            "12": "V4T000576",
+            "13": "V4T003260",
+            "14": "V4T003197",
+            "15": "V4T006463",
+            "2": "V4T000337",
+            "3": "V4T007194",
+            "4": "V4T002995",
+            "5": "V4T002010",
+            "6": "V4T008555",
+            "7": "V4T005384",
+            "8": "V4T006326",
+            "9": "V4T008182"
+          },
+          "duration_seconds": 390,
+          "pointing": {
+            "alt_deg": 34.9561768,
+            "az_deg": 127.5106723
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007142",
+            "1": "V4T004964",
+            "10": "V4T008533",
+            "11": "V4T007255",
+            "12": "V4T005014",
+            "13": "V4T007882",
+            "14": "V4T007534",
+            "15": "V4T008068",
+            "2": "V4T008097",
+            "3": "V4T001285",
+            "4": "V4T000403",
+            "5": "V4T002522",
+            "6": "V4T003151",
+            "7": "V4T002135",
+            "8": "V4T005993",
+            "9": "V4T004016"
+          },
+          "duration_seconds": 176,
+          "pointing": {
+            "alt_deg": 32.035773,
+            "az_deg": 133.8036915
+          },
+          "program": "DARK"
+        }
+      ],
+      "official_micro_terminal": -21401.236971,
+      "official_components": {
+        "sum_best_scores": 17.571343,
+        "required_penalty": -21250.0,
+        "uniformity_penalty": -168.808313,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      },
+      "official_counts": {
+        "decisions": 4,
+        "observe_actions": 4,
+        "observations": 58,
+        "targets_observed": 57,
+        "required_missing": 425,
+        "invalidated_observations": 0,
+        "observation_requests_issued": 0,
+        "observation_requests_completed": 0
+      },
+      "final_action_clipped_to_public_slot_end": true,
+      "role": "held-out historical native action tape, final duration clipped; no candidate-selection role"
+    },
+    "official_best_minus_source_multifield": -122.19266500000231
+  }
+}
