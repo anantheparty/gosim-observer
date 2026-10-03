@@ -1,0 +1,23 @@
+{
+  "status": "planned_unexecuted",
+  "name": "public terrain posterior action gate",
+  "fixed_states": [
+    {"card": "L4", "after_observe_index": 3, "next_observe_index": 4},
+    {"card": "L3", "after_observe_index": 254, "next_observe_index": 255}
+  ],
+  "reference_actor": "formal_v4/runs/geometry_native_20261003/release",
+  "freeze": ["source", "C/E belief", "report logic", "valid ledger", "anchor work budget"],
+  "candidate_actions": "Only frozen parent legal fields, complete assignments, and a 60 s science probe",
+  "actor_information": "initialize, issued bulletins, own actions, public last_result hits, certified support constraints",
+  "forbidden_actor_information": "weather/events truth, hidden pointing offset, future unpublished bulletins, hidden terrain bounds",
+  "objective": "Group predicted worlds by public probe feedback; choose the maximum conditional expected terminal continuation within each group; include probe opportunity cost",
+  "stop_if": [
+    "Neither fixed state admits a different legal continuation after posterior update",
+    "No reliable same-exposure positive anchor or less than 60 s left in public slot",
+    "Continuation value difference does not exceed science and deadline opportunity cost",
+    "Frozen prefix cannot reproduce the reference actions exactly"
+  ],
+  "season_test": "Only after a legal action difference and exact prefix gate; genuine same-prefix replanning to terminal state, equal source/budget, all terminal score components",
+  "deployment": "No adoption until complete strong-control card tests show positive mean and preserve required/REQ performance",
+  "executed_this_round": false
+}

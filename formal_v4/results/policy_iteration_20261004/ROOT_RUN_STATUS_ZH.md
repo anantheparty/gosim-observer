@@ -17,6 +17,8 @@ Rhodes1 driver PID **973012**，启动 **2026-10-03 19:38:56 UTC**。准确预�
 
 源锁SHA：`2e539ee19e06e3a87d0ffb261b223b64be9af9faafe9cc7033effc9cb84f43e3`。预计2.08小时，保守3.45小时；6小时停止启动新任务，已启动任务仍有990秒超时与清理时间。后续真实进度以远端PID/容器及 `bulk_progress.json`、`bulk_summary.json` 为准。
 
+19:49 UTC冻结检查点确认首8个完整controls全部通过READY分数/逐动作/分项、capture/post-feedback与锁源门检，实际349–474秒，全部终局文件晚于候选冻结。下一轮8个controls实际运行，见 `bulk_first_checkpoint.json` 与 `bulk_first_round_controls.json`。此时未完成整组alternative标签或拟合。
+
 ## 下一阶段
 
 完整状态组先通过v2全部门检及档案完整性，再生成显式接受清单。清单引用原始 `control/public_capture/capture.json` 字节及公开features、initialization、availability、pair_audit；不能用重新排版后的capture代替原字节。

@@ -1,0 +1,79 @@
+{
+  "card_audits": [
+    {
+      "card": "L1",
+      "positive_count": 1451,
+      "positive_false_certificate_count": 0,
+      "scope": "separate offline hidden-terrain audit after public decision labels frozen",
+      "zero_count": 0,
+      "zero_false_certificate_count": 0
+    },
+    {
+      "card": "L2",
+      "positive_count": 1336,
+      "positive_false_certificate_count": 0,
+      "scope": "separate offline hidden-terrain audit after public decision labels frozen",
+      "zero_count": 0,
+      "zero_false_certificate_count": 0
+    },
+    {
+      "card": "L3",
+      "positive_count": 1455,
+      "positive_false_certificate_count": 0,
+      "scope": "separate offline hidden-terrain audit after public decision labels frozen",
+      "zero_count": 6,
+      "zero_false_certificate_count": 0
+    },
+    {
+      "card": "L4",
+      "positive_count": 926,
+      "positive_false_certificate_count": 0,
+      "scope": "separate offline hidden-terrain audit after public decision labels frozen",
+      "zero_count": 7,
+      "zero_false_certificate_count": 0
+    }
+  ],
+  "participant_truth_access": false,
+  "public_records_sha256_before_truth_audit": {
+    "L1": "88fa5842ad89fdbf2bfa74f1d3fffdfc0899f93edc69a9fbca9b13908053690a",
+    "L2": "6ceac08c5450aba382f9bcfa6168de1d2b78af22d0bda8797a2483942efac41a",
+    "L3": "dacc9c39f70a3576178eb9c3f4215c585912fe3d4e0ac35e5742e0010558ec07",
+    "L4": "f23a78ba06d5522b291906e929d2ca0f9ce9fe0d54cbded437cf49224bad82f3"
+  },
+  "reference_input_sha256": {
+    "L1": {
+      "decisions.csv": "752d0a0a7ae3dd2dcd473247fe565148c8fe622565e95629a786200ee9884d50",
+      "observations.csv": "f1cf83f37f226bb734eb7401a51db0ea878bbced51703f668a92929e8643bc59"
+    },
+    "L2": {
+      "decisions.csv": "d7396b690d9791ba8570bc891579c0f0823e8fa7b5b57a6dbe7d1cd8037683e0",
+      "observations.csv": "39f178c1f9381c479a416bcf319460326087d29430ece4aa1df00ee9c69255f2"
+    },
+    "L3": {
+      "decisions.csv": "29124d858564b8a809d5e33e6a3c29c4b20400a13283d7b2706f31b0b4f0ef41",
+      "observations.csv": "b3f7ff1efd1878c868b02996c5b9f4e2c9b8e65e2598e4a7bb6469470775bb01"
+    },
+    "L4": {
+      "decisions.csv": "ccfcd6a36878b3ec6553b0d512fc4806c66d66e533d67cf3df31b396643e6d15",
+      "observations.csv": "6071f8c2deb6d5e02eeaae30d4ac7e21c84f34756bb2a6044d66d72bcdf08851"
+    }
+  },
+  "remote_jobs_started": false,
+  "season_replanning_executed": false,
+  "source_sha256": {
+    "formal_v4/results/cold_information_value_20261004/probe.py": "4c2e113cdc17a2c2670fc386aefbaba3333648647947d143a63edf69f00c9d14",
+    "formal_v4/upstream/gosim-observer-examples/docs/participant-guide.zh.md": "bd8dcf669d35cca9ba13a52544d8c864b26562230ff163f6aa22fa5789360d42",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66"
+  },
+  "synthetic_branching_gain": 6.1076681922789895,
+  "synthetic_expected_score": {
+    "A_required": -23.278167445450016,
+    "B_safe": -36.920556358780644,
+    "probe_adaptive": -17.273318846504868,
+    "probe_no_update": -23.380987038783857
+  },
+  "synthetic_gain_over_best_no_probe": 6.0048485989451486,
+  "wallclock_seconds": 0.27769262506626546
+}

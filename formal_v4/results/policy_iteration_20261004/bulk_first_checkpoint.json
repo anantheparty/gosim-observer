@@ -1,0 +1,446 @@
+{
+  "schema": "policy-iteration-frozen-first-checkpoint-v1",
+  "utc": "2026-10-03T19:49:36.143114+00:00",
+  "driver_pid": 973012,
+  "first_control_count": 8,
+  "all_full_control_gates_valid": true,
+  "controls": [
+    {
+      "group_id": "L1_q00_rank0106",
+      "card": "L1",
+      "rank": 106,
+      "gate_sha256": "3ec96340e1774f8145a2d207b6056328a21992d104d4760e0ea652a6cf30d48a",
+      "gate": {
+        "total": 6362.021539,
+        "seconds": 392.83041394798784,
+        "accounted_seconds": 392.23,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l1-106-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "93637be1e9d7fac2475de1f30e66855b2f0acfb54d11d81316556d319cc2e63c",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L2_q00_rank0104",
+      "card": "L2",
+      "rank": 104,
+      "gate_sha256": "f51b52b150e7a066e0eda19ec7215c9662b84958f0deb3d808af0f84f034d5d0",
+      "gate": {
+        "total": 6823.661561,
+        "seconds": 473.9058101690025,
+        "accounted_seconds": 473.297,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l2-104-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "66cfbb18e870db0e3dfc242e85769704fa45672750ecaf739b6858c9fd07ad9c",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L3_q00_rank0122",
+      "card": "L3",
+      "rank": 122,
+      "gate_sha256": "da89a705c6f847bd8e63f93363da8b24eb86e9761078657f7488429dd4fa4361",
+      "gate": {
+        "total": 6004.504542,
+        "seconds": 400.5877375819837,
+        "accounted_seconds": 400.0,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l3-122-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "b5c75286de1444838720c64a5611f715e13bdea9c96f086ee4fbedab531fe18c",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L4_q00_rank0108",
+      "card": "L4",
+      "rank": 108,
+      "gate_sha256": "d6b1317908fc4cdb8d77ab3ec2763554a4046270487d533239a9140558814048",
+      "gate": {
+        "total": 5974.281941,
+        "seconds": 386.6253265150008,
+        "accounted_seconds": 386.011,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l4-108-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "593fc0184756a5dab0244f5d07a490d67db0aa350ae1e591ea413110b9067d4e",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L1_q01_rank0187",
+      "card": "L1",
+      "rank": 187,
+      "gate_sha256": "88c50ebab3b5337b4bd501365bff25ece7f2639d75376f273476f2f994f9bb07",
+      "gate": {
+        "total": 6362.021539,
+        "seconds": 349.1492350010085,
+        "accounted_seconds": 348.479,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l1-187-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "640ea8470761ac1985ed289a9bf84deb9476ceb09c804eb395869d4afaa7ea26",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L2_q01_rank0188",
+      "card": "L2",
+      "rank": 188,
+      "gate_sha256": "6a5638bcc3b304a6b0c2d78eafa5d83c4b1d7a18f8c3a08d5701b93c7a51b557",
+      "gate": {
+        "total": 6823.661561,
+        "seconds": 440.2296938030049,
+        "accounted_seconds": 439.597,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l2-188-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "7bdb1c5b34c138d386491e85c3800b08388dab586179473740fd806a08140b18",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L3_q01_rank0206",
+      "card": "L3",
+      "rank": 206,
+      "gate_sha256": "13dac0441b5a7a1bcd133ac0e0eda25141b2b696309c74324b40ee23d237ae2e",
+      "gate": {
+        "total": 6004.504542,
+        "seconds": 365.7030646009953,
+        "accounted_seconds": 365.103,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l3-206-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "9e18773e9a12835eda50f593beed697c45998eccceb6beba7c7a79a9533915d8",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    },
+    {
+      "group_id": "L4_q01_rank0188",
+      "card": "L4",
+      "rank": 188,
+      "gate_sha256": "a9646e26499dcb3edeb3202d6a93b6ab058c6be1876b81d0eb4ae8eb90b88954",
+      "gate": {
+        "total": 5974.281941,
+        "seconds": 350.40206606301945,
+        "accounted_seconds": 349.795,
+        "teacher_valid": true,
+        "protocol_passed": true,
+        "termination": "survey_complete",
+        "ready_score_match": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true,
+        "capture_count": 1,
+        "post_feedback": true,
+        "source_unchanged_after": true,
+        "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+        "terminal_cleanup": {
+          "name": "policy-iteration-bulk-l4-188-control",
+          "checked": true,
+          "owned_cleanup": false,
+          "exists_after_driver": false
+        }
+      },
+      "availability_sha256": "98ccd62c17d55551b8c3819ce8398d41e18837b8ef5bc266ac07b9a04b3f6913",
+      "available_cases": [
+        "control",
+        "field",
+        "short",
+        "long",
+        "program"
+      ],
+      "absent_cases": [],
+      "availability_frozen_before_terminal": true,
+      "all_terminal_mtimes_after_freeze": true
+    }
+  ],
+  "continuing_resource_proof": {
+    "utc": "2026-10-03T19:47:40.456284+00:00",
+    "driver_pid": 973012,
+    "completed_controls": 8,
+    "all_completed_control_gates_valid": true,
+    "controls": [
+      {
+        "card": "L1",
+        "rank": 106,
+        "total": 6362.021539,
+        "seconds": 392.83041394798784,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L1",
+        "rank": 187,
+        "total": 6362.021539,
+        "seconds": 349.1492350010085,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L2",
+        "rank": 104,
+        "total": 6823.661561,
+        "seconds": 473.9058101690025,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L2",
+        "rank": 188,
+        "total": 6823.661561,
+        "seconds": 440.2296938030049,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L3",
+        "rank": 122,
+        "total": 6004.504542,
+        "seconds": 400.5877375819837,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L3",
+        "rank": 206,
+        "total": 6004.504542,
+        "seconds": 365.7030646009953,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L4",
+        "rank": 108,
+        "total": 5974.281941,
+        "seconds": 386.6253265150008,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      },
+      {
+        "card": "L4",
+        "rank": 188,
+        "total": 5974.281941,
+        "seconds": 350.40206606301945,
+        "teacher_valid": true,
+        "ready_all_actions_match": true,
+        "ready_score_components_match": true
+      }
+    ],
+    "running": [
+      {
+        "name": "/policy-iteration-bulk-l4-339-control",
+        "participant_pid": 1298944,
+        "cpus": "2,3",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l3-403-control",
+        "participant_pid": 1297580,
+        "cpus": "10,11",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l2-344-control",
+        "participant_pid": 1296058,
+        "cpus": "4,5",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l1-419-control",
+        "participant_pid": 1295549,
+        "cpus": "0,1",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l4-221-control",
+        "participant_pid": 1295195,
+        "cpus": "6,7",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l3-265-control",
+        "participant_pid": 1291646,
+        "cpus": "12,13",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l2-232-control",
+        "participant_pid": 1200901,
+        "cpus": "14,15",
+        "status": "running"
+      },
+      {
+        "name": "/policy-iteration-bulk-l1-287-control",
+        "participant_pid": 1189949,
+        "cpus": "8,9",
+        "status": "running"
+      }
+    ],
+    "removed_during_readonly_snapshot": []
+  },
+  "bulk_source_lock_sha256": "2e539ee19e06e3a87d0ffb261b223b64be9af9faafe9cc7033effc9cb84f43e3",
+  "scope": "Frozen first eight complete controls and actual continued-running snapshot; driver/heartbeat continues; no training or source edits"
+}

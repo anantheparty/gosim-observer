@@ -1,0 +1,381 @@
+{
+  "expected_score": {
+    "A_required": -23.278167445450016,
+    "B_safe": -36.920556358780644,
+    "probe_adaptive": -17.273318846504868,
+    "probe_no_update": -23.380987038783857
+  },
+  "gain_from_feedback_branching_same_probe": 6.1076681922789895,
+  "gain_over_best_no_probe": 6.0048485989451486,
+  "scope": "official scorer synthetic mechanism only, restricted two terminal action choices, not a card score claim",
+  "worlds": {
+    "40.0": {
+      "A_required": {
+        "required_missing": 0,
+        "science": 3.4436651090999693,
+        "score": 3.4436651090999693,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "A_required"
+              },
+              "duration_seconds": 900,
+              "pointing": {
+                "alt_deg": 41.56000000000002,
+                "az_deg": 180.45999999999998
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 3.443665,
+                  "target_id": "A_required"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          }
+        ]
+      },
+      "B_safe": {
+        "required_missing": 1,
+        "science": 13.079443641219353,
+        "score": -36.920556358780644,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "B_safe"
+              },
+              "duration_seconds": 900,
+              "pointing": {
+                "alt_deg": 60.15999999999997,
+                "az_deg": 100.16000000000001
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 13.079444,
+                  "target_id": "B_safe"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          }
+        ]
+      },
+      "probe_adaptive": {
+        "required_missing": 0,
+        "science": 3.226025922432285,
+        "score": 3.226025922432285,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "10": "probe_anchor",
+                "5": "A_required"
+              },
+              "duration_seconds": 60,
+              "pointing": {
+                "alt_deg": 41.95000000000002,
+                "az_deg": 180.3
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.229639,
+                  "target_id": "A_required"
+                },
+                {
+                  "score": 0.012,
+                  "target_id": "probe_anchor"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          },
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "A_required"
+              },
+              "duration_seconds": 840,
+              "pointing": {
+                "alt_deg": 41.558614792226955,
+                "az_deg": 180.55649732713823
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 3.214026,
+                  "target_id": "A_required"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:01:00+00:00"
+          }
+        ]
+      },
+      "probe_no_update": {
+        "required_missing": 0,
+        "science": 3.226025922432285,
+        "score": 3.226025922432285,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "10": "probe_anchor",
+                "5": "A_required"
+              },
+              "duration_seconds": 60,
+              "pointing": {
+                "alt_deg": 41.95000000000002,
+                "az_deg": 180.3
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.229639,
+                  "target_id": "A_required"
+                },
+                {
+                  "score": 0.012,
+                  "target_id": "probe_anchor"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          },
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "A_required"
+              },
+              "duration_seconds": 840,
+              "pointing": {
+                "alt_deg": 41.558614792226955,
+                "az_deg": 180.55649732713823
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 3.214026,
+                  "target_id": "A_required"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:01:00+00:00"
+          }
+        ]
+      }
+    },
+    "42.2": {
+      "A_required": {
+        "required_missing": 1,
+        "science": 0.0,
+        "score": -50.0,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "A_required"
+              },
+              "duration_seconds": 900,
+              "pointing": {
+                "alt_deg": 41.56000000000002,
+                "az_deg": 180.45999999999998
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.0,
+                  "target_id": "A_required"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          }
+        ]
+      },
+      "B_safe": {
+        "required_missing": 1,
+        "science": 13.079443641219353,
+        "score": -36.920556358780644,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "B_safe"
+              },
+              "duration_seconds": 900,
+              "pointing": {
+                "alt_deg": 60.15999999999997,
+                "az_deg": 100.16000000000001
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 13.079444,
+                  "target_id": "B_safe"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          }
+        ]
+      },
+      "probe_adaptive": {
+        "required_missing": 1,
+        "science": 12.227336384557978,
+        "score": -37.77266361544202,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "10": "probe_anchor",
+                "5": "A_required"
+              },
+              "duration_seconds": 60,
+              "pointing": {
+                "alt_deg": 41.95000000000002,
+                "az_deg": 180.3
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.0,
+                  "target_id": "A_required"
+                },
+                {
+                  "score": 0.012,
+                  "target_id": "probe_anchor"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          },
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "B_safe"
+              },
+              "duration_seconds": 840,
+              "pointing": {
+                "alt_deg": 60.38445273707948,
+                "az_deg": 100.12431762225192
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 12.215336,
+                  "target_id": "B_safe"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:01:00+00:00"
+          }
+        ]
+      },
+      "probe_no_update": {
+        "required_missing": 1,
+        "science": 0.012,
+        "score": -49.988,
+        "tape": [
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "10": "probe_anchor",
+                "5": "A_required"
+              },
+              "duration_seconds": 60,
+              "pointing": {
+                "alt_deg": 41.95000000000002,
+                "az_deg": 180.3
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.0,
+                  "target_id": "A_required"
+                },
+                {
+                  "score": 0.012,
+                  "target_id": "probe_anchor"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:00:00+00:00"
+          },
+          {
+            "action": {
+              "action": "observe",
+              "assignments": {
+                "5": "A_required"
+              },
+              "duration_seconds": 840,
+              "pointing": {
+                "alt_deg": 41.558614792226955,
+                "az_deg": 180.55649732713823
+              },
+              "program": "DARK"
+            },
+            "last_result": {
+              "action": "observe",
+              "hits": [
+                {
+                  "score": 0.0,
+                  "target_id": "A_required"
+                }
+              ]
+            },
+            "start_utc": "2026-11-02T02:01:00+00:00"
+          }
+        ]
+      }
+    }
+  }
+}
