@@ -1,0 +1,49 @@
+{
+  "schema": "global-pricing-hardware-evidence-manifest-v1",
+  "scope": "owned isolated benchmark, public/synthetic only",
+  "hardware": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "source_matches_current_repository": true,
+  "benchmark_source_sha256": "2045a315161883d93a7a396c6d0b008db3e76afcda92396c2f2e880c7b3ce919",
+  "files": [
+    {
+      "path": "formal_v4/research/global_pricing_hardware_benchmark.py",
+      "bytes": 13350,
+      "sha256": "2045a315161883d93a7a396c6d0b008db3e76afcda92396c2f2e880c7b3ce919"
+    },
+    {
+      "path": "formal_v4/research/interval_column_pricing.py",
+      "bytes": 7245,
+      "sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567"
+    },
+    {
+      "path": "formal_v4/results/global_pricing_hardware_20261003/README.md",
+      "bytes": 4406,
+      "sha256": "5691bcd57ab65f3a8641932c503e6aa92e73ebaabee443d4569fafbee3929a7c"
+    },
+    {
+      "path": "formal_v4/results/global_pricing_hardware_20261003/benchmark_result.json",
+      "bytes": 40218,
+      "sha256": "56096f965d9cf6f501d1239fe9d6caf815fb990b5183bfc20ff99cfd4ff2aec6"
+    },
+    {
+      "path": "formal_v4/results/global_pricing_hardware_20261003/prepared/workload.npz",
+      "bytes": 5624780,
+      "sha256": "406258a21b9f0a2b4f4820a9ddf4bd17e091d3261b6cacbf025235ed37188892"
+    },
+    {
+      "path": "formal_v4/results/global_pricing_hardware_20261003/prepared/workload_metadata.json",
+      "bytes": 1737,
+      "sha256": "16bc36a4959ca4562392dc802b492cd387b2d01c53dd2ddcc3440f601c92b13e"
+    }
+  ],
+  "public_oracle_current_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "contracts.py": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+    "observing_calendar.py": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+    "project_paths.py": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857"
+  },
+  "no_power_limit_changes": true,
+  "no_service_or_API_choose": true
+}

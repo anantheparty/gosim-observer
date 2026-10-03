@@ -1,0 +1,37 @@
+{
+  "schema": "public-synthetic-global-pricing-workload-v1",
+  "card": "alpha",
+  "targets": 10000,
+  "start_utc": "2026-10-05T01:00:00Z",
+  "site": {
+    "latitude_deg": -24.6157,
+    "longitude_deg": -70.3976
+  },
+  "minimum_altitude_deg": 30.0,
+  "D": 20,
+  "P": 3,
+  "centers": 32768,
+  "nfib": 16,
+  "glass": 0.6324555320336759,
+  "pitch": 0.6324555320336759,
+  "synthetic_values": "iid synthetic coverage \u00d7 nonnegative science/quota/request dual weights; not science score or weather truth",
+  "source_public_sha256": {
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f"
+  },
+  "pricing_source_sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567",
+  "official_oracle_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "contracts.py": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+    "observing_calendar.py": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+    "project_paths.py": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857"
+  },
+  "workload_npz_sha256": "406258a21b9f0a2b4f4820a9ddf4bd17e091d3261b6cacbf025235ed37188892",
+  "seed": 2026100302,
+  "offset": "zero instrument offset",
+  "finite_grid_only": true,
+  "hidden_products_read": false
+}

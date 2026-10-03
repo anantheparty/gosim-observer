@@ -1,0 +1,1381 @@
+{
+  "schema": "owned-public-synthetic-global-pricing-hardware-v1",
+  "metadata": {
+    "schema": "public-synthetic-global-pricing-workload-v1",
+    "card": "alpha",
+    "targets": 10000,
+    "start_utc": "2026-10-05T01:00:00Z",
+    "site": {
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976
+    },
+    "minimum_altitude_deg": 30.0,
+    "D": 20,
+    "P": 3,
+    "centers": 32768,
+    "nfib": 16,
+    "glass": 0.6324555320336759,
+    "pitch": 0.6324555320336759,
+    "synthetic_values": "iid synthetic coverage \u00d7 nonnegative science/quota/request dual weights; not science score or weather truth",
+    "source_public_sha256": {
+      "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+      "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+      "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f"
+    },
+    "pricing_source_sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567",
+    "official_oracle_sha256": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+      "tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+      "contracts.py": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+      "observing_calendar.py": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+      "project_paths.py": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857"
+    },
+    "workload_npz_sha256": "406258a21b9f0a2b4f4820a9ddf4bd17e091d3261b6cacbf025235ed37188892",
+    "seed": 2026100302,
+    "offset": "zero instrument offset",
+    "finite_grid_only": true,
+    "hidden_products_read": false
+  },
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "import_seconds": 1.245562499971129,
+  "max_cell_bytes": 268435456,
+  "scope": "same finite batches, synthetic dual values; no service, API choose, hidden products, power-limit changes",
+  "power_before": {
+    "fields": [
+      "name",
+      "power.draw",
+      "power.limit",
+      "memory.used",
+      "memory.total",
+      "utilization.gpu",
+      "temperature.gpu"
+    ],
+    "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11005, 97887, 4, 41",
+    "returncode": 0
+  },
+  "batches": [
+    {
+      "centers": 128,
+      "finite_duration_program_columns": 7680,
+      "target_pointing_pairs": 1280000,
+      "target_dual_checks_upper": 76800000,
+      "cell_workspace_bytes": 983040,
+      "totals_bytes": 61440,
+      "first_call_end_to_end_seconds": 0.6969409000012092,
+      "cold_JIT_context_transfer_compute_return_seconds": 0.6969409000012092,
+      "warm_end_to_end_seconds": [
+        0.027935200021602213,
+        0.02805559994885698,
+        0.026776299986522645
+      ],
+      "warm_median_seconds": 0.027935200021602213,
+      "cpu": {
+        "centers": 128,
+        "elapsed_seconds": 0.2053550000418909,
+        "totals_sha256": "8f924d3797b58684e89b1e55e1f71a28e8c0a33f5b3380aedbb0f52a6efbfdfe"
+      },
+      "full_CPU_CUDA_max_abs_error": 1.1368683772161603e-13,
+      "full_CPU_CUDA_verified": true,
+      "warm_speedup_vs_CPU": 7.351119730057076,
+      "official_recover_gate": {
+        "sampled_columns": 3,
+        "official_assignments_checked": 43,
+        "max_recovered_total_error": 5.684341886080802e-14,
+        "oracle": "official FiberGrid tangent_offsets/classify_offset + min_altitude_during"
+      }
+    },
+    {
+      "centers": 512,
+      "finite_duration_program_columns": 30720,
+      "target_pointing_pairs": 5120000,
+      "target_dual_checks_upper": 307200000,
+      "cell_workspace_bytes": 3932160,
+      "totals_bytes": 245760,
+      "first_call_end_to_end_seconds": 0.032489400007762015,
+      "warm_end_to_end_seconds": [
+        0.03875549999065697,
+        0.03127660002792254,
+        0.03213870001491159
+      ],
+      "warm_median_seconds": 0.03213870001491159,
+      "cpu": {
+        "centers": 512,
+        "elapsed_seconds": 0.7737041999935172,
+        "totals_sha256": "bc184db9bf6ea68f349ef8cbe31b2a9302310f0f0879d5592b3d4638d109b157"
+      },
+      "full_CPU_CUDA_max_abs_error": 1.1368683772161603e-13,
+      "full_CPU_CUDA_verified": true,
+      "warm_speedup_vs_CPU": 24.073910881103995,
+      "official_recover_gate": {
+        "sampled_columns": 3,
+        "official_assignments_checked": 39,
+        "max_recovered_total_error": 5.684341886080802e-14,
+        "oracle": "official FiberGrid tangent_offsets/classify_offset + min_altitude_during"
+      }
+    },
+    {
+      "centers": 4096,
+      "finite_duration_program_columns": 245760,
+      "target_pointing_pairs": 40960000,
+      "target_dual_checks_upper": 2457600000,
+      "cell_workspace_bytes": 31457280,
+      "totals_bytes": 1966080,
+      "first_call_end_to_end_seconds": 0.05411690002074465,
+      "warm_end_to_end_seconds": [
+        0.046672900032717735,
+        0.047813499986659735,
+        0.04960059997392818
+      ],
+      "warm_median_seconds": 0.047813499986659735,
+      "cpu": {
+        "centers": 4096,
+        "elapsed_seconds": 7.236632100015413,
+        "totals_sha256": "6e4fb0c5716b0e8bb6c48247954fd4a561344f54621929edbf5cbce76fb79ad7"
+      },
+      "full_CPU_CUDA_max_abs_error": 1.7053025658242404e-13,
+      "full_CPU_CUDA_verified": true,
+      "warm_speedup_vs_CPU": 151.35123138934566,
+      "official_recover_gate": {
+        "sampled_columns": 3,
+        "official_assignments_checked": 39,
+        "max_recovered_total_error": 5.684341886080802e-14,
+        "oracle": "official FiberGrid tangent_offsets/classify_offset + min_altitude_during"
+      }
+    }
+  ],
+  "GPU_only_extension": {
+    "centers": 32768,
+    "end_to_end_seconds": 0.1553688999847509,
+    "within_10s": true,
+    "full_CPU_comparison": false,
+    "finite_columns": 1966080,
+    "workspace_bytes": 251658240,
+    "totals_bytes": 15728640,
+    "max_total": 415.8004331880419
+  },
+  "power_samples": [
+    {
+      "elapsed_seconds": 1.320467200013809,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11005, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 1.5075195000390522,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11490, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 1.7095429000328295,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.99, 600.00, 11490, 97887, 6, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 1.8803336000419222,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.99, 600.00, 11490, 97887, 6, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.0516214000526816,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.43, 600.00, 11484, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.222319399996195,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.43, 600.00, 11486, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.394623900006991,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.43, 600.00, 11486, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.5660769999958575,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.17, 600.00, 11509, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.736991500016302,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.17, 600.00, 11509, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.909433100023307,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.17, 600.00, 11508, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.079454400052782,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.21, 600.00, 11508, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.249913900042884,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.21, 600.00, 11508, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.4203522000461817,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.21, 600.00, 11509, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.591150899999775,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.29, 600.00, 11508, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.7626722000422888,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.29, 600.00, 11508, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 3.9339576000347733,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.29, 600.00, 11508, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.104893900046591,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.66, 600.00, 11518, 97887, 2, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.275932600023225,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.66, 600.00, 11510, 97887, 2, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.446346500015352,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.66, 600.00, 11510, 97887, 2, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.616761700017378,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.20, 600.00, 11510, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.786932000017259,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.20, 600.00, 11511, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.957222199998796,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.20, 600.00, 11510, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.127479000017047,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.12, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.2982887999969535,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.12, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.468959700025152,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.12, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.640407100028824,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.86, 600.00, 11510, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.811225300014485,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.86, 600.00, 11510, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 5.981827100040391,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.86, 600.00, 11510, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.1526968000107445,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.49, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.324028600007296,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.49, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.494965300022159,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.49, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.665642600040883,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.82, 600.00, 11510, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.837000900006387,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.82, 600.00, 11542, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.007880500052124,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.82, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.1792006000177935,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.89, 600.00, 11544, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.349587700038683,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.89, 600.00, 11544, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.520364199997857,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.89, 600.00, 11544, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.692279200011399,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.57, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.86254810000537,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.57, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.03408870002022,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.31, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.205055000027642,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.31, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.375777000037488,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.31, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.546909800032154,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.46, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.718244899995625,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.46, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 8.889498800039291,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.46, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.060650400002487,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.88, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.231225700001232,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.88, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.402799400035292,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.88, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.572689799999353,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.77, 600.00, 11544, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.743932500015944,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.77, 600.00, 11545, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.913962899998296,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.77, 600.00, 11544, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.084855900029652,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.62, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.254861800000072,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.62, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.42547590000322,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.62, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.596952399995644,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.85, 600.00, 11544, 97887, 6, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.76798730000155,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.85, 600.00, 11544, 97887, 6, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 10.9384974000277,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.85, 600.00, 11544, 97887, 6, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.11122250003973,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.50, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.282391900022049,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.50, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.4527439000085,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 107.50, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.624088800046593,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.85, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.794736800016835,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.85, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 11.96582160005346,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 105.85, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.136952400032897,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.05, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.307321800035425,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.05, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.477413400018122,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.05, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.648128300032113,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.53, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.819502700003795,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.53, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 12.99064760003239,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.53, 600.00, 11543, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 13.16130980005255,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.40, 600.00, 11543, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 13.332519899995532,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.40, 600.00, 11543, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 13.503859600052238,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.40, 600.00, 11543, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 13.674753400031477,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.36, 600.00, 11543, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 13.844800000020768,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.36, 600.00, 11543, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.01564120000694,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.36, 600.00, 11543, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.187054700043518,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.87, 600.00, 11539, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.357900200004224,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.87, 600.00, 11539, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.528304200037383,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.87, 600.00, 11539, 97887, 5, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.699431300046854,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.51, 600.00, 11539, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 14.870190600049682,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 103.51, 600.00, 11544, 97887, 3, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.04107150004711,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.36, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.212259100051597,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.36, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.383603900030721,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 104.36, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.554920400027186,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.72599830001127,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11544, 97887, 4, 41",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 15.897454200021457,
+      "fields": [
+        "name",
+        "power.draw",
+        "power.limit",
+        "memory.used",
+        "memory.total",
+        "utilization.gpu",
+        "temperature.gpu"
+      ],
+      "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11794, 97887, 4, 41",
+      "returncode": 0
+    }
+  ],
+  "power_after": {
+    "fields": [
+      "name",
+      "power.draw",
+      "power.limit",
+      "memory.used",
+      "memory.total",
+      "utilization.gpu",
+      "temperature.gpu"
+    ],
+    "stdout": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 106.79, 600.00, 11520, 97887, 4, 41",
+    "returncode": 0
+  },
+  "aggregate_cpu_subprocess_wall_seconds": 9.97816089988919,
+  "device": "<CUDA device 0 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition'>",
+  "total_benchmark_seconds": 16.065603800001554,
+  "hardware_power_limit_not_modified": true
+}
