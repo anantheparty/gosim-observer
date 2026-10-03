@@ -92,13 +92,16 @@ are archived under `results/cloud_verified_portfolio_{card}_20261003/`; all
 published output hashes and nested workflow reports match. These measured scores differ from the historical componentwise mean
 6836.95278225; that arithmetic value was never a new-package measurement.
 
-The strict Request cache package passed its free public interface test with
-432.668244 points in 59.384 accounted seconds and zero remote calls. Its full
-four-card evaluation started at 20:10 JST. Delta completed at 6423.086757;
-actions, decisions, messages, observations and score-report bytes match the
-original Request delta run. The other cards are pending. The platform currently
-shows a practice daily limit of eight; six remain after this start. No remarks
-or design materials were supplied.
+The Request cache package completed a scored four-card evaluation started at
+20:10 JST, with measured mean **6735.09250250** (+20.10858275 over the Portfolio).
+Alpha/beta reached the 900-second deadline; gamma/delta completed. Alpha and beta
+retain the complete original Request action prefixes and continue further;
+delta's actions/decisions/messages/observations/score_report are byte-identical.
+Gamma differs from action index 101; its cause has not been established. All
+four published output-hash checks passed. This package uses zero remote calls.
+The platform shows a practice daily limit of eight; six evaluations remain.
+See `results/cloud_request_cache_batch_20261003/`. No remarks or design materials
+were supplied.
 
 The latest mathematical records cover a 1376-column incumbent-based alpha
 master, full optimal-face dual stabilization, and actual GPU column pricing.

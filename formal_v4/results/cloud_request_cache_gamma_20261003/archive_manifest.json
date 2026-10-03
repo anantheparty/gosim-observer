@@ -1,0 +1,69 @@
+{
+  "schema": "official-output-download-v1",
+  "download_filename": "gosim_request_cache_gamma_result.zip",
+  "download_sha256": "83667c8a6f88e4fa32f29dd2a48a059f50f3b61e2c55ec4bc3271cafdc02b846",
+  "file_sha256": {
+    "actions.jsonl": "b5496697f7e424db1fb4c0b2e82d3c82eb4aed9433bccccbdd4c0ed3e21d9640",
+    "agent.log": "0b91d0b417ab94444a3ff8db0f2c7e98e67f360c9ad7c4df2007384622ea7cf1",
+    "decisions.csv": "bf47a67a330a7097d94df87029409bc3b715294e6a7344e49a312279a3f05d71",
+    "messages.jsonl": "1c149405beb5df36d87b063fd6f5421af13a625231dc0c1cb35112ff63b53614",
+    "observations.csv": "0dc6b071fc30b7a1f1bb3cb9cd9a2915f17a8321fe87fdb2d0e883489ace1c98",
+    "score_report.json": "05126b289174b9f34ed84e1aed3197ce02ce01ffb58000422c86a97044d857d3",
+    "workflow_result.json": "36632f0ac77df433ee9da60492d393092a16b7c46affa247834477c9ba719794"
+  },
+  "checks": {
+    "decisions": true,
+    "messages": true,
+    "observations": true,
+    "workflow_report_equal": true
+  },
+  "scenario": "v4-practice-gamma",
+  "total": 6750.550861,
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 100.0,
+    "required_penalty": -200.0,
+    "sum_best_scores": 6650.828563,
+    "uniformity_penalty": -0.277702
+  },
+  "counts": {
+    "decisions": 1783,
+    "invalidated_observations": 292,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 15392,
+    "observe_actions": 1107,
+    "required_missing": 4,
+    "targets_observed": 9421
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "accounted_wallclock_seconds": 883.744,
+  "comparison": {
+    "prior_directory": "cloud_request_gpu_gamma_20261003",
+    "prior_total": 6668.777631,
+    "delta_total": 81.77322999999978,
+    "components_delta": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": 0.0,
+      "sum_best_scores": 81.43492500000048,
+      "uniformity_penalty": 0.33830499999999997
+    },
+    "same_scenario_hash": true,
+    "semantic_first_action_difference_zero_based": 101,
+    "prior_action_lines": 1199,
+    "current_action_lines": 1217,
+    "same_output_bytes": {
+      "actions.jsonl": false,
+      "agent.log": false,
+      "decisions.csv": false,
+      "messages.jsonl": false,
+      "observations.csv": false,
+      "score_report.json": false,
+      "workflow_result.json": false
+    }
+  }
+}

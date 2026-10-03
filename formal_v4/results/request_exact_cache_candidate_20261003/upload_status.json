@@ -3,12 +3,12 @@
   "project_name": "Observer Request Cache",
   "local_zip_sha256": "e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a",
   "local_official_source_fingerprint": "7bdc340f6247fc0ce961d68c395eded9d88908db34713493120c231d3ef4b81a",
-  "last_observed_state": "running_partial_delta_scored",
+  "last_observed_state": "scored",
   "upload_complete_confirmed": true,
   "platform_interface_check_confirmed": true,
   "full_evaluation_started": true,
-  "new_score_measured": false,
-  "continuation_check_at_local": "2026-10-03T20:28:00+09:00",
+  "new_score_measured": true,
+  "continuation_check_at_local": "2026-10-03T20:39:00+09:00",
   "upload_attempted_before_local": "2026-10-03T20:02:49+09:00",
   "uploaded_at_local": "2026-10-03T19:53:00+09:00",
   "platform_source_fingerprint_confirmed": true,
@@ -18,9 +18,27 @@
   "browser_control_recovered": true,
   "public_test_archive_manifest": "../cloud_request_cache_public_test_20261003/archive_manifest.json",
   "scored_cards": {
+    "alpha": {
+      "total": 7248.868252,
+      "termination": "global_wallclock_expired",
+      "archive_manifest": "../cloud_request_cache_alpha_20261003/archive_manifest.json"
+    },
+    "beta": {
+      "total": 6517.86414,
+      "termination": "global_wallclock_expired",
+      "archive_manifest": "../cloud_request_cache_beta_20261003/archive_manifest.json"
+    },
+    "gamma": {
+      "total": 6750.550861,
+      "termination": "survey_complete",
+      "archive_manifest": "../cloud_request_cache_gamma_20261003/archive_manifest.json"
+    },
     "delta": {
       "total": 6423.086757,
+      "termination": "survey_complete",
       "archive_manifest": "../cloud_request_cache_delta_20261003/archive_manifest.json"
     }
-  }
+  },
+  "mean_exact": "6735.0925025",
+  "batch_summary": "../cloud_request_cache_batch_20261003/summary.json"
 }

@@ -1,0 +1,430 @@
+{
+  "schema": "request-exact-cache-official-full-batch-v1",
+  "project_name": "Observer Request Cache",
+  "started_at_jst": "2026-10-03T20:10:00+09:00",
+  "downloaded_at_jst": "2026-10-03T20:39:00+09:00",
+  "official_source_fingerprint": "7bdc340f6247fc0ce961d68c395eded9d88908db34713493120c231d3ef4b81a",
+  "cards": {
+    "alpha": {
+      "total": 7248.868252,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -200.0,
+        "sum_best_scores": 7149.11784,
+        "uniformity_penalty": -0.249588
+      },
+      "counts": {
+        "decisions": 1848,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 15927,
+        "observe_actions": 1152,
+        "required_missing": 4,
+        "targets_observed": 9538
+      },
+      "termination": {
+        "detail": "",
+        "reason": "global_wallclock_expired"
+      },
+      "accounted_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": true,
+      "all_hash_checks": true,
+      "remote_initialization": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "final_policy_summary": null,
+      "archive_manifest": "../cloud_request_cache_alpha_20261003/archive_manifest.json",
+      "prior_request_comparison": {
+        "prior_directory": "cloud_request_gpu_alpha_20261003",
+        "prior_total": 5891.78913,
+        "delta_total": 1357.079122,
+        "components_delta": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": 50.0,
+          "sum_best_scores": 1206.8487219999997,
+          "uniformity_penalty": 0.23040000000000002
+        },
+        "same_scenario_hash": true,
+        "semantic_first_action_difference_zero_based": 1056,
+        "prior_action_lines": 1056,
+        "current_action_lines": 1288,
+        "same_output_bytes": {
+          "actions.jsonl": false,
+          "agent.log": false,
+          "decisions.csv": false,
+          "messages.jsonl": false,
+          "observations.csv": false,
+          "score_report.json": false,
+          "workflow_result.json": false
+        }
+      }
+    },
+    "beta": {
+      "total": 6517.86414,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -550.0,
+        "sum_best_scores": 6768.101649,
+        "uniformity_penalty": -0.237508
+      },
+      "counts": {
+        "decisions": 1829,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 15579,
+        "observe_actions": 1120,
+        "required_missing": 11,
+        "targets_observed": 9187
+      },
+      "termination": {
+        "detail": "",
+        "reason": "global_wallclock_expired"
+      },
+      "accounted_wallclock_seconds": 899.991,
+      "ignored_in_flight_response": true,
+      "all_hash_checks": true,
+      "remote_initialization": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "final_policy_summary": null,
+      "archive_manifest": "../cloud_request_cache_beta_20261003/archive_manifest.json",
+      "prior_request_comparison": {
+        "prior_directory": "cloud_request_gpu_beta_20261003",
+        "prior_total": 6138.150947,
+        "delta_total": 379.7131929999996,
+        "components_delta": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 100.0,
+          "required_penalty": 0.0,
+          "sum_best_scores": 179.6239370000003,
+          "uniformity_penalty": 0.08925700000000003
+        },
+        "same_scenario_hash": true,
+        "semantic_first_action_difference_zero_based": 1209,
+        "prior_action_lines": 1209,
+        "current_action_lines": 1254,
+        "same_output_bytes": {
+          "actions.jsonl": false,
+          "agent.log": false,
+          "decisions.csv": false,
+          "messages.jsonl": false,
+          "observations.csv": false,
+          "score_report.json": false,
+          "workflow_result.json": false
+        }
+      }
+    },
+    "gamma": {
+      "total": 6750.550861,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -200.0,
+        "sum_best_scores": 6650.828563,
+        "uniformity_penalty": -0.277702
+      },
+      "counts": {
+        "decisions": 1783,
+        "invalidated_observations": 292,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 15392,
+        "observe_actions": 1107,
+        "required_missing": 4,
+        "targets_observed": 9421
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 883.744,
+      "ignored_in_flight_response": false,
+      "all_hash_checks": true,
+      "remote_initialization": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "final_policy_summary": {
+        "decisions": 1217,
+        "exposures": 1106,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6650.104647,
+        "required_missing_bound": 4,
+        "planning_seconds": 827.921,
+        "C": 0.6283,
+        "E": 0.8956,
+        "remote_check": {
+          "remote_check": "disabled",
+          "transport": "offline-request-exact-cache",
+          "seconds": 0.0
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1111,
+          "phase_calls": 1111,
+          "phase_candidates": 14279597,
+          "phase_exact_evaluations": 17776,
+          "phase_emergency_count": 0,
+          "phase_improvements": 969
+        },
+        "terrain": {
+          "schema": "terrain-positive-version-space-v1",
+          "directions": [
+            "W",
+            "N"
+          ],
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "remaining_boxes": {
+            "W": 516,
+            "N": 540
+          },
+          "positive_count": 15111,
+          "zero_feedback_ignored": 273,
+          "conditional_domain_conflicts": [],
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+        },
+        "terrain_feedback_exposures": 1106,
+        "request_dp": {
+          "builds": 12,
+          "build_seconds": 225.6387184200001,
+          "dp_solves": 74,
+          "dp_seconds": 1.3733808400001237,
+          "request_observes": 1,
+          "boundary_waits": 1,
+          "clipped_baselines": 3,
+          "rejected_by_cost": 0,
+          "infeasible": 0,
+          "forecast_failures": 1,
+          "cached_requests": 2,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret"
+        },
+        "distributed_request": {
+          "remote_baselines": 0,
+          "cpu_baselines": 1111,
+          "forced_cpu_crops": 3,
+          "transport_failures": 0,
+          "cpu_baseline_seconds": 600.8604207209981,
+          "remote_baseline_seconds": 0.0,
+          "budget": {
+            "accepted": 0,
+            "skipped": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "failed_initializations": 0
+          },
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+        },
+        "request_exact_cache": {
+          "midpoint_hits": 58509,
+          "midpoint_misses": 20574,
+          "midpoint_peak_bytes": 6177600
+        },
+        "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+      },
+      "archive_manifest": "../cloud_request_cache_gamma_20261003/archive_manifest.json",
+      "prior_request_comparison": {
+        "prior_directory": "cloud_request_gpu_gamma_20261003",
+        "prior_total": 6668.777631,
+        "delta_total": 81.77322999999978,
+        "components_delta": {
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0,
+          "required_penalty": 0.0,
+          "sum_best_scores": 81.43492500000048,
+          "uniformity_penalty": 0.33830499999999997
+        },
+        "same_scenario_hash": true,
+        "semantic_first_action_difference_zero_based": 101,
+        "prior_action_lines": 1199,
+        "current_action_lines": 1217,
+        "same_output_bytes": {
+          "actions.jsonl": false,
+          "agent.log": false,
+          "decisions.csv": false,
+          "messages.jsonl": false,
+          "observations.csv": false,
+          "score_report.json": false,
+          "workflow_result.json": false
+        }
+      }
+    },
+    "delta": {
+      "total": 6423.086757,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -300.0,
+        "sum_best_scores": 6523.825782,
+        "uniformity_penalty": -0.739024
+      },
+      "counts": {
+        "decisions": 1856,
+        "invalidated_observations": 280,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15156,
+        "observe_actions": 1096,
+        "required_missing": 6,
+        "targets_observed": 8917
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 587.273,
+      "ignored_in_flight_response": false,
+      "all_hash_checks": true,
+      "remote_initialization": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "final_policy_summary": {
+        "decisions": 1275,
+        "exposures": 1095,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6520.713018,
+        "required_missing_bound": 6,
+        "planning_seconds": 548.894,
+        "C": 1.2695,
+        "E": 0.6788,
+        "remote_check": {
+          "remote_check": "disabled",
+          "transport": "offline-request-exact-cache",
+          "seconds": 0.0
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1101,
+          "phase_calls": 1101,
+          "phase_candidates": 14154479,
+          "phase_exact_evaluations": 17616,
+          "phase_emergency_count": 0,
+          "phase_improvements": 949
+        },
+        "terrain": {
+          "schema": "terrain-positive-version-space-v1",
+          "directions": [
+            "NW",
+            "NE",
+            "E"
+          ],
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "remaining_boxes": {
+            "NW": 503,
+            "NE": 518,
+            "E": 372
+          },
+          "positive_count": 14370,
+          "zero_feedback_ignored": 772,
+          "conditional_domain_conflicts": [],
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+        },
+        "terrain_feedback_exposures": 1095,
+        "request_dp": {
+          "builds": 8,
+          "build_seconds": 89.3417918959999,
+          "dp_solves": 116,
+          "dp_seconds": 0.9845969059992967,
+          "request_observes": 2,
+          "boundary_waits": 1,
+          "clipped_baselines": 4,
+          "rejected_by_cost": 0,
+          "infeasible": 0,
+          "forecast_failures": 0,
+          "cached_requests": 2,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret"
+        },
+        "distributed_request": {
+          "remote_baselines": 0,
+          "cpu_baselines": 1101,
+          "forced_cpu_crops": 4,
+          "transport_failures": 0,
+          "cpu_baseline_seconds": 458.5272247960014,
+          "remote_baseline_seconds": 0.0,
+          "budget": {
+            "accepted": 0,
+            "skipped": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "failed_initializations": 0
+          },
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+        },
+        "request_exact_cache": {
+          "midpoint_hits": 42185,
+          "midpoint_misses": 14974,
+          "midpoint_peak_bytes": 6316800
+        },
+        "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+      },
+      "archive_manifest": "../cloud_request_cache_delta_20261003/archive_manifest.json",
+      "prior_request_comparison": {
+        "prior_directory": "cloud_request_gpu_delta_20261003",
+        "prior_total": 6423.086757,
+        "delta_total": 0.0,
+        "components_delta": {
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0,
+          "required_penalty": 0.0,
+          "sum_best_scores": 0.0,
+          "uniformity_penalty": 0.0
+        },
+        "same_scenario_hash": true,
+        "semantic_first_action_difference_zero_based": null,
+        "prior_action_lines": 1275,
+        "current_action_lines": 1275,
+        "same_output_bytes": {
+          "actions.jsonl": true,
+          "agent.log": false,
+          "decisions.csv": true,
+          "messages.jsonl": true,
+          "observations.csv": true,
+          "score_report.json": true,
+          "workflow_result.json": false
+        }
+      }
+    }
+  },
+  "mean_exact": "6735.0925025",
+  "previous_best_full_mean": "6714.98391975",
+  "gain_over_previous_best_full_mean": "20.10858275",
+  "gain_over_original_request_full_mean": "454.64138625",
+  "all_output_hash_checks": true,
+  "all_cards_completed": false,
+  "daily_remaining": 6,
+  "remarks_added": false,
+  "difference_attribution": "Alpha/beta execute exactly the original action prefix and proceed further before the deadline. Delta outputs match byte-for-byte. Gamma first action divergence is index101; cause not established. Cache, disabled health, and machine timing are not independently controlled."
+}

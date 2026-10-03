@@ -31,3 +31,7 @@ At 20:28 JST, delta completed with **6423.086757** and 587.273 accounted seconds
 All action, decision, message, observation and score-report bytes match the
 original Request delta. The three other cards are still running; no full-batch
 mean is available yet. See `../cloud_request_cache_delta_20261003/`.
+
+All four scores are now downloaded and verified. The measured mean is
+**6735.09250250**. Alpha/beta expired at the global deadline; gamma/delta
+completed. Full evidence: `../cloud_request_cache_batch_20261003/`.

@@ -1,0 +1,69 @@
+{
+  "schema": "official-output-download-v1",
+  "download_filename": "gosim_request_cache_alpha_result.zip",
+  "download_sha256": "ef28393922fda551b391a87ef4a1bec3294b3f1ad33762d65af735a942a317f6",
+  "file_sha256": {
+    "actions.jsonl": "3f0f1d27fd134afc282d344c5cbf1a929350f0fb483186f34f80e81717f513a5",
+    "agent.log": "5bb02dfd0ccbb62a80e06e1525736d42e7fe7f181b2e96f8c026fd9d80b96b5d",
+    "decisions.csv": "8fbf6be0b07e425f1592a8ebf824b19f1b6cecf1ef8be021857aefde4885c6a8",
+    "messages.jsonl": "4918cc3580888f9c01cc36ec74bebc7fe7599c43180c87ed0e98431071f49902",
+    "observations.csv": "a282ae158e21541dcbdb9d3490541a0790d280483270292f5341d2dd236137e3",
+    "score_report.json": "ece5965f8d2ed6b7896b9cfd5c8aa700e4ed25ce9e48d081f6174ec472aa0d40",
+    "workflow_result.json": "b0211b0fbda93d6457fcf23714453ef7e9269939eae3d1c3a0807e29fdc97d69"
+  },
+  "checks": {
+    "decisions": true,
+    "messages": true,
+    "observations": true,
+    "workflow_report_equal": true
+  },
+  "scenario": "v4-practice-alpha",
+  "total": 7248.868252,
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 100.0,
+    "required_penalty": -200.0,
+    "sum_best_scores": 7149.11784,
+    "uniformity_penalty": -0.249588
+  },
+  "counts": {
+    "decisions": 1848,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 15927,
+    "observe_actions": 1152,
+    "required_missing": 4,
+    "targets_observed": 9538
+  },
+  "termination": {
+    "detail": "",
+    "reason": "global_wallclock_expired"
+  },
+  "accounted_wallclock_seconds": 900.0,
+  "comparison": {
+    "prior_directory": "cloud_request_gpu_alpha_20261003",
+    "prior_total": 5891.78913,
+    "delta_total": 1357.079122,
+    "components_delta": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 0.0,
+      "required_penalty": 50.0,
+      "sum_best_scores": 1206.8487219999997,
+      "uniformity_penalty": 0.23040000000000002
+    },
+    "same_scenario_hash": true,
+    "semantic_first_action_difference_zero_based": 1056,
+    "prior_action_lines": 1056,
+    "current_action_lines": 1288,
+    "same_output_bytes": {
+      "actions.jsonl": false,
+      "agent.log": false,
+      "decisions.csv": false,
+      "messages.jsonl": false,
+      "observations.csv": false,
+      "score_report.json": false,
+      "workflow_result.json": false
+    }
+  }
+}
