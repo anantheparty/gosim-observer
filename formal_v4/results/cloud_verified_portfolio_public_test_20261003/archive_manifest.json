@@ -1,0 +1,103 @@
+{
+  "schema": "verified-portfolio-public-test-archive-v1",
+  "source_zip": "/Users/kamico/Downloads/gosim_verified_portfolio_public_test.zip",
+  "source_zip_sha256": "d9feb5c0563f018d2d2e999f5029e5cd81f1ba1f688cdba7d027d1f0042a5713",
+  "files_sha256": {
+    "actions.jsonl": "a514e7c92434cdcd493efc012be9eb4d96ee0d9cd781785cd733ab8c5abe3216",
+    "agent.log": "08fcbe2378f4dde390bed868ee11219f2d8da4c5cfa71149eb47d67326dd30be",
+    "decisions.csv": "69e09880af4b9d3a9e39f46b42844a9eac17e872f6ade362c45daf7cab4a3764",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "d7e36116bbca4643ecc5cc2a8152805f4fd06b7aca27999f90f6de90a15ebe78",
+    "score_report.json": "f7fa76ac1c04ea8963e437f538ea8427a05a5693f5a1c610675eb9bb160c7568",
+    "workflow_result.json": "45ceb1fd78fad94329838977c2ba5342f16e334ed1c9bff490459b34643b09ee"
+  },
+  "total": 248.067256,
+  "termination": "survey_complete",
+  "accounted_wallclock_seconds": 57.789,
+  "branch": "phase",
+  "remote_calls": 0,
+  "remote_check_seconds": 0,
+  "prior_CPU_Phase_output_bytes_equal": {
+    "actions.jsonl": false,
+    "decisions.csv": false,
+    "messages.jsonl": true,
+    "observations.csv": false
+  },
+  "official_output_sha256_pass": true,
+  "embedded_score_report_equal": true,
+  "private_runtime_token_matches": 0,
+  "full_card_score_measured": false,
+  "prior_CPU_Phase_semantic_comparison": {
+    "decisions.csv": {
+      "parsed_CSV_rows_equal": false,
+      "old_rows": 434,
+      "new_rows": 434,
+      "first_difference_columns": [
+        {
+          "row": 115,
+          "changed_columns": [
+            "az_deg"
+          ]
+        },
+        {
+          "row": 122,
+          "changed_columns": [
+            "alt_deg",
+            "az_deg"
+          ]
+        },
+        {
+          "row": 168,
+          "changed_columns": [
+            "az_deg"
+          ]
+        }
+      ]
+    },
+    "observations.csv": {
+      "parsed_CSV_rows_equal": false,
+      "old_rows": 2916,
+      "new_rows": 2916,
+      "first_difference_columns": [
+        {
+          "row": 1188,
+          "changed_columns": [
+            "target_id",
+            "fiber_id",
+            "factor",
+            "quality",
+            "score"
+          ]
+        },
+        {
+          "row": 1189,
+          "changed_columns": [
+            "target_id",
+            "fiber_id",
+            "factor",
+            "quality",
+            "score"
+          ]
+        },
+        {
+          "row": 1190,
+          "changed_columns": [
+            "target_id",
+            "fiber_id",
+            "factor",
+            "quality",
+            "score"
+          ]
+        }
+      ]
+    },
+    "actions.jsonl": {
+      "parsed_JSON_rows_equal": false
+    },
+    "score_report": {
+      "components_equal": true,
+      "counts_equal": true,
+      "total_equal": true
+    }
+  }
+}

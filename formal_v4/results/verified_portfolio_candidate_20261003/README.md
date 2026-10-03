@@ -1,6 +1,8 @@
 # 已验证历史路线的独立离线组合候选
 
-已于 2026-10-03 09:12 JST 上传到项目 `Observer Verified Portfolio`；最后可见状态为“准备中”。浏览器控制随后断线，目前尚未确认接口检查、源码指纹或完整评测结果。ZIP `/Users/kamico/Downloads/observer_verified_portfolio.zip`，SHA `fd5533686bb4348a3d70740048544c050f824951d0d3ed512fa09803f2e9d2a2`，本地按官方规则计算的源码指纹 `e78056d354317f27d7ad0cb3a97330c2df4e3ba8944a7e7c90516a8b2c472ce0`。
+已于 2026-10-03 09:12 JST 上传到项目 `Observer Verified Portfolio`。浏览器控制恢复后，19:40 JST 核验公开场景通过、线上源码指纹与本地一致并确认版本；19:41 JST 开始一次四卡完整评测，网页已确认排队中，配额由8剩7。完整分数尚未取得。ZIP `/Users/kamico/Downloads/observer_verified_portfolio.zip`（本目录保存相同字节的 `submission.zip`），SHA `fd5533686bb4348a3d70740048544c050f824951d0d3ed512fa09803f2e9d2a2`，源码指纹 `e78056d354317f27d7ad0cb3a97330c2df4e3ba8944a7e7c90516a8b2c472ce0`。
+
+公开接口测试分数248.067256，57.789秒/300秒，survey_complete、0远端调用/0秒health；与原CPU Phase公开测试分项、计数和总分相同，部分动作的浮点坐标及文件行顺序不逐字节相同。来源与详细对照见 `../cloud_verified_portfolio_public_test_20261003/archive_manifest.json`。
 
 `package_gates.json` 保留上传前的原始门检报告与时间状态；上传进度另见 `upload_status.json`。历史均分不是该新包的实测分数。
 

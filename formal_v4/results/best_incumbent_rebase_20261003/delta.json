@@ -1,0 +1,425 @@
+{
+  "card": "delta",
+  "selected_run": "formal_v4/results/cloud_request_gpu_delta_20261003",
+  "scope": "selected historical run settlement and state rebase audit; no new official replay",
+  "hidden_inputs_read": false,
+  "global_optimality_claimed": false,
+  "official_total": 6423.086757,
+  "reconstructed_total_csv": 6423.086748758499,
+  "difference_from_official": -8.241500836447813e-06,
+  "CSV_science_rounding_error_bound": 0.0044585,
+  "total_error_bound_including_official_rounding": 0.004459001000000001,
+  "CSV_factor_threshold_ambiguous_targets": [],
+  "components": {
+    "sum_best_scores_csv": 6523.825773,
+    "required_penalty": -300.0,
+    "uniformity_penalty": -0.7390242415002746,
+    "report_settlement": 100.0,
+    "observation_request_reward": 100.0
+  },
+  "by_class_csv": {
+    "Star": 238.380073,
+    "ELG": 2922.670737,
+    "QSO": 1082.130226,
+    "LRG": 1294.663875,
+    "BGS": 985.980862
+  },
+  "required_target_count": 564,
+  "required_missing_ids": [
+    "V4T000504",
+    "V4T001951",
+    "V4T002467",
+    "V4T004230",
+    "V4T005259",
+    "V4T007159"
+  ],
+  "requests": [
+    {
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-10-27T08:30:00Z",
+      "issued_at_utc": "2026-10-26T00:15:00Z",
+      "minimum_completed": 6,
+      "reason": "time-critical follow-up",
+      "record_type": "observation_request",
+      "request_id": "V4RQ0001",
+      "schema_version": "v4-observation-request-v1",
+      "target_ids": [
+        "V4T004993",
+        "V4T007389",
+        "V4T007669",
+        "V4T003840",
+        "V4T005585",
+        "V4T006696",
+        "V4T000654",
+        "V4T007281"
+      ],
+      "completed_target_ids": [
+        "V4T004993",
+        "V4T007389",
+        "V4T000654",
+        "V4T007281"
+      ],
+      "completed_count": 4,
+      "reward": 0.0,
+      "witness_observe_indices": {
+        "V4T004993": [
+          120
+        ],
+        "V4T007389": [
+          145
+        ],
+        "V4T000654": [
+          198
+        ],
+        "V4T007281": [
+          215
+        ]
+      }
+    },
+    {
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-30T08:15:00Z",
+      "issued_at_utc": "2026-11-29T00:45:00Z",
+      "minimum_completed": 6,
+      "reason": "time-critical follow-up",
+      "record_type": "observation_request",
+      "request_id": "V4RQ0002",
+      "schema_version": "v4-observation-request-v1",
+      "target_ids": [
+        "V4T007284",
+        "V4T005146",
+        "V4T008131",
+        "V4T000567",
+        "V4T000026",
+        "V4T009138",
+        "V4T005461",
+        "V4T001747"
+      ],
+      "completed_target_ids": [
+        "V4T007284",
+        "V4T000567",
+        "V4T000026",
+        "V4T009138",
+        "V4T005461",
+        "V4T001747"
+      ],
+      "completed_count": 6,
+      "reward": 100.0,
+      "witness_observe_indices": {
+        "V4T007284": [
+          1022
+        ],
+        "V4T000567": [
+          1026
+        ],
+        "V4T000026": [
+          1023
+        ],
+        "V4T009138": [
+          1026
+        ],
+        "V4T005461": [
+          1024
+        ],
+        "V4T001747": [
+          1025
+        ]
+      }
+    }
+  ],
+  "uniformity_bands": {
+    "ra_0_10": {
+      "targets": 1227,
+      "completed": 909,
+      "ratio": 0.7408312958435208
+    },
+    "ra_10_20": {
+      "targets": 979,
+      "completed": 687,
+      "ratio": 0.7017364657814096
+    },
+    "ra_20_30": {
+      "targets": 196,
+      "completed": 166,
+      "ratio": 0.8469387755102041
+    },
+    "ra_30_40": {
+      "targets": 16,
+      "completed": 12,
+      "ratio": 0.75
+    },
+    "ra_40_50": {
+      "targets": 553,
+      "completed": 438,
+      "ratio": 0.7920433996383364
+    },
+    "ra_50_60": {
+      "targets": 997,
+      "completed": 805,
+      "ratio": 0.8074222668004012
+    },
+    "ra_60_70": {
+      "targets": 698,
+      "completed": 501,
+      "ratio": 0.7177650429799427
+    },
+    "ra_70_80": {
+      "targets": 817,
+      "completed": 629,
+      "ratio": 0.769889840881273
+    },
+    "ra_80_90": {
+      "targets": 383,
+      "completed": 258,
+      "ratio": 0.6736292428198434
+    },
+    "ra_90_100": {
+      "targets": 604,
+      "completed": 457,
+      "ratio": 0.7566225165562914
+    },
+    "ra_100_110": {
+      "targets": 1095,
+      "completed": 822,
+      "ratio": 0.7506849315068493
+    },
+    "ra_110_120": {
+      "targets": 958,
+      "completed": 669,
+      "ratio": 0.6983298538622129
+    },
+    "ra_120_130": {
+      "targets": 32,
+      "completed": 23,
+      "ratio": 0.71875
+    },
+    "ra_350_360": {
+      "targets": 845,
+      "completed": 666,
+      "ratio": 0.7881656804733728
+    }
+  },
+  "Jain_index": 0.9963048787924986,
+  "counts": {
+    "observe_actions": 1096,
+    "observation_rows": 15156,
+    "valid_rows": 14876,
+    "invalidated_rows": 280,
+    "targets_with_valid_ledger_entry": 8917
+  },
+  "report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-11-29T02:26:21Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ],
+  "fixed_report_times_utc": [
+    "2026-11-29T02:26:21Z"
+  ],
+  "successful_repair_times_utc": [
+    "2026-11-29T02:26:21Z"
+  ],
+  "data_loss_state": [
+    {
+      "issued_at_utc": "2026-11-08T05:16:53Z",
+      "trigger_event_id": "V4ST0001",
+      "invalidated_window": {
+        "action_count_at_trigger": 603,
+        "action_index_end_exclusive": 169,
+        "action_index_start": 150,
+        "window_end_fraction": 0.280523,
+        "window_max_fraction": 0.07,
+        "window_start_fraction": 0.249401
+      },
+      "invalidated_hit_rows": 280,
+      "rank_range_half_open": [
+        150,
+        169
+      ],
+      "old_prefix_observe_count_to_fix": 603,
+      "prefix_end_utc": "2026-11-08T05:16:53Z",
+      "original_invalidated_action_intervals": [
+        {
+          "observe_index": 150,
+          "start_utc": "2026-10-26T06:32:00Z",
+          "end_utc": "2026-10-26T06:36:05Z"
+        },
+        {
+          "observe_index": 151,
+          "start_utc": "2026-10-26T06:36:05Z",
+          "end_utc": "2026-10-26T06:39:10Z"
+        },
+        {
+          "observe_index": 152,
+          "start_utc": "2026-10-26T06:39:10Z",
+          "end_utc": "2026-10-26T06:41:16Z"
+        },
+        {
+          "observe_index": 153,
+          "start_utc": "2026-10-26T06:41:16Z",
+          "end_utc": "2026-10-26T06:49:37Z"
+        },
+        {
+          "observe_index": 154,
+          "start_utc": "2026-10-26T06:49:37Z",
+          "end_utc": "2026-10-26T06:54:13Z"
+        },
+        {
+          "observe_index": 155,
+          "start_utc": "2026-10-26T06:54:13Z",
+          "end_utc": "2026-10-26T06:55:13Z"
+        },
+        {
+          "observe_index": 156,
+          "start_utc": "2026-10-26T06:55:13Z",
+          "end_utc": "2026-10-26T07:09:56Z"
+        },
+        {
+          "observe_index": 157,
+          "start_utc": "2026-10-26T07:09:56Z",
+          "end_utc": "2026-10-26T07:12:18Z"
+        },
+        {
+          "observe_index": 158,
+          "start_utc": "2026-10-26T07:12:18Z",
+          "end_utc": "2026-10-26T07:15:08Z"
+        },
+        {
+          "observe_index": 159,
+          "start_utc": "2026-10-26T07:15:08Z",
+          "end_utc": "2026-10-26T07:25:29Z"
+        },
+        {
+          "observe_index": 160,
+          "start_utc": "2026-10-26T07:25:29Z",
+          "end_utc": "2026-10-26T07:27:42Z"
+        },
+        {
+          "observe_index": 161,
+          "start_utc": "2026-10-26T07:27:42Z",
+          "end_utc": "2026-10-26T07:33:34Z"
+        },
+        {
+          "observe_index": 162,
+          "start_utc": "2026-10-26T07:33:34Z",
+          "end_utc": "2026-10-26T07:35:32Z"
+        },
+        {
+          "observe_index": 163,
+          "start_utc": "2026-10-26T07:35:32Z",
+          "end_utc": "2026-10-26T07:40:41Z"
+        },
+        {
+          "observe_index": 164,
+          "start_utc": "2026-10-26T07:40:41Z",
+          "end_utc": "2026-10-26T07:41:45Z"
+        },
+        {
+          "observe_index": 165,
+          "start_utc": "2026-10-26T07:41:45Z",
+          "end_utc": "2026-10-26T07:44:09Z"
+        },
+        {
+          "observe_index": 166,
+          "start_utc": "2026-10-26T07:45:00Z",
+          "end_utc": "2026-10-26T07:48:29Z"
+        },
+        {
+          "observe_index": 167,
+          "start_utc": "2026-10-26T07:48:29Z",
+          "end_utc": "2026-10-26T07:56:37Z"
+        },
+        {
+          "observe_index": 168,
+          "start_utc": "2026-10-26T07:56:37Z",
+          "end_utc": "2026-10-26T08:04:02Z"
+        }
+      ]
+    }
+  ],
+  "safe_fixed_original_prefix_observe_columns": 603,
+  "fixed_original_decision_prefix_count": 899,
+  "fixed_original_decision_prefix_sha256": "86f3533b3b29d9a7b821ae1e1c1d6334690839c333c54378b5a6847d22e44c1f",
+  "rebase_constraints": [
+    "Retain the selected run's historical columns and their six-decimal rounding intervals; do not copy old-master columns as new-instance coefficients.",
+    "Preserve every original report timestamp and report action order, including the false-report allowance counter and successful repair history.",
+    "For data-loss cards preserve the complete original decision/action/time prefix through the delivered resync, including waits and reports; fixing only observe variables also requires excluding inserted decision boundaries that could deliver the event earlier.",
+    "Keep every pre-resync observation's rank and actual start/end times; allow new observations only after the delivered resync when using its original invalidated rank set.",
+    "No new exposure may straddle a fixed report instant. Target quality cells must be repartitioned at the selected repair times.",
+    "Science winner, largest factor, required coverage, and per-request distinct coverage are separate variables; only valid complete-window exposures contribute to REQ.",
+    "Recompute Jain uniformity from all per-band completion counts, rather than treating the old penalty as a fixed constant.",
+    "A changed pre-resync count/order must recompute the rank-based invalidation state; old invalidated score flags cannot be reused.",
+    "Equal public weather messages do not identify hidden weather truth, pointing offset, or the efficiency state of a different repair history."
+  ],
+  "conditional_exchange_regions_after_fixed_prefix": [
+    {
+      "start_utc": "2026-11-08T05:16:53Z",
+      "end_utc": "2026-11-29T02:26:21Z",
+      "old_observe_columns": 425
+    },
+    {
+      "start_utc": "2026-11-29T02:26:21Z",
+      "end_utc": "2026-12-01T08:15:00Z",
+      "old_observe_columns": 68
+    }
+  ],
+  "weather_public_message_comparisons": [
+    {
+      "run": "formal_v4/results/cloud_cd2_delta_20261003",
+      "shared_weather_record_keys": 1185,
+      "shared_weather_records_different": 0,
+      "different_record_keys": [],
+      "weather_record_set_equal": true,
+      "only_selected_weather_keys": 0,
+      "only_other_weather_keys": 0,
+      "repair_times_equal": false,
+      "selected_repair_times_utc": [
+        "2026-11-29T02:26:21Z"
+      ],
+      "other_repair_times_utc": [
+        "2026-11-29T06:51:11Z"
+      ],
+      "interpretation": "Equal bulletins/forecasts are public-message consistency evidence, not proof of equal hidden weather truth or repaired efficiency."
+    },
+    {
+      "run": "formal_v4/results/cloud_phase_gpu_delta_20261003",
+      "shared_weather_record_keys": 1185,
+      "shared_weather_records_different": 0,
+      "different_record_keys": [],
+      "weather_record_set_equal": true,
+      "only_selected_weather_keys": 0,
+      "only_other_weather_keys": 0,
+      "repair_times_equal": false,
+      "selected_repair_times_utc": [
+        "2026-11-29T02:26:21Z"
+      ],
+      "other_repair_times_utc": [
+        "2026-11-29T06:57:21Z"
+      ],
+      "interpretation": "Equal bulletins/forecasts are public-message consistency evidence, not proof of equal hidden weather truth or repaired efficiency."
+    }
+  ],
+  "wallclock_seconds": 475.229,
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "provenance": {
+    "inputs": {
+      "formal_v4/practice_cards/delta/delta/public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+      "formal_v4/practice_cards/delta/delta/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/observations.csv": "bc63bb44ce5cba0fbb0419e27fd2c70e2fee8120eceb5084ecac14fa2edc81b9",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/decisions.csv": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/messages.jsonl": "fe58d058c34f76554f5c0aca21d1c04f6b1a29756c6661b5bdd775abb8d36048",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/actions.jsonl": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/score_report.json": "6bee139b7d18b0e42cfc01aaaa3c858a0c2a87f95296d8d6aa069d8f12b94193",
+      "formal_v4/results/cloud_request_gpu_delta_20261003/workflow_result.json": "5c96b45e72d6cd833c4a6521e924c4aa458a11197650f64aa0d51623a822470f"
+    },
+    "official_output_hashes_match": true
+  }
+}

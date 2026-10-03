@@ -1,0 +1,377 @@
+{
+  "schema": "request-exact-cache-full-public-window-gates-v1",
+  "cases": [
+    {
+      "card": "delta",
+      "request_id": "V4RQ0001",
+      "published": false,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+      },
+      "target_count": 9400,
+      "columns": 290,
+      "all_columns_bitwise_equal": true,
+      "pool_sha256": "43fbced0c65999b5abad0616a0f111e87f8c1cf833f160051ba56db1c3b5fa87",
+      "DP_bitwise_equal": true,
+      "selected_actions_bitwise_equal": true,
+      "selected_actions": 6,
+      "baseline_seconds": 8.889553499873728,
+      "cached_seconds": 8.33023687498644,
+      "speedup": 1.0671429436258615,
+      "baseline_profiled": false,
+      "cache_stats": {
+        "midpoint_hits": 1618,
+        "midpoint_misses": 1166,
+        "midpoint_peak_bytes": 2406400
+      },
+      "baseline_profile": []
+    },
+    {
+      "card": "delta",
+      "request_id": "V4RQ0001",
+      "published": true,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+      },
+      "target_count": 9400,
+      "columns": 282,
+      "all_columns_bitwise_equal": true,
+      "pool_sha256": "cd72fdd44c60eaff6c416e0e24a945ee46f615e2cf2892c2db9187e06c6d12de",
+      "DP_bitwise_equal": true,
+      "selected_actions_bitwise_equal": true,
+      "selected_actions": 6,
+      "baseline_seconds": 13.122800000011921,
+      "cached_seconds": 9.038342250045389,
+      "speedup": 1.4519034173491296,
+      "baseline_profiled": false,
+      "cache_stats": {
+        "midpoint_hits": 6109,
+        "midpoint_misses": 2640,
+        "midpoint_peak_bytes": 6166400
+      },
+      "baseline_profile": []
+    },
+    {
+      "card": "gamma",
+      "request_id": "V4RQ0001",
+      "published": true,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "2008e58fe43ed2c510466e626a1f00d52021a586f6fc6694f03fbf452e8335b1",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "3de3c2e917fab98d0e81f8280f512f85dbebf4576cd611ea1efe52c8c9e2d488",
+        "public/v4_night_calendar.csv": "55da1bc4ab5dbbafd19c24abc01eedf5278b11552ecb04bd8a36c784734d6a16",
+        "public/footprint.csv": "da1bcfe970819a110034caf5212eddad4c7342762f1f574fb90d5facbce4263b"
+      },
+      "target_count": 9900,
+      "columns": 357,
+      "all_columns_bitwise_equal": true,
+      "pool_sha256": "b8ecdf656a5a8afa45092a31c8fd64b19e4ffc29a1a8536e0367df4e362bbf3a",
+      "DP_bitwise_equal": true,
+      "selected_actions_bitwise_equal": true,
+      "selected_actions": 6,
+      "baseline_seconds": 16.0327324999962,
+      "cached_seconds": 9.988629957893863,
+      "speedup": 1.6050982534722666,
+      "baseline_profiled": true,
+      "cache_stats": {
+        "midpoint_hits": 6104,
+        "midpoint_misses": 2244,
+        "midpoint_peak_bytes": 3960000
+      },
+      "baseline_profile": [
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 247,
+          "function": "_build_pool",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_seconds": 0.11803931100000001,
+          "cumulative_seconds": 16.032495375
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/spatial_candidates.py",
+          "line": 235,
+          "function": "choose",
+          "primitive_calls": 426,
+          "total_calls": 426,
+          "self_seconds": 0.951309936,
+          "cumulative_seconds": 6.990272765
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 38,
+          "function": "fixed_value",
+          "primitive_calls": 358,
+          "total_calls": 358,
+          "self_seconds": 0.05452019,
+          "cumulative_seconds": 5.228565505000001
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 27,
+          "function": "_evaluate",
+          "primitive_calls": 20448,
+          "total_calls": 20448,
+          "self_seconds": 0.13693300900000002,
+          "cumulative_seconds": 4.875938947000001
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/spatial_candidates.py",
+          "line": 399,
+          "function": "_evaluate",
+          "primitive_calls": 20448,
+          "total_calls": 20448,
+          "self_seconds": 2.445866933,
+          "cumulative_seconds": 4.702567366
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 131,
+          "function": "_integrated_public_quality",
+          "primitive_calls": 816,
+          "total_calls": 816,
+          "self_seconds": 0.10232943500000001,
+          "cumulative_seconds": 4.614477993
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 184,
+          "function": "_fill",
+          "primitive_calls": 11456,
+          "total_calls": 11456,
+          "self_seconds": 1.4157409600000002,
+          "cumulative_seconds": 3.9971174830000002
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 149,
+          "function": "_average_raw_quality",
+          "primitive_calls": 12247,
+          "total_calls": 12247,
+          "self_seconds": 0.010196604000000001,
+          "cumulative_seconds": 3.7558901810000003
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_future_field.py",
+          "line": 75,
+          "function": "raw_scale_at",
+          "primitive_calls": 3072,
+          "total_calls": 3072,
+          "self_seconds": 0.058313683000000005,
+          "cumulative_seconds": 2.6763634020000002
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 104,
+          "function": "_subset_public_quality",
+          "primitive_calls": 5344,
+          "total_calls": 5344,
+          "self_seconds": 1.486295315,
+          "cumulative_seconds": 1.922837541
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 60,
+          "function": "price",
+          "primitive_calls": 68,
+          "total_calls": 68,
+          "self_seconds": 0.003533233,
+          "cumulative_seconds": 1.8366718340000001
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/terrain_version_space.py",
+          "line": 30,
+          "function": "altaz_at",
+          "primitive_calls": 3072,
+          "total_calls": 3072,
+          "self_seconds": 1.497710217,
+          "cumulative_seconds": 1.68652076
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/numeric.py",
+          "line": 658,
+          "function": "flatnonzero",
+          "primitive_calls": 945350,
+          "total_calls": 945350,
+          "self_seconds": 0.42665944400000005,
+          "cumulative_seconds": 1.492854375
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 51,
+          "function": "_wrapfunc",
+          "primitive_calls": 1801213,
+          "total_calls": 1801213,
+          "self_seconds": 0.365853443,
+          "cumulative_seconds": 1.2750002980000001
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/spatial_candidates.py",
+          "line": 193,
+          "function": "_classify",
+          "primitive_calls": 31904,
+          "total_calls": 31904,
+          "self_seconds": 0.716926956,
+          "cumulative_seconds": 1.2425188500000002
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 123,
+          "function": "_average_public_quality",
+          "primitive_calls": 11790,
+          "total_calls": 11790,
+          "self_seconds": 0.010801754,
+          "cumulative_seconds": 0.8856219630000001
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/terrain_version_space.py",
+          "line": 172,
+          "function": "expected_clear_fraction",
+          "primitive_calls": 3072,
+          "total_calls": 3072,
+          "self_seconds": 0.7658934620000001,
+          "cumulative_seconds": 0.851889341
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 2255,
+          "function": "sum",
+          "primitive_calls": 103478,
+          "total_calls": 103478,
+          "self_seconds": 0.05037674,
+          "cumulative_seconds": 0.649525514
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "primitive_calls": 217930,
+          "total_calls": 217930,
+          "self_seconds": 0.612988144,
+          "cumulative_seconds": 0.612988144
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 69,
+          "function": "_wrapreduction",
+          "primitive_calls": 103904,
+          "total_calls": 103904,
+          "self_seconds": 0.061073300000000004,
+          "cumulative_seconds": 0.598389515
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 1208,
+          "function": "argmax",
+          "primitive_calls": 717983,
+          "total_calls": 717983,
+          "self_seconds": 0.23160418400000002,
+          "cumulative_seconds": 0.57867477
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 1959,
+          "function": "nonzero",
+          "primitive_calls": 945350,
+          "total_calls": 945350,
+          "self_seconds": 0.129011321,
+          "cumulative_seconds": 0.554985829
+        },
+        {
+          "file": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/request_deadline_common.py",
+          "line": 236,
+          "function": "<dictcomp>",
+          "primitive_calls": 34296,
+          "total_calls": 34296,
+          "self_seconds": 0.5014721910000001,
+          "cumulative_seconds": 0.55048962
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 1846,
+          "function": "ravel",
+          "primitive_calls": 945350,
+          "total_calls": 945350,
+          "self_seconds": 0.258959422,
+          "cumulative_seconds": 0.42710657500000004
+        },
+        {
+          "file": "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/_core/fromnumeric.py",
+          "line": 2178,
+          "function": "clip",
+          "primitive_calls": 137028,
+          "total_calls": 137028,
+          "self_seconds": 0.044891033000000004,
+          "cumulative_seconds": 0.40455253700000005
+        }
+      ]
+    },
+    {
+      "card": "delta",
+      "request_id": "V4RQ0002",
+      "published": true,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+      },
+      "target_count": 9400,
+      "columns": 453,
+      "all_columns_bitwise_equal": true,
+      "pool_sha256": "e06f01083c49e05e70c8b9431c3f99ccf20af743a75b5293063148456f7fc68f",
+      "DP_bitwise_equal": true,
+      "selected_actions_bitwise_equal": true,
+      "selected_actions": 6,
+      "baseline_seconds": 13.62549962499179,
+      "cached_seconds": 9.156325833173469,
+      "speedup": 1.488096849461872,
+      "baseline_profiled": false,
+      "cache_stats": {
+        "midpoint_hits": 11610,
+        "midpoint_misses": 4488,
+        "midpoint_peak_bytes": 6316800
+      },
+      "baseline_profile": [],
+      "changed_same_time_rebuild": {
+        "E_scale_before": 0.55,
+        "E_scale_after": 0.79,
+        "new_terrain_families": [],
+        "old_terrain_families": [
+          "NE",
+          "E",
+          "NW"
+        ],
+        "ledger_scores_added": 0.07,
+        "ledger_factor_floor": 0.21,
+        "all_columns_bitwise_equal": true,
+        "columns_changed_from_initial_build": true,
+        "pool_sha256": "664363214a329cd37bf49f18d366535ddf53bb0d6e5a45e6f5db48dcb2f112d7"
+      }
+    }
+  ],
+  "production_files_changed": false,
+  "new_online_score_claimed": false,
+  "final_source_sha256": {
+    "formal_v4/research/request_exact_cache.py": "dee600f6b2dabc1d7b89e8035dbf1c287f1b11a4717ccc3cc8b2360aeb6ed3ec",
+    "formal_v4/research/request_exact_cache_checks.py": "07f818e512577f1ecc657518b2fcb76ec701dd1f54c3cb9aab969bfa66ed7612",
+    "formal_v4/research/request_deadline_common.py": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+    "formal_v4/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  },
+  "gate_scope_note": "first three complete windows tested before addition of explicit per-build price-cache clear; final same-planner REQ2 rebuilt after this clear was added, including changed same-time evidence/ledger/E",
+  "online_budget_source": "formal_v4/results/cloud_request_gpu_batch_20261003.json",
+  "new_performance_claim": "two single unprofiled published windows; not a cloud full-season score"
+}

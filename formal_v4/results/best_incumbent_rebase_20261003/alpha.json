@@ -1,0 +1,309 @@
+{
+  "card": "alpha",
+  "selected_run": "formal_v4/results/cloud_phase_gpu_alpha_20261003",
+  "scope": "selected historical run settlement and state rebase audit; no new official replay",
+  "hidden_inputs_read": false,
+  "global_optimality_claimed": false,
+  "official_total": 7289.494481,
+  "reconstructed_total_csv": 7289.4944391259705,
+  "difference_from_official": -4.187402919342276e-05,
+  "CSV_science_rounding_error_bound": 0.004799,
+  "total_error_bound_including_official_rounding": 0.004799501,
+  "CSV_factor_threshold_ambiguous_targets": [],
+  "components": {
+    "sum_best_scores_csv": 7239.830393,
+    "required_penalty": -150.0,
+    "uniformity_penalty": -0.33595387402993726,
+    "report_settlement": 100.0,
+    "observation_request_reward": 100.0
+  },
+  "by_class_csv": {
+    "BGS": 1066.975736,
+    "ELG": 3215.92303,
+    "QSO": 1220.472415,
+    "LRG": 1482.508904,
+    "Star": 253.950308
+  },
+  "required_target_count": 500,
+  "required_missing_ids": [
+    "V4T001295",
+    "V4T005424",
+    "V4T008897"
+  ],
+  "requests": [
+    {
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-10-07T08:45:00Z",
+      "issued_at_utc": "2026-10-06T00:00:00Z",
+      "minimum_completed": 6,
+      "reason": "time-critical follow-up",
+      "record_type": "observation_request",
+      "request_id": "V4RQ0001",
+      "schema_version": "v4-observation-request-v1",
+      "target_ids": [
+        "V4T006147",
+        "V4T002552",
+        "V4T006427",
+        "V4T008695",
+        "V4T005931",
+        "V4T001423",
+        "V4T004387",
+        "V4T000473"
+      ],
+      "completed_target_ids": [
+        "V4T002552",
+        "V4T006427",
+        "V4T008695",
+        "V4T001423",
+        "V4T004387"
+      ],
+      "completed_count": 5,
+      "reward": 0.0,
+      "witness_observe_indices": {
+        "V4T002552": [
+          132
+        ],
+        "V4T006427": [
+          123
+        ],
+        "V4T008695": [
+          131
+        ],
+        "V4T001423": [
+          140
+        ],
+        "V4T004387": [
+          106
+        ]
+      }
+    },
+    {
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-10T08:15:00Z",
+      "issued_at_utc": "2026-11-09T00:30:00Z",
+      "minimum_completed": 6,
+      "reason": "time-critical follow-up",
+      "record_type": "observation_request",
+      "request_id": "V4RQ0002",
+      "schema_version": "v4-observation-request-v1",
+      "target_ids": [
+        "V4T005740",
+        "V4T004099",
+        "V4T003624",
+        "V4T007947",
+        "V4T003571",
+        "V4T002960",
+        "V4T000915",
+        "V4T000674"
+      ],
+      "completed_target_ids": [
+        "V4T005740",
+        "V4T004099",
+        "V4T003624",
+        "V4T007947",
+        "V4T003571",
+        "V4T002960",
+        "V4T000674"
+      ],
+      "completed_count": 7,
+      "reward": 100.0,
+      "witness_observe_indices": {
+        "V4T005740": [
+          1154
+        ],
+        "V4T004099": [
+          1128
+        ],
+        "V4T003624": [
+          1110
+        ],
+        "V4T007947": [
+          1119
+        ],
+        "V4T003571": [
+          1108
+        ],
+        "V4T002960": [
+          1109,
+          1113
+        ],
+        "V4T000674": [
+          1111
+        ]
+      }
+    }
+  ],
+  "uniformity_bands": {
+    "ra_0_10": {
+      "targets": 605,
+      "completed": 471,
+      "ratio": 0.7785123966942149
+    },
+    "ra_10_20": {
+      "targets": 533,
+      "completed": 420,
+      "ratio": 0.7879924953095685
+    },
+    "ra_20_30": {
+      "targets": 859,
+      "completed": 708,
+      "ratio": 0.8242142025611175
+    },
+    "ra_30_40": {
+      "targets": 783,
+      "completed": 615,
+      "ratio": 0.7854406130268199
+    },
+    "ra_40_50": {
+      "targets": 438,
+      "completed": 333,
+      "ratio": 0.7602739726027398
+    },
+    "ra_50_60": {
+      "targets": 90,
+      "completed": 75,
+      "ratio": 0.8333333333333334
+    },
+    "ra_60_70": {
+      "targets": 439,
+      "completed": 339,
+      "ratio": 0.7722095671981777
+    },
+    "ra_70_80": {
+      "targets": 1169,
+      "completed": 861,
+      "ratio": 0.7365269461077845
+    },
+    "ra_80_90": {
+      "targets": 1405,
+      "completed": 1075,
+      "ratio": 0.7651245551601423
+    },
+    "ra_90_100": {
+      "targets": 362,
+      "completed": 261,
+      "ratio": 0.7209944751381215
+    },
+    "ra_330_340": {
+      "targets": 312,
+      "completed": 233,
+      "ratio": 0.7467948717948718
+    },
+    "ra_340_350": {
+      "targets": 1430,
+      "completed": 1166,
+      "ratio": 0.8153846153846154
+    },
+    "ra_350_360": {
+      "targets": 1575,
+      "completed": 1220,
+      "ratio": 0.7746031746031746
+    }
+  },
+  "Jain_index": 0.9983202306298503,
+  "counts": {
+    "observe_actions": 1184,
+    "observation_rows": 16282,
+    "valid_rows": 16282,
+    "invalidated_rows": 0,
+    "targets_with_valid_ledger_entry": 9598
+  },
+  "report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-10-30T01:54:35Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ],
+  "fixed_report_times_utc": [
+    "2026-10-30T01:54:35Z"
+  ],
+  "successful_repair_times_utc": [
+    "2026-10-30T01:54:35Z"
+  ],
+  "data_loss_state": [],
+  "safe_fixed_original_prefix_observe_columns": 0,
+  "fixed_original_decision_prefix_count": 0,
+  "fixed_original_decision_prefix_sha256": null,
+  "rebase_constraints": [
+    "Retain the selected run's historical columns and their six-decimal rounding intervals; do not copy old-master columns as new-instance coefficients.",
+    "Preserve every original report timestamp and report action order, including the false-report allowance counter and successful repair history.",
+    "For data-loss cards preserve the complete original decision/action/time prefix through the delivered resync, including waits and reports; fixing only observe variables also requires excluding inserted decision boundaries that could deliver the event earlier.",
+    "Keep every pre-resync observation's rank and actual start/end times; allow new observations only after the delivered resync when using its original invalidated rank set.",
+    "No new exposure may straddle a fixed report instant. Target quality cells must be repartitioned at the selected repair times.",
+    "Science winner, largest factor, required coverage, and per-request distinct coverage are separate variables; only valid complete-window exposures contribute to REQ.",
+    "Recompute Jain uniformity from all per-band completion counts, rather than treating the old penalty as a fixed constant.",
+    "A changed pre-resync count/order must recompute the rank-based invalidation state; old invalidated score flags cannot be reused.",
+    "Equal public weather messages do not identify hidden weather truth, pointing offset, or the efficiency state of a different repair history."
+  ],
+  "conditional_exchange_regions_after_fixed_prefix": [
+    {
+      "start_utc": "2026-10-05T00:00:00Z",
+      "end_utc": "2026-10-30T01:54:35Z",
+      "old_observe_columns": 880
+    },
+    {
+      "start_utc": "2026-10-30T01:54:35Z",
+      "end_utc": "2026-11-11T08:15:00Z",
+      "old_observe_columns": 304
+    }
+  ],
+  "weather_public_message_comparisons": [
+    {
+      "run": "formal_v4/results/cloud_cd2_alpha_20261003",
+      "shared_weather_record_keys": 1258,
+      "shared_weather_records_different": 0,
+      "different_record_keys": [],
+      "weather_record_set_equal": true,
+      "only_selected_weather_keys": 0,
+      "only_other_weather_keys": 0,
+      "repair_times_equal": false,
+      "selected_repair_times_utc": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "other_repair_times_utc": [
+        "2026-10-30T01:50:01Z"
+      ],
+      "interpretation": "Equal bulletins/forecasts are public-message consistency evidence, not proof of equal hidden weather truth or repaired efficiency."
+    },
+    {
+      "run": "formal_v4/results/cloud_request_gpu_alpha_20261003",
+      "shared_weather_record_keys": 909,
+      "shared_weather_records_different": 0,
+      "different_record_keys": [],
+      "weather_record_set_equal": false,
+      "only_selected_weather_keys": 349,
+      "only_other_weather_keys": 0,
+      "repair_times_equal": false,
+      "selected_repair_times_utc": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "other_repair_times_utc": [
+        "2026-10-30T01:37:55Z"
+      ],
+      "interpretation": "Equal bulletins/forecasts are public-message consistency evidence, not proof of equal hidden weather truth or repaired efficiency."
+    }
+  ],
+  "wallclock_seconds": 596.021,
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "provenance": {
+    "inputs": {
+      "formal_v4/practice_cards/alpha/alpha/public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+      "formal_v4/practice_cards/alpha/alpha/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/observations.csv": "1f924b4c4739f945c918974bea2b8f154e47a40fffe227b4be0e853804541cf0",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/decisions.csv": "d7b4941c3066a9ced497c805e1e36ee8c4aa38dbc25cb03a19a3852e30a0b3a5",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/messages.jsonl": "10240003e846a7c7daed903babae5a9cc588107942a8f285512c6cfa2bf276b2",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/actions.jsonl": "4b5d9e79bceebe76e1d0ecdecc7c39bdbcc060ee72da3b34970e1259a6c60f85",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/score_report.json": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+      "formal_v4/results/cloud_phase_gpu_alpha_20261003/workflow_result.json": "194a06c7e26821dd21e4b1bab0ea9595cdf0ea750936b3b1a86a04177b88e6e7"
+    },
+    "official_output_hashes_match": true
+  }
+}
