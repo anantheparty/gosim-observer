@@ -1,0 +1,7 @@
+{"incumbent_gate": {"source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/gpu_direct_20261003/L1", "expected_total": 6348.155319, "reproduced_total": 6348.155319, "score_exact": true, "counts_exact": true, "components_exact": true, "observation_bytes_exact": false, "decision_bytes_exact": true}}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_global_incumbent.py", line 342, in <module>
+    if __name__=="__main__":main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_global_incumbent.py", line 303, in main
+    if not all(gate[k] for k in ("score_exact","counts_exact","components_exact","observation_bytes_exact","decision_bytes_exact")):raise RuntimeError("unmodified incumbent replay gate failed")
+RuntimeError: unmodified incumbent replay gate failed

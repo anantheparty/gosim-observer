@@ -1,0 +1,269 @@
+{
+  "L1": {
+    "card": "L1",
+    "quality_checks": 100,
+    "quality_max_abs_error": 2.857934888744751e-08,
+    "quality_mean_abs_error": 9.965078143769902e-09,
+    "candidate_required_without_any_completing_column": [
+      "V4T005102"
+    ],
+    "candidate_pool_size": 208818,
+    "native_vs_model_abs_error_after_report_settlement": {
+      "baseline": 9.368127302877838e-05,
+      "optimized": 9.759335625858512e-05
+    },
+    "duration_counts": {
+      "baseline": {
+        "900": 478,
+        "1800": 125,
+        "2700": 46,
+        "3600": 10
+      },
+      "optimized": {
+        "900": 531,
+        "1800": 123,
+        "2700": 35,
+        "3600": 6
+      }
+    },
+    "native_score_improvement": 403.7703650000003,
+    "limitation": "Coverage impossibility is only for this finite candidate pool. No global upper bound or optimum is certified.",
+    "single_night_ablation": {
+      "seconds": 100,
+      "iterations": 8651,
+      "single_night_native_total": 5434.557288,
+      "multi_night_native_total": 5346.826857,
+      "single_minus_multi": 87.73043099999995,
+      "finding": "This coarse-pool equal-time experiment does not establish a benefit from multi-night destruction. Single-night throughput was substantially higher."
+    }
+  },
+  "L2": {
+    "card": "L2",
+    "quality_checks": 100,
+    "quality_max_abs_error": 4.420699384333204e-08,
+    "quality_mean_abs_error": 1.462538453789186e-08,
+    "candidate_required_without_any_completing_column": [
+      "V4T000863",
+      "V4T005327"
+    ],
+    "candidate_pool_size": 220168,
+    "native_vs_model_abs_error_after_report_settlement": {
+      "baseline": 8.601284389442299e-05,
+      "optimized": 0.00010111637402587803
+    },
+    "duration_counts": {
+      "baseline": {
+        "900": 429,
+        "1800": 153,
+        "2700": 47,
+        "3600": 26
+      },
+      "optimized": {
+        "900": 500,
+        "1800": 153,
+        "2700": 31,
+        "3600": 20
+      }
+    },
+    "native_score_improvement": 363.0413000000008,
+    "limitation": "Coverage impossibility is only for this finite candidate pool. No global upper bound or optimum is certified."
+  },
+  "official_cloud_components": {
+    "cloud_cd2_alpha_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 7045.172638,
+      "uniformity_penalty": -0.508434
+    },
+    "cloud_cd2_beta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -450.0,
+      "sum_best_scores": 6584.004137,
+      "uniformity_penalty": -0.897119
+    },
+    "cloud_cd2_delta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -950.0,
+      "sum_best_scores": 5581.02908,
+      "uniformity_penalty": -12.806762
+    },
+    "cloud_cd2_gamma_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6500.0317,
+      "uniformity_penalty": -2.463384
+    },
+    "cloud_cd2_ip_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -700.0,
+      "sum_best_scores": 1072.965217,
+      "uniformity_penalty": -36.822483
+    },
+    "cloud_cd2_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -750.0,
+      "sum_best_scores": 1099.756696,
+      "uniformity_penalty": -34.974261
+    },
+    "cloud_cpu_phase_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1135.261887,
+      "uniformity_penalty": -37.194632
+    },
+    "cloud_model_gpu_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1135.261887,
+      "uniformity_penalty": -37.194632
+    },
+    "cloud_phase_gpu_alpha_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 7239.830435,
+      "uniformity_penalty": -0.335954
+    },
+    "cloud_phase_gpu_beta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -450.0,
+      "sum_best_scores": 6853.011236,
+      "uniformity_penalty": -0.861544
+    },
+    "cloud_phase_gpu_delta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -950.0,
+      "sum_best_scores": 5965.7306,
+      "uniformity_penalty": -9.725055
+    },
+    "cloud_phase_gpu_gamma_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6984.890301,
+      "uniformity_penalty": -1.810101
+    },
+    "cloud_phase_gpu_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1124.283776,
+      "uniformity_penalty": -37.721864
+    },
+    "cloud_request_cache_alpha_20261003": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 7149.11784,
+      "uniformity_penalty": -0.249588
+    },
+    "cloud_request_cache_beta_20261003": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -550.0,
+      "sum_best_scores": 6768.101649,
+      "uniformity_penalty": -0.237508
+    },
+    "cloud_request_cache_delta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -300.0,
+      "sum_best_scores": 6523.825782,
+      "uniformity_penalty": -0.739024
+    },
+    "cloud_request_cache_gamma_20261003": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 6650.828563,
+      "uniformity_penalty": -0.277702
+    },
+    "cloud_request_cache_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -700.0,
+      "sum_best_scores": 1167.043318,
+      "uniformity_penalty": -34.375073
+    },
+    "cloud_request_gpu_alpha_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5942.269118,
+      "uniformity_penalty": -0.479988
+    },
+    "cloud_request_gpu_beta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 0.0,
+      "required_penalty": -550.0,
+      "sum_best_scores": 6588.477712,
+      "uniformity_penalty": -0.326765
+    },
+    "cloud_request_gpu_delta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -300.0,
+      "sum_best_scores": 6523.825782,
+      "uniformity_penalty": -0.739024
+    },
+    "cloud_request_gpu_gamma_20261003": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 6569.393638,
+      "uniformity_penalty": -0.616007
+    },
+    "cloud_request_gpu_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -700.0,
+      "sum_best_scores": 1164.694613,
+      "uniformity_penalty": -34.096092
+    },
+    "cloud_verified_portfolio_alpha_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 7229.468982,
+      "uniformity_penalty": -0.280256
+    },
+    "cloud_verified_portfolio_beta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -450.0,
+      "sum_best_scores": 6822.558045,
+      "uniformity_penalty": -0.830526
+    },
+    "cloud_verified_portfolio_delta_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -300.0,
+      "sum_best_scores": 6523.825782,
+      "uniformity_penalty": -0.739024
+    },
+    "cloud_verified_portfolio_gamma_20261003": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 6587.563337,
+      "uniformity_penalty": -1.630659
+    },
+    "cloud_verified_portfolio_public_test_20261003": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -850.0,
+      "sum_best_scores": 1135.261887,
+      "uniformity_penalty": -37.194632
+    }
+  }
+}

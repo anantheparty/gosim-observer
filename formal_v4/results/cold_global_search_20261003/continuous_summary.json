@@ -1,0 +1,136 @@
+{
+  "L1": {
+    "card": "L1",
+    "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/gpu_direct_20261003/L1",
+    "source_total": 6348.155319,
+    "native_total": 6409.98892,
+    "native_delta": 61.83360099999936,
+    "native_model_abs_error": 1.31486558530014e-07,
+    "baseline": {
+      "total": 6348.155319235504,
+      "science": 6148.39189837693,
+      "required_missing": 2,
+      "uniformity_penalty": 0.23657914142558578,
+      "request_reward": 200.0,
+      "report_settlement": 100.0,
+      "observe_actions": 1006
+    },
+    "optimized": {
+      "total": 6409.988919868513,
+      "science": 6160.323655464192,
+      "required_missing": 1,
+      "uniformity_penalty": 0.33473559567858135,
+      "request_reward": 200.0,
+      "report_settlement": 100.0,
+      "observe_actions": 974
+    },
+    "operator_accounting": {
+      "1": {
+        "best_improvements": 94,
+        "total_delta": 58.82471537785841,
+        "science_delta": 8.943921546272577,
+        "required_penalty_delta": 50.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": -0.1192061684140544
+      },
+      "2": {
+        "best_improvements": 5,
+        "total_delta": 3.0088852551507443,
+        "science_delta": 2.987835540989181,
+        "required_penalty_delta": 0.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": 0.02104971416105883
+      },
+      "4": {
+        "best_improvements": 0,
+        "total_delta": 0.0,
+        "science_delta": 0.0,
+        "required_penalty_delta": 0.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": 0.0
+      }
+    },
+    "operator_note": "Credit for consecutive incumbent increases; not an independent causal ablation.",
+    "rescued_required": [
+      {
+        "target_id": "V4T001557",
+        "ra_deg": "359.925637",
+        "dec_deg": "-34.751481",
+        "target_class": "QSO",
+        "feature_flux": "0.06192954",
+        "science_weight": "1.7000",
+        "required": "true",
+        "old_factor": 0,
+        "new_factor": 0.505193
+      }
+    ],
+    "limitation": "Public local truth oracle; original report times fixed; finite column pool; no online policy gain or global certificate."
+  },
+  "L2": {
+    "card": "L2",
+    "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/gpu_phase_followup_20261003/phase/L2",
+    "source_total": 6949.795139,
+    "native_total": 7008.567151,
+    "native_delta": 58.77201200000036,
+    "native_model_abs_error": 4.906014510197565e-07,
+    "baseline": {
+      "total": 6949.795138679773,
+      "science": 6800.223268728732,
+      "required_missing": 3,
+      "uniformity_penalty": 0.42813004895894125,
+      "request_reward": 200.0,
+      "report_settlement": 100.0,
+      "observe_actions": 1089
+    },
+    "optimized": {
+      "total": 7008.567150509399,
+      "science": 6808.9410961706135,
+      "required_missing": 2,
+      "uniformity_penalty": 0.3739456612145142,
+      "request_reward": 200.0,
+      "report_settlement": 100.0,
+      "observe_actions": 1042
+    },
+    "operator_accounting": {
+      "1": {
+        "best_improvements": 135,
+        "total_delta": 57.9059580891153,
+        "science_delta": 7.948879484239114,
+        "required_penalty_delta": 50.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": -0.04292139512411808
+      },
+      "2": {
+        "best_improvements": 4,
+        "total_delta": 0.8660537405103241,
+        "science_delta": 0.7689479576420126,
+        "required_penalty_delta": 0.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": 0.0971057828685451
+      },
+      "4": {
+        "best_improvements": 0,
+        "total_delta": 0.0,
+        "science_delta": 0.0,
+        "required_penalty_delta": 0.0,
+        "request_reward_delta": 0.0,
+        "uniformity_delta": 0.0
+      }
+    },
+    "operator_note": "Credit for consecutive incumbent increases; not an independent causal ablation.",
+    "rescued_required": [
+      {
+        "target_id": "V4T005505",
+        "ra_deg": "118.645115",
+        "dec_deg": "-19.766602",
+        "target_class": "QSO",
+        "feature_flux": "0.06038277",
+        "science_weight": "1.7000",
+        "required": "true",
+        "old_factor": 0,
+        "new_factor": 0.500821
+      }
+    ],
+    "limitation": "Public local truth oracle; original report times fixed; finite column pool; no online policy gain or global certificate."
+  }
+}

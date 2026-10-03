@@ -1,0 +1,322 @@
+{
+  "case": "control",
+  "card": "L1",
+  "skip_observe_index": -1,
+  "seconds": 125.60001150006428,
+  "pid": 76779,
+  "captures": {
+    "100": {
+      "prefix_sha256": "0c561ac32759a54b6036906e4b00a88e0ff380ff67fdbfc12aaf01c5e44e1979",
+      "now_utc": "2026-11-02T08:17:51Z",
+      "baseline_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.95326,
+          "az_deg": 28.9274227
+        },
+        "assignments": {
+          "0": "V4T001095",
+          "1": "V4T006142",
+          "2": "V4T007179",
+          "3": "V4T000967",
+          "4": "V4T003006",
+          "5": "V4T007239",
+          "7": "V4T004826",
+          "8": "V4T003407",
+          "9": "V4T003288",
+          "12": "V4T005840",
+          "13": "V4T007379",
+          "14": "V4T003678",
+          "15": "V4T002024"
+        },
+        "duration_seconds": 104,
+        "program": "DARK"
+      },
+      "snapshot": {
+        "now_utc": "2026-11-02T08:17:51Z",
+        "survey_end_utc": "2026-12-03T08:15:00Z",
+        "observe_action_index": 100,
+        "running_total": 606.295499,
+        "latest_bulletin": {
+          "record_type": "bulletin",
+          "slot_id": "N20261101-S032",
+          "night_id": "N20261101",
+          "issued_at_utc": "2026-11-02T08:15:00Z",
+          "initial": false,
+          "notices": []
+        },
+        "latest_forecast": {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "coverage_start_utc": "2026-11-02T00:30:00Z",
+          "coverage_end_utc": "2026-11-09T00:30:00Z",
+          "notices": []
+        },
+        "active_requests": [],
+        "new_messages": [
+          {
+            "record_type": "bulletin",
+            "slot_id": "N20261101-S032",
+            "night_id": "N20261101",
+            "issued_at_utc": "2026-11-02T08:15:00Z",
+            "initial": false,
+            "notices": []
+          }
+        ],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 99,
+          "assigned_count": 11,
+          "hit_count": 11,
+          "hits": [
+            {
+              "target_id": "V4T006807",
+              "score": 0.289443
+            },
+            {
+              "target_id": "V4T003240",
+              "score": 0.596217
+            },
+            {
+              "target_id": "V4T007667",
+              "score": 0.34708
+            },
+            {
+              "target_id": "V4T000203",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T000638",
+              "score": 0.334867
+            },
+            {
+              "target_id": "V4T002649",
+              "score": 0.223921
+            },
+            {
+              "target_id": "V4T007710",
+              "score": 0.242122
+            },
+            {
+              "target_id": "V4T005382",
+              "score": 0.317142
+            },
+            {
+              "target_id": "V4T002724",
+              "score": 0.228919
+            },
+            {
+              "target_id": "V4T001895",
+              "score": 0.364591
+            },
+            {
+              "target_id": "V4T004077",
+              "score": 0.376245
+            }
+          ]
+        }
+      },
+      "scores_sum": 606.2955039999999,
+      "required_unfinished": 179
+    },
+    "700": {
+      "prefix_sha256": "045a85884868171cc017aa2af8230b2c8f5e061208c1c2080f74423de1deeecb",
+      "now_utc": "2026-11-16T04:45:53Z",
+      "baseline_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 71.067841,
+          "az_deg": 191.1228385
+        },
+        "assignments": {
+          "1": "V4T000932",
+          "2": "V4T001691",
+          "3": "V4T003376",
+          "4": "V4T005124",
+          "5": "V4T006936",
+          "6": "V4T003526",
+          "7": "V4T004812",
+          "8": "V4T001759",
+          "9": "V4T007481",
+          "10": "V4T006398",
+          "11": "V4T002894",
+          "12": "V4T001194",
+          "13": "V4T003488",
+          "14": "V4T004701",
+          "15": "V4T004037"
+        },
+        "duration_seconds": 732,
+        "program": "DARK"
+      },
+      "snapshot": {
+        "now_utc": "2026-11-16T04:45:53Z",
+        "survey_end_utc": "2026-12-03T08:15:00Z",
+        "observe_action_index": 700,
+        "running_total": 4420.45371,
+        "latest_bulletin": {
+          "record_type": "bulletin",
+          "slot_id": "N20261115-S018",
+          "night_id": "N20261115",
+          "issued_at_utc": "2026-11-16T04:45:00Z",
+          "initial": false,
+          "notices": [
+            {
+              "event_kind": "earthquake",
+              "direction": "ALL"
+            }
+          ]
+        },
+        "latest_forecast": {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-16T00:30:00Z",
+          "coverage_start_utc": "2026-11-16T00:30:00Z",
+          "coverage_end_utc": "2026-11-23T00:30:00Z",
+          "notices": [
+            {
+              "event_kind": "rocket_launch",
+              "direction": "SW",
+              "nights": [
+                "2026-11-15"
+              ]
+            },
+            {
+              "event_kind": "overcast",
+              "direction": "S",
+              "nights": [
+                "2026-11-16"
+              ]
+            },
+            {
+              "event_kind": "cold_snap",
+              "direction": "ALL",
+              "nights": [
+                "2026-11-17",
+                "2026-11-18",
+                "2026-11-19"
+              ]
+            },
+            {
+              "event_kind": "haze",
+              "direction": "ALL",
+              "nights": [
+                "2026-11-18",
+                "2026-11-19",
+                "2026-11-20",
+                "2026-11-21"
+              ]
+            }
+          ]
+        },
+        "active_requests": [],
+        "new_messages": [
+          {
+            "record_type": "bulletin",
+            "slot_id": "N20261115-S018",
+            "night_id": "N20261115",
+            "issued_at_utc": "2026-11-16T04:45:00Z",
+            "initial": false,
+            "notices": [
+              {
+                "event_kind": "earthquake",
+                "direction": "ALL"
+              }
+            ]
+          }
+        ],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 699,
+          "assigned_count": 11,
+          "hit_count": 11,
+          "hits": [
+            {
+              "target_id": "V4T001941",
+              "score": 0.775007
+            },
+            {
+              "target_id": "V4T002878",
+              "score": 1.117454
+            },
+            {
+              "target_id": "V4T000650",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T001872",
+              "score": 0.732257
+            },
+            {
+              "target_id": "V4T001459",
+              "score": 0.85183
+            },
+            {
+              "target_id": "V4T004580",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T002489",
+              "score": 1.107948
+            },
+            {
+              "target_id": "V4T005129",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T000960",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T000799",
+              "score": 0.654983
+            },
+            {
+              "target_id": "V4T005486",
+              "score": 1.126174
+            }
+          ]
+        }
+      },
+      "scores_sum": 4420.453738,
+      "required_unfinished": 2
+    }
+  },
+  "total": 6096.185388,
+  "components": {
+    "sum_best_scores": 5996.418331,
+    "required_penalty": -100.0,
+    "uniformity_penalty": -0.232943,
+    "report_settlement": 100.0,
+    "observation_request_reward": 100.0
+  },
+  "counts": {
+    "decisions": 1591,
+    "observe_actions": 1005,
+    "observations": 13241,
+    "targets_observed": 7582,
+    "required_missing": 2,
+    "invalidated_observations": 0,
+    "observation_requests_issued": 2,
+    "observation_requests_completed": 1
+  },
+  "termination": {
+    "reason": "survey_complete",
+    "detail": ""
+  },
+  "policy_summary": {
+    "decisions": 1098,
+    "exposures": 1004,
+    "reports": 1,
+    "correct_reports": 1,
+    "best_science_sum": 5990.609705999999,
+    "required_missing_bound": 2,
+    "planning_seconds": 107.431,
+    "C": 1.2234,
+    "E": 0.6145,
+    "remote_check": null,
+    "remote_calls": 0,
+    "remote_seconds": 0,
+    "remote_budget": null
+  },
+  "raw_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cold_neural_value_20261003/counterfactual/control/L1",
+  "whole_candidate_enumeration": true
+}

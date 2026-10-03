@@ -1,0 +1,53 @@
+{
+  "alpha": {
+    "run": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cloud_verified_portfolio_alpha_20261003",
+    "official_replay_total_of_existing_run": 7279.188726,
+    "official_required_missing": 3,
+    "required_completed_but_uncertified_from_score_alone": 0,
+    "uncertified_targets": [],
+    "request_status_digital_band_probes": [],
+    "probe_count": 0,
+    "scope": "Our own public participant scoring outputs only. Existing run, read-only. Positive/negative request status inference can be online; actual factor/prog_mult are used only for post-run verification."
+  },
+  "beta": {
+    "run": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cloud_verified_portfolio_beta_20261003",
+    "official_replay_total_of_existing_run": 6571.727518,
+    "official_required_missing": 9,
+    "required_completed_but_uncertified_from_score_alone": 0,
+    "uncertified_targets": [],
+    "request_status_digital_band_probes": [
+      {
+        "request_id": "V4RQ0002",
+        "target_id": "V4T000346",
+        "observe_index": 1098,
+        "proof": "only possible completing exposure, score/w<threshold*match: declared program mismatched",
+        "program": "DARK",
+        "band_constraint": "B<DARK_threshold",
+        "score_over_weight": 0.525045,
+        "threshold": 0.5
+      }
+    ],
+    "probe_count": 1,
+    "scope": "Our own public participant scoring outputs only. Existing run, read-only. Positive/negative request status inference can be online; actual factor/prog_mult are used only for post-run verification."
+  },
+  "gamma": {
+    "run": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cloud_verified_portfolio_gamma_20261003",
+    "official_replay_total_of_existing_run": 6585.932678,
+    "official_required_missing": 4,
+    "required_completed_but_uncertified_from_score_alone": 0,
+    "uncertified_targets": [],
+    "request_status_digital_band_probes": [],
+    "probe_count": 0,
+    "scope": "Our own public participant scoring outputs only. Existing run, read-only. Positive/negative request status inference can be online; actual factor/prog_mult are used only for post-run verification."
+  },
+  "delta": {
+    "run": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cloud_verified_portfolio_delta_20261003",
+    "official_replay_total_of_existing_run": 6423.086757,
+    "official_required_missing": 6,
+    "required_completed_but_uncertified_from_score_alone": 0,
+    "uncertified_targets": [],
+    "request_status_digital_band_probes": [],
+    "probe_count": 0,
+    "scope": "Our own public participant scoring outputs only. Existing run, read-only. Positive/negative request status inference can be online; actual factor/prog_mult are used only for post-run verification."
+  }
+}

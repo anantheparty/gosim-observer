@@ -1,0 +1,212 @@
+{
+  "features": [
+    "log_flux",
+    "science_weight",
+    "required",
+    "current_factor",
+    "current_best_fraction",
+    "remaining_visible_slots",
+    "future_peak_geometry",
+    "current_altitude",
+    "local_missing_required",
+    "required_pressure",
+    "band_fraction",
+    "global_fraction",
+    "remaining_season",
+    "local_missing_targets"
+  ],
+  "samples": 158304,
+  "seconds": 7.314139166846871,
+  "split": {
+    "train": [
+      "L1",
+      "L2"
+    ],
+    "validation": [
+      "L3"
+    ],
+    "official_final_test": [
+      "L4"
+    ]
+  },
+  "labels": "realized terminal per-target completion and remaining science under randomized compressed continuation",
+  "episodes": [
+    {
+      "card": "L1",
+      "episode": 0,
+      "req_priority": 1.0,
+      "quota": 0.8,
+      "compressed_terminal": 2409.290283203125,
+      "completed": 5915,
+      "required_missing": 56
+    },
+    {
+      "card": "L1",
+      "episode": 1,
+      "req_priority": 5.0,
+      "quota": 0.35,
+      "compressed_terminal": 429.7580261230469,
+      "completed": 4215,
+      "required_missing": 64
+    },
+    {
+      "card": "L1",
+      "episode": 2,
+      "req_priority": 1.0,
+      "quota": 0.55,
+      "compressed_terminal": 1835.0792236328125,
+      "completed": 5621,
+      "required_missing": 61
+    },
+    {
+      "card": "L1",
+      "episode": 3,
+      "req_priority": 15.0,
+      "quota": 1.0,
+      "compressed_terminal": 3542.543701171875,
+      "completed": 6108,
+      "required_missing": 36
+    },
+    {
+      "card": "L1",
+      "episode": 4,
+      "req_priority": 15.0,
+      "quota": 0.35,
+      "compressed_terminal": 738.4473266601562,
+      "completed": 3898,
+      "required_missing": 53
+    },
+    {
+      "card": "L1",
+      "episode": 5,
+      "req_priority": 0.3,
+      "quota": 0.35,
+      "compressed_terminal": -1683.003173828125,
+      "completed": 4068,
+      "required_missing": 104
+    },
+    {
+      "card": "L1",
+      "episode": 6,
+      "req_priority": 15.0,
+      "quota": 0.55,
+      "compressed_terminal": 2550.815185546875,
+      "completed": 5317,
+      "required_missing": 42
+    },
+    {
+      "card": "L1",
+      "episode": 7,
+      "req_priority": 1.0,
+      "quota": 1.0,
+      "compressed_terminal": 3077.106201171875,
+      "completed": 6148,
+      "required_missing": 46
+    },
+    {
+      "card": "L2",
+      "episode": 0,
+      "req_priority": 5.0,
+      "quota": 0.55,
+      "compressed_terminal": -2222.82568359375,
+      "completed": 4757,
+      "required_missing": 123
+    },
+    {
+      "card": "L2",
+      "episode": 1,
+      "req_priority": 0.3,
+      "quota": 0.55,
+      "compressed_terminal": -3671.68359375,
+      "completed": 4950,
+      "required_missing": 156
+    },
+    {
+      "card": "L2",
+      "episode": 2,
+      "req_priority": 1.0,
+      "quota": 0.55,
+      "compressed_terminal": -3282.802978515625,
+      "completed": 4839,
+      "required_missing": 145
+    },
+    {
+      "card": "L2",
+      "episode": 3,
+      "req_priority": 5.0,
+      "quota": 1.0,
+      "compressed_terminal": -356.1993103027344,
+      "completed": 5792,
+      "required_missing": 106
+    },
+    {
+      "card": "L2",
+      "episode": 4,
+      "req_priority": 0.3,
+      "quota": 1.0,
+      "compressed_terminal": -1249.8663330078125,
+      "completed": 5810,
+      "required_missing": 124
+    },
+    {
+      "card": "L2",
+      "episode": 5,
+      "req_priority": 5.0,
+      "quota": 0.8,
+      "compressed_terminal": -585.1508178710938,
+      "completed": 5567,
+      "required_missing": 106
+    },
+    {
+      "card": "L2",
+      "episode": 6,
+      "req_priority": 15.0,
+      "quota": 0.35,
+      "compressed_terminal": -3014.24072265625,
+      "completed": 3786,
+      "required_missing": 122
+    },
+    {
+      "card": "L2",
+      "episode": 7,
+      "req_priority": 15.0,
+      "quota": 1.0,
+      "compressed_terminal": 66.76555633544922,
+      "completed": 5735,
+      "required_missing": 97
+    },
+    {
+      "card": "L3",
+      "episode": 0,
+      "req_priority": 1.0,
+      "quota": 0.55,
+      "compressed_terminal": 1663.5845947265625,
+      "completed": 5903,
+      "required_missing": 67
+    },
+    {
+      "card": "L3",
+      "episode": 1,
+      "req_priority": 50.0,
+      "quota": 0.8,
+      "compressed_terminal": 4054.927734375,
+      "completed": 6712,
+      "required_missing": 33
+    },
+    {
+      "card": "L3",
+      "episode": 2,
+      "req_priority": 15.0,
+      "quota": 0.35,
+      "compressed_terminal": 303.9219970703125,
+      "completed": 3760,
+      "required_missing": 58
+    }
+  ],
+  "limitations": [
+    "training groups replace fiber grid",
+    "training omits event/stress/request reward",
+    "not an optimal controller",
+    "compressed returns are not official scores"
+  ]
+}

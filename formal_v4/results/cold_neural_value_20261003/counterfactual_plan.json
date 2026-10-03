@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-03T12:39:51Z",
+  "driver_pid": 76778,
+  "card": "L1",
+  "cases": [
+    "control",
+    "skip_100",
+    "skip_700"
+  ],
+  "per_process_timeout_seconds": 900,
+  "max_parallel": 2,
+  "wallclock_upper_bound_seconds": 1800,
+  "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_neural_value_20261003/production_manifest.json",
+  "intervention": "replace one actual production exposure by equal-duration wait, then complete same policy",
+  "causal_limit": "only same-policy do(wait); deterministic candidate enumeration differs from runtime-cut production"
+}

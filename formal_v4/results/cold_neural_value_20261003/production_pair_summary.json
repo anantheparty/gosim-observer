@@ -1,0 +1,54 @@
+[
+  {
+    "mode": "baseline",
+    "card": "L3",
+    "score": 5701.591442,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5753.579627,
+      "uniformity_penalty": -1.988186
+    },
+    "counts": {
+      "decisions": 1719,
+      "invalidated_observations": 13,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 13284,
+      "observe_actions": 1003,
+      "required_missing": 5,
+      "targets_observed": 8097
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    }
+  },
+  {
+    "mode": "neural",
+    "card": "L3",
+    "score": 5544.336893,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 0.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5696.720574,
+      "uniformity_penalty": -2.383681
+    },
+    "counts": {
+      "decisions": 1722,
+      "invalidated_observations": 15,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 13190,
+      "observe_actions": 994,
+      "required_missing": 5,
+      "targets_observed": 8060
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    }
+  }
+]

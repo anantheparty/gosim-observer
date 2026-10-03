@@ -1,0 +1,176 @@
+{
+  "model": "L1/L2 public local truth oracle; continuous integer seconds; original report times fixed; all original observe columns preserved",
+  "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/gpu_phase_followup_20261003/phase/L2",
+  "incumbent_gate": {
+    "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/gpu_phase_followup_20261003/phase/L2",
+    "expected_total": 6949.795139,
+    "reproduced_total": 6949.795139,
+    "score_exact": true,
+    "counts_exact": true,
+    "components_exact": true,
+    "observation_bytes_exact": false,
+    "decision_bytes_exact": true,
+    "observation_semantics_exact": true,
+    "observation_order_note": "Source actions.jsonl sorted assignment keys. Per-action observation CSV row ordering can differ; every scored target/fiber/factor/quality/program/score/validity record is compared after sorting, ignoring only row observation_id."
+  },
+  "columns": 62907,
+  "seed": 407,
+  "search_seconds": 600.0,
+  "iterations": 74905,
+  "baseline_model": {
+    "total": 6949.795138679773,
+    "science": 6800.223268728732,
+    "required_missing": 3,
+    "uniformity_penalty": 0.42813004895894125,
+    "request_reward": 200.0,
+    "report_settlement": 100.0,
+    "observe_actions": 1089
+  },
+  "optimized_model": {
+    "total": 7008.567150509399,
+    "science": 6808.9410961706135,
+    "required_missing": 2,
+    "uniformity_penalty": 0.3739456612145142,
+    "request_reward": 200.0,
+    "report_settlement": 100.0,
+    "observe_actions": 1042
+  },
+  "native": {
+    "schema_version": "v4-score-report-v1",
+    "scenario": "v4-l2",
+    "total": 7008.567151,
+    "components": {
+      "sum_best_scores": 6808.941096,
+      "required_penalty": -100.0,
+      "uniformity_penalty": -0.373946,
+      "report_settlement": 100.0,
+      "observation_request_reward": 200.0
+    },
+    "counts": {
+      "decisions": 1714,
+      "observe_actions": 1042,
+      "observations": 14653,
+      "targets_observed": 8462,
+      "required_missing": 2,
+      "invalidated_observations": 0,
+      "observation_requests_issued": 2,
+      "observation_requests_completed": 2
+    },
+    "by_class": {
+      "BGS": 967.826751,
+      "ELG": 2961.413324,
+      "LRG": 1428.79192,
+      "QSO": 1219.35974,
+      "Star": 231.549361
+    },
+    "uniformity_bands": {
+      "ra_0_10": 0.798371,
+      "ra_10_20": 0.801426,
+      "ra_20_30": 0.841651,
+      "ra_30_40": 0.85443,
+      "ra_40_50": 0.787879,
+      "ra_50_60": 0.830508,
+      "ra_60_70": 0.860014,
+      "ra_70_80": 0.852768,
+      "ra_80_90": 0.740566,
+      "ra_90_100": 0.841202,
+      "ra_100_110": 0.868729,
+      "ra_110_120": 0.841463
+    },
+    "invalidations": [],
+    "observation_requests": [
+      {
+        "request_id": "V4RQ0001",
+        "target_ids": [
+          "V4T008449",
+          "V4T007102",
+          "V4T004900",
+          "V4T007983",
+          "V4T008375",
+          "V4T005579",
+          "V4T008591",
+          "V4T007097"
+        ],
+        "completed_target_ids": [
+          "V4T004900",
+          "V4T007983",
+          "V4T008375",
+          "V4T005579",
+          "V4T008591",
+          "V4T007097"
+        ],
+        "completed_count": 6,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0,
+        "issued_at_utc": "2026-11-10T00:30:00Z",
+        "deadline_utc": "2026-11-11T08:15:00Z"
+      },
+      {
+        "request_id": "V4RQ0002",
+        "target_ids": [
+          "V4T000962",
+          "V4T005594",
+          "V4T007298",
+          "V4T008392",
+          "V4T005689",
+          "V4T008386",
+          "V4T000651",
+          "V4T006418"
+        ],
+        "completed_target_ids": [
+          "V4T000962",
+          "V4T005594",
+          "V4T007298",
+          "V4T008392",
+          "V4T005689",
+          "V4T000651",
+          "V4T006418"
+        ],
+        "completed_count": 7,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0,
+        "issued_at_utc": "2026-12-12T01:00:00Z",
+        "deadline_utc": "2026-12-13T08:15:00Z"
+      }
+    ],
+    "termination": {
+      "reason": "survey_complete",
+      "detail": ""
+    },
+    "sha256": {
+      "scenario": "b9027d4acd26252ace34d129b9dff10d6c68a1e0ba2912c3b2a7e4510e70bedd",
+      "decisions": "2494ad3590402ce409a7c417c934d912ee6aaa9b0c34f30c1982bc2eccde44e3",
+      "observations": "bd7cc796f9bdf78380c30ee535ca8c718bc07d6147cf26898155005c2d143a0b",
+      "messages": "33bf95922522e6a64899de065b37aed47785b1144145717a05bd69eb0083b965"
+    },
+    "organizer_only": {
+      "pointing_offset_deg": {
+        "alt": 0.0,
+        "az": 0.0
+      }
+    }
+  },
+  "official_replay_total_delta": 58.77201200000036,
+  "native_model_abs_error": 4.906014510197565e-07,
+  "operators": {
+    "1": {
+      "tries": 67400,
+      "improvements": 135
+    },
+    "2": {
+      "tries": 5997,
+      "improvements": 4
+    },
+    "4": {
+      "tries": 1508,
+      "improvements": 0
+    }
+  },
+  "certificate": null
+}

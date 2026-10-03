@@ -1,0 +1,52 @@
+{
+  "scope": "Independent official protocol/scorer derivation first; minimum leave-one-local-card-out experiment second; existing policy and our own cloud outputs read only afterwards. No hidden platform truth, production changes, ZIP/index/service/power changes or network submissions.",
+  "conclusion": "The tested probabilistic program-choice model does not improve on an empirical bulletin prior consistently. Existing production already separates weather/efficiency and conservatively tracks raw completion. Evidence points to opportunity value / exposure allocation as the next direction, not a broad claim of score improvement.",
+  "experiment_interpretation": {
+    "L1": {
+      "prior_percent_of_conditional_oracle": 99.30731256209098,
+      "joint_expected_minus_prior": -23.200581356097246,
+      "joint_expected_percent_gain_over_naive_eff_as_band": 6.7413691670795695
+    },
+    "L2": {
+      "prior_percent_of_conditional_oracle": 97.89226728468005,
+      "joint_expected_minus_prior": 1.8218568913753188,
+      "joint_expected_percent_gain_over_naive_eff_as_band": 7.680964267691204
+    },
+    "L3": {
+      "prior_percent_of_conditional_oracle": 99.70185690755129,
+      "joint_expected_minus_prior": -0.9927674873706565,
+      "joint_expected_percent_gain_over_naive_eff_as_band": 5.861613555598311
+    },
+    "L4": {
+      "prior_percent_of_conditional_oracle": 99.49414786391688,
+      "joint_expected_minus_prior": 0.5160177291318178,
+      "joint_expected_percent_gain_over_naive_eff_as_band": 8.387716752943764
+    }
+  },
+  "identifiability": [
+    "Missing assigned target from hits means nominal fiber/pointing or minimum-altitude failure; hit with zero score means scoring closure/obstruction/zero effective quality. Minimum altitude is public, so compute and remove this confounder before geometry calibration.",
+    "For a reported score c rounded to 1e-6, raw g lies between max(0,c-0.500001e-6)/(w*max(match_mult,mismatch_mult)) and min(1,(c+0.500001e-6)/(w*min(match_mult,mismatch_mult))). Best score and max raw factor need independent histories, replayed after data_loss.",
+    "A single uncapped field with essentially one band identifies Z=weather*efficiency*direction attenuation much better than weather and efficiency separately. There is a continuum of C/E combinations producing the same scores; fitting residual alone cannot prove a decomposition.",
+    "Program B excludes efficiency and directional attenuation/closures. Whole-site closure is included. Lunar/airmass geometry is public and time resolved. The protocol has no numerical weather grade forecast.",
+    "Scores above w*mismatch_mult prove the declared program matched, giving a band interval regardless of efficiency/directional losses. Saturation produces an inequality in quality, not an equality.",
+    "Within a request window, absent completed_target_ids proves every valid fully-contained exposure factor<threshold. For c/w>=threshold this forces matching program; positive status with only one potentially-completing exposure and c/w<threshold*match forces mismatch. These are online digital band labels."
+  ],
+  "settlement_mechanisms": [
+    "Science and signal do not add across exposures; candidate science reward must be E[max(new_score-best_score,0)]. Raw completion threshold is independent of program multiplier.",
+    "Exposure crossing night end is truncated but the minimum-altitude test applies over all actual seconds. Hit geometry is frozen at exposure start and targets track sidereally.",
+    "A report consumes zero simulated time. Two false reports since the last correct report are free; a correct report resets allowance. A false report rules out a current repairable fault, not earthquake or all efficiency degradation. Correct repair also leaves earthquake loss in place.",
+    "Request reward can overlap other requests and ordinary science, but exposures must be wholly within each window and incomplete repeats cannot add to raw g. Active progress is exact public threshold feedback.",
+    "Uniformity total cost is bounded by its public weight (200 in these cards); a remaining required target costs 50. The cloud audit found no final certified-completion gap and only one extra digital band label in the four verified portfolio runs."
+  ],
+  "next_minimal_test": {
+    "hypothesis": "Replacing deterministic quality with a small distribution matters mainly around required/request thresholds and best-score revisit thresholds; discounting required immediate value by realistic cheap future completion opportunities may free science time.",
+    "field_value": "sum_i E[(w_i*min(f_i*T*Q_i/(f0*T0),1)*m_i-best_i)_+ + P_req*1{old_max_factor_i<threshold<=new_factor_i}] + E[request_reward_delta] + E[continuation_after-continuation_before] - lambda_night*T",
+    "continuation": "For each target retain 2-3 best remaining public geometry windows. Under 8-16 empirical local weather/efficiency scenarios, enumerate a small exposure-duration grid and compute expected future incremental science/completion minus that night's capacity price. This is a two-stage value approximation; individual options need capacity prices or they overstate all targets' future availability.",
+    "duration": "Use scenario-integrated Q across actual slot overlaps rather than one fixed multiplicative safety margin; longer exposures average and mean-revert weather differently. Evaluate expected threshold crossing probability, not threshold of mean Q.",
+    "gate": "First fixed-snapshot candidate value/rank comparisons; then isolated complete L1-L4 official local replays on identical candidate/time budgets. Do not infer season or official gains from conditional sums."
+  },
+  "files_sha256": {
+    "formal_v4/research/cold_probabilistic_model.py": "561708490417f77a0bf50b2de3828b7bcc5c21a6540749fdec10344e85862007",
+    "formal_v4/research/cold_probabilistic_cloud_audit.py": "db5d34f48af678a4fe963e4dba94d6433a3f679a10555eca7d6a057b6c0513df"
+  }
+}

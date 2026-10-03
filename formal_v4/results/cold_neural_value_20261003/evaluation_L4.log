@@ -1,0 +1,14 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:360: RuntimeWarning: divide by zero encountered in matmul
+  depth=vec@center
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:360: RuntimeWarning: overflow encountered in matmul
+  depth=vec@center
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:360: RuntimeWarning: invalid value encountered in matmul
+  depth=vec@center
+{"card": "L4", "mode": "greedy", "total": -842.501869, "components": {"sum_best_scores": 3809.292658, "required_penalty": -4650.0, "uniformity_penalty": -1.794526, "report_settlement": 0.0, "observation_request_reward": 0.0}, "counts": {"decisions": 1735, "observe_actions": 1106, "observations": 12369, "targets_observed": 5315, "required_missing": 93, "invalidated_observations": 215, "observation_requests_issued": 2, "observation_requests_completed": 0}, "termination": {"reason": "survey_complete", "detail": ""}, "seconds": 13.19607187481597}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:251: RuntimeWarning: divide by zero encountered in matmul
+  x=x@p[f"w{i}"].T+p[f"b{i}"]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:251: RuntimeWarning: overflow encountered in matmul
+  x=x@p[f"w{i}"].T+p[f"b{i}"]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_neural_value.py:251: RuntimeWarning: invalid value encountered in matmul
+  x=x@p[f"w{i}"].T+p[f"b{i}"]
+{"card": "L4", "mode": "neural", "total": -1622.08458, "components": {"sum_best_scores": 3131.869224, "required_penalty": -4850.0, "uniformity_penalty": -3.953804, "report_settlement": 0.0, "observation_request_reward": 100.0}, "counts": {"decisions": 1735, "observe_actions": 1106, "observations": 12817, "targets_observed": 4083, "required_missing": 97, "invalidated_observations": 202, "observation_requests_issued": 2, "observation_requests_completed": 1}, "termination": {"reason": "survey_complete", "detail": ""}, "seconds": 16.640068291919306}

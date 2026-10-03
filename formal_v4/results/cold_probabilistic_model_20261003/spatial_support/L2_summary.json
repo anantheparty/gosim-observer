@@ -1,0 +1,129 @@
+{
+  "card": "L2",
+  "status": "READY",
+  "full_sphere_cover": {
+    "latitude_cells": 180,
+    "longitude_cells": 360,
+    "sphere_cells": 64800,
+    "latitude_step_deg": 1.0,
+    "longitude_step_deg": 1.0,
+    "maximum_cover_radius_deg": 0.7071023936882724,
+    "cover_proof": "Closed RA/Dec rectangles partition [-90,90]x[0,360], with longitude wrap and poles. Each rectangle uses its midpoint; angular distance maximum lies on longitude edges and a latitude endpoint, giving the computed corner radius. All continuous sphere centers are covered."
+  },
+  "field_side_deg": 2.5298221281347035,
+  "field_gnomonic_circumradius_deg": 1.788273577759519,
+  "candidate_circle_radius_deg": 2.495376071447791,
+  "nonempty_cover_cells": 2797,
+  "padded_candidate_matrix_shape": [
+    2797,
+    312
+  ],
+  "candidate_target_edges": 201170,
+  "quality_source": "Complete local target-slot supremum graph, arbitrary repair efficiency upper, positive event multipliers, lunar<=1, continuous max-alt visibility envelope.",
+  "target_dual_candidates": [
+    "zero",
+    "science_slope",
+    "normalized_price_0.03",
+    "normalized_price_0.1",
+    "normalized_price_0.25",
+    "normalized_price_0.5"
+  ],
+  "dual_upper_values": {
+    "zero": {
+      "target_conjugate_minus_required_constant": 9215.71493302712,
+      "season_spatial_support": 9.789999999999816e-08,
+      "season_top16_without_field_support": 0.0,
+      "score_upper_before_padding": 9515.71493312502,
+      "score_upper_with_padding": 9516.71493312502
+    },
+    "science_slope": {
+      "target_conjugate_minus_required_constant": -100.0,
+      "season_spatial_support": 39098.98895368544,
+      "season_top16_without_field_support": 53611.126576182825,
+      "score_upper_before_padding": 39298.98895368544,
+      "score_upper_with_padding": 39299.98895368544
+    },
+    "normalized_price_0.03": {
+      "target_conjugate_minus_required_constant": 8949.568273919118,
+      "season_spatial_support": 299.2480897845173,
+      "season_top16_without_field_support": 299.30265413226573,
+      "score_upper_before_padding": 9548.816363703636,
+      "score_upper_with_padding": 9549.816363703636
+    },
+    "normalized_price_0.1": {
+      "target_conjugate_minus_required_constant": 8328.55940266712,
+      "season_spatial_support": 997.4936323866245,
+      "season_top16_without_field_support": 997.6755137742181,
+      "score_upper_before_padding": 9626.053035053745,
+      "score_upper_with_padding": 9627.053035053745
+    },
+    "normalized_price_0.25": {
+      "target_conjugate_minus_required_constant": 6998.903171296995,
+      "season_spatial_support": 2493.7340808197214,
+      "season_top16_without_field_support": 2494.188784435544,
+      "score_upper_before_padding": 9792.637252116718,
+      "score_upper_with_padding": 9793.637252116718
+    },
+    "normalized_price_0.5": {
+      "target_conjugate_minus_required_constant": 4859.970812407875,
+      "season_spatial_support": 4987.371275052774,
+      "season_top16_without_field_support": 4988.354952316003,
+      "score_upper_before_padding": 10147.342087460649,
+      "score_upper_with_padding": 10148.342087460649
+    }
+  },
+  "best_target_dual": "zero",
+  "best_spatial_upper": 9516.71493312502,
+  "previous_complete_graph_upper": 9516.71493302712,
+  "upper_tightening": -9.789982868824154e-08,
+  "contiguous_single_exposure_domain": {
+    "duration_seconds": 3600,
+    "equal_slot_seconds": 900,
+    "window_slots": 4,
+    "bound_after_contiguous_domain": 9502.027613912787,
+    "best_target_dual": "zero",
+    "upper_tightening_from_previous": 14.68731911433315,
+    "target_caps_sum_before": 8562.95244479766,
+    "target_caps_sum_after": 8555.718764240908,
+    "additional_required_provably_impossible": 0,
+    "dual_upper_values": {
+      "zero": {
+        "target_conjugate_minus_required_constant": 9201.027613814887,
+        "season_spatial_support": 9.789999999999816e-08,
+        "score_upper_with_padding": 9502.027613912787
+      },
+      "science_slope": {
+        "target_conjugate_minus_required_constant": -100.0,
+        "season_spatial_support": 39098.98895368544,
+        "score_upper_with_padding": 39299.98895368544
+      },
+      "normalized_price_0.03": {
+        "target_conjugate_minus_required_constant": 8935.950862258225,
+        "season_spatial_support": 299.2480897845173,
+        "score_upper_with_padding": 9536.198952042743
+      },
+      "normalized_price_0.1": {
+        "target_conjugate_minus_required_constant": 8317.438441959359,
+        "season_spatial_support": 997.4936323866245,
+        "score_upper_with_padding": 9615.932074345983
+      },
+      "normalized_price_0.25": {
+        "target_conjugate_minus_required_constant": 6993.081094832189,
+        "season_spatial_support": 2493.7340808197214,
+        "score_upper_with_padding": 9787.815175651911
+      },
+      "normalized_price_0.5": {
+        "target_conjugate_minus_required_constant": 4859.926470191935,
+        "season_spatial_support": 4987.371275052774,
+        "score_upper_with_padding": 10148.297745244708
+      }
+    },
+    "attribute": "Any improvement here comes from continuous single-exposure time integration, not the tested spatial target-price refinement."
+  },
+  "contains_latest_root_lower_bound": true,
+  "elapsed_seconds": 20.742902040481567,
+  "source_sha256": "b7b85159026e3734b70fe7e62be542b5d82df6dad5077da00a904df03ca39082",
+  "limitations": "Full continuous-pointing upper coverage. Circle cover is coarse and ignores individual fiber cells. Finite target-dual candidates, no optimality claim. Local truth weather conditional, not platform bound. No strategy replay or improvement.",
+  "executed_source_sha256": "672186b82d710cc56fedc704aad13b67c308eecada343b765d302a74ea92785e",
+  "source_postrun_change": "Proof wording only: clarify exposure-start actual_center, hit-at-start tracking and no extra pointing-offset radius. Numeric construction unchanged."
+}

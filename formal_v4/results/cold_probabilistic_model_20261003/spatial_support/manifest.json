@@ -1,0 +1,77 @@
+{
+  "status": "READY",
+  "stage_paths": [
+    "formal_v4/research/cold_probabilistic_spatial_support.py",
+    "formal_v4/research/cold_probabilistic_verify_spatial.py",
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support"
+  ],
+  "source_files": {
+    "formal_v4/research/cold_probabilistic_spatial_support.py": {
+      "sha256": "b7b85159026e3734b70fe7e62be542b5d82df6dad5077da00a904df03ca39082",
+      "bytes": 13964
+    },
+    "formal_v4/research/cold_probabilistic_verify_spatial.py": {
+      "sha256": "24766ab732e69bdb1a137798e6e331e0c145bee68238f5ce7811436e7d864277",
+      "bytes": 3690
+    }
+  },
+  "output_files": {
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/summary.json": {
+      "sha256": "056bd30e62eac8b410bac643f8b4c51754534dfbba18fe24945cf9a61a08249c",
+      "bytes": 12339
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L2_summary.json": {
+      "sha256": "a47a815e4bf61ca3bb061f3388a0873dc35b020c027c893b5962f429d999a2b5",
+      "bytes": 5906
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/certificate_verification.json": {
+      "sha256": "ca37e12b6ff419cd778ff104e6362d14e5b35b3e060e03e4608149618bfb490a",
+      "bytes": 1211
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L2_proof.json": {
+      "sha256": "f257acd70e389e73f6c9328a41762db70a476505df04442be27d39695830ff48",
+      "bytes": 2529
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L1_slot_supports.json": {
+      "sha256": "2d49075cfbcf0a579aeff1264b6e5fcf18469e56b32bdee413a7631482d036cd",
+      "bytes": 382441
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L2_slot_supports.json": {
+      "sha256": "eec95b0d82f715ef05e7706cd38fcbc5cbbfbdfc3c0cef3292b70f5b17d72baf",
+      "bytes": 413206
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L1_single_exposure_caps.npz": {
+      "sha256": "bac5b1333f12c75964a97c16848ad8e851098f7212cac0aa1b68de4df710ffc8",
+      "bytes": 4751
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/README.md": {
+      "sha256": "9d2caa59838b25e036fe17a2b9535bbfc6b77633903fc8e6e3a1d1a01968e133",
+      "bytes": 3576
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L1_proof.json": {
+      "sha256": "f257acd70e389e73f6c9328a41762db70a476505df04442be27d39695830ff48",
+      "bytes": 2529
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L2_single_exposure_caps.npz": {
+      "sha256": "5ece156812ad9c019068c48ca95929e0d813f088f361801937d7f2b9283bc443",
+      "bytes": 4793
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/spatial_support/L1_summary.json": {
+      "sha256": "06480fb009c71b5007c95cd1bbc3dcbe4e2fadc796ad025dab6e22e8a19eb9d9",
+      "bytes": 5900
+    }
+  },
+  "graph_dependencies": {
+    "formal_v4/results/cold_probabilistic_model_20261003/resource_graph/L1_dual_certificate.npz": {
+      "sha256": "c78fd7bc176b56be66417b5e9ff610e3625ba422aba12723e1cb6d2f27f9b9d4",
+      "optional_rebuild_from_source": true
+    },
+    "formal_v4/results/cold_probabilistic_model_20261003/resource_graph/L2_dual_certificate.npz": {
+      "sha256": "610de536ed51e3993c8ed65378f8eafe873f755cb86d6e068d10fc9d24c7e28b",
+      "optional_rebuild_from_source": true
+    }
+  },
+  "official_strategy_improvement": false,
+  "new_useful_production_prices": false,
+  "old_READY_archive_files_modified": false
+}
