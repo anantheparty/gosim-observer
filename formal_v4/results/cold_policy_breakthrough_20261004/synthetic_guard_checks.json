@@ -1,0 +1,27 @@
+{
+  "schema": "terminal-report-synthetic-guard-checks-v1",
+  "checks_passed": 16,
+  "checks": [
+    "disabled_action_and_actor_call_identity",
+    "correct_report_releases_exact_action_without_actor_belief_update",
+    "nonterminal_observe_guard",
+    "nonterminal_wait_guard",
+    "observe_night_boundary_and_daytime_guard",
+    "unknown_completion_ratios_reject_observe",
+    "already_completed_final_assignment_safe",
+    "large_possible_Jain_harm_rejects_report",
+    "public_false_quota_exhaustion",
+    "consecutive_report_cap",
+    "missing_or_small_wallclock_rejects",
+    "public_resync_removes_completion_evidence",
+    "unexpected_report_time_or_rank_change_terminates",
+    "finish_terminal_and_only_one_inserted_report",
+    "full_protocol_sequence_and_terminal_summary",
+    "no_card_rank_or_date_hardcoding"
+  ],
+  "reads_truth": false,
+  "reads_teacher_labels": false,
+  "runs_season": false,
+  "imports_native_policy": false,
+  "agent_sha256": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3"
+}

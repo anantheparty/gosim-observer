@@ -1,0 +1,423 @@
+{
+  "schema": "terminal-report-one-action-evaluator-v1",
+  "card": "L3",
+  "pre_truth_lock": {
+    "stage": "frozen-before-evaluator-truth-read",
+    "files": {
+      "PRE_TRUTH_PLAN.md": "039a3576f101edaf4efc18f9af772090f766b1ec3f17459fc151107a5fc41484",
+      "terminal_report_audit.py": "9d723334b52d9817adfc1f0148566fd11acaf43bfb602b70c2c96c74a67efd3f",
+      "public_audit.json": "fbf03931ccd6b38605f6af8d388b95b579420e0337640213facff2e46707d80d"
+    }
+  },
+  "truth_access": "evaluator_only_fully_public_local_L3",
+  "actor_action_uses_truth": false,
+  "runs_full_season": false,
+  "reads_teacher_labels": false,
+  "correct": true,
+  "direct_report_score_delta": 100.0,
+  "free_false_report_delta": 0.0,
+  "now_utc_unchanged": "2026-12-22T07:59:58Z",
+  "observe_rank_unchanged": 992,
+  "prefix_ledger_sha256_before_after": "d3dc53227ea36270a8060fa3e21678516954dc4dec7de54e188ef029ee559107",
+  "frozen_next_action": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T000414",
+      "1": "V4T006561",
+      "10": "V4T002157",
+      "11": "V4T007210",
+      "13": "V4T004374",
+      "14": "V4T000131",
+      "15": "V4T002365",
+      "2": "V4T004430",
+      "3": "V4T002701",
+      "6": "V4T007278",
+      "7": "V4T007064",
+      "8": "V4T003998",
+      "9": "V4T001165"
+    },
+    "duration_seconds": 902,
+    "pointing": {
+      "alt_deg": 79.8144782,
+      "az_deg": 279.6938319
+    },
+    "program": "DARK"
+  },
+  "next_action_mutated": false,
+  "same_final_geometry_hits": true,
+  "same_program_bands": true,
+  "factor_and_science_non_decreasing": true,
+  "baseline_full_report_total": 6004.504542,
+  "baseline_reconstructed_total": 6004.504561696356,
+  "rounding_gap": 1.9696356503118295e-05,
+  "baseline_last_action_score_error_max": 4.766453796101189e-07,
+  "baseline_last_action_factor_error_max": 4.661369621128397e-07,
+  "delta": {
+    "total": 104.40389323940872,
+    "sum_best_scores": 4.375264122785666,
+    "required_penalty": 0.0,
+    "uniformity_penalty": 0.02862911662293577,
+    "report_settlement": 100.0,
+    "observation_request_reward": 0.0
+  },
+  "estimated_full_ledger_total_after_one_action_substitution": 6108.908435239408,
+  "lower_bound_total_delta_public": 99.29780023830395,
+  "baseline_settlement": {
+    "total": 6004.504561696356,
+    "sum_best_scores": 6056.275512067505,
+    "required_penalty": -250.0,
+    "required_missing": 5,
+    "uniformity_penalty": -1.7709503711482943,
+    "report_settlement": 0.0,
+    "observation_request_reward": 200.0,
+    "uniformity_bands": {
+      "ra_10_20": 0.7846410684474123,
+      "ra_20_30": 0.8217115689381933,
+      "ra_30_40": 0.8076923076923077,
+      "ra_40_50": 0.8484848484848485,
+      "ra_60_70": 0.8143939393939394,
+      "ra_70_80": 0.8033033033033034,
+      "ra_80_90": 0.7496402877697842,
+      "ra_90_100": 0.7197898423817863,
+      "ra_100_110": 0.7208588957055214,
+      "ra_110_120": 0.7167259786476868,
+      "ra_120_130": 0.6447368421052632,
+      "ra_130_140": 0.6063569682151589
+    },
+    "observation_requests": [
+      {
+        "request_id": "V4RQ0001",
+        "target_ids": [
+          "V4T001138",
+          "V4T001308",
+          "V4T006428",
+          "V4T005300",
+          "V4T001191",
+          "V4T001988",
+          "V4T006090",
+          "V4T006985"
+        ],
+        "completed_target_ids": [
+          "V4T001138",
+          "V4T006428",
+          "V4T005300",
+          "V4T001988",
+          "V4T006090",
+          "V4T006985"
+        ],
+        "completed_count": 6,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0
+      },
+      {
+        "request_id": "V4RQ0002",
+        "target_ids": [
+          "V4T002161",
+          "V4T001679",
+          "V4T000263",
+          "V4T005140",
+          "V4T004673",
+          "V4T002285",
+          "V4T004343",
+          "V4T006487"
+        ],
+        "completed_target_ids": [
+          "V4T002161",
+          "V4T000263",
+          "V4T005140",
+          "V4T004673",
+          "V4T002285",
+          "V4T006487"
+        ],
+        "completed_count": 6,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0
+      }
+    ]
+  },
+  "changed_settlement": {
+    "total": 6108.908454935765,
+    "sum_best_scores": 6060.65077619029,
+    "required_penalty": -250.0,
+    "required_missing": 5,
+    "uniformity_penalty": -1.7423212545253586,
+    "report_settlement": 100.0,
+    "observation_request_reward": 200.0,
+    "uniformity_bands": {
+      "ra_10_20": 0.7846410684474123,
+      "ra_20_30": 0.8217115689381933,
+      "ra_30_40": 0.8076923076923077,
+      "ra_40_50": 0.8484848484848485,
+      "ra_60_70": 0.8143939393939394,
+      "ra_70_80": 0.8033033033033034,
+      "ra_80_90": 0.7496402877697842,
+      "ra_90_100": 0.7197898423817863,
+      "ra_100_110": 0.7208588957055214,
+      "ra_110_120": 0.7167259786476868,
+      "ra_120_130": 0.6491228070175439,
+      "ra_130_140": 0.6063569682151589
+    },
+    "observation_requests": [
+      {
+        "request_id": "V4RQ0001",
+        "target_ids": [
+          "V4T001138",
+          "V4T001308",
+          "V4T006428",
+          "V4T005300",
+          "V4T001191",
+          "V4T001988",
+          "V4T006090",
+          "V4T006985"
+        ],
+        "completed_target_ids": [
+          "V4T001138",
+          "V4T006428",
+          "V4T005300",
+          "V4T001988",
+          "V4T006090",
+          "V4T006985"
+        ],
+        "completed_count": 6,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0
+      },
+      {
+        "request_id": "V4RQ0002",
+        "target_ids": [
+          "V4T002161",
+          "V4T001679",
+          "V4T000263",
+          "V4T005140",
+          "V4T004673",
+          "V4T002285",
+          "V4T004343",
+          "V4T006487"
+        ],
+        "completed_target_ids": [
+          "V4T002161",
+          "V4T000263",
+          "V4T005140",
+          "V4T004673",
+          "V4T002285",
+          "V4T006487"
+        ],
+        "completed_count": 6,
+        "minimum_completed": 6,
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "completed": true,
+        "reward": 100.0
+      }
+    ]
+  },
+  "baseline_final_hits": [
+    {
+      "target_id": "V4T000414",
+      "factor": 0.29987376946218364,
+      "score": 0.35984852335462036,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T006561",
+      "factor": 0.24255029919773471,
+      "score": 0.29106035903728167,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002157",
+      "factor": 0.661235742587447,
+      "score": 0.35706730099722134,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007210",
+      "factor": 0.46586430273784646,
+      "score": 0.5590371632854158,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T004374",
+      "factor": 0.5314863136393717,
+      "score": 0.28700260936526073,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T000131",
+      "factor": 0.22028665140235837,
+      "score": 0.26434398168283,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002365",
+      "factor": 0.1553092135767452,
+      "score": 0.18637105629209424,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T004430",
+      "factor": 0.2961729853879952,
+      "score": 0.35540758246559423,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002701",
+      "factor": 0.17886553386303788,
+      "score": 0.21463864063564544,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007278",
+      "factor": 0.8698517450210954,
+      "score": 0.4697199423113915,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007064",
+      "factor": 0.11350845155922308,
+      "score": 0.23155724118081505,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T003998",
+      "factor": 0.1960561622079721,
+      "score": 0.2352673946495665,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T001165",
+      "factor": 0.35323189366612107,
+      "score": 0.4238782723993453,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    }
+  ],
+  "changed_final_hits": [
+    {
+      "target_id": "V4T000414",
+      "factor": 0.67765633211496,
+      "score": 0.813187598537952,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T006561",
+      "factor": 0.5481164504735075,
+      "score": 0.657739740568209,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002157",
+      "factor": 1.0,
+      "score": 0.54,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007210",
+      "factor": 1.0,
+      "score": 1.2,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T004374",
+      "factor": 1.0,
+      "score": 0.54,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T000131",
+      "factor": 0.49780494129558783,
+      "score": 0.5973659295547054,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002365",
+      "factor": 0.35096858323031305,
+      "score": 0.42116229987637566,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T004430",
+      "factor": 0.6692932806678068,
+      "score": 0.8031519368013681,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T002701",
+      "factor": 0.40420128054813353,
+      "score": 0.48504153665776023,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007278",
+      "factor": 1.0,
+      "score": 0.54,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T007064",
+      "factor": 0.25650699988073444,
+      "score": 0.5232742797566982,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T003998",
+      "factor": 0.4430487535094145,
+      "score": 0.5316585042112973,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    },
+    {
+      "target_id": "V4T001165",
+      "factor": 0.798235303731664,
+      "score": 0.9578823644779967,
+      "program_band": "DARK",
+      "program_multiplier": 1.2
+    }
+  ],
+  "evaluator_truth_inputs_sha256": {
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_slots.csv": "26e15e0c9a91b0333b0639fdc85a2af1e9c200a179f3db8cc49d8ff7a33222f6",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_weather_truth.csv": "6d91ac3e1869f23bf9a6b86aa666cbbc738dd85ff32a2e8b00f06c815f865643",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_events.csv": "2568aea2fdc1410c7cd31d3a8d9d0c6654db6adbf13639d7bc3ea4a7cf402f9a",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_earthquake_effects.csv": "9f28d1546ca9f77003fd251b4ea01effab794ea8df93e344c53447941d2f25f3",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_observation_requests.jsonl": "13dd8743ac832770de5dbc3599167fff24ad35c86aca707d715fb6ec3d3241ca",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_stress_events.csv": "a1a4e9b184b6f20a7a7b8d22a24bfedb5d62817f17f4e712ea5d7aded70277a3"
+  },
+  "official_engine_sha256": {
+    "v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892"
+  },
+  "seconds": 0.3032473751809448
+}

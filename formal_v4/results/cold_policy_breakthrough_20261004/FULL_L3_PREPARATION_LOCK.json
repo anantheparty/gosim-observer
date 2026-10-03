@@ -1,0 +1,77 @@
+{
+  "schema": "terminal-report-full-L3-preparation-lock-v2",
+  "source_files": {
+    "prepare_package.py": "708a58e7eb8b1e05a892a16912e97c3b3f334a57201db2d21d3c94a67c7476e4",
+    "run_protocol.py": "0990cc8c4d00dab936468d9d5d921c5cca6990a86cfa5f235b914696c1557002",
+    "terminal_report_agent.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3",
+    "full_l3_package/terminal_report_package_lock.json": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97",
+    "check_public_initialize_integration.py": "9a6cee5ff9af4cfefa1848636232c9624bc1d9d2f68cd8122cb680e6d37f141a",
+    "public_initialize_integration.json": "ba133efcfb829c781592c7cd389b62269c40b8ebc508a3e528c2d3bc82476046",
+    "check_terminal_report_agent.py": "b9bc9f21d17cba3dea8f5e11ad6cdf1bd7fbca94cc1cafdc61f22eb67839acb7",
+    "synthetic_guard_checks.json": "23cc65845be60b76d12a0162ed019463a959c13ffc6e0071ddeefc47d1be62ff",
+    "full_l3_synthetic_argv_checks.json": "758f52a45e93dbafebeb880e763f15121af5cf759a2879a0a98554d4759210e5",
+    "initialize_catalog_fix.diff": "39103a94a8bee5c8ef33b2c59954d03ff7f2a09bd77e3804ff3cbcc28e1629ff",
+    "FULL_L3_PACKET.md": "21e6167b59c9a6e9fce04a36ff9410d80fbc6ab4772a2d79a28bd0cdfc62387c",
+    "README.md": "a7f6f37c92e0617ff7dbdd900650b8d366f6ff3a563046ef80694b3601f6547d",
+    "MECHANICAL_FAILURES.md": "a1ea2dc8154d396875b9f9781fdfdf2c7b733e63df60b08d75ff760067270205"
+  },
+  "wrapper_original_sha256_preserved": false,
+  "package_native_files": 20,
+  "package_total_files": 22,
+  "cpuset": "18,19",
+  "cpus": 2,
+  "memory_mib": 2048,
+  "wallclock_seconds": 900,
+  "default_enabled": false,
+  "explicit_execute_required": true,
+  "teacher_source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "official_entry": [
+    "python3",
+    "-u",
+    "/workspace/wrapper.py"
+  ],
+  "only_actor_mounts": [
+    "readonly /workspace package",
+    "readonly /deps NumPy2.2.6"
+  ],
+  "seasons_launched": 0,
+  "docker_calls": 0,
+  "ssh_calls": 0,
+  "teacher_labels_read": 0,
+  "source_snapshot": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release",
+  "completed_control_gate_sha256": "761da88adaf431d8767c23b09347158db5093bf67bb5929f08e2d23358f91071",
+  "status": "PREPARED_AFTER_FAILED_INITIALIZE_IMPLEMENTATION",
+  "original_failed_source_preserved_in_archive": true,
+  "failed_implementation_lock_sha256": "e7a0fa0ff07fd8a72187e50e5ba69d50b2bda76b59feaae2ab953ddf4ec96a32",
+  "original_failed_preparation_lock_sha256": "c42aac5d3af3e3abd11fb150f0e308bed34a3e49a517e06b069b3b72baf936b5",
+  "real_public_prefix_check": {
+    "path": "public_initialize_integration.json",
+    "sha256": "ba133efcfb829c781592c7cd389b62269c40b8ebc508a3e528c2d3bc82476046",
+    "passed": true,
+    "decisions_per_variant": 3,
+    "actual_READY_enabled0_enabled1_JSONL_equal": true,
+    "captured_actions_equal_local_READY": [
+      true,
+      true,
+      true
+    ],
+    "numpy_version": "2.0.2",
+    "complete_season_parity_proven": false
+  },
+  "model_trigger_and_protocol_changed": false,
+  "implementation_change": "Read official targets.columns/rows instead of treating targets as a list.",
+  "parent_reported_failed_attempt": {
+    "elapsed_seconds": 0.399,
+    "decisions": 0,
+    "status": "FAILED_IMPLEMENTATION",
+    "output": "/tmp/geometry_native_20261003/results/terminal_report_20261004/enabled_L3"
+  },
+  "historical_artifacts_not_current_package": [
+    "full_l3_package.tar.gz",
+    "full_l3_job.json",
+    "full_l3_run_source_lock.json"
+  ],
+  "current_wrapper_sha256": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3",
+  "current_package_lock_sha256": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97",
+  "root_next_run_requires_new_output_directory": true
+}

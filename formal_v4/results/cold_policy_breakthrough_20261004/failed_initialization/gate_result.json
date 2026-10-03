@@ -1,0 +1,93 @@
+{
+  "schema": "terminal-report-official-L3-gate-v1",
+  "card": "L3",
+  "enabled": true,
+  "passed": false,
+  "gates": {
+    "runner_exit_zero": false,
+    "container_exit_zero": false,
+    "owned_container_cleaned": true,
+    "complete_official_protocol": false,
+    "resource_budget": true,
+    "source_and_inputs_unchanged": true,
+    "no_traceback": false,
+    "one_full_terminal_summary": false,
+    "configuration_matches": false,
+    "actor_never_reads_truth_or_teacher": false,
+    "finite_official_score": true,
+    "decision_bookkeeping": false,
+    "exactly_one_extra_action": false,
+    "one_frozen_event": false,
+    "one_released_event": false,
+    "one_report_result_event": false,
+    "insertion_and_frozen_context_verified": false,
+    "exactly_one_terminal_report": false,
+    "terminal_events_match_full_summary": false
+  },
+  "total": -21950.0,
+  "components": {
+    "observation_request_reward": 0,
+    "report_settlement": 0.0,
+    "required_penalty": -21750.0,
+    "sum_best_scores": 0,
+    "uniformity_penalty": -200.0
+  },
+  "reference_total": 6004.504542,
+  "actual_full_season_total_delta": -27954.504542,
+  "component_delta": {
+    "observation_request_reward": -200.0,
+    "sum_best_scores": -6056.275492,
+    "report_settlement": 0.0,
+    "uniformity_penalty": -198.22905,
+    "required_penalty": -21500.0
+  },
+  "uses_micro_packet_estimate_as_expected_score": false,
+  "termination": "agent_error",
+  "accounted_seconds": 0.399,
+  "agent_seconds": 0.388,
+  "runner_exit_code": 2,
+  "runner_timed_out": false,
+  "container_state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 1,
+    "Error": "",
+    "StartedAt": "2026-10-03T22:07:16.974159853Z",
+    "FinishedAt": "2026-10-03T22:07:17.417288719Z"
+  },
+  "cleanup": {
+    "name": "terminal-l3-1-9051988ae2d4",
+    "existed": true,
+    "removed": true,
+    "owner_match": true,
+    "container_id": "a65cc28fc8953a335e96da52a7723f975f701751ff519520d9c1aadb74aaa9fb",
+    "exists_after_cleanup": false
+  },
+  "terminal_report": {},
+  "participant_summary": {},
+  "action_intervention_audit": null,
+  "participant_truth_mount": false,
+  "participant_input_mounts": [
+    "readonly package",
+    "readonly dependencies"
+  ],
+  "output_sha256": {
+    "actions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "score_report.json": "c4890bcf8fd364a94ea2f5051c6049cdf249900623b6bb528c2e288ff8b441ea",
+    "workflow_result.json": "0bd04c80e9cd9f7112b3188026498ff1c4d1c59843339cdde034d76134983b9c",
+    "agent.log": "c702e814d9048f844c666b39235efb521cd71931c5036b97ffb1a32edb59b3f4",
+    "decisions.csv": "ad7e90f41d3aa3b7603504720f8e67ee6948317649ccf1cbfb7997bb23b568cc",
+    "messages.jsonl": "1c08edb4282f52ccef679ddb83c2b64a0563497fa69ea541d7b2f0ca50b7bb15"
+  },
+  "deployment_calibrated": false,
+  "cloud_deployment_authorized": false,
+  "host_seconds": 1.022894696041476,
+  "harness_sha256": "860a454e22ebd28abeba5b7c0b8f0adc6465cd3ec058363bb1ac75078ad23128",
+  "package_lock_sha256": "eddb7e6187d125976a817025f9189e2d6a014a8c253732963f9ec41db1ef91fd",
+  "run_source_lock_sha256": "3da5d71c51a54b5e5b7c63598f48c8d03e46375f17ee2ea57fc3c7d6ee479b3f"
+}

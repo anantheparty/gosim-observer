@@ -1,0 +1,71 @@
+{
+  "schema": "terminal-report-initialize-repair-source-lock-v1",
+  "status": "FROZEN_FOR_ROOT_REPLAY",
+  "current_preparation_lock_sha256": "51b7e85b618fd51ac2149c8ce2fff7bde0020c6dad640d31ea62d4649d18993f",
+  "failed_implementation_lock_sha256": "e7a0fa0ff07fd8a72187e50e5ba69d50b2bda76b59feaae2ab953ddf4ec96a32",
+  "source_files": {
+    "prepare_package.py": "708a58e7eb8b1e05a892a16912e97c3b3f334a57201db2d21d3c94a67c7476e4",
+    "run_protocol.py": "0990cc8c4d00dab936468d9d5d921c5cca6990a86cfa5f235b914696c1557002",
+    "terminal_report_agent.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3",
+    "full_l3_package/terminal_report_package_lock.json": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97",
+    "check_public_initialize_integration.py": "9a6cee5ff9af4cfefa1848636232c9624bc1d9d2f68cd8122cb680e6d37f141a",
+    "public_initialize_integration.json": "ba133efcfb829c781592c7cd389b62269c40b8ebc508a3e528c2d3bc82476046",
+    "check_terminal_report_agent.py": "b9bc9f21d17cba3dea8f5e11ad6cdf1bd7fbca94cc1cafdc61f22eb67839acb7",
+    "synthetic_guard_checks.json": "23cc65845be60b76d12a0162ed019463a959c13ffc6e0071ddeefc47d1be62ff",
+    "full_l3_synthetic_argv_checks.json": "758f52a45e93dbafebeb880e763f15121af5cf759a2879a0a98554d4759210e5",
+    "initialize_catalog_fix.diff": "39103a94a8bee5c8ef33b2c59954d03ff7f2a09bd77e3804ff3cbcc28e1629ff",
+    "FULL_L3_PACKET.md": "21e6167b59c9a6e9fce04a36ff9410d80fbc6ab4772a2d79a28bd0cdfc62387c",
+    "README.md": "a7f6f37c92e0617ff7dbdd900650b8d366f6ff3a563046ef80694b3601f6547d",
+    "MECHANICAL_FAILURES.md": "a1ea2dc8154d396875b9f9781fdfdf2c7b733e63df60b08d75ff760067270205"
+  },
+  "current_package_files": {
+    "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+    "observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+    "research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "terminal_report_package_lock.json": "9d488dda33db7448106d0b32fd25c7ab500e037ae9c3fd44e513fdd61ae7bc97",
+    "wrapper.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3"
+  },
+  "public_inputs": {
+    "formal_v4/results/policy_iteration_20261004/L3_initialize_public.json": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+    "formal_v4/results/policy_iteration_20261004/natural_control/L3/rank_0064/control/public_capture/capture.json": "bd6c1f0304b9ba575fc42a419748c0546d8f99b15bc3324983b2181c4fa8ccac"
+  },
+  "original_failed_hashes": {
+    "terminal_report_agent.py": "297bec972e2611e1f1f6a4b4aa06f8cb363667e8c9712bd1eebd6f76b58c0278",
+    "prepare_package.py": "ad2e1f6e22f95aca697f29d07a081c2f1c45c571a4c00528fa0b5a4f3b5df36a",
+    "run_protocol.py": "860a454e22ebd28abeba5b7c0b8f0adc6465cd3ec058363bb1ac75078ad23128",
+    "full_l3_package/terminal_report_package_lock.json": "eddb7e6187d125976a817025f9189e2d6a014a8c253732963f9ec41db1ef91fd",
+    "FULL_L3_PREPARATION_LOCK.json": "c42aac5d3af3e3abd11fb150f0e308bed34a3e49a517e06b069b3b72baf936b5",
+    "CANDIDATE_MANIFEST.json": "5a9053050ec8a75b7462b33d6330dab8c42cfccbbb85721d0ee36a37671641e8"
+  },
+  "historical_parent_artifacts": {
+    "full_l3_job.json": "ca49faa17098ddca30ee9778110c0517c908965c044e63b030aa8b141f4bf896",
+    "full_l3_run_source_lock.json": "3da5d71c51a54b5e5b7c63598f48c8d03e46375f17ee2ea57fc3c7d6ee479b3f",
+    "full_l3_package.tar.gz": "cf4c0424937ed595ba9a4f434f74a7efe36705da3b2f8c4bd2dfc17f35a07fdd"
+  },
+  "original_READY_files": 20,
+  "original_READY_bytes_unchanged": true,
+  "real_public_prefix_check_passed": true,
+  "model_trigger_and_protocol_changed": false,
+  "this_agent_seasons_launched": 0,
+  "this_fix_truth_read": false,
+  "this_fix_teacher_labels_read": false,
+  "this_agent_ssh_calls": 0,
+  "this_agent_docker_calls": 0
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "terminal-report-harness-synthetic-check-v1",
+  "passed": true,
+  "checks": {
+    "explicit_wrapper_entry": true,
+    "fixed_image": true,
+    "fixed_cpu_pair": true,
+    "two_cpus": true,
+    "memory_2gib": true,
+    "host_official_wallclock_900": true,
+    "network_none": true,
+    "retains_exit_evidence": true,
+    "only_two_readonly_actor_mounts": true,
+    "actor_has_no_kit_reference_or_output_mount": true,
+    "default_enabled_zero": true,
+    "correct_runtime_base_root": true,
+    "fixed_trigger_wallclock": true,
+    "explicit_enabled_one": true,
+    "reject_cpuset_18,18": true,
+    "reject_cpuset_16,17": true,
+    "reject_cpuset_18,19,20": true,
+    "synthetic_single_report_strict_action_parity": true,
+    "mutated_tail_rejected": true,
+    "control_action_parity": true
+  },
+  "checks_passed": 20,
+  "docker_calls": 0,
+  "seasons_launched": 0,
+  "teacher_labels_read": 0
+}

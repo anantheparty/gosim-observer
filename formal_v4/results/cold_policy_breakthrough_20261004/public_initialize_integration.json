@@ -1,0 +1,374 @@
+{
+  "schema": "terminal-report-real-public-initialize-prefix-integration-v1",
+  "passed": true,
+  "decisions_per_variant": 3,
+  "captured_public_feedbacks": 2,
+  "native_files_unchanged": 20,
+  "targets_contract": {
+    "format": "columns/rows",
+    "columns": [
+      "target_id",
+      "ra_deg",
+      "dec_deg",
+      "target_class",
+      "feature_flux",
+      "science_weight",
+      "required"
+    ],
+    "rows": 8700
+  },
+  "inputs": {
+    "formal_v4/results/policy_iteration_20261004/L3_initialize_public.json": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+    "formal_v4/results/policy_iteration_20261004/natural_control/L3/rank_0064/control/public_capture/capture.json": "bd6c1f0304b9ba575fc42a419748c0546d8f99b15bc3324983b2181c4fa8ccac"
+  },
+  "sources": {
+    "formal_v4/results/cold_policy_breakthrough_20261004/terminal_report_agent.py": "59b60a48ba3dfb7fd0cefe0e15734e20d151c0779112449ea35d2cec10f753f3",
+    "formal_v4/results/cold_policy_breakthrough_20261004/check_public_initialize_integration.py": "9a6cee5ff9af4cfefa1848636232c9624bc1d9d2f68cd8122cb680e6d37f141a",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "formal_v4/runs/geometry_native_20261003/release/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "formal_v4/runs/geometry_native_20261003/release/agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "formal_v4/runs/geometry_native_20261003/release/research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc"
+  },
+  "first_action_and_two_feedback_actions_equal_READY": true,
+  "all_JSONL_responses_equal_READY": true,
+  "initialize_ack_emitted": false,
+  "guard_feedback_ranks": [
+    0,
+    1
+  ],
+  "guard_feedback_hit_counts": [
+    14,
+    13
+  ],
+  "captured_actions_equal_local_READY": [
+    true,
+    true,
+    true
+  ],
+  "variants": {
+    "native": {
+      "returncode": 0,
+      "elapsed_seconds": 0.6716952500864863,
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 64.2811058,
+            "az_deg": 121.8505355
+          },
+          "assignments": {
+            "0": "V4T002940",
+            "1": "V4T004212",
+            "2": "V4T007143",
+            "4": "V4T007217",
+            "5": "V4T002044",
+            "6": "V4T003576",
+            "7": "V4T002657",
+            "8": "V4T000798",
+            "9": "V4T006836",
+            "10": "V4T002996",
+            "11": "V4T005767",
+            "12": "V4T005004",
+            "13": "V4T007502",
+            "14": "V4T006000",
+            "15": "V4T006644"
+          },
+          "duration_seconds": 316,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 52.5445201,
+            "az_deg": 122.0524728
+          },
+          "assignments": {
+            "0": "V4T006169",
+            "1": "V4T005939",
+            "2": "V4T001324",
+            "3": "V4T002663",
+            "4": "V4T001965",
+            "7": "V4T003802",
+            "8": "V4T004184",
+            "9": "V4T004671",
+            "10": "V4T003908",
+            "11": "V4T007828",
+            "12": "V4T006863",
+            "13": "V4T007867",
+            "14": "V4T003988",
+            "15": "V4T007850"
+          },
+          "duration_seconds": 69,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 59.4116372,
+            "az_deg": 123.0933133
+          },
+          "assignments": {
+            "1": "V4T005078",
+            "2": "V4T000077",
+            "3": "V4T003614",
+            "4": "V4T003932",
+            "5": "V4T008564",
+            "6": "V4T004737",
+            "7": "V4T000532",
+            "8": "V4T001448",
+            "9": "V4T008643",
+            "10": "V4T008680",
+            "11": "V4T003968",
+            "12": "V4T006484",
+            "13": "V4T001484",
+            "14": "V4T006915",
+            "15": "V4T007023"
+          },
+          "duration_seconds": 231,
+          "program": "DARK"
+        }
+      ],
+      "summary": {
+        "decisions": 3,
+        "exposures": 2,
+        "reports": 0,
+        "correct_reports": 0,
+        "best_science_sum": 8.768550000000001,
+        "required_missing_bound": 430,
+        "planning_seconds": 0.568,
+        "C": 1.0167,
+        "E": 0.9987,
+        "remote_check": null,
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null
+      }
+    },
+    "enabled0": {
+      "returncode": 0,
+      "elapsed_seconds": 0.6550682501401752,
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 64.2811058,
+            "az_deg": 121.8505355
+          },
+          "assignments": {
+            "0": "V4T002940",
+            "1": "V4T004212",
+            "2": "V4T007143",
+            "4": "V4T007217",
+            "5": "V4T002044",
+            "6": "V4T003576",
+            "7": "V4T002657",
+            "8": "V4T000798",
+            "9": "V4T006836",
+            "10": "V4T002996",
+            "11": "V4T005767",
+            "12": "V4T005004",
+            "13": "V4T007502",
+            "14": "V4T006000",
+            "15": "V4T006644"
+          },
+          "duration_seconds": 316,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 52.5445201,
+            "az_deg": 122.0524728
+          },
+          "assignments": {
+            "0": "V4T006169",
+            "1": "V4T005939",
+            "2": "V4T001324",
+            "3": "V4T002663",
+            "4": "V4T001965",
+            "7": "V4T003802",
+            "8": "V4T004184",
+            "9": "V4T004671",
+            "10": "V4T003908",
+            "11": "V4T007828",
+            "12": "V4T006863",
+            "13": "V4T007867",
+            "14": "V4T003988",
+            "15": "V4T007850"
+          },
+          "duration_seconds": 69,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 59.4116372,
+            "az_deg": 123.0933133
+          },
+          "assignments": {
+            "1": "V4T005078",
+            "2": "V4T000077",
+            "3": "V4T003614",
+            "4": "V4T003932",
+            "5": "V4T008564",
+            "6": "V4T004737",
+            "7": "V4T000532",
+            "8": "V4T001448",
+            "9": "V4T008643",
+            "10": "V4T008680",
+            "11": "V4T003968",
+            "12": "V4T006484",
+            "13": "V4T001484",
+            "14": "V4T006915",
+            "15": "V4T007023"
+          },
+          "duration_seconds": 231,
+          "program": "DARK"
+        }
+      ],
+      "summary": {
+        "decisions": 3,
+        "exposures": 2,
+        "reports": 0,
+        "correct_reports": 0,
+        "best_science_sum": 8.768550000000001,
+        "required_missing_bound": 430,
+        "planning_seconds": 0.55,
+        "C": 1.0167,
+        "E": 0.9987,
+        "remote_check": null,
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null
+      }
+    },
+    "enabled1": {
+      "returncode": 0,
+      "elapsed_seconds": 0.6544341661501676,
+      "actions": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 64.2811058,
+            "az_deg": 121.8505355
+          },
+          "assignments": {
+            "0": "V4T002940",
+            "1": "V4T004212",
+            "2": "V4T007143",
+            "4": "V4T007217",
+            "5": "V4T002044",
+            "6": "V4T003576",
+            "7": "V4T002657",
+            "8": "V4T000798",
+            "9": "V4T006836",
+            "10": "V4T002996",
+            "11": "V4T005767",
+            "12": "V4T005004",
+            "13": "V4T007502",
+            "14": "V4T006000",
+            "15": "V4T006644"
+          },
+          "duration_seconds": 316,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 52.5445201,
+            "az_deg": 122.0524728
+          },
+          "assignments": {
+            "0": "V4T006169",
+            "1": "V4T005939",
+            "2": "V4T001324",
+            "3": "V4T002663",
+            "4": "V4T001965",
+            "7": "V4T003802",
+            "8": "V4T004184",
+            "9": "V4T004671",
+            "10": "V4T003908",
+            "11": "V4T007828",
+            "12": "V4T006863",
+            "13": "V4T007867",
+            "14": "V4T003988",
+            "15": "V4T007850"
+          },
+          "duration_seconds": 69,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 59.4116372,
+            "az_deg": 123.0933133
+          },
+          "assignments": {
+            "1": "V4T005078",
+            "2": "V4T000077",
+            "3": "V4T003614",
+            "4": "V4T003932",
+            "5": "V4T008564",
+            "6": "V4T004737",
+            "7": "V4T000532",
+            "8": "V4T001448",
+            "9": "V4T008643",
+            "10": "V4T008680",
+            "11": "V4T003968",
+            "12": "V4T006484",
+            "13": "V4T001484",
+            "14": "V4T006915",
+            "15": "V4T007023"
+          },
+          "duration_seconds": 231,
+          "program": "DARK"
+        }
+      ],
+      "summary": {
+        "decisions": 3,
+        "exposures": 2,
+        "reports": 0,
+        "correct_reports": 0,
+        "best_science_sum": 8.768550000000001,
+        "required_missing_bound": 430,
+        "planning_seconds": 0.554,
+        "C": 1.0167,
+        "E": 0.9987,
+        "remote_check": null,
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null
+      }
+    }
+  },
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "numpy_version": "2.0.2",
+  "snapshot_reconstruction": {
+    "verbatim_capture_fields": [
+      "now_utc",
+      "observe_action_index",
+      "last_result",
+      "new_messages"
+    ],
+    "public_derived_fields": [
+      "survey_end_utc from initialize",
+      "latest bulletin/forecast from prior messages",
+      "running_total from six-decimal public max-score ledger",
+      "empty active_requests before any published request"
+    ],
+    "official_static_envelope_constructors": true,
+    "identical_test_wallclock_seconds": 900,
+    "limitations": [
+      "Captured public_history omits full snapshots; reconstructed unused public fields and fixed clock are documented.",
+      "Captured feedback is from the fixed original public trajectory, not a fresh environment response.",
+      "Local Darwin/NumPy prefix parity does not certify Linux NumPy2.2.6 full-season parity."
+    ]
+  },
+  "reads_truth": false,
+  "reads_teacher_labels": false,
+  "seasons_launched": 0,
+  "ssh_calls": 0,
+  "docker_calls": 0
+}

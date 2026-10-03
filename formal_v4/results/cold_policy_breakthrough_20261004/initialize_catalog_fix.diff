@@ -1,0 +1,21 @@
+--- FAILED_IMPLEMENTATION/terminal_report_agent.py
++++ terminal_report_agent.py
+@@ -46,9 +46,15 @@
+         self.threshold=float(self.cfg['uniformity']['observed_factor_threshold'])
+         self.band_width=float(self.cfg['uniformity']['ra_band_width_deg'])
+         self.weight=float(self.cfg['uniformity']['weight'])
+-        self.catalog={t['target_id']:{'weight':float(t['science_weight']),
+-                                    'band':int(float(t['ra_deg'])//self.band_width)}
+-                      for t in initial['targets']}
++        # Official v4 initialize uses a columnar public catalogue, exactly as
++        # v4_workflow.initialize_payload and the unchanged native planner do.
++        targets=initial['targets']
++        columns=targets['columns']
++        col={name:i for i,name in enumerate(columns)}
++        self.catalog={str(row[col['target_id']]):
++                      {'weight':float(row[col['science_weight']]),
++                       'band':int(float(row[col['ra_deg']])//self.band_width)}
++                      for row in targets['rows']}
+         self.band_totals=collections.Counter(t['band'] for t in self.catalog.values())
+         self.entries={}
+         self.invalid=set()

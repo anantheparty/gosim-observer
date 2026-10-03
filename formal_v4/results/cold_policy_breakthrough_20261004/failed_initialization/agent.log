@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/workspace/wrapper.py", line 312, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/wrapper.py", line 309, in main
+    serve(sys.stdin,sys.stdout,sys.stderr,wrapped)
+  File "/workspace/wrapper.py", line 265, in serve
+    policy=policy_class(message['payload'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/wrapper.py", line 237, in __init__
+    self.terminal_guard=TerminalReportGuard(initial,enabled,minimum_wallclock,emit)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/wrapper.py", line 49, in __init__
+    self.catalog={t['target_id']:{'weight':float(t['science_weight']),
+                  ~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
