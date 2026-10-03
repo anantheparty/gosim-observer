@@ -1,0 +1,275 @@
+{
+  "group_count": 32,
+  "label_count": 127,
+  "signs": {
+    "positive": 56,
+    "negative": 69,
+    "tie": 2
+  },
+  "best_cases": {
+    "field": 10,
+    "long": 5,
+    "short": 4,
+    "program": 1,
+    "control": 12
+  },
+  "oracle_single_intervention_gain_sum": 538.9461479999964,
+  "oracle_top_state_share": {
+    "1": 0.11529887954593894,
+    "3": 0.2972928549440151,
+    "5": 0.4491307599066459,
+    "8": 0.652960033773169,
+    "16": 0.988529104395786
+  },
+  "active_request_group_count": 4,
+  "unfinished_request_group_count": 3,
+  "immediate_coarse_sign_reversals": 59,
+  "components": {
+    "sum_best_scores": {
+      "nonzero": 125,
+      "positive": 57,
+      "negative": 68,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": -1.352136850393636,
+        "median": -0.4192370000000665,
+        "minimum": -75.69830999999976,
+        "maximum": 62.15020099999947,
+        "q25": -18.90731249999999,
+        "q75": 19.66217349999988,
+        "sum": -171.72137999999177
+      },
+      "oracle_selected_sum": 538.6651849999998
+    },
+    "required_penalty": {
+      "nonzero": 0,
+      "positive": 0,
+      "negative": 0,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 0.0
+      },
+      "oracle_selected_sum": 0.0
+    },
+    "uniformity_penalty": {
+      "nonzero": 116,
+      "positive": 60,
+      "negative": 56,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.017369992125984238,
+        "median": 0.0,
+        "minimum": -0.37953900000000007,
+        "maximum": 0.38243399999999994,
+        "q25": -0.05730400000000013,
+        "q75": 0.09142650000000001,
+        "sum": 2.205988999999998
+      },
+      "oracle_selected_sum": 0.280968
+    },
+    "observation_request_reward": {
+      "nonzero": 1,
+      "positive": 0,
+      "negative": 1,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": -0.7874015748031497,
+        "median": 0.0,
+        "minimum": -100.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": -100.0
+      },
+      "oracle_selected_sum": 0.0
+    },
+    "report_settlement": {
+      "nonzero": 0,
+      "positive": 0,
+      "negative": 0,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 0.0
+      },
+      "oracle_selected_sum": 0.0
+    }
+  },
+  "behavior_prefix": {
+    "L1": {
+      "history_rows": 1056,
+      "action_kinds": {
+        "observe": 965,
+        "wait": 90,
+        "report": 1
+      },
+      "observed_actions": 965,
+      "unique_exact_observe_actions": 965,
+      "programs": {
+        "DARK": 912,
+        "BRIGHT": 49,
+        "BACKUP": 4
+      },
+      "durations": {
+        "count": 965,
+        "mean": 846.7544041450777,
+        "median": 558.0,
+        "minimum": 60.0,
+        "maximum": 3600.0,
+        "q25": 234.0,
+        "q75": 1195.0,
+        "sum": 817118.0
+      },
+      "distinct_durations": 698,
+      "top10_durations": [
+        [
+          60,
+          58
+        ],
+        [
+          3600,
+          12
+        ],
+        [
+          103,
+          5
+        ],
+        [
+          303,
+          5
+        ],
+        [
+          195,
+          4
+        ],
+        [
+          146,
+          4
+        ],
+        [
+          784,
+          4
+        ],
+        [
+          81,
+          4
+        ],
+        [
+          329,
+          4
+        ],
+        [
+          77,
+          3
+        ]
+      ],
+      "top5_duration_frequency": 0.08704663212435233,
+      "assignment_counts": {
+        "count": 965,
+        "mean": 13.719170984455959,
+        "median": 14.0,
+        "minimum": 3.0,
+        "maximum": 16.0,
+        "q25": 13.0,
+        "q75": 15.0,
+        "sum": 13239.0
+      },
+      "catalog_targets": 7800,
+      "prefix_assigned_distinct_targets": 7620,
+      "all_cut_public_histories_are_prefixes": true
+    },
+    "L2": {
+      "history_rows": 1194,
+      "action_kinds": {
+        "observe": 1073,
+        "wait": 120,
+        "report": 1
+      },
+      "observed_actions": 1073,
+      "unique_exact_observe_actions": 1073,
+      "programs": {
+        "BRIGHT": 188,
+        "DARK": 877,
+        "BACKUP": 8
+      },
+      "durations": {
+        "count": 1073,
+        "mean": 821.7315936626281,
+        "median": 625.0,
+        "minimum": 60.0,
+        "maximum": 3600.0,
+        "q25": 249.0,
+        "q75": 1213.0,
+        "sum": 881718.0
+      },
+      "distinct_durations": 769,
+      "top10_durations": [
+        [
+          60,
+          54
+        ],
+        [
+          300,
+          8
+        ],
+        [
+          223,
+          5
+        ],
+        [
+          158,
+          5
+        ],
+        [
+          247,
+          4
+        ],
+        [
+          65,
+          4
+        ],
+        [
+          656,
+          4
+        ],
+        [
+          108,
+          4
+        ],
+        [
+          164,
+          4
+        ],
+        [
+          126,
+          4
+        ]
+      ],
+      "top5_duration_frequency": 0.07082945013979497,
+      "assignment_counts": {
+        "count": 1073,
+        "mean": 13.762348555452004,
+        "median": 14.0,
+        "minimum": 4.0,
+        "maximum": 16.0,
+        "q25": 13.0,
+        "q75": 15.0,
+        "sum": 14767.0
+      },
+      "catalog_targets": 8600,
+      "prefix_assigned_distinct_targets": 8353,
+      "all_cut_public_histories_are_prefixes": true
+    }
+  }
+}

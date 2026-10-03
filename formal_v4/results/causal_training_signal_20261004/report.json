@@ -1,0 +1,2241 @@
+{
+  "schema": "train-only-causal-learning-signal-diagnostic-v1",
+  "archive_sha256": "c52a1e636470406e2ba99630030b5ba442bcc4343446737689562a25877963ec",
+  "diagnostic_source_sha256": "d7970f695185456ac672ac8c590fcbf0a64f0e5f95f2aef04cee035f396b1ce7",
+  "read_members": [
+    {
+      "member": "public/L1_initialize_public.json",
+      "sha256": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+      "bytes": 548343
+    },
+    {
+      "member": "public/L2_initialize_public.json",
+      "sha256": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a",
+      "bytes": 543619
+    },
+    {
+      "member": "groups/L1_q00_rank0106/pair_audit.json",
+      "sha256": "2f66b7345f27a44443166863f6c56e3c0ff0a4c9bf2d3680b4be2ed357808186",
+      "bytes": 21494
+    },
+    {
+      "member": "groups/L1_q00_rank0106/control/public_capture/capture.json",
+      "sha256": "c647e90a0c427c0b4b2ebe383878b7a1cc092dfd02ed62fb1b3204cdb68caffa",
+      "bytes": 250181
+    },
+    {
+      "member": "groups/L1_q00_rank0106/availability.json",
+      "sha256": "93637be1e9d7fac2475de1f30e66855b2f0acfb54d11d81316556d319cc2e63c",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q00_rank0106/control/public_capture/public_features.npz",
+      "sha256": "f5f4be9b45bf43601e336ff661efbd914bc1bc8486e237560215ed47d28d68d4",
+      "bytes": 284788
+    },
+    {
+      "member": "groups/L1_q01_rank0187/pair_audit.json",
+      "sha256": "b15291f8a151008068e7bd9f551fa96ff29471212ef0e8a218a05618175bb4ba",
+      "bytes": 21577
+    },
+    {
+      "member": "groups/L1_q01_rank0187/control/public_capture/capture.json",
+      "sha256": "28c0fff9f141a12a8f5ff807ddfda15f6fa68aa4148d5cb007e9d0ee9b35e424",
+      "bytes": 356136
+    },
+    {
+      "member": "groups/L1_q01_rank0187/availability.json",
+      "sha256": "640ea8470761ac1985ed289a9bf84deb9476ceb09c804eb395869d4afaa7ea26",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q01_rank0187/control/public_capture/public_features.npz",
+      "sha256": "28efc47b2e32a05a6a14355749dc9f443792218f15edcbcae14dbd87c16ac781",
+      "bytes": 332523
+    },
+    {
+      "member": "groups/L1_q02_rank0287/pair_audit.json",
+      "sha256": "783c566b268f04615ad9f2c2c7b40002caad30ea721e00ea79c43caaffd7d058",
+      "bytes": 16700
+    },
+    {
+      "member": "groups/L1_q02_rank0287/control/public_capture/capture.json",
+      "sha256": "ebc7484eb9ab3ee6114de6ea5557e933b439684ce4df5bc85eab04d31a7bccaa",
+      "bytes": 479120
+    },
+    {
+      "member": "groups/L1_q02_rank0287/availability.json",
+      "sha256": "b8a272849203c36dd50ea54c2fd9546532e52a0a046f7e7395a5eee7b51e1a3a",
+      "bytes": 1666
+    },
+    {
+      "member": "groups/L1_q02_rank0287/control/public_capture/public_features.npz",
+      "sha256": "43d776b4a345df0b3108220327c1f95f2421394d8e5147ee08b446f017ad8a3a",
+      "bytes": 397351
+    },
+    {
+      "member": "groups/L1_q03_rank0419/pair_audit.json",
+      "sha256": "d00b53df03411797cb92b80ab3909b38f6c16eff8e0e1c9f863ac27b025e7df1",
+      "bytes": 21799
+    },
+    {
+      "member": "groups/L1_q03_rank0419/control/public_capture/capture.json",
+      "sha256": "46c8056621bc1c5fc677b5654bdb47f135e46bba33b51d6c1c7827cb2bdc9cd0",
+      "bytes": 651431
+    },
+    {
+      "member": "groups/L1_q03_rank0419/availability.json",
+      "sha256": "b22000cc0d39ef68d095bfa83ec85c0561d1b43d10e588fd8f4dab58c982c5ae",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q03_rank0419/control/public_capture/public_features.npz",
+      "sha256": "5ea94e2b9efcfeb0b5d5e1715bbacab18c43285249d204fefa222b5f09948ba7",
+      "bytes": 473065
+    },
+    {
+      "member": "groups/L1_q04_rank0545/pair_audit.json",
+      "sha256": "e2d928ce14c338e08cd46b690c5ef2a7b21e07648f2574e18e484a676854bc2b",
+      "bytes": 21692
+    },
+    {
+      "member": "groups/L1_q04_rank0545/control/public_capture/capture.json",
+      "sha256": "6bb0536d521e8fd1a878ca1079c3fba4b01fa46dfddaeac388f6c6e97bde2d36",
+      "bytes": 801882
+    },
+    {
+      "member": "groups/L1_q04_rank0545/availability.json",
+      "sha256": "497e4f0992ea65bc5d4e2043771d8388be0676f753babc95184a5e442929ab85",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q04_rank0545/control/public_capture/public_features.npz",
+      "sha256": "1dc580b3cb669e98f6a5cdc97712836c7ad6a341bfcd2060a1b0cd78ca772abe",
+      "bytes": 526823
+    },
+    {
+      "member": "groups/L1_q05_rank0626/pair_audit.json",
+      "sha256": "bf6212e93e5bbdba9583f522a9057054a90f8335471b2a793b21f00df5814452",
+      "bytes": 21041
+    },
+    {
+      "member": "groups/L1_q05_rank0626/control/public_capture/capture.json",
+      "sha256": "85a0e99d3f5db515c20c3997397c288e07a0d5d7d37503a18b3625eeee2c24c5",
+      "bytes": 908031
+    },
+    {
+      "member": "groups/L1_q05_rank0626/availability.json",
+      "sha256": "3e3d94a2c86a6e3d6037611dda286b4e2caefb768c08fa26032cf8f75c7a7f3a",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q05_rank0626/control/public_capture/public_features.npz",
+      "sha256": "0a3db2df175128908d2039c19a044829735c65d62b764a1c47888ba42cc9fff4",
+      "bytes": 556323
+    },
+    {
+      "member": "groups/L1_q06_rank0656/pair_audit.json",
+      "sha256": "5bdcf90ceccf9eba7c92feffad24a519531ee3b57bf28bca9878ed5a1af9b918",
+      "bytes": 21762
+    },
+    {
+      "member": "groups/L1_q06_rank0656/control/public_capture/capture.json",
+      "sha256": "d4d47f975688ea37cce48fb12fe05f91332fac1a81b2c21bdb80d3c927c4998d",
+      "bytes": 952782
+    },
+    {
+      "member": "groups/L1_q06_rank0656/availability.json",
+      "sha256": "e19e52b390f46ff39edd2407d59c9dc2b969bfb72f4b8b7c94c268c1bb331c3a",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q06_rank0656/control/public_capture/public_features.npz",
+      "sha256": "ed7a002347d72180737a293bbfc8c54adaef09c98c28ea3fa5585baaf0c713af",
+      "bytes": 563988
+    },
+    {
+      "member": "groups/L1_q07_rank0711/pair_audit.json",
+      "sha256": "ce84c18d958b9e16511d8ec2c143f7bd8240f1bf2d8b76ad86ab3e079b370906",
+      "bytes": 20834
+    },
+    {
+      "member": "groups/L1_q07_rank0711/control/public_capture/capture.json",
+      "sha256": "40c41dc7a67fb7f350a76d96b29df062e04cddbc0ce53db92cd725ec6bbfa212",
+      "bytes": 1020128
+    },
+    {
+      "member": "groups/L1_q07_rank0711/availability.json",
+      "sha256": "c7f0c2d57c354ded1af16cb4e684dbfff843eda5c80b0b8084c1e73a58993348",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q07_rank0711/control/public_capture/public_features.npz",
+      "sha256": "b841f40d17d75f1ab21abbefc1e77b30ee1910c6339cc9f21ff15e7425e5408c",
+      "bytes": 578809
+    },
+    {
+      "member": "groups/L1_q08_rank0760/pair_audit.json",
+      "sha256": "4f8665fd2d1b4ad0880ebaeb71807a03e8f95edb4cfab8d8c33833773a408ce7",
+      "bytes": 21089
+    },
+    {
+      "member": "groups/L1_q08_rank0760/control/public_capture/capture.json",
+      "sha256": "ed6e7ce7b9069fd644c0b1d06caf7a9ae6772d9d397775c5ff83eb6fcde4982c",
+      "bytes": 1086390
+    },
+    {
+      "member": "groups/L1_q08_rank0760/availability.json",
+      "sha256": "e45be9722c1d5918202e7264fd2e2b00e39ec61d351e9beec02060f403e6be60",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q08_rank0760/control/public_capture/public_features.npz",
+      "sha256": "45bf4f04b49634265a0f31c6075459a4e3ce61b9ba7b4040d361bdf436b03836",
+      "bytes": 589627
+    },
+    {
+      "member": "groups/L1_q09_rank0792/pair_audit.json",
+      "sha256": "2011372540e1c8e8c6807d740a5be07393374f7456c98969a83dac4dee9bdfd6",
+      "bytes": 21121
+    },
+    {
+      "member": "groups/L1_q09_rank0792/control/public_capture/capture.json",
+      "sha256": "2ca40d124025c4f270f4daf6bcfc189836615eaaaa114b7ba273c1fa24b952b1",
+      "bytes": 1136071
+    },
+    {
+      "member": "groups/L1_q09_rank0792/availability.json",
+      "sha256": "0d8700f9b6bbe53c53a36f2f9df9e6aa659b90241b7bd048f85164df650e7015",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q09_rank0792/control/public_capture/public_features.npz",
+      "sha256": "4624dd288ee8be31661b03b83b0922ba29b619b65775735165c6f6485453767e",
+      "bytes": 597864
+    },
+    {
+      "member": "groups/L1_q10_rank0825/pair_audit.json",
+      "sha256": "9d27969a0c3134295e3de51b518e9262faffcffa3773e49fb1f8b90c36dcabd2",
+      "bytes": 21745
+    },
+    {
+      "member": "groups/L1_q10_rank0825/control/public_capture/capture.json",
+      "sha256": "e6add6b418902544af9dfec46be6cea53af28e6294d745bf4c791ae2d656f922",
+      "bytes": 1185820
+    },
+    {
+      "member": "groups/L1_q10_rank0825/availability.json",
+      "sha256": "8ae0caa0a452448720cbabe0402b2a78f6e19165d59c303c58a81fe2807c1f8a",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q10_rank0825/control/public_capture/public_features.npz",
+      "sha256": "a3e281ae91fc81274113944ea805010161daeabec897d7df12af347b14cf5cfa",
+      "bytes": 604521
+    },
+    {
+      "member": "groups/L1_q11_rank0849/pair_audit.json",
+      "sha256": "747908acd1ee3a47eb62ccc85342761ec6f8d219d7513c2012c9bb1336bf8d2c",
+      "bytes": 21197
+    },
+    {
+      "member": "groups/L1_q11_rank0849/control/public_capture/capture.json",
+      "sha256": "16afb168e3476d266117ec5140c8586278fb28a119d5c958f0747a4e17b8635a",
+      "bytes": 1220502
+    },
+    {
+      "member": "groups/L1_q11_rank0849/availability.json",
+      "sha256": "c675013b1984d3be190b607aa491df625898775581770d1157ed3572a9667b72",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q11_rank0849/control/public_capture/public_features.npz",
+      "sha256": "8d542abac7c397c71b781cdf643578ecda7eb5f3ff822cc408b4b9785dbe430e",
+      "bytes": 607940
+    },
+    {
+      "member": "groups/L1_q12_rank0872/pair_audit.json",
+      "sha256": "f59a35a556ec096adebda3d2acba9a80ef25b6e9c23ca5e9f22da038b2882d74",
+      "bytes": 21242
+    },
+    {
+      "member": "groups/L1_q12_rank0872/control/public_capture/capture.json",
+      "sha256": "b7241b9675ea641c58b940e5530033de772c818421dfbe15ee3b9462685b00ee",
+      "bytes": 1259795
+    },
+    {
+      "member": "groups/L1_q12_rank0872/availability.json",
+      "sha256": "e28604c5e3e09b955676e13b126df6a622efa1e64aa2c25969998ba5740acaea",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q12_rank0872/control/public_capture/public_features.npz",
+      "sha256": "07a6703f3ff0e9341401fecad84799779fbf77c5b5f0ea4df5bc4224d5494041",
+      "bytes": 610187
+    },
+    {
+      "member": "groups/L1_q13_rank0897/pair_audit.json",
+      "sha256": "8a556890f85740144ef78c51f750c1c3d97681e040be8d4d09ed89f951f50a3b",
+      "bytes": 21032
+    },
+    {
+      "member": "groups/L1_q13_rank0897/control/public_capture/capture.json",
+      "sha256": "7fa91340d4a2dbf5f70508c54e91c65cf6e29b20c58bc56724fc9dbfa0cb18e4",
+      "bytes": 1295615
+    },
+    {
+      "member": "groups/L1_q13_rank0897/availability.json",
+      "sha256": "ef1d72a912c33d263114be5f0c33ee7d3a63218a3a974a1dd1414b4fd9fb3043",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q13_rank0897/control/public_capture/public_features.npz",
+      "sha256": "1ce997f9e28a3d5a1a7cc8939aec881b3857503eb86e22cea0e31a3ce7c30cfb",
+      "bytes": 614233
+    },
+    {
+      "member": "groups/L1_q14_rank0926/pair_audit.json",
+      "sha256": "05f908a9d51d9e5588c63e918e366ddabb4d0cf58b8c89294bf111302cea01f3",
+      "bytes": 19090
+    },
+    {
+      "member": "groups/L1_q14_rank0926/control/public_capture/capture.json",
+      "sha256": "8a09a916942e06f2e23dfb221d896e256b8006e25fae31facfad8379704186c6",
+      "bytes": 1325289
+    },
+    {
+      "member": "groups/L1_q14_rank0926/availability.json",
+      "sha256": "1de264768cb0db5ab793962cc0eb20bdd5a06bbb2d4796d131a198eb4dda6abf",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q14_rank0926/control/public_capture/public_features.npz",
+      "sha256": "7041f5273eef10ddd83a5badc307d616e988baf2f496296f4274797181b84642",
+      "bytes": 618013
+    },
+    {
+      "member": "groups/L1_q15_rank0964/pair_audit.json",
+      "sha256": "a693e5aa55050bee45d3bb6ef278ae2e21abddbb68b6d605140e1356547cb51d",
+      "bytes": 21294
+    },
+    {
+      "member": "groups/L1_q15_rank0964/control/public_capture/capture.json",
+      "sha256": "53eb04f89749f2c96c4b78f9386640a9d17402ff8e5f87d36f156c5b301fdd41",
+      "bytes": 1381180
+    },
+    {
+      "member": "groups/L1_q15_rank0964/availability.json",
+      "sha256": "9ff1f5c16c2e9f45d6976f919ffc1dd625469cd08a12ec1ed92136a12a76ffad",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L1_q15_rank0964/control/public_capture/public_features.npz",
+      "sha256": "a2e13848f163d7c3037dfbdfb6b2dd9589d6dbf74c5d15913fa8e502fb64bf54",
+      "bytes": 621704
+    },
+    {
+      "member": "groups/L2_q00_rank0104/pair_audit.json",
+      "sha256": "314b39612e8142c1a813f9dd0779524fc0d75c478cd31a870180b21215ad2c63",
+      "bytes": 21533
+    },
+    {
+      "member": "groups/L2_q00_rank0104/control/public_capture/capture.json",
+      "sha256": "905573ee3f832a4076687997f2cb9911b3ff94894372946a8508b4b9cb4186d3",
+      "bytes": 258758
+    },
+    {
+      "member": "groups/L2_q00_rank0104/availability.json",
+      "sha256": "66cfbb18e870db0e3dfc242e85769704fa45672750ecaf739b6858c9fd07ad9c",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q00_rank0104/control/public_capture/public_features.npz",
+      "sha256": "d3524650f2ac0542c870fa1433a17ff67ff9985b64924b6bbf46eb791841cc4c",
+      "bytes": 305328
+    },
+    {
+      "member": "groups/L2_q01_rank0188/pair_audit.json",
+      "sha256": "00931de6c30c6305158a345dbdf3774600580107d0e04851c8bc507b3c5329d6",
+      "bytes": 21258
+    },
+    {
+      "member": "groups/L2_q01_rank0188/control/public_capture/capture.json",
+      "sha256": "d36ea39a112e5842ae6652082d254d03ca5f2451b238f880580869217bcf179a",
+      "bytes": 369412
+    },
+    {
+      "member": "groups/L2_q01_rank0188/availability.json",
+      "sha256": "7bdb1c5b34c138d386491e85c3800b08388dab586179473740fd806a08140b18",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q01_rank0188/control/public_capture/public_features.npz",
+      "sha256": "04c244440134aeafd4bff07b1f73b2c7f32014f8227303ba48422ad31a02c12d",
+      "bytes": 356526
+    },
+    {
+      "member": "groups/L2_q02_rank0232/pair_audit.json",
+      "sha256": "74ff17d45845b699a56bf5349713b086e61ae8ceb7f2361dfe379a68e3a69401",
+      "bytes": 20845
+    },
+    {
+      "member": "groups/L2_q02_rank0232/control/public_capture/capture.json",
+      "sha256": "898424b4cf7b3284e8be10c7cefbbebf79a7d3df87d40ad0469190a19c09d19f",
+      "bytes": 428294
+    },
+    {
+      "member": "groups/L2_q02_rank0232/availability.json",
+      "sha256": "f2c0da4e461a3b32030dff6e650b9d94eddb3464be4d006acec6b773592ae181",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q02_rank0232/control/public_capture/public_features.npz",
+      "sha256": "2544a1f329f962a04acf49176d493bd43553cdc48fe7bd529367a17ba3cae71a",
+      "bytes": 378842
+    },
+    {
+      "member": "groups/L2_q03_rank0344/pair_audit.json",
+      "sha256": "b7eb49bf8adf3a9274a4e2d4895a2b2916fdace7ac80a44c25d664beed79c20d",
+      "bytes": 20362
+    },
+    {
+      "member": "groups/L2_q03_rank0344/control/public_capture/capture.json",
+      "sha256": "cc2308e9db33391ce69e7c20e252d3cb397a39e14c296d0702e1068fe47420a4",
+      "bytes": 568448
+    },
+    {
+      "member": "groups/L2_q03_rank0344/availability.json",
+      "sha256": "71fe6cc13401270d0612c87be5b4269058316dccb14a8c7f83fbafe6ddd05fc2",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q03_rank0344/control/public_capture/public_features.npz",
+      "sha256": "7550b8872c75c029a74f3fc41fc5fcdb708aa349c2b87b47b0a793de2a106c07",
+      "bytes": 452574
+    },
+    {
+      "member": "groups/L2_q04_rank0425/pair_audit.json",
+      "sha256": "68eb6f47b225d88cbdea20552b85b83552ce50b950f42067638e54408083e091",
+      "bytes": 21299
+    },
+    {
+      "member": "groups/L2_q04_rank0425/control/public_capture/capture.json",
+      "sha256": "25ee2c0d145cbd0cfed70cb0253fb2d27db7904484343731d948d6ff6937140b",
+      "bytes": 676598
+    },
+    {
+      "member": "groups/L2_q04_rank0425/availability.json",
+      "sha256": "6f5959db641dabfaf6aa2b5d80bbcb84ac06d6fdafa7495b4e20dd61fd19fdab",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q04_rank0425/control/public_capture/public_features.npz",
+      "sha256": "42043d23f38e07c8407387ca862398dd1ff94f205ccaa0c3b17fd76c3ac59c62",
+      "bytes": 492960
+    },
+    {
+      "member": "groups/L2_q05_rank0510/pair_audit.json",
+      "sha256": "7b83dde8014ce588679c25e12af0ed4c50b2fadd4f6a22bc0040e024e4b657ba",
+      "bytes": 20778
+    },
+    {
+      "member": "groups/L2_q05_rank0510/control/public_capture/capture.json",
+      "sha256": "b83dc310d5cfa3ff68cfa288cd953df2efa85d2f603af2947aa2d8df8dff7d84",
+      "bytes": 784877
+    },
+    {
+      "member": "groups/L2_q05_rank0510/availability.json",
+      "sha256": "d795ad9ca146b1a6424cb1602de4ea2603f7004c453ecbb46cc1b07c4818fa27",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q05_rank0510/control/public_capture/public_features.npz",
+      "sha256": "def910fef14a1980d2dc543aacacb9a9b793250d4ea1177ab829c8122ff53f69",
+      "bytes": 531125
+    },
+    {
+      "member": "groups/L2_q06_rank0587/pair_audit.json",
+      "sha256": "7cb8e6cb1d363c02b66585c06527d94eb04acf860b642328ab48611c9e14320b",
+      "bytes": 21295
+    },
+    {
+      "member": "groups/L2_q06_rank0587/control/public_capture/capture.json",
+      "sha256": "56d57dea6aa0963f162f103ec2f562a56a5461118c1d7f472a6fbe5dc3414da5",
+      "bytes": 894476
+    },
+    {
+      "member": "groups/L2_q06_rank0587/availability.json",
+      "sha256": "1bad0176b6d0284af1a5c75815005ad5230d383b8fc4004475a8c9ff66768d4b",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q06_rank0587/control/public_capture/public_features.npz",
+      "sha256": "412b298538e647b5d93fc30f536ecd1a2f52da3121e8fe05a826a40dcd057ced",
+      "bytes": 567970
+    },
+    {
+      "member": "groups/L2_q07_rank0656/pair_audit.json",
+      "sha256": "2109bf2bf7cafe196ccef687a1ba61ec7f0c61d69fb5af299b9dfa87e1d41f38",
+      "bytes": 21289
+    },
+    {
+      "member": "groups/L2_q07_rank0656/control/public_capture/capture.json",
+      "sha256": "d217af1fee79c0c53ed6d3b204e43b128cde44d512227dc7b99cd7d2ad425073",
+      "bytes": 982230
+    },
+    {
+      "member": "groups/L2_q07_rank0656/availability.json",
+      "sha256": "15f681e33380b374443e01379faf484d80b2d6f2d1c62f9a0fe7db85c419e5a1",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q07_rank0656/control/public_capture/public_features.npz",
+      "sha256": "d3d7ca4829c13c9ead59d430d2c0d294657d70b4029d317dd919d90d846ac792",
+      "bytes": 596030
+    },
+    {
+      "member": "groups/L2_q08_rank0714/pair_audit.json",
+      "sha256": "366ee5fff348ca6cfd4133a3c69c6c6072be80980cb4148775a804cbf435486b",
+      "bytes": 20823
+    },
+    {
+      "member": "groups/L2_q08_rank0714/control/public_capture/capture.json",
+      "sha256": "cd308d8cf20383e6687dfff5f9ac16db645390c17d2098c897e499ff03d72997",
+      "bytes": 1054742
+    },
+    {
+      "member": "groups/L2_q08_rank0714/availability.json",
+      "sha256": "2ba5e2b5e3fdf0f5abd05ac840f8c9a662b506f9f5f230d50a1718d8aeba71ae",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q08_rank0714/control/public_capture/public_features.npz",
+      "sha256": "bf3f8c9c5c35e89f79655092b58e417bb7725735d63f519212b9d1983f94ca48",
+      "bytes": 615734
+    },
+    {
+      "member": "groups/L2_q09_rank0759/pair_audit.json",
+      "sha256": "423f85a8a0141d56ab917eba90c683d83db091faf8afc4190b26f41e64af200b",
+      "bytes": 20519
+    },
+    {
+      "member": "groups/L2_q09_rank0759/control/public_capture/capture.json",
+      "sha256": "b925dcba86b063f5c1625e1d930c58e0eb699be8e261b3067f19ac93e4888046",
+      "bytes": 1119651
+    },
+    {
+      "member": "groups/L2_q09_rank0759/availability.json",
+      "sha256": "336c8ec3ae11f57fa65724a3d739c4f7cbd12701544dbaf18dbacb32ea9ed299",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q09_rank0759/control/public_capture/public_features.npz",
+      "sha256": "8e5e6fdb9106b89f1006eba8f11488d72e6c22d3e140361886fa473aa9426079",
+      "bytes": 629220
+    },
+    {
+      "member": "groups/L2_q10_rank0805/pair_audit.json",
+      "sha256": "a4a0d3f51b8a56fac19df5a6f9fc373ca76168c278f7bd8bbb6baf0d115d1e75",
+      "bytes": 21813
+    },
+    {
+      "member": "groups/L2_q10_rank0805/control/public_capture/capture.json",
+      "sha256": "1800e937d219a033b00aa95a643dd0a76c66e37723ee38fe5550e7944f08dffb",
+      "bytes": 1198242
+    },
+    {
+      "member": "groups/L2_q10_rank0805/availability.json",
+      "sha256": "f244bd3e7567bb504c008606e99d4a33eb66a763fc67c1df72459f8c77073bfb",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q10_rank0805/control/public_capture/public_features.npz",
+      "sha256": "6385a01218f005dabadfe4c15faac3134fb274aa2d8f4366c34afaaec48252b8",
+      "bytes": 641411
+    },
+    {
+      "member": "groups/L2_q11_rank0878/pair_audit.json",
+      "sha256": "9bbd6e0ec5b256a0f08bd9e3b828d88b1ccda8f86dc67a54cdfd3a02d7560147",
+      "bytes": 21065
+    },
+    {
+      "member": "groups/L2_q11_rank0878/control/public_capture/capture.json",
+      "sha256": "96eefd4b08f30da377e5b3ce995101948c851ce746b26c8ebaa17e861c14fe8c",
+      "bytes": 1286408
+    },
+    {
+      "member": "groups/L2_q11_rank0878/availability.json",
+      "sha256": "73668f0153ed436e4067cc7c1842122548bd43a195d826aeca29b4b4d710c131",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q11_rank0878/control/public_capture/public_features.npz",
+      "sha256": "77c75e4b1661d6ca7373911418ee2479cf332a0af9b840dae80f4fb9e0d084db",
+      "bytes": 657744
+    },
+    {
+      "member": "groups/L2_q12_rank0922/pair_audit.json",
+      "sha256": "1e9d03d566a0780d42b32e4cf14bed35a3131ff881cd8199007313d4a064cc58",
+      "bytes": 20218
+    },
+    {
+      "member": "groups/L2_q12_rank0922/control/public_capture/capture.json",
+      "sha256": "7c4dbe05aa81b699427653227fbaefff5d71b08ef230cb41ea667e5002c3d65d",
+      "bytes": 1342482
+    },
+    {
+      "member": "groups/L2_q12_rank0922/availability.json",
+      "sha256": "f628764036ac5711e509e55ce45e0769d6b2aabd9e87fd4c3e14e3de388e55b8",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q12_rank0922/control/public_capture/public_features.npz",
+      "sha256": "e3a2b14b919c9149471d6e7e43bfd2d7c6065e89f77b5473b4dc59667936519e",
+      "bytes": 668203
+    },
+    {
+      "member": "groups/L2_q13_rank0965/pair_audit.json",
+      "sha256": "8478ad32a030511e1993a9fbdef0ebab52b2d4fcccfe364c09f9162e3eaf6438",
+      "bytes": 20454
+    },
+    {
+      "member": "groups/L2_q13_rank0965/control/public_capture/capture.json",
+      "sha256": "ac4c6e15f29bb83d73bf78116a0f6939660589b191c1959555c106290ed508b7",
+      "bytes": 1399745
+    },
+    {
+      "member": "groups/L2_q13_rank0965/availability.json",
+      "sha256": "a4f4b5868f448c79799b6c286f322a206a268afbba74e84059b42549a5731eb1",
+      "bytes": 1647
+    },
+    {
+      "member": "groups/L2_q13_rank0965/control/public_capture/public_features.npz",
+      "sha256": "1743da9f07fff5625cf7c6edbe991777442f17767aac144f932953bb421c5bc3",
+      "bytes": 676903
+    },
+    {
+      "member": "groups/L2_q14_rank1008/pair_audit.json",
+      "sha256": "90be9c7def1b57bb6c24f04b245d64aabc362bda0725eb86436aede73353cd00",
+      "bytes": 21092
+    },
+    {
+      "member": "groups/L2_q14_rank1008/control/public_capture/capture.json",
+      "sha256": "c67789b321c440b8eff63e8c5ada242d5664bb051763118c8af45d1e7dd48c1b",
+      "bytes": 1457350
+    },
+    {
+      "member": "groups/L2_q14_rank1008/availability.json",
+      "sha256": "5b5fcb440c11daadb85eaa8c2536fab5762770a52226ec98ddea17ccb34181de",
+      "bytes": 1648
+    },
+    {
+      "member": "groups/L2_q14_rank1008/control/public_capture/public_features.npz",
+      "sha256": "452346a967fccba26e324f75fe79f4f703be39e334cb8f131846e08e20470b92",
+      "bytes": 682206
+    },
+    {
+      "member": "groups/L2_q15_rank1072/pair_audit.json",
+      "sha256": "a6c2f1001517503628a975ac978148129a51d984c80d1697a7969a1462dead7b",
+      "bytes": 21743
+    },
+    {
+      "member": "groups/L2_q15_rank1072/control/public_capture/capture.json",
+      "sha256": "e9dd36641de383e683791df9a8bbbeb24bb0068e370396af25c8d48f37e55ef5",
+      "bytes": 1538429
+    },
+    {
+      "member": "groups/L2_q15_rank1072/availability.json",
+      "sha256": "391241037483615712f72ea38f28d4ab6deb755551e88fca5eb2603b3f666cd1",
+      "bytes": 1648
+    },
+    {
+      "member": "groups/L2_q15_rank1072/control/public_capture/public_features.npz",
+      "sha256": "ce8eef73156f8597b6885840bc654908c2e4f3e0861af3c947613973abb54d96",
+      "bytes": 690282
+    }
+  ],
+  "source_sha256": {
+    "research/structured_student_audit.py": "0a256dfc1f7f8901403af4da827872e0332a447016469e86f86bdae61779baed",
+    "research/structured_student_features.py": "ac5a6a09fc9cd559ad32559a0281ef71b2b25df13c91351c2d5efb6c918f0db0",
+    "research/structured_student_model.py": "612132459874a6869c76c18c21746c045f7235f47bcb64e444b3aebe3f887542",
+    "research/structured_student_runtime.py": "5b62f375e6746055814eaa81eee8f2ada596565a883ecf2f75ffc0e3450ffc35",
+    "research/structured_student_train.py": "933e40c2e5399067f34a7d9ff67c7e8d0d3d28a852f1a4ba68c84b6f11249585",
+    "research/policy_iteration_agent.py": "895185793aa3945ebdbb6b7353fc2e925425f853a87d6548c59275e9340f48b5",
+    "research/policy_iteration_audit.py": "bf65f84ff8f97bbf44cb611772b41ff550f580c2ee1a19ef44a065f9849d8e61",
+    "research/policy_iteration_baseline_groundwork.py": "aca9acad7bc4e0112e53e58d8b25dafa6136105b94a1521c5a4a162fa01f9310",
+    "research/policy_iteration_bulk.py": "74de5541cf1d0ea3e811d7d4e3ce760549ebfb344bb078838277d5e729f8fca9",
+    "research/policy_iteration_bulk_audit.py": "268479d33e103b3cd30050757f969f575dd4c47221ed5f3a240b1bb7db4c0ca8",
+    "research/policy_iteration_dataset.py": "4f228fecda0de9e0312210a3d124ca66525d2bc06ee5cc517fd243427f62c057",
+    "research/policy_iteration_gate.py": "3cac6a67ea4892051c6d137224f9cc87e247fa98e2f22c0329e2f5c594fcabd1",
+    "upstream/gosim-observer-examples/runner/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+    "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "upstream/gosim-observer-examples/runner/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba"
+  },
+  "group_count": 32,
+  "label_count": 127,
+  "signs": {
+    "positive": 56,
+    "negative": 69,
+    "tie": 2
+  },
+  "card_statistics": {
+    "L1": {
+      "states": 16,
+      "signs": {
+        "positive": 49,
+        "negative": 14
+      },
+      "best_cases": {
+        "field": 7,
+        "long": 4,
+        "short": 3,
+        "program": 1,
+        "control": 1
+      },
+      "best_advantage": {
+        "count": 16,
+        "mean": 31.659619937499713,
+        "median": 32.042013999999654,
+        "minimum": 0.0,
+        "maximum": 62.13988699999936,
+        "q25": 23.12844949999976,
+        "q75": 40.64198099999976,
+        "sum": 506.5539189999954
+      },
+      "season_fraction": {
+        "count": 16,
+        "mean": 0.5114316594612571,
+        "median": 0.5111406717658796,
+        "minimum": 0.03192550714998337,
+        "maximum": 0.9903558363817758,
+        "q25": 0.2713668107748587,
+        "q75": 0.7505819753907549,
+        "sum": 8.182906551380114
+      }
+    },
+    "L2": {
+      "states": 16,
+      "signs": {
+        "negative": 55,
+        "tie": 2,
+        "positive": 7
+      },
+      "best_cases": {
+        "control": 11,
+        "field": 3,
+        "short": 1,
+        "long": 1
+      },
+      "best_advantage": {
+        "count": 16,
+        "mean": 2.0245143125000595,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 26.210033999999723,
+        "q25": 0.0,
+        "q75": 1.0252190000003338,
+        "sum": 32.39222900000095
+      },
+      "season_fraction": {
+        "count": 16,
+        "mean": 0.5062822135391069,
+        "median": 0.5098790917133589,
+        "minimum": 0.031450244110226414,
+        "maximum": 0.9689488515351092,
+        "q25": 0.2692421114715423,
+        "q75": 0.7508109702152757,
+        "sum": 8.10051541662571
+      }
+    }
+  },
+  "by_case": {
+    "field": {
+      "advantages": {
+        "count": 32,
+        "mean": 3.1647153124999363,
+        "median": 1.319974000000002,
+        "minimum": -68.23278899999968,
+        "maximum": 62.13988699999936,
+        "q25": -9.690997249999555,
+        "q75": 22.743467499999497,
+        "sum": 101.27088999999796
+      },
+      "signs": {
+        "positive": 17,
+        "negative": 15
+      },
+      "best_states": 10,
+      "geometry": {
+        "count": 32,
+        "mean": 3.3342386623305313,
+        "median": 0.5935471630584017,
+        "minimum": 0.20487370239818262,
+        "maximum": 21.821029658661846,
+        "q25": 0.4286055590088993,
+        "q75": 0.7606696280898916,
+        "sum": 106.695637194577
+      },
+      "target_jaccard": {
+        "count": 32,
+        "mean": 0.4180654412367968,
+        "median": 0.4472222222222222,
+        "minimum": 0.0,
+        "maximum": 0.8333333333333334,
+        "q25": 0.2794444444444445,
+        "q75": 0.6354166666666666,
+        "sum": 13.378094119577497
+      },
+      "duration_ratio": {
+        "count": 32,
+        "mean": 1.2708952035739745,
+        "median": 1.0,
+        "minimum": 0.300982800982801,
+        "maximum": 10.096153846153847,
+        "q25": 0.857447042687573,
+        "q75": 1.0081674152903946,
+        "sum": 40.66864651436718
+      }
+    },
+    "short": {
+      "advantages": {
+        "count": 31,
+        "mean": -3.2663154838710398,
+        "median": -0.649373000000196,
+        "minimum": -63.51336100000026,
+        "maximum": 41.75061399999959,
+        "q25": -21.412953500000185,
+        "q75": 16.5585145,
+        "sum": -101.25578000000223
+      },
+      "signs": {
+        "positive": 14,
+        "negative": 17
+      },
+      "best_states": 4,
+      "geometry": {
+        "count": 31,
+        "mean": 1.377054268147732e-07,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 8.537736462515939e-07,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 4.268868231257969e-06
+      },
+      "target_jaccard": {
+        "count": 31,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "q25": 1.0,
+        "q75": 1.0,
+        "sum": 31.0
+      },
+      "duration_ratio": {
+        "count": 31,
+        "mean": 0.5999880432137457,
+        "median": 0.6,
+        "minimum": 0.5981735159817352,
+        "maximum": 0.6025641025641025,
+        "q25": 0.5996957562728644,
+        "q75": 0.600248009498106,
+        "sum": 18.599629339626116
+      }
+    },
+    "long": {
+      "advantages": {
+        "count": 32,
+        "mean": -5.361328875000112,
+        "median": -2.6901419999999234,
+        "minimum": -77.40823900000032,
+        "maximum": 50.987764999999854,
+        "q25": -24.324407249999922,
+        "q75": 17.57556174999968,
+        "sum": -171.56252400000358
+      },
+      "signs": {
+        "negative": 18,
+        "positive": 14
+      },
+      "best_states": 5,
+      "geometry": {
+        "count": 32,
+        "mean": 1.711339531557407e-07,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 1.2074182697257333e-06,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 5.476286500983703e-06
+      },
+      "target_jaccard": {
+        "count": 32,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "q25": 1.0,
+        "q75": 1.0,
+        "sum": 32.0
+      },
+      "duration_ratio": {
+        "count": 32,
+        "mean": 1.4833457936647891,
+        "median": 1.5,
+        "minimum": 1.1019283746556474,
+        "maximum": 1.504,
+        "q25": 1.4999282845668387,
+        "q75": 1.5,
+        "sum": 47.46706539727325
+      }
+    },
+    "program": {
+      "advantages": {
+        "count": 32,
+        "mean": -3.0615012500000773,
+        "median": -1.2951809999999568,
+        "minimum": -63.49920800000018,
+        "maximum": 42.60443299999952,
+        "q25": -18.612715000000208,
+        "q75": 16.209225249999918,
+        "sum": -97.96804000000247
+      },
+      "signs": {
+        "positive": 11,
+        "negative": 19,
+        "tie": 2
+      },
+      "best_states": 1,
+      "geometry": {
+        "count": 32,
+        "mean": 1.711339531557407e-07,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 1.2074182697257333e-06,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 5.476286500983703e-06
+      },
+      "target_jaccard": {
+        "count": 32,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "q25": 1.0,
+        "q75": 1.0,
+        "sum": 32.0
+      },
+      "duration_ratio": {
+        "count": 32,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "q25": 1.0,
+        "q75": 1.0,
+        "sum": 32.0
+      }
+    }
+  },
+  "best_cases": {
+    "field": 10,
+    "long": 5,
+    "short": 4,
+    "program": 1,
+    "control": 12
+  },
+  "oracle_single_intervention_gain_sum": 538.9461479999964,
+  "oracle_top_state_share": {
+    "1": 0.11529887954593894,
+    "3": 0.2972928549440151,
+    "5": 0.4491307599066459,
+    "8": 0.652960033773169,
+    "16": 0.988529104395786
+  },
+  "top_training_states": [
+    {
+      "card": "L1",
+      "group_id": "L1_q03_rank0419",
+      "rank": 419,
+      "season_fraction": 0.2234785500498836,
+      "best_case": "field",
+      "best_advantage": 62.13988699999936,
+      "best_components": {
+        "sum_best_scores": 62.15020099999947,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.01031399999999999,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 62.13988699999936,
+        "short": 39.49252299999989,
+        "long": 50.987764999999854,
+        "program": 42.60443299999952
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 564,
+      "control_assignments": 16,
+      "prefix_hash": "e78a8708d4571ff1144a2d348bd7ffe021da581f428e6974930c714b5ac93f29",
+      "public_history_rows": 438
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q06_rank0656",
+      "rank": 656,
+      "season_fraction": 0.4150315929497838,
+      "best_case": "field",
+      "best_advantage": 56.33433799999966,
+      "best_components": {
+        "sum_best_scores": 56.242239000000154,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.09209900000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 56.33433799999966,
+        "short": 22.002880999999434,
+        "long": -2.7807849999999235,
+        "program": 15.787647000000106
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 2078,
+      "control_assignments": 16,
+      "prefix_hash": "f3d65719c068adc5dabe3d1a6ab888bb320467442b245ae58449c26fcbd4c2c4",
+      "public_history_rows": 707
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q07_rank0711",
+      "rank": 711,
+      "season_fraction": 0.47921516461589625,
+      "best_case": "short",
+      "best_advantage": 41.75061399999959,
+      "best_components": {
+        "sum_best_scores": 41.71226000000024,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.038354,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": -0.6500260000002527,
+        "short": 41.75061399999959,
+        "long": 19.849231999999574,
+        "program": 17.47395999999935
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 622,
+      "control_assignments": 12,
+      "prefix_hash": "6fcb24420dd20b9a827826043033a891b1bdc4d57b866dc342a9c02b36c92465",
+      "public_history_rows": 765
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q02_rank0287",
+      "rank": 287,
+      "season_fraction": 0.15962753574991687,
+      "best_case": "long",
+      "best_advantage": 41.464718999999604,
+      "best_components": {
+        "sum_best_scores": 41.35683700000027,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.107882,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 36.66289699999925,
+        "long": 41.464718999999604,
+        "program": 39.51057299999957
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "cases": 4,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 60,
+      "control_assignments": 14,
+      "prefix_hash": "49a952c06396e6e94d3a1e06e836b9a84c86d2a651686acee8c772f8b26d1c3f",
+      "public_history_rows": 299
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q10_rank0825",
+      "rank": 825,
+      "season_fraction": 0.6707682075157965,
+      "best_case": "short",
+      "best_advantage": 40.36773499999981,
+      "best_components": {
+        "sum_best_scores": 40.35810700000002,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.009628000000000025,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 23.504298999999264,
+        "short": 40.36773499999981,
+        "long": 33.73043400000006,
+        "program": 24.961693999999625
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 2515,
+      "control_assignments": 16,
+      "prefix_hash": "163a5e86fe4d7898aca2fde029605a670ba145f3ab0a440c27556f87b050b3bc",
+      "public_history_rows": 888
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q04_rank0545",
+      "rank": 545,
+      "season_fraction": 0.28732956434985035,
+      "best_case": "long",
+      "best_advantage": 39.10341399999925,
+      "best_components": {
+        "sum_best_scores": 39.09479999999985,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.00861400000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 1.2061619999994946,
+        "short": 8.908896999999342,
+        "long": 39.10341399999925,
+        "program": 30.41161099999954
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 814,
+      "control_assignments": 16,
+      "prefix_hash": "c51244031030d7f279d1a4dab7cfcaccae03da4702833dee4652cd1bdd04cf19",
+      "public_history_rows": 567
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q01_rank0187",
+      "rank": 187,
+      "season_fraction": 0.09577652144995012,
+      "best_case": "long",
+      "best_advantage": 38.560983999999735,
+      "best_components": {
+        "sum_best_scores": 38.591481999999814,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.03049799999999997,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 29.56537599999956,
+        "short": -21.23754800000006,
+        "long": 38.560983999999735,
+        "program": 1.513170999999602
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 1814,
+      "control_assignments": 15,
+      "prefix_hash": "44ca609d7eeb90df0df04889544cb6ecf5df92182680ce5d6921b108c543f66a",
+      "public_history_rows": 196
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q11_rank0849",
+      "rank": 849,
+      "season_fraction": 0.7346192218157632,
+      "best_case": "program",
+      "best_advantage": 32.18860399999994,
+      "best_components": {
+        "sum_best_scores": 32.2900209999998,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.10141699999999998,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 5.3951829999996335,
+        "short": 20.22850500000004,
+        "long": 4.844500999999582,
+        "program": 32.18860399999994
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 2126,
+      "control_assignments": 14,
+      "prefix_hash": "ba008f18354768dc061c08aae6d038dd599b73da026d1eb26fb813ab53dfaa0f",
+      "public_history_rows": 915
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q09_rank0792",
+      "rank": 792,
+      "season_fraction": 0.6069171932158297,
+      "best_case": "long",
+      "best_advantage": 31.895423999999366,
+      "best_components": {
+        "sum_best_scores": 31.821812999999565,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.07361100000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 13.189400999999634,
+        "short": 20.565356000000065,
+        "long": 31.895423999999366,
+        "program": 19.03009799999927
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "haze",
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "BRIGHT",
+      "control_duration": 2488,
+      "control_assignments": 13,
+      "prefix_hash": "e538932993a27dd26d53cce254a14e0205b5d7463ae62bb988d16c40ad8508ac",
+      "public_history_rows": 852
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q05_rank0626",
+      "rank": 626,
+      "season_fraction": 0.3578317259727303,
+      "best_case": "field",
+      "best_advantage": 28.47647599999982,
+      "best_components": {
+        "sum_best_scores": 28.36950699999943,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.10696900000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "advantages": {
+        "control": 0.0,
+        "field": 28.47647599999982,
+        "short": 23.63607199999933,
+        "long": 9.49469499999941,
+        "program": -0.9616800000003423
+      },
+      "baseline_total": 6362.021539,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "cases": 5,
+      "distinct_pointings": 2,
+      "control_program": "DARK",
+      "control_duration": 1129,
+      "control_assignments": 13,
+      "prefix_hash": "54d857b8ca897740aa4751a0b8cae0b3364b3c5459b938f1fcfd8638c425de2e",
+      "public_history_rows": 673
+    }
+  ],
+  "components": {
+    "sum_best_scores": {
+      "nonzero": 125,
+      "positive": 57,
+      "negative": 68,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": -1.352136850393636,
+        "median": -0.4192370000000665,
+        "minimum": -75.69830999999976,
+        "maximum": 62.15020099999947,
+        "q25": -18.90731249999999,
+        "q75": 19.66217349999988,
+        "sum": -171.72137999999177
+      },
+      "oracle_selected_sum": 538.6651849999998
+    },
+    "required_penalty": {
+      "nonzero": 0,
+      "positive": 0,
+      "negative": 0,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 0.0
+      },
+      "oracle_selected_sum": 0.0
+    },
+    "uniformity_penalty": {
+      "nonzero": 116,
+      "positive": 60,
+      "negative": 56,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.017369992125984238,
+        "median": 0.0,
+        "minimum": -0.37953900000000007,
+        "maximum": 0.38243399999999994,
+        "q25": -0.05730400000000013,
+        "q75": 0.09142650000000001,
+        "sum": 2.205988999999998
+      },
+      "oracle_selected_sum": 0.280968
+    },
+    "observation_request_reward": {
+      "nonzero": 1,
+      "positive": 0,
+      "negative": 1,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": -0.7874015748031497,
+        "median": 0.0,
+        "minimum": -100.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": -100.0
+      },
+      "oracle_selected_sum": 0.0
+    },
+    "report_settlement": {
+      "nonzero": 0,
+      "positive": 0,
+      "negative": 0,
+      "all_branch_deltas": {
+        "count": 127,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "sum": 0.0
+      },
+      "oracle_selected_sum": 0.0
+    }
+  },
+  "behavior_prefix": {
+    "L1": {
+      "history_rows": 1056,
+      "action_kinds": {
+        "observe": 965,
+        "wait": 90,
+        "report": 1
+      },
+      "observed_actions": 965,
+      "unique_exact_observe_actions": 965,
+      "programs": {
+        "DARK": 912,
+        "BRIGHT": 49,
+        "BACKUP": 4
+      },
+      "durations": {
+        "count": 965,
+        "mean": 846.7544041450777,
+        "median": 558.0,
+        "minimum": 60.0,
+        "maximum": 3600.0,
+        "q25": 234.0,
+        "q75": 1195.0,
+        "sum": 817118.0
+      },
+      "distinct_durations": 698,
+      "top10_durations": [
+        [
+          60,
+          58
+        ],
+        [
+          3600,
+          12
+        ],
+        [
+          103,
+          5
+        ],
+        [
+          303,
+          5
+        ],
+        [
+          195,
+          4
+        ],
+        [
+          146,
+          4
+        ],
+        [
+          784,
+          4
+        ],
+        [
+          81,
+          4
+        ],
+        [
+          329,
+          4
+        ],
+        [
+          77,
+          3
+        ]
+      ],
+      "top5_duration_frequency": 0.08704663212435233,
+      "assignment_counts": {
+        "count": 965,
+        "mean": 13.719170984455959,
+        "median": 14.0,
+        "minimum": 3.0,
+        "maximum": 16.0,
+        "q25": 13.0,
+        "q75": 15.0,
+        "sum": 13239.0
+      },
+      "catalog_targets": 7800,
+      "prefix_assigned_distinct_targets": 7620,
+      "all_cut_public_histories_are_prefixes": true
+    },
+    "L2": {
+      "history_rows": 1194,
+      "action_kinds": {
+        "observe": 1073,
+        "wait": 120,
+        "report": 1
+      },
+      "observed_actions": 1073,
+      "unique_exact_observe_actions": 1073,
+      "programs": {
+        "BRIGHT": 188,
+        "DARK": 877,
+        "BACKUP": 8
+      },
+      "durations": {
+        "count": 1073,
+        "mean": 821.7315936626281,
+        "median": 625.0,
+        "minimum": 60.0,
+        "maximum": 3600.0,
+        "q25": 249.0,
+        "q75": 1213.0,
+        "sum": 881718.0
+      },
+      "distinct_durations": 769,
+      "top10_durations": [
+        [
+          60,
+          54
+        ],
+        [
+          300,
+          8
+        ],
+        [
+          223,
+          5
+        ],
+        [
+          158,
+          5
+        ],
+        [
+          247,
+          4
+        ],
+        [
+          65,
+          4
+        ],
+        [
+          656,
+          4
+        ],
+        [
+          108,
+          4
+        ],
+        [
+          164,
+          4
+        ],
+        [
+          126,
+          4
+        ]
+      ],
+      "top5_duration_frequency": 0.07082945013979497,
+      "assignment_counts": {
+        "count": 1073,
+        "mean": 13.762348555452004,
+        "median": 14.0,
+        "minimum": 4.0,
+        "maximum": 16.0,
+        "q25": 13.0,
+        "q75": 15.0,
+        "sum": 14767.0
+      },
+      "catalog_targets": 8600,
+      "prefix_assigned_distinct_targets": 8353,
+      "all_cut_public_histories_are_prefixes": true
+    }
+  },
+  "active_request_group_count": 4,
+  "unfinished_request_group_count": 3,
+  "unique_prefix_count": 32,
+  "native_utility_available_alternative_count": 32,
+  "immediate_coarse_sign_reversals": 59,
+  "coarse_sign_reversal_examples": [
+    {
+      "card": "L1",
+      "group_id": "L1_q00_rank0106",
+      "rank": 106,
+      "season_fraction": 0.03192550714998337,
+      "case": "long",
+      "advantage": -77.40823900000032,
+      "sign": "negative",
+      "components": {
+        "sum_best_scores": 22.537067000000206,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.054694999999999994,
+        "observation_request_reward": -100.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": 2.468331487178446,
+      "immediate_rate_delta": -0.059655115796617836,
+      "continuation_plus_physics_residual": -79.87657048717877,
+      "pointing_separation_deg": 8.537736462515939e-07,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 15,
+      "duration": 428,
+      "duration_ratio": 1.5017543859649123,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 961,
+      "observe_count_delta": 7,
+      "action_count_delta": 5,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 1,
+      "active_requests": 1,
+      "active_requests_unfinished": 1,
+      "notices": [],
+      "C": 1.0549934328638915,
+      "E": 0.9501949983540952
+    },
+    {
+      "card": "L2",
+      "group_id": "L2_q02_rank0232",
+      "rank": 232,
+      "season_fraction": 0.16986139781775286,
+      "case": "long",
+      "advantage": -75.75009399999999,
+      "sign": "negative",
+      "components": {
+        "sum_best_scores": -75.69830999999976,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.051783000000000134,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": 0.3833801594280626,
+      "immediate_rate_delta": -0.00028754969205261813,
+      "continuation_plus_physics_residual": -76.13347415942805,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 12,
+      "duration": 3600,
+      "duration_ratio": 1.1019283746556474,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 978,
+      "observe_count_delta": -3,
+      "action_count_delta": 1,
+      "terminal_required_missing": 3,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "C": 0.7285663946199882,
+      "E": 0.9391971550827115
+    },
+    {
+      "card": "L2",
+      "group_id": "L2_q04_rank0425",
+      "rank": 425,
+      "season_fraction": 0.2833972279563551,
+      "case": "field",
+      "advantage": -68.23278899999968,
+      "sign": "negative",
+      "components": {
+        "sum_best_scores": -67.91903000000002,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.313758,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": 1.3404315291058948,
+      "immediate_rate_delta": -0.00015414021366497686,
+      "continuation_plus_physics_residual": -69.57322052910558,
+      "pointing_separation_deg": 0.4306117603364365,
+      "target_jaccard": 0.5555555555555556,
+      "targets_added": 4,
+      "targets_removed": 4,
+      "assignment_count": 14,
+      "duration": 761,
+      "duration_ratio": 1.2516447368421053,
+      "program": "DARK",
+      "native_utility_available": true,
+      "aligned_action_divergences": 760,
+      "observe_count_delta": -14,
+      "action_count_delta": -19,
+      "terminal_required_missing": 3,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "overcast"
+      ],
+      "C": 0.8141479274426587,
+      "E": 0.8437309675810268
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q03_rank0419",
+      "rank": 419,
+      "season_fraction": 0.2234785500498836,
+      "case": "field",
+      "advantage": 62.13988699999936,
+      "sign": "positive",
+      "components": {
+        "sum_best_scores": 62.15020099999947,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.01031399999999999,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": -0.09426228410503423,
+      "immediate_rate_delta": -0.00011891494144978046,
+      "continuation_plus_physics_residual": 62.2341492841044,
+      "pointing_separation_deg": 0.3769746294630015,
+      "target_jaccard": 0.55,
+      "targets_added": 4,
+      "targets_removed": 5,
+      "assignment_count": 15,
+      "duration": 562,
+      "duration_ratio": 0.9964539007092199,
+      "program": "DARK",
+      "native_utility_available": true,
+      "aligned_action_divergences": 613,
+      "observe_count_delta": 19,
+      "action_count_delta": 26,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "C": 0.9440947226185078,
+      "E": 0.9558748984255976
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q06_rank0656",
+      "rank": 656,
+      "season_fraction": 0.4150315929497838,
+      "case": "field",
+      "advantage": 56.33433799999966,
+      "sign": "positive",
+      "components": {
+        "sum_best_scores": 56.242239000000154,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.09209900000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": -0.42790136114641086,
+      "immediate_rate_delta": -0.00017617070172751097,
+      "continuation_plus_physics_residual": 56.76223936114607,
+      "pointing_separation_deg": 0.5517602990088827,
+      "target_jaccard": 0.4090909090909091,
+      "targets_added": 6,
+      "targets_removed": 7,
+      "assignment_count": 15,
+      "duration": 2065,
+      "duration_ratio": 0.9937439846005774,
+      "program": "DARK",
+      "native_utility_available": true,
+      "aligned_action_divergences": 367,
+      "observe_count_delta": 13,
+      "action_count_delta": 14,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "C": 0.876717036294727,
+      "E": 0.5805302967135253
+    },
+    {
+      "card": "L2",
+      "group_id": "L2_q01_rank0188",
+      "rank": 188,
+      "season_fraction": 0.09386087355417937,
+      "case": "long",
+      "advantage": -53.75619999999981,
+      "sign": "negative",
+      "components": {
+        "sum_best_scores": -53.95849499999986,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.20229599999999992,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": 1.7859135474347738,
+      "immediate_rate_delta": -0.06841400837622669,
+      "continuation_plus_physics_residual": -55.54211354743458,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 14,
+      "duration": 364,
+      "duration_ratio": 1.4979423868312758,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 1029,
+      "observe_count_delta": 0,
+      "action_count_delta": 5,
+      "terminal_required_missing": 3,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "C": 1.016650536463948,
+      "E": 0.6849999034370462
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q03_rank0419",
+      "rank": 419,
+      "season_fraction": 0.2234785500498836,
+      "case": "program",
+      "advantage": 42.60443299999952,
+      "sign": "positive",
+      "components": {
+        "sum_best_scores": 42.67332699999952,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -0.06889400000000001,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": -1.5632563649094031,
+      "immediate_rate_delta": -0.0027717311434563886,
+      "continuation_plus_physics_residual": 44.167689364908924,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 16,
+      "duration": 564,
+      "duration_ratio": 1.0,
+      "program": "BRIGHT",
+      "native_utility_available": false,
+      "aligned_action_divergences": 633,
+      "observe_count_delta": 22,
+      "action_count_delta": 24,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [],
+      "C": 0.9440947226185078,
+      "E": 0.9558748984255976,
+      "frozen_physical_suffix_science_delta_lower": -3.1499999999999995,
+      "frozen_physical_suffix_science_delta_upper": 1.8900000000000017,
+      "science_outside_frozen_suffix_bound": true,
+      "factor_dependent_jain_changed": true,
+      "minimum_science_suffix_effect": 40.78332699999952
+    },
+    {
+      "card": "L2",
+      "group_id": "L2_q07_rank0656",
+      "rank": 656,
+      "season_fraction": 0.4815688587437334,
+      "case": "long",
+      "advantage": -42.16172800000004,
+      "sign": "negative",
+      "components": {
+        "sum_best_scores": -42.28082499999982,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.11909799999999993,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": 2.619513860708892,
+      "immediate_rate_delta": -0.00035493354883769056,
+      "continuation_plus_physics_residual": -44.78124186070893,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 14,
+      "duration": 1533,
+      "duration_ratio": 1.5,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 488,
+      "observe_count_delta": -5,
+      "action_count_delta": -8,
+      "terminal_required_missing": 3,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "C": 0.8141479274426587,
+      "E": 0.49024683372053457
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q07_rank0711",
+      "rank": 711,
+      "season_fraction": 0.47921516461589625,
+      "case": "short",
+      "advantage": 41.75061399999959,
+      "sign": "positive",
+      "components": {
+        "sum_best_scores": 41.71226000000024,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.038354,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": -2.328865406889113,
+      "immediate_rate_delta": -0.0012888422882285089,
+      "continuation_plus_physics_residual": 44.0794794068887,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 12,
+      "duration": 373,
+      "duration_ratio": 0.5996784565916399,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 307,
+      "observe_count_delta": 8,
+      "action_count_delta": 6,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "C": 0.9440947226185078,
+      "E": 0.6806571051505551
+    },
+    {
+      "card": "L1",
+      "group_id": "L1_q10_rank0825",
+      "rank": 825,
+      "season_fraction": 0.6707682075157965,
+      "case": "short",
+      "advantage": 40.36773499999981,
+      "sign": "positive",
+      "components": {
+        "sum_best_scores": 40.35810700000002,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.009628000000000025,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0
+      },
+      "immediate_coarse_delta": -6.037019800072866,
+      "immediate_rate_delta": -0.0014119085035549034,
+      "continuation_plus_physics_residual": 46.40475480007268,
+      "pointing_separation_deg": 0.0,
+      "target_jaccard": 1.0,
+      "targets_added": 0,
+      "targets_removed": 0,
+      "assignment_count": 16,
+      "duration": 1509,
+      "duration_ratio": 0.6,
+      "program": "DARK",
+      "native_utility_available": false,
+      "aligned_action_divergences": 186,
+      "observe_count_delta": 8,
+      "action_count_delta": 6,
+      "terminal_required_missing": 2,
+      "terminal_requests_completed": 2,
+      "active_requests": 0,
+      "active_requests_unfinished": 0,
+      "notices": [
+        "earthquake"
+      ],
+      "C": 0.8448534535959605,
+      "E": 0.7099326284707317
+    }
+  ],
+  "aligned_action_divergences": {
+    "count": 127,
+    "mean": 405.31496062992125,
+    "median": 311.0,
+    "minimum": 1.0,
+    "maximum": 1115.0,
+    "q25": 141.0,
+    "q75": 676.0,
+    "sum": 51475.0
+  },
+  "zero_suffix_divergences": 0,
+  "state_common_mode_variance_share": 0.7246921188411327,
+  "common_modes": {
+    "L1": {
+      "all_alternatives_positive": 6,
+      "all_alternatives_nonpositive": 1,
+      "mean_alternative_effect": {
+        "count": 16,
+        "mean": 16.746188369791348,
+        "median": 15.79574212499972,
+        "minimum": -7.413556750000225,
+        "maximum": 48.806151999999656,
+        "q25": 9.778213499999879,
+        "q75": 21.586557374999643,
+        "sum": 267.93901391666157
+      }
+    },
+    "L2": {
+      "all_alternatives_positive": 0,
+      "all_alternatives_nonpositive": 11,
+      "mean_alternative_effect": {
+        "count": 16,
+        "mean": -20.34466843749985,
+        "median": -17.42856312499964,
+        "minimum": -49.34408725000003,
+        "maximum": 3.0372657499999605,
+        "q25": -31.535621749999905,
+        "q75": -6.5173919999999725,
+        "sum": -325.5146949999976
+      }
+    }
+  },
+  "program_only_physical_intervention": {
+    "groups": 32,
+    "science_bound_violations": 22,
+    "jain_changes": 23,
+    "minimum_science_suffix_effect": {
+      "count": 32,
+      "mean": 16.6833252499999,
+      "median": 15.964108500000137,
+      "minimum": 0.0,
+      "maximum": 60.865656999999445,
+      "q25": 0.0,
+      "q75": 28.10170724999946,
+      "sum": 533.8664079999968
+    },
+    "examples": [
+      {
+        "card": "L2",
+        "group_id": "L2_q04_rank0425",
+        "rank": 425,
+        "season_fraction": 0.2833972279563551,
+        "case": "program",
+        "advantage": -63.49920800000018,
+        "sign": "negative",
+        "components": {
+          "sum_best_scores": -63.535656999999446,
+          "required_penalty": 0.0,
+          "uniformity_penalty": 0.03644999999999998,
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0
+        },
+        "immediate_coarse_delta": -1.1960028789152553,
+        "immediate_rate_delta": -0.0019671099982158796,
+        "continuation_plus_physics_residual": -62.30320512108493,
+        "pointing_separation_deg": 0.0,
+        "target_jaccard": 1.0,
+        "targets_added": 0,
+        "targets_removed": 0,
+        "assignment_count": 14,
+        "duration": 608,
+        "duration_ratio": 1.0,
+        "program": "BRIGHT",
+        "native_utility_available": false,
+        "aligned_action_divergences": 771,
+        "observe_count_delta": -12,
+        "action_count_delta": -6,
+        "terminal_required_missing": 3,
+        "terminal_requests_completed": 2,
+        "active_requests": 0,
+        "active_requests_unfinished": 0,
+        "notices": [
+          "overcast"
+        ],
+        "C": 0.8141479274426587,
+        "E": 0.8437309675810268,
+        "frozen_physical_suffix_science_delta_lower": -2.669999999999999,
+        "frozen_physical_suffix_science_delta_upper": 1.6020000000000012,
+        "science_outside_frozen_suffix_bound": true,
+        "factor_dependent_jain_changed": true,
+        "minimum_science_suffix_effect": 60.865656999999445
+      },
+      {
+        "card": "L2",
+        "group_id": "L2_q03_rank0344",
+        "rank": 344,
+        "season_fraction": 0.2267767620171041,
+        "case": "program",
+        "advantage": -46.567487999999685,
+        "sign": "negative",
+        "components": {
+          "sum_best_scores": -46.7266639999998,
+          "required_penalty": 0.0,
+          "uniformity_penalty": 0.1591769999999999,
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0
+        },
+        "immediate_coarse_delta": -0.11826154107740683,
+        "immediate_rate_delta": -0.000946092328619255,
+        "continuation_plus_physics_residual": -46.449226458922276,
+        "pointing_separation_deg": 0.0,
+        "target_jaccard": 1.0,
+        "targets_added": 0,
+        "targets_removed": 0,
+        "assignment_count": 10,
+        "duration": 125,
+        "duration_ratio": 1.0,
+        "program": "BACKUP",
+        "native_utility_available": false,
+        "aligned_action_divergences": 852,
+        "observe_count_delta": -2,
+        "action_count_delta": -1,
+        "terminal_required_missing": 3,
+        "terminal_requests_completed": 2,
+        "active_requests": 0,
+        "active_requests_unfinished": 0,
+        "notices": [],
+        "C": 0.6282852832172003,
+        "E": 0.9434076930773345,
+        "frozen_physical_suffix_science_delta_lower": -0.8340000000000007,
+        "frozen_physical_suffix_science_delta_upper": 0.41700000000000037,
+        "science_outside_frozen_suffix_bound": true,
+        "factor_dependent_jain_changed": true,
+        "minimum_science_suffix_effect": 45.8926639999998
+      },
+      {
+        "card": "L1",
+        "group_id": "L1_q03_rank0419",
+        "rank": 419,
+        "season_fraction": 0.2234785500498836,
+        "case": "program",
+        "advantage": 42.60443299999952,
+        "sign": "positive",
+        "components": {
+          "sum_best_scores": 42.67332699999952,
+          "required_penalty": 0.0,
+          "uniformity_penalty": -0.06889400000000001,
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0
+        },
+        "immediate_coarse_delta": -1.5632563649094031,
+        "immediate_rate_delta": -0.0027717311434563886,
+        "continuation_plus_physics_residual": 44.167689364908924,
+        "pointing_separation_deg": 0.0,
+        "target_jaccard": 1.0,
+        "targets_added": 0,
+        "targets_removed": 0,
+        "assignment_count": 16,
+        "duration": 564,
+        "duration_ratio": 1.0,
+        "program": "BRIGHT",
+        "native_utility_available": false,
+        "aligned_action_divergences": 633,
+        "observe_count_delta": 22,
+        "action_count_delta": 24,
+        "terminal_required_missing": 2,
+        "terminal_requests_completed": 2,
+        "active_requests": 0,
+        "active_requests_unfinished": 0,
+        "notices": [],
+        "C": 0.9440947226185078,
+        "E": 0.9558748984255976,
+        "frozen_physical_suffix_science_delta_lower": -3.1499999999999995,
+        "frozen_physical_suffix_science_delta_upper": 1.8900000000000017,
+        "science_outside_frozen_suffix_bound": true,
+        "factor_dependent_jain_changed": true,
+        "minimum_science_suffix_effect": 40.78332699999952
+      },
+      {
+        "card": "L2",
+        "group_id": "L2_q05_rank0510",
+        "rank": 510,
+        "season_fraction": 0.3439496706969429,
+        "case": "program",
+        "advantage": -39.902156000000105,
+        "sign": "negative",
+        "components": {
+          "sum_best_scores": -39.83932999999979,
+          "required_penalty": 0.0,
+          "uniformity_penalty": -0.06282500000000013,
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0
+        },
+        "immediate_coarse_delta": -0.25133538582405235,
+        "immediate_rate_delta": -0.0011476501635801478,
+        "continuation_plus_physics_residual": -39.650820614176055,
+        "pointing_separation_deg": 0.0,
+        "target_jaccard": 1.0,
+        "targets_added": 0,
+        "targets_removed": 0,
+        "assignment_count": 12,
+        "duration": 219,
+        "duration_ratio": 1.0,
+        "program": "BACKUP",
+        "native_utility_available": false,
+        "aligned_action_divergences": 624,
+        "observe_count_delta": -2,
+        "action_count_delta": 2,
+        "terminal_required_missing": 3,
+        "terminal_requests_completed": 2,
+        "active_requests": 0,
+        "active_requests_unfinished": 0,
+        "notices": [],
+        "C": 0.664568185757536,
+        "E": 0.9563385165676797,
+        "frozen_physical_suffix_science_delta_lower": -1.0560000000000007,
+        "frozen_physical_suffix_science_delta_upper": 0.5280000000000004,
+        "science_outside_frozen_suffix_bound": true,
+        "factor_dependent_jain_changed": true,
+        "minimum_science_suffix_effect": 38.78332999999979
+      },
+      {
+        "card": "L1",
+        "group_id": "L1_q02_rank0287",
+        "rank": 287,
+        "season_fraction": 0.15962753574991687,
+        "case": "program",
+        "advantage": 39.51057299999957,
+        "sign": "positive",
+        "components": {
+          "sum_best_scores": 39.3425959999995,
+          "required_penalty": 0.0,
+          "uniformity_penalty": 0.16797600000000001,
+          "observation_request_reward": 0.0,
+          "report_settlement": 0.0
+        },
+        "immediate_coarse_delta": -0.20348115863788907,
+        "immediate_rate_delta": -0.0033913526439648158,
+        "continuation_plus_physics_residual": 39.71405415863746,
+        "pointing_separation_deg": 1.2074182697257333e-06,
+        "target_jaccard": 1.0,
+        "targets_added": 0,
+        "targets_removed": 0,
+        "assignment_count": 14,
+        "duration": 60,
+        "duration_ratio": 1.0,
+        "program": "BRIGHT",
+        "native_utility_available": false,
+        "aligned_action_divergences": 771,
+        "observe_count_delta": 17,
+        "action_count_delta": 16,
+        "terminal_required_missing": 2,
+        "terminal_requests_completed": 2,
+        "active_requests": 0,
+        "active_requests_unfinished": 0,
+        "notices": [],
+        "C": 0.9440947226185078,
+        "E": 0.897767207700152,
+        "frozen_physical_suffix_science_delta_lower": -2.2999999999999994,
+        "frozen_physical_suffix_science_delta_upper": 1.3800000000000012,
+        "science_outside_frozen_suffix_bound": true,
+        "factor_dependent_jain_changed": true,
+        "minimum_science_suffix_effect": 37.9625959999995
+      }
+    ],
+    "proof": "Only declared program changes. Same pointing/duration/assignments gives identical raw factors; fixed physical suffix has identical max-factor/REQ/Jain. Science max is 1-Lipschitz, so its change lies between sum(w)*min_band(mult_alt-mult_control) and corresponding max. Violations prove downstream effects, not their cause or expected benefit."
+  },
+  "observe_count_delta": {
+    "count": 127,
+    "mean": 2.251968503937008,
+    "median": 1.0,
+    "minimum": -22.0,
+    "maximum": 22.0,
+    "q25": -2.0,
+    "q75": 7.0,
+    "sum": 286.0
+  },
+  "scope": "L1/L2 training labels only. 32 nested prefixes of two fixed natural policies/worlds; correlated candidates and states. Oracle sums across counterfactual single-state branches are not an achievable whole-policy gain."
+}
