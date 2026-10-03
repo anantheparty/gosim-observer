@@ -1,0 +1,32 @@
+{
+  "schema": "structured-student-bounded-audit-v1",
+  "passed": true,
+  "real_public_features": true,
+  "label_files_read": 0,
+  "optimization_steps": 0,
+  "seasons_launched": 0,
+  "untrained_random_weights": true,
+  "target_shape": [
+    7800,
+    44
+  ],
+  "edge_dim": 17,
+  "global_dim": 252,
+  "scalar_dim": 17,
+  "flat_dim": 584,
+  "feature_seconds": 0.014623166061937809,
+  "numpy_inference_seconds": 0.0018396249506622553,
+  "permutation_max_absolute_error": 5.960464477539063e-08,
+  "raw_ledger_rank_sensitivity": true,
+  "missing_metadata_rejected": [
+    "target_ids",
+    "candidate_predictions"
+  ],
+  "uncalibrated_returns_control": true,
+  "torch_requested": false,
+  "warnings": [
+    "Factor lower/estimate/upper are public-derived learning features; no completion certificate.",
+    "Remaining geometry support is three samples per public night, not exact future visibility.",
+    "Rank pooling compresses the full ledger; the representation is not a sufficient statistic for all future invalidations."
+  ]
+}

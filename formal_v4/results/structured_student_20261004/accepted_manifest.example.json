@@ -1,0 +1,29 @@
+{
+  "schema": "structured-student-accepted-labels-v1",
+  "accepted": false,
+  "acceptance_note": "EXAMPLE ONLY. Root must verify complete source/continuation/prefix gates and replace paths/hashes before explicit acceptance.",
+  "groups": [
+    {
+      "group_id": "L1_rank_0064_example",
+      "card": "L1",
+      "capture": "../policy_iteration_20261004/pilot/L1/rank_0064/control/capture.json",
+      "public_features": "../policy_iteration_20261004/pilot/L1/rank_0064/control/public_features.npz",
+      "public_initial": "../policy_iteration_20261004/L1_initialize_public.json",
+      "pair_audit": "../policy_iteration_20261004/pilot/L1/rank_0064/pair_audit.json",
+      "sha256": {
+        "capture": "REPLACE_WITH_ACCEPTED_SHA256",
+        "public_features": "REPLACE_WITH_ACCEPTED_SHA256",
+        "public_initial": "REPLACE_WITH_PUBLIC_INITIALIZATION_SHA256",
+        "pair_audit": "REPLACE_WITH_PASSED_PAIR_AUDIT_SHA256"
+      }
+    }
+  ],
+  "split_contract": {
+    "train_cards": ["L1", "L2"],
+    "validation_card": "L3",
+    "untouched_test_card": "L4",
+    "unit": "All candidates/labels from a complete state group remain together.",
+    "minimum_for_training_plumbing": "At least two accepted L1/L2 state groups and one separate L3 state group.",
+    "minimum_for_broad_policy_claims": "256 distinct training state groups plus full official student policy gates."
+  }
+}

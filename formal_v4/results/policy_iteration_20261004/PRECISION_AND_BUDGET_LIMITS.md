@@ -1,0 +1,13 @@
+# Precision and first-batch limits
+
+Frozen source lock revision 5: `4b087d3d556be8de73b1c4de3177103541b8322ece5d0d3a501c9317632bd8b5`.
+
+`factor_upper` is an approximate learning feature computed from six-decimal public scores divided by public science weight and minimum program/mismatch multiplier. It omits the half-unit rounding allowance. It must not be used as a rigorous completion certificate, pruning bound, or source of truth factor. Native `factor_lower` and estimates are unchanged.
+
+The first proposed batch has 64 state groups: 32 training groups on L1/L2, 16 validation groups on L3, and 16 test groups on L4. It has up to 256 baseline-relative action labels, with all other pair comparisons remaining correlated within a group. This is below the independently proposed minimum of 256 training states for broad model claims. A small model can test label quality, but training convergence does not establish survey score improvement or generalization.
+
+Each state is sampled in a single realized future world. Its label is a Monte Carlo return under the complete native continuation policy, not the exact expectation conditional on the public state. All grouping, candidate selection, ties, negatives, and failures must be preserved. Per-target terminal science/threshold/validity auxiliary labels are sparse and highly correlated within each episode; zeros must remain present.
+
+READY L1 measured accounting is 438.485 seconds, including 426.755 agent seconds and 396.335 planning seconds. The external official scorer consumed a small fraction of total time. The first teacher optimization therefore replays the already-public prefix action/prediction metadata and performs fresh native planning from the cut onward. Its semantic correctness is gated by a complete accelerated-control action stream matching READY, and every consumed prefix snapshot hash matching the original natural run. No future prefix record is mounted at or after the selected rank.
+
+Proposed large-batch resource request, subject to root approval after pilot: eight workers, each with two physical CPU cores, using independent physical cores 0-15 and leaving cores 16-23 plus their SMT siblings for other services. Budget must use actual worker wall time divided by eight; the two-core quota is not a second throughput divisor. At 500 seconds per season and half the expensive planning skipped on average, 320 episodes require about 2.9 hours, plus shared control generation and cheap prefix simulation. This is an estimate before the pilot measurement. GPU training is expected to be small relative to teacher creation; no GPU process has been launched.

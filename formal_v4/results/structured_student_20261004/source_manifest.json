@@ -1,0 +1,32 @@
+{
+  "schema": "structured-student-source-lock-v1",
+  "frozen": true,
+  "code": {
+    "research/structured_student_features.py": "ac5a6a09fc9cd559ad32559a0281ef71b2b25df13c91351c2d5efb6c918f0db0",
+    "research/structured_student_model.py": "612132459874a6869c76c18c21746c045f7235f47bcb64e444b3aebe3f887542",
+    "research/structured_student_runtime.py": "5b62f375e6746055814eaa81eee8f2ada596565a883ecf2f75ffc0e3450ffc35",
+    "research/structured_student_train.py": "c2dae2f0b495f7f1f864ffa49f9cbc38d42a3017903baafe182401115c3bd34f",
+    "research/structured_student_audit.py": "0a256dfc1f7f8901403af4da827872e0332a447016469e86f86bdae61779baed"
+  },
+  "public_audit_inputs": {
+    "results/policy_iteration_20261004/L1_initialize_public.json": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+    "results/policy_iteration_20261004/natural_control/L1/rank_0064/control/public_capture/capture.json": "4162b74e465822c36b181140b87c0d9875422b6c9669c57365fa1261e58c9ffe",
+    "results/policy_iteration_20261004/natural_control/L1/rank_0064/control/public_capture/public_features.npz": "604f0f44499932f53e004d39cef01d9e9471a27f3fb3867c7320d6778151e214"
+  },
+  "local_public_numpy_audit_sha256": "16218e5ae3f26c683957971a168515a1fe18b9935e391088a3c1b9a74158edde",
+  "label_files_read": 0,
+  "training_started": false,
+  "gpu_audit_pending": true,
+  "deployment_calibrated": false,
+  "feature_dimensions": {
+    "target": 44,
+    "edge": 17,
+    "global": 252,
+    "action_scalar": 17,
+    "flat": 584
+  },
+  "parameters": {
+    "structured": 6598,
+    "flat": 6507
+  }
+}

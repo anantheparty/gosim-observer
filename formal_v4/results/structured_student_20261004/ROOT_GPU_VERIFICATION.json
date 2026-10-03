@@ -1,0 +1,53 @@
+{
+  "status": "FROZEN_STRUCTURED_STUDENT_CUDA_NUMPY_EXPORT_PASS_NO_MODEL_TRAINING",
+  "GPU_runtime": "isolatedWindowsPyTorch2.7.1+cu128",
+  "source_and_three_public_input_hashes_match_actual_GPU_host": true,
+  "torch_numpy_max_absolute_error": 8.58306884765625e-06,
+  "all_local_source_and_input_hashes_match": true,
+  "label_files_read": 0,
+  "optimization_steps": 0,
+  "deployment_calibrated": false,
+  "credential_scan_pass": true,
+  "files": {
+    "formal_v4/results/structured_student_20261004/README.md": {
+      "sha256": "503c8656f044a20cd0e034a19632c0fbe595c6d060618fa6ca62833064d9ab79",
+      "bytes": 5837
+    },
+    "formal_v4/results/structured_student_20261004/accepted_manifest.example.json": {
+      "sha256": "d128fea9f508760c4cdc7fa61281ac5b19bce8df73a74b18d770ee47a67932fa",
+      "bytes": 1386
+    },
+    "formal_v4/results/structured_student_20261004/cuda_export_audit.json": {
+      "sha256": "ce1e7083b2d0ccada64db021d4892faa4a8824a2f76fec294ef81c1e18689efc",
+      "bytes": 1223
+    },
+    "formal_v4/results/structured_student_20261004/public_numpy_audit.json": {
+      "sha256": "16218e5ae3f26c683957971a168515a1fe18b9935e391088a3c1b9a74158edde",
+      "bytes": 1027
+    },
+    "formal_v4/results/structured_student_20261004/source_manifest.json": {
+      "sha256": "275291273cc05becdc99d582dde748043f268333674b114894be7b67d21283c9",
+      "bytes": 1583
+    },
+    "formal_v4/research/structured_student_features.py": {
+      "sha256": "ac5a6a09fc9cd559ad32559a0281ef71b2b25df13c91351c2d5efb6c918f0db0",
+      "bytes": 24405
+    },
+    "formal_v4/research/structured_student_model.py": {
+      "sha256": "612132459874a6869c76c18c21746c045f7235f47bcb64e444b3aebe3f887542",
+      "bytes": 5804
+    },
+    "formal_v4/research/structured_student_runtime.py": {
+      "sha256": "5b62f375e6746055814eaa81eee8f2ada596565a883ecf2f75ffc0e3450ffc35",
+      "bytes": 3835
+    },
+    "formal_v4/research/structured_student_train.py": {
+      "sha256": "c2dae2f0b495f7f1f864ffa49f9cbc38d42a3017903baafe182401115c3bd34f",
+      "bytes": 17153
+    },
+    "formal_v4/research/structured_student_audit.py": {
+      "sha256": "0a256dfc1f7f8901403af4da827872e0332a447016469e86f86bdae61779baed",
+      "bytes": 11695
+    }
+  }
+}

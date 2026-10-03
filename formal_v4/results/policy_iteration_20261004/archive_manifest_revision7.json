@@ -1,0 +1,69 @@
+{
+  "schema": "policy-iteration-frozen-pilot-inputs-v1",
+  "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "archives": [
+    {
+      "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/archives/revision7_natural_L1_rank64.tar.gz",
+      "bytes": 3126996,
+      "sha256": "9f6f883bbe562ec35ee81ab5ddb7b35e906e321a14d2fe456ac0bae31a76af73",
+      "member_count": 18,
+      "label": "revision7_natural_L1_rank64",
+      "raw_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/natural_control/L1/rank_0064/control",
+      "raw_retained": true
+    },
+    {
+      "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/archives/failed_revision5.tar.gz",
+      "bytes": 573161,
+      "sha256": "72bf6445fb92538d42448b2a117da015bbf0c1c29fdb3de47e99b15adecc02a1",
+      "member_count": 47,
+      "label": "failed_revision5",
+      "raw_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/failed_revision5",
+      "raw_retained": true
+    },
+    {
+      "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/archives/metadata_revision6.tar.gz",
+      "bytes": 309483,
+      "sha256": "c8da05d04b11033b9e8710bf57fc64c05d55f9052e743454246a2c69a4be9a62",
+      "member_count": 40,
+      "label": "metadata_revision6",
+      "raw_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/metadata_revision6",
+      "raw_retained": true
+    }
+  ],
+  "shared_files": {
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/source_lock.json": {
+      "bytes": 7614,
+      "sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_initialize_public.json": {
+      "bytes": 548343,
+      "sha256": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_rank64_prefix_public.jsonl": {
+      "bytes": 307991,
+      "sha256": "c233361a90f1079f4be7512864355bf5c23d2638405c45931602b338c182cd6b"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/PRECISION_AND_BUDGET_LIMITS.md": {
+      "bytes": 2644,
+      "sha256": "8353d2b83a3c8ba6c8c0c2ef08959434d17b197851eccb02e56006091bde7d22"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/policy_iteration_model.md": {
+      "bytes": 5316,
+      "sha256": "20c5dc28987a1d0d7994ee161e16cc39f8d52d1e0a00f0dc251ac4d8d4bb9bf9"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/policy_iteration_agent.py": {
+      "bytes": 16927,
+      "sha256": "895185793aa3945ebdbb6b7353fc2e925425f853a87d6548c59275e9340f48b5"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/policy_iteration_gate.py": {
+      "bytes": 11440,
+      "sha256": "3cac6a67ea4892051c6d137224f9cc87e247fa98e2f22c0329e2f5c594fcabd1"
+    },
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/policy_iteration_audit.py": {
+      "bytes": 6739,
+      "sha256": "bf65f84ff8f97bbf44cb611772b41ff550f580c2ee1a19ef44a065f9849d8e61"
+    }
+  },
+  "live_pilot_outputs_excluded": true,
+  "raw_natural_trace_retained_for_prefix_replay": true
+}
