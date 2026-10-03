@@ -1,0 +1,418 @@
+{
+  "status": "stopped",
+  "reason": "no legal switch or information value does not cover native opportunity cost",
+  "candidate_frozen": true,
+  "probe": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 49.5675148,
+      "az_deg": 92.4462556
+    },
+    "duration_seconds": 60,
+    "program": "DARK",
+    "assignments": {
+      "4": "V4T006461",
+      "5": "V4T001252",
+      "6": "V4T004602",
+      "8": "V4T004062",
+      "9": "V4T004894",
+      "10": "V4T000432",
+      "11": "V4T000614",
+      "12": "V4T006735",
+      "13": "V4T001191",
+      "14": "V4T003724"
+    }
+  },
+  "qualifying": {
+    "parent_order": 135,
+    "anchor_ids": [
+      "V4T004062",
+      "V4T004894",
+      "V4T000432",
+      "V4T000614",
+      "V4T006735",
+      "V4T001191",
+      "V4T003724"
+    ],
+    "distinguishing_ids": [
+      "V4T006461",
+      "V4T001252",
+      "V4T004602"
+    ]
+  },
+  "probe_value": {
+    "value": 57.72507434800815,
+    "frozen_value": 57.66515034678423,
+    "information_value": 0.059924001223919277,
+    "branches": [
+      {
+        "worlds": [
+          0
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T006461",
+            0.026308
+          ],
+          [
+            "V4T001252",
+            0.033181
+          ],
+          [
+            "V4T004602",
+            0.09224
+          ],
+          [
+            "V4T004062",
+            0.205366
+          ],
+          [
+            "V4T004894",
+            0.042091
+          ],
+          [
+            "V4T000432",
+            0.036184
+          ],
+          [
+            "V4T000614",
+            0.082837
+          ],
+          [
+            "V4T006735",
+            0.067582
+          ],
+          [
+            "V4T001191",
+            0.118056
+          ],
+          [
+            "V4T003724",
+            0.116791
+          ]
+        ],
+        "value": 58.15977874683642,
+        "world_values": [
+          58.15977874683642,
+          57.11174580631723
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 49.7951999,
+            "az_deg": 92.3535704
+          },
+          "duration_seconds": 470,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T007717",
+            "1": "V4T002015",
+            "2": "V4T007297",
+            "3": "V4T001787",
+            "4": "V4T006461",
+            "5": "V4T001252",
+            "6": "V4T004602",
+            "8": "V4T004979",
+            "9": "V4T004894",
+            "10": "V4T004224",
+            "11": "V4T000614",
+            "12": "V4T006735",
+            "13": "V4T004885",
+            "14": "V4T005548"
+          }
+        },
+        "parent_order": 135,
+        "wait_after_seconds": 0
+      },
+      {
+        "worlds": [
+          1
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T006461",
+            0.0
+          ],
+          [
+            "V4T001252",
+            0.0
+          ],
+          [
+            "V4T004602",
+            0.0
+          ],
+          [
+            "V4T004062",
+            0.205366
+          ],
+          [
+            "V4T004894",
+            0.042091
+          ],
+          [
+            "V4T000432",
+            0.036184
+          ],
+          [
+            "V4T000614",
+            0.082837
+          ],
+          [
+            "V4T006735",
+            0.067582
+          ],
+          [
+            "V4T001191",
+            0.118056
+          ],
+          [
+            "V4T003724",
+            0.116791
+          ]
+        ],
+        "value": 57.290369949179876,
+        "world_values": [
+          58.039930744388585,
+          57.290369949179876
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 49.7951999,
+            "az_deg": 92.3535704
+          },
+          "duration_seconds": 470,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T007717",
+            "1": "V4T002015",
+            "2": "V4T000657",
+            "3": "V4T001787",
+            "4": "V4T006461",
+            "5": "V4T001252",
+            "6": "V4T004602",
+            "8": "V4T004979",
+            "9": "V4T004894",
+            "10": "V4T004224",
+            "11": "V4T000614",
+            "12": "V4T006735",
+            "13": "V4T004885",
+            "14": "V4T005548"
+          }
+        },
+        "parent_order": 135,
+        "wait_after_seconds": 0
+      }
+    ],
+    "frozen": {
+      "value": 57.66515034678423,
+      "world_values": [
+        58.039930744388585,
+        57.290369949179876
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 49.7951999,
+          "az_deg": 92.3535704
+        },
+        "duration_seconds": 470,
+        "program": "DARK",
+        "assignments": {
+          "0": "V4T007717",
+          "1": "V4T002015",
+          "2": "V4T000657",
+          "3": "V4T001787",
+          "4": "V4T006461",
+          "5": "V4T001252",
+          "6": "V4T004602",
+          "8": "V4T004979",
+          "9": "V4T004894",
+          "10": "V4T004224",
+          "11": "V4T000614",
+          "12": "V4T006735",
+          "13": "V4T004885",
+          "14": "V4T005548"
+        }
+      },
+      "parent_order": 135,
+      "wait_after_seconds": 0
+    },
+    "outcome_groups": 2,
+    "common_complete_continuation_action_count": 419,
+    "same_complete_action_family_for_all_posteriors": true
+  },
+  "native_control_value": {
+    "value": 58.61900614134663,
+    "frozen_value": 58.61900614134663,
+    "information_value": 0.0,
+    "branches": [
+      {
+        "worlds": [
+          0,
+          1
+        ],
+        "probability": 1.0,
+        "feedback": [
+          [
+            "V4T003781",
+            0.020092
+          ],
+          [
+            "V4T006442",
+            0.15222
+          ],
+          [
+            "V4T002914",
+            0.0762
+          ],
+          [
+            "V4T001744",
+            0.170193
+          ],
+          [
+            "V4T005917",
+            0.157449
+          ],
+          [
+            "V4T005388",
+            0.052264
+          ],
+          [
+            "V4T005334",
+            0.183431
+          ],
+          [
+            "V4T007028",
+            0.175312
+          ],
+          [
+            "V4T003570",
+            0.072885
+          ],
+          [
+            "V4T000787",
+            0.032228
+          ],
+          [
+            "V4T006212",
+            0.16464
+          ],
+          [
+            "V4T004330",
+            0.118091
+          ],
+          [
+            "V4T001088",
+            0.104499
+          ]
+        ],
+        "value": 58.61900614134663,
+        "world_values": [
+          58.993786538950985,
+          58.24422574374228
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 49.7951999,
+            "az_deg": 92.3535704
+          },
+          "duration_seconds": 470,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T007717",
+            "1": "V4T002015",
+            "2": "V4T000657",
+            "3": "V4T001787",
+            "4": "V4T006461",
+            "5": "V4T001252",
+            "6": "V4T004602",
+            "8": "V4T004979",
+            "9": "V4T004894",
+            "10": "V4T004224",
+            "11": "V4T000614",
+            "12": "V4T006735",
+            "13": "V4T004885",
+            "14": "V4T005548"
+          }
+        },
+        "parent_order": 135,
+        "wait_after_seconds": 0
+      }
+    ],
+    "frozen": {
+      "value": 58.61900614134663,
+      "world_values": [
+        58.993786538950985,
+        58.24422574374228
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 49.7951999,
+          "az_deg": 92.3535704
+        },
+        "duration_seconds": 470,
+        "program": "DARK",
+        "assignments": {
+          "0": "V4T007717",
+          "1": "V4T002015",
+          "2": "V4T000657",
+          "3": "V4T001787",
+          "4": "V4T006461",
+          "5": "V4T001252",
+          "6": "V4T004602",
+          "8": "V4T004979",
+          "9": "V4T004894",
+          "10": "V4T004224",
+          "11": "V4T000614",
+          "12": "V4T006735",
+          "13": "V4T004885",
+          "14": "V4T005548"
+        }
+      },
+      "parent_order": 135,
+      "wait_after_seconds": 0
+    },
+    "outcome_groups": 1,
+    "common_complete_continuation_action_count": 394,
+    "same_complete_action_family_for_all_posteriors": true
+  },
+  "native_first_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 50.1495404,
+      "az_deg": 256.2071562
+    },
+    "assignments": {
+      "1": "V4T003781",
+      "2": "V4T006442",
+      "3": "V4T002914",
+      "5": "V4T001744",
+      "6": "V4T005917",
+      "8": "V4T005388",
+      "9": "V4T005334",
+      "10": "V4T007028",
+      "11": "V4T003570",
+      "12": "V4T000787",
+      "13": "V4T006212",
+      "14": "V4T004330",
+      "15": "V4T001088"
+    },
+    "duration_seconds": 60,
+    "program": "DARK"
+  },
+  "same_probe_information_value": 0.059924001223919277,
+  "gain_after_native_opportunity_cost": -0.8939317933384814,
+  "legal_conditional_action_switch": true,
+  "scope": "two-action public frozen-C/E current-slot surrogate; exact modeled global best science/required/Jain; no activeREQ; no modeled future loss; not a true card terminal score or complete parent continuation",
+  "world_probabilities": "declared equiprobable conditional scenarios, not calibrated official posterior",
+  "candidate_field_count": 410,
+  "pool_expansion": false,
+  "program_expansion": false,
+  "duration_expansion": false,
+  "max_public_constraint_rank": 254
+}

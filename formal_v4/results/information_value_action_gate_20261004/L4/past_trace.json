@@ -1,0 +1,936 @@
+[
+  {
+    "event": "policy_iteration_public_trace",
+    "step": 0,
+    "rank": 0,
+    "snapshot_sha256": "68b7af5f927a4e7e178d4bc9632bdf58ed240bedc567b5a6583d15aeb389e9f4",
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.1974919,
+        "az_deg": 136.5706172
+      },
+      "assignments": {
+        "0": "V4T001758",
+        "2": "V4T005450",
+        "3": "V4T001204",
+        "4": "V4T001139",
+        "5": "V4T006455",
+        "6": "V4T001754",
+        "8": "V4T006490",
+        "9": "V4T000075",
+        "10": "V4T008303",
+        "11": "V4T005956",
+        "12": "V4T008153",
+        "13": "V4T003865",
+        "14": "V4T002640",
+        "15": "V4T007895"
+      },
+      "duration_seconds": 485,
+      "program": "BRIGHT"
+    },
+    "planner_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.1974919,
+        "az_deg": 136.5706172
+      },
+      "assignments": {
+        "0": "V4T001758",
+        "2": "V4T005450",
+        "3": "V4T001204",
+        "4": "V4T001139",
+        "5": "V4T006455",
+        "6": "V4T001754",
+        "8": "V4T006490",
+        "9": "V4T000075",
+        "10": "V4T008303",
+        "11": "V4T005956",
+        "12": "V4T008153",
+        "13": "V4T003865",
+        "14": "V4T002640",
+        "15": "V4T007895"
+      },
+      "duration_seconds": 485,
+      "program": "BRIGHT"
+    },
+    "prediction": {
+      "V4T001758": {
+        "index": 1757,
+        "fiber_id": 0,
+        "factor": 0.5504384894863706,
+        "public_quality": 0.9291715947374047,
+        "quality": 0.5201834368064095,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 30.1268465909718,
+        "az_deg": 135.6454269247374
+      },
+      "V4T005450": {
+        "index": 5449,
+        "fiber_id": 2,
+        "factor": 0.23260226845898457,
+        "public_quality": 0.9293170944882021,
+        "quality": 0.5202648927622877,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 30.06009512266935,
+        "az_deg": 137.0083907378753
+      },
+      "V4T001204": {
+        "index": 1203,
+        "fiber_id": 3,
+        "factor": 1.0,
+        "public_quality": 0.929513440762759,
+        "quality": 0.5203748144177512,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 30.047116886480786,
+        "az_deg": 137.47439173438775
+      },
+      "V4T001139": {
+        "index": 1138,
+        "fiber_id": 4,
+        "factor": 0.3079184031451317,
+        "public_quality": 0.9428174078799013,
+        "quality": 0.5278228502567185,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.024975653529097,
+        "az_deg": 135.12506264089663
+      },
+      "V4T006455": {
+        "index": 6454,
+        "fiber_id": 5,
+        "factor": 1.0,
+        "public_quality": 0.9377507464288436,
+        "quality": 0.5249863522603601,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 30.617581966807283,
+        "az_deg": 136.55060481969423
+      },
+      "V4T001754": {
+        "index": 1753,
+        "fiber_id": 6,
+        "factor": 0.3270659617794717,
+        "public_quality": 0.9467557319403724,
+        "quality": 0.5300276646921105,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.17947406989267,
+        "az_deg": 136.7985005435328
+      },
+      "V4T006490": {
+        "index": 6489,
+        "fiber_id": 8,
+        "factor": 0.6345954208682587,
+        "public_quality": 0.9521806411637834,
+        "quality": 0.5330647225834403,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.625207361974123,
+        "az_deg": 135.23378290472144
+      },
+      "V4T000075": {
+        "index": 74,
+        "fiber_id": 9,
+        "factor": 0.4072883701230796,
+        "public_quality": 0.9536543178622799,
+        "quality": 0.5338897394200581,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.683694403990902,
+        "az_deg": 135.8476797625535
+      },
+      "V4T008303": {
+        "index": 8302,
+        "fiber_id": 10,
+        "factor": 1.0,
+        "public_quality": 0.9530872223539959,
+        "quality": 0.5335722591051546,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.588193461779664,
+        "az_deg": 136.81989962029198
+      },
+      "V4T005956": {
+        "index": 5955,
+        "fiber_id": 11,
+        "factor": 0.6805001405520278,
+        "public_quality": 0.9499740186117016,
+        "quality": 0.5318293764865755,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.336838024076975,
+        "az_deg": 137.6697037141136
+      },
+      "V4T008153": {
+        "index": 8152,
+        "fiber_id": 12,
+        "factor": 0.2113102056409831,
+        "public_quality": 0.9626734110527312,
+        "quality": 0.5389389498342143,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 32.32124515845757,
+        "az_deg": 135.15796223363918
+      },
+      "V4T003865": {
+        "index": 3864,
+        "fiber_id": 13,
+        "factor": 0.6961003957146059,
+        "public_quality": 0.9598607264824959,
+        "quality": 0.537364308578838,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 32.0763788230799,
+        "az_deg": 136.08747272132163
+      },
+      "V4T002640": {
+        "index": 2639,
+        "fiber_id": 14,
+        "factor": 0.30516179388191483,
+        "public_quality": 0.9610451302888187,
+        "quality": 0.5380273801213055,
+        "directional_scale": 1.0,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 32.08316288008716,
+        "az_deg": 137.25618518864277
+      },
+      "V4T007895": {
+        "index": 7894,
+        "fiber_id": 15,
+        "factor": 1.0,
+        "public_quality": 0.9579961392990644,
+        "quality": 0.5363204460944528,
+        "directional_scale": 0.9999999999999998,
+        "predicted_band": "BRIGHT",
+        "alt_deg": 31.839893629328202,
+        "az_deg": 137.98664522989432
+      }
+    },
+    "planner_terrain": [
+      "E"
+    ],
+    "planner_stats": {
+      "planning_seconds": 0.2672332769725472,
+      "candidates": 352,
+      "visible_useful": 3914,
+      "anchors": 21,
+      "geometry_cells": 46960,
+      "geometry_sweep_seconds": 0.05363451997982338,
+      "geometry_exact": 6,
+      "geometry_improved": true,
+      "base_exact_rate": 0.32616718287572416,
+      "selected_exact_rate": 0.32661692548571114
+    }
+  },
+  {
+    "event": "policy_iteration_public_trace",
+    "step": 1,
+    "rank": 1,
+    "snapshot_sha256": "2995bec9e417f08a115bd47746222e9e30e8b6cbc6d4c6d7c8f354633284f492",
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 63.609495,
+        "az_deg": 118.1715041
+      },
+      "assignments": {
+        "0": "V4T002288",
+        "1": "V4T003819",
+        "2": "V4T003543",
+        "3": "V4T003932",
+        "4": "V4T008589",
+        "5": "V4T008564",
+        "6": "V4T004278",
+        "7": "V4T002647",
+        "8": "V4T000911",
+        "9": "V4T008476",
+        "10": "V4T001245",
+        "11": "V4T000346",
+        "12": "V4T005325",
+        "13": "V4T003345",
+        "14": "V4T002996",
+        "15": "V4T005245"
+      },
+      "duration_seconds": 485,
+      "program": "DARK"
+    },
+    "planner_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 63.609495,
+        "az_deg": 118.1715041
+      },
+      "assignments": {
+        "0": "V4T002288",
+        "1": "V4T003819",
+        "2": "V4T003543",
+        "3": "V4T003932",
+        "4": "V4T008589",
+        "5": "V4T008564",
+        "6": "V4T004278",
+        "7": "V4T002647",
+        "8": "V4T000911",
+        "9": "V4T008476",
+        "10": "V4T001245",
+        "11": "V4T000346",
+        "12": "V4T005325",
+        "13": "V4T003345",
+        "14": "V4T002996",
+        "15": "V4T005245"
+      },
+      "duration_seconds": 485,
+      "program": "DARK"
+    },
+    "prediction": {
+      "V4T002288": {
+        "index": 2287,
+        "fiber_id": 0,
+        "factor": 0.18164960682844572,
+        "public_quality": 1.2360532400280764,
+        "quality": 0.24908270354961218,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.56492709753127,
+        "az_deg": 115.69335909406261
+      },
+      "V4T003819": {
+        "index": 3818,
+        "fiber_id": 1,
+        "factor": 0.19139148014409527,
+        "public_quality": 1.2372957783719158,
+        "quality": 0.24933309309589138,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.4187407755914,
+        "az_deg": 116.93342355642002
+      },
+      "V4T003543": {
+        "index": 3542,
+        "fiber_id": 2,
+        "factor": 0.3981649513020206,
+        "public_quality": 1.2402247743049122,
+        "quality": 0.2499233283722133,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.53320835393255,
+        "az_deg": 118.27709953627617
+      },
+      "V4T003932": {
+        "index": 3931,
+        "fiber_id": 3,
+        "factor": 0.7313341379775445,
+        "public_quality": 1.2439059767776195,
+        "quality": 0.89523265787672,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.6109683746571,
+        "az_deg": 120.26007456853279
+      },
+      "V4T008589": {
+        "index": 8588,
+        "fiber_id": 4,
+        "factor": 0.4301504756778371,
+        "public_quality": 1.2431954904970248,
+        "quality": 0.2505219708874768,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.496302745734646,
+        "az_deg": 116.68103074686715
+      },
+      "V4T008564": {
+        "index": 8563,
+        "fiber_id": 5,
+        "factor": 0.43672752186586816,
+        "public_quality": 1.2446571958953676,
+        "quality": 0.25081652578254265,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.34912785419311,
+        "az_deg": 118.08185129793404
+      },
+      "V4T004278": {
+        "index": 4277,
+        "fiber_id": 6,
+        "factor": 0.3068462674903809,
+        "public_quality": 1.2455187139178967,
+        "quality": 0.2509901341929728,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.27257226346561,
+        "az_deg": 118.88311035581297
+      },
+      "V4T002647": {
+        "index": 2646,
+        "fiber_id": 7,
+        "factor": 0.45072996193393083,
+        "public_quality": 1.2453591635149963,
+        "quality": 0.2509579824664776,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.039290233530686,
+        "az_deg": 119.6169633012503
+      },
+      "V4T000911": {
+        "index": 910,
+        "fiber_id": 8,
+        "factor": 0.1412593907131985,
+        "public_quality": 1.244815915122688,
+        "quality": 0.25084851001507086,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.8947167523599,
+        "az_deg": 116.28380698341351
+      },
+      "V4T008476": {
+        "index": 8475,
+        "fiber_id": 9,
+        "factor": 1.0,
+        "public_quality": 1.2458188547311009,
+        "quality": 0.25105061693172337,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.829374549298784,
+        "az_deg": 117.11722754643468
+      },
+      "V4T001245": {
+        "index": 1244,
+        "fiber_id": 10,
+        "factor": 0.5509307449444296,
+        "public_quality": 1.249014399173406,
+        "quality": 0.2516945656090346,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.904993940725305,
+        "az_deg": 118.83024099400224
+      },
+      "V4T000346": {
+        "index": 345,
+        "fiber_id": 11,
+        "factor": 0.5996575309128515,
+        "public_quality": 1.2489117299427002,
+        "quality": 0.8988352723783876,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.55051337046617,
+        "az_deg": 120.0202530849521
+      },
+      "V4T005325": {
+        "index": 5324,
+        "fiber_id": 12,
+        "factor": 1.0,
+        "public_quality": 1.2496660421380776,
+        "quality": 0.2518258811431339,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 64.69104738500664,
+        "az_deg": 116.52212711032811
+      },
+      "V4T003345": {
+        "index": 3344,
+        "fiber_id": 13,
+        "factor": 0.22476887136486964,
+        "public_quality": 1.248635735626327,
+        "quality": 0.2516182593974672,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 64.23047314619019,
+        "az_deg": 117.46251188517387
+      },
+      "V4T002996": {
+        "index": 2995,
+        "fiber_id": 14,
+        "factor": 1.0,
+        "public_quality": 1.253600240683136,
+        "quality": 0.2526186793642541,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 64.76779519515236,
+        "az_deg": 118.7282515319635
+      },
+      "V4T005245": {
+        "index": 5244,
+        "fiber_id": 15,
+        "factor": 0.9510236126788322,
+        "public_quality": 1.2554210891377244,
+        "quality": 0.9035200243146487,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 64.64868842988689,
+        "az_deg": 120.31814450876143
+      }
+    },
+    "planner_terrain": [
+      "E"
+    ],
+    "planner_stats": {
+      "planning_seconds": 0.3938987589790486,
+      "candidates": 336,
+      "visible_useful": 4113,
+      "anchors": 20,
+      "geometry_cells": 234706,
+      "geometry_sweep_seconds": 0.1708948519662954,
+      "geometry_exact": 8,
+      "geometry_improved": false,
+      "base_exact_rate": 0.32772391719493793,
+      "selected_exact_rate": 0.32772391719493793
+    }
+  },
+  {
+    "event": "policy_iteration_public_trace",
+    "step": 2,
+    "rank": 2,
+    "snapshot_sha256": "9436934ae79989c1044fb8a5b884e4b9e21d31c6167696f70ea7e7b4aa55d2b1",
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 62.5651657,
+        "az_deg": 64.6465173
+      },
+      "assignments": {
+        "0": "V4T005459",
+        "1": "V4T006401",
+        "2": "V4T002717",
+        "3": "V4T005592",
+        "4": "V4T001170",
+        "5": "V4T001717",
+        "6": "V4T002179",
+        "7": "V4T001800",
+        "8": "V4T004899",
+        "9": "V4T008086",
+        "10": "V4T004335",
+        "11": "V4T001476",
+        "14": "V4T007013",
+        "15": "V4T000059"
+      },
+      "duration_seconds": 64,
+      "program": "DARK"
+    },
+    "planner_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 62.5651657,
+        "az_deg": 64.6465173
+      },
+      "assignments": {
+        "0": "V4T005459",
+        "1": "V4T006401",
+        "2": "V4T002717",
+        "3": "V4T005592",
+        "4": "V4T001170",
+        "5": "V4T001717",
+        "6": "V4T002179",
+        "7": "V4T001800",
+        "8": "V4T004899",
+        "9": "V4T008086",
+        "10": "V4T004335",
+        "11": "V4T001476",
+        "14": "V4T007013",
+        "15": "V4T000059"
+      },
+      "duration_seconds": 64,
+      "program": "DARK"
+    },
+    "prediction": {
+      "V4T005459": {
+        "index": 5458,
+        "fiber_id": 0,
+        "factor": 0.5571611285368532,
+        "public_quality": 1.0936838668927784,
+        "quality": 0.7838529125726517,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.32187156620505,
+        "az_deg": 63.09190656354402
+      },
+      "V4T006401": {
+        "index": 6400,
+        "fiber_id": 1,
+        "factor": 0.45692177676323614,
+        "public_quality": 1.099324377244977,
+        "quality": 0.7878955162918858,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.68269754995688,
+        "az_deg": 63.691361697993166
+      },
+      "V4T002717": {
+        "index": 2716,
+        "fiber_id": 2,
+        "factor": 0.06161750417272147,
+        "public_quality": 1.0996042652824756,
+        "quality": 0.7880961145269231,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.44070355801221,
+        "az_deg": 64.71884020001266
+      },
+      "V4T005592": {
+        "index": 5591,
+        "fiber_id": 3,
+        "factor": 0.0037970714313224725,
+        "public_quality": 1.1075174338185352,
+        "quality": 0.039688377624608265,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.78447418040986,
+        "az_deg": 66.22610687019458
+      },
+      "V4T001170": {
+        "index": 1169,
+        "fiber_id": 4,
+        "factor": 0.12138966431308151,
+        "public_quality": 1.0977245360230952,
+        "quality": 0.7867488959206914,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.94470149051727,
+        "az_deg": 62.053145645004605
+      },
+      "V4T001717": {
+        "index": 1716,
+        "fiber_id": 5,
+        "factor": 0.1658216460814861,
+        "public_quality": 1.1017042559103654,
+        "quality": 0.7896011964065007,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.970734044370204,
+        "az_deg": 63.41591906903141
+      },
+      "V4T002179": {
+        "index": 2178,
+        "fiber_id": 6,
+        "factor": 0.15161485119272267,
+        "public_quality": 1.110064762236537,
+        "quality": 0.7955932453273377,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.438574670545,
+        "az_deg": 64.64550022423848
+      },
+      "V4T001800": {
+        "index": 1799,
+        "fiber_id": 7,
+        "factor": 0.006041067117967688,
+        "public_quality": 1.1117278017704073,
+        "quality": 0.0398392580244195,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 61.983952684752296,
+        "az_deg": 66.98940565127619
+      },
+      "V4T004899": {
+        "index": 4898,
+        "fiber_id": 8,
+        "factor": 0.11731987144602646,
+        "public_quality": 1.1039101269394858,
+        "quality": 0.7911821637072693,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.511333164290185,
+        "az_deg": 62.00962381594319
+      },
+      "V4T008086": {
+        "index": 8085,
+        "fiber_id": 9,
+        "factor": 0.1198118664747222,
+        "public_quality": 1.1128132734851812,
+        "quality": 0.7975631276788159,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 62.82508146094857,
+        "az_deg": 64.12588079801598
+      },
+      "V4T004335": {
+        "index": 4334,
+        "fiber_id": 10,
+        "factor": 0.5179273218241767,
+        "public_quality": 1.116723070854073,
+        "quality": 0.8003653140765011,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.02661212461479,
+        "az_deg": 64.81069113144443
+      },
+      "V4T001476": {
+        "index": 1475,
+        "fiber_id": 11,
+        "factor": 0.001619724328206117,
+        "public_quality": 1.1228932734793777,
+        "quality": 0.0402393776469293,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.021517309357925,
+        "az_deg": 67.19906364377222
+      },
+      "V4T007013": {
+        "index": 7012,
+        "fiber_id": 14,
+        "factor": 0.001347662394366508,
+        "public_quality": 1.1199209692817091,
+        "quality": 0.040132863809936636,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.22063288237577,
+        "az_deg": 65.26379362911747
+      },
+      "V4T000059": {
+        "index": 58,
+        "fiber_id": 15,
+        "factor": 0.001802790977121179,
+        "public_quality": 1.1284803788446043,
+        "quality": 0.04043959404153634,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 63.672068616473865,
+        "az_deg": 66.8091040457165
+      }
+    },
+    "planner_terrain": [
+      "E"
+    ],
+    "planner_stats": {
+      "planning_seconds": 0.5474417539662682,
+      "candidates": 400,
+      "visible_useful": 4319,
+      "anchors": 24,
+      "geometry_cells": 356950,
+      "geometry_sweep_seconds": 0.26906608301214874,
+      "geometry_exact": 15,
+      "geometry_improved": false,
+      "base_exact_rate": 0.8149639467714134,
+      "selected_exact_rate": 0.8149639467714134
+    }
+  },
+  {
+    "event": "policy_iteration_public_trace",
+    "step": 3,
+    "rank": 3,
+    "snapshot_sha256": "9d516a8e48a27926613413a1353cff4de447da233cfc815c80e88821e3eee007",
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.6557742,
+        "az_deg": 123.9730941
+      },
+      "assignments": {
+        "0": "V4T006000",
+        "1": "V4T002732",
+        "2": "V4T005971",
+        "3": "V4T001975",
+        "4": "V4T005427",
+        "5": "V4T003650",
+        "6": "V4T001569",
+        "8": "V4T005099",
+        "9": "V4T008095",
+        "10": "V4T007048",
+        "12": "V4T003057",
+        "13": "V4T007254",
+        "14": "V4T000821",
+        "15": "V4T001134"
+      },
+      "duration_seconds": 98,
+      "program": "DARK"
+    },
+    "planner_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.6557742,
+        "az_deg": 123.9730941
+      },
+      "assignments": {
+        "0": "V4T006000",
+        "1": "V4T002732",
+        "2": "V4T005971",
+        "3": "V4T001975",
+        "4": "V4T005427",
+        "5": "V4T003650",
+        "6": "V4T001569",
+        "8": "V4T005099",
+        "9": "V4T008095",
+        "10": "V4T007048",
+        "12": "V4T003057",
+        "13": "V4T007254",
+        "14": "V4T000821",
+        "15": "V4T001134"
+      },
+      "duration_seconds": 98,
+      "program": "DARK"
+    },
+    "prediction": {
+      "V4T006000": {
+        "index": 5999,
+        "fiber_id": 0,
+        "factor": 0.672113068236949,
+        "public_quality": 0.9261705479465849,
+        "quality": 0.651278743748682,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 30.759259563528786,
+        "az_deg": 123.07165893036259
+      },
+      "V4T002732": {
+        "index": 2731,
+        "fiber_id": 1,
+        "factor": 0.08105555885225584,
+        "public_quality": 0.9217482147546762,
+        "quality": 0.6481689799885948,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 30.447645352772263,
+        "az_deg": 123.36636690893283
+      },
+      "V4T005971": {
+        "index": 5970,
+        "fiber_id": 2,
+        "factor": 0.07637619232582521,
+        "public_quality": 0.9269043726952645,
+        "quality": 0.6517947658371746,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 30.714751332523395,
+        "az_deg": 124.27234452537681
+      },
+      "V4T001975": {
+        "index": 1974,
+        "fiber_id": 3,
+        "factor": 0.5525827510136345,
+        "public_quality": 0.9222161534845129,
+        "quality": 0.6484980322876504,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 30.347541219831808,
+        "az_deg": 125.11504639737764
+      },
+      "V4T005427": {
+        "index": 5426,
+        "fiber_id": 4,
+        "factor": 0.20378314988391796,
+        "public_quality": 0.9385084538514078,
+        "quality": 0.6599547007589733,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 31.569398097706202,
+        "az_deg": 123.1648491859306
+      },
+      "V4T003650": {
+        "index": 3649,
+        "fiber_id": 5,
+        "factor": 0.7082063198774047,
+        "public_quality": 0.9330112543074769,
+        "quality": 0.6560890960698101,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 31.185203702521356,
+        "az_deg": 123.38863389569771
+      },
+      "V4T001569": {
+        "index": 1568,
+        "fiber_id": 6,
+        "factor": 0.20493806002814569,
+        "public_quality": 0.9367143017524774,
+        "quality": 0.6586930614986058,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 31.38346729036415,
+        "az_deg": 123.98912927409602
+      },
+      "V4T005099": {
+        "index": 5098,
+        "fiber_id": 8,
+        "factor": 0.08022663424764521,
+        "public_quality": 0.9464046095462635,
+        "quality": 0.6655072400540214,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.12380865098107,
+        "az_deg": 122.902915207467
+      },
+      "V4T008095": {
+        "index": 8094,
+        "fiber_id": 9,
+        "factor": 0.16160414126910116,
+        "public_quality": 0.9478726092336346,
+        "quality": 0.6665395304829648,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.19615388316015,
+        "az_deg": 123.2290137514377
+      },
+      "V4T007048": {
+        "index": 7047,
+        "fiber_id": 10,
+        "factor": 0.23870511170840475,
+        "public_quality": 0.9472445803933536,
+        "quality": 0.6660979035762973,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.06914352608291,
+        "az_deg": 124.24962093823811
+      },
+      "V4T003057": {
+        "index": 3056,
+        "fiber_id": 12,
+        "factor": 0.7128175392587428,
+        "public_quality": 0.9498892272636426,
+        "quality": 0.6679576067326538,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.35282221541656,
+        "az_deg": 123.00300510526361
+      },
+      "V4T007254": {
+        "index": 7253,
+        "fiber_id": 13,
+        "factor": 0.6604391642451191,
+        "public_quality": 0.9558019718765555,
+        "quality": 0.672115420746652,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.683935905285296,
+        "az_deg": 123.87868716830936
+      },
+      "V4T000821": {
+        "index": 820,
+        "fiber_id": 14,
+        "factor": 0.7894890624694412,
+        "public_quality": 0.9580479397296472,
+        "quality": 0.673694774705925,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.82596746711876,
+        "az_deg": 124.02950298093234
+      },
+      "V4T001134": {
+        "index": 1133,
+        "fiber_id": 15,
+        "factor": 0.06610522420666524,
+        "public_quality": 0.9505711184771476,
+        "quality": 0.6684371094051254,
+        "directional_scale": 1.0,
+        "predicted_band": "DARK",
+        "alt_deg": 32.21601147008935,
+        "az_deg": 125.22352819708641
+      }
+    },
+    "planner_terrain": [
+      "E"
+    ],
+    "planner_stats": {
+      "planning_seconds": 0.33766026399098337,
+      "candidates": 400,
+      "visible_useful": 4345,
+      "anchors": 24,
+      "geometry_cells": 62496,
+      "geometry_sweep_seconds": 0.06510116497520357,
+      "geometry_exact": 9,
+      "geometry_improved": false,
+      "base_exact_rate": 0.5455062484025068,
+      "selected_exact_rate": 0.5455062484025068
+    }
+  }
+]

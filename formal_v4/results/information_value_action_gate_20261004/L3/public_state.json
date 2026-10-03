@@ -1,0 +1,146 @@
+{
+  "snapshot": {
+    "schema_version": "v4-decision-snapshot-v1",
+    "now_utc": "2026-11-21T06:21:10Z",
+    "survey_end_utc": "2026-12-22T08:15:00Z",
+    "observe_action_index": 255,
+    "running_total": 2089.506799,
+    "latest_bulletin": {
+      "record_type": "bulletin",
+      "slot_id": "N20261120-S023",
+      "night_id": "N20261120",
+      "issued_at_utc": "2026-11-21T06:15:00Z",
+      "initial": false,
+      "notices": []
+    },
+    "latest_forecast": {
+      "record_type": "forecast",
+      "issued_at_utc": "2026-11-16T00:30:00Z",
+      "coverage_start_utc": "2026-11-16T00:30:00Z",
+      "coverage_end_utc": "2026-11-23T00:30:00Z",
+      "notices": []
+    },
+    "active_requests": [],
+    "new_messages": [],
+    "last_result": {
+      "action": "observe",
+      "observe_index": 254,
+      "assigned_count": 13,
+      "hit_count": 13,
+      "hits": [
+        {
+          "target_id": "V4T004020",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T002329",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T004628",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T007610",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T000715",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T008291",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T006445",
+          "score": 0.097155
+        },
+        {
+          "target_id": "V4T005695",
+          "score": 0.299648
+        },
+        {
+          "target_id": "V4T008566",
+          "score": 0.357002
+        },
+        {
+          "target_id": "V4T001712",
+          "score": 0.195802
+        },
+        {
+          "target_id": "V4T005357",
+          "score": 0.097372
+        },
+        {
+          "target_id": "V4T004400",
+          "score": 0.236072
+        },
+        {
+          "target_id": "V4T002921",
+          "score": 0.111205
+        }
+      ]
+    },
+    "wallclock": {
+      "elapsed_seconds": 0.0,
+      "remaining_seconds": 900.0
+    }
+  },
+  "C": 0.9440947226185078,
+  "E": 0.9500212823518781,
+  "base": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 50.1495404,
+      "az_deg": 256.2071562
+    },
+    "assignments": {
+      "1": "V4T003781",
+      "2": "V4T006442",
+      "3": "V4T002914",
+      "5": "V4T001744",
+      "6": "V4T005917",
+      "8": "V4T005388",
+      "9": "V4T005334",
+      "10": "V4T007028",
+      "11": "V4T003570",
+      "12": "V4T000787",
+      "13": "V4T006212",
+      "14": "V4T004330",
+      "15": "V4T001088"
+    },
+    "duration_seconds": 60,
+    "program": "DARK"
+  },
+  "native_action_exact": true,
+  "native_stats": {
+    "planning_seconds": 0.20229070796631277,
+    "candidates": 400,
+    "visible_useful": 6773,
+    "anchors": 24,
+    "geometry_cells": 198820,
+    "geometry_sweep_seconds": 0.058407749980688095,
+    "geometry_exact": 10,
+    "geometry_improved": true,
+    "base_exact_rate": 0.02973823368540818,
+    "selected_exact_rate": 0.03015060320297546
+  },
+  "public_calibrator_estimate": [
+    -0.0003170732631557014,
+    0.10401068475622491,
+    0.9425202597638606
+  ],
+  "provenance": {
+    "trace_path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/natural_control/L3/rank_0064/control/public_prefix.jsonl",
+    "trace_sha256": "cd32911b6dfe9b561bdca2489082751eec542401b728c6570f63bfc339638eea",
+    "past_count": 273,
+    "past_max_rank": 254,
+    "heldout_snapshot_sha256": "9a78c821197f3efbf5805a659ee7008344407123a561cfd8cdcd706ca50b9ba6"
+  },
+  "prefix_gate": true,
+  "prefix_steps": 273,
+  "native_evaluation_count": 410,
+  "restoration_mode": "official historical feedback replay; exactly 273 past actor steps; immediate cut stop",
+  "actor_truth_access": false
+}

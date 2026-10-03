@@ -1,0 +1,196 @@
+{
+  "card": "L4",
+  "rank": 4,
+  "status": "unvalidated future two-step/commitment candidate; information gate stopped",
+  "time_window": {
+    "start_utc": "2026-11-23T01:03:52Z",
+    "end_utc": "2026-11-23T01:15:00Z",
+    "seconds": 668
+  },
+  "public_snapshot_sha256": "3f47c53222fcae2da735087d8fde20fcb629edd13f360f5032fc1814ce4b1254",
+  "frozen_candidate_sha256": "304d4540c3fccbf27bb7f9d4dc8e18b1471e26a2abaa6c0648cf1c8ef471f738",
+  "candidate_first_field_commitment_path": {
+    "actions": [
+      {
+        "start_utc": "2026-11-23T01:03:52Z",
+        "end_utc": "2026-11-23T01:04:52Z",
+        "public_parent_order": 63,
+        "complete_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 61.1192054,
+            "az_deg": 62.7427743
+          },
+          "duration_seconds": 60,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T003189",
+            "1": "V4T008540",
+            "3": "V4T002434",
+            "4": "V4T000163",
+            "5": "V4T007436",
+            "6": "V4T008161",
+            "7": "V4T007788",
+            "8": "V4T006689",
+            "9": "V4T005746",
+            "10": "V4T007089",
+            "11": "V4T003510",
+            "12": "V4T004095",
+            "13": "V4T005953",
+            "14": "V4T002324",
+            "15": "V4T000824"
+          }
+        }
+      },
+      {
+        "start_utc": "2026-11-23T01:04:52Z",
+        "end_utc": "2026-11-23T01:13:37Z",
+        "public_parent_order": 22,
+        "complete_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 37.3216872,
+            "az_deg": 144.3880146
+          },
+          "duration_seconds": 525,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T005131",
+            "1": "V4T002649",
+            "2": "V4T003489",
+            "3": "V4T003268",
+            "4": "V4T003533",
+            "5": "V4T003183",
+            "6": "V4T001000",
+            "7": "V4T002325",
+            "8": "V4T006303",
+            "9": "V4T005608",
+            "10": "V4T003551",
+            "11": "V4T007610",
+            "13": "V4T007963"
+          }
+        }
+      },
+      {
+        "start_utc": "2026-11-23T01:13:37Z",
+        "end_utc": "2026-11-23T01:15:00Z",
+        "complete_action": {
+          "action": "wait",
+          "duration_seconds": 83
+        }
+      }
+    ],
+    "observe_count": 2,
+    "common_end_utc": "2026-11-23T01:15:00Z"
+  },
+  "strong_native_first_action_comparison_path": {
+    "actions": [
+      {
+        "start_utc": "2026-11-23T01:03:52Z",
+        "end_utc": "2026-11-23T01:07:42Z",
+        "public_parent_order": null,
+        "complete_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 59.6483839,
+            "az_deg": 62.0998717
+          },
+          "assignments": {
+            "0": "V4T004687",
+            "1": "V4T004421",
+            "2": "V4T004147",
+            "3": "V4T005783",
+            "4": "V4T001029",
+            "5": "V4T002665",
+            "7": "V4T001472",
+            "8": "V4T003189",
+            "9": "V4T005897",
+            "11": "V4T004275",
+            "12": "V4T000559",
+            "13": "V4T007774",
+            "14": "V4T001900",
+            "15": "V4T002434"
+          },
+          "duration_seconds": 230,
+          "program": "DARK"
+        }
+      },
+      {
+        "start_utc": "2026-11-23T01:07:42Z",
+        "end_utc": "2026-11-23T01:15:00Z",
+        "public_parent_order": 38,
+        "complete_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 36.7505911,
+            "az_deg": 141.3528868
+          },
+          "duration_seconds": 438,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T006614",
+            "1": "V4T004158",
+            "2": "V4T000630",
+            "3": "V4T002264",
+            "4": "V4T007864",
+            "5": "V4T001474",
+            "6": "V4T000034",
+            "7": "V4T002924",
+            "8": "V4T000255",
+            "9": "V4T008157",
+            "10": "V4T005114",
+            "11": "V4T007915",
+            "12": "V4T000128",
+            "13": "V4T001923",
+            "14": "V4T002060",
+            "15": "V4T008515"
+          }
+        }
+      },
+      {
+        "start_utc": "2026-11-23T01:15:00Z",
+        "end_utc": "2026-11-23T01:15:00Z",
+        "complete_action": {
+          "action": "wait",
+          "duration_seconds": 0
+        }
+      }
+    ],
+    "observe_count": 2,
+    "common_end_utc": "2026-11-23T01:15:00Z"
+  },
+  "strong_native_first_action_exact": true,
+  "native_continuation_scope": "common public field/action library at offset230; one surrogate-max continuation, not actual reexecution of future native policy",
+  "candidate_continuation_scope": "common public field/action library at offset60; branch and frozen choose identical complete continuation",
+  "surrogate_score_increments": {
+    "candidate_worlds": [
+      167.19667899800697,
+      166.52655811544537
+    ],
+    "candidate_mean": 166.86161855672617,
+    "native_control_worlds": [
+      178.69080129786744,
+      74.25235824625634
+    ],
+    "native_control_mean": 126.47157977206189,
+    "candidate_minus_native_mean": 40.390038784664284
+  },
+  "same_probe_information_value": 0.0,
+  "same_probe_frozen_action_equal_to_every_feedback_conditioned_action": true,
+  "same_native_first_frozen_action_equal_to_every_feedback_conditioned_action": true,
+  "why_not_information_value": "The +40.390038784664284 survives removal of feedback adaptation. First field, first duration, second start time, continuation field/duration, and resulting endpoint ledger differ. Same-probe posterior adaptation adds exactly0 in this finite surrogate.",
+  "model_scope": "public frozen-C/E equiprobable two-terrain-world current-slot surrogate; full known best-score/required/Jain ledger, no activeREQ; no future season/data loss or official candidate score rollout",
+  "tests_actually_executed": [
+    "public prefix hash recovery",
+    "exact strong native current first action",
+    "same common complete action family conditional means",
+    "post-freeze candidate official geometry/altitude syntax"
+  ],
+  "tests_not_executed": [
+    "actual official score rollout of either two-action path",
+    "future native policy continuation",
+    "season score paired evaluation"
+  ],
+  "future_route_only": "If revisited separately, test this fixed no-feedback two-step commitment against actual strong native replanning over this same668s horizon. No retuned terrain worlds or alternate probe are authorized by this result.",
+  "no_additional_candidate_search_or_season_launched": true
+}

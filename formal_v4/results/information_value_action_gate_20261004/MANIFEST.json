@@ -1,0 +1,1154 @@
+{
+  "fixed_states": {
+    "L4": 4,
+    "L3": 255
+  },
+  "results": {
+    "L4": {
+      "prefix_gate": true,
+      "native_action_exact": true,
+      "rank": 4,
+      "evaluation_count": 380,
+      "action_gate": {
+        "status": "stopped",
+        "reason": "no legal switch or information value does not cover native opportunity cost",
+        "candidate_frozen": true,
+        "probe": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 61.1192054,
+            "az_deg": 62.7427743
+          },
+          "duration_seconds": 60,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T003189",
+            "1": "V4T008540",
+            "3": "V4T002434",
+            "4": "V4T000163",
+            "5": "V4T007436",
+            "6": "V4T008161",
+            "7": "V4T007788",
+            "8": "V4T006689",
+            "9": "V4T005746",
+            "10": "V4T007089",
+            "11": "V4T003510",
+            "12": "V4T004095",
+            "13": "V4T005953",
+            "14": "V4T002324",
+            "15": "V4T000824"
+          }
+        },
+        "qualifying": {
+          "parent_order": 63,
+          "anchor_ids": [
+            "V4T006689",
+            "V4T005746",
+            "V4T007089",
+            "V4T004095",
+            "V4T005953",
+            "V4T002324",
+            "V4T000824"
+          ],
+          "distinguishing_ids": [
+            "V4T003189",
+            "V4T008540",
+            "V4T002434",
+            "V4T000163",
+            "V4T007436",
+            "V4T008161",
+            "V4T007788",
+            "V4T003510"
+          ]
+        },
+        "probe_value": {
+          "value": 166.86161855672617,
+          "frozen_value": 166.86161855672617,
+          "information_value": 0.0,
+          "branches": [
+            {
+              "worlds": [
+                0
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T003189",
+                  0.082722
+                ],
+                [
+                  "V4T008540",
+                  0.040705
+                ],
+                [
+                  "V4T002434",
+                  0.161615
+                ],
+                [
+                  "V4T000163",
+                  0.04565
+                ],
+                [
+                  "V4T007436",
+                  0.066373
+                ],
+                [
+                  "V4T008161",
+                  0.142471
+                ],
+                [
+                  "V4T007788",
+                  0.057305
+                ],
+                [
+                  "V4T006689",
+                  0.094897
+                ],
+                [
+                  "V4T005746",
+                  0.221565
+                ],
+                [
+                  "V4T007089",
+                  0.080263
+                ],
+                [
+                  "V4T003510",
+                  0.07328
+                ],
+                [
+                  "V4T004095",
+                  0.212907
+                ],
+                [
+                  "V4T005953",
+                  0.182878
+                ],
+                [
+                  "V4T002324",
+                  0.13143
+                ],
+                [
+                  "V4T000824",
+                  0.068847
+                ]
+              ],
+              "value": 167.19667899800697,
+              "world_values": [
+                167.19667899800697,
+                166.52655811544537
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 37.3216872,
+                  "az_deg": 144.3880146
+                },
+                "duration_seconds": 525,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T005131",
+                  "1": "V4T002649",
+                  "2": "V4T003489",
+                  "3": "V4T003268",
+                  "4": "V4T003533",
+                  "5": "V4T003183",
+                  "6": "V4T001000",
+                  "7": "V4T002325",
+                  "8": "V4T006303",
+                  "9": "V4T005608",
+                  "10": "V4T003551",
+                  "11": "V4T007610",
+                  "13": "V4T007963"
+                }
+              },
+              "parent_order": 22,
+              "wait_after_seconds": 83
+            },
+            {
+              "worlds": [
+                1
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T003189",
+                  0.0
+                ],
+                [
+                  "V4T008540",
+                  0.0
+                ],
+                [
+                  "V4T002434",
+                  0.0
+                ],
+                [
+                  "V4T000163",
+                  0.0
+                ],
+                [
+                  "V4T007436",
+                  0.0
+                ],
+                [
+                  "V4T008161",
+                  0.0
+                ],
+                [
+                  "V4T007788",
+                  0.0
+                ],
+                [
+                  "V4T006689",
+                  0.094897
+                ],
+                [
+                  "V4T005746",
+                  0.221565
+                ],
+                [
+                  "V4T007089",
+                  0.080263
+                ],
+                [
+                  "V4T003510",
+                  0.0
+                ],
+                [
+                  "V4T004095",
+                  0.212907
+                ],
+                [
+                  "V4T005953",
+                  0.182878
+                ],
+                [
+                  "V4T002324",
+                  0.13143
+                ],
+                [
+                  "V4T000824",
+                  0.068847
+                ]
+              ],
+              "value": 166.52655811544537,
+              "world_values": [
+                167.19667899800697,
+                166.52655811544537
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 37.3216872,
+                  "az_deg": 144.3880146
+                },
+                "duration_seconds": 525,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T005131",
+                  "1": "V4T002649",
+                  "2": "V4T003489",
+                  "3": "V4T003268",
+                  "4": "V4T003533",
+                  "5": "V4T003183",
+                  "6": "V4T001000",
+                  "7": "V4T002325",
+                  "8": "V4T006303",
+                  "9": "V4T005608",
+                  "10": "V4T003551",
+                  "11": "V4T007610",
+                  "13": "V4T007963"
+                }
+              },
+              "parent_order": 22,
+              "wait_after_seconds": 83
+            }
+          ],
+          "frozen": {
+            "value": 166.86161855672617,
+            "world_values": [
+              167.19667899800697,
+              166.52655811544537
+            ],
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 37.3216872,
+                "az_deg": 144.3880146
+              },
+              "duration_seconds": 525,
+              "program": "DARK",
+              "assignments": {
+                "0": "V4T005131",
+                "1": "V4T002649",
+                "2": "V4T003489",
+                "3": "V4T003268",
+                "4": "V4T003533",
+                "5": "V4T003183",
+                "6": "V4T001000",
+                "7": "V4T002325",
+                "8": "V4T006303",
+                "9": "V4T005608",
+                "10": "V4T003551",
+                "11": "V4T007610",
+                "13": "V4T007963"
+              }
+            },
+            "parent_order": 22,
+            "wait_after_seconds": 83
+          },
+          "outcome_groups": 2,
+          "common_complete_continuation_action_count": 407,
+          "same_complete_action_family_for_all_posteriors": true
+        },
+        "native_control_value": {
+          "value": 126.47157977206189,
+          "frozen_value": 126.47157977206189,
+          "information_value": 0.0,
+          "branches": [
+            {
+              "worlds": [
+                0
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T004687",
+                  0.208163
+                ],
+                [
+                  "V4T004421",
+                  0.326517
+                ],
+                [
+                  "V4T004147",
+                  0.272078
+                ],
+                [
+                  "V4T005783",
+                  0.210399
+                ],
+                [
+                  "V4T001029",
+                  0.36
+                ],
+                [
+                  "V4T002665",
+                  0.361776
+                ],
+                [
+                  "V4T001472",
+                  0.145837
+                ],
+                [
+                  "V4T003189",
+                  0.317336
+                ],
+                [
+                  "V4T005897",
+                  0.36
+                ],
+                [
+                  "V4T004275",
+                  0.297651
+                ],
+                [
+                  "V4T000559",
+                  0.178487
+                ],
+                [
+                  "V4T007774",
+                  0.288281
+                ],
+                [
+                  "V4T001900",
+                  0.268997
+                ],
+                [
+                  "V4T002434",
+                  0.36
+                ]
+              ],
+              "value": 178.69080129786744,
+              "world_values": [
+                178.69080129786744,
+                74.25235824625634
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 36.7505911,
+                  "az_deg": 141.3528868
+                },
+                "duration_seconds": 438,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T006614",
+                  "1": "V4T004158",
+                  "2": "V4T000630",
+                  "3": "V4T002264",
+                  "4": "V4T007864",
+                  "5": "V4T001474",
+                  "6": "V4T000034",
+                  "7": "V4T002924",
+                  "8": "V4T000255",
+                  "9": "V4T008157",
+                  "10": "V4T005114",
+                  "11": "V4T007915",
+                  "12": "V4T000128",
+                  "13": "V4T001923",
+                  "14": "V4T002060",
+                  "15": "V4T008515"
+                }
+              },
+              "parent_order": 38,
+              "wait_after_seconds": 0
+            },
+            {
+              "worlds": [
+                1
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T004687",
+                  0.0
+                ],
+                [
+                  "V4T004421",
+                  0.0
+                ],
+                [
+                  "V4T004147",
+                  0.0
+                ],
+                [
+                  "V4T005783",
+                  0.0
+                ],
+                [
+                  "V4T001029",
+                  0.0
+                ],
+                [
+                  "V4T002665",
+                  0.0
+                ],
+                [
+                  "V4T001472",
+                  0.0
+                ],
+                [
+                  "V4T003189",
+                  0.0
+                ],
+                [
+                  "V4T005897",
+                  0.0
+                ],
+                [
+                  "V4T004275",
+                  0.0
+                ],
+                [
+                  "V4T000559",
+                  0.0
+                ],
+                [
+                  "V4T007774",
+                  0.0
+                ],
+                [
+                  "V4T001900",
+                  0.0
+                ],
+                [
+                  "V4T002434",
+                  0.0
+                ]
+              ],
+              "value": 74.25235824625634,
+              "world_values": [
+                178.69080129786744,
+                74.25235824625634
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 36.7505911,
+                  "az_deg": 141.3528868
+                },
+                "duration_seconds": 438,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T006614",
+                  "1": "V4T004158",
+                  "2": "V4T000630",
+                  "3": "V4T002264",
+                  "4": "V4T007864",
+                  "5": "V4T001474",
+                  "6": "V4T000034",
+                  "7": "V4T002924",
+                  "8": "V4T000255",
+                  "9": "V4T008157",
+                  "10": "V4T005114",
+                  "11": "V4T007915",
+                  "12": "V4T000128",
+                  "13": "V4T001923",
+                  "14": "V4T002060",
+                  "15": "V4T008515"
+                }
+              },
+              "parent_order": 38,
+              "wait_after_seconds": 0
+            }
+          ],
+          "frozen": {
+            "value": 126.47157977206189,
+            "world_values": [
+              178.69080129786744,
+              74.25235824625634
+            ],
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 36.7505911,
+                "az_deg": 141.3528868
+              },
+              "duration_seconds": 438,
+              "program": "DARK",
+              "assignments": {
+                "0": "V4T006614",
+                "1": "V4T004158",
+                "2": "V4T000630",
+                "3": "V4T002264",
+                "4": "V4T007864",
+                "5": "V4T001474",
+                "6": "V4T000034",
+                "7": "V4T002924",
+                "8": "V4T000255",
+                "9": "V4T008157",
+                "10": "V4T005114",
+                "11": "V4T007915",
+                "12": "V4T000128",
+                "13": "V4T001923",
+                "14": "V4T002060",
+                "15": "V4T008515"
+              }
+            },
+            "parent_order": 38,
+            "wait_after_seconds": 0
+          },
+          "outcome_groups": 2,
+          "common_complete_continuation_action_count": 438,
+          "same_complete_action_family_for_all_posteriors": true
+        },
+        "native_first_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 59.6483839,
+            "az_deg": 62.0998717
+          },
+          "assignments": {
+            "0": "V4T004687",
+            "1": "V4T004421",
+            "2": "V4T004147",
+            "3": "V4T005783",
+            "4": "V4T001029",
+            "5": "V4T002665",
+            "7": "V4T001472",
+            "8": "V4T003189",
+            "9": "V4T005897",
+            "11": "V4T004275",
+            "12": "V4T000559",
+            "13": "V4T007774",
+            "14": "V4T001900",
+            "15": "V4T002434"
+          },
+          "duration_seconds": 230,
+          "program": "DARK"
+        },
+        "same_probe_information_value": 0.0,
+        "gain_after_native_opportunity_cost": 40.390038784664284,
+        "legal_conditional_action_switch": false,
+        "scope": "two-action public frozen-C/E current-slot surrogate; exact modeled global best science/required/Jain; no activeREQ; no modeled future loss; not a true card terminal score or complete parent continuation",
+        "world_probabilities": "declared equiprobable conditional scenarios, not calibrated official posterior",
+        "candidate_field_count": 380,
+        "pool_expansion": false,
+        "program_expansion": false,
+        "duration_expansion": false,
+        "max_public_constraint_rank": 3,
+        "candidate_artifact_sha256": "304d4540c3fccbf27bb7f9d4dc8e18b1471e26a2abaa6c0648cf1c8ef471f738",
+        "evaluator_gate": {
+          "candidate_artifact_sha256": "304d4540c3fccbf27bb7f9d4dc8e18b1471e26a2abaa6c0648cf1c8ef471f738",
+          "actions": [
+            {
+              "action": "probe",
+              "normalization_valid": true,
+              "assigned": 15,
+              "public_estimated_geometry_hits": 15,
+              "actual_hidden_geometry_hits": 15,
+              "minimum_altitude_valid": true
+            },
+            {
+              "action": "branch0",
+              "normalization_valid": true,
+              "assigned": 13,
+              "public_estimated_geometry_hits": 13,
+              "actual_hidden_geometry_hits": 13,
+              "minimum_altitude_valid": true
+            },
+            {
+              "action": "branch1",
+              "normalization_valid": true,
+              "assigned": 13,
+              "public_estimated_geometry_hits": 13,
+              "actual_hidden_geometry_hits": 13,
+              "minimum_altitude_valid": true
+            }
+          ],
+          "actor_received_hidden_offset": false,
+          "hidden_geometry_used_for_selection": false,
+          "scope": "post-freeze legal syntax, whole-exposure altitude and fiber-hit audit; no score continuation"
+        }
+      }
+    },
+    "L3": {
+      "prefix_gate": true,
+      "native_action_exact": true,
+      "rank": 255,
+      "evaluation_count": 410,
+      "action_gate": {
+        "status": "stopped",
+        "reason": "no legal switch or information value does not cover native opportunity cost",
+        "candidate_frozen": true,
+        "probe": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 49.5675148,
+            "az_deg": 92.4462556
+          },
+          "duration_seconds": 60,
+          "program": "DARK",
+          "assignments": {
+            "4": "V4T006461",
+            "5": "V4T001252",
+            "6": "V4T004602",
+            "8": "V4T004062",
+            "9": "V4T004894",
+            "10": "V4T000432",
+            "11": "V4T000614",
+            "12": "V4T006735",
+            "13": "V4T001191",
+            "14": "V4T003724"
+          }
+        },
+        "qualifying": {
+          "parent_order": 135,
+          "anchor_ids": [
+            "V4T004062",
+            "V4T004894",
+            "V4T000432",
+            "V4T000614",
+            "V4T006735",
+            "V4T001191",
+            "V4T003724"
+          ],
+          "distinguishing_ids": [
+            "V4T006461",
+            "V4T001252",
+            "V4T004602"
+          ]
+        },
+        "probe_value": {
+          "value": 57.72507434800815,
+          "frozen_value": 57.66515034678423,
+          "information_value": 0.059924001223919277,
+          "branches": [
+            {
+              "worlds": [
+                0
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T006461",
+                  0.026308
+                ],
+                [
+                  "V4T001252",
+                  0.033181
+                ],
+                [
+                  "V4T004602",
+                  0.09224
+                ],
+                [
+                  "V4T004062",
+                  0.205366
+                ],
+                [
+                  "V4T004894",
+                  0.042091
+                ],
+                [
+                  "V4T000432",
+                  0.036184
+                ],
+                [
+                  "V4T000614",
+                  0.082837
+                ],
+                [
+                  "V4T006735",
+                  0.067582
+                ],
+                [
+                  "V4T001191",
+                  0.118056
+                ],
+                [
+                  "V4T003724",
+                  0.116791
+                ]
+              ],
+              "value": 58.15977874683642,
+              "world_values": [
+                58.15977874683642,
+                57.11174580631723
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 49.7951999,
+                  "az_deg": 92.3535704
+                },
+                "duration_seconds": 470,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T007717",
+                  "1": "V4T002015",
+                  "2": "V4T007297",
+                  "3": "V4T001787",
+                  "4": "V4T006461",
+                  "5": "V4T001252",
+                  "6": "V4T004602",
+                  "8": "V4T004979",
+                  "9": "V4T004894",
+                  "10": "V4T004224",
+                  "11": "V4T000614",
+                  "12": "V4T006735",
+                  "13": "V4T004885",
+                  "14": "V4T005548"
+                }
+              },
+              "parent_order": 135,
+              "wait_after_seconds": 0
+            },
+            {
+              "worlds": [
+                1
+              ],
+              "probability": 0.5,
+              "feedback": [
+                [
+                  "V4T006461",
+                  0.0
+                ],
+                [
+                  "V4T001252",
+                  0.0
+                ],
+                [
+                  "V4T004602",
+                  0.0
+                ],
+                [
+                  "V4T004062",
+                  0.205366
+                ],
+                [
+                  "V4T004894",
+                  0.042091
+                ],
+                [
+                  "V4T000432",
+                  0.036184
+                ],
+                [
+                  "V4T000614",
+                  0.082837
+                ],
+                [
+                  "V4T006735",
+                  0.067582
+                ],
+                [
+                  "V4T001191",
+                  0.118056
+                ],
+                [
+                  "V4T003724",
+                  0.116791
+                ]
+              ],
+              "value": 57.290369949179876,
+              "world_values": [
+                58.039930744388585,
+                57.290369949179876
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 49.7951999,
+                  "az_deg": 92.3535704
+                },
+                "duration_seconds": 470,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T007717",
+                  "1": "V4T002015",
+                  "2": "V4T000657",
+                  "3": "V4T001787",
+                  "4": "V4T006461",
+                  "5": "V4T001252",
+                  "6": "V4T004602",
+                  "8": "V4T004979",
+                  "9": "V4T004894",
+                  "10": "V4T004224",
+                  "11": "V4T000614",
+                  "12": "V4T006735",
+                  "13": "V4T004885",
+                  "14": "V4T005548"
+                }
+              },
+              "parent_order": 135,
+              "wait_after_seconds": 0
+            }
+          ],
+          "frozen": {
+            "value": 57.66515034678423,
+            "world_values": [
+              58.039930744388585,
+              57.290369949179876
+            ],
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 49.7951999,
+                "az_deg": 92.3535704
+              },
+              "duration_seconds": 470,
+              "program": "DARK",
+              "assignments": {
+                "0": "V4T007717",
+                "1": "V4T002015",
+                "2": "V4T000657",
+                "3": "V4T001787",
+                "4": "V4T006461",
+                "5": "V4T001252",
+                "6": "V4T004602",
+                "8": "V4T004979",
+                "9": "V4T004894",
+                "10": "V4T004224",
+                "11": "V4T000614",
+                "12": "V4T006735",
+                "13": "V4T004885",
+                "14": "V4T005548"
+              }
+            },
+            "parent_order": 135,
+            "wait_after_seconds": 0
+          },
+          "outcome_groups": 2,
+          "common_complete_continuation_action_count": 419,
+          "same_complete_action_family_for_all_posteriors": true
+        },
+        "native_control_value": {
+          "value": 58.61900614134663,
+          "frozen_value": 58.61900614134663,
+          "information_value": 0.0,
+          "branches": [
+            {
+              "worlds": [
+                0,
+                1
+              ],
+              "probability": 1.0,
+              "feedback": [
+                [
+                  "V4T003781",
+                  0.020092
+                ],
+                [
+                  "V4T006442",
+                  0.15222
+                ],
+                [
+                  "V4T002914",
+                  0.0762
+                ],
+                [
+                  "V4T001744",
+                  0.170193
+                ],
+                [
+                  "V4T005917",
+                  0.157449
+                ],
+                [
+                  "V4T005388",
+                  0.052264
+                ],
+                [
+                  "V4T005334",
+                  0.183431
+                ],
+                [
+                  "V4T007028",
+                  0.175312
+                ],
+                [
+                  "V4T003570",
+                  0.072885
+                ],
+                [
+                  "V4T000787",
+                  0.032228
+                ],
+                [
+                  "V4T006212",
+                  0.16464
+                ],
+                [
+                  "V4T004330",
+                  0.118091
+                ],
+                [
+                  "V4T001088",
+                  0.104499
+                ]
+              ],
+              "value": 58.61900614134663,
+              "world_values": [
+                58.993786538950985,
+                58.24422574374228
+              ],
+              "action": {
+                "action": "observe",
+                "pointing": {
+                  "alt_deg": 49.7951999,
+                  "az_deg": 92.3535704
+                },
+                "duration_seconds": 470,
+                "program": "DARK",
+                "assignments": {
+                  "0": "V4T007717",
+                  "1": "V4T002015",
+                  "2": "V4T000657",
+                  "3": "V4T001787",
+                  "4": "V4T006461",
+                  "5": "V4T001252",
+                  "6": "V4T004602",
+                  "8": "V4T004979",
+                  "9": "V4T004894",
+                  "10": "V4T004224",
+                  "11": "V4T000614",
+                  "12": "V4T006735",
+                  "13": "V4T004885",
+                  "14": "V4T005548"
+                }
+              },
+              "parent_order": 135,
+              "wait_after_seconds": 0
+            }
+          ],
+          "frozen": {
+            "value": 58.61900614134663,
+            "world_values": [
+              58.993786538950985,
+              58.24422574374228
+            ],
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 49.7951999,
+                "az_deg": 92.3535704
+              },
+              "duration_seconds": 470,
+              "program": "DARK",
+              "assignments": {
+                "0": "V4T007717",
+                "1": "V4T002015",
+                "2": "V4T000657",
+                "3": "V4T001787",
+                "4": "V4T006461",
+                "5": "V4T001252",
+                "6": "V4T004602",
+                "8": "V4T004979",
+                "9": "V4T004894",
+                "10": "V4T004224",
+                "11": "V4T000614",
+                "12": "V4T006735",
+                "13": "V4T004885",
+                "14": "V4T005548"
+              }
+            },
+            "parent_order": 135,
+            "wait_after_seconds": 0
+          },
+          "outcome_groups": 1,
+          "common_complete_continuation_action_count": 394,
+          "same_complete_action_family_for_all_posteriors": true
+        },
+        "native_first_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 50.1495404,
+            "az_deg": 256.2071562
+          },
+          "assignments": {
+            "1": "V4T003781",
+            "2": "V4T006442",
+            "3": "V4T002914",
+            "5": "V4T001744",
+            "6": "V4T005917",
+            "8": "V4T005388",
+            "9": "V4T005334",
+            "10": "V4T007028",
+            "11": "V4T003570",
+            "12": "V4T000787",
+            "13": "V4T006212",
+            "14": "V4T004330",
+            "15": "V4T001088"
+          },
+          "duration_seconds": 60,
+          "program": "DARK"
+        },
+        "same_probe_information_value": 0.059924001223919277,
+        "gain_after_native_opportunity_cost": -0.8939317933384814,
+        "legal_conditional_action_switch": true,
+        "scope": "two-action public frozen-C/E current-slot surrogate; exact modeled global best science/required/Jain; no activeREQ; no modeled future loss; not a true card terminal score or complete parent continuation",
+        "world_probabilities": "declared equiprobable conditional scenarios, not calibrated official posterior",
+        "candidate_field_count": 410,
+        "pool_expansion": false,
+        "program_expansion": false,
+        "duration_expansion": false,
+        "max_public_constraint_rank": 254,
+        "candidate_artifact_sha256": "a035cc415c5ba2d308417149e2acf1e1bdf7345cad65f20910bfe6286979e9d0",
+        "evaluator_gate": {
+          "candidate_artifact_sha256": "a035cc415c5ba2d308417149e2acf1e1bdf7345cad65f20910bfe6286979e9d0",
+          "actions": [
+            {
+              "action": "probe",
+              "normalization_valid": true,
+              "assigned": 10,
+              "public_estimated_geometry_hits": 10,
+              "actual_hidden_geometry_hits": 10,
+              "minimum_altitude_valid": true
+            },
+            {
+              "action": "branch0",
+              "normalization_valid": true,
+              "assigned": 14,
+              "public_estimated_geometry_hits": 14,
+              "actual_hidden_geometry_hits": 14,
+              "minimum_altitude_valid": true
+            },
+            {
+              "action": "branch1",
+              "normalization_valid": true,
+              "assigned": 14,
+              "public_estimated_geometry_hits": 14,
+              "actual_hidden_geometry_hits": 14,
+              "minimum_altitude_valid": true
+            }
+          ],
+          "actor_received_hidden_offset": false,
+          "hidden_geometry_used_for_selection": false,
+          "scope": "post-freeze legal syntax, whole-exposure altitude and fiber-hit audit; no score continuation"
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/candidate_geometry_sweep.cpython-310.pyc": "72fcf2754db2fcaea68b259ac95e2ed2ec12c0cda7b5129f8a55f148ffc79afe",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/belief_clock.cpython-310.pyc": "46085af0c4f3018bb883faf9ac61d4a7576a22dc8981b50fa696f5f12860d550",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/spatial_candidates.cpython-310.pyc": "5668b07e49f387afabbb213623f490adde8e3856ed706264340b8e21d53894ff",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/pointing_calibration.cpython-310.pyc": "5909e70e4b5add4275b44ae3760c29ef45e28c5198992fccb6cb34b68ecb593b",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/geometry_native.cpython-310.pyc": "59b9ffab9eded4062696bc5be0761741532ce60096a5b39d9e2edce85731234a",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/feedback_model.cpython-310.pyc": "12a5f69d54c9b7febf4ee6e5cba0a2c2871eef81640bb3e456fada4f0f4d1a89",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/geometry.cpython-310.pyc": "8e17e620df450e61b3f3ea5618a0c1e6e51c619affa723d8ec7ec19c8f5005b6",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/remote_budget.cpython-310.pyc": "5cb25bd013c8827f7e6ba1188c89ea95fe9029a44b1db6cf8b517f9812d922cf",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/research/__pycache__/efficiency_bounds.cpython-310.pyc": "8241de4fa34d78e03bd1667cca2833ecd55685f72ac9a017fd913c42503bbcc6",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/geometry_native_20261003/release/__pycache__/policy.cpython-310.pyc": "1371bd2963b68e4843a5bc27e8b3b6fd695567bd5210650b582eab001666fb23"
+  },
+  "harness_sha256": "5417c9000acb370f43a15239f73e9eca237f1c8fa6a36d428d2a52752e54ae06",
+  "wallclock_seconds": 14.608978583011776,
+  "full_season_executed": false,
+  "remote_jobs_started": false,
+  "gpu_used": false,
+  "website_submitted": false,
+  "actor_truth_access": false,
+  "prior_probe_doc_modified": false,
+  "scope": "fixed public prefix restoration plus two-world grouped-feedback current-slot action gate",
+  "final_adjudication": {
+    "status": "stopped; no deployed candidate",
+    "supersedes": [
+      "worlds.json only_public_support assertions as whole-history claims",
+      "L3 numerical action-gate qualification"
+    ],
+    "immutable_raw_outputs_preserved": true,
+    "L4": {
+      "necessary_continuous_positive_test": "no contradictions in48 past positive hits; not a complete posterior likelihood certificate",
+      "same_probe_information_value": 0.0,
+      "legal_conditional_action_switch": false,
+      "final_stop_reason": "no feedback-dependent complete action switch / zero information value"
+    },
+    "L3": {
+      "qualification": "rejected unsupported fixed terrain world",
+      "rejected_world": 1,
+      "full_history_positive_contradictions": 3,
+      "contradiction_observe_index": 77,
+      "contradiction_start_utc": "2026-11-16T06:33:38Z",
+      "contradiction_end_utc": "2026-11-16T06:39:28Z",
+      "evidence_file": "PUBLIC_WORLD_SUPPORT_AUDIT.json",
+      "final_stop_reason": "fixed high terrain world impossible under already received positive feedback; no scenario replacement permitted",
+      "raw_diagnostic_only": {
+        "same_probe_information_value": 0.059924001223919277,
+        "gain_after_native_opportunity_cost": -0.8939317933384814
+      },
+      "these_numbers_are_valid_public_posterior_values": false,
+      "scenario_parameter_rescue_or_pool_expansion": false
+    },
+    "method": "all past positive hits, conservative continuous altitude/azimuth envelopes; permanent terrain contract participant-guide.zh.md:494; no true terrain, future feedback or new actions",
+    "important_limit": "No whole-card strategy improvement follows from the13 blocked certificates, synthetic +6.1, rejected L3 diagnostic, or L4 commitment surrogate +40.390.",
+    "audit_script_sha256": "8dfd0d1b78cfaa9811fad211719ebac7ab2bcc137dbff5f3613ddd34d56a0585",
+    "audit_output_sha256": "09aeec437a64e6c8b108d2a3c2d93df3f4ace621d0821cc855fed601636e4638"
+  },
+  "L4_first_field_commitment_record": "L4_FIRST_FIELD_COMMITMENT_RECORD.json",
+  "raw_numeric_results_preserved_without_reexecution": true,
+  "all_history_public_positive_support_audit_actually_executed": true,
+  "all_prior_qualified_short_exposure_constraints_do_not_imply_whole_history_support": true
+}

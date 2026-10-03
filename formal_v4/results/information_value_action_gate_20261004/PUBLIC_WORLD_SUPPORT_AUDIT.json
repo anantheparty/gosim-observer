@@ -1,0 +1,256 @@
+{
+  "L4": {
+    "all_past_positive_hits_checked": 48,
+    "continuous_terrain_positive_contradictions": [],
+    "contradiction_count": 0,
+    "only_public_history_used": true,
+    "necessary_test_only": true,
+    "method": "Conservative 60 s continuous trajectory envelopes using sidereal angular speed and azimuth metric Lipschitz bound; no truth or future trace",
+    "public_site": {
+      "name": "Paranal, Chile (virtual)",
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "utc_offset_hours": -4.0,
+      "sun_altitude_limit_deg": -18.0
+    },
+    "source_sha256": {
+      "results/information_value_action_gate_20261004/L4/public_history.json": "a2133465224383bf6488ab60fffba8257f02c9f4d358200917704611abcabb85",
+      "results/information_value_action_gate_20261004/L4/public_state.json": "2cbff7d7c682c1529fd55cd13de1e77cf356bee673dc7e8c35557572714e819d",
+      "results/information_value_action_gate_20261004/L4/worlds.json": "0e64cc50f75a3eba615064450182ca7ce8a060d8a24a560f6dcd0c8150f45283",
+      "upstream/gosim-observer-examples/local-cards/L4/public/targets.csv": "bfb259ef0c0427e2b4795bb9253263e471312aefe30ee052d1ad3f6945871c91",
+      "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+      "upstream/gosim-observer-examples/runner/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73"
+    }
+  },
+  "L3": {
+    "all_past_positive_hits_checked": 3671,
+    "continuous_terrain_positive_contradictions": [
+      {
+        "world": 1,
+        "observe_index": 77,
+        "history_step": 77,
+        "target_id": "V4T007002",
+        "score": 0.137236,
+        "start_utc": "2026-11-16T06:33:38Z",
+        "end_utc": "2026-11-16T06:39:28Z",
+        "duration_seconds": 350,
+        "world_sector": {
+          "world": 1,
+          "p": 0.5,
+          "center": 90.0,
+          "radius": 28.53812521880193,
+          "height": 49.79820100618546
+        },
+        "max_alt_upper": 49.63627119906213,
+        "min_az_sector_margin": 0.808171759812061,
+        "trajectory_envelopes": [
+          {
+            "start_utc": "2026-11-16T06:33:38+00:00",
+            "end_utc": "2026-11-16T06:34:38+00:00",
+            "alt_lower": 48.40823545918131,
+            "alt_upper": 48.658920136519015,
+            "az_mid": 63.531002764895916,
+            "az_reach": 0.18975733843961068
+          },
+          {
+            "start_utc": "2026-11-16T06:34:38+00:00",
+            "end_utc": "2026-11-16T06:35:38+00:00",
+            "alt_lower": 48.61205300051637,
+            "alt_upper": 48.86273767785407,
+            "az_mid": 63.31077672155507,
+            "az_reach": 0.19052891257141916
+          },
+          {
+            "start_utc": "2026-11-16T06:35:38+00:00",
+            "end_utc": "2026-11-16T06:36:38+00:00",
+            "alt_lower": 48.81547554419962,
+            "alt_upper": 49.066160221537324,
+            "az_mid": 63.08881874416031,
+            "az_reach": 0.19130769694031788
+          },
+          {
+            "start_utc": "2026-11-16T06:36:38+00:00",
+            "end_utc": "2026-11-16T06:37:38+00:00",
+            "alt_lower": 49.01849691021475,
+            "alt_upper": 49.26918158755245,
+            "az_mid": 62.865105405544526,
+            "az_reach": 0.1920937432912725
+          },
+          {
+            "start_utc": "2026-11-16T06:37:38+00:00",
+            "end_utc": "2026-11-16T06:38:38+00:00",
+            "alt_lower": 49.22111080950767,
+            "alt_upper": 49.47179548684537,
+            "az_mid": 62.639612964456745,
+            "az_reach": 0.19288710302165069
+          },
+          {
+            "start_utc": "2026-11-16T06:38:38+00:00",
+            "end_utc": "2026-11-16T06:39:28+00:00",
+            "alt_lower": 49.42736726794738,
+            "alt_upper": 49.63627119906213,
+            "az_mid": 62.43132802463356,
+            "az_reach": 0.16128148362342729
+          }
+        ]
+      },
+      {
+        "world": 1,
+        "observe_index": 77,
+        "history_step": 77,
+        "target_id": "V4T008659",
+        "score": 0.177407,
+        "start_utc": "2026-11-16T06:33:38Z",
+        "end_utc": "2026-11-16T06:39:28Z",
+        "duration_seconds": 350,
+        "world_sector": {
+          "world": 1,
+          "p": 0.5,
+          "center": 90.0,
+          "radius": 28.53812521880193,
+          "height": 49.79820100618546
+        },
+        "max_alt_upper": 49.584892676581,
+        "min_az_sector_margin": 1.5703515400474568,
+        "trajectory_envelopes": [
+          {
+            "start_utc": "2026-11-16T06:33:38+00:00",
+            "end_utc": "2026-11-16T06:34:38+00:00",
+            "alt_lower": 48.350246846019346,
+            "alt_upper": 48.60093152335705,
+            "az_mid": 64.27673532159525,
+            "az_reach": 0.18953939399864272
+          },
+          {
+            "start_utc": "2026-11-16T06:34:38+00:00",
+            "end_utc": "2026-11-16T06:35:38+00:00",
+            "alt_lower": 48.555377106101666,
+            "alt_upper": 48.80606178343937,
+            "az_mid": 64.05976565241153,
+            "az_reach": 0.190313488654784
+          },
+          {
+            "start_utc": "2026-11-16T06:35:38+00:00",
+            "end_utc": "2026-11-16T06:36:38+00:00",
+            "alt_lower": 48.760128363344286,
+            "alt_upper": 49.01081304068199,
+            "az_mid": 63.84109172305356,
+            "az_reach": 0.1910949369468537
+          },
+          {
+            "start_utc": "2026-11-16T06:36:38+00:00",
+            "end_utc": "2026-11-16T06:37:38+00:00",
+            "alt_lower": 48.96449463779125,
+            "alt_upper": 49.21517931512895,
+            "az_mid": 63.62069014833376,
+            "az_reach": 0.19188379520174337
+          },
+          {
+            "start_utc": "2026-11-16T06:37:38+00:00",
+            "end_utc": "2026-11-16T06:38:38+00:00",
+            "alt_lower": 49.16846984294178,
+            "alt_upper": 49.419154520279484,
+            "az_mid": 63.39853721964115,
+            "az_reach": 0.19268011953361672
+          },
+          {
+            "start_utc": "2026-11-16T06:38:38+00:00",
+            "end_utc": "2026-11-16T06:39:28+00:00",
+            "alt_lower": 49.37598874546625,
+            "alt_upper": 49.584892676581,
+            "az_mid": 63.19333789695511,
+            "az_reach": 0.16111157570958778
+          }
+        ]
+      },
+      {
+        "world": 1,
+        "observe_index": 77,
+        "history_step": 77,
+        "target_id": "V4T006545",
+        "score": 0.239972,
+        "start_utc": "2026-11-16T06:33:38Z",
+        "end_utc": "2026-11-16T06:39:28Z",
+        "duration_seconds": 350,
+        "world_sector": {
+          "world": 1,
+          "p": 0.5,
+          "center": 90.0,
+          "radius": 28.53812521880193,
+          "height": 49.79820100618546
+        },
+        "max_alt_upper": 49.5731492471754,
+        "min_az_sector_margin": 1.9339699162177406,
+        "trajectory_envelopes": [
+          {
+            "start_utc": "2026-11-16T06:33:38+00:00",
+            "end_utc": "2026-11-16T06:34:38+00:00",
+            "alt_lower": 48.335409729797895,
+            "alt_upper": 48.5860944071356,
+            "az_mid": 64.632786329349,
+            "az_reach": 0.18948374174819
+          },
+          {
+            "start_utc": "2026-11-16T06:34:38+00:00",
+            "end_utc": "2026-11-16T06:35:38+00:00",
+            "alt_lower": 48.54115441198995,
+            "alt_upper": 48.79183908932765,
+            "az_mid": 64.4173234579395,
+            "az_reach": 0.1902595341302514
+          },
+          {
+            "start_utc": "2026-11-16T06:35:38+00:00",
+            "end_utc": "2026-11-16T06:36:38+00:00",
+            "alt_lower": 48.74652755968835,
+            "alt_upper": 48.997212237026055,
+            "az_mid": 64.20016880086335,
+            "az_reach": 0.1910427538084449
+          },
+          {
+            "start_utc": "2026-11-16T06:36:38+00:00",
+            "end_utc": "2026-11-16T06:37:38+00:00",
+            "alt_lower": 48.951523285228866,
+            "alt_upper": 49.20220796256657,
+            "az_mid": 63.9812989824011,
+            "az_reach": 0.19183345935142498
+          },
+          {
+            "start_utc": "2026-11-16T06:37:38+00:00",
+            "end_utc": "2026-11-16T06:38:38+00:00",
+            "alt_lower": 49.156135595542494,
+            "alt_upper": 49.406820272880196,
+            "az_mid": 63.76069029885078,
+            "az_reach": 0.192631709179654
+          },
+          {
+            "start_utc": "2026-11-16T06:38:38+00:00",
+            "end_utc": "2026-11-16T06:39:28+00:00",
+            "alt_lower": 49.364245316060654,
+            "alt_upper": 49.5731492471754,
+            "az_mid": 63.55691750622865,
+            "az_reach": 0.1610728088128331
+          }
+        ]
+      }
+    ],
+    "contradiction_count": 3,
+    "only_public_history_used": true,
+    "necessary_test_only": true,
+    "method": "Conservative 60 s continuous trajectory envelopes using sidereal angular speed and azimuth metric Lipschitz bound; no truth or future trace",
+    "public_site": {
+      "name": "Paranal, Chile (virtual)",
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "utc_offset_hours": -4.0,
+      "sun_altitude_limit_deg": -18.0
+    },
+    "source_sha256": {
+      "results/information_value_action_gate_20261004/L3/public_history.json": "8cdc5a99b5b3875518274ccaad505dbca2d071cc3a8504eec9265ff7001c340d",
+      "results/information_value_action_gate_20261004/L3/public_state.json": "764411e59d452c20ea40cfb84ba8f3510db154ec85d2c5fb73071d4d7e1483d2",
+      "results/information_value_action_gate_20261004/L3/worlds.json": "6704179b025444fc5843a3256562fa41c50ea3ee6376b1390e7d667c3fde121c",
+      "upstream/gosim-observer-examples/local-cards/L3/public/targets.csv": "cb0114de562a9199167e8ad4fd3fb030afcffe498cda58021f3a6ce336bd5ffc",
+      "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+      "upstream/gosim-observer-examples/runner/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73"
+    }
+  }
+}

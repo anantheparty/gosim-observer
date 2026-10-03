@@ -1,0 +1,21 @@
+{
+  "scope": "Transparent record of the preliminary and corrected runs",
+  "preliminary_run": {
+    "L4_information_value": 0.0,
+    "L4_native_opportunity_net": 40.390038784664284,
+    "L3_information_value": 0.059924001223919277,
+    "L3_native_opportunity_net": -0.8939317933384814,
+    "limitation": "Each conditional decoder initially retained only its own best continuation; frozen and conditional maximizations did not explicitly share a complete-action set. These numbers were provisional."
+  },
+  "required_correction": "Retain all already generated complete continuation decodes from the frozen and two posterior contexts, deduplicate their union, and maximize every posterior over that same union. No field, target pool, program, duration, state, prior parameter or probe selection was added.",
+  "corrected_run": {
+    "L4_information_value": 0.0,
+    "L4_native_opportunity_net": 40.390038784664284,
+    "L3_information_value": 0.059924001223919277,
+    "L3_native_opportunity_net": -0.8939317933384814,
+    "source_sha256": "5417c9000acb370f43a15239f73e9eca237f1c8fa6a36d428d2a52752e54ae06",
+    "numbers_changed": false
+  },
+  "additional_strategy_trials": false,
+  "season_tests": false
+}

@@ -1,0 +1,571 @@
+{
+  "status": "stopped",
+  "reason": "no legal switch or information value does not cover native opportunity cost",
+  "candidate_frozen": true,
+  "probe": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 61.1192054,
+      "az_deg": 62.7427743
+    },
+    "duration_seconds": 60,
+    "program": "DARK",
+    "assignments": {
+      "0": "V4T003189",
+      "1": "V4T008540",
+      "3": "V4T002434",
+      "4": "V4T000163",
+      "5": "V4T007436",
+      "6": "V4T008161",
+      "7": "V4T007788",
+      "8": "V4T006689",
+      "9": "V4T005746",
+      "10": "V4T007089",
+      "11": "V4T003510",
+      "12": "V4T004095",
+      "13": "V4T005953",
+      "14": "V4T002324",
+      "15": "V4T000824"
+    }
+  },
+  "qualifying": {
+    "parent_order": 63,
+    "anchor_ids": [
+      "V4T006689",
+      "V4T005746",
+      "V4T007089",
+      "V4T004095",
+      "V4T005953",
+      "V4T002324",
+      "V4T000824"
+    ],
+    "distinguishing_ids": [
+      "V4T003189",
+      "V4T008540",
+      "V4T002434",
+      "V4T000163",
+      "V4T007436",
+      "V4T008161",
+      "V4T007788",
+      "V4T003510"
+    ]
+  },
+  "probe_value": {
+    "value": 166.86161855672617,
+    "frozen_value": 166.86161855672617,
+    "information_value": 0.0,
+    "branches": [
+      {
+        "worlds": [
+          0
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T003189",
+            0.082722
+          ],
+          [
+            "V4T008540",
+            0.040705
+          ],
+          [
+            "V4T002434",
+            0.161615
+          ],
+          [
+            "V4T000163",
+            0.04565
+          ],
+          [
+            "V4T007436",
+            0.066373
+          ],
+          [
+            "V4T008161",
+            0.142471
+          ],
+          [
+            "V4T007788",
+            0.057305
+          ],
+          [
+            "V4T006689",
+            0.094897
+          ],
+          [
+            "V4T005746",
+            0.221565
+          ],
+          [
+            "V4T007089",
+            0.080263
+          ],
+          [
+            "V4T003510",
+            0.07328
+          ],
+          [
+            "V4T004095",
+            0.212907
+          ],
+          [
+            "V4T005953",
+            0.182878
+          ],
+          [
+            "V4T002324",
+            0.13143
+          ],
+          [
+            "V4T000824",
+            0.068847
+          ]
+        ],
+        "value": 167.19667899800697,
+        "world_values": [
+          167.19667899800697,
+          166.52655811544537
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 37.3216872,
+            "az_deg": 144.3880146
+          },
+          "duration_seconds": 525,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T005131",
+            "1": "V4T002649",
+            "2": "V4T003489",
+            "3": "V4T003268",
+            "4": "V4T003533",
+            "5": "V4T003183",
+            "6": "V4T001000",
+            "7": "V4T002325",
+            "8": "V4T006303",
+            "9": "V4T005608",
+            "10": "V4T003551",
+            "11": "V4T007610",
+            "13": "V4T007963"
+          }
+        },
+        "parent_order": 22,
+        "wait_after_seconds": 83
+      },
+      {
+        "worlds": [
+          1
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T003189",
+            0.0
+          ],
+          [
+            "V4T008540",
+            0.0
+          ],
+          [
+            "V4T002434",
+            0.0
+          ],
+          [
+            "V4T000163",
+            0.0
+          ],
+          [
+            "V4T007436",
+            0.0
+          ],
+          [
+            "V4T008161",
+            0.0
+          ],
+          [
+            "V4T007788",
+            0.0
+          ],
+          [
+            "V4T006689",
+            0.094897
+          ],
+          [
+            "V4T005746",
+            0.221565
+          ],
+          [
+            "V4T007089",
+            0.080263
+          ],
+          [
+            "V4T003510",
+            0.0
+          ],
+          [
+            "V4T004095",
+            0.212907
+          ],
+          [
+            "V4T005953",
+            0.182878
+          ],
+          [
+            "V4T002324",
+            0.13143
+          ],
+          [
+            "V4T000824",
+            0.068847
+          ]
+        ],
+        "value": 166.52655811544537,
+        "world_values": [
+          167.19667899800697,
+          166.52655811544537
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 37.3216872,
+            "az_deg": 144.3880146
+          },
+          "duration_seconds": 525,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T005131",
+            "1": "V4T002649",
+            "2": "V4T003489",
+            "3": "V4T003268",
+            "4": "V4T003533",
+            "5": "V4T003183",
+            "6": "V4T001000",
+            "7": "V4T002325",
+            "8": "V4T006303",
+            "9": "V4T005608",
+            "10": "V4T003551",
+            "11": "V4T007610",
+            "13": "V4T007963"
+          }
+        },
+        "parent_order": 22,
+        "wait_after_seconds": 83
+      }
+    ],
+    "frozen": {
+      "value": 166.86161855672617,
+      "world_values": [
+        167.19667899800697,
+        166.52655811544537
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 37.3216872,
+          "az_deg": 144.3880146
+        },
+        "duration_seconds": 525,
+        "program": "DARK",
+        "assignments": {
+          "0": "V4T005131",
+          "1": "V4T002649",
+          "2": "V4T003489",
+          "3": "V4T003268",
+          "4": "V4T003533",
+          "5": "V4T003183",
+          "6": "V4T001000",
+          "7": "V4T002325",
+          "8": "V4T006303",
+          "9": "V4T005608",
+          "10": "V4T003551",
+          "11": "V4T007610",
+          "13": "V4T007963"
+        }
+      },
+      "parent_order": 22,
+      "wait_after_seconds": 83
+    },
+    "outcome_groups": 2,
+    "common_complete_continuation_action_count": 407,
+    "same_complete_action_family_for_all_posteriors": true
+  },
+  "native_control_value": {
+    "value": 126.47157977206189,
+    "frozen_value": 126.47157977206189,
+    "information_value": 0.0,
+    "branches": [
+      {
+        "worlds": [
+          0
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T004687",
+            0.208163
+          ],
+          [
+            "V4T004421",
+            0.326517
+          ],
+          [
+            "V4T004147",
+            0.272078
+          ],
+          [
+            "V4T005783",
+            0.210399
+          ],
+          [
+            "V4T001029",
+            0.36
+          ],
+          [
+            "V4T002665",
+            0.361776
+          ],
+          [
+            "V4T001472",
+            0.145837
+          ],
+          [
+            "V4T003189",
+            0.317336
+          ],
+          [
+            "V4T005897",
+            0.36
+          ],
+          [
+            "V4T004275",
+            0.297651
+          ],
+          [
+            "V4T000559",
+            0.178487
+          ],
+          [
+            "V4T007774",
+            0.288281
+          ],
+          [
+            "V4T001900",
+            0.268997
+          ],
+          [
+            "V4T002434",
+            0.36
+          ]
+        ],
+        "value": 178.69080129786744,
+        "world_values": [
+          178.69080129786744,
+          74.25235824625634
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 36.7505911,
+            "az_deg": 141.3528868
+          },
+          "duration_seconds": 438,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T006614",
+            "1": "V4T004158",
+            "2": "V4T000630",
+            "3": "V4T002264",
+            "4": "V4T007864",
+            "5": "V4T001474",
+            "6": "V4T000034",
+            "7": "V4T002924",
+            "8": "V4T000255",
+            "9": "V4T008157",
+            "10": "V4T005114",
+            "11": "V4T007915",
+            "12": "V4T000128",
+            "13": "V4T001923",
+            "14": "V4T002060",
+            "15": "V4T008515"
+          }
+        },
+        "parent_order": 38,
+        "wait_after_seconds": 0
+      },
+      {
+        "worlds": [
+          1
+        ],
+        "probability": 0.5,
+        "feedback": [
+          [
+            "V4T004687",
+            0.0
+          ],
+          [
+            "V4T004421",
+            0.0
+          ],
+          [
+            "V4T004147",
+            0.0
+          ],
+          [
+            "V4T005783",
+            0.0
+          ],
+          [
+            "V4T001029",
+            0.0
+          ],
+          [
+            "V4T002665",
+            0.0
+          ],
+          [
+            "V4T001472",
+            0.0
+          ],
+          [
+            "V4T003189",
+            0.0
+          ],
+          [
+            "V4T005897",
+            0.0
+          ],
+          [
+            "V4T004275",
+            0.0
+          ],
+          [
+            "V4T000559",
+            0.0
+          ],
+          [
+            "V4T007774",
+            0.0
+          ],
+          [
+            "V4T001900",
+            0.0
+          ],
+          [
+            "V4T002434",
+            0.0
+          ]
+        ],
+        "value": 74.25235824625634,
+        "world_values": [
+          178.69080129786744,
+          74.25235824625634
+        ],
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 36.7505911,
+            "az_deg": 141.3528868
+          },
+          "duration_seconds": 438,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T006614",
+            "1": "V4T004158",
+            "2": "V4T000630",
+            "3": "V4T002264",
+            "4": "V4T007864",
+            "5": "V4T001474",
+            "6": "V4T000034",
+            "7": "V4T002924",
+            "8": "V4T000255",
+            "9": "V4T008157",
+            "10": "V4T005114",
+            "11": "V4T007915",
+            "12": "V4T000128",
+            "13": "V4T001923",
+            "14": "V4T002060",
+            "15": "V4T008515"
+          }
+        },
+        "parent_order": 38,
+        "wait_after_seconds": 0
+      }
+    ],
+    "frozen": {
+      "value": 126.47157977206189,
+      "world_values": [
+        178.69080129786744,
+        74.25235824625634
+      ],
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 36.7505911,
+          "az_deg": 141.3528868
+        },
+        "duration_seconds": 438,
+        "program": "DARK",
+        "assignments": {
+          "0": "V4T006614",
+          "1": "V4T004158",
+          "2": "V4T000630",
+          "3": "V4T002264",
+          "4": "V4T007864",
+          "5": "V4T001474",
+          "6": "V4T000034",
+          "7": "V4T002924",
+          "8": "V4T000255",
+          "9": "V4T008157",
+          "10": "V4T005114",
+          "11": "V4T007915",
+          "12": "V4T000128",
+          "13": "V4T001923",
+          "14": "V4T002060",
+          "15": "V4T008515"
+        }
+      },
+      "parent_order": 38,
+      "wait_after_seconds": 0
+    },
+    "outcome_groups": 2,
+    "common_complete_continuation_action_count": 438,
+    "same_complete_action_family_for_all_posteriors": true
+  },
+  "native_first_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 59.6483839,
+      "az_deg": 62.0998717
+    },
+    "assignments": {
+      "0": "V4T004687",
+      "1": "V4T004421",
+      "2": "V4T004147",
+      "3": "V4T005783",
+      "4": "V4T001029",
+      "5": "V4T002665",
+      "7": "V4T001472",
+      "8": "V4T003189",
+      "9": "V4T005897",
+      "11": "V4T004275",
+      "12": "V4T000559",
+      "13": "V4T007774",
+      "14": "V4T001900",
+      "15": "V4T002434"
+    },
+    "duration_seconds": 230,
+    "program": "DARK"
+  },
+  "same_probe_information_value": 0.0,
+  "gain_after_native_opportunity_cost": 40.390038784664284,
+  "legal_conditional_action_switch": false,
+  "scope": "two-action public frozen-C/E current-slot surrogate; exact modeled global best science/required/Jain; no activeREQ; no modeled future loss; not a true card terminal score or complete parent continuation",
+  "world_probabilities": "declared equiprobable conditional scenarios, not calibrated official posterior",
+  "candidate_field_count": 380,
+  "pool_expansion": false,
+  "program_expansion": false,
+  "duration_expansion": false,
+  "max_public_constraint_rank": 3
+}

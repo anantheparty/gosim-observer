@@ -1,0 +1,67 @@
+{
+  "schema": "structured-request-relation-representation-check-v1",
+  "checks": {
+    "same_request_nodes": true,
+    "different_request_member_joins": true,
+    "same_fixed_collision_is_distinguished": true,
+    "target_request_member_reorder_preserves_local_pool": true,
+    "reorder_preserves_quota_semantics": true,
+    "ids_have_only_join_semantics": true,
+    "empty_ledger_with_active_requests": true,
+    "no_requests_empty_ledger": true,
+    "original_empty_ledger_dtype_exception_reproduced": true,
+    "one_keyword_fix_accepts_same_empty_ledger_fixture": true,
+    "request_window_uses_actual_night_clipped_end": true,
+    "overlapping_requests_keep_distinct_public_progress": true,
+    "different_request_thresholds_refuse_shared_support_vector": true,
+    "request_specific_support_matrix_keeps_local_semantics": true,
+    "unknown_member_rejected": true,
+    "duplicate_member_rejected": true,
+    "inconsistent_completion_rejected": true,
+    "five_student_teacher_and_runner_sources_unchanged": true,
+    "five_student_modules_match_original_collision_source_lock": true
+  },
+  "passed": true,
+  "fixed_collision_request_rewards": {
+    "ab_cd": {
+      "control": 100.0,
+      "field": 0.0
+    },
+    "ad_bc": {
+      "control": 0.0,
+      "field": 100.0
+    }
+  },
+  "locked_source_sha256": {
+    "research/policy_iteration_agent.py": "895185793aa3945ebdbb6b7353fc2e925425f853a87d6548c59275e9340f48b5",
+    "research/policy_iteration_audit.py": "bf65f84ff8f97bbf44cb611772b41ff550f580c2ee1a19ef44a065f9849d8e61",
+    "research/policy_iteration_baseline_groundwork.py": "aca9acad7bc4e0112e53e58d8b25dafa6136105b94a1521c5a4a162fa01f9310",
+    "research/policy_iteration_bulk.py": "74de5541cf1d0ea3e811d7d4e3ce760549ebfb344bb078838277d5e729f8fca9",
+    "research/policy_iteration_bulk_audit.py": "268479d33e103b3cd30050757f969f575dd4c47221ed5f3a240b1bb7db4c0ca8",
+    "research/policy_iteration_dataset.py": "4f228fecda0de9e0312210a3d124ca66525d2bc06ee5cc517fd243427f62c057",
+    "research/policy_iteration_gate.py": "3cac6a67ea4892051c6d137224f9cc87e247fa98e2f22c0329e2f5c594fcabd1",
+    "research/structured_student_audit.py": "0a256dfc1f7f8901403af4da827872e0332a447016469e86f86bdae61779baed",
+    "research/structured_student_features.py": "ac5a6a09fc9cd559ad32559a0281ef71b2b25df13c91351c2d5efb6c918f0db0",
+    "research/structured_student_model.py": "612132459874a6869c76c18c21746c045f7235f47bcb64e444b3aebe3f887542",
+    "research/structured_student_runtime.py": "5b62f375e6746055814eaa81eee8f2ada596565a883ecf2f75ffc0e3450ffc35",
+    "research/structured_student_train.py": "933e40c2e5399067f34a7d9ff67c7e8d0d3d28a852f1a4ba68c84b6f11249585",
+    "upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "upstream/gosim-observer-examples/runner/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "upstream/gosim-observer-examples/runner/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+    "upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892"
+  },
+  "adapter_sha256": {
+    "research/structured_request_relation.py": "072e80f448206ec2ff8cf38bbc237a87019fc5eec9e28b054aeed59f973214f3"
+  },
+  "fixture_sha256": {
+    "results/cold_learning_signal_20261004/synthetic_inputs.json": "bd84b1ecddc07a181ed48f7132f4fe56b79aa8c08a8799cc55565f6d7dfa3220"
+  },
+  "observed_public_coverage": {
+    "source": "root public-only inspection of 64 frozen control captures; supplied by parent",
+    "training_groups": 32,
+    "with_active_requests": 4,
+    "with_remaining_request_deficit": 3
+  },
+  "limits": "Representation checks only; request coverage is too small for generalization claims. No labels, training, new season or deployment changes."
+}

@@ -1,0 +1,497 @@
+[
+  {
+    "snapshot": {
+      "schema_version": "v4-decision-snapshot-v1",
+      "now_utc": "2026-11-23T00:45:00Z",
+      "survey_end_utc": "2026-12-30T08:15:00Z",
+      "observe_action_index": 0,
+      "running_total": 0,
+      "latest_bulletin": {
+        "record_type": "bulletin",
+        "slot_id": "N20261122-S001",
+        "night_id": "N20261122",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "initial": true,
+        "notices": [
+          {
+            "event_kind": "terrain_obstruction",
+            "direction": "E"
+          }
+        ]
+      },
+      "latest_forecast": {
+        "record_type": "forecast",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "coverage_start_utc": "2026-11-23T00:45:00Z",
+        "coverage_end_utc": "2026-11-30T00:45:00Z",
+        "notices": [
+          {
+            "event_kind": "overcast",
+            "direction": "ALL",
+            "nights": [
+              "2026-11-28"
+            ]
+          }
+        ]
+      },
+      "active_requests": [],
+      "new_messages": [
+        {
+          "record_type": "bulletin",
+          "slot_id": "N20261122-S001",
+          "night_id": "N20261122",
+          "issued_at_utc": "2026-11-23T00:45:00Z",
+          "initial": true,
+          "notices": [
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "E"
+            }
+          ]
+        },
+        {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-23T00:45:00Z",
+          "coverage_start_utc": "2026-11-23T00:45:00Z",
+          "coverage_end_utc": "2026-11-30T00:45:00Z",
+          "notices": [
+            {
+              "event_kind": "overcast",
+              "direction": "ALL",
+              "nights": [
+                "2026-11-28"
+              ]
+            }
+          ]
+        }
+      ],
+      "last_result": null,
+      "wallclock": {
+        "elapsed_seconds": 0,
+        "remaining_seconds": 900
+      }
+    },
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.1974919,
+        "az_deg": 136.5706172
+      },
+      "assignments": {
+        "0": "V4T001758",
+        "2": "V4T005450",
+        "3": "V4T001204",
+        "4": "V4T001139",
+        "5": "V4T006455",
+        "6": "V4T001754",
+        "8": "V4T006490",
+        "9": "V4T000075",
+        "10": "V4T008303",
+        "11": "V4T005956",
+        "12": "V4T008153",
+        "13": "V4T003865",
+        "14": "V4T002640",
+        "15": "V4T007895"
+      },
+      "duration_seconds": 485,
+      "program": "BRIGHT"
+    }
+  },
+  {
+    "snapshot": {
+      "schema_version": "v4-decision-snapshot-v1",
+      "now_utc": "2026-11-23T00:53:05Z",
+      "survey_end_utc": "2026-12-30T08:15:00Z",
+      "observe_action_index": 1,
+      "running_total": 4.823565,
+      "latest_bulletin": {
+        "record_type": "bulletin",
+        "slot_id": "N20261122-S001",
+        "night_id": "N20261122",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "initial": true,
+        "notices": [
+          {
+            "event_kind": "terrain_obstruction",
+            "direction": "E"
+          }
+        ]
+      },
+      "latest_forecast": {
+        "record_type": "forecast",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "coverage_start_utc": "2026-11-23T00:45:00Z",
+        "coverage_end_utc": "2026-11-30T00:45:00Z",
+        "notices": [
+          {
+            "event_kind": "overcast",
+            "direction": "ALL",
+            "nights": [
+              "2026-11-28"
+            ]
+          }
+        ]
+      },
+      "active_requests": [],
+      "new_messages": [],
+      "last_result": {
+        "action": "observe",
+        "observe_index": 0,
+        "assigned_count": 14,
+        "hit_count": 12,
+        "hits": [
+          {
+            "target_id": "V4T001758",
+            "score": 0.324834
+          },
+          {
+            "target_id": "V4T005450",
+            "score": 0.304969
+          },
+          {
+            "target_id": "V4T001204",
+            "score": 0.45
+          },
+          {
+            "target_id": "V4T001139",
+            "score": 0.403684
+          },
+          {
+            "target_id": "V4T006490",
+            "score": 0.374277
+          },
+          {
+            "target_id": "V4T000075",
+            "score": 0.533738
+          },
+          {
+            "target_id": "V4T008303",
+            "score": 0.3
+          },
+          {
+            "target_id": "V4T005956",
+            "score": 0.401224
+          },
+          {
+            "target_id": "V4T008153",
+            "score": 0.470687
+          },
+          {
+            "target_id": "V4T003865",
+            "score": 0.410413
+          },
+          {
+            "target_id": "V4T002640",
+            "score": 0.399739
+          },
+          {
+            "target_id": "V4T007895",
+            "score": 0.45
+          }
+        ]
+      },
+      "wallclock": {
+        "elapsed_seconds": 0,
+        "remaining_seconds": 900
+      }
+    },
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 63.609495,
+        "az_deg": 118.1715041
+      },
+      "assignments": {
+        "0": "V4T002288",
+        "1": "V4T003819",
+        "2": "V4T003543",
+        "3": "V4T003932",
+        "4": "V4T008589",
+        "5": "V4T008564",
+        "6": "V4T004278",
+        "7": "V4T002647",
+        "8": "V4T000911",
+        "9": "V4T008476",
+        "10": "V4T001245",
+        "11": "V4T000346",
+        "12": "V4T005325",
+        "13": "V4T003345",
+        "14": "V4T002996",
+        "15": "V4T005245"
+      },
+      "duration_seconds": 485,
+      "program": "DARK"
+    }
+  },
+  {
+    "snapshot": {
+      "schema_version": "v4-decision-snapshot-v1",
+      "now_utc": "2026-11-23T01:01:10Z",
+      "survey_end_utc": "2026-12-30T08:15:00Z",
+      "observe_action_index": 2,
+      "running_total": 14.889444,
+      "latest_bulletin": {
+        "record_type": "bulletin",
+        "slot_id": "N20261122-S002",
+        "night_id": "N20261122",
+        "issued_at_utc": "2026-11-23T01:00:00Z",
+        "initial": false,
+        "notices": []
+      },
+      "latest_forecast": {
+        "record_type": "forecast",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "coverage_start_utc": "2026-11-23T00:45:00Z",
+        "coverage_end_utc": "2026-11-30T00:45:00Z",
+        "notices": [
+          {
+            "event_kind": "overcast",
+            "direction": "ALL",
+            "nights": [
+              "2026-11-28"
+            ]
+          }
+        ]
+      },
+      "active_requests": [],
+      "new_messages": [
+        {
+          "record_type": "bulletin",
+          "slot_id": "N20261122-S002",
+          "night_id": "N20261122",
+          "issued_at_utc": "2026-11-23T01:00:00Z",
+          "initial": false,
+          "notices": []
+        }
+      ],
+      "last_result": {
+        "action": "observe",
+        "observe_index": 1,
+        "assigned_count": 16,
+        "hit_count": 16,
+        "hits": [
+          {
+            "target_id": "V4T002288",
+            "score": 0.784656
+          },
+          {
+            "target_id": "V4T003819",
+            "score": 0.826739
+          },
+          {
+            "target_id": "V4T003543",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T003932",
+            "score": 0.884441
+          },
+          {
+            "target_id": "V4T008589",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T008564",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T004278",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T002647",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T000911",
+            "score": 1.037039
+          },
+          {
+            "target_id": "V4T008476",
+            "score": 0.36
+          },
+          {
+            "target_id": "V4T001245",
+            "score": 0.54
+          },
+          {
+            "target_id": "V4T000346",
+            "score": 0.725074
+          },
+          {
+            "target_id": "V4T005325",
+            "score": 0.36
+          },
+          {
+            "target_id": "V4T003345",
+            "score": 0.970571
+          },
+          {
+            "target_id": "V4T002996",
+            "score": 0.36
+          },
+          {
+            "target_id": "V4T005245",
+            "score": 0.517359
+          }
+        ]
+      },
+      "wallclock": {
+        "elapsed_seconds": 0,
+        "remaining_seconds": 900
+      }
+    },
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 62.5651657,
+        "az_deg": 64.6465173
+      },
+      "assignments": {
+        "0": "V4T005459",
+        "1": "V4T006401",
+        "2": "V4T002717",
+        "3": "V4T005592",
+        "4": "V4T001170",
+        "5": "V4T001717",
+        "6": "V4T002179",
+        "7": "V4T001800",
+        "8": "V4T004899",
+        "9": "V4T008086",
+        "10": "V4T004335",
+        "11": "V4T001476",
+        "14": "V4T007013",
+        "15": "V4T000059"
+      },
+      "duration_seconds": 64,
+      "program": "DARK"
+    }
+  },
+  {
+    "snapshot": {
+      "schema_version": "v4-decision-snapshot-v1",
+      "now_utc": "2026-11-23T01:02:14Z",
+      "survey_end_utc": "2026-12-30T08:15:00Z",
+      "observe_action_index": 3,
+      "running_total": 16.263207,
+      "latest_bulletin": {
+        "record_type": "bulletin",
+        "slot_id": "N20261122-S002",
+        "night_id": "N20261122",
+        "issued_at_utc": "2026-11-23T01:00:00Z",
+        "initial": false,
+        "notices": []
+      },
+      "latest_forecast": {
+        "record_type": "forecast",
+        "issued_at_utc": "2026-11-23T00:45:00Z",
+        "coverage_start_utc": "2026-11-23T00:45:00Z",
+        "coverage_end_utc": "2026-11-30T00:45:00Z",
+        "notices": [
+          {
+            "event_kind": "overcast",
+            "direction": "ALL",
+            "nights": [
+              "2026-11-28"
+            ]
+          }
+        ]
+      },
+      "active_requests": [],
+      "new_messages": [],
+      "last_result": {
+        "action": "observe",
+        "observe_index": 2,
+        "assigned_count": 14,
+        "hit_count": 14,
+        "hits": [
+          {
+            "target_id": "V4T005459",
+            "score": 0.197061
+          },
+          {
+            "target_id": "V4T006401",
+            "score": 0.161607
+          },
+          {
+            "target_id": "V4T002717",
+            "score": 0.072645
+          },
+          {
+            "target_id": "V4T005592",
+            "score": 0.04029
+          },
+          {
+            "target_id": "V4T001170",
+            "score": 0.14311
+          },
+          {
+            "target_id": "V4T001717",
+            "score": 0.087973
+          },
+          {
+            "target_id": "V4T002179",
+            "score": 0.080436
+          },
+          {
+            "target_id": "V4T001800",
+            "score": 0.142446
+          },
+          {
+            "target_id": "V4T004899",
+            "score": 0.06224
+          },
+          {
+            "target_id": "V4T008086",
+            "score": 0.063563
+          },
+          {
+            "target_id": "V4T004335",
+            "score": 0.183182
+          },
+          {
+            "target_id": "V4T001476",
+            "score": 0.064926
+          },
+          {
+            "target_id": "V4T007013",
+            "score": 0.031776
+          },
+          {
+            "target_id": "V4T000059",
+            "score": 0.042508
+          }
+        ]
+      },
+      "wallclock": {
+        "elapsed_seconds": 0,
+        "remaining_seconds": 900
+      }
+    },
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 31.6557742,
+        "az_deg": 123.9730941
+      },
+      "assignments": {
+        "0": "V4T006000",
+        "1": "V4T002732",
+        "2": "V4T005971",
+        "3": "V4T001975",
+        "4": "V4T005427",
+        "5": "V4T003650",
+        "6": "V4T001569",
+        "8": "V4T005099",
+        "9": "V4T008095",
+        "10": "V4T007048",
+        "12": "V4T003057",
+        "13": "V4T007254",
+        "14": "V4T000821",
+        "15": "V4T001134"
+      },
+      "duration_seconds": 98,
+      "program": "DARK"
+    }
+  }
+]
