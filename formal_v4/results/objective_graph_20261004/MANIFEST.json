@@ -1,0 +1,434 @@
+{
+  "all_gates_passed": true,
+  "all_remote_jobs_and_containers_terminated": true,
+  "backup_total": 6765.980248,
+  "cache_removed": [],
+  "causal_delta": -26.23899700000038,
+  "control_total": 6792.219245,
+  "external_referenced_official_inputs": {
+    "results/geometry_native_20261003/protocol_phase_control/L1/actions.jsonl": "bc104d07d187bba650301f99319fc16fa7c9177ea27756a24116db5b485a5412",
+    "results/geometry_native_20261003/protocol_phase_control/L1/decisions.csv": "f1d70b5305e7b5ff7d4e03fcc61a9fd25285115263e70ab9ee972bb38cb0dde2",
+    "results/geometry_native_20261003/protocol_phase_control/L1/observations.csv": "253b02b957a274b94903d41afb2b3f792c0cb99abe1a9cfb028895e38d6ff92e",
+    "results/geometry_native_20261003/protocol_phase_control/L1/score_report.json": "e6dc55d0258c9af36b5dd320ce1aad9d89329c59a44dc626e6f020d07c6851b4",
+    "results/geometry_native_20261003/protocol_phase_control/L2/actions.jsonl": "5eee7066e6b2ff7e71b451c6ba6f61abeaa24cdfdcef6904a60e9a91ca574b0c",
+    "results/geometry_native_20261003/protocol_phase_control/L2/decisions.csv": "361549a217d1ccfca4ca5cc02534e3cb810e22e4fe9e42daf33452b2890c62b3",
+    "results/geometry_native_20261003/protocol_phase_control/L2/observations.csv": "cb27432a7c337bef7759491ecda9bcc2f4859759bc4ff133c81da16f5c2eb069",
+    "results/geometry_native_20261003/protocol_phase_control/L2/score_report.json": "893a29c3794dd93e5a2cd52a051e99ae6723c1612cdc43b5e76dc572a2395399",
+    "results/geometry_native_20261003/protocol_phase_control/L3/actions.jsonl": "3832a26234c0993791181dda8f15513b476ef63f9af8660e02f3343f05977c21",
+    "results/geometry_native_20261003/protocol_phase_control/L3/decisions.csv": "3dfbcd8b5a2eb9410ba12cac69664ce58adacc2d20f5c4af7ac1d3b5fd37e620",
+    "results/geometry_native_20261003/protocol_phase_control/L3/observations.csv": "aeb7214a1371e01b20643e0615bf502bd35a65f7a744db6a565de06d80ae7260",
+    "results/geometry_native_20261003/protocol_phase_control/L3/score_report.json": "54d300f0184149f66842e1e35b4c932d37957b8296597dad0a0f1fad2d5f204a",
+    "results/geometry_native_20261003/protocol_phase_control/L4/actions.jsonl": "a00e823d0ffbe59ed0e4d0a7b7003b3e03fc4fe1645cc3885205dc5d5a310b46",
+    "results/geometry_native_20261003/protocol_phase_control/L4/decisions.csv": "ada08bd31a43dd252d50b6258398b722c95ed3ae5b6b0b8a777ce5c8693d3550",
+    "results/geometry_native_20261003/protocol_phase_control/L4/observations.csv": "6d775a9e61c3ae5cc6d98a99da461bdd5374ab3c4c8ca613e552d16d8cfc1c1e",
+    "results/geometry_native_20261003/protocol_phase_control/L4/score_report.json": "56549782cdf2e9b537d6a2f637110d0a9ca367dc60c2c03f3e5a967ad08cc596",
+    "upstream/gosim-observer-examples/local-cards/L1/card.md": "1d0e8f19827464ce4cdd8ccde9923b3fdd09d434e61dab6dbc099e2f3033a67e",
+    "upstream/gosim-observer-examples/local-cards/L1/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "upstream/gosim-observer-examples/local-cards/L1/config/v4_scenario.json": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43",
+    "upstream/gosim-observer-examples/local-cards/L1/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "upstream/gosim-observer-examples/local-cards/L1/public/footprint.csv": "dc7392de3149ef361c920d064e1d308e504f0f0326b1976c4b969d4df34bcb34",
+    "upstream/gosim-observer-examples/local-cards/L1/public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+    "upstream/gosim-observer-examples/local-cards/L1/public/v4_bulletins.jsonl": "348130a34acdca228a4f3ee35dbda9fb487753cb80d50160fe7c72a8752297b5",
+    "upstream/gosim-observer-examples/local-cards/L1/public/v4_forecasts.jsonl": "84caf24aaacc921ed3e8f8a3220a06e471bb3484d5d752692f0a3f75259c4d83",
+    "upstream/gosim-observer-examples/local-cards/L1/public/v4_night_calendar.csv": "9aa147ecf804e3473d73a32cce6ab4065e282ec0a974dbaf5e3c9f10a93a0a0e",
+    "upstream/gosim-observer-examples/local-cards/L1/truth/v4_earthquake_effects.csv": "1be7d1b67d9d622528cff41bc3026785230ead9c622f2ce4e88ebd90e429bc03",
+    "upstream/gosim-observer-examples/local-cards/L1/truth/v4_events.csv": "7ef54bc5403048a14856c7683ef5eb943f5ac1f70795eebb0954c108205bc949",
+    "upstream/gosim-observer-examples/local-cards/L1/truth/v4_observation_requests.jsonl": "7d90a92826538634650f0af4748c794892def86a205485ab33155c2f49e9a045",
+    "upstream/gosim-observer-examples/local-cards/L1/truth/v4_slots.csv": "188bdf4b41deb283eeb41d91787e773ac708644af39ffa1869205a3cbc7be600",
+    "upstream/gosim-observer-examples/local-cards/L1/truth/v4_weather_truth.csv": "928967c171179d0770ba6bb190f3e0ef24e2d661f309c92edc8425f609ac55f4",
+    "upstream/gosim-observer-examples/local-cards/L2/card.md": "ab26d886f8ab0eb08f205b882b2a915ef580584e466d183683e01ff8d4e0a609",
+    "upstream/gosim-observer-examples/local-cards/L2/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "upstream/gosim-observer-examples/local-cards/L2/config/v4_scenario.json": "b9027d4acd26252ace34d129b9dff10d6c68a1e0ba2912c3b2a7e4510e70bedd",
+    "upstream/gosim-observer-examples/local-cards/L2/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "upstream/gosim-observer-examples/local-cards/L2/public/footprint.csv": "d0913d994cacd3200ce7a9d2036ab43ba3d1934e52dcd8bc1c9e193c2c6b04c9",
+    "upstream/gosim-observer-examples/local-cards/L2/public/targets.csv": "a85d6f8571be0e1f06c11a34943f786e21feccb32b240f8a17c5d68744ed39db",
+    "upstream/gosim-observer-examples/local-cards/L2/public/v4_bulletins.jsonl": "46339be44bfffe02c3f3481561978e093f2f6e362f33c11b1a290102f962b136",
+    "upstream/gosim-observer-examples/local-cards/L2/public/v4_forecasts.jsonl": "41ce85cc78afa51b9d9919aba7cf6fb7d2fab7c954ef6bebdbf3c5b4677cafdc",
+    "upstream/gosim-observer-examples/local-cards/L2/public/v4_night_calendar.csv": "e6149422d04de96c469aaaa18b9116c7c11ce1b976c0a42ad983208fcdd89484",
+    "upstream/gosim-observer-examples/local-cards/L2/truth/v4_earthquake_effects.csv": "d166afe77973cf1ea14bec45b436c06d4c3a5bb758b3b9e0b548598381987f64",
+    "upstream/gosim-observer-examples/local-cards/L2/truth/v4_events.csv": "6ae25757056c2b8258bb392d02040e8c0a2161fd65ca8e879ec50a60c6e2f022",
+    "upstream/gosim-observer-examples/local-cards/L2/truth/v4_observation_requests.jsonl": "b1f4f0fc61402da40e6a13f0d70ecd929a6373e3c2fab033520cd2fcb9f1c8fd",
+    "upstream/gosim-observer-examples/local-cards/L2/truth/v4_slots.csv": "e6848c0d1c8b17a12776247547a0b620cbc3b667fc03da0b403e068d92b4cf2a",
+    "upstream/gosim-observer-examples/local-cards/L2/truth/v4_weather_truth.csv": "5268a17e6a966a40d9f304e450e63d4b08dd243ffa8c85d254e7d6dbdb1c1022",
+    "upstream/gosim-observer-examples/local-cards/L3/card.md": "33bf4f11d02dc982ffc2a4c87bb6991dcb51cb643e8390c566a0f7b673d2941c",
+    "upstream/gosim-observer-examples/local-cards/L3/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "upstream/gosim-observer-examples/local-cards/L3/config/v4_scenario.json": "8f6ed8404147282a48bd3b7bf8d2df5bbbbff147f7e3e06f37065a75a2414a32",
+    "upstream/gosim-observer-examples/local-cards/L3/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "upstream/gosim-observer-examples/local-cards/L3/public/footprint.csv": "021aace550aa0ad5cd6afa4a7cd0f09d772c6ca0151bc90e2861d7510c153027",
+    "upstream/gosim-observer-examples/local-cards/L3/public/targets.csv": "cb0114de562a9199167e8ad4fd3fb030afcffe498cda58021f3a6ce336bd5ffc",
+    "upstream/gosim-observer-examples/local-cards/L3/public/v4_bulletins.jsonl": "4e96e05cbd2104bf81fae71167e20456854d012428e17b54ee890578d18e8ef7",
+    "upstream/gosim-observer-examples/local-cards/L3/public/v4_forecasts.jsonl": "803924d45e2598daa3fce857d90e6bb33a395b16262c7d49c8f2a2f568853b18",
+    "upstream/gosim-observer-examples/local-cards/L3/public/v4_night_calendar.csv": "e552565d9e309ceeadccd3cfac8179847d41eaf1b8c17bfcbd1ba875c0f198ba",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_earthquake_effects.csv": "9f28d1546ca9f77003fd251b4ea01effab794ea8df93e344c53447941d2f25f3",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_events.csv": "2568aea2fdc1410c7cd31d3a8d9d0c6654db6adbf13639d7bc3ea4a7cf402f9a",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_observation_requests.jsonl": "13dd8743ac832770de5dbc3599167fff24ad35c86aca707d715fb6ec3d3241ca",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_slots.csv": "26e15e0c9a91b0333b0639fdc85a2af1e9c200a179f3db8cc49d8ff7a33222f6",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_stress_events.csv": "a1a4e9b184b6f20a7a7b8d22a24bfedb5d62817f17f4e712ea5d7aded70277a3",
+    "upstream/gosim-observer-examples/local-cards/L3/truth/v4_weather_truth.csv": "6d91ac3e1869f23bf9a6b86aa666cbbc738dd85ff32a2e8b00f06c815f865643",
+    "upstream/gosim-observer-examples/local-cards/L4/card.md": "64a0dc123be492964d609a07d59357aa595b00a77fd4e6e65e0a3abc93f8b93d",
+    "upstream/gosim-observer-examples/local-cards/L4/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "upstream/gosim-observer-examples/local-cards/L4/config/v4_scenario.json": "39c7355081024308ca027ea79f0708f77ad0ac272158aa3cc3c6f337ade07c4a",
+    "upstream/gosim-observer-examples/local-cards/L4/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "upstream/gosim-observer-examples/local-cards/L4/public/footprint.csv": "9731709d4f31de6e07426a042ae1593370366dcc2ed49732e801610477c81518",
+    "upstream/gosim-observer-examples/local-cards/L4/public/targets.csv": "bfb259ef0c0427e2b4795bb9253263e471312aefe30ee052d1ad3f6945871c91",
+    "upstream/gosim-observer-examples/local-cards/L4/public/v4_bulletins.jsonl": "62c0de06f344f0152db64f4cc5bf3f9eff47c556188a61c1a49598992570c76d",
+    "upstream/gosim-observer-examples/local-cards/L4/public/v4_forecasts.jsonl": "c8b0fcbf621435ea5abe2a102a687878a2d480762cd9f6c05293494d0355dec3",
+    "upstream/gosim-observer-examples/local-cards/L4/public/v4_night_calendar.csv": "42e543bf88214add520ebd2558c4584319e62429f50fc1549ea5d1cb4ec202c6",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_earthquake_effects.csv": "66f1ca6e272741181dbd5c032b9f55c8b6101fb3643644d50a487266480a8d0c",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_events.csv": "bf145e5cfb1f48bbe1e017760da5e186cdd86fa5c98f91d83d0ae50b7f93d40c",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_observation_requests.jsonl": "49819e1c9848cd457788034be73d630ac116c5e9935ec0e8d81c8b67ed3bb2b8",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_slots.csv": "4f238f9f7c6b1496a5fd73557c98c05d08b9b669f4dd4837f67f3ae001c49b2d",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_stress_events.csv": "78adcbc26f8239615f6ffcc6aa2825d36ca197b5164492f02e49372a25963a5a",
+    "upstream/gosim-observer-examples/local-cards/L4/truth/v4_weather_truth.csv": "d557e80097d695f56f0b86b8d99b0d437363d561b27caa40c2b1da61fd1c374d",
+    "upstream/gosim-observer-examples/runner/challenge/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/gosim-observer-examples/runner/challenge/challenge_workflow.py": "a790769bab713fe3e15f83087724264c74afa09f7f7bc1167e0da979835fa45e",
+    "upstream/gosim-observer-examples/runner/challenge/contracts.py": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+    "upstream/gosim-observer-examples/runner/challenge/observation_request_simulator.py": "3997f2e3f281b74f496f13c995c28851f3683d7a6118f80bdcc865ce62e747c8",
+    "upstream/gosim-observer-examples/runner/challenge/observing_calendar.py": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+    "upstream/gosim-observer-examples/runner/challenge/project_paths.py": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857",
+    "upstream/gosim-observer-examples/runner/challenge/scoring_core.py": "abb3e2758b11380f1b894d8eb743a220e4384f0b55f964cac51a6d19eca93b65",
+    "upstream/gosim-observer-examples/runner/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "upstream/gosim-observer-examples/runner/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+    "upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "upstream/gosim-observer-examples/runner/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "upstream/gosim-observer-examples/runner/challenge/weather_simulator.py": "41c82b106c88ea6eee0348b48801cdad2043379cadf34d8547c7bf45705af098",
+    "upstream/gosim-observer-examples/runner/project_platform/__init__.py": "9383ca5b909c3344d7e16cebbf5446456fb6c636f93ca284f6f170f97e0c8be8",
+    "upstream/gosim-observer-examples/runner/project_platform/transport.py": "e704392660c8651d58da0413ab7fd548fda86c9062cb8f7e4030c33176bfedc3",
+    "upstream/gosim-observer-examples/runner/run_local.py": "d1a7a118104522a8af62b7a0383425fe4e7af9723b224f4072174e64868eab17",
+    "upstream/gosim-observer-examples/runner/verify_engine.py": "ae4a5ea80bffd9bb6c9e0ca348e90d7e6ecfa24f8f52f7337da9d692d186dbde"
+  },
+  "files": {
+    "research/objective_graph_DESIGN_ZH.md": {
+      "bytes": 11596,
+      "sha256": "44e58a368aca442e3d3b5c85268c62ba1364b1fb1dc0331bc7092af13ca6ab33"
+    },
+    "research/objective_graph_certificate_audit.py": {
+      "bytes": 4051,
+      "sha256": "9c1f4eafa574d316c6537cbb380b46b8595ddd6b6ac1ea01b85b9d66975c4b66"
+    },
+    "research/objective_graph_program_agent.py": {
+      "bytes": 3184,
+      "sha256": "eddf8242ee58a507616da4a08ac5455f5c74e9a535f88cff7e0ebdbb2a1226f8"
+    },
+    "research/objective_graph_program_gate.py": {
+      "bytes": 3666,
+      "sha256": "1e8424a5d3f6d9d741d9358cd9ff13b05b1c9f04233db3d57844a05087b17435"
+    },
+    "research/objective_graph_program_pair_audit.py": {
+      "bytes": 4709,
+      "sha256": "78cc5d560881bf212d3c5206b770a1c52d97eb83e5ae774a6c25ee6392677d61"
+    },
+    "research/objective_graph_program_plan.json": {
+      "bytes": 1132,
+      "sha256": "d655ba62928387bb8ab4f1603cfc5b9597e93bb0c2cf430b693bc9ea0bd6ac81"
+    },
+    "research/objective_graph_switch_audit.py": {
+      "bytes": 4364,
+      "sha256": "089e15e278c43ea25675cfc8a83346fa260c46d61eeea769046d422c412ede23"
+    },
+    "research/objective_graph_zenith_probe.py": {
+      "bytes": 8970,
+      "sha256": "105e9fdb61292c203e048c5d39fe82bbd262526f70e47b4ef9c9772652c5beac"
+    },
+    "results/objective_graph_20261004/prefix_L1_104.npz": {
+      "bytes": 361903,
+      "sha256": "9bb90b07f77a6bb93c92a68f643926bf1344936442af74f8eab369b75907efc8"
+    },
+    "results/objective_graph_20261004/prefix_L1_30.npz": {
+      "bytes": 334792,
+      "sha256": "3f07035f44f9b650da84fdcb3766e2ad97679671ec1098f3d8e05de638694146"
+    },
+    "results/objective_graph_20261004/prefix_L2_12.npz": {
+      "bytes": 347961,
+      "sha256": "694db7624757384d8774704c33d9e4d57524fb3df8627235e1211101e98e6f27"
+    },
+    "results/objective_graph_20261004/prefix_L2_25.npz": {
+      "bytes": 363081,
+      "sha256": "a8560c6390b35bb25ad5eed0a72dc2ae436c235b96e3450aa80f639fefe0ef1b"
+    },
+    "results/objective_graph_20261004/prefix_L2_87.npz": {
+      "bytes": 397664,
+      "sha256": "e9f4719357bb919b26a2c698e41d3197d0a24a385d92e97681f270632e22e1ea"
+    },
+    "results/objective_graph_20261004/program_certificate_audit.json": {
+      "bytes": 10190,
+      "sha256": "4feca45c8a3dee3e0936991ed41e8622ba023f70d3b337caffb63c85d11e5f70"
+    },
+    "results/objective_graph_20261004/program_certificate_switch_L2.json": {
+      "bytes": 6918,
+      "sha256": "ed855f02051a8333e6354fa1f886a21926035d2e2dfaab9e85754e5b706e23c5"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/actions.jsonl": {
+      "bytes": 439251,
+      "sha256": "0cfaa85864e231a09b11882ac0f71bddafa4167264e7662f1476ef5ee4bf553f"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/agent.log": {
+      "bytes": 2094,
+      "sha256": "47d7e1453296754254dc4226460be1c7d68aaee7a5f30566f1f940931a43eedc"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/decisions.csv": {
+      "bytes": 154569,
+      "sha256": "17272ba1096c9a7a115bee2af67c42a02129e9cccf0bcf02db2e9f1203f420e8"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/driver.log": {
+      "bytes": 1382,
+      "sha256": "cd7fae4408b1691a78fd5aaca68f9e937ff39e5e1097d456d4a26b9e05121e6e"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/messages.jsonl": {
+      "bytes": 210271,
+      "sha256": "3ad0f89367904412bdd6ef1968fb79a7f8b878d3edb6894c6b7715bee13b81be"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/observations.csv": {
+      "bytes": 950782,
+      "sha256": "467ff1bed5f2960fb8d430f83d0fd8b32711b66b0f6acfeb501cab1071635ac2"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/probe_result.json": {
+      "bytes": 5634,
+      "sha256": "10f13cf83b97509bbd0033b81711519322a9d5cee2c0afe7392e628b9cfb2e9d"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/score_report.json": {
+      "bytes": 2897,
+      "sha256": "7fee0b6843c889062eca1c625646cc8f7b039b453d6e141dbeff67dec34cf58f"
+    },
+    "results/objective_graph_20261004/program_pair/backup/L2/workflow_result.json": {
+      "bytes": 3592,
+      "sha256": "849e9b80edef3f26f041d0c7cd64da1af35debc11074f45c97c41cb18ed65b92"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/actions.jsonl": {
+      "bytes": 438603,
+      "sha256": "5eee7066e6b2ff7e71b451c6ba6f61abeaa24cdfdcef6904a60e9a91ca574b0c"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/agent.log": {
+      "bytes": 2098,
+      "sha256": "9f7e31efaa7786150d0bb9f2d1b1d6d6907bae73d0839c1bd17a91437070d3a1"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/decisions.csv": {
+      "bytes": 153950,
+      "sha256": "361549a217d1ccfca4ca5cc02534e3cb810e22e4fe9e42daf33452b2890c62b3"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/driver.log": {
+      "bytes": 1387,
+      "sha256": "8de2cd3fb482b2d6099ea0765f563d0f8b5db88e0893a42da8cab24948e4a1ae"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/messages.jsonl": {
+      "bytes": 210271,
+      "sha256": "4d30ce33c69943ec1512563855328bd682fe8aa0406800f422d77e18078ce3ba"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/observations.csv": {
+      "bytes": 951556,
+      "sha256": "cb27432a7c337bef7759491ecda9bcc2f4859759bc4ff133c81da16f5c2eb069"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/probe_result.json": {
+      "bytes": 5637,
+      "sha256": "19ac371775bed6788d492d480fe8eee6a8add94d657ee557c17f5b574b722f82"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/score_report.json": {
+      "bytes": 2895,
+      "sha256": "893a29c3794dd93e5a2cd52a051e99ae6723c1612cdc43b5e76dc572a2395399"
+    },
+    "results/objective_graph_20261004/program_pair/control/L2/workflow_result.json": {
+      "bytes": 3589,
+      "sha256": "fc5d37310d0a26d1c38034b60e46c93c1b6aa9b0ddb1a04e611bdbc21103e067"
+    },
+    "results/objective_graph_20261004/program_pair/job.json": {
+      "bytes": 716,
+      "sha256": "bcb04a141ff62c154771ea9e61e58e3f4581ebc8f0d17dddc626e1b9989f83ab"
+    },
+    "results/objective_graph_20261004/program_pair/pair_driver.log": {
+      "bytes": 284,
+      "sha256": "619bb4229688c199f88981d2c4d2dc7dd28476a1b244f89342c88dd85f56d0f5"
+    },
+    "results/objective_graph_20261004/program_pair/pair_summary.json": {
+      "bytes": 11760,
+      "sha256": "4717d391ec3c61a1c4bc2d6b6370819ab89366190cb7f845a300fe233342ceb3"
+    },
+    "results/objective_graph_20261004/program_pair/source_lock.json": {
+      "bytes": 1511,
+      "sha256": "4176596f3173dc9cefb41e8c8508a86c1e86750ff78558907150482a6009298d"
+    },
+    "results/objective_graph_20261004/program_pair/termination_audit.json": {
+      "bytes": 306,
+      "sha256": "7ef81f8e6aa5fa77eaf88a5621f069fb31151cbbc73908466a6edeb06e8abe2e"
+    },
+    "results/objective_graph_20261004/program_pair_causal_audit.json": {
+      "bytes": 1501810,
+      "sha256": "655328d0feb6448892ca9eb4760de124bfef785e392a4a4abfa96fc44cada990"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/actions.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/agent.log": {
+      "bytes": 296,
+      "sha256": "9702a849ddf945f0debe094fd1f0e481e75e503bde5fdb7b3cab0f7f2bcee27f"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/decisions.csv": {
+      "bytes": 137,
+      "sha256": "ad7e90f41d3aa3b7603504720f8e67ee6948317649ccf1cbfb7997bb23b568cc"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/driver.log": {
+      "bytes": 1405,
+      "sha256": "14e736ec77faf21d9f747152b598fe49a748910a2c2e9853abd7f9aab788db48"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/messages.jsonl": {
+      "bytes": 384,
+      "sha256": "9b4179f377ab86e3de28bf4af11471870192d079fc7fe7863adc830f6afd87f3"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/observations.csv": {
+      "bytes": 100,
+      "sha256": "b73414b2c006969ad5d6ff5df23666e573786008ca1f1f7959fc3ac98df99c2f"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/probe_result.json": {
+      "bytes": 1905,
+      "sha256": "4ed5b7b457e827c73ce4d2181f208742da261f68abab261fd721904ff1013be6"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/score_report.json": {
+      "bytes": 1372,
+      "sha256": "25a9cdee1a60c9a9e5cace239e5a82c8a12380aa32cd0bca8ab511004077596d"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/backup/L2/workflow_result.json": {
+      "bytes": 1978,
+      "sha256": "02b7771adfb1c47c5c9b00831589291b269c649b26e01cd24b2d72266c6f5c24"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/actions.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/agent.log": {
+      "bytes": 296,
+      "sha256": "9702a849ddf945f0debe094fd1f0e481e75e503bde5fdb7b3cab0f7f2bcee27f"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/decisions.csv": {
+      "bytes": 137,
+      "sha256": "ad7e90f41d3aa3b7603504720f8e67ee6948317649ccf1cbfb7997bb23b568cc"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/driver.log": {
+      "bytes": 1411,
+      "sha256": "d110111d596d46853f2402d3ff6d8273bff224bfe05bf15f69deeddadb0bc267"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/messages.jsonl": {
+      "bytes": 384,
+      "sha256": "9b4179f377ab86e3de28bf4af11471870192d079fc7fe7863adc830f6afd87f3"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/observations.csv": {
+      "bytes": 100,
+      "sha256": "b73414b2c006969ad5d6ff5df23666e573786008ca1f1f7959fc3ac98df99c2f"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/probe_result.json": {
+      "bytes": 1906,
+      "sha256": "6b864b3c48dbae795c39cce9c2af19944b906598ac2c6140b0628d702ca5eac1"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/score_report.json": {
+      "bytes": 1372,
+      "sha256": "25a9cdee1a60c9a9e5cace239e5a82c8a12380aa32cd0bca8ab511004077596d"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/control/L2/workflow_result.json": {
+      "bytes": 1979,
+      "sha256": "3348e8f801fa1b66c40d283ae94e0fbe85a00a848e1a1f4f8ef4432b5f11e756"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/job.json": {
+      "bytes": 716,
+      "sha256": "165decc70e2f50d9b75b6a0f131a5e8c67ff1e144e421fa1492c66c4c8495dfe"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/pair_driver.log": {
+      "bytes": 280,
+      "sha256": "2cfd753415794383451e7c78ced67cc7512cddb36d1f200bf7d552ab6614b3f6"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/pair_summary.json": {
+      "bytes": 4040,
+      "sha256": "ec54e123fbbb5b47571525a889a6ac462b60b5c7cde9c8def79daf61ccadc091"
+    },
+    "results/objective_graph_20261004/program_pair_import_failed/source_lock.json": {
+      "bytes": 1429,
+      "sha256": "709d94399fcada70065ecf11c58ef54db973b61e5f2724661a36e59f928042bb"
+    },
+    "results/objective_graph_20261004/program_predeclared_plan.json": {
+      "bytes": 1132,
+      "sha256": "d655ba62928387bb8ab4f1603cfc5b9597e93bb0c2cf430b693bc9ea0bd6ac81"
+    },
+    "results/objective_graph_20261004/program_source/participant/agent.py": {
+      "bytes": 1548,
+      "sha256": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796"
+    },
+    "results/objective_graph_20261004/program_source/participant/policy.py": {
+      "bytes": 21545,
+      "sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531"
+    },
+    "results/objective_graph_20261004/program_source/participant/policy_config.json": {
+      "bytes": 42,
+      "sha256": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/belief_clock.py": {
+      "bytes": 4732,
+      "sha256": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/cpu_phase_candidates.py": {
+      "bytes": 19097,
+      "sha256": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/efficiency_bounds.py": {
+      "bytes": 3582,
+      "sha256": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/feedback_model.py": {
+      "bytes": 8288,
+      "sha256": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/geometry.py": {
+      "bytes": 10165,
+      "sha256": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/global_field_agent.py": {
+      "bytes": 2471,
+      "sha256": "a83733840299f1489f161cdc2c2cdd0ddedd8cfba68d495c0eaf49b72f1e6c34"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/global_field_planner.py": {
+      "bytes": 8683,
+      "sha256": "7d55e90730a52ae4e7c9c1d42775a1af017d58c9fa9dd483b41f33f8829def12"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/objective_graph_program_agent.py": {
+      "bytes": 3184,
+      "sha256": "eddf8242ee58a507616da4a08ac5455f5c74e9a535f88cff7e0ebdbb2a1226f8"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/objective_graph_program_plan.json": {
+      "bytes": 1132,
+      "sha256": "d655ba62928387bb8ab4f1603cfc5b9597e93bb0c2cf430b693bc9ea0bd6ac81"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/pointing_calibration.py": {
+      "bytes": 13984,
+      "sha256": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/remote_budget.py": {
+      "bytes": 2815,
+      "sha256": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0"
+    },
+    "results/objective_graph_20261004/program_source/participant/research/spatial_candidates.py": {
+      "bytes": 31189,
+      "sha256": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+    },
+    "results/objective_graph_20261004/zenith_prefix_probe.json": {
+      "bytes": 23847,
+      "sha256": "e6a392405843016207c8fd920e22215077a4012f7823f3b2ac1769d95d988569"
+    }
+  },
+  "frozen_utc": "2026-10-03T16:47:37.621640+00:00",
+  "production_or_git_index_modified": false,
+  "rebuildable_exclusions": [
+    "pyc",
+    "__pycache__",
+    ".pytest_cache",
+    "remote_payload staging"
+  ],
+  "runtime": {
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+    "memory_gib": 2,
+    "network": "none",
+    "numpy": "2.2.6",
+    "participant_cpus": 2,
+    "wallclock_seconds": 900
+  },
+  "schema": "objective-graph-research-archive-v1",
+  "status": "completed_rejected_certificate_program_route"
+}

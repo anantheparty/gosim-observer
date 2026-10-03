@@ -1,0 +1,274 @@
+{
+  "hypothesis": "program controls raw-factor identifiability through public score upper multiplier",
+  "offline_factor_truth": true,
+  "observational_not_causal": true,
+  "records": [
+    {
+      "card": "L1",
+      "counts": {
+        "final_truth_complete": 388
+      },
+      "details": [],
+      "loss_filter": "final valid-only; does not reconstruct pre-resync certificate timeline",
+      "source_sha256": {
+        "actions.jsonl": "bc104d07d187bba650301f99319fc16fa7c9177ea27756a24116db5b485a5412",
+        "observations.csv": "253b02b957a274b94903d41afb2b3f792c0cb99abe1a9cfb028895e38d6ff92e",
+        "decisions.csv": "f1d70b5305e7b5ff7d4e03fcc61a9fd25285115263e70ab9ee972bb38cb0dde2",
+        "score_report.json": "e6dc55d0258c9af36b5dd320ce1aad9d89329c59a44dc626e6f020d07c6851b4"
+      }
+    },
+    {
+      "card": "L2",
+      "counts": {
+        "final_truth_complete": 427,
+        "first_truth_completion_without_certificate": 16,
+        "ambiguous_then_revisited": 16,
+        "ambiguous_subsequent_hits_until_certificate": 18
+      },
+      "details": [
+        {
+          "target": "V4T000923",
+          "first_ambiguous_rank": 530,
+          "first_certificate_rank": 570,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.4100140000000001,
+          "final_truth_factor": 0.639935,
+          "final_certificate_lower": 0.6399350490191178
+        },
+        {
+          "target": "V4T001369",
+          "first_ambiguous_rank": 377,
+          "first_certificate_rank": 419,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.05401799999999998,
+          "final_truth_factor": 1.0,
+          "final_certificate_lower": 0.9999990740722222
+        },
+        {
+          "target": "V4T001487",
+          "first_ambiguous_rank": 196,
+          "first_certificate_rank": 198,
+          "subsequent_hits": 2,
+          "subsequent_science_gain": 0.071465,
+          "final_truth_factor": 0.580377,
+          "final_certificate_lower": 0.5689486607133928
+        },
+        {
+          "target": "V4T001735",
+          "first_ambiguous_rank": 95,
+          "first_certificate_rank": 96,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.06289500000000003,
+          "final_truth_factor": 0.568268,
+          "final_certificate_lower": 0.5635379464276785
+        },
+        {
+          "target": "V4T002349",
+          "first_ambiguous_rank": 166,
+          "first_certificate_rank": 171,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.12671300000000008,
+          "final_truth_factor": 0.573301,
+          "final_certificate_lower": 0.5733004166658333
+        },
+        {
+          "target": "V4T003210",
+          "first_ambiguous_rank": 54,
+          "first_certificate_rank": 89,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.053651000000000004,
+          "final_truth_factor": 0.553011,
+          "final_certificate_lower": 0.5530101851833334
+        },
+        {
+          "target": "V4T003357",
+          "first_ambiguous_rank": 138,
+          "first_certificate_rank": 147,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.14661899999999994,
+          "final_truth_factor": 0.859261,
+          "final_certificate_lower": 0.8592604166658334
+        },
+        {
+          "target": "V4T003934",
+          "first_ambiguous_rank": 232,
+          "first_certificate_rank": 235,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.451939,
+          "final_truth_factor": 0.687213,
+          "final_certificate_lower": 0.6872129901955883
+        },
+        {
+          "target": "V4T004062",
+          "first_ambiguous_rank": 95,
+          "first_certificate_rank": 96,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.061329999999999996,
+          "final_truth_factor": 1.0,
+          "final_certificate_lower": 0.9999995833325
+        },
+        {
+          "target": "V4T005519",
+          "first_ambiguous_rank": 200,
+          "first_certificate_rank": 212,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.13160499999999997,
+          "final_truth_factor": 0.538189,
+          "final_certificate_lower": 0.5381879166658333
+        },
+        {
+          "target": "V4T006565",
+          "first_ambiguous_rank": 373,
+          "first_certificate_rank": 415,
+          "subsequent_hits": 2,
+          "subsequent_science_gain": 0.125791,
+          "final_truth_factor": 0.565183,
+          "final_certificate_lower": 0.5457062499991666
+        },
+        {
+          "target": "V4T006995",
+          "first_ambiguous_rank": 501,
+          "first_certificate_rank": 641,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.573805,
+          "final_truth_factor": 0.926179,
+          "final_certificate_lower": 0.9261787499991668
+        },
+        {
+          "target": "V4T007377",
+          "first_ambiguous_rank": 6,
+          "first_certificate_rank": 115,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.64101,
+          "final_truth_factor": 1.0,
+          "final_certificate_lower": 0.9999995833325
+        },
+        {
+          "target": "V4T007548",
+          "first_ambiguous_rank": 375,
+          "first_certificate_rank": 417,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.4132910000000001,
+          "final_truth_factor": 0.777898,
+          "final_certificate_lower": 0.7778979166658333
+        },
+        {
+          "target": "V4T007829",
+          "first_ambiguous_rank": 321,
+          "first_certificate_rank": 322,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.07175299999999996,
+          "final_truth_factor": 0.617787,
+          "final_certificate_lower": 0.5148220833325
+        },
+        {
+          "target": "V4T008493",
+          "first_ambiguous_rank": 322,
+          "first_certificate_rank": 641,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.125784,
+          "final_truth_factor": 0.997406,
+          "final_certificate_lower": 0.9974062499991667
+        }
+      ],
+      "loss_filter": "final valid-only; does not reconstruct pre-resync certificate timeline",
+      "source_sha256": {
+        "actions.jsonl": "5eee7066e6b2ff7e71b451c6ba6f61abeaa24cdfdcef6904a60e9a91ca574b0c",
+        "observations.csv": "cb27432a7c337bef7759491ecda9bcc2f4859759bc4ff133c81da16f5c2eb069",
+        "decisions.csv": "361549a217d1ccfca4ca5cc02534e3cb810e22e4fe9e42daf33452b2890c62b3",
+        "score_report.json": "893a29c3794dd93e5a2cd52a051e99ae6723c1612cdc43b5e76dc572a2395399"
+      }
+    },
+    {
+      "card": "L3",
+      "counts": {
+        "final_truth_complete": 430,
+        "first_truth_completion_without_certificate": 1,
+        "ambiguous_then_revisited": 1,
+        "ambiguous_subsequent_hits_until_certificate": 5
+      },
+      "details": [
+        {
+          "target": "V4T003755",
+          "first_ambiguous_rank": 734,
+          "first_certificate_rank": 739,
+          "subsequent_hits": 5,
+          "subsequent_science_gain": 0.0004760000000000042,
+          "final_truth_factor": 1.0,
+          "final_certificate_lower": 0.9999986111083333
+        }
+      ],
+      "loss_filter": "final valid-only; does not reconstruct pre-resync certificate timeline",
+      "source_sha256": {
+        "actions.jsonl": "3832a26234c0993791181dda8f15513b476ef63f9af8660e02f3343f05977c21",
+        "observations.csv": "aeb7214a1371e01b20643e0615bf502bd35a65f7a744db6a565de06d80ae7260",
+        "decisions.csv": "3dfbcd8b5a2eb9410ba12cac69664ce58adacc2d20f5c4af7ac1d3b5fd37e620",
+        "score_report.json": "54d300f0184149f66842e1e35b4c932d37957b8296597dad0a0f1fad2d5f204a"
+      }
+    },
+    {
+      "card": "L4",
+      "counts": {
+        "final_truth_complete": 439,
+        "first_truth_completion_without_certificate": 5,
+        "ambiguous_then_revisited": 5,
+        "ambiguous_subsequent_hits_until_certificate": 5
+      },
+      "details": [
+        {
+          "target": "V4T001301",
+          "first_ambiguous_rank": 190,
+          "first_certificate_rank": 278,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.251142,
+          "final_truth_factor": 0.55659,
+          "final_certificate_lower": 0.5565894607838235
+        },
+        {
+          "target": "V4T003768",
+          "first_ambiguous_rank": 138,
+          "first_certificate_rank": 164,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.405297,
+          "final_truth_factor": 0.768452,
+          "final_certificate_lower": 0.7684512499991667
+        },
+        {
+          "target": "V4T005277",
+          "first_ambiguous_rank": 193,
+          "first_certificate_rank": 195,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.12629400000000002,
+          "final_truth_factor": 0.563473,
+          "final_certificate_lower": 0.531469362744608
+        },
+        {
+          "target": "V4T008202",
+          "first_ambiguous_rank": 138,
+          "first_certificate_rank": 147,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.23030400000000006,
+          "final_truth_factor": 0.674129,
+          "final_certificate_lower": 0.674128124999107
+        },
+        {
+          "target": "V4T008230",
+          "first_ambiguous_rank": 781,
+          "first_certificate_rank": 809,
+          "subsequent_hits": 1,
+          "subsequent_science_gain": 0.677704,
+          "final_truth_factor": 1.0,
+          "final_certificate_lower": 0.9999995833325
+        }
+      ],
+      "loss_filter": "final valid-only; does not reconstruct pre-resync certificate timeline",
+      "source_sha256": {
+        "actions.jsonl": "a00e823d0ffbe59ed0e4d0a7b7003b3e03fc4fe1645cc3885205dc5d5a310b46",
+        "observations.csv": "6d775a9e61c3ae5cc6d98a99da461bdd5374ab3c4c8ca613e552d16d8cfc1c1e",
+        "decisions.csv": "ada08bd31a43dd252d50b6258398b722c95ed3ae5b6b0b8a777ce5c8693d3550",
+        "score_report.json": "56549782cdf2e9b537d6a2f637110d0a9ca367dc60c2c03f3e5a967ad08cc596"
+      }
+    }
+  ],
+  "audit_sha256": "9c1f4eafa574d316c6537cbb380b46b8595ddd6b6ac1ea01b85b9d66975c4b66"
+}
