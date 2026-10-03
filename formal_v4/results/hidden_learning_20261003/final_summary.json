@@ -1,0 +1,150 @@
+{
+  "CUDA": {
+    "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "elapsed_seconds": 4.124720599967986,
+    "selected_checkpoint_step": 2000,
+    "steps": 6000,
+    "validation_checkpoint": {
+      "mean_terminal_regret": 10.553631583212077,
+      "median_terminal_regret": 0.658294441178441,
+      "optimal_state_fraction": 0.2857142857142857,
+      "p90_terminal_regret": 9.7661771774292,
+      "raw_delta_MSE": 1341.6761474609375,
+      "selected_mean_terminal_delta": -10.517811700285945,
+      "states": 56
+    }
+  },
+  "L4_critic_run": false,
+  "L4_deterministic_baseline": {
+    "card": "L4",
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 5622.326118,
+      "uniformity_penalty": -1.927632
+    },
+    "counts": {
+      "decisions": 1688,
+      "invalidated_observations": 385,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 12939,
+      "observe_actions": 958,
+      "required_missing": 0,
+      "targets_observed": 7999
+    },
+    "critic_margin": 0,
+    "deterministic_candidate_enumeration": true,
+    "exit_code": 0,
+    "mode": "baseline",
+    "paired_source_difference": "critic uses equivalent explicit einsum inference; baseline never calls model inference",
+    "seconds": 287.9768423328642,
+    "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/baseline_source_manifest.json",
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": 5920.398486
+  },
+  "adopt": false,
+  "causal_limit": "teacher fixes later absolute schedule and removes overlap; online continuation replans; this rejection concerns this35feature35x64x1critic and teacher, not all NN/RL",
+  "dataset": {
+    "features": 35,
+    "rows": 5568,
+    "sha256": "74ee0c09793969b36cf5771f949f8d86b49ef4bb5f550b110744d974efcb96e7",
+    "state_groups": 174
+  },
+  "experiment": "ordinary neural candidate-action terminal opportunity-cost critic",
+  "git_index_edited": false,
+  "heldout_card": "L4",
+  "heldout_preserved_reason": "negative conditional L3ranking and negative official fullseason L3validation; no model retuning",
+  "inference_forward_max_error": 0.0,
+  "model_sha256": "dc109b6cba86c6e86b7294799d826de897c72a855567ecaa42a3b9908fbe5b63",
+  "official_matched_L3": {
+    "baseline": {
+      "card": "L3",
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 0.0,
+        "required_penalty": -250.0,
+        "sum_best_scores": 5821.149042,
+        "uniformity_penalty": -1.847763
+      },
+      "counts": {
+        "decisions": 1726,
+        "invalidated_observations": 13,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13288,
+        "observe_actions": 1006,
+        "required_missing": 5,
+        "targets_observed": 8095
+      },
+      "critic_margin": 0,
+      "deterministic_candidate_enumeration": true,
+      "exit_code": 0,
+      "mode": "baseline",
+      "paired_source_difference": "critic uses equivalent explicit einsum inference; baseline never calls model inference",
+      "seconds": 260.815915417159,
+      "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/baseline_source_manifest.json",
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "total": 5769.301279
+    },
+    "critic": {
+      "card": "L3",
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 0.0,
+        "required_penalty": -250.0,
+        "sum_best_scores": 5493.818629,
+        "uniformity_penalty": -2.808196
+      },
+      "counts": {
+        "decisions": 1785,
+        "invalidated_observations": 13,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 12841,
+        "observe_actions": 1055,
+        "required_missing": 5,
+        "targets_observed": 7931
+      },
+      "critic_margin": 0,
+      "deterministic_candidate_enumeration": true,
+      "exit_code": 0,
+      "mode": "critic",
+      "model_sha256": "dc109b6cba86c6e86b7294799d826de897c72a855567ecaa42a3b9908fbe5b63",
+      "seconds": 188.02273633307777,
+      "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/source_manifest.json",
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "total": 5441.010433
+    },
+    "delta_components": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": 0.0,
+      "sum_best_scores": -327.3304129999997,
+      "uniformity_penalty": -0.9604330000000001
+    },
+    "delta_total": -328.2908459999999
+  },
+  "production_edited": false,
+  "rejection_reason": "critic loses327.330413science and0.960433uniformity at unchanged required/request outcomes; sparse positive conditional tape labels and aggregate features fail to rank candidate opportunitycost reliably",
+  "snapshot": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/hidden_learning_20261003/frozen_project",
+  "source_difference": "BLAS predictor replaced by exact exporter einsum and finitecheck; baseline never uses predictor; archived before-repair source and manifest preserved",
+  "status": "complete_rejected",
+  "training_cards": [
+    "L1",
+    "L2"
+  ],
+  "validation_cards": [
+    "L3"
+  ]
+}

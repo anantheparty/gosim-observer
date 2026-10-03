@@ -1,0 +1,32 @@
+{
+  "mode": "critic",
+  "card": "L3",
+  "seconds": 188.02273633307777,
+  "exit_code": 0,
+  "total": 5441.010433,
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 0.0,
+    "required_penalty": -250.0,
+    "sum_best_scores": 5493.818629,
+    "uniformity_penalty": -2.808196
+  },
+  "counts": {
+    "decisions": 1785,
+    "invalidated_observations": 13,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 12841,
+    "observe_actions": 1055,
+    "required_missing": 5,
+    "targets_observed": 7931
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/source_manifest.json",
+  "deterministic_candidate_enumeration": true,
+  "critic_margin": 0,
+  "model_sha256": "dc109b6cba86c6e86b7294799d826de897c72a855567ecaa42a3b9908fbe5b63"
+}

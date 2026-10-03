@@ -1,0 +1,1891 @@
+{
+  "card": "L1",
+  "features": [
+    "duration_fraction",
+    "log_duration",
+    "baseline_candidate_rate",
+    "assignment_fraction",
+    "predicted_science_gain",
+    "required_rescues",
+    "request_progress_value",
+    "uniformity_gain",
+    "mean_log_flux",
+    "min_log_flux",
+    "max_log_flux",
+    "mean_current_score_fraction",
+    "new_target_fraction",
+    "mean_current_factor_lower",
+    "mean_predicted_factor",
+    "saturated_fraction",
+    "required_fraction",
+    "mean_nights_remaining",
+    "min_nights_remaining",
+    "mean_hour_angle_fraction",
+    "max_hour_angle_fraction",
+    "mean_altitude",
+    "min_altitude",
+    "mean_public_quality_rate",
+    "global_required_missing_fraction",
+    "global_unfinished_fraction",
+    "season_time_remaining_fraction",
+    "quality_scale",
+    "band_quality_scale",
+    "program_dark",
+    "program_bright",
+    "program_backup",
+    "best_pool_rate",
+    "relative_pool_rate",
+    "baseline_duration_fraction"
+  ],
+  "groups": [
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005145",
+          "1": "V4T001551",
+          "10": "V4T002021",
+          "11": "V4T000968",
+          "12": "V4T001815",
+          "13": "V4T000305",
+          "14": "V4T006676",
+          "15": "V4T000165",
+          "2": "V4T005039",
+          "3": "V4T003018",
+          "4": "V4T000506",
+          "5": "V4T000214",
+          "6": "V4T004689",
+          "7": "V4T003309",
+          "8": "V4T000951",
+          "9": "V4T005082"
+        },
+        "duration_seconds": 118,
+        "pointing": {
+          "alt_deg": 69.1438919,
+          "az_deg": 86.6381971
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 390,
+      "group": 0,
+      "now_utc": "2026-11-02T00:30:00Z",
+      "observe_index": 0,
+      "scores_sum": 0.0
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000465",
+          "1": "V4T005271",
+          "10": "V4T002837",
+          "11": "V4T002070",
+          "13": "V4T004392",
+          "15": "V4T002268",
+          "2": "V4T001170",
+          "3": "V4T007102",
+          "4": "V4T007194",
+          "6": "V4T006256",
+          "7": "V4T006678",
+          "8": "V4T001368",
+          "9": "V4T004898"
+        },
+        "duration_seconds": 191,
+        "pointing": {
+          "alt_deg": 85.3770566,
+          "az_deg": 182.3616357
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 348,
+      "group": 18,
+      "now_utc": "2026-11-02T01:46:38Z",
+      "observe_index": 18,
+      "scores_sum": 102.150102
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003356",
+          "1": "V4T000671",
+          "10": "V4T003701",
+          "11": "V4T007622",
+          "12": "V4T006373",
+          "13": "V4T002754",
+          "14": "V4T001024",
+          "15": "V4T000779",
+          "2": "V4T007025",
+          "3": "V4T004566",
+          "4": "V4T007705",
+          "5": "V4T003867",
+          "6": "V4T003044",
+          "7": "V4T006350",
+          "8": "V4T004273",
+          "9": "V4T003391"
+        },
+        "duration_seconds": 103,
+        "pointing": {
+          "alt_deg": 54.9150254,
+          "az_deg": 160.3769418
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 317,
+      "group": 36,
+      "now_utc": "2026-11-02T03:13:24Z",
+      "observe_index": 36,
+      "scores_sum": 219.207694
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003220",
+          "10": "V4T002575",
+          "11": "V4T000192",
+          "12": "V4T003871",
+          "13": "V4T001287",
+          "14": "V4T005338",
+          "15": "V4T006494",
+          "2": "V4T003259",
+          "3": "V4T004172",
+          "5": "V4T000432",
+          "6": "V4T001437",
+          "7": "V4T006907",
+          "8": "V4T005028",
+          "9": "V4T006872"
+        },
+        "duration_seconds": 133,
+        "pointing": {
+          "alt_deg": 31.3744644,
+          "az_deg": 91.5419714
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 276,
+      "group": 54,
+      "now_utc": "2026-11-02T04:27:43Z",
+      "observe_index": 54,
+      "scores_sum": 326.73592900000006
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T005294",
+          "10": "V4T003685",
+          "11": "V4T003666",
+          "12": "V4T005141",
+          "14": "V4T003021",
+          "15": "V4T004415",
+          "2": "V4T002880",
+          "3": "V4T002784",
+          "4": "V4T007564",
+          "7": "V4T003138",
+          "8": "V4T004537",
+          "9": "V4T001253"
+        },
+        "duration_seconds": 296,
+        "pointing": {
+          "alt_deg": 34.0652904,
+          "az_deg": 97.8322754
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 231,
+      "group": 72,
+      "now_utc": "2026-11-02T05:40:29Z",
+      "observe_index": 72,
+      "scores_sum": 419.020272
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T007123",
+          "1": "V4T006375",
+          "10": "V4T000684",
+          "11": "V4T006332",
+          "12": "V4T006494",
+          "13": "V4T000635",
+          "14": "V4T002493",
+          "15": "V4T007298",
+          "2": "V4T000892",
+          "3": "V4T004697",
+          "4": "V4T003499",
+          "5": "V4T003211",
+          "7": "V4T004622",
+          "8": "V4T003850",
+          "9": "V4T000931"
+        },
+        "duration_seconds": 153,
+        "pointing": {
+          "alt_deg": 69.8898591,
+          "az_deg": 64.9145464
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 197,
+      "group": 90,
+      "now_utc": "2026-11-02T07:22:26Z",
+      "observe_index": 90,
+      "scores_sum": 541.853157
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005680",
+          "1": "V4T001240",
+          "10": "V4T003583",
+          "11": "V4T003553",
+          "12": "V4T005631",
+          "13": "V4T005996",
+          "14": "V4T001019",
+          "15": "V4T005298",
+          "2": "V4T000738",
+          "3": "V4T000492",
+          "4": "V4T001921",
+          "7": "V4T000782",
+          "8": "V4T005588",
+          "9": "V4T001273"
+        },
+        "duration_seconds": 671,
+        "pointing": {
+          "alt_deg": 66.8480133,
+          "az_deg": 89.0260607
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 169,
+      "group": 108,
+      "now_utc": "2026-11-03T01:12:19Z",
+      "observe_index": 108,
+      "scores_sum": 664.88823
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T001837",
+          "10": "V4T006700",
+          "11": "V4T005618",
+          "12": "V4T001757",
+          "13": "V4T004179",
+          "14": "V4T006949",
+          "15": "V4T007681",
+          "2": "V4T002631",
+          "3": "V4T005351",
+          "4": "V4T000594",
+          "6": "V4T003572",
+          "7": "V4T006100",
+          "8": "V4T005307",
+          "9": "V4T003535"
+        },
+        "duration_seconds": 309,
+        "pointing": {
+          "alt_deg": 66.4705006,
+          "az_deg": 165.0195577
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 133,
+      "group": 126,
+      "now_utc": "2026-11-03T04:34:44Z",
+      "observe_index": 126,
+      "scores_sum": 857.208921
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T006924",
+          "1": "V4T007051",
+          "10": "V4T001056",
+          "11": "V4T000027",
+          "12": "V4T007439",
+          "13": "V4T004323",
+          "14": "V4T004336",
+          "15": "V4T003213",
+          "2": "V4T003338",
+          "3": "V4T006476",
+          "4": "V4T004691",
+          "5": "V4T001247",
+          "6": "V4T000147",
+          "7": "V4T002927",
+          "8": "V4T005289",
+          "9": "V4T001393"
+        },
+        "duration_seconds": 796,
+        "pointing": {
+          "alt_deg": 57.3794395,
+          "az_deg": 89.7096174
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 108,
+      "group": 144,
+      "now_utc": "2026-11-03T06:09:59Z",
+      "observe_index": 144,
+      "scores_sum": 962.361211
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001885",
+          "1": "V4T004794",
+          "10": "V4T002686",
+          "11": "V4T006186",
+          "12": "V4T004339",
+          "13": "V4T004883",
+          "14": "V4T007777",
+          "3": "V4T006721",
+          "4": "V4T000949",
+          "5": "V4T001075",
+          "6": "V4T005255",
+          "7": "V4T000675",
+          "8": "V4T001385",
+          "9": "V4T003312"
+        },
+        "duration_seconds": 772,
+        "pointing": {
+          "alt_deg": 79.2257258,
+          "az_deg": 167.1480367
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 89,
+      "group": 162,
+      "now_utc": "2026-11-04T02:37:35Z",
+      "observe_index": 162,
+      "scores_sum": 1139.249625
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002622",
+          "1": "V4T001588",
+          "10": "V4T004958",
+          "11": "V4T004346",
+          "12": "V4T001758",
+          "13": "V4T007726",
+          "14": "V4T004089",
+          "15": "V4T005952",
+          "2": "V4T001488",
+          "3": "V4T005897",
+          "4": "V4T005582",
+          "5": "V4T004936",
+          "6": "V4T007140",
+          "7": "V4T003351",
+          "8": "V4T000864",
+          "9": "V4T002819"
+        },
+        "duration_seconds": 1005,
+        "pointing": {
+          "alt_deg": 46.6005575,
+          "az_deg": 72.4717877
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 63,
+      "group": 180,
+      "now_utc": "2026-11-04T06:21:42Z",
+      "observe_index": 180,
+      "scores_sum": 1349.441759
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003492",
+          "1": "V4T001695",
+          "11": "V4T007561",
+          "12": "V4T005777",
+          "14": "V4T003079",
+          "2": "V4T003854",
+          "3": "V4T002947",
+          "4": "V4T005386",
+          "5": "V4T002331",
+          "6": "V4T002659",
+          "7": "V4T002103",
+          "9": "V4T003647"
+        },
+        "duration_seconds": 1186,
+        "pointing": {
+          "alt_deg": 68.4201273,
+          "az_deg": 100.2942833
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 49,
+      "group": 198,
+      "now_utc": "2026-11-05T01:27:12Z",
+      "observe_index": 198,
+      "scores_sum": 1499.565341
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005183",
+          "1": "V4T000136",
+          "10": "V4T001937",
+          "12": "V4T000241",
+          "13": "V4T001498",
+          "14": "V4T002348",
+          "15": "V4T007117",
+          "2": "V4T007030",
+          "3": "V4T001808",
+          "4": "V4T005320",
+          "5": "V4T005880",
+          "6": "V4T006480",
+          "7": "V4T003982",
+          "8": "V4T000514",
+          "9": "V4T001915"
+        },
+        "duration_seconds": 2036,
+        "pointing": {
+          "alt_deg": 57.4104725,
+          "az_deg": 98.3458457
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 27,
+      "group": 216,
+      "now_utc": "2026-11-05T06:41:11Z",
+      "observe_index": 216,
+      "scores_sum": 1758.867606
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T006640",
+          "1": "V4T001500",
+          "11": "V4T001581",
+          "12": "V4T005274",
+          "13": "V4T000854",
+          "14": "V4T005162",
+          "2": "V4T001848",
+          "3": "V4T001534",
+          "6": "V4T001767",
+          "7": "V4T003185",
+          "8": "V4T005397",
+          "9": "V4T001033"
+        },
+        "duration_seconds": 73,
+        "pointing": {
+          "alt_deg": 72.0891234,
+          "az_deg": 81.729743
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 21,
+      "group": 234,
+      "now_utc": "2026-11-06T01:44:58Z",
+      "observe_index": 234,
+      "scores_sum": 1865.1905930000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000349",
+          "10": "V4T005528",
+          "11": "V4T004938",
+          "12": "V4T000652",
+          "14": "V4T007350",
+          "15": "V4T002814",
+          "2": "V4T004393",
+          "3": "V4T006092",
+          "4": "V4T004648",
+          "5": "V4T002066",
+          "6": "V4T006960",
+          "7": "V4T004430",
+          "8": "V4T001298"
+        },
+        "duration_seconds": 1443,
+        "pointing": {
+          "alt_deg": 69.9533473,
+          "az_deg": 72.9056122
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 11,
+      "group": 252,
+      "now_utc": "2026-11-06T06:50:25Z",
+      "observe_index": 252,
+      "scores_sum": 2025.764555
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002926",
+          "1": "V4T007585",
+          "11": "V4T000748",
+          "12": "V4T004805",
+          "13": "V4T005678",
+          "14": "V4T006448",
+          "15": "V4T001839",
+          "2": "V4T002780",
+          "3": "V4T005708",
+          "4": "V4T003748",
+          "5": "V4T002943",
+          "6": "V4T000391",
+          "7": "V4T002591",
+          "8": "V4T000075",
+          "9": "V4T002501"
+        },
+        "duration_seconds": 697,
+        "pointing": {
+          "alt_deg": 69.6622747,
+          "az_deg": 71.8333906
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 8,
+      "group": 270,
+      "now_utc": "2026-11-07T01:07:27Z",
+      "observe_index": 270,
+      "scores_sum": 2121.65115
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002454",
+          "1": "V4T005570",
+          "10": "V4T002428",
+          "12": "V4T000249",
+          "13": "V4T000120",
+          "14": "V4T006222",
+          "15": "V4T003813",
+          "2": "V4T001933",
+          "3": "V4T001975",
+          "6": "V4T006201",
+          "7": "V4T005195",
+          "8": "V4T005660",
+          "9": "V4T000909"
+        },
+        "duration_seconds": 412,
+        "pointing": {
+          "alt_deg": 78.0606718,
+          "az_deg": 279.4589913
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 8,
+      "group": 288,
+      "now_utc": "2026-11-07T02:18:03Z",
+      "observe_index": 288,
+      "scores_sum": 2194.9852100000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005311",
+          "1": "V4T007553",
+          "10": "V4T005057",
+          "11": "V4T000517",
+          "12": "V4T004780",
+          "13": "V4T003833",
+          "14": "V4T000454",
+          "15": "V4T006364",
+          "3": "V4T007155",
+          "4": "V4T000431",
+          "5": "V4T006352",
+          "6": "V4T001843",
+          "8": "V4T003918",
+          "9": "V4T005210"
+        },
+        "duration_seconds": 154,
+        "pointing": {
+          "alt_deg": 64.8331895,
+          "az_deg": 162.7234994
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 8,
+      "group": 306,
+      "now_utc": "2026-11-07T03:43:22Z",
+      "observe_index": 306,
+      "scores_sum": 2279.397299
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T007032",
+          "1": "V4T005479",
+          "10": "V4T005956",
+          "11": "V4T000221",
+          "12": "V4T005460",
+          "13": "V4T002628",
+          "14": "V4T002317",
+          "15": "V4T003473",
+          "2": "V4T005742",
+          "4": "V4T004114",
+          "5": "V4T005173",
+          "6": "V4T003613",
+          "7": "V4T000210",
+          "8": "V4T001410",
+          "9": "V4T006298"
+        },
+        "duration_seconds": 127,
+        "pointing": {
+          "alt_deg": 77.7717123,
+          "az_deg": 350.6222806
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 4,
+      "group": 324,
+      "now_utc": "2026-11-07T08:10:21Z",
+      "observe_index": 324,
+      "scores_sum": 2399.120253
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001386",
+          "10": "V4T005271",
+          "11": "V4T006820",
+          "12": "V4T001217",
+          "14": "V4T001267",
+          "15": "V4T006256",
+          "2": "V4T000181",
+          "3": "V4T002535",
+          "4": "V4T003341",
+          "7": "V4T004567",
+          "8": "V4T002673"
+        },
+        "duration_seconds": 393,
+        "pointing": {
+          "alt_deg": 84.1513437,
+          "az_deg": 175.6002879
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 4,
+      "group": 342,
+      "now_utc": "2026-11-08T01:22:13Z",
+      "observe_index": 342,
+      "scores_sum": 2458.3865530000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000410",
+          "1": "V4T006816",
+          "10": "V4T004176",
+          "11": "V4T005964",
+          "12": "V4T003339",
+          "13": "V4T003187",
+          "14": "V4T007392",
+          "15": "V4T004431",
+          "2": "V4T001687",
+          "3": "V4T001209",
+          "4": "V4T005467",
+          "5": "V4T003239",
+          "6": "V4T007686",
+          "7": "V4T003011",
+          "8": "V4T000282",
+          "9": "V4T000697"
+        },
+        "duration_seconds": 3439,
+        "pointing": {
+          "alt_deg": 66.3638057,
+          "az_deg": 162.3185633
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 4,
+      "group": 360,
+      "now_utc": "2026-11-08T03:45:00Z",
+      "observe_index": 360,
+      "scores_sum": 2534.390618
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003971",
+          "10": "V4T004653",
+          "11": "V4T007322",
+          "12": "V4T001261",
+          "13": "V4T007181",
+          "14": "V4T000046",
+          "15": "V4T004940",
+          "2": "V4T005931",
+          "3": "V4T003058",
+          "5": "V4T004281",
+          "6": "V4T003228",
+          "7": "V4T005424",
+          "8": "V4T003627",
+          "9": "V4T000405"
+        },
+        "duration_seconds": 154,
+        "pointing": {
+          "alt_deg": 49.6197039,
+          "az_deg": 91.6283265
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 378,
+      "now_utc": "2026-11-08T05:53:56Z",
+      "observe_index": 378,
+      "scores_sum": 2629.163582
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T007369",
+          "12": "V4T006567",
+          "13": "V4T004429",
+          "14": "V4T003065",
+          "2": "V4T001574",
+          "3": "V4T002720",
+          "4": "V4T007593",
+          "5": "V4T003062",
+          "6": "V4T003513",
+          "7": "V4T000569",
+          "8": "V4T006794",
+          "9": "V4T004068"
+        },
+        "duration_seconds": 99,
+        "pointing": {
+          "alt_deg": 80.0775828,
+          "az_deg": 93.2024753
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 396,
+      "now_utc": "2026-11-08T07:18:19Z",
+      "observe_index": 396,
+      "scores_sum": 2709.4370630000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005615",
+          "1": "V4T003340",
+          "10": "V4T005079",
+          "11": "V4T002602",
+          "12": "V4T007344",
+          "13": "V4T004680",
+          "14": "V4T003639",
+          "15": "V4T004426",
+          "2": "V4T003781",
+          "3": "V4T007528",
+          "4": "V4T002547",
+          "5": "V4T005875",
+          "6": "V4T005524",
+          "7": "V4T001354",
+          "9": "V4T002171"
+        },
+        "duration_seconds": 304,
+        "pointing": {
+          "alt_deg": 76.8947798,
+          "az_deg": 100.656278
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 414,
+      "now_utc": "2026-11-09T00:42:21Z",
+      "observe_index": 414,
+      "scores_sum": 2777.2025080000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T004095",
+          "12": "V4T003446",
+          "13": "V4T001229",
+          "14": "V4T003068",
+          "15": "V4T001069",
+          "2": "V4T002241",
+          "3": "V4T000692",
+          "5": "V4T003978",
+          "6": "V4T004258",
+          "7": "V4T005027",
+          "9": "V4T004555"
+        },
+        "duration_seconds": 128,
+        "pointing": {
+          "alt_deg": 79.0629702,
+          "az_deg": 191.6133279
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 432,
+      "now_utc": "2026-11-09T02:54:32Z",
+      "observe_index": 432,
+      "scores_sum": 2887.077
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003787",
+          "1": "V4T002576",
+          "10": "V4T007696",
+          "11": "V4T006428",
+          "12": "V4T001184",
+          "13": "V4T003411",
+          "14": "V4T007643",
+          "15": "V4T001057",
+          "2": "V4T000598",
+          "3": "V4T000756",
+          "4": "V4T003899",
+          "5": "V4T003204",
+          "6": "V4T001976",
+          "7": "V4T006503",
+          "8": "V4T007211",
+          "9": "V4T002939"
+        },
+        "duration_seconds": 925,
+        "pointing": {
+          "alt_deg": 67.8960396,
+          "az_deg": 194.0613373
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 450,
+      "now_utc": "2026-11-09T04:34:12Z",
+      "observe_index": 450,
+      "scores_sum": 2968.843009
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001580",
+          "10": "V4T000859",
+          "11": "V4T003763",
+          "14": "V4T006241",
+          "2": "V4T005651",
+          "3": "V4T007138",
+          "5": "V4T002469",
+          "6": "V4T006206",
+          "7": "V4T004130",
+          "9": "V4T000008"
+        },
+        "duration_seconds": 97,
+        "pointing": {
+          "alt_deg": 66.912327,
+          "az_deg": 192.6991237
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 468,
+      "now_utc": "2026-11-09T06:46:30Z",
+      "observe_index": 468,
+      "scores_sum": 3082.405857
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T002802",
+          "11": "V4T000250",
+          "13": "V4T001549",
+          "14": "V4T005220",
+          "15": "V4T003183",
+          "2": "V4T006722",
+          "3": "V4T005185",
+          "4": "V4T004343",
+          "5": "V4T003533",
+          "6": "V4T000294",
+          "7": "V4T004565",
+          "8": "V4T000089",
+          "9": "V4T005350"
+        },
+        "duration_seconds": 382,
+        "pointing": {
+          "alt_deg": 79.4941937,
+          "az_deg": 36.4721269
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 486,
+      "now_utc": "2026-11-10T01:04:44Z",
+      "observe_index": 486,
+      "scores_sum": 3187.223014
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T001077",
+          "10": "V4T007044",
+          "11": "V4T007043",
+          "12": "V4T001424",
+          "13": "V4T006976",
+          "14": "V4T005797",
+          "15": "V4T005544",
+          "2": "V4T005252",
+          "3": "V4T005216",
+          "4": "V4T007056",
+          "5": "V4T005923",
+          "6": "V4T000847",
+          "7": "V4T004789",
+          "8": "V4T000061",
+          "9": "V4T000780"
+        },
+        "duration_seconds": 826,
+        "pointing": {
+          "alt_deg": 69.7609443,
+          "az_deg": 252.9332913
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 3,
+      "group": 504,
+      "now_utc": "2026-11-10T03:07:44Z",
+      "observe_index": 504,
+      "scores_sum": 3297.521458
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T006681",
+          "11": "V4T007534",
+          "12": "V4T000270",
+          "13": "V4T002740",
+          "14": "V4T001760",
+          "15": "V4T004101",
+          "2": "V4T004274",
+          "3": "V4T001349",
+          "4": "V4T003290",
+          "5": "V4T002440",
+          "6": "V4T001378",
+          "7": "V4T001853",
+          "8": "V4T002025"
+        },
+        "duration_seconds": 382,
+        "pointing": {
+          "alt_deg": 52.6192275,
+          "az_deg": 82.6230425
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 522,
+      "now_utc": "2026-11-10T06:04:23Z",
+      "observe_index": 522,
+      "scores_sum": 3424.948783
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005804",
+          "1": "V4T003454",
+          "10": "V4T001972",
+          "11": "V4T006791",
+          "14": "V4T004224",
+          "15": "V4T005080",
+          "3": "V4T002206",
+          "4": "V4T000615",
+          "5": "V4T006360",
+          "6": "V4T007730",
+          "7": "V4T000970",
+          "9": "V4T003382"
+        },
+        "duration_seconds": 65,
+        "pointing": {
+          "alt_deg": 70.9399597,
+          "az_deg": 21.0156898
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 540,
+      "now_utc": "2026-11-10T08:13:55Z",
+      "observe_index": 540,
+      "scores_sum": 3525.976912
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003509",
+          "1": "V4T004177",
+          "11": "V4T005306",
+          "12": "V4T001988",
+          "13": "V4T006886",
+          "14": "V4T003527",
+          "15": "V4T007591",
+          "2": "V4T000010",
+          "3": "V4T006785",
+          "4": "V4T007001",
+          "5": "V4T007107",
+          "6": "V4T000881",
+          "7": "V4T001797",
+          "8": "V4T000267",
+          "9": "V4T001273"
+        },
+        "duration_seconds": 812,
+        "pointing": {
+          "alt_deg": 75.8372968,
+          "az_deg": 280.3674396
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 558,
+      "now_utc": "2026-11-11T03:17:59Z",
+      "observe_index": 558,
+      "scores_sum": 3644.800006
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001858",
+          "1": "V4T005799",
+          "10": "V4T003174",
+          "11": "V4T001607",
+          "12": "V4T003305",
+          "13": "V4T002730",
+          "14": "V4T007576",
+          "15": "V4T006694",
+          "3": "V4T004147",
+          "4": "V4T000550",
+          "5": "V4T006671",
+          "6": "V4T006484",
+          "7": "V4T001167",
+          "8": "V4T005370",
+          "9": "V4T001398"
+        },
+        "duration_seconds": 689,
+        "pointing": {
+          "alt_deg": 77.3971919,
+          "az_deg": 92.6358234
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 576,
+      "now_utc": "2026-11-11T07:12:43Z",
+      "observe_index": 576,
+      "scores_sum": 3757.141803
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T006749",
+          "11": "V4T006059",
+          "12": "V4T002706",
+          "13": "V4T006712",
+          "14": "V4T005677",
+          "2": "V4T005283",
+          "3": "V4T000295",
+          "8": "V4T004305",
+          "9": "V4T001296"
+        },
+        "duration_seconds": 316,
+        "pointing": {
+          "alt_deg": 77.8581116,
+          "az_deg": 269.3887715
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 594,
+      "now_utc": "2026-11-12T02:32:36Z",
+      "observe_index": 594,
+      "scores_sum": 3867.445559
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T006260",
+          "1": "V4T004867",
+          "10": "V4T007014",
+          "12": "V4T005049",
+          "13": "V4T004942",
+          "14": "V4T005043",
+          "15": "V4T007761",
+          "2": "V4T005405",
+          "3": "V4T003592",
+          "4": "V4T000837",
+          "5": "V4T006343",
+          "6": "V4T004037",
+          "7": "V4T005090",
+          "8": "V4T007557"
+        },
+        "duration_seconds": 911,
+        "pointing": {
+          "alt_deg": 72.4975183,
+          "az_deg": 195.4855537
+        },
+        "program": "BRIGHT"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 612,
+      "now_utc": "2026-11-12T05:04:39Z",
+      "observe_index": 612,
+      "scores_sum": 3948.6850080000004
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001260",
+          "1": "V4T006126",
+          "10": "V4T007735",
+          "11": "V4T006269",
+          "12": "V4T003714",
+          "13": "V4T005619",
+          "14": "V4T004668",
+          "3": "V4T000388",
+          "4": "V4T005071",
+          "6": "V4T007590",
+          "7": "V4T004472",
+          "8": "V4T003784",
+          "9": "V4T000992"
+        },
+        "duration_seconds": 901,
+        "pointing": {
+          "alt_deg": 73.3886376,
+          "az_deg": 81.4205268
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 630,
+      "now_utc": "2026-11-13T07:29:48Z",
+      "observe_index": 630,
+      "scores_sum": 4028.5499400000003
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T007216",
+          "10": "V4T004870",
+          "11": "V4T006492",
+          "13": "V4T000217",
+          "14": "V4T002321",
+          "15": "V4T001445",
+          "2": "V4T007756",
+          "3": "V4T003690",
+          "4": "V4T007397",
+          "5": "V4T003306",
+          "6": "V4T003159",
+          "7": "V4T001726",
+          "8": "V4T007142",
+          "9": "V4T001877"
+        },
+        "duration_seconds": 1207,
+        "pointing": {
+          "alt_deg": 68.5301647,
+          "az_deg": 196.6609986
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 648,
+      "now_utc": "2026-11-14T06:22:18Z",
+      "observe_index": 648,
+      "scores_sum": 4108.922624999999
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002912",
+          "10": "V4T007118",
+          "11": "V4T000909",
+          "12": "V4T007709",
+          "13": "V4T006713",
+          "14": "V4T005399",
+          "15": "V4T005472",
+          "2": "V4T002454",
+          "3": "V4T005570",
+          "4": "V4T004801",
+          "5": "V4T006470",
+          "6": "V4T002832",
+          "8": "V4T002803",
+          "9": "V4T001628"
+        },
+        "duration_seconds": 1206,
+        "pointing": {
+          "alt_deg": 66.9863476,
+          "az_deg": 268.3191906
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 666,
+      "now_utc": "2026-11-15T02:35:15Z",
+      "observe_index": 666,
+      "scores_sum": 4197.043858000001
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000205",
+          "10": "V4T002948",
+          "11": "V4T006229",
+          "4": "V4T001005",
+          "5": "V4T005019",
+          "7": "V4T005033",
+          "8": "V4T003628"
+        },
+        "duration_seconds": 135,
+        "pointing": {
+          "alt_deg": 81.9955009,
+          "az_deg": 68.9068542
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 684,
+      "now_utc": "2026-11-15T08:12:45Z",
+      "observe_index": 684,
+      "scores_sum": 4320.039122
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005203",
+          "1": "V4T005291",
+          "10": "V4T005478",
+          "11": "V4T003207",
+          "12": "V4T007781",
+          "13": "V4T001830",
+          "14": "V4T006039",
+          "2": "V4T001320",
+          "4": "V4T005709",
+          "5": "V4T006046",
+          "6": "V4T000213",
+          "7": "V4T006573",
+          "8": "V4T003093",
+          "9": "V4T001610"
+        },
+        "duration_seconds": 1159,
+        "pointing": {
+          "alt_deg": 75.8900778,
+          "az_deg": 187.6966695
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 702,
+      "now_utc": "2026-11-16T05:20:09Z",
+      "observe_index": 702,
+      "scores_sum": 4436.386233
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T003262",
+          "11": "V4T005092",
+          "12": "V4T006038",
+          "13": "V4T000713",
+          "14": "V4T005564",
+          "2": "V4T000692",
+          "3": "V4T000012",
+          "5": "V4T002241",
+          "8": "V4T004360",
+          "9": "V4T000606"
+        },
+        "duration_seconds": 1044,
+        "pointing": {
+          "alt_deg": 78.5901749,
+          "az_deg": 191.6112042
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 720,
+      "now_utc": "2026-11-17T02:20:37Z",
+      "observe_index": 720,
+      "scores_sum": 4536.512035000001
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002185",
+          "1": "V4T003633",
+          "10": "V4T007712",
+          "11": "V4T003008",
+          "12": "V4T006045",
+          "13": "V4T003078",
+          "14": "V4T000132",
+          "15": "V4T000767",
+          "3": "V4T003042",
+          "4": "V4T004271",
+          "6": "V4T002122",
+          "7": "V4T005791",
+          "8": "V4T000575",
+          "9": "V4T001093"
+        },
+        "duration_seconds": 1163,
+        "pointing": {
+          "alt_deg": 75.6607977,
+          "az_deg": 27.2430971
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 738,
+      "now_utc": "2026-11-17T07:13:08Z",
+      "observe_index": 738,
+      "scores_sum": 4632.530075000001
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002487",
+          "1": "V4T001052",
+          "11": "V4T007263",
+          "12": "V4T006115",
+          "13": "V4T007425",
+          "14": "V4T002705",
+          "15": "V4T006925",
+          "3": "V4T007461",
+          "4": "V4T000014",
+          "5": "V4T003904",
+          "6": "V4T002670",
+          "9": "V4T000542"
+        },
+        "duration_seconds": 1030,
+        "pointing": {
+          "alt_deg": 56.8451121,
+          "az_deg": 196.5315806
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 756,
+      "now_utc": "2026-11-18T05:41:19Z",
+      "observe_index": 756,
+      "scores_sum": 4738.440388
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T007180",
+          "11": "V4T006700",
+          "12": "V4T004010",
+          "13": "V4T001757",
+          "14": "V4T004179",
+          "2": "V4T003616",
+          "3": "V4T002631",
+          "5": "V4T001351",
+          "6": "V4T004371",
+          "7": "V4T003572",
+          "8": "V4T005977",
+          "9": "V4T005307"
+        },
+        "duration_seconds": 814,
+        "pointing": {
+          "alt_deg": 66.5345141,
+          "az_deg": 164.781745
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 774,
+      "now_utc": "2026-11-19T03:36:40Z",
+      "observe_index": 774,
+      "scores_sum": 4852.547967
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T004009",
+          "1": "V4T001493",
+          "10": "V4T001249",
+          "11": "V4T000617",
+          "13": "V4T005310",
+          "14": "V4T004303",
+          "5": "V4T001978",
+          "6": "V4T002134",
+          "9": "V4T004422"
+        },
+        "duration_seconds": 214,
+        "pointing": {
+          "alt_deg": 76.5959511,
+          "az_deg": 175.0328086
+        },
+        "program": "BRIGHT"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 792,
+      "now_utc": "2026-11-20T03:52:59Z",
+      "observe_index": 792,
+      "scores_sum": 4937.462069
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T005793",
+          "12": "V4T001943",
+          "13": "V4T003524",
+          "14": "V4T004122",
+          "15": "V4T000819",
+          "7": "V4T005494",
+          "9": "V4T003080"
+        },
+        "duration_seconds": 265,
+        "pointing": {
+          "alt_deg": 76.9542131,
+          "az_deg": 186.2629323
+        },
+        "program": "BRIGHT"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 810,
+      "now_utc": "2026-11-21T04:46:52Z",
+      "observe_index": 810,
+      "scores_sum": 5039.310049
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T005290",
+          "13": "V4T005892",
+          "14": "V4T000564",
+          "3": "V4T006336",
+          "4": "V4T006633",
+          "7": "V4T001821",
+          "9": "V4T002084"
+        },
+        "duration_seconds": 90,
+        "pointing": {
+          "alt_deg": 66.4160519,
+          "az_deg": 195.534836
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 828,
+      "now_utc": "2026-11-22T05:41:47Z",
+      "observe_index": 828,
+      "scores_sum": 5121.2958849999995
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002277",
+          "1": "V4T002003",
+          "10": "V4T004313",
+          "11": "V4T005599",
+          "12": "V4T001565",
+          "13": "V4T004120",
+          "14": "V4T004581",
+          "15": "V4T007022",
+          "3": "V4T004288",
+          "4": "V4T002117",
+          "7": "V4T006372",
+          "8": "V4T007172"
+        },
+        "duration_seconds": 2270,
+        "pointing": {
+          "alt_deg": 70.2113471,
+          "az_deg": 73.1937751
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 846,
+      "now_utc": "2026-11-23T05:30:51Z",
+      "observe_index": 846,
+      "scores_sum": 5218.768779
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T006631",
+          "10": "V4T006037",
+          "11": "V4T001213",
+          "12": "V4T000505",
+          "14": "V4T006561",
+          "15": "V4T005080",
+          "3": "V4T002206",
+          "4": "V4T000615",
+          "5": "V4T001748",
+          "6": "V4T001356",
+          "7": "V4T000970",
+          "9": "V4T004632"
+        },
+        "duration_seconds": 1092,
+        "pointing": {
+          "alt_deg": 71.6108529,
+          "az_deg": 12.5715975
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 864,
+      "now_utc": "2026-11-24T07:30:23Z",
+      "observe_index": 864,
+      "scores_sum": 5300.9329880000005
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T004227",
+          "1": "V4T006776",
+          "10": "V4T004727",
+          "11": "V4T003954",
+          "12": "V4T001914",
+          "13": "V4T006828",
+          "14": "V4T004197",
+          "15": "V4T007286",
+          "2": "V4T000498",
+          "4": "V4T006796",
+          "5": "V4T002836",
+          "6": "V4T005863",
+          "7": "V4T002210",
+          "8": "V4T007505",
+          "9": "V4T007588"
+        },
+        "duration_seconds": 2868,
+        "pointing": {
+          "alt_deg": 49.4089979,
+          "az_deg": 252.5543501
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 882,
+      "now_utc": "2026-11-26T04:33:08Z",
+      "observe_index": 882,
+      "scores_sum": 5389.214438000001
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001776",
+          "1": "V4T001494",
+          "10": "V4T007468",
+          "11": "V4T007080",
+          "12": "V4T000039",
+          "13": "V4T002301",
+          "15": "V4T005028",
+          "2": "V4T002379",
+          "4": "V4T001889",
+          "5": "V4T002426",
+          "6": "V4T005344",
+          "7": "V4T006504",
+          "8": "V4T004151",
+          "9": "V4T002785"
+        },
+        "duration_seconds": 2426,
+        "pointing": {
+          "alt_deg": 76.8127143,
+          "az_deg": 15.4480646
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 900,
+      "now_utc": "2026-11-27T06:35:14Z",
+      "observe_index": 900,
+      "scores_sum": 5489.25265
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T005369",
+          "10": "V4T004471",
+          "11": "V4T001401",
+          "12": "V4T007352",
+          "13": "V4T003778",
+          "14": "V4T002525",
+          "3": "V4T000400",
+          "5": "V4T005038",
+          "6": "V4T007792",
+          "8": "V4T002443",
+          "9": "V4T007675"
+        },
+        "duration_seconds": 763,
+        "pointing": {
+          "alt_deg": 78.3991445,
+          "az_deg": 303.6201923
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 918,
+      "now_utc": "2026-11-29T00:45:00Z",
+      "observe_index": 918,
+      "scores_sum": 5554.979502
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001426",
+          "1": "V4T003716",
+          "10": "V4T005584",
+          "11": "V4T005678",
+          "14": "V4T001839",
+          "15": "V4T001705",
+          "2": "V4T002191",
+          "3": "V4T000234",
+          "4": "V4T006901",
+          "5": "V4T000200",
+          "6": "V4T001555",
+          "7": "V4T001436",
+          "8": "V4T006035",
+          "9": "V4T007565"
+        },
+        "duration_seconds": 1927,
+        "pointing": {
+          "alt_deg": 69.7737895,
+          "az_deg": 284.680881
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 936,
+      "now_utc": "2026-11-30T02:13:20Z",
+      "observe_index": 936,
+      "scores_sum": 5641.430881
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T004496",
+          "1": "V4T000539",
+          "10": "V4T005912",
+          "11": "V4T000320",
+          "14": "V4T006300",
+          "15": "V4T000438",
+          "4": "V4T005857",
+          "5": "V4T007713",
+          "6": "V4T006222",
+          "8": "V4T000120",
+          "9": "V4T003669"
+        },
+        "duration_seconds": 679,
+        "pointing": {
+          "alt_deg": 62.2428736,
+          "az_deg": 268.9168192
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 954,
+      "now_utc": "2026-12-01T01:57:49Z",
+      "observe_index": 954,
+      "scores_sum": 5748.040982999999
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T007306",
+          "1": "V4T006337",
+          "11": "V4T002813",
+          "12": "V4T003142",
+          "13": "V4T001750",
+          "14": "V4T002404",
+          "15": "V4T005051",
+          "3": "V4T001028",
+          "4": "V4T001638",
+          "5": "V4T001058",
+          "7": "V4T007393",
+          "9": "V4T004046"
+        },
+        "duration_seconds": 908,
+        "pointing": {
+          "alt_deg": 79.0039525,
+          "az_deg": 341.0985188
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 972,
+      "now_utc": "2026-12-02T00:50:58Z",
+      "observe_index": 972,
+      "scores_sum": 5834.364333
+    },
+    {
+      "baseline_action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T006895",
+          "1": "V4T007554",
+          "10": "V4T000782",
+          "11": "V4T003350",
+          "12": "V4T006095",
+          "13": "V4T006349",
+          "14": "V4T000492",
+          "15": "V4T001890",
+          "2": "V4T005588",
+          "4": "V4T004165",
+          "6": "V4T001988",
+          "9": "V4T003662"
+        },
+        "duration_seconds": 1947,
+        "pointing": {
+          "alt_deg": 86.3137594,
+          "az_deg": 300.0617675
+        },
+        "program": "DARK"
+      },
+      "candidates": 32,
+      "factor_lower_missing": 2,
+      "group": 990,
+      "now_utc": "2026-12-03T01:09:03Z",
+      "observe_index": 990,
+      "scores_sum": 5912.207812999999
+    }
+  ],
+  "model_source_gate": {
+    "request_reward": 100.0,
+    "required_missing": 2,
+    "science": 5996.41833064364,
+    "total": 6096.185387528191,
+    "uniformity_penalty": 0.23294311544881374
+  },
+  "scalar_audit": [
+    {
+      "column_score_max_error": 3.4705571749782393e-13,
+      "expected": {
+        "request_reward": 100.0,
+        "required_missing": 2,
+        "science": 5996.41833064364,
+        "total": 6096.185387528191,
+        "uniformity_penalty": 0.23294311544881374
+      },
+      "group": 0,
+      "official_total": 6096.185388,
+      "terminal_error": 4.718085619970225e-07
+    },
+    {
+      "column_score_max_error": 2.4646951146678475e-14,
+      "expected": {
+        "request_reward": 100.0,
+        "required_missing": 2,
+        "science": 5995.346500623777,
+        "total": 6095.103316083142,
+        "uniformity_penalty": 0.24318454063450012
+      },
+      "group": 18,
+      "official_total": 6095.103316,
+      "terminal_error": 8.314236765727401e-08
+    },
+    {
+      "column_score_max_error": 2.9043434324194095e-13,
+      "expected": {
+        "request_reward": 100.0,
+        "required_missing": 2,
+        "science": 5996.063016135226,
+        "total": 6095.833005278762,
+        "uniformity_penalty": 0.23001085646312536
+      },
+      "group": 36,
+      "official_total": 6095.833005,
+      "terminal_error": 2.7876194508280605e-07
+    }
+  ],
+  "seconds": 51.51468229200691,
+  "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cpu_calendar_witness_20261003/L1",
+  "source_sha256": {
+    "actions.jsonl": "65d839ed76b5ef698d605bd765b267707a1b44d8e57f2384232bc115c533f73b",
+    "decisions.csv": "10707327f2299a4b8e95b3f4f0ecec79b73157af2ac831a71bb72afa47c15222",
+    "messages.jsonl": "09f67fefb95052a9224916dacdba78d6c143cff7a03d028599e7b5bc48dda71f",
+    "observations.csv": "ef3e68352fe8d78d63389c616f6f6eb1388fab5b72242be9b3463def1187bb49",
+    "score_report.json": "148af229aacf1c93a0ee857739c56d3e52bafbc41ae8cdc24a9d10dd1097323b"
+  },
+  "source_total": 6096.185388,
+  "teacher_replay_total": 6096.185388
+}

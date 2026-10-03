@@ -1,0 +1,57 @@
+{
+  "card": "L1",
+  "mode": "phase_control",
+  "seconds": 304.8334005419165,
+  "total": 6206.367823,
+  "components": {
+    "sum_best_scores": 6106.651481,
+    "required_penalty": -100.0,
+    "uniformity_penalty": -0.283658,
+    "report_settlement": 100.0,
+    "observation_request_reward": 100.0
+  },
+  "counts": {
+    "decisions": 1579,
+    "observe_actions": 998,
+    "observations": 13529,
+    "targets_observed": 7643,
+    "required_missing": 2,
+    "invalidated_observations": 0,
+    "observation_requests_issued": 2,
+    "observation_requests_completed": 1
+  },
+  "termination": {
+    "reason": "survey_complete",
+    "detail": ""
+  },
+  "policy_summary": {
+    "decisions": 1086,
+    "exposures": 997,
+    "reports": 1,
+    "correct_reports": 1,
+    "best_science_sum": 6101.0621439999995,
+    "required_missing_bound": 2,
+    "planning_seconds": 280.75,
+    "C": 0.756,
+    "E": 0.9983,
+    "remote_check": null,
+    "remote_calls": 0,
+    "remote_seconds": 0,
+    "remote_budget": null
+  },
+  "source_sha256": {
+    "runs/cold_neural_value_20261003/production_frozen/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "runs/cold_neural_value_20261003/production_frozen/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "runs/cold_neural_value_20261003/production_frozen/research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "research/candidate_geometry_sweep.py": "0c5dff46519ff22d22bf25612658bd5f5a1761382535f15fd2d632c4d4079809",
+    "research/candidate_geometry_experiment.py": "a39dfd708f25c4e492ab98d24649e42b35970735241425801cf0b25f480fdd20"
+  },
+  "phase_summary": {
+    "choose_calls": 998,
+    "phase_calls": 998,
+    "phase_candidates": 12661371,
+    "phase_exact_evaluations": 15968,
+    "phase_emergency_count": 0,
+    "phase_improvements": 877
+  }
+}

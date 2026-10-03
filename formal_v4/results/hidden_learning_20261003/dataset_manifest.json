@@ -1,0 +1,61 @@
+{
+  "card_manifests": [
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/manifest_L1.json",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/manifest_L2.json",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/manifest_L3.json"
+  ],
+  "dataset_sha256": "74ee0c09793969b36cf5771f949f8d86b49ef4bb5f550b110744d974efcb96e7",
+  "features": [
+    "duration_fraction",
+    "log_duration",
+    "baseline_candidate_rate",
+    "assignment_fraction",
+    "predicted_science_gain",
+    "required_rescues",
+    "request_progress_value",
+    "uniformity_gain",
+    "mean_log_flux",
+    "min_log_flux",
+    "max_log_flux",
+    "mean_current_score_fraction",
+    "new_target_fraction",
+    "mean_current_factor_lower",
+    "mean_predicted_factor",
+    "saturated_fraction",
+    "required_fraction",
+    "mean_nights_remaining",
+    "min_nights_remaining",
+    "mean_hour_angle_fraction",
+    "max_hour_angle_fraction",
+    "mean_altitude",
+    "min_altitude",
+    "mean_public_quality_rate",
+    "global_required_missing_fraction",
+    "global_unfinished_fraction",
+    "season_time_remaining_fraction",
+    "quality_scale",
+    "band_quality_scale",
+    "program_dark",
+    "program_bright",
+    "program_backup",
+    "best_pool_rate",
+    "relative_pool_rate",
+    "baseline_duration_fraction"
+  ],
+  "inputs": "public protocol, public geometry and past policy feedback only",
+  "label": "y=(exact counterfactual terminal total - baseline terminal total)/candidate duration; raw delta=y*duration_seconds",
+  "labels_use_local_truth": true,
+  "limit": "fixed absolute continuation with overlapped actions removed; conditional teacher, not replanning effect",
+  "split": {
+    "heldout": [
+      "L4"
+    ],
+    "training": [
+      "L1",
+      "L2"
+    ],
+    "validation": [
+      "L3"
+    ]
+  }
+}

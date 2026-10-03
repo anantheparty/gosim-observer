@@ -1,0 +1,32 @@
+{
+  "mode": "baseline",
+  "card": "L4",
+  "seconds": 287.9768423328642,
+  "exit_code": 0,
+  "total": 5920.398486,
+  "components": {
+    "observation_request_reward": 200.0,
+    "report_settlement": 100.0,
+    "required_penalty": -0.0,
+    "sum_best_scores": 5622.326118,
+    "uniformity_penalty": -1.927632
+  },
+  "counts": {
+    "decisions": 1688,
+    "invalidated_observations": 385,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 12939,
+    "observe_actions": 958,
+    "required_missing": 0,
+    "targets_observed": 7999
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "source_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/hidden_learning_20261003/baseline_source_manifest.json",
+  "deterministic_candidate_enumeration": true,
+  "critic_margin": 0,
+  "paired_source_difference": "critic uses equivalent explicit einsum inference; baseline never calls model inference"
+}

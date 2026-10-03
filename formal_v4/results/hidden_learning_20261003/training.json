@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "seed": 261003,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "width": 64,
+  "steps": 6000,
+  "batch": 512,
+  "training_rows": 3776,
+  "validation_rows": 1792,
+  "training_states": 118,
+  "validation_states": 56,
+  "target_kind": "raw_terminal_delta",
+  "selection": "minimum L3 mean within-state terminal regret",
+  "L4_used_for_fit_or_selection": false,
+  "objective": "standardized raw delta Huber plus 0.25 within-state pair difference Huber",
+  "selected_checkpoint_step": 2000,
+  "history": [
+    {
+      "step": 1000,
+      "elapsed_seconds": 1.3043833000119776,
+      "CUDA_CPU_forward_max_error": 2.288818359375e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 12.520222046163067,
+        "median_terminal_regret": 1.0347144454717636,
+        "p90_terminal_regret": 10.50438016653061,
+        "optimal_state_fraction": 0.26785714285714285,
+        "selected_mean_terminal_delta": -12.484402163236934,
+        "raw_delta_MSE": 1435.933837890625
+      },
+      "selected_checkpoint_step": 1000
+    },
+    {
+      "step": 2000,
+      "elapsed_seconds": 1.8309695000061765,
+      "CUDA_CPU_forward_max_error": 2.288818359375e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 10.553631583212077,
+        "median_terminal_regret": 0.658294441178441,
+        "p90_terminal_regret": 9.7661771774292,
+        "optimal_state_fraction": 0.2857142857142857,
+        "selected_mean_terminal_delta": -10.517811700285945,
+        "raw_delta_MSE": 1341.6761474609375
+      },
+      "selected_checkpoint_step": 2000
+    },
+    {
+      "step": 3000,
+      "elapsed_seconds": 2.3847956999670714,
+      "CUDA_CPU_forward_max_error": 2.384185791015625e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 11.833289058829125,
+        "median_terminal_regret": 1.077135443687439,
+        "p90_terminal_regret": 9.899677753448486,
+        "optimal_state_fraction": 0.23214285714285715,
+        "selected_mean_terminal_delta": -11.797469175902993,
+        "raw_delta_MSE": 1371.545654296875
+      },
+      "selected_checkpoint_step": 2000
+    },
+    {
+      "step": 4000,
+      "elapsed_seconds": 2.9393454999662936,
+      "CUDA_CPU_forward_max_error": 3.147125244140625e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 12.057606315988648,
+        "median_terminal_regret": 1.0095600485801697,
+        "p90_terminal_regret": 9.899677753448486,
+        "optimal_state_fraction": 0.17857142857142858,
+        "selected_mean_terminal_delta": -12.021786433062516,
+        "raw_delta_MSE": 1481.536376953125
+      },
+      "selected_checkpoint_step": 2000
+    },
+    {
+      "step": 5000,
+      "elapsed_seconds": 3.5178822000161745,
+      "CUDA_CPU_forward_max_error": 3.24249267578125e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 12.160433142978166,
+        "median_terminal_regret": 1.3295709807425737,
+        "p90_terminal_regret": 10.348918855190277,
+        "optimal_state_fraction": 0.14285714285714285,
+        "selected_mean_terminal_delta": -12.124613260052033,
+        "raw_delta_MSE": 1559.2545166015625
+      },
+      "selected_checkpoint_step": 2000
+    },
+    {
+      "step": 6000,
+      "elapsed_seconds": 4.062817099969834,
+      "CUDA_CPU_forward_max_error": 3.4332275390625e-05,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 10.849633637832344,
+        "median_terminal_regret": 1.0095600485801697,
+        "p90_terminal_regret": 9.50617504119873,
+        "optimal_state_fraction": 0.17857142857142858,
+        "selected_mean_terminal_delta": -10.813813754906212,
+        "raw_delta_MSE": 1613.5748291015625
+      },
+      "selected_checkpoint_step": 2000
+    }
+  ],
+  "power_before": {
+    "returncode": 0,
+    "value": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 202.59 W, 600.00 W, 10726 MiB, 23 %"
+  },
+  "power_latest": {
+    "returncode": 0,
+    "value": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 225.73 W, 600.00 W, 10724 MiB, 62 %"
+  },
+  "elapsed_seconds": 4.124720599967986,
+  "dataset_sha256": "74ee0c09793969b36cf5771f949f8d86b49ef4bb5f550b110744d974efcb96e7",
+  "source_sha256": "a0ee94263f65d30b59e4e3381b076afbe37e159969078170778753c71d5f2481"
+}

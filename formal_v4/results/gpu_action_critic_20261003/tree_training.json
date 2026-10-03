@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "xgboost_version": "3.4.1",
+  "device": "cuda",
+  "target": "raw_terminal_delta",
+  "training_cards": [
+    "L1",
+    "L2"
+  ],
+  "selection_card": "L3",
+  "L4_used": false,
+  "declared_depths": [
+    2,
+    4,
+    6
+  ],
+  "rounds_each": 600,
+  "selected_depth": 6,
+  "history": [
+    {
+      "depth": 2,
+      "rounds": 600,
+      "seconds": 0.9056003000005148,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 9.215654035231896,
+        "selected_mean_delta": -9.179834152305764,
+        "delta_MSE": 1347.596923828125
+      },
+      "CPU_export_forward_max_error": 0.00016021728515625
+    },
+    {
+      "depth": 4,
+      "rounds": 600,
+      "seconds": 1.3226735000498593,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 9.622152871452272,
+        "selected_mean_delta": -9.58633298852614,
+        "delta_MSE": 1302.510986328125
+      },
+      "CPU_export_forward_max_error": 0.00017547607421875
+    },
+    {
+      "depth": 6,
+      "rounds": 600,
+      "seconds": 2.0861501999897882,
+      "validation": {
+        "states": 56,
+        "mean_terminal_regret": 6.23887807862567,
+        "selected_mean_delta": -6.203058195699539,
+        "delta_MSE": 1297.4967041015625
+      },
+      "CPU_export_forward_max_error": 9.1552734375e-05
+    }
+  ],
+  "zero_delta_teacher_comparator": {
+    "states": 56,
+    "mean_terminal_regret": 0.035819882926131995,
+    "selected_mean_delta": 0.0,
+    "delta_MSE": 2603.02897641606
+  },
+  "seconds": 4.363949800026603,
+  "dataset_sha256": "74ee0c09793969b36cf5771f949f8d86b49ef4bb5f550b110744d974efcb96e7",
+  "source_sha256": "e454bc3055942d0500d282902897899c22123963f695e2c659178b5e13baac2d",
+  "adoption_gate": "must beat actual public-policy baseline in complete heldout season; conditional metric alone insufficient"
+}

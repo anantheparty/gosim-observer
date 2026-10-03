@@ -1,0 +1,20 @@
+{
+  "status": "rejected_conditional_validation",
+  "reason": "GPU tree critic improves on MLP but loses to actual highest public utility candidate on L3",
+  "tree": {
+    "states": 56,
+    "mean_terminal_regret": 6.23887807862567,
+    "selected_mean_delta": -6.203058195699539,
+    "delta_MSE": 1297.4964599609375
+  },
+  "actual_public_utility_comparator": {
+    "states": 56,
+    "mean_terminal_regret": 4.853964000009,
+    "selected_mean_delta": -4.818144117082868
+  },
+  "L4_fitted_or_used_for_selection": false,
+  "full_season_test_performed": false,
+  "dataset_sha256": "74ee0c09793969b36cf5771f949f8d86b49ef4bb5f550b110744d974efcb96e7",
+  "model_sha256": "e256a76ff26db485aa7c3f7fbde7f1ca4ac884a410f2d4572c3b66faae34b026",
+  "scope": "fixed absolute continuation teacher, not online replanning; avoids using zero-label teacher action as actual inference baseline"
+}
