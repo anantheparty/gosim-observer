@@ -1,0 +1,97 @@
+{
+  "checks": {
+    "true_states_retained": 36,
+    "synthetic_cases": 36,
+    "single_E_upper": 1.0,
+    "pair_E_upper": 0.5538557692499999,
+    "different_slot_E_change_infeasible": true
+  },
+  "audits": [
+    {
+      "card": "L1",
+      "trace": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/global_field_20261004/v2/ready_phase_reference/L1",
+      "counts": {
+        "observe": 1003,
+        "clean_exposures": 246,
+        "joint_steps": 246,
+        "public_probe_eligible": 214,
+        "hypothetical_program_probes": 428,
+        "few_clean_hits_excluded": 110,
+        "cross_slot_excluded": 572,
+        "notice_excluded": 75,
+        "clean_slots": 131,
+        "probe_new_witnesses": 0,
+        "probe_fault_witnesses": 0,
+        "clean_active_fault_steps": 0,
+        "natural_future_band_reductions_at_H_.95": 0,
+        "infeasible_joint_steps": 0,
+        "truth_CE_excluded": 0,
+        "truth_C_excluded": 0
+      },
+      "new_joint_witnesses": [],
+      "hypothetical_probe_witnesses": [],
+      "active_fault_clean_steps": [],
+      "natural_band_reductions": []
+    },
+    {
+      "card": "L2",
+      "trace": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/objective_graph_20261004/program_pair/control/L2",
+      "counts": {
+        "observe": 1096,
+        "few_clean_hits_excluded": 118,
+        "cross_slot_excluded": 686,
+        "clean_exposures": 165,
+        "joint_steps": 165,
+        "public_probe_eligible": 144,
+        "hypothetical_program_probes": 288,
+        "natural_multiprogram_steps": 8,
+        "notice_excluded": 127,
+        "clean_slots": 101,
+        "probe_new_witnesses": 0,
+        "probe_fault_witnesses": 0,
+        "clean_active_fault_steps": 1,
+        "natural_future_band_reductions_at_H_.95": 2,
+        "infeasible_joint_steps": 0,
+        "truth_CE_excluded": 0,
+        "truth_C_excluded": 0
+      },
+      "new_joint_witnesses": [],
+      "hypothetical_probe_witnesses": [],
+      "active_fault_clean_steps": [
+        {
+          "slot": "N20261120-S026",
+          "observe_index": 529,
+          "E_true": 0.454492,
+          "E_upper": 0.45486848836562915,
+          "programs": [
+            "DARK"
+          ]
+        }
+      ],
+      "natural_band_reductions": [
+        {
+          "slot": "N20261115-S031",
+          "observe_index": 324,
+          "single_bands_at_H_.95": [
+            "BRIGHT",
+            "DARK"
+          ],
+          "joint_bands_at_H_.95": [
+            "BRIGHT"
+          ]
+        },
+        {
+          "slot": "N20261116-S009",
+          "observe_index": 351,
+          "single_bands_at_H_.95": [
+            "BRIGHT",
+            "DARK"
+          ],
+          "joint_bands_at_H_.95": [
+            "BRIGHT"
+          ]
+        }
+      ]
+    }
+  ]
+}
