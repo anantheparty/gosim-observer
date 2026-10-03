@@ -1,0 +1,31 @@
+{
+  "public_input_hashes": {
+    "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+    "public/footprint.csv": "6f62b8733c3d0a405bde82a131110b28b383f01f91bac6e6324fb3f0661b8882"
+  },
+  "first_old_new_action_difference": 24,
+  "same_prefix_observations": 351,
+  "same_prefix_decisions": 24,
+  "same_prefix_messages": 9,
+  "observation_row_order_identical": true,
+  "official_hits_scores_rounded_6": true,
+  "snapshot_reconstruction_scope": "all-observe first24; no activeREQ/report/resync/expandedwait; running_total unused by Policy omitted; wallclock controlled",
+  "schema": "owned-phase-prefix-hashseed-audit-v1",
+  "seeds": [
+    "0",
+    "1",
+    "2",
+    "17"
+  ],
+  "same_state_hashes_across_seeds": true,
+  "same_env_hashes_across_seeds": true,
+  "same_actions_across_seeds": true,
+  "same_exact_candidate_hashes_across_seeds": true,
+  "same_coarse_hashes_across_seeds": true,
+  "new_online_evaluation": false,
+  "production_or_package_changes": false
+}

@@ -1,0 +1,100 @@
+{
+  "initialize_sha256": "0b793b93d43b3da3ab93b5540da656c9e5a5bfae5d4e4b5056d80276d38ec240",
+  "catalog_rows": 10000,
+  "catalog_column_types": {
+    "target_id": [
+      "str"
+    ],
+    "ra_deg": [
+      "float"
+    ],
+    "dec_deg": [
+      "float"
+    ],
+    "target_class": [
+      "str"
+    ],
+    "feature_flux": [
+      "float"
+    ],
+    "science_weight": [
+      "float"
+    ],
+    "required": [
+      "bool"
+    ]
+  },
+  "schema": "v4-initialize-v1",
+  "task_card": {
+    "card_id": "alpha",
+    "scenario_slug": "v4-practice-alpha",
+    "phase": "practice-projects"
+  },
+  "instrument": {
+    "fiber_area_deg2": 0.4,
+    "gap_deg": 0.0,
+    "n_fibers": 16,
+    "grid_side": 4,
+    "glass_side_deg": 0.632456,
+    "pitch_deg": 0.632456,
+    "fov_side_deg": 2.529822,
+    "layout": "row-major, fiber 0 bottom-left; rows along +alt, columns along +az at exposure start; gnomonic plane centred on the actual pointing",
+    "exposure": {
+      "min_duration_seconds": 60,
+      "max_duration_seconds": 3600
+    }
+  },
+  "site": {
+    "name": "Paranal, Chile (virtual)",
+    "latitude_deg": -24.6157,
+    "longitude_deg": -70.3976,
+    "utc_offset_hours": -4.0,
+    "sun_altitude_limit_deg": -18.0,
+    "minimum_altitude_deg": 30.0
+  },
+  "scoring": {
+    "schema_version": "v4-score-v1",
+    "q0": 0.68,
+    "flux_zero_point": 0.5,
+    "exposure_zero_point_seconds": 900,
+    "airmass_exponent": 0.6,
+    "lunar_model": {
+      "angular_decay_scale_deg": 35.0,
+      "altitude_exponent": 1.0,
+      "maximum_penalty": 0.75
+    },
+    "program": {
+      "bands": {
+        "DARK": 0.65,
+        "BRIGHT": 0.4
+      },
+      "multipliers": {
+        "DARK": 1.2,
+        "BRIGHT": 1.12,
+        "BACKUP": 1.06
+      },
+      "mismatch_multiplier": 1.0
+    },
+    "required": {
+      "penalty_per_missing": 50,
+      "observed_factor_threshold": 0.5
+    },
+    "uniformity": {
+      "weight": 200.0,
+      "ra_band_width_deg": 10.0,
+      "observed_factor_threshold": 0.5
+    },
+    "reporting": {
+      "correct_reward": 100,
+      "false_penalty": -150,
+      "false_report_free_allowance": 2,
+      "max_consecutive_reports": 32
+    },
+    "observation_requests": {
+      "completion_factor_threshold": 0.5,
+      "miss_penalty": 0
+    }
+  },
+  "survey_nights": 38,
+  "source_scope": "six public files only; actual old online initialize JSON was not archived, cannot directly compare old runtime payload byte/type inventory"
+}
