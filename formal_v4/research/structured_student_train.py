@@ -306,6 +306,19 @@ def validation_calibration(groups,predictions,coverage=.95):
                 note="Validation uses the same card/realized world, so exchangeability and policy-wide calibration are unproved; full official policy gates still required.")
 
 
+def decision_selection_key(metrics):
+    """Fixed candidate-set regret first; numerical error only breaks ties.
+
+    Mean regret equals a checkpoint-independent oracle return minus selected
+    return. This selects decisions, rather than improving unused bad actions.
+    It remains a realized single-state teacher metric, not a season score.
+    """
+    key=(float(metrics["teacher_regret_mean"]),float(metrics["raw_advantage_mae"]))
+    if not np.isfinite(key).all():
+        raise SchemaError("Non-finite validation decision-selection criterion")
+    return key
+
+
 def train(args):
     if torch is None:
         raise RuntimeError("Training requires Torch; NumPy runtime/feature audits do not")
@@ -334,7 +347,7 @@ def train(args):
     raw_values=np.concatenate([g["labels"][:,0] for g in fitting])
     # One common unit scale preserves relative raw component magnitudes and score deltas.
     scale=max(float(np.median(np.abs(raw_values[np.abs(raw_values)>1e-6]))) if np.any(np.abs(raw_values)>1e-6) else 1.,1.)
-    best,best_epoch,best_state=float("inf"),0,None
+    best,best_epoch,best_state=(float("inf"),float("inf")),0,None
     history=[]
     for epoch in range(1,args.epochs+1):
         model.train()
@@ -354,8 +367,9 @@ def train(args):
         predictions=[_predict(model,g,normalizer,scale) for g in validation]
         metrics=group_metrics(validation,[p[:,0] for p in predictions])
         # Predeclared selection criterion, no L4 access or score-chasing selection.
-        criterion=metrics["raw_advantage_mae"]
-        history.append(dict(epoch=epoch,groupwise_train_loss=loss_total,validation=metrics))
+        criterion=decision_selection_key(metrics)
+        history.append(dict(epoch=epoch,groupwise_train_loss=loss_total,validation=metrics,
+                            decision_selection_key=criterion))
         if criterion<best:
             best,best_epoch,best_state=criterion,epoch,copy.deepcopy(model.state_dict())
         if epoch-best_epoch>=args.patience:
@@ -374,6 +388,8 @@ def train(args):
                 broad_claim_minimum_training_states=256,broad_claim_minimum_met=len(fitting)>=256,
                 training_cards=["L1","L2"],validation_card="L3",untouched_test_card="L4",model=args.model,
                 parameters=sum(p.numel() for p in model.parameters()),best_epoch=best_epoch,output_scale=scale,
+                checkpoint_selection=dict(primary="validation teacher_regret_mean",tie_break="validation raw_advantage_mae",
+                    scope="Same fixed candidate sets; realized single-state teacher returns, not deployed whole-season value"),
                 baseline_comparisons=comparisons,calibration=calibration,history=history,
                 effective_independent_unit="whole state group; within-card futures are also dependent",
                 full_season_policy_score_evaluated=False,per_target_auxiliary_training=False,

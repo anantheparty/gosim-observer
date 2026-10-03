@@ -1,0 +1,31 @@
+{
+  "schema": "decision-selection-amendment-check-v1",
+  "pre_amendment_trainer_sha256": "039bedbfb43125abfdd917d3bb390356f0e813c18b21642589b017247e9e318e",
+  "pre_amendment_git_commit": "6297073031fd219a786f28a17210859598ef99b2",
+  "amended_trainer_sha256": "933e40c2e5399067f34a7d9ff67c7e8d0d3d28a852f1a4ba68c84b6f11249585",
+  "unchanged_existing_functions_except_train": [
+    "_unique_object",
+    "_read_json",
+    "_finite_number",
+    "_candidate_contract",
+    "_availability_contract",
+    "card_split",
+    "resolve",
+    "accepted_groups",
+    "pair_loss",
+    "_predict",
+    "_baseline_scores",
+    "group_metrics",
+    "fit_pair_ridge",
+    "validation_calibration",
+    "main"
+  ],
+  "unchanged_cuda_module_count": 4,
+  "decision_counterexample_chooses_higher_return": true,
+  "new_validation_criterion": [
+    "teacher_regret_mean",
+    "raw_advantage_mae"
+  ],
+  "actual_bulk_label_files_read": 0,
+  "actual_training_started": false
+}

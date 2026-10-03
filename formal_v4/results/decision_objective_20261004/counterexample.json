@@ -1,0 +1,58 @@
+{
+  "schema": "synthetic-decision-objective-counterexample-v1",
+  "labels": [
+    0.0,
+    -100.0,
+    1.0
+  ],
+  "predictions": {
+    "smaller_MAE": [
+      0,
+      -99,
+      -1
+    ],
+    "better_decision": [
+      0,
+      -95,
+      1
+    ]
+  },
+  "metrics": {
+    "smaller_MAE": {
+      "groups": 1,
+      "selected_teacher_advantage_mean": 0.0,
+      "selected_teacher_advantage_sum": 0.0,
+      "teacher_regret_mean": 1.0,
+      "teacher_regret_max": 1.0,
+      "best_candidate_fraction": 0.0,
+      "raw_advantage_mae": 1.0,
+      "scores_in_raw_teacher_return_units": true,
+      "pair_sign_accuracy": 0.6666666666666666,
+      "candidate_positive": 1,
+      "candidate_negative": 1,
+      "candidate_tie": 0,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    },
+    "better_decision": {
+      "groups": 1,
+      "selected_teacher_advantage_mean": 1.0,
+      "selected_teacher_advantage_sum": 1.0,
+      "teacher_regret_mean": 0.0,
+      "teacher_regret_max": 0.0,
+      "best_candidate_fraction": 1.0,
+      "raw_advantage_mae": 1.6666666666666667,
+      "scores_in_raw_teacher_return_units": true,
+      "pair_sign_accuracy": 1.0,
+      "candidate_positive": 1,
+      "candidate_negative": 1,
+      "candidate_tie": 0,
+      "note": "Single-state candidate teacher-return metrics; not a deployed whole-season score."
+    }
+  },
+  "actual_teacher_label_files_read": 0,
+  "training_executed": false,
+  "deployment_score_claim": false,
+  "scope": "Synthetic single-state selection; no causal-world expectation or whole-season claim",
+  "source_sha256": "11e85f80a59ec8e079b3a9e088de35a644c197fda8e7d3fd60453ca31260567c",
+  "trainer_sha256": "039bedbfb43125abfdd917d3bb390356f0e813c18b21642589b017247e9e318e"
+}
