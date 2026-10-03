@@ -1,0 +1,190 @@
+{
+  "schema": "frozen-request-exact-cache-package-gates-v1",
+  "status": "READY_NOT_UPLOADED_OR_SCORED",
+  "zip": {
+    "file": "/Users/kamico/Downloads/observer_request_exact_cache.zip",
+    "sha256": "e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a",
+    "source_fingerprint": "7bdc340f6247fc0ce961d68c395eded9d88908db34713493120c231d3ef4b81a",
+    "bytes": 70947,
+    "files": 29
+  },
+  "frozen_source_zip_sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+  "all_original_algorithms_and_policy_config_bytes_preserved": true,
+  "preserved_files": [
+    "agent.py",
+    "policy.py",
+    "requirements.txt",
+    "remote_planner.py",
+    "research/geometry.py",
+    "research/feedback_model.py",
+    "research/spatial_candidates.py",
+    "research/belief_clock.py",
+    "research/efficiency_bounds.py",
+    "research/remote_budget.py",
+    "research/pointing_calibration.py",
+    "ATTRIBUTION.md",
+    "research/cpu_phase_candidates.py",
+    "research/agent_model_gpu.py",
+    "research/model_gpu_transport.py",
+    "research/agent_request_distributed.py",
+    "research/request_remote_planner.py",
+    "research/request_deadline_common.py",
+    "research/request_mask_dp.py",
+    "research/request_future_field.py",
+    "research/terrain_policy.py",
+    "research/terrain_version_space.py",
+    "policy_config.json"
+  ],
+  "algorithm_parameters_changed": false,
+  "private_runtime_token_matches": 0,
+  "hidden_or_server_files": 0,
+  "network_calls_or_injected_credential_reads": 0,
+  "JSONL_gates": [
+    {
+      "card": "alpha",
+      "injected_environment": "missing",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.39781875000335276,
+      "action_sha256": "8957bb195862cbdaecf6e98c884fee87406bbd13d462f3578a9b929f6df1cea1"
+    },
+    {
+      "card": "beta",
+      "injected_environment": "missing",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.32738308305852115,
+      "action_sha256": "3130582fe4fe072db48bd2e0b7707239b61e51954fed11e6fcb0abffe6a824b4"
+    },
+    {
+      "card": "gamma",
+      "injected_environment": "missing",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.3504231250844896,
+      "action_sha256": "a83beff00a84209a5abdd7870b5c3b139d63d5ff3a596f5391728ae94cfa8273"
+    },
+    {
+      "card": "delta",
+      "injected_environment": "missing",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.32499766699038446,
+      "action_sha256": "1cee70116d3f31262c99482cb6b8cbe1af677ec1d90cf47bbc8d77bbbbe370bd"
+    },
+    {
+      "card": "alpha",
+      "injected_environment": "dummy",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.34715779195539653,
+      "action_sha256": "8957bb195862cbdaecf6e98c884fee87406bbd13d462f3578a9b929f6df1cea1"
+    },
+    {
+      "card": "beta",
+      "injected_environment": "dummy",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.3222554160747677,
+      "action_sha256": "3130582fe4fe072db48bd2e0b7707239b61e51954fed11e6fcb0abffe6a824b4"
+    },
+    {
+      "card": "gamma",
+      "injected_environment": "dummy",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.34045162494294345,
+      "action_sha256": "a83beff00a84209a5abdd7870b5c3b139d63d5ff3a596f5391728ae94cfa8273"
+    },
+    {
+      "card": "delta",
+      "injected_environment": "dummy",
+      "strict_JSONL_initialize_choose_finish": true,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "network_or_credential_attempts": 0,
+      "seconds": 0.3249513751361519,
+      "action_sha256": "1cee70116d3f31262c99482cb6b8cbe1af677ec1d90cf47bbc8d77bbbbe370bd"
+    }
+  ],
+  "full_window_actual_wrapper_gate": {
+    "gate": "actual-wrapper-complete-published-REQ",
+    "planner_class": "ExactCachedRequestRemotePlanner",
+    "card": "delta",
+    "request_id": "V4RQ0002",
+    "columns": 453,
+    "all_columns_bitwise_equal": true,
+    "DP_bitwise_equal": true,
+    "all_selected_actions_bitwise_equal": true,
+    "selected_actions": 6,
+    "pool_sha256": "e06f01083c49e05e70c8b9431c3f99ccf20af743a75b5293063148456f7fc68f",
+    "baseline_seconds": 13.500989709049463,
+    "cached_seconds": 8.632731958990917,
+    "remote_calls": 0,
+    "cache_stats": {
+      "midpoint_hits": 7099,
+      "midpoint_misses": 2602,
+      "midpoint_peak_bytes": 6316800
+    },
+    "public_input_hashes": {
+      "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+      "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+      "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+      "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+      "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+    }
+  },
+  "all_cards_use_request_route": true,
+  "score_measured": false,
+  "scope": {
+    "UI_operations": 0,
+    "submission_operations": 0,
+    "deployment_operations": 0,
+    "git_index_mutations": 0
+  },
+  "source_sha256": {
+    "pack_request_exact_cache.py": "e1f779a41a2593159f4879deacf6d12207f707de62f57470f9129532dcce2741",
+    "research/agent_request_exact_cache.py": "751d9a3222e352dddd09921ced88686d44b8b0a567026157383887b38dc351c9",
+    "research/request_exact_cache.py": "dee600f6b2dabc1d7b89e8035dbf1c287f1b11a4717ccc3cc8b2360aeb6ed3ec",
+    "research/request_exact_cache_package_checks.py": "09d04863d7c1c3bdfa5f2d2ce79472244fb00479e6ba7c71d02a30779eea1a9e"
+  }
+}

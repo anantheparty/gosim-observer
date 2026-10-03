@@ -1,0 +1,120 @@
+{
+  "card": "alpha",
+  "baseline_source": "formal_v4/results/cloud_phase_gpu_alpha_20261003",
+  "baseline_official_total": 7289.494481,
+  "baseline_reconstructed": {
+    "total_conditional_conservative": 7289.494439125726,
+    "science": 7239.8303929997555,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1184
+  },
+  "baseline_rounding_error_bound": 0.004799501,
+  "historical_columns": 1184,
+  "conditional_new_column_gate": {
+    "enabled": true,
+    "new_columns": 192,
+    "official_fiber_checks": 2523,
+    "official_whole_visibility_checks": 2523,
+    "candidate_rejected_repair_gap": 0,
+    "candidate_rejected_unsupported_cell": 0,
+    "no_hidden_weather_offset_certificate": true,
+    "quality_gate_required": true,
+    "prior_conditional_profile_measured_gate_passed": true,
+    "mapped_narrow_supported_new_cells": 462,
+    "coupon_source_sha256": "b6dd1a74ecfb7ca3c1f3f3c30e16c8ede336dd1ccbdc4d93520224f3ed9c05c8"
+  },
+  "profile_cross_validation_sha256": "0a14928ab27817cea189f441369a18ae1e3491eb29e2f0bc1cf5ac5066fa3dd9",
+  "finite_optimistic_lp_upper_without_uniformity": 7373.168525333393,
+  "dual_audit": {
+    "lp_objective_without_constants": 32273.168525333393,
+    "seconds": 1.1954207080416381,
+    "max_stationarity_residual": 1.6537882174816332e-12,
+    "dual_primal_objective_residual": 5.093170329928398e-11,
+    "max_inequality_marginal": -0.0,
+    "redundant_flow_and_winner_upper_bounds_removed": true,
+    "existing_columns": 1376,
+    "existing_nonbasic": 200,
+    "existing_nonbasic_max_reduced_profit": 7.105427357601002e-15,
+    "existing_unfixed_max_reduced_profit": 7.109868249699502e-13
+  },
+  "mip_status": 0,
+  "mip_gap": 0.0,
+  "mip_stats": {
+    "variables": 21608,
+    "rows": 29828,
+    "nonzeros": 62140,
+    "time_nodes": 1266,
+    "seconds": 0.07555629196576774,
+    "mode": "lower"
+  },
+  "proposed_settlement_with_actual_Jain": {
+    "total_conditional_conservative": 7289.494439125727,
+    "science": 7239.830392999756,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1156
+  },
+  "proposed_new_column_indices": [],
+  "incumbent_kept": true,
+  "retained_settlement": {
+    "total_conditional_conservative": 7289.494439125726,
+    "science": 7239.8303929997555,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1184
+  },
+  "fixed_report_times_utc": [
+    "2026-10-30T01:54:35Z"
+  ],
+  "fixed_successful_repair_times_utc": [
+    "2026-10-30T01:54:35Z"
+  ],
+  "uniformity_in_MIP_objective": false,
+  "uniformity_recomputed_after_MIP": true,
+  "new_official_replay_performed": false,
+  "hidden_inputs_read": false,
+  "global_upper_bound_available": false,
+  "conditional_program_lower_assumption": "clean reference geometry, effective E<=1; DARK band if lower effective quality>=dark threshold, otherwise mismatch multiplier=1",
+  "public_sources_sha256": {
+    "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+    "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+    "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+    "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c"
+  },
+  "profile_sha256": "f85b31a62c0e2dd1ed0510b752ae67eb5663144f0a0feb0bda5925a6f574f51b",
+  "source_sha256": "0e7e66452de114ff7a8aaa28bfafdcc6e9423783150193faf6794b580b7852f4",
+  "column_pool_sha256": "21bc59a47930643499c7dec957218097187ca0db15754499af3af1d229cf5b5d",
+  "elapsed_seconds": 4.93361487518996
+}
