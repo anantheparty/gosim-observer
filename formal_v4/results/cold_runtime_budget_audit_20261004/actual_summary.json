@@ -1,0 +1,1680 @@
+{
+  "alpha": {
+    "file_hashes_verified": {
+      "actions.jsonl": true,
+      "agent.log": true,
+      "decisions.csv": true,
+      "messages.jsonl": true,
+      "observations.csv": true,
+      "score_report.json": true,
+      "workflow_result.json": true
+    },
+    "workflow": {
+      "accounted_wallclock_seconds": 900.0,
+      "agent_wallclock_seconds": 883.717,
+      "committed_action_count": 1848,
+      "decision_requests": 1289,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": true,
+      "last_decision_sequence": 1289,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-alpha",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "global_wallclock_expired"
+    },
+    "total": 7248.868252,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 7149.11784,
+      "uniformity_penalty": -0.249588
+    },
+    "counts": {
+      "decisions": 1848,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 15927,
+      "observe_actions": 1152,
+      "required_missing": 4,
+      "targets_observed": 9538
+    },
+    "protocol_action_counts": {
+      "observe": 1152,
+      "wait": 135,
+      "report": 1
+    },
+    "decision_row_counts": {
+      "observe": 1152,
+      "wait": 695,
+      "report": 1
+    },
+    "message_counts": {
+      "bulletin": 1232,
+      "forecast": 6,
+      "observation_request": 2,
+      "observation_request_result": 2,
+      "report_result": 1
+    },
+    "nights": 38,
+    "observing_seconds": 1126800.0,
+    "remaining_observing_seconds": 18543.0,
+    "last_simulated_utc": "2026-11-11T03:05:57Z",
+    "progress_fraction": 0.9835436634717785,
+    "agent_seconds_per_request_mean": 0.6855833979829324,
+    "platform_overhead_seconds": 16.283000000000015,
+    "finish_summary": null,
+    "per_night": [
+      {
+        "night_id": "N20261004",
+        "actions_recorded": 107,
+        "observes": 95,
+        "exposure_seconds": 24469.0,
+        "mean_exposure_seconds": 257.5684210526316,
+        "end_utc": "2026-10-05T09:00:00Z"
+      },
+      {
+        "night_id": "N20261005",
+        "actions_recorded": 61,
+        "observes": 59,
+        "exposure_seconds": 31469.0,
+        "mean_exposure_seconds": 533.3728813559322,
+        "end_utc": "2026-10-06T08:45:00Z"
+      },
+      {
+        "night_id": "N20261006",
+        "actions_recorded": 47,
+        "observes": 46,
+        "exposure_seconds": 30572.0,
+        "mean_exposure_seconds": 664.6086956521739,
+        "end_utc": "2026-10-07T08:45:00Z"
+      },
+      {
+        "night_id": "N20261007",
+        "actions_recorded": 42,
+        "observes": 35,
+        "exposure_seconds": 27269.0,
+        "mean_exposure_seconds": 779.1142857142858,
+        "end_utc": "2026-10-08T08:45:00Z"
+      },
+      {
+        "night_id": "N20261008",
+        "actions_recorded": 36,
+        "observes": 35,
+        "exposure_seconds": 30572.0,
+        "mean_exposure_seconds": 873.4857142857143,
+        "end_utc": "2026-10-09T08:45:00Z"
+      },
+      {
+        "night_id": "N20261009",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 30570.0,
+        "mean_exposure_seconds": 1329.1304347826087,
+        "end_utc": "2026-10-10T08:45:00Z"
+      },
+      {
+        "night_id": "N20261010",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 30578.0,
+        "mean_exposure_seconds": 1329.4782608695652,
+        "end_utc": "2026-10-11T08:45:00Z"
+      },
+      {
+        "night_id": "N20261011",
+        "actions_recorded": 52,
+        "observes": 51,
+        "exposure_seconds": 30598.0,
+        "mean_exposure_seconds": 599.9607843137255,
+        "end_utc": "2026-10-12T08:45:00Z"
+      },
+      {
+        "night_id": "N20261012",
+        "actions_recorded": 17,
+        "observes": 16,
+        "exposure_seconds": 30357.0,
+        "mean_exposure_seconds": 1897.3125,
+        "end_utc": "2026-10-13T08:45:00Z"
+      },
+      {
+        "night_id": "N20261013",
+        "actions_recorded": 76,
+        "observes": 74,
+        "exposure_seconds": 29985.0,
+        "mean_exposure_seconds": 405.2027027027027,
+        "end_utc": "2026-10-14T08:45:00Z"
+      },
+      {
+        "night_id": "N20261014",
+        "actions_recorded": 61,
+        "observes": 61,
+        "exposure_seconds": 30600.0,
+        "mean_exposure_seconds": 501.6393442622951,
+        "end_utc": "2026-10-15T08:45:00Z"
+      },
+      {
+        "night_id": "N20261015",
+        "actions_recorded": 47,
+        "observes": 46,
+        "exposure_seconds": 30579.0,
+        "mean_exposure_seconds": 664.7608695652174,
+        "end_utc": "2026-10-16T08:45:00Z"
+      },
+      {
+        "night_id": "N20261016",
+        "actions_recorded": 39,
+        "observes": 19,
+        "exposure_seconds": 12672.0,
+        "mean_exposure_seconds": 666.9473684210526,
+        "end_utc": "2026-10-17T08:45:00Z"
+      },
+      {
+        "night_id": "N20261017",
+        "actions_recorded": 28,
+        "observes": 21,
+        "exposure_seconds": 24300.0,
+        "mean_exposure_seconds": 1157.142857142857,
+        "end_utc": "2026-10-18T08:45:00Z"
+      },
+      {
+        "night_id": "N20261018",
+        "actions_recorded": 57,
+        "observes": 57,
+        "exposure_seconds": 30600.0,
+        "mean_exposure_seconds": 536.8421052631579,
+        "end_utc": "2026-10-19T08:45:00Z"
+      },
+      {
+        "night_id": "N20261019",
+        "actions_recorded": 43,
+        "observes": 42,
+        "exposure_seconds": 29662.0,
+        "mean_exposure_seconds": 706.2380952380952,
+        "end_utc": "2026-10-20T08:30:00Z"
+      },
+      {
+        "night_id": "N20261020",
+        "actions_recorded": 40,
+        "observes": 34,
+        "exposure_seconds": 27464.0,
+        "mean_exposure_seconds": 807.7647058823529,
+        "end_utc": "2026-10-21T08:30:00Z"
+      },
+      {
+        "night_id": "N20261021",
+        "actions_recorded": 30,
+        "observes": 22,
+        "exposure_seconds": 23322.0,
+        "mean_exposure_seconds": 1060.090909090909,
+        "end_utc": "2026-10-22T08:30:00Z"
+      },
+      {
+        "night_id": "N20261022",
+        "actions_recorded": 26,
+        "observes": 25,
+        "exposure_seconds": 29051.0,
+        "mean_exposure_seconds": 1162.04,
+        "end_utc": "2026-10-23T08:30:00Z"
+      },
+      {
+        "night_id": "N20261023",
+        "actions_recorded": 25,
+        "observes": 24,
+        "exposure_seconds": 29658.0,
+        "mean_exposure_seconds": 1235.75,
+        "end_utc": "2026-10-24T08:30:00Z"
+      },
+      {
+        "night_id": "N20261024",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 1747.0588235294117,
+        "end_utc": "2026-10-25T08:30:00Z"
+      },
+      {
+        "night_id": "N20261025",
+        "actions_recorded": 14,
+        "observes": 13,
+        "exposure_seconds": 29690.0,
+        "mean_exposure_seconds": 2283.846153846154,
+        "end_utc": "2026-10-26T08:30:00Z"
+      },
+      {
+        "night_id": "N20261026",
+        "actions_recorded": 16,
+        "observes": 16,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 1856.25,
+        "end_utc": "2026-10-27T08:30:00Z"
+      },
+      {
+        "night_id": "N20261027",
+        "actions_recorded": 22,
+        "observes": 22,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 1350.0,
+        "end_utc": "2026-10-28T08:30:00Z"
+      },
+      {
+        "night_id": "N20261028",
+        "actions_recorded": 26,
+        "observes": 10,
+        "exposure_seconds": 15954.0,
+        "mean_exposure_seconds": 1595.4,
+        "end_utc": "2026-10-29T08:30:00Z"
+      },
+      {
+        "night_id": "N20261029",
+        "actions_recorded": 29,
+        "observes": 27,
+        "exposure_seconds": 28798.0,
+        "mean_exposure_seconds": 1066.5925925925926,
+        "end_utc": "2026-10-30T08:30:00Z"
+      },
+      {
+        "night_id": "N20261030",
+        "actions_recorded": 26,
+        "observes": 26,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1107.6923076923076,
+        "end_utc": "2026-10-31T08:30:00Z"
+      },
+      {
+        "night_id": "N20261031",
+        "actions_recorded": 20,
+        "observes": 19,
+        "exposure_seconds": 28762.0,
+        "mean_exposure_seconds": 1513.7894736842106,
+        "end_utc": "2026-11-01T08:30:00Z"
+      },
+      {
+        "night_id": "N20261101",
+        "actions_recorded": 20,
+        "observes": 20,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1440.0,
+        "end_utc": "2026-11-02T08:30:00Z"
+      },
+      {
+        "night_id": "N20261102",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1694.1176470588234,
+        "end_utc": "2026-11-03T08:30:00Z"
+      },
+      {
+        "night_id": "N20261103",
+        "actions_recorded": 15,
+        "observes": 14,
+        "exposure_seconds": 28752.0,
+        "mean_exposure_seconds": 2053.714285714286,
+        "end_utc": "2026-11-04T08:30:00Z"
+      },
+      {
+        "night_id": "N20261104",
+        "actions_recorded": 21,
+        "observes": 20,
+        "exposure_seconds": 27887.0,
+        "mean_exposure_seconds": 1394.35,
+        "end_utc": "2026-11-05T08:15:00Z"
+      },
+      {
+        "night_id": "N20261105",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 27899.0,
+        "mean_exposure_seconds": 1213.0,
+        "end_utc": "2026-11-06T08:15:00Z"
+      },
+      {
+        "night_id": "N20261106",
+        "actions_recorded": 19,
+        "observes": 19,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1468.421052631579,
+        "end_utc": "2026-11-07T08:15:00Z"
+      },
+      {
+        "night_id": "N20261107",
+        "actions_recorded": 23,
+        "observes": 23,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1213.0434782608695,
+        "end_utc": "2026-11-08T08:15:00Z"
+      },
+      {
+        "night_id": "N20261108",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 27840.0,
+        "mean_exposure_seconds": 1210.4347826086957,
+        "end_utc": "2026-11-09T08:15:00Z"
+      },
+      {
+        "night_id": "N20261109",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 27376.0,
+        "mean_exposure_seconds": 1190.2608695652175,
+        "end_utc": "2026-11-10T08:15:00Z"
+      },
+      {
+        "night_id": "N20261110",
+        "actions_recorded": 12,
+        "observes": 12,
+        "exposure_seconds": 9357.0,
+        "mean_exposure_seconds": 779.75,
+        "end_utc": "2026-11-11T03:05:57Z"
+      }
+    ],
+    "per_step_elapsed_present": false
+  },
+  "beta": {
+    "file_hashes_verified": {
+      "actions.jsonl": true,
+      "agent.log": true,
+      "decisions.csv": true,
+      "messages.jsonl": true,
+      "observations.csv": true,
+      "score_report.json": true,
+      "workflow_result.json": true
+    },
+    "workflow": {
+      "accounted_wallclock_seconds": 899.991,
+      "agent_wallclock_seconds": 883.168,
+      "committed_action_count": 1829,
+      "decision_requests": 1255,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": true,
+      "last_decision_sequence": 1255,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-beta",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "global_wallclock_expired"
+    },
+    "total": 6517.86414,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -550.0,
+      "sum_best_scores": 6768.101649,
+      "uniformity_penalty": -0.237508
+    },
+    "counts": {
+      "decisions": 1829,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 15579,
+      "observe_actions": 1120,
+      "required_missing": 11,
+      "targets_observed": 9187
+    },
+    "protocol_action_counts": {
+      "observe": 1120,
+      "wait": 133,
+      "report": 1
+    },
+    "decision_row_counts": {
+      "observe": 1120,
+      "wait": 708,
+      "report": 1
+    },
+    "message_counts": {
+      "bulletin": 1178,
+      "forecast": 6,
+      "observation_request": 2,
+      "observation_request_result": 2,
+      "report_result": 1
+    },
+    "nights": 38,
+    "observing_seconds": 1078200.0,
+    "remaining_observing_seconds": 18633.0,
+    "last_simulated_utc": "2026-11-25T03:04:27Z",
+    "progress_fraction": 0.9827184195882026,
+    "agent_seconds_per_request_mean": 0.7037195219123507,
+    "platform_overhead_seconds": 16.82299999999998,
+    "finish_summary": null,
+    "per_night": [
+      {
+        "night_id": "N20261018",
+        "actions_recorded": 110,
+        "observes": 100,
+        "exposure_seconds": 25351.0,
+        "mean_exposure_seconds": 253.51,
+        "end_utc": "2026-10-19T08:45:00Z"
+      },
+      {
+        "night_id": "N20261019",
+        "actions_recorded": 52,
+        "observes": 49,
+        "exposure_seconds": 29228.0,
+        "mean_exposure_seconds": 596.4897959183673,
+        "end_utc": "2026-10-20T08:30:00Z"
+      },
+      {
+        "night_id": "N20261020",
+        "actions_recorded": 48,
+        "observes": 43,
+        "exposure_seconds": 28668.0,
+        "mean_exposure_seconds": 666.6976744186046,
+        "end_utc": "2026-10-21T08:30:00Z"
+      },
+      {
+        "night_id": "N20261021",
+        "actions_recorded": 41,
+        "observes": 37,
+        "exposure_seconds": 27945.0,
+        "mean_exposure_seconds": 755.2702702702703,
+        "end_utc": "2026-10-22T08:30:00Z"
+      },
+      {
+        "night_id": "N20261022",
+        "actions_recorded": 33,
+        "observes": 32,
+        "exposure_seconds": 29666.0,
+        "mean_exposure_seconds": 927.0625,
+        "end_utc": "2026-10-23T08:30:00Z"
+      },
+      {
+        "night_id": "N20261023",
+        "actions_recorded": 24,
+        "observes": 23,
+        "exposure_seconds": 29651.0,
+        "mean_exposure_seconds": 1289.1739130434783,
+        "end_utc": "2026-10-24T08:30:00Z"
+      },
+      {
+        "night_id": "N20261024",
+        "actions_recorded": 24,
+        "observes": 22,
+        "exposure_seconds": 29518.0,
+        "mean_exposure_seconds": 1341.7272727272727,
+        "end_utc": "2026-10-25T08:30:00Z"
+      },
+      {
+        "night_id": "N20261025",
+        "actions_recorded": 20,
+        "observes": 19,
+        "exposure_seconds": 29689.0,
+        "mean_exposure_seconds": 1562.578947368421,
+        "end_utc": "2026-10-26T08:30:00Z"
+      },
+      {
+        "night_id": "N20261026",
+        "actions_recorded": 60,
+        "observes": 60,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 495.0,
+        "end_utc": "2026-10-27T08:30:00Z"
+      },
+      {
+        "night_id": "N20261027",
+        "actions_recorded": 66,
+        "observes": 65,
+        "exposure_seconds": 29679.0,
+        "mean_exposure_seconds": 456.6,
+        "end_utc": "2026-10-28T08:30:00Z"
+      },
+      {
+        "night_id": "N20261028",
+        "actions_recorded": 66,
+        "observes": 65,
+        "exposure_seconds": 29691.0,
+        "mean_exposure_seconds": 456.7846153846154,
+        "end_utc": "2026-10-29T08:30:00Z"
+      },
+      {
+        "night_id": "N20261029",
+        "actions_recorded": 43,
+        "observes": 22,
+        "exposure_seconds": 9925.0,
+        "mean_exposure_seconds": 451.1363636363636,
+        "end_utc": "2026-10-30T08:30:00Z"
+      },
+      {
+        "night_id": "N20261030",
+        "actions_recorded": 63,
+        "observes": 59,
+        "exposure_seconds": 25241.0,
+        "mean_exposure_seconds": 427.8135593220339,
+        "end_utc": "2026-10-31T08:30:00Z"
+      },
+      {
+        "night_id": "N20261031",
+        "actions_recorded": 43,
+        "observes": 41,
+        "exposure_seconds": 27895.0,
+        "mean_exposure_seconds": 680.3658536585366,
+        "end_utc": "2026-11-01T08:30:00Z"
+      },
+      {
+        "night_id": "N20261101",
+        "actions_recorded": 33,
+        "observes": 33,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 872.7272727272727,
+        "end_utc": "2026-11-02T08:30:00Z"
+      },
+      {
+        "night_id": "N20261102",
+        "actions_recorded": 38,
+        "observes": 38,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 757.8947368421053,
+        "end_utc": "2026-11-03T08:30:00Z"
+      },
+      {
+        "night_id": "N20261103",
+        "actions_recorded": 34,
+        "observes": 33,
+        "exposure_seconds": 28787.0,
+        "mean_exposure_seconds": 872.3333333333334,
+        "end_utc": "2026-11-04T08:30:00Z"
+      },
+      {
+        "night_id": "N20261104",
+        "actions_recorded": 34,
+        "observes": 34,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 820.5882352941177,
+        "end_utc": "2026-11-05T08:15:00Z"
+      },
+      {
+        "night_id": "N20261105",
+        "actions_recorded": 30,
+        "observes": 29,
+        "exposure_seconds": 27879.0,
+        "mean_exposure_seconds": 961.3448275862069,
+        "end_utc": "2026-11-06T08:15:00Z"
+      },
+      {
+        "night_id": "N20261106",
+        "actions_recorded": 22,
+        "observes": 22,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1268.1818181818182,
+        "end_utc": "2026-11-07T08:15:00Z"
+      },
+      {
+        "night_id": "N20261107",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1641.1764705882354,
+        "end_utc": "2026-11-08T08:15:00Z"
+      },
+      {
+        "night_id": "N20261108",
+        "actions_recorded": 19,
+        "observes": 19,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1468.421052631579,
+        "end_utc": "2026-11-09T08:15:00Z"
+      },
+      {
+        "night_id": "N20261109",
+        "actions_recorded": 21,
+        "observes": 20,
+        "exposure_seconds": 27882.0,
+        "mean_exposure_seconds": 1394.1,
+        "end_utc": "2026-11-10T08:15:00Z"
+      },
+      {
+        "night_id": "N20261110",
+        "actions_recorded": 16,
+        "observes": 14,
+        "exposure_seconds": 26192.0,
+        "mean_exposure_seconds": 1870.857142857143,
+        "end_utc": "2026-11-11T08:15:00Z"
+      },
+      {
+        "night_id": "N20261111",
+        "actions_recorded": 21,
+        "observes": 21,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1328.5714285714287,
+        "end_utc": "2026-11-12T08:15:00Z"
+      },
+      {
+        "night_id": "N20261112",
+        "actions_recorded": 25,
+        "observes": 24,
+        "exposure_seconds": 27852.0,
+        "mean_exposure_seconds": 1160.5,
+        "end_utc": "2026-11-13T08:15:00Z"
+      },
+      {
+        "night_id": "N20261113",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1550.0,
+        "end_utc": "2026-11-14T08:15:00Z"
+      },
+      {
+        "night_id": "N20261114",
+        "actions_recorded": 31,
+        "observes": 0,
+        "exposure_seconds": 0,
+        "mean_exposure_seconds": 0.0,
+        "end_utc": "2026-11-15T08:15:00Z"
+      },
+      {
+        "night_id": "N20261115",
+        "actions_recorded": 21,
+        "observes": 21,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1328.5714285714287,
+        "end_utc": "2026-11-16T08:15:00Z"
+      },
+      {
+        "night_id": "N20261116",
+        "actions_recorded": 23,
+        "observes": 23,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1173.9130434782608,
+        "end_utc": "2026-11-17T08:15:00Z"
+      },
+      {
+        "night_id": "N20261117",
+        "actions_recorded": 17,
+        "observes": 16,
+        "exposure_seconds": 26100.0,
+        "mean_exposure_seconds": 1631.25,
+        "end_utc": "2026-11-18T08:15:00Z"
+      },
+      {
+        "night_id": "N20261118",
+        "actions_recorded": 19,
+        "observes": 19,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1421.0526315789473,
+        "end_utc": "2026-11-19T08:15:00Z"
+      },
+      {
+        "night_id": "N20261119",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1500.0,
+        "end_utc": "2026-11-20T08:15:00Z"
+      },
+      {
+        "night_id": "N20261120",
+        "actions_recorded": 14,
+        "observes": 14,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1928.5714285714287,
+        "end_utc": "2026-11-21T08:15:00Z"
+      },
+      {
+        "night_id": "N20261121",
+        "actions_recorded": 14,
+        "observes": 14,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1928.5714285714287,
+        "end_utc": "2026-11-22T08:15:00Z"
+      },
+      {
+        "night_id": "N20261122",
+        "actions_recorded": 16,
+        "observes": 14,
+        "exposure_seconds": 26058.0,
+        "mean_exposure_seconds": 1861.2857142857142,
+        "end_utc": "2026-11-23T08:15:00Z"
+      },
+      {
+        "night_id": "N20261123",
+        "actions_recorded": 18,
+        "observes": 17,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1588.235294117647,
+        "end_utc": "2026-11-24T08:15:00Z"
+      },
+      {
+        "night_id": "N20261124",
+        "actions_recorded": 5,
+        "observes": 5,
+        "exposure_seconds": 8367.0,
+        "mean_exposure_seconds": 1673.4,
+        "end_utc": "2026-11-25T03:04:27Z"
+      }
+    ],
+    "per_step_elapsed_present": false
+  },
+  "gamma": {
+    "file_hashes_verified": {
+      "actions.jsonl": true,
+      "agent.log": true,
+      "decisions.csv": true,
+      "messages.jsonl": true,
+      "observations.csv": true,
+      "score_report.json": true,
+      "workflow_result.json": true
+    },
+    "workflow": {
+      "accounted_wallclock_seconds": 883.744,
+      "agent_wallclock_seconds": 867.097,
+      "committed_action_count": 1783,
+      "decision_requests": 1217,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": false,
+      "last_decision_sequence": 1217,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-gamma",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "survey_complete"
+    },
+    "total": 6750.550861,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -200.0,
+      "sum_best_scores": 6650.828563,
+      "uniformity_penalty": -0.277702
+    },
+    "counts": {
+      "decisions": 1783,
+      "invalidated_observations": 292,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 15392,
+      "observe_actions": 1107,
+      "required_missing": 4,
+      "targets_observed": 9421
+    },
+    "protocol_action_counts": {
+      "observe": 1107,
+      "wait": 109,
+      "report": 1
+    },
+    "decision_row_counts": {
+      "observe": 1107,
+      "wait": 675,
+      "report": 1
+    },
+    "message_counts": {
+      "bulletin": 1234,
+      "forecast": 6,
+      "observation_request": 2,
+      "observation_request_result": 2,
+      "state_resync": 1,
+      "report_result": 1
+    },
+    "nights": 38,
+    "observing_seconds": 1110600.0,
+    "remaining_observing_seconds": 0,
+    "last_simulated_utc": "2026-11-16T08:15:00Z",
+    "progress_fraction": 1.0,
+    "agent_seconds_per_request_mean": 0.7124872637633525,
+    "platform_overhead_seconds": 16.647000000000048,
+    "finish_summary": {
+      "decisions": 1217,
+      "exposures": 1106,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6650.104647,
+      "required_missing_bound": 4,
+      "planning_seconds": 827.921,
+      "C": 0.6283,
+      "E": 0.8956,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "cpu_phase": {
+        "choose_calls": 1111,
+        "phase_calls": 1111,
+        "phase_candidates": 14279597,
+        "phase_exact_evaluations": 17776,
+        "phase_emergency_count": 0,
+        "phase_improvements": 969
+      },
+      "terrain": {
+        "schema": "terrain-positive-version-space-v1",
+        "directions": [
+          "W",
+          "N"
+        ],
+        "width_range": [
+          30.0,
+          70.0
+        ],
+        "altitude_range": [
+          35.0,
+          50.0
+        ],
+        "boxes_per_family": 540,
+        "remaining_boxes": {
+          "W": 516,
+          "N": 540
+        },
+        "positive_count": 15111,
+        "zero_feedback_ignored": 273,
+        "conditional_domain_conflicts": [],
+        "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+      },
+      "terrain_feedback_exposures": 1106,
+      "request_dp": {
+        "builds": 12,
+        "build_seconds": 225.6387184200001,
+        "dp_solves": 74,
+        "dp_seconds": 1.3733808400001237,
+        "request_observes": 1,
+        "boundary_waits": 1,
+        "clipped_baselines": 3,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 1,
+        "cached_requests": 2,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed_request": {
+        "remote_baselines": 0,
+        "cpu_baselines": 1111,
+        "forced_cpu_crops": 3,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 600.8604207209981,
+        "remote_baseline_seconds": 0.0,
+        "budget": {
+          "accepted": 0,
+          "skipped": 0,
+          "initialization_seconds": 0.0,
+          "observed_remote_seconds": 0.0,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      },
+      "request_exact_cache": {
+        "midpoint_hits": 58509,
+        "midpoint_misses": 20574,
+        "midpoint_peak_bytes": 6177600
+      },
+      "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+    },
+    "per_night": [
+      {
+        "night_id": "N20261009",
+        "actions_recorded": 97,
+        "observes": 91,
+        "exposure_seconds": 27977.0,
+        "mean_exposure_seconds": 307.43956043956047,
+        "end_utc": "2026-10-10T08:45:00Z"
+      },
+      {
+        "night_id": "N20261010",
+        "actions_recorded": 56,
+        "observes": 54,
+        "exposure_seconds": 30502.0,
+        "mean_exposure_seconds": 564.8518518518518,
+        "end_utc": "2026-10-11T08:45:00Z"
+      },
+      {
+        "night_id": "N20261011",
+        "actions_recorded": 45,
+        "observes": 43,
+        "exposure_seconds": 30428.0,
+        "mean_exposure_seconds": 707.6279069767442,
+        "end_utc": "2026-10-12T08:45:00Z"
+      },
+      {
+        "night_id": "N20261012",
+        "actions_recorded": 35,
+        "observes": 34,
+        "exposure_seconds": 30584.0,
+        "mean_exposure_seconds": 899.5294117647059,
+        "end_utc": "2026-10-13T08:45:00Z"
+      },
+      {
+        "night_id": "N20261013",
+        "actions_recorded": 21,
+        "observes": 19,
+        "exposure_seconds": 29160.0,
+        "mean_exposure_seconds": 1534.7368421052631,
+        "end_utc": "2026-10-14T08:45:00Z"
+      },
+      {
+        "night_id": "N20261014",
+        "actions_recorded": 29,
+        "observes": 28,
+        "exposure_seconds": 30589.0,
+        "mean_exposure_seconds": 1092.4642857142858,
+        "end_utc": "2026-10-15T08:45:00Z"
+      },
+      {
+        "night_id": "N20261015",
+        "actions_recorded": 25,
+        "observes": 24,
+        "exposure_seconds": 30596.0,
+        "mean_exposure_seconds": 1274.8333333333333,
+        "end_utc": "2026-10-16T08:45:00Z"
+      },
+      {
+        "night_id": "N20261016",
+        "actions_recorded": 28,
+        "observes": 27,
+        "exposure_seconds": 30591.0,
+        "mean_exposure_seconds": 1133.0,
+        "end_utc": "2026-10-17T08:45:00Z"
+      },
+      {
+        "night_id": "N20261017",
+        "actions_recorded": 23,
+        "observes": 22,
+        "exposure_seconds": 30543.0,
+        "mean_exposure_seconds": 1388.3181818181818,
+        "end_utc": "2026-10-18T08:45:00Z"
+      },
+      {
+        "night_id": "N20261018",
+        "actions_recorded": 54,
+        "observes": 53,
+        "exposure_seconds": 30546.0,
+        "mean_exposure_seconds": 576.3396226415094,
+        "end_utc": "2026-10-19T08:45:00Z"
+      },
+      {
+        "night_id": "N20261019",
+        "actions_recorded": 72,
+        "observes": 66,
+        "exposure_seconds": 27995.0,
+        "mean_exposure_seconds": 424.1666666666667,
+        "end_utc": "2026-10-20T08:30:00Z"
+      },
+      {
+        "night_id": "N20261020",
+        "actions_recorded": 67,
+        "observes": 66,
+        "exposure_seconds": 29694.0,
+        "mean_exposure_seconds": 449.90909090909093,
+        "end_utc": "2026-10-21T08:30:00Z"
+      },
+      {
+        "night_id": "N20261021",
+        "actions_recorded": 41,
+        "observes": 31,
+        "exposure_seconds": 21810.0,
+        "mean_exposure_seconds": 703.5483870967741,
+        "end_utc": "2026-10-22T08:30:00Z"
+      },
+      {
+        "night_id": "N20261022",
+        "actions_recorded": 56,
+        "observes": 54,
+        "exposure_seconds": 29118.0,
+        "mean_exposure_seconds": 539.2222222222222,
+        "end_utc": "2026-10-23T08:30:00Z"
+      },
+      {
+        "night_id": "N20261023",
+        "actions_recorded": 41,
+        "observes": 41,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 724.390243902439,
+        "end_utc": "2026-10-24T08:30:00Z"
+      },
+      {
+        "night_id": "N20261024",
+        "actions_recorded": 39,
+        "observes": 38,
+        "exposure_seconds": 29599.0,
+        "mean_exposure_seconds": 778.921052631579,
+        "end_utc": "2026-10-25T08:30:00Z"
+      },
+      {
+        "night_id": "N20261025",
+        "actions_recorded": 27,
+        "observes": 25,
+        "exposure_seconds": 29575.0,
+        "mean_exposure_seconds": 1183.0,
+        "end_utc": "2026-10-26T08:30:00Z"
+      },
+      {
+        "night_id": "N20261026",
+        "actions_recorded": 22,
+        "observes": 21,
+        "exposure_seconds": 29550.0,
+        "mean_exposure_seconds": 1407.142857142857,
+        "end_utc": "2026-10-27T08:30:00Z"
+      },
+      {
+        "night_id": "N20261027",
+        "actions_recorded": 29,
+        "observes": 29,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 1024.1379310344828,
+        "end_utc": "2026-10-28T08:30:00Z"
+      },
+      {
+        "night_id": "N20261028",
+        "actions_recorded": 30,
+        "observes": 29,
+        "exposure_seconds": 29697.0,
+        "mean_exposure_seconds": 1024.0344827586207,
+        "end_utc": "2026-10-29T08:30:00Z"
+      },
+      {
+        "night_id": "N20261029",
+        "actions_recorded": 24,
+        "observes": 20,
+        "exposure_seconds": 25762.0,
+        "mean_exposure_seconds": 1288.1,
+        "end_utc": "2026-10-30T08:30:00Z"
+      },
+      {
+        "night_id": "N20261030",
+        "actions_recorded": 22,
+        "observes": 22,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1309.090909090909,
+        "end_utc": "2026-10-31T08:30:00Z"
+      },
+      {
+        "night_id": "N20261031",
+        "actions_recorded": 20,
+        "observes": 20,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1440.0,
+        "end_utc": "2026-11-01T08:30:00Z"
+      },
+      {
+        "night_id": "N20261101",
+        "actions_recorded": 15,
+        "observes": 15,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1920.0,
+        "end_utc": "2026-11-02T08:30:00Z"
+      },
+      {
+        "night_id": "N20261102",
+        "actions_recorded": 16,
+        "observes": 16,
+        "exposure_seconds": 28800.0,
+        "mean_exposure_seconds": 1800.0,
+        "end_utc": "2026-11-03T08:30:00Z"
+      },
+      {
+        "night_id": "N20261103",
+        "actions_recorded": 26,
+        "observes": 5,
+        "exposure_seconds": 10141.0,
+        "mean_exposure_seconds": 2028.2,
+        "end_utc": "2026-11-04T08:30:00Z"
+      },
+      {
+        "night_id": "N20261104",
+        "actions_recorded": 16,
+        "observes": 14,
+        "exposure_seconds": 26100.0,
+        "mean_exposure_seconds": 1864.2857142857142,
+        "end_utc": "2026-11-05T08:15:00Z"
+      },
+      {
+        "night_id": "N20261105",
+        "actions_recorded": 14,
+        "observes": 14,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1992.857142857143,
+        "end_utc": "2026-11-06T08:15:00Z"
+      },
+      {
+        "night_id": "N20261106",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1550.0,
+        "end_utc": "2026-11-07T08:15:00Z"
+      },
+      {
+        "night_id": "N20261107",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1550.0,
+        "end_utc": "2026-11-08T08:15:00Z"
+      },
+      {
+        "night_id": "N20261108",
+        "actions_recorded": 15,
+        "observes": 15,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1860.0,
+        "end_utc": "2026-11-09T08:15:00Z"
+      },
+      {
+        "night_id": "N20261109",
+        "actions_recorded": 17,
+        "observes": 15,
+        "exposure_seconds": 26669.0,
+        "mean_exposure_seconds": 1777.9333333333334,
+        "end_utc": "2026-11-10T08:15:00Z"
+      },
+      {
+        "night_id": "N20261110",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1550.0,
+        "end_utc": "2026-11-11T08:15:00Z"
+      },
+      {
+        "night_id": "N20261111",
+        "actions_recorded": 18,
+        "observes": 18,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1550.0,
+        "end_utc": "2026-11-12T08:15:00Z"
+      },
+      {
+        "night_id": "N20261112",
+        "actions_recorded": 21,
+        "observes": 21,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1328.5714285714287,
+        "end_utc": "2026-11-13T08:15:00Z"
+      },
+      {
+        "night_id": "N20261113",
+        "actions_recorded": 28,
+        "observes": 27,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1033.3333333333333,
+        "end_utc": "2026-11-14T08:15:00Z"
+      },
+      {
+        "night_id": "N20261114",
+        "actions_recorded": 20,
+        "observes": 19,
+        "exposure_seconds": 27896.0,
+        "mean_exposure_seconds": 1468.2105263157894,
+        "end_utc": "2026-11-15T08:15:00Z"
+      },
+      {
+        "night_id": "N20261115",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 1641.1764705882354,
+        "end_utc": "2026-11-16T08:15:00Z"
+      }
+    ],
+    "per_step_elapsed_present": false
+  },
+  "delta": {
+    "file_hashes_verified": {
+      "actions.jsonl": true,
+      "agent.log": true,
+      "decisions.csv": true,
+      "messages.jsonl": true,
+      "observations.csv": true,
+      "score_report.json": true,
+      "workflow_result.json": true
+    },
+    "workflow": {
+      "accounted_wallclock_seconds": 587.273,
+      "agent_wallclock_seconds": 574.022,
+      "committed_action_count": 1856,
+      "decision_requests": 1275,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": false,
+      "last_decision_sequence": 1275,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-delta",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "survey_complete"
+    },
+    "total": 6423.086757,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -300.0,
+      "sum_best_scores": 6523.825782,
+      "uniformity_penalty": -0.739024
+    },
+    "counts": {
+      "decisions": 1856,
+      "invalidated_observations": 280,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 15156,
+      "observe_actions": 1096,
+      "required_missing": 6,
+      "targets_observed": 8917
+    },
+    "protocol_action_counts": {
+      "observe": 1096,
+      "wait": 178,
+      "report": 1
+    },
+    "decision_row_counts": {
+      "observe": 1096,
+      "wait": 759,
+      "report": 1
+    },
+    "message_counts": {
+      "bulletin": 1179,
+      "forecast": 6,
+      "observation_request": 2,
+      "observation_request_result": 3,
+      "state_resync": 1,
+      "report_result": 1
+    },
+    "nights": 38,
+    "observing_seconds": 1061100.0,
+    "remaining_observing_seconds": 0,
+    "last_simulated_utc": "2026-12-01T08:15:00Z",
+    "progress_fraction": 1.0,
+    "agent_seconds_per_request_mean": 0.45021333333333335,
+    "platform_overhead_seconds": 13.250999999999976,
+    "finish_summary": {
+      "decisions": 1275,
+      "exposures": 1095,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6520.713018,
+      "required_missing_bound": 6,
+      "planning_seconds": 548.894,
+      "C": 1.2695,
+      "E": 0.6788,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "cpu_phase": {
+        "choose_calls": 1101,
+        "phase_calls": 1101,
+        "phase_candidates": 14154479,
+        "phase_exact_evaluations": 17616,
+        "phase_emergency_count": 0,
+        "phase_improvements": 949
+      },
+      "terrain": {
+        "schema": "terrain-positive-version-space-v1",
+        "directions": [
+          "NW",
+          "NE",
+          "E"
+        ],
+        "width_range": [
+          30.0,
+          70.0
+        ],
+        "altitude_range": [
+          35.0,
+          50.0
+        ],
+        "boxes_per_family": 540,
+        "remaining_boxes": {
+          "NW": 503,
+          "NE": 518,
+          "E": 372
+        },
+        "positive_count": 14370,
+        "zero_feedback_ignored": 772,
+        "conditional_domain_conflicts": [],
+        "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+      },
+      "terrain_feedback_exposures": 1095,
+      "request_dp": {
+        "builds": 8,
+        "build_seconds": 89.3417918959999,
+        "dp_solves": 116,
+        "dp_seconds": 0.9845969059992967,
+        "request_observes": 2,
+        "boundary_waits": 1,
+        "clipped_baselines": 4,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 0,
+        "cached_requests": 2,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed_request": {
+        "remote_baselines": 0,
+        "cpu_baselines": 1101,
+        "forced_cpu_crops": 4,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 458.5272247960014,
+        "remote_baseline_seconds": 0.0,
+        "budget": {
+          "accepted": 0,
+          "skipped": 0,
+          "initialization_seconds": 0.0,
+          "observed_remote_seconds": 0.0,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      },
+      "request_exact_cache": {
+        "midpoint_hits": 42185,
+        "midpoint_misses": 14974,
+        "midpoint_peak_bytes": 6316800
+      },
+      "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+    },
+    "per_night": [
+      {
+        "night_id": "N20261024",
+        "actions_recorded": 115,
+        "observes": 106,
+        "exposure_seconds": 25832.0,
+        "mean_exposure_seconds": 243.69811320754718,
+        "end_utc": "2026-10-25T08:30:00Z"
+      },
+      {
+        "night_id": "N20261025",
+        "actions_recorded": 72,
+        "observes": 69,
+        "exposure_seconds": 29016.0,
+        "mean_exposure_seconds": 420.5217391304348,
+        "end_utc": "2026-10-26T08:30:00Z"
+      },
+      {
+        "night_id": "N20261026",
+        "actions_recorded": 56,
+        "observes": 54,
+        "exposure_seconds": 29593.0,
+        "mean_exposure_seconds": 548.0185185185185,
+        "end_utc": "2026-10-27T08:30:00Z"
+      },
+      {
+        "night_id": "N20261027",
+        "actions_recorded": 36,
+        "observes": 36,
+        "exposure_seconds": 29700.0,
+        "mean_exposure_seconds": 825.0,
+        "end_utc": "2026-10-28T08:30:00Z"
+      },
+      {
+        "night_id": "N20261028",
+        "actions_recorded": 25,
+        "observes": 24,
+        "exposure_seconds": 29656.0,
+        "mean_exposure_seconds": 1235.6666666666667,
+        "end_utc": "2026-10-29T08:30:00Z"
+      },
+      {
+        "night_id": "N20261029",
+        "actions_recorded": 21,
+        "observes": 19,
+        "exposure_seconds": 28289.0,
+        "mean_exposure_seconds": 1488.8947368421052,
+        "end_utc": "2026-10-30T08:30:00Z"
+      },
+      {
+        "night_id": "N20261030",
+        "actions_recorded": 23,
+        "observes": 19,
+        "exposure_seconds": 27741.0,
+        "mean_exposure_seconds": 1460.0526315789473,
+        "end_utc": "2026-10-31T08:30:00Z"
+      },
+      {
+        "night_id": "N20261031",
+        "actions_recorded": 17,
+        "observes": 16,
+        "exposure_seconds": 28759.0,
+        "mean_exposure_seconds": 1797.4375,
+        "end_utc": "2026-11-01T08:30:00Z"
+      },
+      {
+        "night_id": "N20261101",
+        "actions_recorded": 36,
+        "observes": 35,
+        "exposure_seconds": 28799.0,
+        "mean_exposure_seconds": 822.8285714285714,
+        "end_utc": "2026-11-02T08:30:00Z"
+      },
+      {
+        "night_id": "N20261102",
+        "actions_recorded": 66,
+        "observes": 57,
+        "exposure_seconds": 24618.0,
+        "mean_exposure_seconds": 431.89473684210526,
+        "end_utc": "2026-11-03T08:30:00Z"
+      },
+      {
+        "night_id": "N20261103",
+        "actions_recorded": 47,
+        "observes": 31,
+        "exposure_seconds": 16367.0,
+        "mean_exposure_seconds": 527.9677419354839,
+        "end_utc": "2026-11-04T08:30:00Z"
+      },
+      {
+        "night_id": "N20261104",
+        "actions_recorded": 41,
+        "observes": 34,
+        "exposure_seconds": 21600.0,
+        "mean_exposure_seconds": 635.2941176470588,
+        "end_utc": "2026-11-05T08:15:00Z"
+      },
+      {
+        "night_id": "N20261105",
+        "actions_recorded": 37,
+        "observes": 36,
+        "exposure_seconds": 27876.0,
+        "mean_exposure_seconds": 774.3333333333334,
+        "end_utc": "2026-11-06T08:15:00Z"
+      },
+      {
+        "night_id": "N20261106",
+        "actions_recorded": 56,
+        "observes": 44,
+        "exposure_seconds": 20809.0,
+        "mean_exposure_seconds": 472.9318181818182,
+        "end_utc": "2026-11-07T08:15:00Z"
+      },
+      {
+        "night_id": "N20261107",
+        "actions_recorded": 29,
+        "observes": 28,
+        "exposure_seconds": 27614.0,
+        "mean_exposure_seconds": 986.2142857142857,
+        "end_utc": "2026-11-08T08:15:00Z"
+      },
+      {
+        "night_id": "N20261108",
+        "actions_recorded": 17,
+        "observes": 15,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1800.0,
+        "end_utc": "2026-11-09T08:15:00Z"
+      },
+      {
+        "night_id": "N20261109",
+        "actions_recorded": 27,
+        "observes": 16,
+        "exposure_seconds": 18772.0,
+        "mean_exposure_seconds": 1173.25,
+        "end_utc": "2026-11-10T08:15:00Z"
+      },
+      {
+        "night_id": "N20261110",
+        "actions_recorded": 29,
+        "observes": 15,
+        "exposure_seconds": 16164.0,
+        "mean_exposure_seconds": 1077.6,
+        "end_utc": "2026-11-11T08:15:00Z"
+      },
+      {
+        "night_id": "N20261111",
+        "actions_recorded": 42,
+        "observes": 41,
+        "exposure_seconds": 27890.0,
+        "mean_exposure_seconds": 680.2439024390244,
+        "end_utc": "2026-11-12T08:15:00Z"
+      },
+      {
+        "night_id": "N20261112",
+        "actions_recorded": 28,
+        "observes": 27,
+        "exposure_seconds": 27876.0,
+        "mean_exposure_seconds": 1032.4444444444443,
+        "end_utc": "2026-11-13T08:15:00Z"
+      },
+      {
+        "night_id": "N20261113",
+        "actions_recorded": 23,
+        "observes": 17,
+        "exposure_seconds": 22527.0,
+        "mean_exposure_seconds": 1325.1176470588234,
+        "end_utc": "2026-11-14T08:15:00Z"
+      },
+      {
+        "night_id": "N20261114",
+        "actions_recorded": 34,
+        "observes": 34,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 820.5882352941177,
+        "end_utc": "2026-11-15T08:15:00Z"
+      },
+      {
+        "night_id": "N20261115",
+        "actions_recorded": 30,
+        "observes": 30,
+        "exposure_seconds": 27900.0,
+        "mean_exposure_seconds": 930.0,
+        "end_utc": "2026-11-16T08:15:00Z"
+      },
+      {
+        "night_id": "N20261116",
+        "actions_recorded": 21,
+        "observes": 21,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1285.7142857142858,
+        "end_utc": "2026-11-17T08:15:00Z"
+      },
+      {
+        "night_id": "N20261117",
+        "actions_recorded": 23,
+        "observes": 23,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1173.9130434782608,
+        "end_utc": "2026-11-18T08:15:00Z"
+      },
+      {
+        "night_id": "N20261118",
+        "actions_recorded": 25,
+        "observes": 25,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1080.0,
+        "end_utc": "2026-11-19T08:15:00Z"
+      },
+      {
+        "night_id": "N20261119",
+        "actions_recorded": 26,
+        "observes": 26,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1038.4615384615386,
+        "end_utc": "2026-11-20T08:15:00Z"
+      },
+      {
+        "night_id": "N20261120",
+        "actions_recorded": 21,
+        "observes": 21,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1285.7142857142858,
+        "end_utc": "2026-11-21T08:15:00Z"
+      },
+      {
+        "night_id": "N20261121",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1588.235294117647,
+        "end_utc": "2026-11-22T08:15:00Z"
+      },
+      {
+        "night_id": "N20261122",
+        "actions_recorded": 23,
+        "observes": 9,
+        "exposure_seconds": 14834.0,
+        "mean_exposure_seconds": 1648.2222222222222,
+        "end_utc": "2026-11-23T08:15:00Z"
+      },
+      {
+        "night_id": "N20261123",
+        "actions_recorded": 27,
+        "observes": 10,
+        "exposure_seconds": 11700.0,
+        "mean_exposure_seconds": 1170.0,
+        "end_utc": "2026-11-24T08:15:00Z"
+      },
+      {
+        "night_id": "N20261124",
+        "actions_recorded": 21,
+        "observes": 19,
+        "exposure_seconds": 26769.0,
+        "mean_exposure_seconds": 1408.8947368421052,
+        "end_utc": "2026-11-25T08:15:00Z"
+      },
+      {
+        "night_id": "N20261125",
+        "actions_recorded": 14,
+        "observes": 14,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1928.5714285714287,
+        "end_utc": "2026-11-26T08:15:00Z"
+      },
+      {
+        "night_id": "N20261126",
+        "actions_recorded": 18,
+        "observes": 17,
+        "exposure_seconds": 26361.0,
+        "mean_exposure_seconds": 1550.6470588235295,
+        "end_utc": "2026-11-27T08:15:00Z"
+      },
+      {
+        "night_id": "N20261127",
+        "actions_recorded": 17,
+        "observes": 17,
+        "exposure_seconds": 27000.0,
+        "mean_exposure_seconds": 1588.235294117647,
+        "end_utc": "2026-11-28T08:15:00Z"
+      },
+      {
+        "night_id": "N20261128",
+        "actions_recorded": 28,
+        "observes": 26,
+        "exposure_seconds": 26954.0,
+        "mean_exposure_seconds": 1036.6923076923076,
+        "end_utc": "2026-11-29T08:15:00Z"
+      },
+      {
+        "night_id": "N20261129",
+        "actions_recorded": 22,
+        "observes": 21,
+        "exposure_seconds": 26979.0,
+        "mean_exposure_seconds": 1284.7142857142858,
+        "end_utc": "2026-11-30T08:15:00Z"
+      },
+      {
+        "night_id": "N20261130",
+        "actions_recorded": 28,
+        "observes": 27,
+        "exposure_seconds": 26547.0,
+        "mean_exposure_seconds": 983.2222222222222,
+        "end_utc": "2026-12-01T08:15:00Z"
+      }
+    ],
+    "per_step_elapsed_present": false
+  }
+}

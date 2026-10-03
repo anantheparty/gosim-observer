@@ -1,0 +1,90 @@
+{
+  "terrain_probability_cap": {
+    "posterior_clear_probability": 0.5,
+    "official_clear": {
+      "q_band": 1.0,
+      "band": "DARK",
+      "mult": 1.2,
+      "factor": 1.0,
+      "quality": 1.0,
+      "score": 1.2
+    },
+    "official_blocked": {
+      "q_band": 1.0,
+      "band": "DARK",
+      "mult": 1.2,
+      "factor": 0.0,
+      "quality": 0.0,
+      "score": 0.0
+    },
+    "strategy_plug_in_score": 1.2,
+    "posterior_expected_official_score": 0.6,
+    "safe_alternative_score": 0.7999999999999999,
+    "official_safe_alternative": {
+      "q_band": 1.0,
+      "band": "DARK",
+      "mult": 1.2,
+      "factor": 0.6666666666666666,
+      "quality": 1.0,
+      "score": 0.7999999999999999
+    },
+    "actual_SpatialPlanner_evaluate_selected": "uncertain",
+    "actual_SpatialPlanner_evaluate_program": "DARK",
+    "actual_SpatialPlanner_evaluate_duration": 900,
+    "strategy_prefers": "uncertain",
+    "expectation_prefers": "safe"
+  },
+  "existing_best_undervaluation": {
+    "unattenuated_factor": 0.8,
+    "clear_probability": 0.5,
+    "historical_best": 0.9,
+    "plug_in_gain": 0.0,
+    "posterior_expected_gain": 0.02999999999999997
+  },
+  "best_vs_factor_negative_control": {
+    "best": [
+      0.9,
+      1.08
+    ],
+    "max_factor": 1.0
+  },
+  "deterministic_duration_program": {
+    "target": {
+      "target_id": "V4T000001",
+      "ra_deg": 36.126988,
+      "dec_deg": -51.68799,
+      "feature_flux": 1.0,
+      "science_weight": 1.0
+    },
+    "start": "2026-11-02T04:30:00+00:00",
+    "duration": 3600,
+    "weather_scale": 0.4746888712594467,
+    "frozen_q_band": 0.651,
+    "frozen_band": "DARK",
+    "frozen_score": 1.2,
+    "official_declared_DARK": {
+      "q_band": 0.6467893258456788,
+      "band": "BRIGHT",
+      "mult": 1.0,
+      "factor": 1.0,
+      "quality": 0.6144498595533949,
+      "score": 1.0
+    },
+    "official_declared_BRIGHT": {
+      "q_band": 0.6467893258456788,
+      "band": "BRIGHT",
+      "mult": 1.12,
+      "factor": 1.0,
+      "quality": 0.6144498595533949,
+      "score": 1.12
+    }
+  },
+  "public_geometry_pointwise_negative_control": {
+    "cases": 783,
+    "max_abs_quality_difference": 0.0,
+    "cards": [
+      "L1",
+      "L2"
+    ]
+  }
+}

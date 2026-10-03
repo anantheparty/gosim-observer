@@ -144,3 +144,22 @@ L3在源/选择冻结后，官方局部末动作packet检验条件增益 **+104.
 本地L3 6108.908435与线上α–δ榜首四卡均分不可相减；此前线上同格式记录6735.0925025与榜首约7580.7075也仅是10月3日页面快照，当前榜单未确认。这次web规则页不可访问，Chrome CUA getTab仍30秒fetch失败，没有伪称本次重新读取到页面。
 
 算力分工：Rhodes1的315完整赛季是CPU标签生成与官方受限验证，普通NN参数拟合已实际在PRO6000 CUDA完成86.741秒。不要把CPU rollout任务称NN训练，不把GPU可用直接等同任意Python官方workflow可获得GPU加速。
+
+
+### 策略偏差的重新审查与真实强对照（2026-10-04 08:19 JST）
+
+原生Chrome实际刷新δ榜单至2026-10-03 22:55:42 UTC：Pleiades第5/53，总6423.09、science6523.83、8917目标；CCB总7411.98、science7263.27、8515目标。该卡总差988.89、science差739.44。当前其他三卡未重新刷新，不能称四卡最新排名；Mac随后锁定，已请求用户手动解锁。当前快照保存在`results/leaderboard_science_audit_20261004/`。
+
+三项独立审查改变下一步重点：
+
+1. 实际RequestCache四卡来源/SHA与官方已发生轨迹复算通过。α/β触900秒，仅缺第38夜最后18543/18633秒，公开可用夜时间已推进98.3544%/98.2718%，没有未开始的整夜。γ/δ完整，因此超时不能独自解释δ科学差。δ有效加权覆盖93.45%，已覆盖的加权best factor约0.69054；代数1.2∑weight缺口主要是不饱和，而非program。25个required missing均QSO；14个已有hit的目标，在各自历史最好实际quality下即3600秒仍不达0.5，另外11个无hit。这是需要更好质量窗口的证据，不证明其全局不可行。δREQ1曾完成6/6，后loss撤销两条唯一witness成4/6；其100分请求回滚不等于100分science损失。来源`research/cold_science_trace_audit_20261004.md`及对应results，34项审计通过。
+2. 确认两个模型误差：terrain clear概率先乘Q再cap/best，与先结算再取期望不同；真实δ前220曝高估合计仅0.157836，不能解释739差。冻结曝光起点Moon/airmass会错误分类program；真实δ observe46、785秒的固定assignment公开模型从BRIGHT换为DARK，已发生8条跨档反馈均显示原BRIGHT失配。它支持有限候选按曝光积分重评分，尚不是季末实测增益。历史best/factor分账与归一化未发现错误；783个官方点值比较一致。来源`research/cold_science_model_audit_20261004.md`。
+3. 原native READY是BasePolicy+CandidateGeometryPlanner，未接线上最佳RequestCache的Terrain反馈及请求deadline DP/缓存。此前native对BasePolicy/CPUPhase的提升不能自动作为线上最佳完整策略升级。现在从实际上传29-file ZIP重建control；新35-file组合保留原27文件字节/原参数/terrain/request DP/cache，仅替换科学baseline算子、更新run与manifest并添加6文件。composition通过first-decision JSONL及120秒请求边界重调合同，实际candidate未喂任何旧分叉动作的反馈。来源`results/request_geometry_integration_20261004/`和`research/cold_runtime_budget_audit_20261004.md`。线上γ/δ REQ DP solve仅1.37/0.98秒，baseline与建列才是计算主项；公开nominal短profile的native均值快15.4%而p95更慢，不当作完整季节加速。
+
+root实际启动四条受限完整回放：2026-10-03 23:19:23 UTC，Rhodes1 PID1734265，每条2CPU/2GiB/900秒，L1/L2的实际RequestCache control与native组合各一条，物理核16–23；独立目录和唯一owned容器、public actor挂载，host官方模拟器只用于评分。source及harness已冻结，尚无结果，没有提交线上。
+
+新无context `cold_quality_window_control` 已启动，独立研究目标best-score/max-factor状态DP、未来质量窗口、时间/fiber容量影子价与精确几何内层。目的在于改变整季机会成本，不能靠延长当前QSO曝光或调urgency常数替代。允许PRO6000批量Bellman/几何/条件world计算，须先明确状态与算子；GPU拟合的旧32训练状态教师不足以否定普通NN路线。
+
+末动作wrapper其余三卡已实际结束：L1/L2/L4增益均0；L3 +104.403893，固定四卡mean6291.11739575→6317.218369（+26.10097325），所有gates真，全部原始输出已本地核对SHA。没有平台alpha–delta增益。来源`results/cold_policy_breakthrough_20261004/FOUR_CARD_ACTUAL_RESULT.json`。
+
+新的并发分组闭环GA原型已停止：修正版8条人工微域平均仅+0.01488825，含负例，不扩大此版全季；真实未来机会和强生产对照仍是准入条件。全部正负/失败与实现保留，不能称否定遗传算法族。

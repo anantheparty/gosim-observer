@@ -1,0 +1,170 @@
+{
+  "checks": [
+    {
+      "name": "L1_population_latent_initial_same",
+      "pass": true
+    },
+    {
+      "name": "L1_population_feedback_changes_structure",
+      "pass": true
+    },
+    {
+      "name": "L1_population_mandatory_batch_official_geometry",
+      "pass": true
+    },
+    {
+      "name": "L1_population_instrumentation_preserves_first_action",
+      "pass": true
+    },
+    {
+      "name": "L1_single_latent_initial_same",
+      "pass": true
+    },
+    {
+      "name": "L1_single_feedback_changes_structure",
+      "pass": true
+    },
+    {
+      "name": "L1_single_mandatory_batch_official_geometry",
+      "pass": true
+    },
+    {
+      "name": "L1_single_instrumentation_preserves_first_action",
+      "pass": true
+    },
+    {
+      "name": "L1_1400_vectorized_official_classifications",
+      "pass": true,
+      "mismatches": 0
+    },
+    {
+      "name": "L2_population_latent_initial_same",
+      "pass": true
+    },
+    {
+      "name": "L2_population_feedback_changes_structure",
+      "pass": true
+    },
+    {
+      "name": "L2_population_mandatory_batch_official_geometry",
+      "pass": true
+    },
+    {
+      "name": "L2_population_instrumentation_preserves_first_action",
+      "pass": true
+    },
+    {
+      "name": "L2_single_latent_initial_same",
+      "pass": true
+    },
+    {
+      "name": "L2_single_feedback_changes_structure",
+      "pass": true
+    },
+    {
+      "name": "L2_single_mandatory_batch_official_geometry",
+      "pass": true
+    },
+    {
+      "name": "L2_single_instrumentation_preserves_first_action",
+      "pass": true
+    },
+    {
+      "name": "L2_1400_vectorized_official_classifications",
+      "pass": true,
+      "mismatches": 0
+    },
+    {
+      "name": "canonical_partition_after_feedback_deletions",
+      "pass": true,
+      "mismatches": 0
+    }
+  ],
+  "all_passed": true,
+  "work": [
+    {
+      "card": "L1",
+      "mode": "population",
+      "first_decision_work": {
+        "decode_calls": 239,
+        "candidate_centers": 102370,
+        "center_target_entries": 2866360,
+        "simulated_feedbacks": 232
+      }
+    },
+    {
+      "card": "L1",
+      "mode": "single",
+      "first_decision_work": {
+        "decode_calls": 245,
+        "candidate_centers": 103075,
+        "center_target_entries": 2886100,
+        "simulated_feedbacks": 240
+      }
+    },
+    {
+      "card": "L2",
+      "mode": "population",
+      "first_decision_work": {
+        "decode_calls": 257,
+        "candidate_centers": 98991,
+        "center_target_entries": 2771748,
+        "simulated_feedbacks": 256
+      }
+    },
+    {
+      "card": "L2",
+      "mode": "single",
+      "first_decision_work": {
+        "decode_calls": 257,
+        "candidate_centers": 98592,
+        "center_target_entries": 2760576,
+        "simulated_feedbacks": 256
+      }
+    }
+  ],
+  "gains": [
+    {
+      "card": "L1",
+      "world": "high",
+      "population_total": 16.9548,
+      "single_total": 16.823807,
+      "difference": 0.13099300000000014
+    },
+    {
+      "card": "L1",
+      "world": "low",
+      "population_total": 8.614181,
+      "single_total": 8.824867,
+      "difference": -0.21068599999999904
+    },
+    {
+      "card": "L2",
+      "world": "high",
+      "population_total": 14.775857,
+      "single_total": 14.711411,
+      "difference": 0.06444600000000023
+    },
+    {
+      "card": "L2",
+      "world": "low",
+      "population_total": -42.952608,
+      "single_total": -43.027408,
+      "difference": 0.07480000000000331
+    }
+  ],
+  "mean_difference": 0.014888250000001158,
+  "source_sha256": {
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L1/public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L1/public/v4_night_calendar.csv": "9aa147ecf804e3473d73a32cce6ab4065e282ec0a974dbaf5e3c9f10a93a0a0e",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L2/public/targets.csv": "a85d6f8571be0e1f06c11a34943f786e21feccb32b240f8a17c5d68744ed39db",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L2/public/v4_night_calendar.csv": "e6149422d04de96c469aaaa18b9116c7c11ce1b976c0a42ad983208fcdd89484",
+    "formal_v4/results/cold_closed_loop_evolution_20261004/probe.py": "c0d9ea3c296b2b8f51a55ed762fc517a0f31726b14b6e6a5ecb6f2c5293d0096",
+    "formal_v4/results/cold_closed_loop_evolution_20261004/audit.py": "c04e9795ceaaf56b3a71689ea534b302b93b86957ea6938c1fa890f049a0cfe4"
+  },
+  "elapsed_seconds": 4.671273790998384,
+  "limits": "Synthetic constant-efficiency worlds, 28 public targets, 1440 simulated seconds; no future request, loss, fault, offset, background closure, or season test. Equal 32 unique structure evaluations do not equal physical work."
+}

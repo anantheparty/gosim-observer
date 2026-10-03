@@ -1,0 +1,7 @@
+{
+  "failure": "root smoke harness used sequence instead of official decision_sequence",
+  "actor_sources_changed": false,
+  "policy_performance_result": false,
+  "repair": "Use official V4Workflow static protocol constructors",
+  "additional_harness_assertion_repair": "Official initialize has no ready response; validate the one response with V4Workflow.action_from_response."
+}

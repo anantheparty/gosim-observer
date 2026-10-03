@@ -1,0 +1,25 @@
+{
+  "pid": 1734265,
+  "launched_utc": "2026-10-03T23:19:23.151442+00:00",
+  "command": [
+    "python3",
+    "/tmp/geometry_native_20261003/results/request_geometry_integration_20261004/run_request_geometry_pair.py",
+    "--experiment",
+    "/tmp/geometry_native_20261003/results/request_geometry_integration_20261004",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps"
+  ],
+  "expected_full_seasons": 4,
+  "cards": [
+    "L1",
+    "L2"
+  ],
+  "variants": [
+    "actual_RequestCache_control",
+    "native_geometry_integration"
+  ],
+  "resource_per_participant": "2CPU/2GiB/900s",
+  "source_checks_passed": true
+}

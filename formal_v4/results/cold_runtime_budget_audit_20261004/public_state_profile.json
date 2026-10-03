@@ -1,0 +1,3364 @@
+{
+  "total_profile_seconds": 9.383391415933147,
+  "scope": "Short kernel comparison, reconstructed output-prefix ledgers, frozen public Q.\n\nThese are not recorded online decision times or exact reconstructed belief states.\nNo simulator, truth file, teacher label, network or full-season search is used.\n",
+  "rows": [
+    {
+      "card": "alpha",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-05T00:00:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2271059169434011,
+      "stats": {
+        "planning_seconds": 0.22706900001503527,
+        "candidates": 400,
+        "visible_useful": 4101,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": false,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 1.0690109474897451,
+        "selected_exact_rate": 1.0690109474897451,
+        "phase_candidates": 13174,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          176,
+          162,
+          167,
+          188
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          98,
+          120,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.0055468338541686535,
+        "phase_exact_seed_counts": [
+          14,
+          0,
+          0,
+          2
+        ],
+        "phase_scan_seconds": 0.09263862506486475,
+        "phase_exact_seconds": 0.006217207992449403,
+        "phase_geometry_target_pairs": 658700,
+        "choose_calls_total": 1,
+        "phase_calls_total": 1,
+        "phase_candidates_total": 13174,
+        "phase_exact_evaluations_total": 16,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 0
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 46.0195363,
+          "az_deg": 73.6429007
+        },
+        "assignments": {
+          "0": "V4T004757",
+          "1": "V4T008707",
+          "2": "V4T004499",
+          "3": "V4T009545",
+          "4": "V4T006600",
+          "5": "V4T007898",
+          "6": "V4T007030",
+          "7": "V4T007180",
+          "8": "V4T008681",
+          "9": "V4T009274",
+          "10": "V4T006584",
+          "11": "V4T008645",
+          "12": "V4T006305",
+          "13": "V4T001716",
+          "14": "V4T007507",
+          "15": "V4T005650"
+        },
+        "duration_seconds": 98,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-05T00:00:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.2941471671219915,
+      "stats": {
+        "planning_seconds": 0.29413033300079405,
+        "candidates": 400,
+        "visible_useful": 4101,
+        "anchors": 24,
+        "geometry_cells": 511945,
+        "geometry_sweep_seconds": 0.16982924984768033,
+        "geometry_exact": 19,
+        "geometry_improved": false,
+        "base_exact_rate": 1.0690109474897451,
+        "selected_exact_rate": 1.0690109474897451
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 46.0195363,
+          "az_deg": 73.6429007
+        },
+        "assignments": {
+          "0": "V4T004757",
+          "1": "V4T008707",
+          "2": "V4T004499",
+          "3": "V4T009545",
+          "4": "V4T006600",
+          "5": "V4T007898",
+          "6": "V4T007030",
+          "7": "V4T007180",
+          "8": "V4T008681",
+          "9": "V4T009274",
+          "10": "V4T006584",
+          "11": "V4T008645",
+          "12": "V4T006305",
+          "13": "V4T001716",
+          "14": "V4T007507",
+          "15": "V4T005650"
+        },
+        "duration_seconds": 98,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.2,
+      "observe_ordinal": 230,
+      "now_utc": "2026-10-08T07:55:54Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.1987002920359373,
+      "stats": {
+        "planning_seconds": 0.19866341701708734,
+        "candidates": 400,
+        "visible_useful": 6111,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.1706724034156293,
+        "selected_exact_rate": 0.17176407760458973,
+        "phase_candidates": 13400,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          47,
+          46,
+          50,
+          45
+        ],
+        "phase_full_local_counts": [
+          47,
+          46,
+          50,
+          45
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          663,
+          900,
+          1800,
+          2946
+        ],
+        "phase_build_seconds": 0.004820292117074132,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08531483286060393,
+        "phase_exact_seconds": 0.003581083146855235,
+        "phase_geometry_target_pairs": 629547,
+        "choose_calls_total": 2,
+        "phase_calls_total": 2,
+        "phase_candidates_total": 26574,
+        "phase_exact_evaluations_total": 32,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 1
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 61.6412513,
+          "az_deg": 72.6200315
+        },
+        "assignments": {
+          "0": "V4T001749",
+          "1": "V4T004034",
+          "2": "V4T007236",
+          "3": "V4T009744",
+          "4": "V4T005466",
+          "5": "V4T002849",
+          "6": "V4T007439",
+          "7": "V4T007827",
+          "8": "V4T007661",
+          "9": "V4T007860",
+          "10": "V4T006386",
+          "11": "V4T002958",
+          "12": "V4T007478",
+          "13": "V4T003722",
+          "15": "V4T007850"
+        },
+        "duration_seconds": 663,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.2,
+      "observe_ordinal": 230,
+      "now_utc": "2026-10-08T07:55:54Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.12898025009781122,
+      "stats": {
+        "planning_seconds": 0.12839691597037017,
+        "candidates": 400,
+        "visible_useful": 6111,
+        "anchors": 24,
+        "geometry_cells": 53488,
+        "geometry_sweep_seconds": 0.02424337505362928,
+        "geometry_exact": 9,
+        "geometry_improved": true,
+        "base_exact_rate": 0.1706724034156293,
+        "selected_exact_rate": 0.17176407760458973
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 61.7062439,
+          "az_deg": 72.6409953
+        },
+        "assignments": {
+          "0": "V4T001749",
+          "1": "V4T004034",
+          "2": "V4T007236",
+          "3": "V4T009744",
+          "4": "V4T005466",
+          "5": "V4T002849",
+          "6": "V4T007439",
+          "7": "V4T007827",
+          "8": "V4T007661",
+          "9": "V4T007860",
+          "10": "V4T006386",
+          "11": "V4T002958",
+          "12": "V4T007478",
+          "13": "V4T003722",
+          "15": "V4T007850"
+        },
+        "duration_seconds": 663,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.4,
+      "observe_ordinal": 460,
+      "now_utc": "2026-10-15T00:33:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2259562499821186,
+      "stats": {
+        "planning_seconds": 0.2259190420154482,
+        "candidates": 400,
+        "visible_useful": 4796,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.01347838968156014,
+        "selected_exact_rate": 0.013652313363132176,
+        "phase_candidates": 12733,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          95,
+          75,
+          102,
+          83
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1046,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004656125092878938,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.09146349993534386,
+        "phase_exact_seconds": 0.005602332996204495,
+        "phase_geometry_target_pairs": 636650,
+        "choose_calls_total": 3,
+        "phase_calls_total": 3,
+        "phase_candidates_total": 39307,
+        "phase_exact_evaluations_total": 48,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 2
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 73.9671493,
+          "az_deg": 62.8021611
+        },
+        "assignments": {
+          "0": "V4T006060",
+          "1": "V4T002553",
+          "2": "V4T006633",
+          "3": "V4T006070",
+          "4": "V4T002957",
+          "5": "V4T000212",
+          "6": "V4T006770",
+          "7": "V4T006874",
+          "8": "V4T001857",
+          "9": "V4T009120",
+          "10": "V4T002759",
+          "11": "V4T002144",
+          "12": "V4T008357",
+          "13": "V4T003759",
+          "14": "V4T003135",
+          "15": "V4T000312"
+        },
+        "duration_seconds": 1046,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.4,
+      "observe_ordinal": 460,
+      "now_utc": "2026-10-15T00:33:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.1902475410606712,
+      "stats": {
+        "planning_seconds": 0.18947729119099677,
+        "candidates": 400,
+        "visible_useful": 4796,
+        "anchors": 24,
+        "geometry_cells": 163484,
+        "geometry_sweep_seconds": 0.05723762488923967,
+        "geometry_exact": 21,
+        "geometry_improved": true,
+        "base_exact_rate": 0.01347838968156014,
+        "selected_exact_rate": 0.013652313363132176
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 73.9667874,
+          "az_deg": 62.8022777
+        },
+        "assignments": {
+          "0": "V4T006060",
+          "1": "V4T002553",
+          "2": "V4T006633",
+          "3": "V4T006070",
+          "4": "V4T002957",
+          "5": "V4T000212",
+          "6": "V4T006770",
+          "7": "V4T006874",
+          "8": "V4T001857",
+          "9": "V4T009120",
+          "10": "V4T002759",
+          "11": "V4T002144",
+          "12": "V4T008357",
+          "13": "V4T003759",
+          "14": "V4T003135",
+          "15": "V4T000312"
+        },
+        "duration_seconds": 1046,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.6,
+      "observe_ordinal": 691,
+      "now_utc": "2026-10-20T06:03:44Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20697979209944606,
+      "stats": {
+        "planning_seconds": 0.2069594580680132,
+        "candidates": 400,
+        "visible_useful": 7015,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": false,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.02033016683253656,
+        "selected_exact_rate": 0.02033016683253656,
+        "phase_candidates": 10707,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          92,
+          87,
+          88,
+          85
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1800,
+          3558,
+          3600
+        ],
+        "phase_build_seconds": 0.003973457962274551,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.07514920900575817,
+        "phase_exact_seconds": 0.004837708082050085,
+        "phase_geometry_target_pairs": 535350,
+        "choose_calls_total": 4,
+        "phase_calls_total": 4,
+        "phase_candidates_total": 50014,
+        "phase_exact_evaluations_total": 64,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 2
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.5270605,
+          "az_deg": 90.9299489
+        },
+        "assignments": {
+          "0": "V4T007890",
+          "1": "V4T002737",
+          "2": "V4T002458",
+          "4": "V4T006290",
+          "5": "V4T004081",
+          "6": "V4T000100",
+          "7": "V4T007600",
+          "8": "V4T003895",
+          "9": "V4T004947",
+          "10": "V4T000811",
+          "11": "V4T005993",
+          "12": "V4T006242",
+          "13": "V4T002753",
+          "14": "V4T009097",
+          "15": "V4T002417"
+        },
+        "duration_seconds": 3558,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.6,
+      "observe_ordinal": 691,
+      "now_utc": "2026-10-20T06:03:44Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.19332699989899993,
+      "stats": {
+        "planning_seconds": 0.19330870802514255,
+        "candidates": 400,
+        "visible_useful": 7015,
+        "anchors": 24,
+        "geometry_cells": 197729,
+        "geometry_sweep_seconds": 0.06414249981753528,
+        "geometry_exact": 15,
+        "geometry_improved": false,
+        "base_exact_rate": 0.02033016683253656,
+        "selected_exact_rate": 0.02033016683253656
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.5270605,
+          "az_deg": 90.9299489
+        },
+        "assignments": {
+          "0": "V4T007890",
+          "1": "V4T002737",
+          "2": "V4T002458",
+          "4": "V4T006290",
+          "5": "V4T004081",
+          "6": "V4T000100",
+          "7": "V4T007600",
+          "8": "V4T003895",
+          "9": "V4T004947",
+          "10": "V4T000811",
+          "11": "V4T005993",
+          "12": "V4T006242",
+          "13": "V4T002753",
+          "14": "V4T009097",
+          "15": "V4T002417"
+        },
+        "duration_seconds": 3558,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.8,
+      "observe_ordinal": 921,
+      "now_utc": "2026-10-31T02:16:19Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.21431070799008012,
+      "stats": {
+        "planning_seconds": 0.21428329194895923,
+        "candidates": 400,
+        "visible_useful": 5438,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.006451556504621707,
+        "selected_exact_rate": 0.007075541692236797,
+        "phase_candidates": 12300,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          65,
+          102,
+          64,
+          123
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1438,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004437957890331745,
+        "phase_exact_seed_counts": [
+          0,
+          16,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08690404216758907,
+        "phase_exact_seconds": 0.0040828329510986805,
+        "phase_geometry_target_pairs": 615000,
+        "choose_calls_total": 5,
+        "phase_calls_total": 5,
+        "phase_candidates_total": 62314,
+        "phase_exact_evaluations_total": 80,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 3
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 53.2126154,
+          "az_deg": 164.581431
+        },
+        "assignments": {
+          "0": "V4T006549",
+          "2": "V4T009442",
+          "4": "V4T006950",
+          "5": "V4T002221",
+          "6": "V4T008246",
+          "7": "V4T009262",
+          "8": "V4T009599",
+          "11": "V4T007280",
+          "12": "V4T007033",
+          "13": "V4T000035",
+          "14": "V4T006621",
+          "15": "V4T000555"
+        },
+        "duration_seconds": 828,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.8,
+      "observe_ordinal": 921,
+      "now_utc": "2026-10-31T02:16:19Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.1763367080129683,
+      "stats": {
+        "planning_seconds": 0.17575558298267424,
+        "candidates": 400,
+        "visible_useful": 5438,
+        "anchors": 24,
+        "geometry_cells": 162468,
+        "geometry_sweep_seconds": 0.05338954203762114,
+        "geometry_exact": 24,
+        "geometry_improved": true,
+        "base_exact_rate": 0.006451556504621707,
+        "selected_exact_rate": 0.007583232170831639
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 52.9309991,
+          "az_deg": 164.4476448
+        },
+        "assignments": {
+          "0": "V4T007662",
+          "2": "V4T004928",
+          "3": "V4T009987",
+          "4": "V4T006549",
+          "7": "V4T008246",
+          "8": "V4T006950",
+          "9": "V4T009599",
+          "10": "V4T007976",
+          "11": "V4T009262",
+          "12": "V4T007033",
+          "13": "V4T000035",
+          "14": "V4T006621",
+          "15": "V4T005992"
+        },
+        "duration_seconds": 913,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.98,
+      "observe_ordinal": 1128,
+      "now_utc": "2026-11-10T04:34:13Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2073489581234753,
+      "stats": {
+        "planning_seconds": 0.2073172500822693,
+        "candidates": 400,
+        "visible_useful": 5959,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.00598103426702072,
+        "selected_exact_rate": 0.006538044840255427,
+        "phase_candidates": 12714,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          77,
+          74,
+          77,
+          84
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          133,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004747458966448903,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.0909830410964787,
+        "phase_exact_seconds": 0.004808874800801277,
+        "phase_geometry_target_pairs": 635700,
+        "choose_calls_total": 6,
+        "phase_calls_total": 6,
+        "phase_candidates_total": 75028,
+        "phase_exact_evaluations_total": 96,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 4
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 58.9179532,
+          "az_deg": 100.6934003
+        },
+        "assignments": {
+          "0": "V4T006733",
+          "1": "V4T000675",
+          "4": "V4T007109",
+          "5": "V4T005067",
+          "8": "V4T005750",
+          "11": "V4T008054"
+        },
+        "duration_seconds": 133,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "alpha",
+      "fraction": 0.98,
+      "observe_ordinal": 1128,
+      "now_utc": "2026-11-10T04:34:13Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.15503033297136426,
+      "stats": {
+        "planning_seconds": 0.154489167034626,
+        "candidates": 400,
+        "visible_useful": 5959,
+        "anchors": 24,
+        "geometry_cells": 127443,
+        "geometry_sweep_seconds": 0.039870083099231124,
+        "geometry_exact": 24,
+        "geometry_improved": true,
+        "base_exact_rate": 0.00598103426702072,
+        "selected_exact_rate": 0.0072231942402081065
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 58.9123175,
+          "az_deg": 100.6861354
+        },
+        "assignments": {
+          "0": "V4T006733",
+          "1": "V4T000675",
+          "4": "V4T007109",
+          "5": "V4T005067",
+          "8": "V4T005750",
+          "9": "V4T004942",
+          "11": "V4T008054"
+        },
+        "duration_seconds": 133,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-19T00:15:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20881204190663993,
+      "stats": {
+        "planning_seconds": 0.2087661251425743,
+        "candidates": 400,
+        "visible_useful": 3539,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.9468731464983611,
+        "selected_exact_rate": 0.9485959560963639,
+        "phase_candidates": 12200,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          120,
+          108,
+          114,
+          119
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          166,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004287082934752107,
+        "phase_exact_seed_counts": [
+          4,
+          0,
+          0,
+          12
+        ],
+        "phase_scan_seconds": 0.0896985421422869,
+        "phase_exact_seconds": 0.005235292017459869,
+        "phase_geometry_target_pairs": 610000,
+        "choose_calls_total": 1,
+        "phase_calls_total": 1,
+        "phase_candidates_total": 12200,
+        "phase_exact_evaluations_total": 16,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 1
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.3061949,
+          "az_deg": 90.1095777
+        },
+        "assignments": {
+          "0": "V4T002847",
+          "1": "V4T002582",
+          "2": "V4T008602",
+          "3": "V4T005428",
+          "5": "V4T004581",
+          "6": "V4T009235",
+          "7": "V4T003287",
+          "8": "V4T000941",
+          "9": "V4T004552",
+          "10": "V4T001712",
+          "11": "V4T000693",
+          "12": "V4T007563",
+          "13": "V4T005445",
+          "14": "V4T007686",
+          "15": "V4T007147"
+        },
+        "duration_seconds": 166,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-19T00:15:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.19929262506775558,
+      "stats": {
+        "planning_seconds": 0.19856195896863937,
+        "candidates": 400,
+        "visible_useful": 3539,
+        "anchors": 24,
+        "geometry_cells": 264264,
+        "geometry_sweep_seconds": 0.08460037503391504,
+        "geometry_exact": 12,
+        "geometry_improved": true,
+        "base_exact_rate": 0.9468731464983611,
+        "selected_exact_rate": 0.9492954137088317
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.7527858,
+          "az_deg": 89.845066
+        },
+        "assignments": {
+          "0": "V4T002847",
+          "1": "V4T002742",
+          "2": "V4T004658",
+          "3": "V4T008602",
+          "4": "V4T000941",
+          "5": "V4T005207",
+          "6": "V4T004581",
+          "7": "V4T000807",
+          "8": "V4T007563",
+          "9": "V4T004552",
+          "10": "V4T005445",
+          "11": "V4T000693",
+          "12": "V4T002010",
+          "13": "V4T007630",
+          "14": "V4T004083",
+          "15": "V4T007147"
+        },
+        "duration_seconds": 166,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.2,
+      "observe_ordinal": 224,
+      "now_utc": "2026-10-22T08:13:02Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.1958026250358671,
+      "stats": {
+        "planning_seconds": 0.1957719170022756,
+        "candidates": 400,
+        "visible_useful": 6472,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.09966052961204609,
+        "selected_exact_rate": 0.10060027776779155,
+        "phase_candidates": 14032,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          67,
+          61,
+          59,
+          57
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 7,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          617,
+          900,
+          1018
+        ],
+        "phase_build_seconds": 0.004813499981537461,
+        "phase_exact_seed_counts": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "phase_scan_seconds": 0.08581954101100564,
+        "phase_exact_seconds": 0.0033535421825945377,
+        "phase_geometry_target_pairs": 701600,
+        "choose_calls_total": 2,
+        "phase_calls_total": 2,
+        "phase_candidates_total": 26232,
+        "phase_exact_evaluations_total": 32,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 2
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 63.3618143,
+          "az_deg": 48.3876422
+        },
+        "assignments": {
+          "0": "V4T001682",
+          "1": "V4T007179",
+          "3": "V4T005196",
+          "4": "V4T008908",
+          "5": "V4T003907",
+          "6": "V4T002086",
+          "7": "V4T002060",
+          "8": "V4T007353",
+          "10": "V4T009130",
+          "11": "V4T000799",
+          "12": "V4T000146",
+          "13": "V4T005958",
+          "14": "V4T001427",
+          "15": "V4T005073"
+        },
+        "duration_seconds": 617,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.2,
+      "observe_ordinal": 224,
+      "now_utc": "2026-10-22T08:13:02Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.13147995807230473,
+      "stats": {
+        "planning_seconds": 0.13089295802637935,
+        "candidates": 400,
+        "visible_useful": 6472,
+        "anchors": 24,
+        "geometry_cells": 81967,
+        "geometry_sweep_seconds": 0.029198416974395514,
+        "geometry_exact": 7,
+        "geometry_improved": true,
+        "base_exact_rate": 0.09966052961204609,
+        "selected_exact_rate": 0.10044390618918055
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 62.9059673,
+          "az_deg": 44.4777001
+        },
+        "assignments": {
+          "0": "V4T009600",
+          "1": "V4T003514",
+          "2": "V4T000220",
+          "3": "V4T009135",
+          "4": "V4T006811",
+          "5": "V4T000550",
+          "6": "V4T002561",
+          "7": "V4T001682",
+          "8": "V4T008362",
+          "9": "V4T009591",
+          "10": "V4T007353",
+          "11": "V4T003907",
+          "12": "V4T007792",
+          "13": "V4T008084",
+          "14": "V4T001575",
+          "15": "V4T000146"
+        },
+        "duration_seconds": 617,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.4,
+      "observe_ordinal": 448,
+      "now_utc": "2026-10-28T08:25:28Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.13821137486957014,
+      "stats": {
+        "planning_seconds": 0.1381782500538975,
+        "candidates": 400,
+        "visible_useful": 4121,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.017926954141546273,
+        "selected_exact_rate": 0.018566903082876975,
+        "phase_candidates": 12696,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          69,
+          72,
+          72,
+          113
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 5,
+        "phase_durations": [
+          60,
+          120,
+          215,
+          240,
+          272
+        ],
+        "phase_build_seconds": 0.004552500089630485,
+        "phase_exact_seed_counts": [
+          11,
+          5,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.060770834097638726,
+        "phase_exact_seconds": 0.0027363328263163567,
+        "phase_geometry_target_pairs": 634800,
+        "choose_calls_total": 3,
+        "phase_calls_total": 3,
+        "phase_candidates_total": 38928,
+        "phase_exact_evaluations_total": 48,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 3
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 70.0943908,
+          "az_deg": 348.2458028
+        },
+        "assignments": {
+          "0": "V4T008969",
+          "1": "V4T002563",
+          "2": "V4T009150",
+          "3": "V4T005538",
+          "4": "V4T006583",
+          "5": "V4T003820",
+          "6": "V4T007602",
+          "7": "V4T007245",
+          "8": "V4T008203",
+          "9": "V4T006545",
+          "11": "V4T002523",
+          "12": "V4T001713",
+          "13": "V4T003457",
+          "14": "V4T000576"
+        },
+        "duration_seconds": 191,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.4,
+      "observe_ordinal": 448,
+      "now_utc": "2026-10-28T08:25:28Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.09676379221491516,
+      "stats": {
+        "planning_seconds": 0.09596791607327759,
+        "candidates": 400,
+        "visible_useful": 4121,
+        "anchors": 24,
+        "geometry_cells": 98235,
+        "geometry_sweep_seconds": 0.025689959060400724,
+        "geometry_exact": 4,
+        "geometry_improved": true,
+        "base_exact_rate": 0.017926954141546273,
+        "selected_exact_rate": 0.018795786071314945
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.9013667,
+          "az_deg": 348.9852247
+        },
+        "assignments": {
+          "0": "V4T005398",
+          "1": "V4T002563",
+          "2": "V4T009150",
+          "3": "V4T005538",
+          "4": "V4T008969",
+          "5": "V4T003820",
+          "6": "V4T007245",
+          "7": "V4T004267",
+          "8": "V4T006583",
+          "9": "V4T002899",
+          "10": "V4T006574",
+          "11": "V4T002523",
+          "12": "V4T001713",
+          "13": "V4T000576",
+          "15": "V4T001913"
+        },
+        "duration_seconds": 215,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.6,
+      "observe_ordinal": 671,
+      "now_utc": "2026-11-03T00:39:14Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2216369998641312,
+      "stats": {
+        "planning_seconds": 0.22160924994386733,
+        "candidates": 400,
+        "visible_useful": 4393,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.008552891055156818,
+        "selected_exact_rate": 0.008954527630191767,
+        "phase_candidates": 13289,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          96,
+          101,
+          95,
+          99
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1307,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004542832961305976,
+        "phase_exact_seed_counts": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "phase_scan_seconds": 0.0947931669652462,
+        "phase_exact_seconds": 0.004652458010241389,
+        "phase_geometry_target_pairs": 664450,
+        "choose_calls_total": 4,
+        "phase_calls_total": 4,
+        "phase_candidates_total": 52217,
+        "phase_exact_evaluations_total": 64,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 4
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 68.7937933,
+          "az_deg": 81.0938582
+        },
+        "assignments": {
+          "0": "V4T005437",
+          "2": "V4T002227",
+          "3": "V4T003879",
+          "4": "V4T004658",
+          "5": "V4T008602",
+          "7": "V4T004796",
+          "8": "V4T003720",
+          "9": "V4T002655",
+          "10": "V4T008090",
+          "11": "V4T001163",
+          "12": "V4T007686",
+          "13": "V4T007403",
+          "14": "V4T003012",
+          "15": "V4T005564"
+        },
+        "duration_seconds": 694,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.6,
+      "observe_ordinal": 671,
+      "now_utc": "2026-11-03T00:39:14Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.18148083286359906,
+      "stats": {
+        "planning_seconds": 0.18095129099674523,
+        "candidates": 400,
+        "visible_useful": 4393,
+        "anchors": 24,
+        "geometry_cells": 197048,
+        "geometry_sweep_seconds": 0.06382641708478332,
+        "geometry_exact": 16,
+        "geometry_improved": true,
+        "base_exact_rate": 0.008552891055156818,
+        "selected_exact_rate": 0.009304032576482995
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 76.724755,
+          "az_deg": 47.692342
+        },
+        "assignments": {
+          "0": "V4T001425",
+          "1": "V4T009079",
+          "2": "V4T001821",
+          "3": "V4T009210",
+          "4": "V4T007270",
+          "5": "V4T001927",
+          "6": "V4T001999",
+          "7": "V4T002584",
+          "8": "V4T007581",
+          "9": "V4T008834",
+          "10": "V4T007981",
+          "11": "V4T004931",
+          "12": "V4T000524",
+          "13": "V4T007899",
+          "14": "V4T002096"
+        },
+        "duration_seconds": 638,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.8,
+      "observe_ordinal": 895,
+      "now_utc": "2026-11-11T08:13:57Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.0638567500282079,
+      "stats": {
+        "planning_seconds": 0.06382841616868973,
+        "candidates": 400,
+        "visible_useful": 840,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.009396817313212215,
+        "selected_exact_rate": 0.010515757443669189,
+        "phase_candidates": 6951,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          23,
+          26,
+          20,
+          23
+        ],
+        "phase_full_local_counts": [
+          23,
+          26,
+          20,
+          23
+        ],
+        "phase_boundary_counts": [
+          16,
+          17,
+          17,
+          18
+        ],
+        "phase_duration_count": 2,
+        "phase_durations": [
+          60,
+          63
+        ],
+        "phase_build_seconds": 0.002631208160892129,
+        "phase_exact_seed_counts": [
+          5,
+          4,
+          0,
+          7
+        ],
+        "phase_scan_seconds": 0.009498499799519777,
+        "phase_exact_seconds": 0.0021027091424912214,
+        "phase_geometry_target_pairs": 159627,
+        "choose_calls_total": 5,
+        "phase_calls_total": 5,
+        "phase_candidates_total": 59168,
+        "phase_exact_evaluations_total": 80,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 5
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 41.1650221,
+          "az_deg": 204.9427724
+        },
+        "assignments": {
+          "0": "V4T001161",
+          "1": "V4T004230",
+          "2": "V4T005022",
+          "3": "V4T005097",
+          "6": "V4T009043",
+          "7": "V4T001524",
+          "8": "V4T002634",
+          "10": "V4T007152",
+          "12": "V4T004508",
+          "13": "V4T003960",
+          "14": "V4T008690",
+          "15": "V4T000459"
+        },
+        "duration_seconds": 63,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.8,
+      "observe_ordinal": 895,
+      "now_utc": "2026-11-11T08:13:57Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.05465012486092746,
+      "stats": {
+        "planning_seconds": 0.05412237509153783,
+        "candidates": 400,
+        "visible_useful": 840,
+        "anchors": 24,
+        "geometry_cells": 11371,
+        "geometry_sweep_seconds": 0.00382254202850163,
+        "geometry_exact": 4,
+        "geometry_improved": true,
+        "base_exact_rate": 0.009396817313212215,
+        "selected_exact_rate": 0.010515757443669189
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 41.1656147,
+          "az_deg": 204.9448807
+        },
+        "assignments": {
+          "0": "V4T001161",
+          "1": "V4T004230",
+          "2": "V4T005022",
+          "3": "V4T005097",
+          "6": "V4T009043",
+          "7": "V4T001524",
+          "8": "V4T002634",
+          "10": "V4T007152",
+          "12": "V4T004508",
+          "13": "V4T003960",
+          "14": "V4T008690",
+          "15": "V4T000459"
+        },
+        "duration_seconds": 63,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.98,
+      "observe_ordinal": 1097,
+      "now_utc": "2026-11-23T08:01:06Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.12922220793552697,
+      "stats": {
+        "planning_seconds": 0.12918616691604257,
+        "candidates": 400,
+        "visible_useful": 2067,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.00704707188942295,
+        "selected_exact_rate": 0.008629977272645419,
+        "phase_candidates": 11831,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          33,
+          33,
+          39
+        ],
+        "phase_full_local_counts": [
+          71,
+          33,
+          33,
+          39
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          23,
+          24
+        ],
+        "phase_duration_count": 6,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          505,
+          834
+        ],
+        "phase_build_seconds": 0.004053958924487233,
+        "phase_exact_seed_counts": [
+          0,
+          16,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.05384420813061297,
+        "phase_exact_seconds": 0.002787417033687234,
+        "phase_geometry_target_pairs": 457919,
+        "choose_calls_total": 6,
+        "phase_calls_total": 6,
+        "phase_candidates_total": 70999,
+        "phase_exact_evaluations_total": 96,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 6
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.7365825,
+          "az_deg": 302.5927009
+        },
+        "assignments": {
+          "0": "V4T004338",
+          "1": "V4T001586",
+          "2": "V4T001456",
+          "4": "V4T006379",
+          "5": "V4T002802",
+          "6": "V4T007595",
+          "7": "V4T000737",
+          "8": "V4T000594",
+          "10": "V4T000757",
+          "11": "V4T001662",
+          "12": "V4T000520",
+          "13": "V4T005053",
+          "14": "V4T002701",
+          "15": "V4T007148"
+        },
+        "duration_seconds": 834,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "beta",
+      "fraction": 0.98,
+      "observe_ordinal": 1097,
+      "now_utc": "2026-11-23T08:01:06Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.09381516696885228,
+      "stats": {
+        "planning_seconds": 0.09304404212161899,
+        "candidates": 400,
+        "visible_useful": 2067,
+        "anchors": 24,
+        "geometry_cells": 74450,
+        "geometry_sweep_seconds": 0.020913457963615656,
+        "geometry_exact": 19,
+        "geometry_improved": true,
+        "base_exact_rate": 0.00704707188942295,
+        "selected_exact_rate": 0.008629977272645419
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.7479195,
+          "az_deg": 302.5926281
+        },
+        "assignments": {
+          "0": "V4T004338",
+          "1": "V4T001586",
+          "2": "V4T001456",
+          "4": "V4T006379",
+          "5": "V4T002802",
+          "6": "V4T007595",
+          "7": "V4T000737",
+          "8": "V4T000594",
+          "10": "V4T000757",
+          "11": "V4T001662",
+          "12": "V4T000520",
+          "13": "V4T005053",
+          "14": "V4T002701",
+          "15": "V4T007148"
+        },
+        "duration_seconds": 834,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-10T00:15:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.21028545801527798,
+      "stats": {
+        "planning_seconds": 0.21026437520049512,
+        "candidates": 400,
+        "visible_useful": 3399,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": false,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 1.3157680905832794,
+        "selected_exact_rate": 1.3157680905832794,
+        "phase_candidates": 12204,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          130,
+          134,
+          133,
+          128
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          80,
+          120,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004276083083823323,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08466649986803532,
+        "phase_exact_seconds": 0.00589183415286243,
+        "phase_geometry_target_pairs": 610200,
+        "choose_calls_total": 1,
+        "phase_calls_total": 1,
+        "phase_candidates_total": 12204,
+        "phase_exact_evaluations_total": 16,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 0
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.6026372,
+          "az_deg": 61.432064
+        },
+        "assignments": {
+          "0": "V4T006675",
+          "1": "V4T007161",
+          "2": "V4T002834",
+          "3": "V4T009527",
+          "4": "V4T007721",
+          "5": "V4T008865",
+          "6": "V4T001552",
+          "7": "V4T007030",
+          "8": "V4T003496",
+          "9": "V4T001094",
+          "10": "V4T004621",
+          "11": "V4T004657",
+          "12": "V4T000660",
+          "13": "V4T000099",
+          "14": "V4T006171",
+          "15": "V4T006856"
+        },
+        "duration_seconds": 80,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-10T00:15:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.2476979170460254,
+      "stats": {
+        "planning_seconds": 0.2471324170473963,
+        "candidates": 400,
+        "visible_useful": 3399,
+        "anchors": 24,
+        "geometry_cells": 385890,
+        "geometry_sweep_seconds": 0.12272854102775455,
+        "geometry_exact": 16,
+        "geometry_improved": true,
+        "base_exact_rate": 1.3157680905832794,
+        "selected_exact_rate": 1.316076243681374
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 69.5385906,
+          "az_deg": 61.4425231
+        },
+        "assignments": {
+          "0": "V4T006675",
+          "1": "V4T007161",
+          "2": "V4T002834",
+          "3": "V4T009527",
+          "4": "V4T007721",
+          "5": "V4T008865",
+          "6": "V4T001552",
+          "7": "V4T007030",
+          "8": "V4T003496",
+          "9": "V4T001094",
+          "10": "V4T004621",
+          "11": "V4T004657",
+          "12": "V4T000660",
+          "13": "V4T000099",
+          "14": "V4T006171",
+          "15": "V4T006944"
+        },
+        "duration_seconds": 80,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.2,
+      "observe_ordinal": 221,
+      "now_utc": "2026-10-13T08:43:44Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.10736804199405015,
+      "stats": {
+        "planning_seconds": 0.10733720799908042,
+        "candidates": 400,
+        "visible_useful": 4525,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.02788824288647943,
+        "selected_exact_rate": 0.0279948074760012,
+        "phase_candidates": 13671,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          80,
+          94,
+          88,
+          90
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 2,
+        "phase_durations": [
+          60,
+          76
+        ],
+        "phase_build_seconds": 0.00468879216350615,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.034318999852985144,
+        "phase_exact_seconds": 0.0026864169631153345,
+        "phase_geometry_target_pairs": 683550,
+        "choose_calls_total": 2,
+        "phase_calls_total": 2,
+        "phase_candidates_total": 25875,
+        "phase_exact_evaluations_total": 32,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 1
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 64.9065011,
+          "az_deg": 340.860709
+        },
+        "assignments": {
+          "0": "V4T007294",
+          "1": "V4T002708",
+          "2": "V4T006044",
+          "3": "V4T004522",
+          "4": "V4T008212",
+          "5": "V4T002316",
+          "6": "V4T008117",
+          "7": "V4T004055",
+          "8": "V4T001347",
+          "9": "V4T005929",
+          "10": "V4T007169",
+          "11": "V4T004832",
+          "12": "V4T007316",
+          "13": "V4T003168",
+          "14": "V4T005719",
+          "15": "V4T006870"
+        },
+        "duration_seconds": 60,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.2,
+      "observe_ordinal": 221,
+      "now_utc": "2026-10-13T08:43:44Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.0837839578744024,
+      "stats": {
+        "planning_seconds": 0.08319924981333315,
+        "candidates": 400,
+        "visible_useful": 4525,
+        "anchors": 24,
+        "geometry_cells": 175546,
+        "geometry_sweep_seconds": 0.019646584056317806,
+        "geometry_exact": 3,
+        "geometry_improved": true,
+        "base_exact_rate": 0.02788824288647943,
+        "selected_exact_rate": 0.028912773880453133
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 58.3280692,
+          "az_deg": 207.2806193
+        },
+        "assignments": {
+          "0": "V4T001892",
+          "1": "V4T001407",
+          "2": "V4T004125",
+          "3": "V4T004231",
+          "4": "V4T007611",
+          "5": "V4T008955",
+          "6": "V4T000997",
+          "7": "V4T003480",
+          "8": "V4T003185",
+          "9": "V4T002586",
+          "10": "V4T008495",
+          "11": "V4T007976",
+          "13": "V4T006933",
+          "14": "V4T002878",
+          "15": "V4T003598"
+        },
+        "duration_seconds": 60,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.4,
+      "observe_ordinal": 442,
+      "now_utc": "2026-10-20T06:30:27Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.22407791716977954,
+      "stats": {
+        "planning_seconds": 0.2240555000025779,
+        "candidates": 400,
+        "visible_useful": 5824,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": false,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.0154026903113876,
+        "selected_exact_rate": 0.0154026903113876,
+        "phase_candidates": 13636,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          95,
+          88,
+          133,
+          104
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          140,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.0047912499867379665,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.09636275004595518,
+        "phase_exact_seconds": 0.004558375105261803,
+        "phase_geometry_target_pairs": 681800,
+        "choose_calls_total": 3,
+        "phase_calls_total": 3,
+        "phase_candidates_total": 39511,
+        "phase_exact_evaluations_total": 48,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 1
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 58.5031708,
+          "az_deg": 191.9829477
+        },
+        "assignments": {
+          "0": "V4T004244",
+          "1": "V4T005284",
+          "2": "V4T001998",
+          "4": "V4T002575",
+          "5": "V4T006064",
+          "6": "V4T003146",
+          "7": "V4T002030",
+          "9": "V4T009198",
+          "10": "V4T008149",
+          "11": "V4T006244",
+          "13": "V4T006038",
+          "14": "V4T009249",
+          "15": "V4T002148"
+        },
+        "duration_seconds": 140,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.4,
+      "observe_ordinal": 442,
+      "now_utc": "2026-10-20T06:30:27Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.1726150829344988,
+      "stats": {
+        "planning_seconds": 0.1725963749922812,
+        "candidates": 400,
+        "visible_useful": 5824,
+        "anchors": 24,
+        "geometry_cells": 154116,
+        "geometry_sweep_seconds": 0.049960208125412464,
+        "geometry_exact": 20,
+        "geometry_improved": false,
+        "base_exact_rate": 0.0154026903113876,
+        "selected_exact_rate": 0.0154026903113876
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 58.5031708,
+          "az_deg": 191.9829477
+        },
+        "assignments": {
+          "0": "V4T004244",
+          "1": "V4T005284",
+          "2": "V4T001998",
+          "4": "V4T002575",
+          "5": "V4T006064",
+          "6": "V4T003146",
+          "7": "V4T002030",
+          "9": "V4T009198",
+          "10": "V4T008149",
+          "11": "V4T006244",
+          "13": "V4T006038",
+          "14": "V4T009249",
+          "15": "V4T002148"
+        },
+        "duration_seconds": 140,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.6,
+      "observe_ordinal": 664,
+      "now_utc": "2026-10-25T01:58:06Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20992137514986098,
+      "stats": {
+        "planning_seconds": 0.20986958406865597,
+        "candidates": 400,
+        "visible_useful": 4886,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.009363577363195295,
+        "selected_exact_rate": 0.01051111769916609,
+        "phase_candidates": 12942,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          41,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          41,
+          99,
+          128,
+          88
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          945,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.00454720901325345,
+        "phase_exact_seed_counts": [
+          0,
+          16,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08429316617548466,
+        "phase_exact_seconds": 0.004692416870966554,
+        "phase_geometry_target_pairs": 614430,
+        "choose_calls_total": 4,
+        "phase_calls_total": 4,
+        "phase_candidates_total": 52453,
+        "phase_exact_evaluations_total": 64,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 2
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 73.6650004,
+          "az_deg": 246.0034176
+        },
+        "assignments": {
+          "0": "V4T009615",
+          "1": "V4T009846",
+          "2": "V4T006328",
+          "3": "V4T004633",
+          "4": "V4T007066",
+          "5": "V4T009204",
+          "6": "V4T006313",
+          "7": "V4T000531",
+          "8": "V4T006779",
+          "9": "V4T000936",
+          "10": "V4T006924",
+          "11": "V4T009376",
+          "12": "V4T000570",
+          "13": "V4T006894",
+          "14": "V4T006739",
+          "15": "V4T007087"
+        },
+        "duration_seconds": 855,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.6,
+      "observe_ordinal": 664,
+      "now_utc": "2026-10-25T01:58:06Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.1629244580399245,
+      "stats": {
+        "planning_seconds": 0.16208445909433067,
+        "candidates": 400,
+        "visible_useful": 4886,
+        "anchors": 24,
+        "geometry_cells": 115181,
+        "geometry_sweep_seconds": 0.04108533402904868,
+        "geometry_exact": 14,
+        "geometry_improved": true,
+        "base_exact_rate": 0.009363577363195295,
+        "selected_exact_rate": 0.010725100154956362
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 73.6710488,
+          "az_deg": 246.0699787
+        },
+        "assignments": {
+          "0": "V4T009615",
+          "1": "V4T009846",
+          "2": "V4T006328",
+          "3": "V4T004633",
+          "4": "V4T007066",
+          "5": "V4T009204",
+          "6": "V4T006313",
+          "7": "V4T000554",
+          "8": "V4T006779",
+          "9": "V4T000936",
+          "10": "V4T006924",
+          "11": "V4T009376",
+          "12": "V4T000570",
+          "13": "V4T006894",
+          "14": "V4T006739",
+          "15": "V4T007087"
+        },
+        "duration_seconds": 854,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.8,
+      "observe_ordinal": 885,
+      "now_utc": "2026-11-03T07:24:12Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2143536249641329,
+      "stats": {
+        "planning_seconds": 0.21431962493807077,
+        "candidates": 400,
+        "visible_useful": 5438,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.008975060649143501,
+        "selected_exact_rate": 0.009129596152481295,
+        "phase_candidates": 12672,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          105,
+          97,
+          164,
+          137
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          806,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004439834039658308,
+        "phase_exact_seed_counts": [
+          16,
+          0,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08737979084253311,
+        "phase_exact_seconds": 0.00498075014911592,
+        "phase_geometry_target_pairs": 633600,
+        "choose_calls_total": 5,
+        "phase_calls_total": 5,
+        "phase_candidates_total": 65125,
+        "phase_exact_evaluations_total": 80,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 3
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 74.1985429,
+          "az_deg": 21.5383966
+        },
+        "assignments": {
+          "0": "V4T008358",
+          "1": "V4T009815",
+          "2": "V4T005242",
+          "3": "V4T001881",
+          "4": "V4T006901",
+          "5": "V4T005027",
+          "6": "V4T008087",
+          "7": "V4T006031",
+          "8": "V4T001548",
+          "9": "V4T006521",
+          "10": "V4T009593",
+          "11": "V4T007349",
+          "12": "V4T004944",
+          "13": "V4T003666",
+          "14": "V4T007131",
+          "15": "V4T006674"
+        },
+        "duration_seconds": 807,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.8,
+      "observe_ordinal": 885,
+      "now_utc": "2026-11-03T07:24:12Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.21314712497405708,
+      "stats": {
+        "planning_seconds": 0.21239045914262533,
+        "candidates": 400,
+        "visible_useful": 5438,
+        "anchors": 24,
+        "geometry_cells": 261239,
+        "geometry_sweep_seconds": 0.08987595792859793,
+        "geometry_exact": 18,
+        "geometry_improved": true,
+        "base_exact_rate": 0.008975060649143501,
+        "selected_exact_rate": 0.009129596152481295
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 74.1971169,
+          "az_deg": 21.5291297
+        },
+        "assignments": {
+          "0": "V4T008358",
+          "1": "V4T009815",
+          "2": "V4T005242",
+          "3": "V4T001881",
+          "4": "V4T006901",
+          "5": "V4T005027",
+          "6": "V4T008087",
+          "7": "V4T006031",
+          "8": "V4T001548",
+          "9": "V4T006521",
+          "10": "V4T009593",
+          "11": "V4T007349",
+          "12": "V4T004944",
+          "13": "V4T003666",
+          "14": "V4T007131",
+          "15": "V4T006674"
+        },
+        "duration_seconds": 807,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.98,
+      "observe_ordinal": 1084,
+      "now_utc": "2026-11-15T05:58:12Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20960458414629102,
+      "stats": {
+        "planning_seconds": 0.20957150007598102,
+        "candidates": 400,
+        "visible_useful": 5231,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.007389500375240155,
+        "selected_exact_rate": 0.0081871717327199,
+        "phase_candidates": 11987,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          98,
+          77,
+          125,
+          98
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1626,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004458375042304397,
+        "phase_exact_seed_counts": [
+          0,
+          16,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08306441595777869,
+        "phase_exact_seconds": 0.004870374919846654,
+        "phase_geometry_target_pairs": 599350,
+        "choose_calls_total": 6,
+        "phase_calls_total": 6,
+        "phase_candidates_total": 77112,
+        "phase_exact_evaluations_total": 96,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 4
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 71.3141021,
+          "az_deg": 8.0295531
+        },
+        "assignments": {
+          "0": "V4T004943",
+          "1": "V4T000352",
+          "2": "V4T007415",
+          "3": "V4T006806",
+          "4": "V4T007444",
+          "5": "V4T008849",
+          "6": "V4T005455",
+          "7": "V4T002833",
+          "8": "V4T008511",
+          "9": "V4T005511",
+          "10": "V4T009759",
+          "12": "V4T004705",
+          "14": "V4T000304",
+          "15": "V4T002972"
+        },
+        "duration_seconds": 1737,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "gamma",
+      "fraction": 0.98,
+      "observe_ordinal": 1084,
+      "now_utc": "2026-11-15T05:58:12Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.17773641599342227,
+      "stats": {
+        "planning_seconds": 0.17713249986991286,
+        "candidates": 400,
+        "visible_useful": 5231,
+        "anchors": 24,
+        "geometry_cells": 179261,
+        "geometry_sweep_seconds": 0.05606412515044212,
+        "geometry_exact": 20,
+        "geometry_improved": true,
+        "base_exact_rate": 0.007389500375240155,
+        "selected_exact_rate": 0.008186848361984411
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 71.3345124,
+          "az_deg": 8.0772168
+        },
+        "assignments": {
+          "0": "V4T004943",
+          "1": "V4T000352",
+          "2": "V4T007415",
+          "3": "V4T006806",
+          "4": "V4T007444",
+          "5": "V4T008849",
+          "6": "V4T005455",
+          "7": "V4T002833",
+          "8": "V4T008511",
+          "9": "V4T005511",
+          "10": "V4T009759",
+          "12": "V4T004705",
+          "14": "V4T000304",
+          "15": "V4T002972"
+        },
+        "duration_seconds": 1738,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-25T00:15:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20350033300928771,
+      "stats": {
+        "planning_seconds": 0.20347995893098414,
+        "candidates": 400,
+        "visible_useful": 3247,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": false,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 1.0076143538595537,
+        "selected_exact_rate": 1.0076143538595537,
+        "phase_candidates": 12707,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          81,
+          82,
+          85,
+          80
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          103,
+          120,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004355167038738728,
+        "phase_exact_seed_counts": [
+          0,
+          0,
+          16,
+          0
+        ],
+        "phase_scan_seconds": 0.08849683287553489,
+        "phase_exact_seconds": 0.00482537504285574,
+        "phase_geometry_target_pairs": 635350,
+        "choose_calls_total": 1,
+        "phase_calls_total": 1,
+        "phase_candidates_total": 12707,
+        "phase_exact_evaluations_total": 16,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 0
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 41.7428998,
+          "az_deg": 88.0286507
+        },
+        "assignments": {
+          "0": "V4T000839",
+          "1": "V4T002094",
+          "2": "V4T000999",
+          "3": "V4T007266",
+          "4": "V4T004412",
+          "5": "V4T001750",
+          "6": "V4T005781",
+          "7": "V4T002411",
+          "8": "V4T000482",
+          "9": "V4T005109",
+          "10": "V4T001177",
+          "11": "V4T009031",
+          "12": "V4T008585",
+          "13": "V4T003220",
+          "14": "V4T001001",
+          "15": "V4T004271"
+        },
+        "duration_seconds": 103,
+        "program": "BRIGHT"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0,
+      "observe_ordinal": 0,
+      "now_utc": "2026-10-25T00:15:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.16682074987329543,
+      "stats": {
+        "planning_seconds": 0.16680433391593397,
+        "candidates": 400,
+        "visible_useful": 3247,
+        "anchors": 24,
+        "geometry_cells": 173294,
+        "geometry_sweep_seconds": 0.05854983301833272,
+        "geometry_exact": 6,
+        "geometry_improved": false,
+        "base_exact_rate": 1.0076143538595537,
+        "selected_exact_rate": 1.0076143538595537
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 41.7428998,
+          "az_deg": 88.0286507
+        },
+        "assignments": {
+          "0": "V4T000839",
+          "1": "V4T002094",
+          "2": "V4T000999",
+          "3": "V4T007266",
+          "4": "V4T004412",
+          "5": "V4T001750",
+          "6": "V4T005781",
+          "7": "V4T002411",
+          "8": "V4T000482",
+          "9": "V4T005109",
+          "10": "V4T001177",
+          "11": "V4T009031",
+          "12": "V4T008585",
+          "13": "V4T003220",
+          "14": "V4T001001",
+          "15": "V4T004271"
+        },
+        "duration_seconds": 103,
+        "program": "BRIGHT"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.2,
+      "observe_ordinal": 219,
+      "now_utc": "2026-10-27T07:19:46Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.20813675015233457,
+      "stats": {
+        "planning_seconds": 0.2081032081041485,
+        "candidates": 400,
+        "visible_useful": 6646,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.2892036592611838,
+        "selected_exact_rate": 0.2915934659662005,
+        "phase_candidates": 15064,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          55,
+          52,
+          51,
+          51
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          187,
+          240,
+          400,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.00511895795352757,
+        "phase_exact_seed_counts": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "phase_scan_seconds": 0.10718875005841255,
+        "phase_exact_seconds": 0.0034954578150063753,
+        "phase_geometry_target_pairs": 753200,
+        "choose_calls_total": 2,
+        "phase_calls_total": 2,
+        "phase_candidates_total": 27771,
+        "phase_exact_evaluations_total": 32,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 1
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 52.111681,
+          "az_deg": 86.3474737
+        },
+        "assignments": {
+          "0": "V4T003542",
+          "1": "V4T007512",
+          "2": "V4T004297",
+          "3": "V4T003529",
+          "4": "V4T004448",
+          "6": "V4T002880",
+          "7": "V4T003790",
+          "8": "V4T002564",
+          "9": "V4T005176",
+          "10": "V4T002802",
+          "11": "V4T001132",
+          "12": "V4T005812",
+          "13": "V4T005054",
+          "14": "V4T005862",
+          "15": "V4T002801"
+        },
+        "duration_seconds": 187,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.2,
+      "observe_ordinal": 219,
+      "now_utc": "2026-10-27T07:19:46Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.12902579200454056,
+      "stats": {
+        "planning_seconds": 0.12831333302892745,
+        "candidates": 400,
+        "visible_useful": 6646,
+        "anchors": 24,
+        "geometry_cells": 68262,
+        "geometry_sweep_seconds": 0.029351332923397422,
+        "geometry_exact": 14,
+        "geometry_improved": true,
+        "base_exact_rate": 0.2892036592611838,
+        "selected_exact_rate": 0.2910116207200519
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 52.1236327,
+          "az_deg": 84.9519206
+        },
+        "assignments": {
+          "0": "V4T006156",
+          "1": "V4T001735",
+          "3": "V4T004297",
+          "4": "V4T008503",
+          "5": "V4T009328",
+          "6": "V4T004448",
+          "7": "V4T002880",
+          "8": "V4T001249",
+          "9": "V4T002564",
+          "10": "V4T005176",
+          "11": "V4T002802",
+          "12": "V4T000241",
+          "13": "V4T005812",
+          "14": "V4T006219",
+          "15": "V4T005862"
+        },
+        "duration_seconds": 187,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.4,
+      "observe_ordinal": 438,
+      "now_utc": "2026-11-04T01:15:00Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2173961668740958,
+      "stats": {
+        "planning_seconds": 0.2173667079769075,
+        "candidates": 400,
+        "visible_useful": 4269,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.01725316235605339,
+        "selected_exact_rate": 0.017839210625168696,
+        "phase_candidates": 12321,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          46,
+          50,
+          50,
+          50
+        ],
+        "phase_full_local_counts": [
+          46,
+          50,
+          52,
+          53
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          900,
+          1800,
+          3484,
+          3600
+        ],
+        "phase_build_seconds": 0.004271374782547355,
+        "phase_exact_seed_counts": [
+          0,
+          16,
+          0,
+          0
+        ],
+        "phase_scan_seconds": 0.08440854214131832,
+        "phase_exact_seconds": 0.004140916047617793,
+        "phase_geometry_target_pairs": 605646,
+        "choose_calls_total": 3,
+        "phase_calls_total": 3,
+        "phase_candidates_total": 40092,
+        "phase_exact_evaluations_total": 48,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 2
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 67.3015989,
+          "az_deg": 20.2253457
+        },
+        "assignments": {
+          "1": "V4T001721",
+          "2": "V4T004283",
+          "3": "V4T008349",
+          "5": "V4T002054",
+          "6": "V4T007141",
+          "7": "V4T005559",
+          "8": "V4T003448",
+          "11": "V4T001296",
+          "12": "V4T005112",
+          "13": "V4T002116",
+          "15": "V4T000319"
+        },
+        "duration_seconds": 3484,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.4,
+      "observe_ordinal": 438,
+      "now_utc": "2026-11-04T01:15:00Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.1635239168535918,
+      "stats": {
+        "planning_seconds": 0.16298608295619488,
+        "candidates": 400,
+        "visible_useful": 4269,
+        "anchors": 24,
+        "geometry_cells": 65066,
+        "geometry_sweep_seconds": 0.026552208000794053,
+        "geometry_exact": 18,
+        "geometry_improved": true,
+        "base_exact_rate": 0.01725316235605339,
+        "selected_exact_rate": 0.017839210625168696
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 67.317238,
+          "az_deg": 20.1625085
+        },
+        "assignments": {
+          "1": "V4T001721",
+          "2": "V4T004283",
+          "3": "V4T008349",
+          "5": "V4T002054",
+          "6": "V4T007141",
+          "7": "V4T005559",
+          "8": "V4T003448",
+          "11": "V4T001296",
+          "12": "V4T005112",
+          "13": "V4T002116",
+          "15": "V4T000319"
+        },
+        "duration_seconds": 3484,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.6,
+      "observe_ordinal": 657,
+      "now_utc": "2026-11-12T01:13:41Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.21069137495942414,
+      "stats": {
+        "planning_seconds": 0.21046604099683464,
+        "candidates": 400,
+        "visible_useful": 4587,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.009888669594498578,
+        "selected_exact_rate": 0.009937855240291633,
+        "phase_candidates": 11985,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          50,
+          50,
+          50,
+          30
+        ],
+        "phase_full_local_counts": [
+          87,
+          170,
+          181,
+          30
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          21
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          421,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004344375105574727,
+        "phase_exact_seed_counts": [
+          13,
+          0,
+          0,
+          3
+        ],
+        "phase_scan_seconds": 0.07670358289033175,
+        "phase_exact_seconds": 0.0042856670916080475,
+        "phase_geometry_target_pairs": 545190,
+        "choose_calls_total": 4,
+        "phase_calls_total": 4,
+        "phase_candidates_total": 52077,
+        "phase_exact_evaluations_total": 64,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 3
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 67.8705468,
+          "az_deg": 72.3058348
+        },
+        "assignments": {
+          "0": "V4T002509",
+          "1": "V4T004163",
+          "2": "V4T006018",
+          "3": "V4T006005",
+          "4": "V4T001052",
+          "5": "V4T001373",
+          "6": "V4T005666",
+          "7": "V4T001903",
+          "11": "V4T008956",
+          "12": "V4T005976",
+          "13": "V4T002363",
+          "14": "V4T007637",
+          "15": "V4T007646"
+        },
+        "duration_seconds": 375,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.6,
+      "observe_ordinal": 657,
+      "now_utc": "2026-11-12T01:13:41Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.2727769168559462,
+      "stats": {
+        "planning_seconds": 0.2727557918988168,
+        "candidates": 400,
+        "visible_useful": 4587,
+        "anchors": 24,
+        "geometry_cells": 451598,
+        "geometry_sweep_seconds": 0.14668879215605557,
+        "geometry_exact": 19,
+        "geometry_improved": false,
+        "base_exact_rate": 0.009888669594498578,
+        "selected_exact_rate": 0.009888669594498578
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 85.6254726,
+          "az_deg": 145.8318371
+        },
+        "assignments": {
+          "0": "V4T000423",
+          "2": "V4T001997",
+          "3": "V4T001995",
+          "5": "V4T000565",
+          "6": "V4T006285",
+          "7": "V4T009118",
+          "8": "V4T001782",
+          "10": "V4T003601",
+          "11": "V4T006467",
+          "12": "V4T003937",
+          "13": "V4T002300",
+          "14": "V4T006048"
+        },
+        "duration_seconds": 421,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.8,
+      "observe_ordinal": 876,
+      "now_utc": "2026-11-20T01:47:34Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.2273194578010589,
+      "stats": {
+        "planning_seconds": 0.22728858282789588,
+        "candidates": 400,
+        "visible_useful": 4849,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.007240306928745741,
+        "selected_exact_rate": 0.00808175191790252,
+        "phase_candidates": 15557,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          42,
+          50,
+          48,
+          50
+        ],
+        "phase_full_local_counts": [
+          42,
+          53,
+          48,
+          53
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          819,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.0052809580229222775,
+        "phase_exact_seed_counts": [
+          8,
+          6,
+          2,
+          0
+        ],
+        "phase_scan_seconds": 0.1037583330180496,
+        "phase_exact_seconds": 0.002994624897837639,
+        "phase_geometry_target_pairs": 738168,
+        "choose_calls_total": 5,
+        "phase_calls_total": 5,
+        "phase_candidates_total": 67634,
+        "phase_exact_evaluations_total": 80,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 4
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.5322685,
+          "az_deg": 155.0737124
+        },
+        "assignments": {
+          "0": "V4T008862",
+          "1": "V4T003636",
+          "3": "V4T002918",
+          "5": "V4T006226",
+          "7": "V4T005340",
+          "8": "V4T002488",
+          "10": "V4T009268",
+          "11": "V4T002914",
+          "12": "V4T002055",
+          "13": "V4T004200",
+          "14": "V4T000551",
+          "15": "V4T005056"
+        },
+        "duration_seconds": 1006,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.8,
+      "observe_ordinal": 876,
+      "now_utc": "2026-11-20T01:47:34Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.13276383304037154,
+      "stats": {
+        "planning_seconds": 0.13202637480571866,
+        "candidates": 400,
+        "visible_useful": 4849,
+        "anchors": 24,
+        "geometry_cells": 49436,
+        "geometry_sweep_seconds": 0.021246250020340085,
+        "geometry_exact": 16,
+        "geometry_improved": true,
+        "base_exact_rate": 0.007240306928745741,
+        "selected_exact_rate": 0.008598511150298522
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 50.4448181,
+          "az_deg": 155.3405825
+        },
+        "assignments": {
+          "0": "V4T003636",
+          "2": "V4T007448",
+          "3": "V4T002918",
+          "4": "V4T008862",
+          "5": "V4T006226",
+          "7": "V4T005340",
+          "8": "V4T002488",
+          "9": "V4T009268",
+          "10": "V4T002201",
+          "11": "V4T002914",
+          "12": "V4T001840",
+          "13": "V4T004200",
+          "14": "V4T000551",
+          "15": "V4T005056"
+        },
+        "duration_seconds": 1006,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.98,
+      "observe_ordinal": 1073,
+      "now_utc": "2026-12-01T01:19:20Z",
+      "kernel": "cpu_phase",
+      "elapsed_seconds": 0.18583341711200774,
+      "stats": {
+        "planning_seconds": 0.18580512516200542,
+        "candidates": 400,
+        "visible_useful": 4631,
+        "anchors": 24,
+        "cpu_phase_mode": "phase",
+        "phase_fixed_workload": true,
+        "phase_improved": true,
+        "phase_exact_evaluations": 16,
+        "phase_emergency_triggered": false,
+        "base_exact_rate": 0.012509561317604095,
+        "selected_exact_rate": 0.015888002443613467,
+        "phase_candidates": 12858,
+        "phase_seeds": 4,
+        "phase_local_counts": [
+          32,
+          46,
+          42,
+          50
+        ],
+        "phase_full_local_counts": [
+          32,
+          46,
+          42,
+          51
+        ],
+        "phase_boundary_counts": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "phase_duration_count": 8,
+        "phase_durations": [
+          60,
+          120,
+          240,
+          400,
+          740,
+          900,
+          1800,
+          3600
+        ],
+        "phase_build_seconds": 0.004339334089308977,
+        "phase_exact_seed_counts": [
+          0,
+          3,
+          13,
+          0
+        ],
+        "phase_scan_seconds": 0.07526554097421467,
+        "phase_exact_seconds": 0.003054749919101596,
+        "phase_geometry_target_pairs": 543832,
+        "choose_calls_total": 6,
+        "phase_calls_total": 6,
+        "phase_candidates_total": 80492,
+        "phase_exact_evaluations_total": 96,
+        "phase_emergency_count_total": 0,
+        "phase_improvements_total": 5
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 74.5318373,
+          "az_deg": 356.3999063
+        },
+        "assignments": {
+          "0": "V4T000988",
+          "1": "V4T002105",
+          "2": "V4T008161",
+          "5": "V4T002256",
+          "6": "V4T006691",
+          "7": "V4T008062",
+          "8": "V4T001907",
+          "9": "V4T004015",
+          "10": "V4T009373",
+          "11": "V4T006086",
+          "12": "V4T002023",
+          "13": "V4T004217",
+          "14": "V4T006795"
+        },
+        "duration_seconds": 1156,
+        "program": "DARK"
+      }
+    },
+    {
+      "card": "delta",
+      "fraction": 0.98,
+      "observe_ordinal": 1073,
+      "now_utc": "2026-12-01T01:19:20Z",
+      "kernel": "native",
+      "elapsed_seconds": 0.12956391694024205,
+      "stats": {
+        "planning_seconds": 0.12902212492190301,
+        "candidates": 400,
+        "visible_useful": 4631,
+        "anchors": 24,
+        "geometry_cells": 33336,
+        "geometry_sweep_seconds": 0.01779104210436344,
+        "geometry_exact": 18,
+        "geometry_improved": true,
+        "base_exact_rate": 0.012509561317604095,
+        "selected_exact_rate": 0.015888002443613467
+      },
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 74.530574,
+          "az_deg": 356.3813914
+        },
+        "assignments": {
+          "0": "V4T000988",
+          "1": "V4T002105",
+          "2": "V4T008161",
+          "5": "V4T002256",
+          "6": "V4T006691",
+          "7": "V4T008062",
+          "8": "V4T001907",
+          "9": "V4T004015",
+          "10": "V4T009373",
+          "11": "V4T006086",
+          "12": "V4T002023",
+          "13": "V4T004217",
+          "14": "V4T006795"
+        },
+        "duration_seconds": 1156,
+        "program": "DARK"
+      }
+    }
+  ],
+  "overall": {
+    "cpu_phase": {
+      "n": 24,
+      "mean": 0.19443468409008346,
+      "p50": 0.20920831302646548,
+      "p90": 0.2253927501384169,
+      "p95": 0.22693346689920874,
+      "max": 0.2273194578010589
+    },
+    "native": {
+      "n": 24,
+      "mean": 0.16449714923510328,
+      "p50": 0.1651723333634436,
+      "p90": 0.23733267942443487,
+      "p95": 0.26901506688445803,
+      "max": 0.2941471671219915
+    }
+  },
+  "early": {
+    "cpu_phase": {
+      "n": 8,
+      "mean": 0.19496393238659948,
+      "p50": 0.20581854158081114,
+      "p90": 0.2153315956937149,
+      "p95": 0.221218756318558,
+      "max": 0.2271059169434011
+    },
+    "native": {
+      "n": 8,
+      "mean": 0.17265355214476585,
+      "p50": 0.14915035397280008,
+      "p90": 0.26163269206881523,
+      "p95": 0.2778899295954034,
+      "max": 0.2941471671219915
+    }
+  },
+  "late": {
+    "cpu_phase": {
+      "n": 8,
+      "mean": 0.1814812135125976,
+      "p50": 0.20847677113488317,
+      "p90": 0.2182433748152107,
+      "p95": 0.22278141630813478,
+      "max": 0.2273194578010589
+    },
+    "native": {
+      "n": 8,
+      "mean": 0.14163045297027566,
+      "p50": 0.1438970830058679,
+      "p90": 0.18835962868761272,
+      "p95": 0.20075337683083488,
+      "max": 0.21314712497405708
+    }
+  },
+  "runtime": {
+    "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+    "numpy": "2.0.2",
+    "system": "Darwin",
+    "machine": "arm64",
+    "thread_env": "BLAS/OMP/MKL=1 set before numpy import by profile script"
+  }
+}

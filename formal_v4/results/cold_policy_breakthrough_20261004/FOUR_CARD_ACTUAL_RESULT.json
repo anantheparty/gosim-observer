@@ -1,0 +1,113 @@
+{
+  "schema": "root-terminal-report-four-card-official-results-v1",
+  "completed": true,
+  "all_original_reference_actions_unchanged": true,
+  "cards": [
+    {
+      "card": "L1",
+      "total": 6362.021539,
+      "reference_total": 6362.021539,
+      "delta": 0.0,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 6162.33341,
+        "uniformity_penalty": -0.311871
+      },
+      "component_delta": {
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "sum_best_scores": 0.0,
+        "observation_request_reward": 0.0
+      },
+      "termination": "survey_complete",
+      "accounted_seconds": 440.83,
+      "gates_passed": 44,
+      "gate_sha256": "8cc26c248f49defeece651bd53802418b0e2467f78972e462a6e0e8d2be38516",
+      "listed_output_sha256_verified": true
+    },
+    {
+      "card": "L2",
+      "total": 6823.661561,
+      "reference_total": 6823.661561,
+      "delta": 0.0,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 6674.649933,
+        "uniformity_penalty": -0.988373
+      },
+      "component_delta": {
+        "uniformity_penalty": 0.0,
+        "sum_best_scores": 0.0,
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0
+      },
+      "termination": "survey_complete",
+      "accounted_seconds": 522.711,
+      "gates_passed": 44,
+      "gate_sha256": "3b56b5fa8ed1ac55e06382bcb413f7776555e5d8e8882a031cd25a4aa2d3a130",
+      "listed_output_sha256_verified": true
+    },
+    {
+      "card": "L3",
+      "total": 6108.908435,
+      "reference_total": 6004.504542,
+      "delta": 104.403893,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -250.0,
+        "sum_best_scores": 6060.650757,
+        "uniformity_penalty": -1.742321
+      },
+      "component_delta": {
+        "sum_best_scores": 4.375265,
+        "required_penalty": 0.0,
+        "observation_request_reward": 0.0,
+        "report_settlement": 100.0,
+        "uniformity_penalty": 0.028629
+      },
+      "termination": "survey_complete",
+      "accounted_seconds": 454.047,
+      "gates_passed": 42,
+      "gate_sha256": "d3ab16e57a81c77f6b14c6ad317d308b14425f778fe77c79accaaf61d461b5b2",
+      "listed_output_sha256_verified": true
+    },
+    {
+      "card": "L4",
+      "total": 5974.281941,
+      "reference_total": 5974.281941,
+      "delta": 0.0,
+      "components": {
+        "observation_request_reward": 200.0,
+        "report_settlement": 100.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": 5777.717412,
+        "uniformity_penalty": -3.435472
+      },
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 0.0
+      },
+      "termination": "survey_complete",
+      "accounted_seconds": 438.403,
+      "gates_passed": 44,
+      "gate_sha256": "624cc78526d721bbc9c9b3090349312d53c0c46ba89bfacf2eb872c3c01f7b4b",
+      "listed_output_sha256_verified": true
+    }
+  ],
+  "reference_mean_exact": "6291.11739575",
+  "intervention_mean_exact": "6317.218369",
+  "mean_delta_exact": "26.10097325",
+  "is_cloud_alpha_delta_score": false,
+  "cloud_submitted": false,
+  "sealed_teacher_labels_read": false
+}

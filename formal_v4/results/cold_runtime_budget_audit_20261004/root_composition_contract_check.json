@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "calls": [
+    {
+      "tmax": 3600,
+      "same_scores": true,
+      "same_factors": true,
+      "same_requests": true,
+      "same_target_scale": true
+    },
+    {
+      "tmax": 120,
+      "same_scores": true,
+      "same_factors": true,
+      "same_requests": true,
+      "same_target_scale": true
+    }
+  ],
+  "output_duration_seconds": 120,
+  "parent_tmax_after": 3600,
+  "child_tmax_after": 3600,
+  "request_counts": {
+    "builds": 0,
+    "build_seconds": 0.0,
+    "dp_solves": 1,
+    "dp_seconds": 5.1167095080018044e-05,
+    "request_observes": 0,
+    "boundary_waits": 0,
+    "clipped_baselines": 1,
+    "rejected_by_cost": 0,
+    "infeasible": 0,
+    "forecast_failures": 0
+  },
+  "distributed_counts": {
+    "remote_baselines": 0,
+    "cpu_baselines": 2,
+    "forced_cpu_crops": 1,
+    "transport_failures": 0,
+    "cpu_baseline_seconds": 5.666865035891533e-06,
+    "remote_baseline_seconds": 0.0
+  },
+  "scope": "stub baseline plus one cached request; verifies actual boundary re-search, input identity and predictions; no score claim"
+}

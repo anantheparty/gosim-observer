@@ -1,0 +1,11 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/control_package/research/agent_request_exact_cache.py", line 62, in <module>
+    agent.main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/control_package/agent.py", line 34, in main
+    "decision_sequence": message["decision_sequence"], **action}
+KeyError: 'decision_sequence'

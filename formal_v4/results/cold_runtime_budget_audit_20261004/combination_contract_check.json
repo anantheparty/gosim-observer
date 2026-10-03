@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "mro": [
+    "CombinedRequestNativePlanner",
+    "ExactRequestCacheMixin",
+    "RequestRemotePlanner",
+    "RequestDeadlineMixin",
+    "CPUPhaseSpatialPlanner",
+    "CandidateGeometryPlanner",
+    "SpatialPlanner",
+    "object"
+  ],
+  "distributed": {
+    "remote_baselines": 0,
+    "cpu_baselines": 2,
+    "forced_cpu_crops": 1,
+    "transport_failures": 0,
+    "cpu_baseline_seconds": 0.3697582499589771,
+    "remote_baseline_seconds": 0.0
+  },
+  "cpu_phase": {
+    "choose_calls": 0,
+    "phase_calls": 0,
+    "phase_candidates": 0,
+    "phase_exact_evaluations": 0,
+    "phase_emergency_count": 0,
+    "phase_improvements": 0
+  },
+  "native": {
+    "calls": 2,
+    "sweeps": 4,
+    "arrangement_cells": 594961,
+    "improvements": 0,
+    "sweep_seconds": 0.1814421669114381,
+    "exact_seconds": 0.009106709156185389
+  },
+  "cropped_duration": 68,
+  "scope": "empty request bypass and mutable tmax propagation; no full policy score gate"
+}

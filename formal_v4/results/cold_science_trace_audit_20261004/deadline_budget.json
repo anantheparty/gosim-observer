@@ -1,0 +1,270 @@
+[
+  {
+    "card": "alpha",
+    "night_seconds": 1126800,
+    "remaining_night_seconds": 18543.0,
+    "night_time_progress": 0.9835436634717785,
+    "whole_nights_unstarted": 0,
+    "simulation_wall_progress": 0.9942529056252906,
+    "workflow": {
+      "accounted_wallclock_seconds": 900.0,
+      "agent_wallclock_seconds": 883.717,
+      "committed_action_count": 1848,
+      "decision_requests": 1289,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": true,
+      "last_decision_sequence": 1289,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-alpha",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "global_wallclock_expired"
+    },
+    "policy_summary": null
+  },
+  {
+    "card": "beta",
+    "night_seconds": 1078200,
+    "remaining_night_seconds": 18633.0,
+    "night_time_progress": 0.9827184195882026,
+    "whole_nights_unstarted": 0,
+    "simulation_wall_progress": 0.994223400297619,
+    "workflow": {
+      "accounted_wallclock_seconds": 899.991,
+      "agent_wallclock_seconds": 883.168,
+      "committed_action_count": 1829,
+      "decision_requests": 1255,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": true,
+      "last_decision_sequence": 1255,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-beta",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "global_wallclock_expired"
+    },
+    "policy_summary": null
+  },
+  {
+    "card": "gamma",
+    "night_seconds": 1110600,
+    "remaining_night_seconds": 0,
+    "night_time_progress": 1.0,
+    "whole_nights_unstarted": 0,
+    "simulation_wall_progress": 1.0,
+    "workflow": {
+      "accounted_wallclock_seconds": 883.744,
+      "agent_wallclock_seconds": 867.097,
+      "committed_action_count": 1783,
+      "decision_requests": 1217,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": false,
+      "last_decision_sequence": 1217,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-gamma",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "survey_complete"
+    },
+    "policy_summary": {
+      "decisions": 1217,
+      "exposures": 1106,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6650.104647,
+      "required_missing_bound": 4,
+      "planning_seconds": 827.921,
+      "C": 0.6283,
+      "E": 0.8956,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "cpu_phase": {
+        "choose_calls": 1111,
+        "phase_calls": 1111,
+        "phase_candidates": 14279597,
+        "phase_exact_evaluations": 17776,
+        "phase_emergency_count": 0,
+        "phase_improvements": 969
+      },
+      "terrain": {
+        "schema": "terrain-positive-version-space-v1",
+        "directions": [
+          "W",
+          "N"
+        ],
+        "width_range": [
+          30.0,
+          70.0
+        ],
+        "altitude_range": [
+          35.0,
+          50.0
+        ],
+        "boxes_per_family": 540,
+        "remaining_boxes": {
+          "W": 516,
+          "N": 540
+        },
+        "positive_count": 15111,
+        "zero_feedback_ignored": 273,
+        "conditional_domain_conflicts": [],
+        "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+      },
+      "terrain_feedback_exposures": 1106,
+      "request_dp": {
+        "builds": 12,
+        "build_seconds": 225.6387184200001,
+        "dp_solves": 74,
+        "dp_seconds": 1.3733808400001237,
+        "request_observes": 1,
+        "boundary_waits": 1,
+        "clipped_baselines": 3,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 1,
+        "cached_requests": 2,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed_request": {
+        "remote_baselines": 0,
+        "cpu_baselines": 1111,
+        "forced_cpu_crops": 3,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 600.8604207209981,
+        "remote_baseline_seconds": 0.0,
+        "budget": {
+          "accepted": 0,
+          "skipped": 0,
+          "initialization_seconds": 0.0,
+          "observed_remote_seconds": 0.0,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      },
+      "request_exact_cache": {
+        "midpoint_hits": 58509,
+        "midpoint_misses": 20574,
+        "midpoint_peak_bytes": 6177600
+      },
+      "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+    }
+  },
+  {
+    "card": "delta",
+    "night_seconds": 1061100,
+    "remaining_night_seconds": 0,
+    "night_time_progress": 1.0,
+    "whole_nights_unstarted": 0,
+    "simulation_wall_progress": 1.0,
+    "workflow": {
+      "accounted_wallclock_seconds": 587.273,
+      "agent_wallclock_seconds": 574.022,
+      "committed_action_count": 1856,
+      "decision_requests": 1275,
+      "global_wallclock_seconds": 900.0,
+      "ignored_in_flight_response": false,
+      "last_decision_sequence": 1275,
+      "protocol_version": "participant-agent-protocol-v4",
+      "scenario": "v4-practice-delta",
+      "schema_version": "v4-workflow-result-v1",
+      "termination_detail": "",
+      "termination_reason": "survey_complete"
+    },
+    "policy_summary": {
+      "decisions": 1275,
+      "exposures": 1095,
+      "reports": 1,
+      "correct_reports": 1,
+      "best_science_sum": 6520.713018,
+      "required_missing_bound": 6,
+      "planning_seconds": 548.894,
+      "C": 1.2695,
+      "E": 0.6788,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-request-exact-cache",
+        "seconds": 0.0
+      },
+      "remote_calls": 0,
+      "remote_seconds": 0,
+      "remote_budget": null,
+      "cpu_phase": {
+        "choose_calls": 1101,
+        "phase_calls": 1101,
+        "phase_candidates": 14154479,
+        "phase_exact_evaluations": 17616,
+        "phase_emergency_count": 0,
+        "phase_improvements": 949
+      },
+      "terrain": {
+        "schema": "terrain-positive-version-space-v1",
+        "directions": [
+          "NW",
+          "NE",
+          "E"
+        ],
+        "width_range": [
+          30.0,
+          70.0
+        ],
+        "altitude_range": [
+          35.0,
+          50.0
+        ],
+        "boxes_per_family": 540,
+        "remaining_boxes": {
+          "NW": 503,
+          "NE": 518,
+          "E": 372
+        },
+        "positive_count": 14370,
+        "zero_feedback_ignored": 772,
+        "conditional_domain_conflicts": [],
+        "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+      },
+      "terrain_feedback_exposures": 1095,
+      "request_dp": {
+        "builds": 8,
+        "build_seconds": 89.3417918959999,
+        "dp_solves": 116,
+        "dp_seconds": 0.9845969059992967,
+        "request_observes": 2,
+        "boundary_waits": 1,
+        "clipped_baselines": 4,
+        "rejected_by_cost": 0,
+        "infeasible": 0,
+        "forecast_failures": 0,
+        "cached_requests": 2,
+        "model": "full-deadline finite columns; frozen same-duration scientific regret"
+      },
+      "distributed_request": {
+        "remote_baselines": 0,
+        "cpu_baselines": 1101,
+        "forced_cpu_crops": 4,
+        "transport_failures": 0,
+        "cpu_baseline_seconds": 458.5272247960014,
+        "remote_baseline_seconds": 0.0,
+        "budget": {
+          "accepted": 0,
+          "skipped": 0,
+          "initialization_seconds": 0.0,
+          "observed_remote_seconds": 0.0,
+          "failed_initializations": 0
+        },
+        "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+      },
+      "request_exact_cache": {
+        "midpoint_hits": 42185,
+        "midpoint_misses": 14974,
+        "midpoint_peak_bytes": 6316800
+      },
+      "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+    }
+  }
+]
