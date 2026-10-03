@@ -1,0 +1,48 @@
+{
+  "kind": "finite_public_quality_window_backend",
+  "official_score_claim": false,
+  "original_problem_upper_bound_claim": false,
+  "hidden_inputs_read": false,
+  "reference_sha256": "11c7092a99dcb407a6eaa33a18ee179381f810f2066d3bf948bc94798a7e1edd",
+  "model_sha256": "1d95a0a37b8ff88a9cb27768928773145d0cdb25b4f908555697e186e769c178",
+  "gate_fixture_sha256": "fc5539bb17ba37ba4b874ca51b2e777244ca7d987f70e8e1de3b406424f7de13",
+  "backend_sha256": "63e67e2e0063483c3692b8b702d55140eca31dfd0685481625700bbd3928e895",
+  "model_shape": [
+    38,
+    9,
+    3,
+    9400
+  ],
+  "grids": {
+    "score_bins": 25,
+    "probability_bins": 9
+  },
+  "environment": {
+    "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+  },
+  "model_npz_keys": [
+    "capacity",
+    "completed_probability",
+    "durations",
+    "normalized_best",
+    "normalized_score",
+    "prices",
+    "probabilities",
+    "raw_factor",
+    "required_bonus",
+    "threshold",
+    "weights"
+  ],
+  "reference_tie_tolerance": 1e-10,
+  "arithmetic": "float64",
+  "policy_dtype": "uint8",
+  "suffix_dtype": "float32",
+  "status": "failed",
+  "error": "ArgumentError: argument 1: OverflowError: int too long to convert",
+  "telemetry_error": null,
+  "telemetry_samples": 24
+}

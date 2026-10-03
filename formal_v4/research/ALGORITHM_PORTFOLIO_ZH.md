@@ -174,3 +174,10 @@ root实际启动四条受限完整回放：2026-10-03 23:19:23 UTC，Rhodes1 PID
 CUDA后端已实际在RTX PRO6000执行：首次job在Windows RSS计量HANDLE类型报OverflowError，128-target计算已执行，但没有记录gate/full结论；仅修计量后，同冻结输入新job通过。128targets×38夜、非零当前best/π、非零price的B25/P9门检policy差0、value最大差1.42e−14、demand最大差4.00e−11；全δ9400targets B25/P9零价backward1.8307秒+forward.6348秒，CUDA峰453442560B，采样功耗峰205.33W。F=38273.3092、demand37.6807M fiber秒、容量16.9776M；这是有限近似模型的数值，不是正式得分或较CPU B13/P5的改善。真实GPU计算资源并非此算子的瓶颈。接下来同冻结模型做uniform μ凸二分与38维Kelley cuts、明确数值误差与安全价格盒，禁止改分布/隐藏未来/大步长救参。实际价格job WSL PID3224489，独立Windows目录`C:/Users/hedge/gosim-quality-window-20261004`，backendSHA`db8c36ff5feab172861c0118d168f918a9b4c84745950a6d19ef068675d90506`；只在真实终局策略控制通过后才能谈提分。
 
 另独立代理将末动作report适配真实29-file RequestCache，原native四卡+26.10097325仅是不同包的旧结果，禁止迁移为本策略收益。先官方终局时点/公开quota/feedback合同证明与公开prefix action parity；当前未开新整季或提交。
+
+
+### CUDA资源价格实际终结；共同曝光控制启动（2026-10-04 08:59 JST）
+
+上条所述价格任务已真实完成123.501秒、58新GPU oracle。统一最优μ=.000162101411819458，finite F37730.40414090836；总需求16,977,711.37，略高于容量111.37fiber秒，上端16,977,364.33。最佳统一价仍16窗过载，peak7.60736×。32次Kelley没改善uniform最佳；含数值cut余量LP lower33123.17912734773/gap4607.225432013722，未收敛且无严格floating-point下界证书。交叉cut、梯度单位和统一需求非增经独立审查及现有日志核验通过，但不变为实际全题最优或正式分数。价格阶段Torch峰453MB/RSS1.338GB，整卡242次采样最高229.09W。PRO6000任务全部结束回闲置。冻结backend与去重manifest/原计量失败/两完整数值结果和59oracle原日志在`results/quality_window_cuda_20261004/`。已保存的三步过冲不能被新uniform结果替代为成功部署。暂不增加32Kelley预算、改PMF、重开相同模型。
+
+新`cold_common_exposure_control`以fork_turns="none"实际开始，先读正式源后抽象再查重：用真正共享16fiber曝光弧、nonoverlap时间path与target score-layer coverage MILP研究中早季窗口竞争。固定L1/L2第8/18夜四个无活动REQ公开prefix，4h公共窗口、包含原强action时长及300/900/1800秒，按first arc分别解共同suffix及同duration空曝光suffix，计算全目录时间机会损失；短预算8秒HiGHS/次。模型仍需要公开belief和完整曝光天文积分、不看未来真实天气，固定.9/1/1.1敏感性只作机制稳定性，不是校准概率。此刻尚无微结果/完整策略分。若原完整snapshot字段不可恢复须明确重建state，不能假称重现历史action。末动作RequestCache适配另在进行，尚无新完整回放。

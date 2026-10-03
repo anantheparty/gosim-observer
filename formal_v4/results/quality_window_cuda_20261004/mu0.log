@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\hedge\gosim-quality-window-20261004\quality_window_cuda.py", line 490, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\hedge\gosim-quality-window-20261004\quality_window_cuda.py", line 439, in main
+    cuda_peak_reserved_bytes=torch.cuda.max_memory_reserved(), rss=_rss(), telemetry=telemetry.summary("cuda_gate"))
+                                                                   ~~~~^^
+  File "C:\Users\hedge\gosim-quality-window-20261004\quality_window_cuda.py", line 269, in _rss
+    ok = ctypes.windll.psapi.GetProcessMemoryInfo(kernel.GetCurrentProcess(), ctypes.byref(data), data.cb)
+ctypes.ArgumentError: argument 1: OverflowError: int too long to convert

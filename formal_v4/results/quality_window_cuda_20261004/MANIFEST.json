@@ -1,0 +1,210 @@
+{
+  "kind": "frozen_public_finite_model_cuda_backend_and_prices",
+  "source_inputs_deduplicated": true,
+  "inputs": [
+    {
+      "source_path": "formal_v4/results/cold_quality_window_control_20261004/delta_public_model.npz",
+      "sha256": "1d95a0a37b8ff88a9cb27768928773145d0cdb25b4f908555697e186e769c178",
+      "bytes": 29559199
+    },
+    {
+      "source_path": "formal_v4/results/cold_quality_window_control_20261004/window_control.py",
+      "sha256": "11c7092a99dcb407a6eaa33a18ee179381f810f2066d3bf948bc94798a7e1edd",
+      "bytes": 10498
+    },
+    {
+      "source_path": "formal_v4/results/cold_quality_window_control_20261004/delta_subset_cpu_reference.npz",
+      "sha256": "fc5539bb17ba37ba4b874ca51b2e777244ca7d987f70e8e1de3b406424f7de13",
+      "bytes": 25406
+    },
+    {
+      "source_path": "formal_v4/results/cold_quality_window_control_20261004/FROZEN_MODEL_RECEIPT.json",
+      "sha256": "d1e1afae7f444973a0c7a0118394919d015e481536e42b752e91a909a187cbb7",
+      "bytes": 3668
+    },
+    {
+      "source_path": "formal_v4/results/cold_quality_window_control_20261004/delta_public_pilot.json",
+      "sha256": "669be31e7f79625cd41891c18549d57372638500f2c244e5dadd632842523a96",
+      "bytes": 7300
+    }
+  ],
+  "model_schema": {
+    "normalized_score": {
+      "shape": [
+        38,
+        9,
+        3,
+        9400
+      ],
+      "dtype": "float32"
+    },
+    "raw_factor": {
+      "shape": [
+        38,
+        9,
+        3,
+        9400
+      ],
+      "dtype": "float32"
+    },
+    "probabilities": {
+      "shape": [
+        38,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "durations": {
+      "shape": [
+        38,
+        9
+      ],
+      "dtype": "float64"
+    },
+    "weights": {
+      "shape": [
+        9400
+      ],
+      "dtype": "float64"
+    },
+    "required_bonus": {
+      "shape": [
+        9400
+      ],
+      "dtype": "float64"
+    },
+    "threshold": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "capacity": {
+      "shape": [
+        38
+      ],
+      "dtype": "float64"
+    },
+    "public_geometry": {
+      "shape": [
+        38,
+        3,
+        9400
+      ],
+      "dtype": "float32"
+    },
+    "target_ids": {
+      "shape": [
+        9400
+      ],
+      "dtype": "<U9"
+    },
+    "normalized_best": {
+      "shape": [
+        9400
+      ],
+      "dtype": "float64"
+    },
+    "completed_probability": {
+      "shape": [
+        9400
+      ],
+      "dtype": "float64"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/FROZEN_MODEL_RECEIPT.json",
+      "sha256": "e03232b97c87991afd2d857b7dbf5833ac36d3acdcfc2c6d8094a0d34f70d496",
+      "bytes": 3419
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/JOB_REGISTRY.json",
+      "sha256": "90e32461553f60e95d2dea567f13695ca3654349117d74a9f7ceb652b694b90c",
+      "bytes": 1111
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/NUMERICAL_PRICE_AUDIT.json",
+      "sha256": "c050ed7c44cf79b8b2c7e92b5166ac2019140ab8590c14a2be538dfc84f89d32",
+      "bytes": 583
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/POST_RUN_GPU.json",
+      "sha256": "c78752f86a1bdb2a28665f91ebfc1183411487a1d4c4c589bbfeb4f563cf6d1a",
+      "bytes": 315
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/REPORT_ZH.md",
+      "sha256": "9fae2e1bb82e3a45499249498d06c250cfd07d214258dd875e31a7cc55c539cd",
+      "bytes": 6642
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/first_attempt/nvidia_telemetry.json",
+      "sha256": "4c6340e91d41d120f882013f20ddb1f0159736492bbea3f6181dccb9adac17b8",
+      "bytes": 4705
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/first_attempt/result.json",
+      "sha256": "f41a22515de3fa733311652f393ec59efaf98f429a5facc0d62bb1cb1f7e86d5",
+      "bytes": 1486
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0.log",
+      "sha256": "6d2d234b2104fbd2644d84c10f7c96fc0db61f6c233785202b930fce91c39e1b",
+      "bytes": 730
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0_v2/full_arrays.npz",
+      "sha256": "3957a3d9957bb7e760b8991bc60d99f362c451d1da2fc21a967a91a4bde6a288",
+      "bytes": 716432
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0_v2/gate_arrays.npz",
+      "sha256": "1e130aba8738012b1a9f61e5f22dd9f705b692034364d75db03b304f2d284b1f",
+      "bytes": 46973
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0_v2/nvidia_telemetry.json",
+      "sha256": "b7b50d2a83f7e1abf1fd52f6ce875467ec6534381c23044479dbfc6798c8d8e0",
+      "bytes": 2575
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0_v2/result.json",
+      "sha256": "c859de1b652e5c70b98372d4d6c3f2db6cc214bd5721f04d5102a62042b5ffe5",
+      "bytes": 6493
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/mu0_v2.log",
+      "sha256": "097a1fb84d3d11a68978c5651faad80cce14249a1b584448cbf1963e838b201d",
+      "bytes": 4210
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/prices/nvidia_telemetry.json",
+      "sha256": "a35c1ccc2e15fdf113e37d0efe58fc9fedce36a66ed8ba64d971f0983a80dcf7",
+      "bytes": 48555
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/prices/price_arrays.npz",
+      "sha256": "f847afc0caafc621c11edb972aba081c169e8651a8f75e3c58126a54027861f6",
+      "bytes": 1585
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/prices/result.json",
+      "sha256": "f244713a4cea24a5dd582d7a8106081ebbc6f1768968934e585406ae22a2282b",
+      "bytes": 228409
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/prices.log",
+      "sha256": "5c35924291551c6b97b4b17290c387e908dd407c07285acf40dac9c6944c61c7",
+      "bytes": 15936
+    },
+    {
+      "path": "formal_v4/results/quality_window_cuda_20261004/quality_window_cuda.py",
+      "sha256": "db8c36ff5feab172861c0118d168f918a9b4c84745950a6d19ef068675d90506",
+      "bytes": 37375
+    }
+  ],
+  "official_score_claim": false,
+  "original_problem_upper_bound_claim": false,
+  "truth_files_read": [],
+  "production_modified": false,
+  "online_submission": false
+}

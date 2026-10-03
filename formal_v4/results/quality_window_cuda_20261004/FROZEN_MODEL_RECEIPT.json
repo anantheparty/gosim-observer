@@ -1,0 +1,97 @@
+{
+  "model": "delta_public_model.npz",
+  "model_sha256": "1d95a0a37b8ff88a9cb27768928773145d0cdb25b4f908555697e186e769c178",
+  "reference": "delta_subset_cpu_reference.npz",
+  "reference_sha256": "fc5539bb17ba37ba4b874ca51b2e777244ca7d987f70e8e1de3b406424f7de13",
+  "reference_targets": 128,
+  "reference_B": 25,
+  "reference_Pi": 9,
+  "reference_nonzero_public_state": true,
+  "subset_model_full_horizon": true,
+  "window_control_sha256": "11c7092a99dcb407a6eaa33a18ee179381f810f2066d3bf948bc94798a7e1edd",
+  "public_pilot_sha256": "507c3f997b581ebaa16668becf43499d1a313d3706b2cfdafe2d53db04ce9cd2",
+  "checks_sha256": "677e429e756d6cb0894c02f62acf23616b44ea9e4889114ec355c7a4a42d0242",
+  "shapes": {
+    "normalized_score": [
+      38,
+      9,
+      3,
+      9400
+    ],
+    "raw_factor": [
+      38,
+      9,
+      3,
+      9400
+    ],
+    "probabilities": [
+      38,
+      3
+    ],
+    "durations": [
+      38,
+      9
+    ],
+    "weights": [
+      9400
+    ],
+    "required_bonus": [
+      9400
+    ]
+  },
+  "dtypes": {
+    "normalized_score": "float32",
+    "raw_factor": "float32",
+    "probabilities": "float64",
+    "durations": "float64",
+    "weights": "float64",
+    "required_bonus": "float64"
+  },
+  "safe_price_cube_upper": 0.05782222222222222,
+  "finite_model_price_unit": "points/fiber-second",
+  "source_zip_sha256": "e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a",
+  "all29_control_members_match_source": true,
+  "control_origin_members": {
+    "ATTRIBUTION.md": true,
+    "agent.py": true,
+    "build_manifest.json": true,
+    "exact_cache_provenance.json": true,
+    "observer.project.json": true,
+    "policy.py": true,
+    "policy_config.json": true,
+    "remote_planner.py": true,
+    "remote_runtime.json": true,
+    "requirements.txt": true,
+    "research/agent_model_gpu.py": true,
+    "research/agent_request_distributed.py": true,
+    "research/agent_request_exact_cache.py": true,
+    "research/belief_clock.py": true,
+    "research/cpu_phase_candidates.py": true,
+    "research/efficiency_bounds.py": true,
+    "research/feedback_model.py": true,
+    "research/geometry.py": true,
+    "research/model_gpu_transport.py": true,
+    "research/pointing_calibration.py": true,
+    "research/remote_budget.py": true,
+    "research/request_deadline_common.py": true,
+    "research/request_exact_cache.py": true,
+    "research/request_future_field.py": true,
+    "research/request_mask_dp.py": true,
+    "research/request_remote_planner.py": true,
+    "research/spatial_candidates.py": true,
+    "research/terrain_policy.py": true,
+    "research/terrain_version_space.py": true
+  },
+  "public_inputs": {
+    "formal_v4/practice_cards/delta/delta/public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+    "formal_v4/practice_cards/delta/delta/public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+    "formal_v4/practice_cards/delta/delta/config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+    "formal_v4/practice_cards/delta/delta/config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f"
+  },
+  "inputs_are_only_public_catalog_calendar_site_instrument_scoring": true,
+  "extra_cpu_seconds": 7.092566959094256,
+  "full_season": false,
+  "trained": false,
+  "deployed": false,
+  "truth_input_files_read": []
+}

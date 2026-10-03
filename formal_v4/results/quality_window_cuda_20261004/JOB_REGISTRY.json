@@ -1,0 +1,33 @@
+{
+  "host": "elevatia-wsl / setsu",
+  "remote_directory": "C:/Users/hedge/gosim-quality-window-20261004",
+  "python": "C:/Users/hedge/gosim-structured-nn-20261004/Scripts/python.exe",
+  "jobs": [
+    {
+      "stage": "first_attempt",
+      "wsl_pid": 3221221,
+      "status": "failed_rss_measurement",
+      "backend_sha256": "63e67e2e0063483c3692b8b702d55140eca31dfd0685481625700bbd3928e895",
+      "error": "ArgumentError: argument 1: OverflowError: int too long to convert"
+    },
+    {
+      "stage": "mu0_v2",
+      "wsl_pid": 3223716,
+      "windows_pid": 57144,
+      "status": "complete",
+      "backend_sha256": "db8c36ff5feab172861c0118d168f918a9b4c84745950a6d19ef068675d90506"
+    },
+    {
+      "stage": "prices",
+      "wsl_pid": 3224489,
+      "status": "complete",
+      "backend_sha256": "db8c36ff5feab172861c0118d168f918a9b4c84745950a6d19ef068675d90506",
+      "windows_pid": 88248,
+      "elapsed_seconds": 123.50122790003661
+    }
+  ],
+  "old_environment_modified": false,
+  "services_modified": false,
+  "power_limit_modified": false,
+  "isolated_added_dependency": "pydeps/scipy==1.16.1"
+}
