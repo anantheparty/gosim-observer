@@ -1,0 +1,30 @@
+{
+  "schema": "structured-student-accepted-labels-v1",
+  "accepted": false,
+  "acceptance_note": "GUARDED EXAMPLE ONLY. Requires root review, complete passed v2 audits, archive repair if needed, and actual reviewed hashes.",
+  "groups": [
+    {
+      "group_id": "REPLACE_WITH_PREDECLARED_GROUP_ID",
+      "card": "L1",
+      "capture": "../policy_iteration_20261004/bulk/L1/rank_0064/control/public_capture/capture.json",
+      "public_features": "../policy_iteration_20261004/bulk/L1/rank_0064/control/public_capture/public_features.npz",
+      "public_initial": "../policy_iteration_20261004/L1_initialize_public.json",
+      "pair_audit": "../policy_iteration_20261004/bulk/L1/rank_0064/pair_audit.json",
+      "availability": "../policy_iteration_20261004/bulk/L1/rank_0064/availability.json",
+      "sha256": {
+        "capture": "REPLACE_WITH_ORIGINAL_PUBLIC_CAPTURE_SHA256",
+        "public_features": "REPLACE_WITH_PUBLIC_FEATURE_BLOB_SHA256",
+        "public_initial": "REPLACE_WITH_PUBLIC_INITIALIZATION_SHA256",
+        "pair_audit": "REPLACE_WITH_PASSED_V2_PAIR_AUDIT_SHA256",
+        "availability": "REPLACE_WITH_FROZEN_PRETERMINAL_AVAILABILITY_SHA256"
+      }
+    }
+  ],
+  "split_contract": {
+    "train_cards": ["L1", "L2"],
+    "validation_card": "L3",
+    "untouched_test_card": "L4",
+    "control_only_groups": "Preserved as fully verified, untrainable availability records; never assigned empty pair loss.",
+    "unit": "All distinct available actions from a complete whole-state group remain together."
+  }
+}

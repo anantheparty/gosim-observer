@@ -1,0 +1,375 @@
+{
+  "utc": "2026-10-03T19:39:48.493516+00:00",
+  "driver_pid": 973012,
+  "container_count": 8,
+  "containers": [
+    {
+      "container_id": "87b162a076db0e13ebcd9121c3df405cc86e7476caf4d362bb0b492a985014bc",
+      "name": "/policy-iteration-bulk-l1-106-control",
+      "pid": 973513,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.05263777Z",
+      "cpuset": "0,1",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L1/rank_0106/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L1_q00_rank0106.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_RANK=106",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "MKL_NUM_THREADS=1"
+      ]
+    },
+    {
+      "container_id": "fa950ea511aa7c31ec3e762246f176dbf72cc73497b64bbaa7cbe5f983971d80",
+      "name": "/policy-iteration-bulk-l2-188-control",
+      "pid": 973489,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.046982843Z",
+      "cpuset": "10,11",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L2/rank_0188/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L2_q01_rank0188.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OPENBLAS_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "OMP_NUM_THREADS=1",
+        "POLICY_ITERATION_RANK=188"
+      ]
+    },
+    {
+      "container_id": "3288be21ef0576071f036def2dcc02ac478ce1b8def0af05e75504c947e04528",
+      "name": "/policy-iteration-bulk-l3-206-control",
+      "pid": 973348,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.002944634Z",
+      "cpuset": "12,13",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L3/rank_0206/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L3_q01_rank0206.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_RANK=206",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl"
+      ]
+    },
+    {
+      "container_id": "fc3e896ff2600f37235f736fbcf2daa129e896bed169541bc7a40681af54f283",
+      "name": "/policy-iteration-bulk-l4-188-control",
+      "pid": 973534,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.058023917Z",
+      "cpuset": "14,15",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L4_q01_rank0188.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L4/rank_0188/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_RANK=188"
+      ]
+    },
+    {
+      "container_id": "7ff9bd9142eaaeefece0b871d71d5dcc72962506dcc5567fe14a7c8de28c281a",
+      "name": "/policy-iteration-bulk-l2-104-control",
+      "pid": 973366,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.006025368Z",
+      "cpuset": "2,3",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L2/rank_0104/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L2_q00_rank0104.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_RANK=104",
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OMP_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control",
+        "OPENBLAS_NUM_THREADS=1"
+      ]
+    },
+    {
+      "container_id": "7f53e59d447fe1c3a5912abd1c8ce245c67d7f1c121d819979c634187c57a635",
+      "name": "/policy-iteration-bulk-l3-122-control",
+      "pid": 973363,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.028873616Z",
+      "cpuset": "4,5",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L3/rank_0122/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L3_q00_rank0122.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "OMP_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_RANK=122",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OPENBLAS_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1"
+      ]
+    },
+    {
+      "container_id": "1fe361ac48a969b7c7b5b2d4aafbaf5bfd48366d7ab095eab08d0c9f91e8498f",
+      "name": "/policy-iteration-bulk-l4-108-control",
+      "pid": 973549,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.061001896Z",
+      "cpuset": "6,7",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L4/rank_0108/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L4_q00_rank0108.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "POLICY_ITERATION_CASE=control",
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_RANK=108"
+      ]
+    },
+    {
+      "container_id": "41ebd2617114469c97f90ec32ee1faef1738775c786f95076e3ebe4275660094",
+      "name": "/policy-iteration-bulk-l1-187-control",
+      "pid": 973554,
+      "status": "running",
+      "started_at": "2026-10-03T19:38:57.059507897Z",
+      "cpuset": "8,9",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "memory_swap_bytes": 2147483648,
+      "network": "none",
+      "readonly_root": true,
+      "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+      "source_lock_label": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+      "mounts": [
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk/L1/rank_0187/control/public_capture",
+          "destination": "/capture",
+          "rw": true
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/bulk_prefixes/L1_q01_rank0187.jsonl",
+          "destination": "/public_prefix.jsonl",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+          "destination": "/workspace",
+          "rw": false
+        },
+        {
+          "source": "/tmp/geometry_native_20261003/.deps",
+          "destination": "/deps",
+          "rw": false
+        }
+      ],
+      "public_environment": [
+        "OMP_NUM_THREADS=1",
+        "POLICY_ITERATION_RANK=187",
+        "POLICY_ITERATION_PREFIX=/public_prefix.jsonl",
+        "POLICY_ITERATION_CAPTURE_DIR=/capture",
+        "OPENBLAS_NUM_THREADS=1",
+        "MKL_NUM_THREADS=1",
+        "POLICY_ITERATION_CASE=control"
+      ]
+    }
+  ]
+}

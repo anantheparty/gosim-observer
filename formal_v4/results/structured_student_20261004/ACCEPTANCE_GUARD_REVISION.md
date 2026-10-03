@@ -1,0 +1,11 @@
+# Trainer acceptance guard revision
+
+This revision changes only `research/structured_student_train.py`. The exact previous trainer (`c2dae2f0b495f7f1f864ffa49f9cbc38d42a3017903baafe182401115c3bd34f`) is preserved under `source_snapshot/`. The feature, model, NumPy runtime and public/CUDA audit modules keep their original hashes. Existing CUDA/export evidence for those four modules remains applicable.
+
+Admission now requires `policy-iteration-full-season-pair-audit-v2`, all 28 named source/continuation/availability/inventory/submitted-action gates, explicit archive completeness, and matching group/card/rank/split. Each accepted manifest group must additionally reference and hash-lock `availability.json`. The public capture path must be the original `control/public_capture/capture.json`; the post-run prettyprinted copy has different bytes from the preterminal availability witness.
+
+The loader independently verifies availability's raw capture, feature blob, complete public state, snapshot and exact action hashes. It preserves absent-case records. Duplicate JSON action keys, repeated label case names, aliased candidate names with the same canonical action, repeated control entries and incomplete label inventories are rejected before dictionary conversion or pair construction.
+
+The audit's authoritative `baseline_total` binds every label baseline. Each finite branch total must satisfy `branch_total - baseline_total == advantage`, and existing exact action-pair and component-delta checks remain. The audit explicitly declares `trainable` and its reason. A complete control-only inventory with `labels=[]` is retained as a `trainable=false` availability record in dataset provenance; fitting and validation exclude it. Pairwise loss explicitly rejects zero or one action.
+
+`guard_negative_fixture.py` checks these defects with fabricated public captures and fabricated returns in a temporary directory. It does not open actual teacher label files, run optimization or launch seasons. `guard_negative_fixture_result.json` contains the bounded check results. The guarded manifest example remains explicitly unaccepted. Root must review the trainer supplement before any real dataset is accepted.

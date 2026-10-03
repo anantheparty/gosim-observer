@@ -1,0 +1,24 @@
+{
+  "start_utc": "2026-10-03T19:38:56.664090+00:00",
+  "pid": 973012,
+  "reviewed_source_lock_sha256": "2e539ee19e06e3a87d0ffb261b223b64be9af9faafe9cc7033effc9cb84f43e3",
+  "resources": {
+    "jobs": 8,
+    "physical_cpu_slots": {
+      "0": "0,1",
+      "1": "2,3",
+      "2": "4,5",
+      "3": "6,7",
+      "4": "8,9",
+      "5": "10,11",
+      "6": "12,13",
+      "7": "14,15"
+    },
+    "container_cpus": 2,
+    "container_memory_mib": 2048,
+    "idle_physical_cores": "16..23",
+    "smt_used": false,
+    "gpu_teacher": false
+  },
+  "max_elapsed_seconds": 21600
+}

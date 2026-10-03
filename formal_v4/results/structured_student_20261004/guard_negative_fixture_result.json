@@ -1,0 +1,72 @@
+{
+  "schema": "structured-student-guard-negative-fixture-v1",
+  "passed": true,
+  "synthetic_only": true,
+  "actual_teacher_label_files_read": 0,
+  "optimization_steps": 0,
+  "seasons_launched": 0,
+  "checks": [
+    {
+      "case": "duplicate_label_case",
+      "rejected": true,
+      "reason": "Duplicate teacher label case before dictionary conversion"
+    },
+    {
+      "case": "duplicate_canonical_action",
+      "rejected": true,
+      "reason": "Distinct candidate names contain the same canonical action"
+    },
+    {
+      "case": "label_baseline_differs_from_control",
+      "rejected": true,
+      "reason": "Group labels disagree with the authoritative control baseline"
+    },
+    {
+      "case": "declared_branch_delta_inconsistent",
+      "rejected": true,
+      "reason": "Teacher advantage differs from declared branch/control returns"
+    },
+    {
+      "case": "duplicate_control_inventory",
+      "rejected": true,
+      "reason": "Exactly one native control is required"
+    },
+    {
+      "case": "missing_v2_inventory_gate",
+      "rejected": true,
+      "reason": "Full natural-continuation teacher audit failed: synthetic_fixture_L1"
+    },
+    {
+      "case": "v1_audit_not_accepted",
+      "rejected": true,
+      "reason": "Full natural-continuation teacher audit failed: synthetic_fixture_L1"
+    },
+    {
+      "case": "incomplete_episode_archives",
+      "rejected": true,
+      "reason": "Teacher episode archives are incomplete; acceptance requires reviewed repair"
+    },
+    {
+      "case": "availability_action_hash_mismatch",
+      "rejected": true,
+      "reason": "Availability exact action hashes differ from public candidates"
+    },
+    {
+      "case": "control_only_preserved_without_pair_training",
+      "preserved": true,
+      "trainable": false
+    },
+    {
+      "case": "pair_loss_0_actions",
+      "rejected": true
+    },
+    {
+      "case": "pair_loss_1_actions",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_json_control_key",
+      "rejected": true
+    }
+  ]
+}

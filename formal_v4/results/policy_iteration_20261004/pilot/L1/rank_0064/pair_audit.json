@@ -1,0 +1,365 @@
+{
+  "schema": "policy-iteration-full-season-pair-audit-v1",
+  "card": "L1",
+  "rank": 64,
+  "gates": {
+    "control_exists": true,
+    "control_protocol": true,
+    "control_ready_score": true,
+    "control_ready_all_actions": true,
+    "accelerated_control_identical_actions": true,
+    "all_sources_unchanged": true,
+    "all_protocol_complete": true,
+    "all_one_capture": true,
+    "all_post_feedback": true,
+    "all_same_public_prefix": true,
+    "all_same_public_state_features": true,
+    "all_natural_suffix": true,
+    "no_participant_truth_mount": true
+  },
+  "passed": true,
+  "labels": [
+    {
+      "case": "field",
+      "valid_full_season_pair": true,
+      "advantage": 21.474135999999817,
+      "baseline_total": 6362.021539,
+      "branch_total": 6383.495675,
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 21.42769799999951,
+        "uniformity_penalty": 0.046437000000000006
+      },
+      "action_pair": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 62,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 71.4055183,
+            "az_deg": 163.811131
+          },
+          "duration_seconds": 62,
+          "program": "DARK",
+          "assignments": {
+            "1": "V4T005938",
+            "2": "V4T000289",
+            "3": "V4T006936",
+            "4": "V4T006623",
+            "5": "V4T005732",
+            "6": "V4T003488",
+            "7": "V4T006260",
+            "8": "V4T004461",
+            "9": "V4T006843",
+            "10": "V4T003031",
+            "11": "V4T000837",
+            "12": "V4T002401",
+            "13": "V4T003760",
+            "14": "V4T007557",
+            "15": "V4T006343"
+          }
+        }
+      ],
+      "aligned_action_divergences": 857,
+      "action_count_delta": 25,
+      "branch_observe_count": 1001,
+      "baseline_observe_count": 981,
+      "invalidations": [],
+      "world_label": "one_realized_future_world_MC_return"
+    },
+    {
+      "case": "long",
+      "valid_full_season_pair": true,
+      "advantage": -101.77926600000046,
+      "baseline_total": 6362.021539,
+      "branch_total": 6260.242273,
+      "component_delta": {
+        "observation_request_reward": -100.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -1.7350219999998444,
+        "uniformity_penalty": -0.044244000000000006
+      },
+      "action_pair": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 62,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 93,
+          "program": "DARK"
+        }
+      ],
+      "aligned_action_divergences": 1008,
+      "action_count_delta": 13,
+      "branch_observe_count": 989,
+      "baseline_observe_count": 981,
+      "invalidations": [],
+      "world_label": "one_realized_future_world_MC_return"
+    },
+    {
+      "case": "program",
+      "valid_full_season_pair": true,
+      "advantage": -125.39516600000024,
+      "baseline_total": 6362.021539,
+      "branch_total": 6236.626373,
+      "component_delta": {
+        "observation_request_reward": -100.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -25.35134999999991,
+        "uniformity_penalty": -0.043815999999999966
+      },
+      "action_pair": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 62,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 62,
+          "program": "BRIGHT"
+        }
+      ],
+      "aligned_action_divergences": 946,
+      "action_count_delta": 2,
+      "branch_observe_count": 977,
+      "baseline_observe_count": 981,
+      "invalidations": [],
+      "world_label": "one_realized_future_world_MC_return"
+    },
+    {
+      "case": "short",
+      "valid_full_season_pair": true,
+      "advantage": 41.425679999999375,
+      "baseline_total": 6362.021539,
+      "branch_total": 6403.447219,
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 41.25007300000016,
+        "uniformity_penalty": 0.175606
+      },
+      "action_pair": [
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 62,
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 72.0481168,
+            "az_deg": 164.3875455
+          },
+          "assignments": {
+            "0": "V4T006623",
+            "1": "V4T005732",
+            "2": "V4T003488",
+            "3": "V4T007481",
+            "4": "V4T002934",
+            "5": "V4T006843",
+            "6": "V4T003031",
+            "7": "V4T000837",
+            "8": "V4T001344",
+            "9": "V4T003760",
+            "10": "V4T002353",
+            "11": "V4T006343",
+            "12": "V4T006323",
+            "13": "V4T005049",
+            "14": "V4T000953",
+            "15": "V4T001293"
+          },
+          "duration_seconds": 60,
+          "program": "DARK"
+        }
+      ],
+      "aligned_action_divergences": 1001,
+      "action_count_delta": 25,
+      "branch_observe_count": 1005,
+      "baseline_observe_count": 981,
+      "invalidations": [],
+      "world_label": "one_realized_future_world_MC_return"
+    }
+  ],
+  "sign_counts": {
+    "positive": 2,
+    "negative": 2,
+    "tie": 0
+  },
+  "sparse_zeros_preserved": true,
+  "heldout_unit": "whole_state_group/card",
+  "archive": [
+    {
+      "path": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/archives/pilot_L1_rank64_control.tar.gz",
+      "bytes": 1084360,
+      "sha256": "d47b81005d7001adceec55bef505db25de3526d447cb51a76491d2b5b40a7a3b",
+      "member_count": 16
+    },
+    {
+      "path": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/archives/pilot_L1_rank64_field.tar.gz",
+      "bytes": 1154218,
+      "sha256": "25f94d3b892911c1c0c6f40162dd10f8519a978923659631dec3b24d17b64ca2",
+      "member_count": 17
+    },
+    {
+      "path": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/archives/pilot_L1_rank64_long.tar.gz",
+      "bytes": 1156501,
+      "sha256": "07666c6be4037fb7ac1e4434f7eaf4e0191b9010fd0879f206dd238106af64da",
+      "member_count": 17
+    },
+    {
+      "path": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/archives/pilot_L1_rank64_program.tar.gz",
+      "bytes": 1152421,
+      "sha256": "6178bcf63c09cd518c3b8d9306039c9da1604257dfa49a9f975129e17c035618",
+      "member_count": 17
+    },
+    {
+      "path": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/archives/pilot_L1_rank64_short.tar.gz",
+      "bytes": 1156235,
+      "sha256": "15647281792f0e67942c4bb33e9936edc990fea52274a2252ab504a48c432fa3",
+      "member_count": 17
+    }
+  ]
+}

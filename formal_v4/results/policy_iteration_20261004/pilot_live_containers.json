@@ -1,0 +1,134 @@
+[
+  {
+    "case": "control",
+    "container_id": "2c9180066f36fb8bcd8b4c1de73324deca4a0dc88a768f7c3b1eb08bc2216819",
+    "pid": 851562,
+    "state": "running",
+    "started_at": "2026-10-03T18:48:59.901389354Z",
+    "cpuset": "0,1",
+    "nano_cpus": 2000000000,
+    "memory": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/pilot/L1/rank_0064/control/public_capture",
+        "destination": "/capture",
+        "rw": true
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/L1_rank64_prefix_public.jsonl",
+        "destination": "/public_prefix.jsonl",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+        "destination": "/workspace",
+        "rw": false
+      }
+    ]
+  },
+  {
+    "case": "field",
+    "container_id": "4c7ebc7d92048e2ce38ec317e1a0f0cc34733ef4a3bd3b23296c27eb63b75108",
+    "pid": 851570,
+    "state": "running",
+    "started_at": "2026-10-03T18:48:59.905904448Z",
+    "cpuset": "2,3",
+    "nano_cpus": 2000000000,
+    "memory": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/pilot/L1/rank_0064/field/public_capture",
+        "destination": "/capture",
+        "rw": true
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/L1_rank64_prefix_public.jsonl",
+        "destination": "/public_prefix.jsonl",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+        "destination": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      }
+    ]
+  },
+  {
+    "case": "short",
+    "container_id": "9f2a969715b9f907db85e1cdc7d00a6a8f821541256218a319404ece4b3a26c4",
+    "pid": 851576,
+    "state": "running",
+    "started_at": "2026-10-03T18:48:59.90928321Z",
+    "cpuset": "4,5",
+    "nano_cpus": 2000000000,
+    "memory": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+        "destination": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/pilot/L1/rank_0064/short/public_capture",
+        "destination": "/capture",
+        "rw": true
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/L1_rank64_prefix_public.jsonl",
+        "destination": "/public_prefix.jsonl",
+        "rw": false
+      }
+    ]
+  },
+  {
+    "case": "long",
+    "container_id": "483aee8b666c236702275b95a7a3237b41c68b8a5b4bbd9b5c48d0e5166830d0",
+    "pid": 851548,
+    "state": "running",
+    "started_at": "2026-10-03T18:48:59.888352931Z",
+    "cpuset": "6,7",
+    "nano_cpus": 2000000000,
+    "memory": 2147483648,
+    "network": "none",
+    "mounts": [
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+        "destination": "/workspace",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/.deps",
+        "destination": "/deps",
+        "rw": false
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/pilot/L1/rank_0064/long/public_capture",
+        "destination": "/capture",
+        "rw": true
+      },
+      {
+        "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/L1_rank64_prefix_public.jsonl",
+        "destination": "/public_prefix.jsonl",
+        "rw": false
+      }
+    ]
+  }
+]

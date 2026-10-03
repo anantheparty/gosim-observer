@@ -1,0 +1,27 @@
+{
+  "container_id": "3592957aa5fa1f6e08b2688bea778a8b41c91163eaeb1b30178259f8eb361d79",
+  "pid": 833750,
+  "state": "running",
+  "started_at": "2026-10-03T18:40:19.951030323Z",
+  "cpuset": "0,1",
+  "nano_cpus": 2000000000,
+  "memory": 2147483648,
+  "network": "none",
+  "mounts": [
+    {
+      "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+      "destination": "/workspace",
+      "rw": false
+    },
+    {
+      "source": "/tmp/geometry_native_20261003/.deps",
+      "destination": "/deps",
+      "rw": false
+    },
+    {
+      "source": "/tmp/geometry_native_20261003/results/policy_iteration_20261004/natural_control/L1/rank_0064/control/public_capture",
+      "destination": "/capture",
+      "rw": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pid": 886118,
+  "started_utc": "2026-10-03T19:01:14.594872+00:00",
+  "source_sha256": "aca9acad7bc4e0112e53e58d8b25dafa6136105b94a1521c5a4a162fa01f9310",
+  "source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "cpus": "8-15 physical",
+  "scope": "L2/L3/L4 natural controls and L1 late accelerated control only",
+  "command": [
+    "python3",
+    "-u",
+    "/tmp/geometry_native_20261003/research/policy_iteration_baseline_groundwork.py",
+    "--project",
+    "/tmp/geometry_native_20261003/results/policy_iteration_20261004/participant",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--out",
+    "/tmp/geometry_native_20261003/results/policy_iteration_20261004",
+    "--reference",
+    "/tmp/geometry_native_20261003/results/geometry_native_20261003"
+  ]
+}

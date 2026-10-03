@@ -1,0 +1,24 @@
+{
+  "path": "/tmp/geometry_native_20261003/research/policy_iteration_baseline_groundwork.py",
+  "sha256": "aca9acad7bc4e0112e53e58d8b25dafa6136105b94a1521c5a4a162fa01f9310",
+  "frozen_harness_sha256": "3cac6a67ea4892051c6d137224f9cc87e247fa98e2f22c0329e2f5c594fcabd1",
+  "main_source_lock_sha256": "eda4463d30fe79b7706b323d1024726fc0a379314f4497c47c7ec0005ecacd72",
+  "cpu_slots": {
+    "L2": "8,9",
+    "L3": "10,11",
+    "L4": "12,13",
+    "L1_late": "14,15"
+  },
+  "scope": "Three natural READY controls and one late accelerated READY control; no alternative policy trial or bulk",
+  "late_selection": {
+    "public_rank": 858,
+    "public_now_utc": "2026-11-26T01:00:00+00:00",
+    "threshold_utc": "2026-11-25T12:18:45+00:00",
+    "step": 939,
+    "prefix_rows": 923,
+    "prefix_max_rank": 857,
+    "prefix_sha256": "07ebaf44f40a139e767d44badda96c58087f0205155d8f40e12e88b7fe01199a",
+    "selection_rule": "First natural observed public state at/after 75% of initialize UTC calendar span; only public actions/timestamps/ranks",
+    "source_trace_sha256": "207d7861fa4e4d8b81fd70ce4179947331419680746622557eaf1b253b8f1731"
+  }
+}
