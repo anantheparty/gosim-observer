@@ -1,0 +1,1751 @@
+{
+  "baseline": {
+    "conditional_total": 6423.086748758324,
+    "science": 6523.825772999824,
+    "required_missing": 6,
+    "uniformity_penalty": 0.7390242415002746,
+    "REQ1_completed": [
+      "V4T004993",
+      "V4T007389",
+      "V4T000654",
+      "V4T007281"
+    ],
+    "REQ1_reward": 0.0,
+    "changed_target_ledger": []
+  },
+  "best_result": {
+    "changes": [
+      {
+        "original_observe_index": 217,
+        "anchor": "V4T007669",
+        "start_utc": "2026-10-27T07:04:19Z",
+        "end_utc": "2026-10-27T07:07:51Z",
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 55.21667956959553,
+            "az_deg": 174.86855509382596
+          },
+          "duration_seconds": 212,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T000764",
+            "3": "V4T005220",
+            "8": "V4T004117",
+            "11": "V4T007651",
+            "12": "V4T007669",
+            "15": "V4T005971"
+          }
+        },
+        "entries": {
+          "V4T000764": {
+            "factor_lower": 0.5382950456491894,
+            "factor_upper": 0.5382951687147929,
+            "score_lower": 0.2906793246505623,
+            "score_upper": 0.2906793911059881
+          },
+          "V4T005220": {
+            "factor_lower": 0.6842465933451282,
+            "factor_upper": 0.6842467497783346,
+            "score_lower": 0.3694931604063692,
+            "score_upper": 0.36949324488030066
+          },
+          "V4T004117": {
+            "factor_lower": 0.13669141245714803,
+            "factor_upper": 0.13669144370768863,
+            "score_lower": 0.16402969494857764,
+            "score_upper": 0.16402973244922633
+          },
+          "V4T007651": {
+            "factor_lower": 0.1707620605813946,
+            "factor_upper": 0.17076209962120412,
+            "score_lower": 0.20491447269767352,
+            "score_upper": 0.20491451954544493
+          },
+          "V4T007669": {
+            "factor_lower": 0.5530130000165342,
+            "factor_upper": 0.5530131264469726,
+            "score_lower": 0.2986270200089285,
+            "score_upper": 0.29862708828136525
+          },
+          "V4T005971": {
+            "factor_lower": 0.3972701935369729,
+            "factor_upper": 0.3972702843613202,
+            "score_lower": 0.21452590450996536,
+            "score_upper": 0.21452595355511292
+          }
+        },
+        "minimum_margin_deg": 0.050225809766794416,
+        "single_without_REQ1_gain_change": -0.7946423183457227
+      },
+      {
+        "original_observe_index": 221,
+        "anchor": "V4T005585",
+        "start_utc": "2026-10-27T07:44:35Z",
+        "end_utc": "2026-10-27T07:50:57Z",
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 70.51976959900298,
+            "az_deg": 78.03279637768475
+          },
+          "duration_seconds": 382,
+          "program": "DARK",
+          "assignments": {
+            "0": "V4T007521",
+            "2": "V4T005585",
+            "4": "V4T000772",
+            "5": "V4T008678",
+            "6": "V4T006608",
+            "7": "V4T007401",
+            "9": "V4T001470",
+            "10": "V4T009193",
+            "11": "V4T005304",
+            "14": "V4T008599",
+            "15": "V4T003571"
+          }
+        },
+        "entries": {
+          "V4T007521": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.36,
+            "score_upper": 0.36
+          },
+          "V4T005585": {
+            "factor_lower": 0.5110716704985391,
+            "factor_upper": 0.5110717298858211,
+            "score_lower": 0.6132860045982469,
+            "score_upper": 0.6132860758629852
+          },
+          "V4T000772": {
+            "factor_lower": 0.9292582730681141,
+            "factor_upper": 0.9292583810488185,
+            "score_lower": 1.115109927681737,
+            "score_upper": 1.1151100572585821
+          },
+          "V4T008678": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.54,
+            "score_upper": 0.54
+          },
+          "V4T006608": {
+            "factor_lower": 0.18130994386436652,
+            "factor_upper": 0.18130996493276202,
+            "score_lower": 0.3698722854833077,
+            "score_upper": 0.3698723284628345
+          },
+          "V4T007401": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.54,
+            "score_upper": 0.54
+          },
+          "V4T001470": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.36,
+            "score_upper": 0.36
+          },
+          "V4T009193": {
+            "factor_lower": 0.9510011099169817,
+            "factor_upper": 0.9510012204239303,
+            "score_lower": 1.141201331900378,
+            "score_upper": 1.1412014645087163
+          },
+          "V4T005304": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.54,
+            "score_upper": 0.54
+          },
+          "V4T008599": {
+            "factor_lower": 1.0,
+            "factor_upper": 1.0,
+            "score_lower": 0.54,
+            "score_upper": 0.54
+          },
+          "V4T003571": {
+            "factor_lower": 0.905839598175423,
+            "factor_upper": 0.9058397034339283,
+            "score_lower": 0.48915338301472844,
+            "score_upper": 0.48915343985432125
+          }
+        },
+        "minimum_margin_deg": 0.057150520240530966,
+        "single_without_REQ1_gain_change": -53.99058263690131
+      }
+    ],
+    "settlement": {
+      "conditional_total": 6468.303225883691,
+      "science": 6519.917164485116,
+      "required_missing": 7,
+      "uniformity_penalty": 1.6139386014245138,
+      "REQ1_completed": [
+        "V4T004993",
+        "V4T007389",
+        "V4T007669",
+        "V4T005585",
+        "V4T000654",
+        "V4T007281"
+      ],
+      "REQ1_reward": 100.0,
+      "changed_target_ledger": [
+        {
+          "target_id": "V4T000440",
+          "score_before": 0.54,
+          "score_after": 0.0,
+          "factor_before": 1.0,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T000562",
+          "score_before": 0.443655,
+          "score_after": 0.0,
+          "factor_before": 0.821584,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T000764",
+          "score_before": 0.0,
+          "score_after": 0.2906793246505623,
+          "factor_before": 0.0,
+          "factor_after": 0.5382950456491894,
+          "required": false
+        },
+        {
+          "target_id": "V4T000772",
+          "score_before": 1.049603,
+          "score_after": 1.115109927681737,
+          "factor_before": 0.874669,
+          "factor_after": 0.9292582730681141,
+          "required": false
+        },
+        {
+          "target_id": "V4T001210",
+          "score_before": 0.791885,
+          "score_after": 0.791885,
+          "factor_before": 0.388179,
+          "factor_after": 0.388179,
+          "required": false
+        },
+        {
+          "target_id": "V4T001265",
+          "score_before": 0.407242,
+          "score_after": 0.045586,
+          "factor_before": 0.754151,
+          "factor_after": 0.101302,
+          "required": false
+        },
+        {
+          "target_id": "V4T001470",
+          "score_before": 0.188839,
+          "score_after": 0.36,
+          "factor_before": 0.629462,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T001827",
+          "score_before": 0.861334,
+          "score_after": 0.0,
+          "factor_before": 0.717778,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T002038",
+          "score_before": 1.033075,
+          "score_after": 1.033075,
+          "factor_before": 0.922388,
+          "factor_after": 0.922388,
+          "required": false
+        },
+        {
+          "target_id": "V4T003089",
+          "score_before": 0.36,
+          "score_after": 0.198698,
+          "factor_before": 1.0,
+          "factor_after": 0.551939,
+          "required": false
+        },
+        {
+          "target_id": "V4T003545",
+          "score_before": 0.80008,
+          "score_after": 0.80008,
+          "factor_before": 0.666733,
+          "factor_after": 0.666733,
+          "required": false
+        },
+        {
+          "target_id": "V4T003571",
+          "score_before": 0.265591,
+          "score_after": 0.48915338301472844,
+          "factor_before": 0.590203,
+          "factor_after": 0.905839598175423,
+          "required": false
+        },
+        {
+          "target_id": "V4T003674",
+          "score_before": 2.04,
+          "score_after": 2.04,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T003696",
+          "score_before": 1.0,
+          "score_after": 1.0,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T003772",
+          "score_before": 0.54,
+          "score_after": 0.54,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T004117",
+          "score_before": 0.050376,
+          "score_after": 0.16402969494857764,
+          "factor_before": 0.04198,
+          "factor_after": 0.13669141245714803,
+          "required": false
+        },
+        {
+          "target_id": "V4T004144",
+          "score_before": 0.54,
+          "score_after": 0.0,
+          "factor_before": 1.0,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T004762",
+          "score_before": 0.662981,
+          "score_after": 0.662981,
+          "factor_before": 0.552485,
+          "factor_after": 0.552485,
+          "required": false
+        },
+        {
+          "target_id": "V4T005195",
+          "score_before": 1.128879,
+          "score_after": 1.128879,
+          "factor_before": 0.940733,
+          "factor_after": 0.940733,
+          "required": true
+        },
+        {
+          "target_id": "V4T005220",
+          "score_before": 0.174102,
+          "score_after": 0.3694931604063692,
+          "factor_before": 0.364993,
+          "factor_after": 0.6842465933451282,
+          "required": false
+        },
+        {
+          "target_id": "V4T005304",
+          "score_before": 0.361138,
+          "score_after": 0.54,
+          "factor_before": 0.668773,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T005478",
+          "score_before": 1.06376,
+          "score_after": 1.06376,
+          "factor_before": 0.886467,
+          "factor_after": 0.886467,
+          "required": false
+        },
+        {
+          "target_id": "V4T005585",
+          "score_before": 0.753823,
+          "score_after": 0.753823,
+          "factor_before": 0.628186,
+          "factor_after": 0.628186,
+          "required": false
+        },
+        {
+          "target_id": "V4T005861",
+          "score_before": 1.2,
+          "score_after": 1.2,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T005971",
+          "score_before": 0.0,
+          "score_after": 0.21452590450996536,
+          "factor_before": 0.0,
+          "factor_after": 0.3972701935369729,
+          "required": false
+        },
+        {
+          "target_id": "V4T005994",
+          "score_before": 0.698476,
+          "score_after": 0.0,
+          "factor_before": 0.582063,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T006139",
+          "score_before": 0.585378,
+          "score_after": 0.585378,
+          "factor_before": 0.487815,
+          "factor_after": 0.487815,
+          "required": false
+        },
+        {
+          "target_id": "V4T006513",
+          "score_before": 1.2,
+          "score_after": 1.2,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T006608",
+          "score_before": 0.0,
+          "score_after": 0.3698722854833077,
+          "factor_before": 0.0,
+          "factor_after": 0.18130994386436652,
+          "required": false
+        },
+        {
+          "target_id": "V4T006713",
+          "score_before": 1.12,
+          "score_after": 1.12,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T007401",
+          "score_before": 0.494942,
+          "score_after": 0.54,
+          "factor_before": 0.916559,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T007493",
+          "score_before": 0.739176,
+          "score_after": 0.0,
+          "factor_before": 0.61598,
+          "factor_after": 0.0,
+          "required": true
+        },
+        {
+          "target_id": "V4T007521",
+          "score_before": 0.3,
+          "score_after": 0.36,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T007651",
+          "score_before": 0.022773,
+          "score_after": 0.20491447269767352,
+          "factor_before": 0.022773,
+          "factor_after": 0.1707620605813946,
+          "required": false
+        },
+        {
+          "target_id": "V4T007669",
+          "score_before": 0.419708,
+          "score_after": 0.419708,
+          "factor_before": 0.777238,
+          "factor_after": 0.777238,
+          "required": false
+        },
+        {
+          "target_id": "V4T007743",
+          "score_before": 1.2,
+          "score_after": 1.2,
+          "factor_before": 1.0,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T008064",
+          "score_before": 0.995092,
+          "score_after": 0.995092,
+          "factor_before": 0.829243,
+          "factor_after": 0.829243,
+          "required": true
+        },
+        {
+          "target_id": "V4T008087",
+          "score_before": 0.54,
+          "score_after": 0.0,
+          "factor_before": 1.0,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T008480",
+          "score_before": 0.54,
+          "score_after": 0.185052,
+          "factor_before": 1.0,
+          "factor_after": 0.342689,
+          "required": false
+        },
+        {
+          "target_id": "V4T008599",
+          "score_before": 0.356786,
+          "score_after": 0.54,
+          "factor_before": 0.792858,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T008678",
+          "score_before": 0.331794,
+          "score_after": 0.54,
+          "factor_before": 0.737321,
+          "factor_after": 1.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T009178",
+          "score_before": 0.508034,
+          "score_after": 0.0,
+          "factor_before": 0.940804,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T009193",
+          "score_before": 0.78091,
+          "score_after": 1.141201331900378,
+          "factor_before": 0.650758,
+          "factor_after": 0.9510011099169817,
+          "required": false
+        },
+        {
+          "target_id": "V4T009205",
+          "score_before": 0.54,
+          "score_after": 0.0,
+          "factor_before": 1.0,
+          "factor_after": 0.0,
+          "required": false
+        },
+        {
+          "target_id": "V4T009356",
+          "score_before": 0.482153,
+          "score_after": 0.0,
+          "factor_before": 0.892875,
+          "factor_after": 0.0,
+          "required": false
+        }
+      ]
+    },
+    "conditional_total_difference": 45.21647712536742,
+    "changed_action_indices": [
+      232,
+      236
+    ],
+    "executable_file": "delta_compensated_conditional_actions.jsonl",
+    "actions_sha256": "27a5cf5ca96e6df2d8f952a01d5eff941915b04535a8239e1592927418b79258"
+  },
+  "solutions": [
+    {
+      "mode": "free",
+      "stats": {
+        "columns": 1944,
+        "variables": 22802,
+        "rows": 30876,
+        "nonzeros": 65901,
+        "max_new_columns": 4,
+        "preserved_mandatory_targets": 0,
+        "REQ1_reward_forced": false,
+        "elapsed_seconds": 0.2432235828600824,
+        "status": 0,
+        "mip_gap": 0.0,
+        "objective_proxy": 34469.91716448529,
+        "proxy_dual_upper": 34469.91716448529
+      },
+      "changes": [
+        {
+          "original_observe_index": 217,
+          "anchor": "V4T007669",
+          "start_utc": "2026-10-27T07:04:19Z",
+          "end_utc": "2026-10-27T07:07:51Z",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 55.21667956959553,
+              "az_deg": 174.86855509382596
+            },
+            "duration_seconds": 212,
+            "program": "DARK",
+            "assignments": {
+              "0": "V4T000764",
+              "3": "V4T005220",
+              "8": "V4T004117",
+              "11": "V4T007651",
+              "12": "V4T007669",
+              "15": "V4T005971"
+            }
+          },
+          "entries": {
+            "V4T000764": {
+              "factor_lower": 0.5382950456491894,
+              "factor_upper": 0.5382951687147929,
+              "score_lower": 0.2906793246505623,
+              "score_upper": 0.2906793911059881
+            },
+            "V4T005220": {
+              "factor_lower": 0.6842465933451282,
+              "factor_upper": 0.6842467497783346,
+              "score_lower": 0.3694931604063692,
+              "score_upper": 0.36949324488030066
+            },
+            "V4T004117": {
+              "factor_lower": 0.13669141245714803,
+              "factor_upper": 0.13669144370768863,
+              "score_lower": 0.16402969494857764,
+              "score_upper": 0.16402973244922633
+            },
+            "V4T007651": {
+              "factor_lower": 0.1707620605813946,
+              "factor_upper": 0.17076209962120412,
+              "score_lower": 0.20491447269767352,
+              "score_upper": 0.20491451954544493
+            },
+            "V4T007669": {
+              "factor_lower": 0.5530130000165342,
+              "factor_upper": 0.5530131264469726,
+              "score_lower": 0.2986270200089285,
+              "score_upper": 0.29862708828136525
+            },
+            "V4T005971": {
+              "factor_lower": 0.3972701935369729,
+              "factor_upper": 0.3972702843613202,
+              "score_lower": 0.21452590450996536,
+              "score_upper": 0.21452595355511292
+            }
+          },
+          "minimum_margin_deg": 0.050225809766794416,
+          "single_without_REQ1_gain_change": -0.7946423183457227,
+          "kind": "conditional-new"
+        },
+        {
+          "original_observe_index": 221,
+          "anchor": "V4T005585",
+          "start_utc": "2026-10-27T07:44:35Z",
+          "end_utc": "2026-10-27T07:50:57Z",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 70.51976959900298,
+              "az_deg": 78.03279637768475
+            },
+            "duration_seconds": 382,
+            "program": "DARK",
+            "assignments": {
+              "0": "V4T007521",
+              "2": "V4T005585",
+              "4": "V4T000772",
+              "5": "V4T008678",
+              "6": "V4T006608",
+              "7": "V4T007401",
+              "9": "V4T001470",
+              "10": "V4T009193",
+              "11": "V4T005304",
+              "14": "V4T008599",
+              "15": "V4T003571"
+            }
+          },
+          "entries": {
+            "V4T007521": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.36,
+              "score_upper": 0.36
+            },
+            "V4T005585": {
+              "factor_lower": 0.5110716704985391,
+              "factor_upper": 0.5110717298858211,
+              "score_lower": 0.6132860045982469,
+              "score_upper": 0.6132860758629852
+            },
+            "V4T000772": {
+              "factor_lower": 0.9292582730681141,
+              "factor_upper": 0.9292583810488185,
+              "score_lower": 1.115109927681737,
+              "score_upper": 1.1151100572585821
+            },
+            "V4T008678": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T006608": {
+              "factor_lower": 0.18130994386436652,
+              "factor_upper": 0.18130996493276202,
+              "score_lower": 0.3698722854833077,
+              "score_upper": 0.3698723284628345
+            },
+            "V4T007401": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T001470": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.36,
+              "score_upper": 0.36
+            },
+            "V4T009193": {
+              "factor_lower": 0.9510011099169817,
+              "factor_upper": 0.9510012204239303,
+              "score_lower": 1.141201331900378,
+              "score_upper": 1.1412014645087163
+            },
+            "V4T005304": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T008599": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T003571": {
+              "factor_lower": 0.905839598175423,
+              "factor_upper": 0.9058397034339283,
+              "score_lower": 0.48915338301472844,
+              "score_upper": 0.48915343985432125
+            }
+          },
+          "minimum_margin_deg": 0.057150520240530966,
+          "single_without_REQ1_gain_change": -53.99058263690131,
+          "kind": "conditional-new"
+        }
+      ],
+      "settlement": {
+        "conditional_total": 6468.303225883691,
+        "science": 6519.917164485116,
+        "required_missing": 7,
+        "uniformity_penalty": 1.6139386014245138,
+        "REQ1_completed": [
+          "V4T004993",
+          "V4T007389",
+          "V4T007669",
+          "V4T005585",
+          "V4T000654",
+          "V4T007281"
+        ],
+        "REQ1_reward": 100.0,
+        "changed_target_ledger": [
+          {
+            "target_id": "V4T000440",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T000562",
+            "score_before": 0.443655,
+            "score_after": 0.0,
+            "factor_before": 0.821584,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T000764",
+            "score_before": 0.0,
+            "score_after": 0.2906793246505623,
+            "factor_before": 0.0,
+            "factor_after": 0.5382950456491894,
+            "required": false
+          },
+          {
+            "target_id": "V4T000772",
+            "score_before": 1.049603,
+            "score_after": 1.115109927681737,
+            "factor_before": 0.874669,
+            "factor_after": 0.9292582730681141,
+            "required": false
+          },
+          {
+            "target_id": "V4T001210",
+            "score_before": 0.791885,
+            "score_after": 0.791885,
+            "factor_before": 0.388179,
+            "factor_after": 0.388179,
+            "required": false
+          },
+          {
+            "target_id": "V4T001265",
+            "score_before": 0.407242,
+            "score_after": 0.045586,
+            "factor_before": 0.754151,
+            "factor_after": 0.101302,
+            "required": false
+          },
+          {
+            "target_id": "V4T001470",
+            "score_before": 0.188839,
+            "score_after": 0.36,
+            "factor_before": 0.629462,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T001827",
+            "score_before": 0.861334,
+            "score_after": 0.0,
+            "factor_before": 0.717778,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T002038",
+            "score_before": 1.033075,
+            "score_after": 1.033075,
+            "factor_before": 0.922388,
+            "factor_after": 0.922388,
+            "required": false
+          },
+          {
+            "target_id": "V4T003089",
+            "score_before": 0.36,
+            "score_after": 0.198698,
+            "factor_before": 1.0,
+            "factor_after": 0.551939,
+            "required": false
+          },
+          {
+            "target_id": "V4T003545",
+            "score_before": 0.80008,
+            "score_after": 0.80008,
+            "factor_before": 0.666733,
+            "factor_after": 0.666733,
+            "required": false
+          },
+          {
+            "target_id": "V4T003571",
+            "score_before": 0.265591,
+            "score_after": 0.48915338301472844,
+            "factor_before": 0.590203,
+            "factor_after": 0.905839598175423,
+            "required": false
+          },
+          {
+            "target_id": "V4T003674",
+            "score_before": 2.04,
+            "score_after": 2.04,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T003696",
+            "score_before": 1.0,
+            "score_after": 1.0,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T003772",
+            "score_before": 0.54,
+            "score_after": 0.54,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T004117",
+            "score_before": 0.050376,
+            "score_after": 0.16402969494857764,
+            "factor_before": 0.04198,
+            "factor_after": 0.13669141245714803,
+            "required": false
+          },
+          {
+            "target_id": "V4T004144",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T004762",
+            "score_before": 0.662981,
+            "score_after": 0.662981,
+            "factor_before": 0.552485,
+            "factor_after": 0.552485,
+            "required": false
+          },
+          {
+            "target_id": "V4T005195",
+            "score_before": 1.128879,
+            "score_after": 1.128879,
+            "factor_before": 0.940733,
+            "factor_after": 0.940733,
+            "required": true
+          },
+          {
+            "target_id": "V4T005220",
+            "score_before": 0.174102,
+            "score_after": 0.3694931604063692,
+            "factor_before": 0.364993,
+            "factor_after": 0.6842465933451282,
+            "required": false
+          },
+          {
+            "target_id": "V4T005304",
+            "score_before": 0.361138,
+            "score_after": 0.54,
+            "factor_before": 0.668773,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T005478",
+            "score_before": 1.06376,
+            "score_after": 1.06376,
+            "factor_before": 0.886467,
+            "factor_after": 0.886467,
+            "required": false
+          },
+          {
+            "target_id": "V4T005585",
+            "score_before": 0.753823,
+            "score_after": 0.753823,
+            "factor_before": 0.628186,
+            "factor_after": 0.628186,
+            "required": false
+          },
+          {
+            "target_id": "V4T005861",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T005971",
+            "score_before": 0.0,
+            "score_after": 0.21452590450996536,
+            "factor_before": 0.0,
+            "factor_after": 0.3972701935369729,
+            "required": false
+          },
+          {
+            "target_id": "V4T005994",
+            "score_before": 0.698476,
+            "score_after": 0.0,
+            "factor_before": 0.582063,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T006139",
+            "score_before": 0.585378,
+            "score_after": 0.585378,
+            "factor_before": 0.487815,
+            "factor_after": 0.487815,
+            "required": false
+          },
+          {
+            "target_id": "V4T006513",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T006608",
+            "score_before": 0.0,
+            "score_after": 0.3698722854833077,
+            "factor_before": 0.0,
+            "factor_after": 0.18130994386436652,
+            "required": false
+          },
+          {
+            "target_id": "V4T006713",
+            "score_before": 1.12,
+            "score_after": 1.12,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007401",
+            "score_before": 0.494942,
+            "score_after": 0.54,
+            "factor_before": 0.916559,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007493",
+            "score_before": 0.739176,
+            "score_after": 0.0,
+            "factor_before": 0.61598,
+            "factor_after": 0.0,
+            "required": true
+          },
+          {
+            "target_id": "V4T007521",
+            "score_before": 0.3,
+            "score_after": 0.36,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007651",
+            "score_before": 0.022773,
+            "score_after": 0.20491447269767352,
+            "factor_before": 0.022773,
+            "factor_after": 0.1707620605813946,
+            "required": false
+          },
+          {
+            "target_id": "V4T007669",
+            "score_before": 0.419708,
+            "score_after": 0.419708,
+            "factor_before": 0.777238,
+            "factor_after": 0.777238,
+            "required": false
+          },
+          {
+            "target_id": "V4T007743",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008064",
+            "score_before": 0.995092,
+            "score_after": 0.995092,
+            "factor_before": 0.829243,
+            "factor_after": 0.829243,
+            "required": true
+          },
+          {
+            "target_id": "V4T008087",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008480",
+            "score_before": 0.54,
+            "score_after": 0.185052,
+            "factor_before": 1.0,
+            "factor_after": 0.342689,
+            "required": false
+          },
+          {
+            "target_id": "V4T008599",
+            "score_before": 0.356786,
+            "score_after": 0.54,
+            "factor_before": 0.792858,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008678",
+            "score_before": 0.331794,
+            "score_after": 0.54,
+            "factor_before": 0.737321,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009178",
+            "score_before": 0.508034,
+            "score_after": 0.0,
+            "factor_before": 0.940804,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009193",
+            "score_before": 0.78091,
+            "score_after": 1.141201331900378,
+            "factor_before": 0.650758,
+            "factor_after": 0.9510011099169817,
+            "required": false
+          },
+          {
+            "target_id": "V4T009205",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009356",
+            "score_before": 0.482153,
+            "score_after": 0.0,
+            "factor_before": 0.892875,
+            "factor_after": 0.0,
+            "required": false
+          }
+        ]
+      },
+      "conditional_total_difference": 45.21647712536742
+    },
+    {
+      "mode": "preserve_original_mandatory",
+      "stats": {
+        "columns": 1944,
+        "variables": 22802,
+        "rows": 30876,
+        "nonzeros": 65901,
+        "max_new_columns": 4,
+        "preserved_mandatory_targets": 558,
+        "REQ1_reward_forced": false,
+        "elapsed_seconds": 0.06293704197742045,
+        "status": 0,
+        "mip_gap": 0.0,
+        "objective_proxy": 34423.825773,
+        "proxy_dual_upper": 34423.825773
+      },
+      "changes": [],
+      "settlement": {
+        "conditional_total": 6423.086748758324,
+        "science": 6523.825772999824,
+        "required_missing": 6,
+        "uniformity_penalty": 0.7390242415002746,
+        "REQ1_completed": [
+          "V4T004993",
+          "V4T007389",
+          "V4T000654",
+          "V4T007281"
+        ],
+        "REQ1_reward": 0.0,
+        "changed_target_ledger": []
+      },
+      "conditional_total_difference": 0.0
+    },
+    {
+      "mode": "whole_finite_pool",
+      "stats": {
+        "columns": 1944,
+        "variables": 22802,
+        "rows": 30876,
+        "nonzeros": 65901,
+        "max_new_columns": 1096,
+        "preserved_mandatory_targets": 0,
+        "REQ1_reward_forced": false,
+        "elapsed_seconds": 0.23526229104027152,
+        "status": 0,
+        "mip_gap": 0.0,
+        "objective_proxy": 34469.91716448529,
+        "proxy_dual_upper": 34469.91716448529
+      },
+      "changes": [
+        {
+          "original_observe_index": 217,
+          "anchor": "V4T007669",
+          "start_utc": "2026-10-27T07:04:19Z",
+          "end_utc": "2026-10-27T07:07:51Z",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 55.21667956959553,
+              "az_deg": 174.86855509382596
+            },
+            "duration_seconds": 212,
+            "program": "DARK",
+            "assignments": {
+              "0": "V4T000764",
+              "3": "V4T005220",
+              "8": "V4T004117",
+              "11": "V4T007651",
+              "12": "V4T007669",
+              "15": "V4T005971"
+            }
+          },
+          "entries": {
+            "V4T000764": {
+              "factor_lower": 0.5382950456491894,
+              "factor_upper": 0.5382951687147929,
+              "score_lower": 0.2906793246505623,
+              "score_upper": 0.2906793911059881
+            },
+            "V4T005220": {
+              "factor_lower": 0.6842465933451282,
+              "factor_upper": 0.6842467497783346,
+              "score_lower": 0.3694931604063692,
+              "score_upper": 0.36949324488030066
+            },
+            "V4T004117": {
+              "factor_lower": 0.13669141245714803,
+              "factor_upper": 0.13669144370768863,
+              "score_lower": 0.16402969494857764,
+              "score_upper": 0.16402973244922633
+            },
+            "V4T007651": {
+              "factor_lower": 0.1707620605813946,
+              "factor_upper": 0.17076209962120412,
+              "score_lower": 0.20491447269767352,
+              "score_upper": 0.20491451954544493
+            },
+            "V4T007669": {
+              "factor_lower": 0.5530130000165342,
+              "factor_upper": 0.5530131264469726,
+              "score_lower": 0.2986270200089285,
+              "score_upper": 0.29862708828136525
+            },
+            "V4T005971": {
+              "factor_lower": 0.3972701935369729,
+              "factor_upper": 0.3972702843613202,
+              "score_lower": 0.21452590450996536,
+              "score_upper": 0.21452595355511292
+            }
+          },
+          "minimum_margin_deg": 0.050225809766794416,
+          "single_without_REQ1_gain_change": -0.7946423183457227,
+          "kind": "conditional-new"
+        },
+        {
+          "original_observe_index": 221,
+          "anchor": "V4T005585",
+          "start_utc": "2026-10-27T07:44:35Z",
+          "end_utc": "2026-10-27T07:50:57Z",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 70.51976959900298,
+              "az_deg": 78.03279637768475
+            },
+            "duration_seconds": 382,
+            "program": "DARK",
+            "assignments": {
+              "0": "V4T007521",
+              "2": "V4T005585",
+              "4": "V4T000772",
+              "5": "V4T008678",
+              "6": "V4T006608",
+              "7": "V4T007401",
+              "9": "V4T001470",
+              "10": "V4T009193",
+              "11": "V4T005304",
+              "14": "V4T008599",
+              "15": "V4T003571"
+            }
+          },
+          "entries": {
+            "V4T007521": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.36,
+              "score_upper": 0.36
+            },
+            "V4T005585": {
+              "factor_lower": 0.5110716704985391,
+              "factor_upper": 0.5110717298858211,
+              "score_lower": 0.6132860045982469,
+              "score_upper": 0.6132860758629852
+            },
+            "V4T000772": {
+              "factor_lower": 0.9292582730681141,
+              "factor_upper": 0.9292583810488185,
+              "score_lower": 1.115109927681737,
+              "score_upper": 1.1151100572585821
+            },
+            "V4T008678": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T006608": {
+              "factor_lower": 0.18130994386436652,
+              "factor_upper": 0.18130996493276202,
+              "score_lower": 0.3698722854833077,
+              "score_upper": 0.3698723284628345
+            },
+            "V4T007401": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T001470": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.36,
+              "score_upper": 0.36
+            },
+            "V4T009193": {
+              "factor_lower": 0.9510011099169817,
+              "factor_upper": 0.9510012204239303,
+              "score_lower": 1.141201331900378,
+              "score_upper": 1.1412014645087163
+            },
+            "V4T005304": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T008599": {
+              "factor_lower": 1.0,
+              "factor_upper": 1.0,
+              "score_lower": 0.54,
+              "score_upper": 0.54
+            },
+            "V4T003571": {
+              "factor_lower": 0.905839598175423,
+              "factor_upper": 0.9058397034339283,
+              "score_lower": 0.48915338301472844,
+              "score_upper": 0.48915343985432125
+            }
+          },
+          "minimum_margin_deg": 0.057150520240530966,
+          "single_without_REQ1_gain_change": -53.99058263690131,
+          "kind": "conditional-new"
+        }
+      ],
+      "settlement": {
+        "conditional_total": 6468.303225883691,
+        "science": 6519.917164485116,
+        "required_missing": 7,
+        "uniformity_penalty": 1.6139386014245138,
+        "REQ1_completed": [
+          "V4T004993",
+          "V4T007389",
+          "V4T007669",
+          "V4T005585",
+          "V4T000654",
+          "V4T007281"
+        ],
+        "REQ1_reward": 100.0,
+        "changed_target_ledger": [
+          {
+            "target_id": "V4T000440",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T000562",
+            "score_before": 0.443655,
+            "score_after": 0.0,
+            "factor_before": 0.821584,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T000764",
+            "score_before": 0.0,
+            "score_after": 0.2906793246505623,
+            "factor_before": 0.0,
+            "factor_after": 0.5382950456491894,
+            "required": false
+          },
+          {
+            "target_id": "V4T000772",
+            "score_before": 1.049603,
+            "score_after": 1.115109927681737,
+            "factor_before": 0.874669,
+            "factor_after": 0.9292582730681141,
+            "required": false
+          },
+          {
+            "target_id": "V4T001210",
+            "score_before": 0.791885,
+            "score_after": 0.791885,
+            "factor_before": 0.388179,
+            "factor_after": 0.388179,
+            "required": false
+          },
+          {
+            "target_id": "V4T001265",
+            "score_before": 0.407242,
+            "score_after": 0.045586,
+            "factor_before": 0.754151,
+            "factor_after": 0.101302,
+            "required": false
+          },
+          {
+            "target_id": "V4T001470",
+            "score_before": 0.188839,
+            "score_after": 0.36,
+            "factor_before": 0.629462,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T001827",
+            "score_before": 0.861334,
+            "score_after": 0.0,
+            "factor_before": 0.717778,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T002038",
+            "score_before": 1.033075,
+            "score_after": 1.033075,
+            "factor_before": 0.922388,
+            "factor_after": 0.922388,
+            "required": false
+          },
+          {
+            "target_id": "V4T003089",
+            "score_before": 0.36,
+            "score_after": 0.198698,
+            "factor_before": 1.0,
+            "factor_after": 0.551939,
+            "required": false
+          },
+          {
+            "target_id": "V4T003545",
+            "score_before": 0.80008,
+            "score_after": 0.80008,
+            "factor_before": 0.666733,
+            "factor_after": 0.666733,
+            "required": false
+          },
+          {
+            "target_id": "V4T003571",
+            "score_before": 0.265591,
+            "score_after": 0.48915338301472844,
+            "factor_before": 0.590203,
+            "factor_after": 0.905839598175423,
+            "required": false
+          },
+          {
+            "target_id": "V4T003674",
+            "score_before": 2.04,
+            "score_after": 2.04,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T003696",
+            "score_before": 1.0,
+            "score_after": 1.0,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T003772",
+            "score_before": 0.54,
+            "score_after": 0.54,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T004117",
+            "score_before": 0.050376,
+            "score_after": 0.16402969494857764,
+            "factor_before": 0.04198,
+            "factor_after": 0.13669141245714803,
+            "required": false
+          },
+          {
+            "target_id": "V4T004144",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T004762",
+            "score_before": 0.662981,
+            "score_after": 0.662981,
+            "factor_before": 0.552485,
+            "factor_after": 0.552485,
+            "required": false
+          },
+          {
+            "target_id": "V4T005195",
+            "score_before": 1.128879,
+            "score_after": 1.128879,
+            "factor_before": 0.940733,
+            "factor_after": 0.940733,
+            "required": true
+          },
+          {
+            "target_id": "V4T005220",
+            "score_before": 0.174102,
+            "score_after": 0.3694931604063692,
+            "factor_before": 0.364993,
+            "factor_after": 0.6842465933451282,
+            "required": false
+          },
+          {
+            "target_id": "V4T005304",
+            "score_before": 0.361138,
+            "score_after": 0.54,
+            "factor_before": 0.668773,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T005478",
+            "score_before": 1.06376,
+            "score_after": 1.06376,
+            "factor_before": 0.886467,
+            "factor_after": 0.886467,
+            "required": false
+          },
+          {
+            "target_id": "V4T005585",
+            "score_before": 0.753823,
+            "score_after": 0.753823,
+            "factor_before": 0.628186,
+            "factor_after": 0.628186,
+            "required": false
+          },
+          {
+            "target_id": "V4T005861",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T005971",
+            "score_before": 0.0,
+            "score_after": 0.21452590450996536,
+            "factor_before": 0.0,
+            "factor_after": 0.3972701935369729,
+            "required": false
+          },
+          {
+            "target_id": "V4T005994",
+            "score_before": 0.698476,
+            "score_after": 0.0,
+            "factor_before": 0.582063,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T006139",
+            "score_before": 0.585378,
+            "score_after": 0.585378,
+            "factor_before": 0.487815,
+            "factor_after": 0.487815,
+            "required": false
+          },
+          {
+            "target_id": "V4T006513",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T006608",
+            "score_before": 0.0,
+            "score_after": 0.3698722854833077,
+            "factor_before": 0.0,
+            "factor_after": 0.18130994386436652,
+            "required": false
+          },
+          {
+            "target_id": "V4T006713",
+            "score_before": 1.12,
+            "score_after": 1.12,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007401",
+            "score_before": 0.494942,
+            "score_after": 0.54,
+            "factor_before": 0.916559,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007493",
+            "score_before": 0.739176,
+            "score_after": 0.0,
+            "factor_before": 0.61598,
+            "factor_after": 0.0,
+            "required": true
+          },
+          {
+            "target_id": "V4T007521",
+            "score_before": 0.3,
+            "score_after": 0.36,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T007651",
+            "score_before": 0.022773,
+            "score_after": 0.20491447269767352,
+            "factor_before": 0.022773,
+            "factor_after": 0.1707620605813946,
+            "required": false
+          },
+          {
+            "target_id": "V4T007669",
+            "score_before": 0.419708,
+            "score_after": 0.419708,
+            "factor_before": 0.777238,
+            "factor_after": 0.777238,
+            "required": false
+          },
+          {
+            "target_id": "V4T007743",
+            "score_before": 1.2,
+            "score_after": 1.2,
+            "factor_before": 1.0,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008064",
+            "score_before": 0.995092,
+            "score_after": 0.995092,
+            "factor_before": 0.829243,
+            "factor_after": 0.829243,
+            "required": true
+          },
+          {
+            "target_id": "V4T008087",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008480",
+            "score_before": 0.54,
+            "score_after": 0.185052,
+            "factor_before": 1.0,
+            "factor_after": 0.342689,
+            "required": false
+          },
+          {
+            "target_id": "V4T008599",
+            "score_before": 0.356786,
+            "score_after": 0.54,
+            "factor_before": 0.792858,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T008678",
+            "score_before": 0.331794,
+            "score_after": 0.54,
+            "factor_before": 0.737321,
+            "factor_after": 1.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009178",
+            "score_before": 0.508034,
+            "score_after": 0.0,
+            "factor_before": 0.940804,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009193",
+            "score_before": 0.78091,
+            "score_after": 1.141201331900378,
+            "factor_before": 0.650758,
+            "factor_after": 0.9510011099169817,
+            "required": false
+          },
+          {
+            "target_id": "V4T009205",
+            "score_before": 0.54,
+            "score_after": 0.0,
+            "factor_before": 1.0,
+            "factor_after": 0.0,
+            "required": false
+          },
+          {
+            "target_id": "V4T009356",
+            "score_before": 0.482153,
+            "score_after": 0.0,
+            "factor_before": 0.892875,
+            "factor_after": 0.0,
+            "required": false
+          }
+        ]
+      },
+      "conditional_total_difference": 45.21647712536742
+    },
+    {
+      "mode": "whole_pool_preserve_mandatory_force_REQ1",
+      "stats": {
+        "columns": 1944,
+        "variables": 22802,
+        "rows": 30876,
+        "nonzeros": 65901,
+        "max_new_columns": 1096,
+        "preserved_mandatory_targets": 558,
+        "REQ1_reward_forced": true,
+        "elapsed_seconds": 0.03800499998033047,
+        "status": 2,
+        "mip_gap": null,
+        "objective_proxy": null,
+        "proxy_dual_upper": null
+      },
+      "no_solver_incumbent": true
+    }
+  ],
+  "conditional_only_not_official_score": true,
+  "all_original_time_slots_choose_exactly_one": true,
+  "observe_count": 1096,
+  "fixed_loss_rank_window": [
+    150,
+    169
+  ],
+  "all_new_outside_loss_window": true,
+  "Jain_in_optimization": false,
+  "Jain_in_final_settlement": true,
+  "global_physical_search_complete": false,
+  "columns": 1944,
+  "source_sha256": "5a0cf0abcbdb05950973f65b27c45ef610a1c301f33f92233dd57ebae850b34e"
+}

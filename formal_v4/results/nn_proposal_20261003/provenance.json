@@ -1,0 +1,31 @@
+{
+  "schema": "owned-NN-experiment-v1",
+  "status": "completed-not-deployed",
+  "device": "RTX PRO 6000 Blackwell",
+  "host": "elevatia-wsl",
+  "remote_directory": "C:/Users/hedge/gosim-observer-formal-v4/ownedbenchmark/nn_proposal_20261003",
+  "completed_WSL_PID": 2923592,
+  "CUDA_environment": "existing gosim-gpu-venv-20260926 Windows Python / Numba",
+  "CUDA_training_source_sha256": "1b786bd62f2772ca92b41915b5c843e42f1e021821d295ed4787c417cf8bf794",
+  "local_source_sha256": {
+    "research/nn_proposal_data.py": "ad71907154443f9dc552b9b0b7266d4e24ed7b7fe8ea0296948f410be152026a",
+    "research/nn_proposal_train.py": "9eca502235d8b650e1805621cc7759ff7ce5b5542ec2e59505a1167fef21a590",
+    "research/nn_proposal_checks.py": "e95264e3681075b5a02fce8dff149b684c844bda4cb16ad47c62ef98d76a50fa"
+  },
+  "artifact_sha256": {
+    "dataset.npz": "f9d7a148446467a9e08cbf4cd2b9ed3e58a97df7dacf146f7971db2725a64e84",
+    "model.npz": "f31096ae37468331108f3306729f46df2ebe2bf5f8c6deca9d1deabe63d4ee95",
+    "data_manifest.json": "f627d02b5b2821ca63b67fbfcfc09db953c697217e3a75c185c6bf0706138157",
+    "train_progress.json": "ab328e2f847c39bf03350f685aba2b0328030807c41ddbad8dbacc54abef5baf",
+    "heldout_report.json": "a2308d78a38ef99c85e10627989eb7c135928d5264cb63964fd3d679b07fd9a3"
+  },
+  "CPU_inference_change_after_GPU_training": "only numpy_predict: explicit einsum replaces BLAS matmul; training kernels unchanged",
+  "production_mutations": 0,
+  "Git_index_mutations": 0,
+  "submission_operations": 0,
+  "GPU_service_API_power_changes": 0,
+  "hidden_platform_inputs": 0,
+  "future_truth_used_for_exact_online_reconstruction": false,
+  "state_note": "owned trajectory final-valid prior completed observations create synthetic ledgers; not exact online reconstruction",
+  "remote_training_process_alive": false
+}
