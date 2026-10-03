@@ -64,6 +64,9 @@
 
 - **无context学习对象研究发现严格的请求关系信息丢失**：两个合法合成公开局面仅改变请求成员图，现有真实feature builder的target/global/edge/scalar/flat全部逐项相同；两个当前候选加同一固定公开续局，经官方动作/几何/曝光和终局结算为 **102.4/2.4** 与 **2.4/102.4**。两世界等权时任何当前表示上的选择器候选regret为50，增加宽度/训练步数不能修复该表示碰撞；这不是实际卡提分或全集最优证明。最小逐request节点与成员join已实际打破碰撞，五学生模块源锁保持不变。root另只读固定64个control的公开capture，训练32状态仅4个活动请求、3个还有剩余请求；数据不足以支持复杂请求模型的泛化。独立小型逐request关系adapter已实现，19项碰撞、重排、ID重命名、空账本及时间窗检查通过，未替换固定比较或训练。原特征器empty-ledger异常的一行dtype=bool修复已精确重现并仅在隔离内存模块验证，未来部署版必须另行修复，当前五模块锁源保持不变。来源见 `research/cold_learning_signal_20261004.md`、`results/cold_learning_signal_20261004/ROOT_REVIEW.json` 与 `results/student_public_coverage_20261004/`。
 
+- **新无context图论路线已完成并停止真实验证**：联合请求gate保留window-aware `(request,target)` occurrence，共享有效witness可计多条请求；相同未来完成列签名可作严格有限列状态商。官方六列合成域净增 **5.348**，300组官方ledger/穷举差0；密集容量65536→64，实际稀疏可达状态没有减少，不能称搜索加速或胜native。四条现成强控制公开历史均只有两条相隔数周、成员不交叠的请求；已知官方生成器也全局排除跨请求重复目标。合成共享target机制符合协议但不来自该生成器，当前没有能改变真实卡动作的联合触发点，不开全季。来源见 `research/cold_graph_policy_20261004.md` 与 `results/cold_graph_policy_20261004/ROOT_REVIEW.json`。
+- **新无context公开随机规律审查已完成**：先读examples再查重，补核验固定官方公开v4源码commit e01939d0；目录内部共用catalog流，天气/事件/requests由SHA命名分流，同master不代表同随机状态，部分bundle构建甚至可用不同master。八卡28对同编号目标坐标匹配均0；97/97预报夜条目匹配公告，其中88提前、9同步。官方scorer人工同公开输入不同hidden slot得分 **0.568820/0.049897/0**，仅证明协议上的状态非唯一，非实际seed复现。既有hashed/legacy 32位枚举无命中已归档，本轮不重复或扩大seed域；不能把该指纹家族无命中写成绝对不可恢复。未恢复实际seed、未开GPU/季节、无部署候选。来源见 `research/cold_public_rng_20261004.md` 与 `results/cold_public_rng_20261004/ROOT_REVIEW.json`。
+
 已创建每小时运行的线程 heartbeat **GOSIM 独立算法探索**。每轮启动 `fork_turns="none"` 的代理：先给官方题目、评分与资源位置，不传旧推导；代理独立抽象后再与现有实验对照。轮换群体搜索、图/流松弛、可证剪枝、概率模型、NN/RL及混合方法。只对实质新结果、改进、证明、完成或失败通知，重复状态保持安静。
 
 持续目标已收窄研究优先级：以实际提分、数据规律和隐藏测试准备为中心，不再重复计算松弛得分上界；已有证明用于加速具体求解。算法方向的广度保持，不能反复训练同一失败教师或只扩大旧池搜索次数。

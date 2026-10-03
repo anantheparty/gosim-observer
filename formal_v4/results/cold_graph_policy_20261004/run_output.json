@@ -1,0 +1,322 @@
+{
+  "elapsed_seconds": 0.18571916711516678,
+  "random_audit": {
+    "atom_reduced_cases": 143,
+    "cases": 300,
+    "compressed_vs_raw_failures": 0,
+    "excluded": "geometry, future invalidation, online feedback and science/Jain trajectory prices",
+    "official_ledger_exhaustive_failures": 0,
+    "reachable_states_saved": 0,
+    "tested": "overlapping/nonidentical windows, shared targets, repeated witnesses, initial completed targets and nonoverlap schedules"
+  },
+  "six_column": {
+    "column_costs": [
+      32.44199999999999,
+      32.44199999999999,
+      32.44199999999999,
+      32.44199999999999,
+      32.44199999999999,
+      32.44199999999999
+    ],
+    "complete_plan_cost": 194.652,
+    "components_control": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 195.84,
+      "uniformity_penalty": -0.0
+    },
+    "components_joint": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 1.188,
+      "uniformity_penalty": -0.0
+    },
+    "delta": 5.347999999999985,
+    "independent_plans": [
+      {
+        "atom_count": 6,
+        "atom_members": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "chosen": [],
+        "cost": 0.0,
+        "dead_occurrences": 2,
+        "occurrence_count": 8,
+        "reachable_states": 127,
+        "value": 0.0
+      },
+      {
+        "atom_count": 6,
+        "atom_members": [
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ]
+        ],
+        "chosen": [],
+        "cost": 0.0,
+        "dead_occurrences": 2,
+        "occurrence_count": 8,
+        "reachable_states": 127,
+        "value": 0.0
+      }
+    ],
+    "joint_plan": {
+      "atom_count": 6,
+      "atom_members": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          13
+        ]
+      ],
+      "chosen": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cost": 194.652,
+      "dead_occurrences": 4,
+      "occurrence_count": 16,
+      "reachable_states": 127,
+      "value": 5.348000000000013
+    },
+    "science_control": 195.84,
+    "scope": "360-second request domain in official 900s synthetic slot, common final 540s wait; same-duration science regret cost, no native claim",
+    "shared_joint": 201.188,
+    "state_capacity_active_uncompressed": 4096,
+    "state_capacity_after": 64,
+    "state_capacity_before": 65536,
+    "uncompressed_plan": {
+      "atom_count": 12,
+      "atom_members": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ],
+      "chosen": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cost": 194.652,
+      "dead_occurrences": 4,
+      "occurrence_count": 16,
+      "reachable_states": 127,
+      "value": 5.348000000000013
+    }
+  },
+  "source_sha256": {
+    "formal_v4/results/cold_graph_policy_20261004/joint_occurrence_dp.py": "5e63e21804252e7ace41b79a7c9fcb78b86b77dd5d55bd31832235177068e340",
+    "formal_v4/results/cold_graph_policy_20261004/micro_experiment.py": "ad0e5594d556b7709ac9bf4b7ea60523dd30ca434860927d1e7decb3f82bf64b",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66"
+  },
+  "synthetic": {
+    "action_cost": 121.212,
+    "components_control": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 122.4,
+      "uniformity_penalty": -0.0
+    },
+    "components_joint": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 1.188,
+      "uniformity_penalty": -0.0
+    },
+    "current_requests": 2,
+    "delta": 78.78799999999998,
+    "each_request_reward": 100.0,
+    "independent_pursues": [
+      false,
+      false
+    ],
+    "joint_plan": {
+      "atom_count": 1,
+      "atom_members": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "chosen": [
+        0
+      ],
+      "cost": 121.212,
+      "dead_occurrences": 4,
+      "occurrence_count": 16,
+      "reachable_states": 3,
+      "value": 78.788
+    },
+    "science_control": 122.4,
+    "scope": "900-second official synthetic finite action domain; no production/season claim",
+    "shared_joint": 201.188,
+    "state_capacity_active_uncompressed": 4096,
+    "state_capacity_after": 2,
+    "state_capacity_before": 65536,
+    "uncompressed_plan": {
+      "atom_count": 12,
+      "atom_members": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ],
+      "chosen": [
+        0
+      ],
+      "cost": 121.212,
+      "dead_occurrences": 4,
+      "occurrence_count": 16,
+      "reachable_states": 3,
+      "value": 78.788
+    }
+  },
+  "window_counterexample": {
+    "completed": [
+      true,
+      false
+    ],
+    "incorrect_global_target_mask_reward": 200,
+    "occurrence_dp_reward": 100.0,
+    "official_reward": 100.0
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "v4-scenario-v1",
+  "name": "joint-gate-synthetic-six-columns",
+  "site": {
+    "name": "Paranal, Chile (virtual)",
+    "latitude_deg": -24.6157,
+    "longitude_deg": -70.3976,
+    "utc_offset_hours": -4.0,
+    "sun_altitude_limit_deg": -18.0
+  },
+  "minimum_altitude_deg": 30.0,
+  "fiber_config": "v4_fiber_config.json",
+  "score_config": "v4_score_config.json",
+  "products": {
+    "targets_csv": "targets.csv",
+    "footprint_csv": "footprint.csv",
+    "slots_csv": "slots.csv",
+    "weather_truth_csv": "weather.csv",
+    "events_csv": "events.csv",
+    "bulletins_jsonl": "bulletins.jsonl",
+    "forecasts_jsonl": "forecasts.jsonl",
+    "observation_requests_jsonl": "requests.jsonl"
+  },
+  "stress": {
+    "enabled": false
+  }
+}
