@@ -1,0 +1,139 @@
+{
+  "schema": "actual-joint-public-interval-pricing-v1",
+  "card": "alpha",
+  "cases": [
+    {
+      "case": 0,
+      "start": 1791272393.0,
+      "start_utc": "2026-10-06T07:39:53Z",
+      "end_nodes": [
+        1791272869.0,
+        1791273846.0,
+        1791274474.0,
+        1791274647.0,
+        1791274760.0,
+        1791274943.0,
+        1791275433.0,
+        1791275686.0,
+        1791275877.0
+      ],
+      "D": 9,
+      "file": "case_0.npz",
+      "sha256": "b99d01551884698c8855a7314e47d6b69d7577ba96f004c3a40ec1e0cb797010",
+      "inside_first_REQ_window": true,
+      "conditional_visible_targets": [
+        6495,
+        6224,
+        6149,
+        6141,
+        6129,
+        6121,
+        6110,
+        6110,
+        6110
+      ]
+    },
+    {
+      "case": 1,
+      "start": 1791358621.0,
+      "start_utc": "2026-10-07T07:37:01Z",
+      "end_nodes": [
+        1791359332.0,
+        1791360003.0,
+        1791360653.0,
+        1791361008.0,
+        1791361774.0
+      ],
+      "D": 5,
+      "file": "case_1.npz",
+      "sha256": "e19628fe58cd5f53ffa51ac62293b35840297a476eac70378f567a472fda7884",
+      "inside_first_REQ_window": true,
+      "conditional_visible_targets": [
+        6379,
+        6229,
+        6149,
+        6128,
+        6110
+      ]
+    },
+    {
+      "case": 2,
+      "start": 1791272154.0,
+      "start_utc": "2026-10-06T07:35:54Z",
+      "end_nodes": [
+        1791272393.0,
+        1791272869.0,
+        1791273846.0,
+        1791274474.0,
+        1791274647.0,
+        1791274760.0,
+        1791274943.0,
+        1791275433.0,
+        1791275686.0
+      ],
+      "D": 9,
+      "file": "case_2.npz",
+      "sha256": "0c5af904745a2f0cb5cabb6c134c01255607c6106aa6eae1f8d829563856230f",
+      "inside_first_REQ_window": true,
+      "conditional_visible_targets": [
+        6652,
+        6467,
+        6212,
+        6142,
+        6132,
+        6124,
+        6118,
+        6110,
+        6110
+      ]
+    },
+    {
+      "case": 3,
+      "start": 1791272869.0,
+      "start_utc": "2026-10-06T07:47:49Z",
+      "end_nodes": [
+        1791273846.0,
+        1791274474.0,
+        1791274647.0,
+        1791274760.0,
+        1791274943.0,
+        1791275433.0,
+        1791275686.0,
+        1791275877.0,
+        1791276082.0,
+        1791276297.0
+      ],
+      "D": 10,
+      "file": "case_3.npz",
+      "sha256": "9ea252396aaaf5b67e1b383a916673f9547e102ffe5409ebbd0bc81f6b9b83f9",
+      "inside_first_REQ_window": true,
+      "conditional_visible_targets": [
+        6254,
+        6169,
+        6158,
+        6146,
+        6133,
+        6110,
+        6110,
+        6110,
+        6110,
+        6110
+      ]
+    }
+  ],
+  "dual_path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/season_column_dual_audit_20261004/alpha/pricing_duals.json",
+  "dual_sha256": "1ce9e86e3f54247b75d2478a218d9a492b214a8a991c09f7f00fe12f986ece70",
+  "rho_nu_eta_source": "existing optimistic joint full-season LP marginals",
+  "time_cost": "existing pi[end]-pi[start], no interpolation",
+  "programs": [
+    "DARK",
+    "BRIGHT",
+    "BACKUP"
+  ],
+  "glass": 0.6324555320336759,
+  "pitch": 0.6324555320336759,
+  "nfib": 16,
+  "pricing_source_sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567",
+  "profile_sha256": "f85b31a62c0e2dd1ed0510b752ae67eb5663144f0a0feb0bda5925a6f574f51b",
+  "hypotheses": "old report/E history; narrow measured reference-domain Z prior; same-realization empirical prior; zerooffset;.03glassmargin; program bounds, not E*W band classification"
+}

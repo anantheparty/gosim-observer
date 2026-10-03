@@ -1,0 +1,87 @@
+{
+  "card": "alpha",
+  "input": "formal_v4/results/actual_joint_gpu_pricing_20261004/alpha/refined_columns.json",
+  "research_scope": "old report/E history; narrow measured reference-domain Z prior; same-realization empirical prior; zerooffset;.03glassmargin; program bounds, not E*W band classification",
+  "hidden_inputs_read": false,
+  "new_columns": 60,
+  "official_assignment_geometry_checks": 822,
+  "old_finite_lp_objective_without_constants": 32078.51073733339,
+  "new_finite_lp_objective_without_constants": 32078.51073733339,
+  "optimistic_finite_lp_change": 0.0,
+  "mip_status": 0,
+  "mip_gap": 0.0,
+  "mip_stats": {
+    "variables": 22146,
+    "rows": 30185,
+    "nonzeros": 63761,
+    "time_nodes": 1271,
+    "seconds": 0.0964490829501301,
+    "mode": "lower"
+  },
+  "baseline": {
+    "total_conditional_conservative": 7094.664229682793,
+    "science": 7045.172663999754,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.5084343169606154,
+    "observe_columns": 1194
+  },
+  "conservative_primal": {
+    "total_conditional_conservative": 7094.664229682792,
+    "science": 7045.172663999753,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.5084343169606154,
+    "observe_columns": 1171
+  },
+  "conditional_net_change": -9.094947017729282e-13,
+  "baseline_official_total": 7094.664204,
+  "baseline_source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cloud_cd2_alpha_20261003",
+  "baseline_reconstruction_error": 2.5682793420855887e-05,
+  "science_change": -9.094947017729282e-13,
+  "required_reward_change": 0,
+  "request_reward_change": 0.0,
+  "uniformity_change": 0.0,
+  "selected_new_column_indices": [],
+  "mip_objective_scope": "science-max + mandatory coverage + REQ; uniformity settled after solve, absent from MIP objective",
+  "input_sha256": "76eee60e437ed1c642977d8aabdf63bca18d5004f7223cafbec98b614b4e9d97",
+  "incumbent_preferred_on_net_tie": true,
+  "missing_column_global_bound_available": false,
+  "elapsed_seconds": 4.453873625025153,
+  "retained_schedule": {
+    "total_conditional_conservative": 7094.664229682793,
+    "science": 7045.172663999754,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.5084343169606154,
+    "observe_columns": 1194
+  },
+  "retained_schedule_new_column_indices": []
+}

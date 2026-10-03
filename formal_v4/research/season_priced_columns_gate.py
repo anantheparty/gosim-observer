@@ -3,7 +3,7 @@
 New research output only. No hidden data, production change, network or GPU.
 """
 from __future__ import annotations
-import argparse,csv,json,math,os,sys,time
+import argparse,csv,hashlib,json,math,os,sys,time
 from pathlib import Path
 os.environ.setdefault('OPENBLAS_NUM_THREADS','1');os.environ.setdefault('OMP_NUM_THREADS','1');os.environ.setdefault('MKL_NUM_THREADS','1')
 import numpy as np
@@ -52,6 +52,9 @@ def gate(root,input_path,out):
     mip,stats=frozen.solve_master(full,model,requests,fixed,'lower',90)
     selected=[j for j in range(len(full)) if mip.x is not None and mip.x[j]>.5] if mip.x is not None else historical
     primal=frozen.settle(full,selected,model,requests,report_value)
+    ordered=sorted(selected,key=lambda j:full[j]['start'])
+    assert all(full[a]['end']<=full[b]['start'] for a,b in zip(ordered,ordered[1:]))
+    assert set(fixed).issubset(selected)
     old_lp,olddual,old_lp_stats=dual_audit.lp_duals(columns,model,requests,fixed)
     new_lp,newdual,new_lp_stats=dual_audit.lp_duals(full,model,requests,fixed)
     incumbent_kept=primal['total_conditional_conservative']<=baseline['total_conditional_conservative']+.0000005*len(model.ids)
@@ -60,12 +63,19 @@ def gate(root,input_path,out):
             'old_finite_lp_objective_without_constants':-old_lp.fun,'new_finite_lp_objective_without_constants':-new_lp.fun,
             'optimistic_finite_lp_change':old_lp.fun-new_lp.fun,'mip_status':mip.status,'mip_gap':getattr(mip,'mip_gap',None),'mip_stats':stats,
             'baseline':baseline,'conservative_primal':primal,'conditional_net_change':primal['total_conditional_conservative']-baseline['total_conditional_conservative'],
+            'baseline_official_total':source['total'],'baseline_source':str(root/'formal_v4/results'/f'cloud_cd2_{card}_20261003'),
+            'baseline_reconstruction_error':baseline['total_conditional_conservative']-source['total'],
             'science_change':primal['science']-baseline['science'],'required_reward_change':50*(baseline['required_missing']-primal['required_missing']),
             'request_reward_change':sum(primal['request_rewards'])-sum(baseline['request_rewards']),
             'uniformity_change':baseline['uniformity_penalty']-primal['uniformity_penalty'],
             'selected_new_column_indices':[j-len(columns) for j in selected if j>=len(columns)],
+            'mip_objective_scope':'science-max + mandatory coverage + REQ; uniformity settled after solve, absent from MIP objective',
+            'input_sha256':hashlib.sha256(input_path.read_bytes()).hexdigest(),
             'incumbent_preferred_on_net_tie':incumbent_kept,'missing_column_global_bound_available':False,
             'elapsed_seconds':time.perf_counter()-began}
+    if incumbent_kept:selected=historical
+    output['retained_schedule']=frozen.settle(full,selected,model,requests,report_value)
+    output['retained_schedule_new_column_indices']=[j-len(columns) for j in selected if j>=len(columns)]
     out.mkdir(parents=True,exist_ok=True);(out/'gate.json').write_text(json.dumps(output,indent=2))
     schedule=[{'start_utc':stamp(full[j]['start']),'end_utc':stamp(full[j]['end']),'kind':full[j]['kind'],'action':full[j]['action']} for j in sorted(selected,key=lambda j:full[j]['start'])]
     schedule+=[{'start_utc':stamp(t),'end_utc':stamp(t),'kind':'fixed-report','action':{'action':'report'}} for t in report_times]
