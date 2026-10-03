@@ -1,0 +1,38 @@
+{
+  "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cold_neural_value_20261003/production_frozen",
+  "split": {
+    "training": "L1",
+    "validation": "L2",
+    "heldout": [
+      "L3",
+      "L4"
+    ]
+  },
+  "params": {
+    "night_variance": 0.03,
+    "slot_variance": 0.015,
+    "measurement_variance": 0.04
+  },
+  "entry_sha256": "92feda912fff2b7e589cfbbecd4760361251277e50b445f12a2925637dc69149",
+  "model_sha256": "10dc8202d4382d01cc6946084f9fb9e062383458495936b7afad14a6d65cdac7",
+  "source_policy_sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+  "source_feedback_sha256": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+  "clock_sha256": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "no_LLM": true,
+  "no_truth_reads_in_solver": true,
+  "gpu": false,
+  "participant_entry_sha256": "d0e332556bf325131306adabcc3f5d65dc330fcc7997089931668f9c63ad98a5",
+  "fixed_planner_sha256": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+  "fixed_workload": {
+    "mode": "bypass",
+    "anchor_count": 24,
+    "base_clock_budget": 1000000000,
+    "phase_optimization": false
+  }
+}

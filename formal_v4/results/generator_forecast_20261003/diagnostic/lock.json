@@ -1,0 +1,25 @@
+{
+  "locked_at_utc": "2026-10-03T14:14:41.660645+00:00",
+  "mode": "diagnostic-reserve",
+  "reserve_coupons": 1,
+  "efficiency_threshold": 0.68,
+  "confidence_loss": 0.5,
+  "fresh_seconds": 7200,
+  "cooldown_seconds": 86400,
+  "minimum_feedback": 3,
+  "choice_uses_only": "L1 training",
+  "L1_scores": {
+    "baseline": 6096.185388,
+    "all_free": 5876.515621,
+    "reserve_one": 6132.248607
+  },
+  "L1_reserve_delta": 36.06321900000057,
+  "entry_sha256": "a8ed2bb7cc6912009f54cc6025ae44b8ec3b2b340da5ee112d47cfe6c5659c70",
+  "model_sha256": "034399ae956484492518f1769c65a3898068aa847c3eae3683a4e2a17fe57dfd",
+  "validation_card": "L2",
+  "heldout_cards": [
+    "L3",
+    "L4"
+  ],
+  "no_heldout_tuning": true
+}

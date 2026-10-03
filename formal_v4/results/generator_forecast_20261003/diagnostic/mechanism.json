@@ -1,0 +1,38 @@
+{
+  "source_facts": {
+    "scorer": "runner/challenge/v4_scorer.py:183-232",
+    "runner": "runner/challenge/v4_runner.py:668-703",
+    "correct": "A currently active unrepaired instrument fault is repaired, correct reward is returned, and false count resets to zero.",
+    "false": "False count increments by one; settlement is zero up to the configured free allowance, otherwise false penalty.",
+    "report_time": "Reports have identical start/end, zero duration, and blank observe_index. Report itself does not alter the denominator N used by exposure-window invalidations.",
+    "source_gap": "Frozen Policy._repair rejects every earthquake notice and its clean low-E buffer excludes EarthquakeALL exposure feedback.",
+    "identification": "Low score fit loss does not independently identify instrument fault. Earthquake multiplies E, and C/E/program ambiguities remain."
+  },
+  "stopping_mechanism": {
+    "state": "c remaining false-report coupons, b public posterior/state, R correct reward, G future score recovered by repair",
+    "report_value": "p_fault*(R+G+V(allowance,b_correct)) + (1-p_fault)*V(c-1,b_false)",
+    "wait_value": "V(c,b_wait)",
+    "criterion": "Report when report_value >= wait_value. No exposure-time term is charged, but false-coupon continuation value is a real opportunity cost.",
+    "implemented": "Heuristic stopping rule, not a fitted optimal posterior: median last 3-4 fresh informative E fits below .68, loss<.5, age<=7200s, cooldown>=86400s.",
+    "candidates": {
+      "diagnostic": "Use additional report while c>0.",
+      "diagnostic-reserve": "Use additional report while c>1; original unconfounded witness rule may use the reserved coupon."
+    },
+    "direct_nonnegative_proof": "Additional branch enforces c>reserve>=0. If correct it receives configured reward; if false new count is <= allowance and settlement zero. No negative report settlement is possible through the added branch on the public cards.",
+    "limitation": "Neither zero direct report cost nor unchanged report-time N proves nonnegative total score. False diagnostics spend future coupons and reset source belief. Changes in future exposures may change data-loss windows."
+  },
+  "experiment_scope": {
+    "train": "L1 compares consuming all free coupons against preserving one.",
+    "validation": "L2 checks the locked L1 choice.",
+    "heldout": [
+      "L3",
+      "L4"
+    ],
+    "threshold": ".68 from existing source before any diagnostic run; no threshold fitting to heldout cards.",
+    "same_source": "cold_neural_value_20261003/production_frozen; CPUPhase mode=bypass, fixed_workload=True, anchor_count24; BLAS/OMP/MKL1",
+    "solver_features": "Only ordinary initial public constants, score-only hit feedback, public geometry/program, notices, and report results.",
+    "LLM": false,
+    "GPU": false,
+    "production_edits": false
+  }
+}

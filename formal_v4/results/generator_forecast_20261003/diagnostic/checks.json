@@ -1,0 +1,43 @@
+{
+  "all_passed": true,
+  "stopping": {
+    "false_coupons_consumed": 2,
+    "no_report_when_remaining_zero": true,
+    "correct_replenishes_allowance": true,
+    "zero_configured_allowance_blocks": true,
+    "stale_weak_and_cooldown_block": true,
+    "quake_diagnostic_reports": 3,
+    "reserve_retains_coupon_for_original_witness": true,
+    "allowances_0_through_4_passed": true
+  },
+  "settlement": {
+    "settlements": [
+      0.0,
+      0.0,
+      100.0,
+      0.0,
+      0.0,
+      -150.0
+    ],
+    "false_counts": [
+      1,
+      2,
+      0,
+      1,
+      2,
+      3
+    ],
+    "repair_time": "2026-10-04T00:01:00+00:00"
+  },
+  "live_runner": {
+    "report_sim_seconds": 0,
+    "observe_indexes": [
+      0,
+      1
+    ],
+    "before_score": 6.8e-05,
+    "after_score": 0.000171,
+    "repair_improvement_ratio": 2.514705882352941,
+    "report_settlement": 100.0
+  }
+}

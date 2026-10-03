@@ -1,0 +1,132 @@
+[
+  {
+    "card": "L1",
+    "mode": "baseline",
+    "exit_code": 0,
+    "elapsed": 125.33051295904443,
+    "score": 6096.185388,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -100.0,
+      "sum_best_scores": 5996.418331,
+      "uniformity_penalty": -0.232943
+    },
+    "counts": {
+      "decisions": 1591,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 13241,
+      "observe_actions": 1005,
+      "required_missing": 2,
+      "targets_observed": 7582
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    }
+  },
+  {
+    "card": "L1",
+    "mode": "diagnostic",
+    "exit_code": 0,
+    "elapsed": 129.76848720782436,
+    "score": 5876.515621,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 0.0,
+      "required_penalty": -100.0,
+      "sum_best_scores": 5876.866524,
+      "uniformity_penalty": -0.350903
+    },
+    "counts": {
+      "decisions": 1573,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 13016,
+      "observe_actions": 987,
+      "required_missing": 2,
+      "targets_observed": 7564
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "diagnostic": {
+      "fresh_fits": 970,
+      "coupon_reports": 2,
+      "coupon_reports_with_quake": 2,
+      "original_reports": 0,
+      "correct_coupon_reports": 0,
+      "false_coupon_reports": 2,
+      "minimum_coupon_remaining_before_report": 1
+    }
+  },
+  {
+    "card": "L2",
+    "mode": "diagnostic",
+    "exit_code": 0,
+    "elapsed": 124.20873566600494,
+    "score": 4663.592166,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -600.0,
+      "sum_best_scores": 5065.522432,
+      "uniformity_penalty": -1.930266
+    },
+    "counts": {
+      "decisions": 1580,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 12027,
+      "observe_actions": 888,
+      "required_missing": 12,
+      "targets_observed": 7720
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "diagnostic": {
+      "fresh_fits": 844,
+      "coupon_reports": 2,
+      "coupon_reports_with_quake": 0,
+      "original_reports": 0,
+      "correct_coupon_reports": 0,
+      "false_coupon_reports": 2,
+      "minimum_coupon_remaining_before_report": 1
+    }
+  },
+  {
+    "card": "L2",
+    "mode": "baseline",
+    "exit_code": 0,
+    "elapsed": 146.9169774998445,
+    "score": 6530.003371,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6381.212669,
+      "uniformity_penalty": -1.209298
+    },
+    "counts": {
+      "decisions": 1792,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 14502,
+      "observe_actions": 1103,
+      "required_missing": 3,
+      "targets_observed": 8272
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    }
+  }
+]

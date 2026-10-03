@@ -1,0 +1,40 @@
+[
+  {
+    "card": "L2",
+    "mode": "diagnostic-reserve",
+    "exit_code": 0,
+    "elapsed": 151.56718808296137,
+    "score": 6539.317975,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 6391.067424,
+      "uniformity_penalty": -1.749449
+    },
+    "counts": {
+      "decisions": 1788,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 14513,
+      "observe_actions": 1105,
+      "required_missing": 3,
+      "targets_observed": 8281
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "diagnostic": {
+      "fresh_fits": 1065,
+      "coupon_reports": 2,
+      "coupon_reports_with_quake": 0,
+      "original_reports": 1,
+      "correct_coupon_reports": 0,
+      "false_coupon_reports": 2,
+      "minimum_coupon_remaining_before_report": 2,
+      "reserve_coupons": 1
+    }
+  }
+]

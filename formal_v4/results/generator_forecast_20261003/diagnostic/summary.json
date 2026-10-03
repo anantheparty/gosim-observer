@@ -1,0 +1,432 @@
+{
+  "lock": {
+    "locked_at_utc": "2026-10-03T14:14:41.660645+00:00",
+    "mode": "diagnostic-reserve",
+    "reserve_coupons": 1,
+    "efficiency_threshold": 0.68,
+    "confidence_loss": 0.5,
+    "fresh_seconds": 7200,
+    "cooldown_seconds": 86400,
+    "minimum_feedback": 3,
+    "choice_uses_only": "L1 training",
+    "L1_scores": {
+      "baseline": 6096.185388,
+      "all_free": 5876.515621,
+      "reserve_one": 6132.248607
+    },
+    "L1_reserve_delta": 36.06321900000057,
+    "entry_sha256": "a8ed2bb7cc6912009f54cc6025ae44b8ec3b2b340da5ee112d47cfe6c5659c70",
+    "model_sha256": "034399ae956484492518f1769c65a3898068aa847c3eae3683a4e2a17fe57dfd",
+    "validation_card": "L2",
+    "heldout_cards": [
+      "L3",
+      "L4"
+    ],
+    "no_heldout_tuning": true
+  },
+  "rows": [
+    {
+      "card": "L1",
+      "split": "train",
+      "baseline_score": 6096.185388,
+      "diagnostic_score": 6132.248607,
+      "delta": 36.06321900000057,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 36.16043499999978,
+        "uniformity_penalty": -0.097217
+      },
+      "baseline_counts": {
+        "decisions": 1591,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 13241,
+        "observe_actions": 1005,
+        "required_missing": 2,
+        "targets_observed": 7582
+      },
+      "diagnostic_counts": {
+        "decisions": 1602,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 13267,
+        "observe_actions": 1012,
+        "required_missing": 2,
+        "targets_observed": 7589
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 989,
+        "coupon_reports": 2,
+        "coupon_reports_with_quake": 1,
+        "original_reports": 1,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 2,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      },
+      "baseline_report_audit": {
+        "reports": [
+          {
+            "correct": true,
+            "issued_at_utc": "2026-11-29T08:10:50Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 2,
+            "fault_start_utc": "2026-11-21T06:45:00Z",
+            "fault_repair_delay_hours": 193.43055555555554,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-12T05:04:39Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          },
+          {
+            "correct": true,
+            "issued_at_utc": "2026-11-29T06:33:56Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 1,
+            "fault_start_utc": "2026-11-21T06:45:00Z",
+            "fault_repair_delay_hours": 191.81555555555556,
+            "false_since_correct_after": 0
+          },
+          {
+            "correct": false,
+            "issued_at_utc": "2026-12-02T05:14:29Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      }
+    },
+    {
+      "card": "L2",
+      "split": "validation",
+      "baseline_score": 6530.003371,
+      "diagnostic_score": 6539.317975,
+      "delta": 9.314604000000145,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 9.854755000000296,
+        "uniformity_penalty": -0.540151
+      },
+      "baseline_counts": {
+        "decisions": 1792,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 14502,
+        "observe_actions": 1103,
+        "required_missing": 3,
+        "targets_observed": 8272
+      },
+      "diagnostic_counts": {
+        "decisions": 1788,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 14513,
+        "observe_actions": 1105,
+        "required_missing": 3,
+        "targets_observed": 8281
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 1065,
+        "coupon_reports": 2,
+        "coupon_reports_with_quake": 0,
+        "original_reports": 1,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 2,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      },
+      "baseline_report_audit": {
+        "reports": [
+          {
+            "correct": true,
+            "issued_at_utc": "2026-11-21T06:48:48Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 2,
+            "fault_start_utc": "2026-11-21T04:45:00Z",
+            "fault_repair_delay_hours": 2.0633333333333335,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-12T01:51:31Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          },
+          {
+            "correct": true,
+            "issued_at_utc": "2026-11-21T05:35:35Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 1,
+            "fault_start_utc": "2026-11-21T04:45:00Z",
+            "fault_repair_delay_hours": 0.8430555555555556,
+            "false_since_correct_after": 0
+          },
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-23T06:24:28Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      }
+    },
+    {
+      "card": "L3",
+      "split": "heldout",
+      "baseline_score": 5769.301279,
+      "diagnostic_score": 5778.265887,
+      "delta": 8.964607999999316,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 8.91525300000012,
+        "uniformity_penalty": 0.04935500000000004
+      },
+      "baseline_counts": {
+        "decisions": 1726,
+        "invalidated_observations": 13,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13288,
+        "observe_actions": 1006,
+        "required_missing": 5,
+        "targets_observed": 8095
+      },
+      "diagnostic_counts": {
+        "decisions": 1731,
+        "invalidated_observations": 13,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13320,
+        "observe_actions": 1007,
+        "required_missing": 5,
+        "targets_observed": 8108
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 977,
+        "coupon_reports": 1,
+        "coupon_reports_with_quake": 1,
+        "original_reports": 0,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 1,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      },
+      "baseline_report_audit": {
+        "reports": [],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-12-03T04:02:15Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      }
+    },
+    {
+      "card": "L4",
+      "split": "heldout",
+      "baseline_score": 5920.398486,
+      "diagnostic_score": 5926.83416,
+      "delta": 6.43567400000029,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 6.2071530000002895,
+        "uniformity_penalty": 0.22852099999999997
+      },
+      "baseline_counts": {
+        "decisions": 1688,
+        "invalidated_observations": 385,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 12939,
+        "observe_actions": 958,
+        "required_missing": 0,
+        "targets_observed": 7999
+      },
+      "diagnostic_counts": {
+        "decisions": 1691,
+        "invalidated_observations": 383,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 12953,
+        "observe_actions": 961,
+        "required_missing": 0,
+        "targets_observed": 8040
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 931,
+        "coupon_reports": 1,
+        "coupon_reports_with_quake": 0,
+        "original_reports": 1,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 1,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      },
+      "baseline_report_audit": {
+        "reports": [
+          {
+            "correct": true,
+            "issued_at_utc": "2026-12-29T02:05:21Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 2,
+            "fault_start_utc": "2026-12-05T05:15:00Z",
+            "fault_repair_delay_hours": 572.8391666666666,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-29T06:46:54Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          },
+          {
+            "correct": true,
+            "issued_at_utc": "2026-12-29T02:16:51Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 1,
+            "fault_start_utc": "2026-12-05T05:15:00Z",
+            "fault_repair_delay_hours": 573.0308333333334,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      }
+    }
+  ],
+  "heldout_mean_delta": 7.700140999999803,
+  "heldout_all_positive": true,
+  "source_policy_unchanged": true,
+  "mechanism": "Preserve one false-report coupon for original strong evidence; allow additional fresh E diagnostics even with earthquake notices.",
+  "checks": {
+    "all_passed": true,
+    "stopping": {
+      "false_coupons_consumed": 2,
+      "no_report_when_remaining_zero": true,
+      "correct_replenishes_allowance": true,
+      "zero_configured_allowance_blocks": true,
+      "stale_weak_and_cooldown_block": true,
+      "quake_diagnostic_reports": 3,
+      "reserve_retains_coupon_for_original_witness": true,
+      "allowances_0_through_4_passed": true
+    },
+    "settlement": {
+      "settlements": [
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        -150.0
+      ],
+      "false_counts": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        3
+      ],
+      "repair_time": "2026-10-04T00:01:00+00:00"
+    },
+    "live_runner": {
+      "report_sim_seconds": 0,
+      "observe_indexes": [
+        0,
+        1
+      ],
+      "before_score": 6.8e-05,
+      "after_score": 0.000171,
+      "repair_improvement_ratio": 2.514705882352941,
+      "report_settlement": 100.0
+    }
+  },
+  "live_fault": {
+    "delta": 100.06094299999998
+  },
+  "caveat": "Free direct settlement does not prove nonnegative season effect. False reports consume later opportunity and reset C/E belief. Only four public cards tested.",
+  "decision": "Candidate for root integration validation"
+}
