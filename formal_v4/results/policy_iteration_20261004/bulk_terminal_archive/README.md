@@ -1,0 +1,11 @@
+# Original terminal bulk teacher evidence
+
+Status: **complete; all original bytes and archive scans verified**. This preserves raw evidence and does not grant fitting acceptance or deployment authority.
+
+The frozen Rhodes1 inventory contains 315 original `archives/bulk_*.tar.gz` files and six untouched metadata files (`bulk_summary.json`, `bulk_progress.json`, `bulk_job.json`, `bulk_plan.json`, `bulk_source_lock.json`, `source_lock.json`), totalling 690,697,240 bytes. The largest file is 2,872,874 bytes, so no 95 MiB split is needed. `REMOTE_FROZEN_FILES.json` records the source file names, sizes and SHA256 hashes before transport.
+
+The first single rsync process was intentionally interrupted (owned PID 63909, exit 20) before root's pause instruction arrived. After root completed fit/sealed dataset transport, one resumed rsync process (PID 65241) preserved the 41 already hash-verified files and copied the remainder. It ended with no rsync error marker. No parallel transport channels were started and no shared processes were signalled. All remote source bytes remain intact. The deliberate interruption is retained in `TRANSPORT_RECEIPT.json`.
+
+`verify_transport.py` confirmed all 321 original file sizes and SHA256 hashes against the pre-transfer frozen remote inventory. It streamed all 5,040 regular tar members, checked safe paths and excluded credential bytes, and recorded the embedded original member-manifest hashes. Sensitive path/value matches were zero, including the auxiliary plaintext metadata. No members were extracted to disk and no episode scores/labels were decoded. Only source-lock/plan provenance fields were parsed, retaining all 64 planned groups. No positive/negative/tied/failed teacher records were filtered; all L4 result bytes remain opaque.
+
+`MANIFEST_SHA256.json` and `TRANSPORT_RECEIPT.json` contain the complete transport and scan evidence. Existing remote outer manifests/indexes cover old groundwork/revision7 episodes rather than this batch, so they are excluded; this batch's remote frozen inventory supplies its complete outer transport index. Original episode archives were not repacked. No blob exceeds 95 MiB, so no split parts were created. No Git commit or push was performed.
