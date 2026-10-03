@@ -1,0 +1,215 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-03T00:01:37.062811+00:00",
+  "source": "private platform practice evaluation download",
+  "project": "Observer Request GPU",
+  "task_card": "alpha",
+  "evaluation_started_utc_parent": "2026-10-02T23:38:00Z",
+  "submission_file": "observer_request_phase_gpu.zip",
+  "submission_zip_sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+  "platform_source_digest": "75fa4058539fbe28fafd0e56d4fab0cc8af0108d7cbb6ec87ee1f268a126c0d5",
+  "source_digest_evidence": {
+    "root_UI_confirmed_same_bfcc_75fa_prepared_candidate_in_full_batch": true,
+    "root_UI_previous_public_test_full_fingerprint_confirmed": true,
+    "local_package_gate_path": "formal_v4/results/request_model_gpu_health60_package_gates_20261003.json",
+    "local_package_gate_sha256": "55ef44c3fc119f045100fa87954e2ad2b36a6318e6730fdf3fac06d234134706",
+    "download_outputs_contain_source_fingerprint": false
+  },
+  "download_file": "gosim_request_gpu_alpha_result.zip",
+  "download_zip_sha256": "cab58e9e89d0b740537c2e855b46279e0092c737f9d8a3158cdb8034234c37aa",
+  "download_bytes": 360457,
+  "download_root": "AGENTIC-OBSERVER26-runner-10-participant-7afaf76f63f441738f78439d9ed3bbe6-0bcb3fe00b5581c34b1cddb5a2f52021be01e7a2",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "fcbfa6090858269178881a56d3e20475a185fe3abf5ced390b17d6c17ec41ba8",
+    "agent.log": "9703b22a25d896a3a65bc7eaeb2d7bce548d271d0f48351fa9ce60135195f86f",
+    "decisions.csv": "4be2129d1797d20b4badd72fe74c20a53dc4aecf8d7b0db16873532be3287b57",
+    "messages.jsonl": "9b515a3fd0042c851af3438333acca5d4db4f2cfaeffc18dab148745745e3248",
+    "observations.csv": "e1812c59e04e9798960143e3cbbe31e4a36fb73fe9b3958405eb90fd0ab4fc3a",
+    "score_report.json": "84fe172e1f1519409c573597e681c9789832efc8e61220b335b4f68b5c916cad",
+    "workflow_result.json": "159347a0dbaa1b304bd01a8bd412bbbf555f7a5b7eb65b5ec217a4eb871982ff"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "fcbfa6090858269178881a56d3e20475a185fe3abf5ced390b17d6c17ec41ba8",
+    "agent.log": "9703b22a25d896a3a65bc7eaeb2d7bce548d271d0f48351fa9ce60135195f86f",
+    "decisions.csv": "4be2129d1797d20b4badd72fe74c20a53dc4aecf8d7b0db16873532be3287b57",
+    "messages.jsonl": "9b515a3fd0042c851af3438333acca5d4db4f2cfaeffc18dab148745745e3248",
+    "observations.csv": "e1812c59e04e9798960143e3cbbe31e4a36fb73fe9b3958405eb90fd0ab4fc3a",
+    "score_report.json": "84fe172e1f1519409c573597e681c9789832efc8e61220b335b4f68b5c916cad",
+    "workflow_result.json": "159347a0dbaa1b304bd01a8bd412bbbf555f7a5b7eb65b5ec217a4eb871982ff"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 382928,
+    "agent.log": 617,
+    "decisions.csv": 125867,
+    "messages.jsonl": 181447,
+    "observations.csv": 836327,
+    "score_report.json": 2258,
+    "workflow_result.json": 2915
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 382928,
+    "agent.log": 617,
+    "decisions.csv": 125867,
+    "messages.jsonl": 181447,
+    "observations.csv": 836327,
+    "score_report.json": 2258,
+    "workflow_result.json": 2915
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-practice-alpha",
+    "total": 5891.78913,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5942.269118,
+      "uniformity_penalty": -0.479988
+    },
+    "counts": {
+      "decisions": 1445,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 1,
+      "observations": 13188,
+      "observe_actions": 937,
+      "required_missing": 5,
+      "targets_observed": 8877
+    },
+    "requests": [
+      {
+        "completed": true,
+        "completed_count": 6,
+        "completed_target_ids": [
+          "V4T002552",
+          "V4T006427",
+          "V4T005931",
+          "V4T001423",
+          "V4T004387",
+          "V4T000473"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-10-07T08:45:00Z",
+        "issued_at_utc": "2026-10-06T00:00:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0001",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T006147",
+          "V4T002552",
+          "V4T006427",
+          "V4T008695",
+          "V4T005931",
+          "V4T001423",
+          "V4T004387",
+          "V4T000473"
+        ]
+      }
+    ],
+    "completion": {
+      "termination_reason": "global_wallclock_expired",
+      "ignored_in_flight_response": true,
+      "finish_summary_present": false,
+      "traceback_present": false,
+      "remote_close_ACK_not_logged": true
+    },
+    "wallclock_limit_seconds": 900.0,
+    "accounted_wallclock_seconds": 900.0,
+    "agent_wallclock_seconds": 888.268,
+    "configured_health_timeout_seconds": 60,
+    "remote_check": {
+      "remote_check": "failed",
+      "transport": "official-compatible-api",
+      "exception": "TimeoutError",
+      "seconds": 60.023
+    },
+    "remote_calls": 0,
+    "remote_calls_evidence": "source consequence: failed check disables candidate; Policy does not retain transport, so no remote choose can occur",
+    "remote_seconds": null,
+    "distributed_request": null,
+    "request_dp": null,
+    "cpu_phase": null,
+    "terrain": null,
+    "terrain_feedback_exposures": null,
+    "reports": null,
+    "correct_reports": null,
+    "planning_seconds": null,
+    "budget_ledger": {
+      "health_startup_seconds_measured": 60.023,
+      "health_extra_vs_phase_seconds": 48.003,
+      "cpu_baseline_seconds_measured": null,
+      "REQ_pool_build_seconds_measured": null,
+      "REQ_mask_DP_solve_seconds_measured": null,
+      "planning_seconds_reported": null,
+      "planning_residual_seconds": null,
+      "agent_wall_minus_health_minus_planning_seconds": null,
+      "agent_residual_scope": "unseparated terrain ingestion and target scales, calibration, policy, I/O, setup and other work; not a terrain measurement",
+      "accounted_minus_agent_wall_seconds": 11.732,
+      "agent_wall_minus_health_seconds_when_summary_absent": 828.245,
+      "last_inflight_computation_included_but_unmeasured": true,
+      "terrain_learning_separate_timer_present": false,
+      "finish_summary_present": false,
+      "prior_phase_planning_seconds": 538.001,
+      "prior_phase_planning_scope": "old CPU phase planner stats; differs from new request wrapper and its baseline timer",
+      "CPU_phase_candidate_counts": null,
+      "REQ_DP_stats": null,
+      "unknown_reason_when_no_summary": "global timeout interrupts normal finish; download contains no periodic timing checkpoints"
+    },
+    "comparison_phase": {
+      "path": "formal_v4/results/cloud_phase_gpu_alpha_20261003/score_report.json",
+      "score_report_sha256": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+      "total": 7289.494481,
+      "total_delta": -1397.705351,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": -1297.561317,
+        "uniformity_penalty": -0.144034
+      },
+      "required_missing_previous": 3,
+      "request_completed_previous": 1,
+      "request_issued_previous": 2,
+      "invalidated_observations_previous": 0,
+      "accounted_wallclock_previous": 596.021,
+      "same_scenario_sha256": true,
+      "different_program_and_trajectory": true,
+      "GPU_gain_claimed": false,
+      "REQ_causal_gain_claimed": false
+    }
+  },
+  "interpretation": {
+    "actual_planning_path": "CPU Phase, terrain and request DP after startup health failure; no remote GPU baselines",
+    "summary_timing_available": false,
+    "15_second_route_cycle_alone_does_not_explain_this60_second_timeout": true,
+    "actual_timeout_cause_proven": false
+  },
+  "archive_operation": {
+    "UI_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "gosim-normalized-output-archive-v1",
+  "archived_at_utc": "2026-10-02T23:53:35.422351+00:00",
+  "source": "private platform practice evaluation download",
+  "project": "Observer Request GPU",
+  "task_card": "delta",
+  "evaluation_started_utc_parent": "2026-10-02T23:38:00Z",
+  "submission_file": "observer_request_phase_gpu.zip",
+  "submission_zip_sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+  "platform_source_digest": "75fa4058539fbe28fafd0e56d4fab0cc8af0108d7cbb6ec87ee1f268a126c0d5",
+  "source_digest_evidence": {
+    "root_UI_confirmed_same_bfcc_75fa_prepared_candidate_in_full_batch": true,
+    "root_UI_previous_public_test_full_fingerprint_confirmed": true,
+    "local_package_gate_path": "formal_v4/results/request_model_gpu_health60_package_gates_20261003.json",
+    "local_package_gate_sha256": "55ef44c3fc119f045100fa87954e2ad2b36a6318e6730fdf3fac06d234134706",
+    "download_outputs_contain_source_fingerprint": false
+  },
+  "download_file": "gosim_request_gpu_delta_result.zip",
+  "download_zip_sha256": "b5d201c587316b405b18c6a927c376b98c6260a689333a026d393becf543fc7e",
+  "download_bytes": 476295,
+  "download_root": "AGENTIC-OBSERVER26-runner-10-participant-7afaf76f63f441738f78439d9ed3bbe6-b51774eec3d1377df89de60ab0e46f5112cc4722",
+  "normalization": "CRLF to LF only",
+  "original_sha256": {
+    "actions.jsonl": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44",
+    "agent.log": "5a2534837cabd36788d509096225ff7c2199dd3659003715b5af179492cdc502",
+    "decisions.csv": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176",
+    "messages.jsonl": "fe58d058c34f76554f5c0aca21d1c04f6b1a29756c6661b5bdd775abb8d36048",
+    "observations.csv": "bc63bb44ce5cba0fbb0419e27fd2c70e2fee8120eceb5084ecac14fa2edc81b9",
+    "score_report.json": "6bee139b7d18b0e42cfc01aaaa3c858a0c2a87f95296d8d6aa069d8f12b94193",
+    "workflow_result.json": "5c96b45e72d6cd833c4a6521e924c4aa458a11197650f64aa0d51623a822470f"
+  },
+  "archived_sha256": {
+    "actions.jsonl": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44",
+    "agent.log": "5a2534837cabd36788d509096225ff7c2199dd3659003715b5af179492cdc502",
+    "decisions.csv": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176",
+    "messages.jsonl": "fe58d058c34f76554f5c0aca21d1c04f6b1a29756c6661b5bdd775abb8d36048",
+    "observations.csv": "bc63bb44ce5cba0fbb0419e27fd2c70e2fee8120eceb5084ecac14fa2edc81b9",
+    "score_report.json": "6bee139b7d18b0e42cfc01aaaa3c858a0c2a87f95296d8d6aa069d8f12b94193",
+    "workflow_result.json": "5c96b45e72d6cd833c4a6521e924c4aa458a11197650f64aa0d51623a822470f"
+  },
+  "raw_bytes": {
+    "actions.jsonl": 445090,
+    "agent.log": 2278,
+    "decisions.csv": 159321,
+    "messages.jsonl": 647946,
+    "observations.csv": 966682,
+    "score_report.json": 3052,
+    "workflow_result.json": 3777
+  },
+  "normalized_bytes": {
+    "actions.jsonl": 445090,
+    "agent.log": 2278,
+    "decisions.csv": 159321,
+    "messages.jsonl": 647946,
+    "observations.csv": 966682,
+    "score_report.json": 3052,
+    "workflow_result.json": 3777
+  },
+  "crlf_replacements": {
+    "actions.jsonl": 0,
+    "agent.log": 0,
+    "decisions.csv": 0,
+    "messages.jsonl": 0,
+    "observations.csv": 0,
+    "score_report.json": 0,
+    "workflow_result.json": 0
+  },
+  "official_output_sha256_verified": {
+    "decisions": true,
+    "messages": true,
+    "observations": true
+  },
+  "workflow_embedded_report_matches": true,
+  "credential_scan": {
+    "exact_runtime_token_matches": 0,
+    "generic_credential_pattern_matches": 0,
+    "scope": "seven raw and normalized canonical outputs"
+  },
+  "facts": {
+    "scenario": "v4-practice-delta",
+    "total": 6423.086757,
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -300.0,
+      "sum_best_scores": 6523.825782,
+      "uniformity_penalty": -0.739024
+    },
+    "counts": {
+      "decisions": 1856,
+      "invalidated_observations": 280,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 2,
+      "observations": 15156,
+      "observe_actions": 1096,
+      "required_missing": 6,
+      "targets_observed": 8917
+    },
+    "requests": [
+      {
+        "completed": false,
+        "completed_count": 4,
+        "completed_target_ids": [
+          "V4T004993",
+          "V4T007389",
+          "V4T000654",
+          "V4T007281"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-10-27T08:30:00Z",
+        "issued_at_utc": "2026-10-26T00:15:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0001",
+        "reward": 0.0,
+        "target_ids": [
+          "V4T004993",
+          "V4T007389",
+          "V4T007669",
+          "V4T003840",
+          "V4T005585",
+          "V4T006696",
+          "V4T000654",
+          "V4T007281"
+        ]
+      },
+      {
+        "completed": true,
+        "completed_count": 6,
+        "completed_target_ids": [
+          "V4T007284",
+          "V4T000567",
+          "V4T000026",
+          "V4T009138",
+          "V4T005461",
+          "V4T001747"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-11-30T08:15:00Z",
+        "issued_at_utc": "2026-11-29T00:45:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0002",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T007284",
+          "V4T005146",
+          "V4T008131",
+          "V4T000567",
+          "V4T000026",
+          "V4T009138",
+          "V4T005461",
+          "V4T001747"
+        ]
+      }
+    ],
+    "completion": {
+      "termination_reason": "survey_complete",
+      "ignored_in_flight_response": false,
+      "finish_summary_present": true,
+      "traceback_present": false,
+      "remote_close_ACK_not_logged": true
+    },
+    "wallclock_limit_seconds": 900.0,
+    "accounted_wallclock_seconds": 475.229,
+    "agent_wallclock_seconds": 464.407,
+    "configured_health_timeout_seconds": 60,
+    "remote_check": {
+      "remote_check": "failed",
+      "transport": "official-compatible-api",
+      "exception": "TimeoutError",
+      "seconds": 60.037
+    },
+    "remote_calls": 0,
+    "remote_seconds": 0,
+    "remote_budget": null,
+    "distributed_request": {
+      "remote_baselines": 0,
+      "cpu_baselines": 1101,
+      "forced_cpu_crops": 4,
+      "transport_failures": 0,
+      "cpu_baseline_seconds": 300.9103149620024,
+      "remote_baseline_seconds": 0.0,
+      "budget": {
+        "accepted": 0,
+        "skipped": 0,
+        "initialization_seconds": 0.0,
+        "observed_remote_seconds": 0.0,
+        "failed_initializations": 0
+      },
+      "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+    },
+    "request_dp": {
+      "builds": 8,
+      "build_seconds": 84.26257651300011,
+      "dp_solves": 116,
+      "dp_seconds": 0.7565487950002421,
+      "request_observes": 2,
+      "boundary_waits": 1,
+      "clipped_baselines": 4,
+      "rejected_by_cost": 0,
+      "infeasible": 0,
+      "forecast_failures": 0,
+      "cached_requests": 2,
+      "model": "full-deadline finite columns; frozen same-duration scientific regret"
+    },
+    "cpu_phase": {
+      "choose_calls": 1101,
+      "phase_calls": 1101,
+      "phase_candidates": 14154479,
+      "phase_exact_evaluations": 17616,
+      "phase_emergency_count": 0,
+      "phase_improvements": 949
+    },
+    "terrain": {
+      "schema": "terrain-positive-version-space-v1",
+      "directions": [
+        "E",
+        "NE",
+        "NW"
+      ],
+      "width_range": [
+        30.0,
+        70.0
+      ],
+      "altitude_range": [
+        35.0,
+        50.0
+      ],
+      "boxes_per_family": 540,
+      "remaining_boxes": {
+        "E": 372,
+        "NE": 518,
+        "NW": 503
+      },
+      "positive_count": 14370,
+      "zero_feedback_ignored": 772,
+      "conditional_domain_conflicts": [],
+      "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+    },
+    "terrain_feedback_exposures": 1095,
+    "reports": 1,
+    "correct_reports": 1,
+    "planning_seconds": 385.965,
+    "comparison_phase": {
+      "path": "formal_v4/results/cloud_phase_gpu_delta_20261003/score_report.json",
+      "score_report_sha256": "9f1ef4b9547a7bc39389bb9533ffb4e851e92e52f31d99ef31bc34ab0e144332",
+      "total": 5206.005545,
+      "total_delta": 1217.081212,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 650.0,
+        "sum_best_scores": 558.095182,
+        "uniformity_penalty": 8.986031
+      },
+      "rounded_component_delta_sum": "1217.081213",
+      "rounding_residual_vs_reported_total_delta": "-0.000001",
+      "required_missing_previous": 19,
+      "request_completed_previous": 1,
+      "invalidated_observations_previous": 252,
+      "accounted_wallclock_previous": 365.121,
+      "same_scenario_sha256": true,
+      "different_program_and_trajectory": true,
+      "GPU_gain_claimed": false,
+      "REQ_causal_gain_claimed": false
+    }
+  },
+  "interpretation": {
+    "actual_planning_path": "CPU Phase, terrain and request DP after60s startup health failure; no remote GPU baselines",
+    "request_DP_was_executed": true,
+    "request_completion_reward_did_not_increase_vs_phase": true,
+    "only_one_card_complete_no_batch_mean_yet": true,
+    "15_second_route_cycle_alone_does_not_explain_this60_second_timeout": true,
+    "actual_timeout_cause_proven": false
+  },
+  "archive_operation": {
+    "UI_operations": 0,
+    "deployment_changes": 0,
+    "performance_calls": 0,
+    "uploaded_source_changes": 0,
+    "git_index_mutations": 0
+  }
+}

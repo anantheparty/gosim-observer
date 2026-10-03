@@ -290,7 +290,7 @@ class FiniteQualityPrior:
             intersection=merged
             if not intersection:break
         result={'usable':used>0,'usable_clean_hits':used,'saturated_only_hits':saturated_only,
-                'profile_ratio_intervals':intersection if used else [],
+                'profile_ratio_intervals':[[float(a),None if math.isinf(b) else float(b)] for a,b in intersection] if used else [],
                 'compatible_with_unit_ratio':any(a<=1<=b for a,b in intersection) if used else None,
                 'bounded_unit_ratio_evidence':any(a<=1<=b and math.isfinite(b) for a,b in intersection) if used else False,
                 'scope':'effective profile ratio only; cannot distinguish weather, E, or remaining direction error; no future rescaling'}
