@@ -1,0 +1,80 @@
+{
+  "schema": "horizon-contention-micro-v2",
+  "source_lock": {
+    "ATTRIBUTION.md": "f57e9962b4d0df20e3408902731c1fe2e70a267ee1ab8a675b819dfeb2c8e6a8",
+    "agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "build_manifest.json": "88a307956ab7e6bcccab4fa59bad30c98f6d475855686ff40a3b0bc1cbaca5a2",
+    "geometry_native_provenance.json": "f70eb46442b3658f364bf79a72a298553978a594098cd49bd270631a88854787",
+    "observer.project.json": "a22679866e6bab9846223d9916d05c1f2f5e4bc8693c6d0b5fad2307e7a4509d",
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "research/agent_geometry_native.py": "2b200fb832e227a7437057e956b5bc79792ac41a27745650ffcb60ff7a437dbc",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/candidate_geometry_sweep.py": "65e102f5a967ec7d165ca8fb444c85e95eeeca472e3cc9197be0f4135855376c",
+    "research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "research/geometry_native.py": "3859876ad2838c21f295956c2c2a6d53d7ee0ce85ac6fffdcd209be1dc26fe61",
+    "research/geometry_native_darwin_arm64.dylib": "b9dc7f6ad6e8dd369e1c10e5111ef83db4cc3e870bd35a95e796d6080558ede7",
+    "research/geometry_native_linux_x86_64.so": "1630b1b0e74c6f4cbf4be5341f56672accd93fd67ad55fba277fb5be67dedcf3",
+    "research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+  },
+  "script_sha256": "bb32de87dd938482c7e10bff82116a5541087b15e5e8b9ebdf3f43e4c1da2dc2",
+  "runtime": {
+    "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+    "numpy": "2.0.2",
+    "platform": "darwin"
+  },
+  "predeclared_selector": {
+    "eligible": "instant_delta <= 0 and public_beam_delta > .05, with changed future contention path",
+    "tie": "earliest rank, smallest fiber, target id",
+    "truth_for_selection": false
+  },
+  "results": [
+    {
+      "card": "L1",
+      "original_native_score": 6362.021539,
+      "forced_tape_official_score": 6362.021539,
+      "elapsed_seconds": 35.3675584171433,
+      "public_states": 8,
+      "pairs": 13,
+      "predeclared_reversals": 0,
+      "differing_future_paths": 0,
+      "actual_unique_beams": 20,
+      "beam_seconds": 17.379868668038398,
+      "choose_calls": 110,
+      "assignment_options": 2645,
+      "original_v1_vs_isolated_v2_value_max_diff": 0.0,
+      "current_target_swaps_science_range": [
+        -0.16195099999999996,
+        -0.003957000000000044
+      ]
+    },
+    {
+      "card": "L2",
+      "original_native_score": 6823.661561,
+      "forced_tape_official_score": 6823.661561,
+      "elapsed_seconds": 40.73033183300868,
+      "public_states": 8,
+      "pairs": 14,
+      "predeclared_reversals": 0,
+      "differing_future_paths": 0,
+      "actual_unique_beams": 22,
+      "beam_seconds": 21.131563876755536,
+      "choose_calls": 133,
+      "assignment_options": 4226,
+      "original_v1_vs_isolated_v2_value_max_diff": 0.0,
+      "current_target_swaps_science_range": [
+        -0.13613523777727649,
+        -0.025104000000000015
+      ]
+    }
+  ],
+  "teacher_labels_generated": 0,
+  "source_scope": "Public source trace naturally ingested; original entire tape forced and officially rescored; future beam inferred using frozen quality prior; actual source-policy continuation was not run",
+  "next_teacher_gate": "READY trace control must run on pinned Linux Python3.12.15/NumPy2.2.6 and reproduce original tail action-by-action after common prefix",
+  "decision": "No candidate meets selector. No genuine continuation pair, GPU training, or large hardware task is justified by this micro probe."
+}
