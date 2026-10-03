@@ -1,0 +1,571 @@
+{
+  "decision": "reject_v2_no_score_improvement",
+  "full_official_season": true,
+  "search_minus_control": "-43.663300",
+  "search_minus_ready_native": "-115.692222",
+  "component_deltas": {
+    "observation_request_reward": "0.0",
+    "report_settlement": "0.0",
+    "required_penalty": "0.0",
+    "sum_best_scores": "-43.459938",
+    "uniformity_penalty": "-0.203362"
+  },
+  "same_control_actions_as_ready_phase": true,
+  "metrics": {
+    "control": {
+      "all_observe_valid": true,
+      "all_assigned_hit": false,
+      "actions_sha256": "bc104d07d187bba650301f99319fc16fa7c9177ea27756a24116db5b485a5412",
+      "complete_actions": 1098,
+      "observe_actions": 1003,
+      "duration_60": 53,
+      "observe_seconds": 839660,
+      "assigned_count": 13642,
+      "hit_count": 13641,
+      "required_missing_rounded_csv": {
+        "V4T001557": 0.042705,
+        "V4T005102": 0.159889
+      },
+      "requests": [
+        {
+          "request_id": "V4RQ0001",
+          "completed": false,
+          "completed_count": 3,
+          "minimum_completed": 6,
+          "uncompleted_target_ids": [
+            "V4T003544",
+            "V4T007198",
+            "V4T004700",
+            "V4T001995",
+            "V4T000983"
+          ]
+        },
+        {
+          "request_id": "V4RQ0002",
+          "completed": true,
+          "completed_count": 6,
+          "minimum_completed": 6,
+          "uncompleted_target_ids": [
+            "V4T003317",
+            "V4T003761"
+          ]
+        }
+      ]
+    },
+    "search": {
+      "all_observe_valid": true,
+      "all_assigned_hit": false,
+      "actions_sha256": "8025e95b9e3094f711cd358dfc555d747b6588c56bef0b0f8bdcc22034f36a42",
+      "complete_actions": 1093,
+      "observe_actions": 997,
+      "duration_60": 32,
+      "observe_seconds": 838155,
+      "assigned_count": 13552,
+      "hit_count": 13551,
+      "required_missing_rounded_csv": {
+        "V4T001557": 0.0,
+        "V4T005102": 0.100315
+      },
+      "requests": [
+        {
+          "request_id": "V4RQ0001",
+          "completed": false,
+          "completed_count": 4,
+          "minimum_completed": 6,
+          "uncompleted_target_ids": [
+            "V4T003544",
+            "V4T007198",
+            "V4T004700",
+            "V4T000983"
+          ]
+        },
+        {
+          "request_id": "V4RQ0002",
+          "completed": true,
+          "completed_count": 6,
+          "minimum_completed": 6,
+          "uncompleted_target_ids": [
+            "V4T003317",
+            "V4T003761"
+          ]
+        }
+      ]
+    }
+  },
+  "global_search_profile": {
+    "calls": 997,
+    "searched": 997,
+    "improved": 255,
+    "roots": 70395,
+    "nodes": 255229,
+    "matchings": 555401,
+    "native_improvements": 475,
+    "root_pool_entries": 324109800,
+    "root_full_entries": 2654374635,
+    "search_seconds": 56.3190778492135
+  },
+  "root_pool_fraction": 0.1221040149066976,
+  "first_real_action_fork": {
+    "action_index": 2,
+    "same_prior_actions": 2,
+    "control": {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T004121",
+          "1": "V4T000055",
+          "10": "V4T004158",
+          "11": "V4T003915",
+          "12": "V4T006059",
+          "13": "V4T006661",
+          "14": "V4T006140",
+          "15": "V4T001711",
+          "2": "V4T003365",
+          "3": "V4T005888",
+          "4": "V4T002090",
+          "5": "V4T007645",
+          "7": "V4T005309",
+          "8": "V4T004586",
+          "9": "V4T006218"
+        },
+        "duration_seconds": 64,
+        "pointing": {
+          "alt_deg": 64.8789237,
+          "az_deg": 93.840085
+        },
+        "program": "DARK"
+      },
+      "decision": {
+        "decision_id": "3",
+        "observe_index": "2",
+        "action": "observe",
+        "start_utc": "2026-11-02T00:36:50Z",
+        "end_utc": "2026-11-02T00:37:54Z",
+        "duration_seconds": "64",
+        "alt_deg": "64.8789",
+        "az_deg": "93.8401",
+        "program": "DARK",
+        "assigned_count": "15",
+        "hit_count": "15",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      "rounded_csv_science_gain": "1.875132",
+      "observations": [
+        {
+          "observation_id": "31",
+          "observe_index": "2",
+          "target_id": "V4T004121",
+          "fiber_id": "0",
+          "factor": "0.043620",
+          "quality": "0.872008",
+          "prog_mult": "1.200000",
+          "score": "0.052344",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "32",
+          "observe_index": "2",
+          "target_id": "V4T000055",
+          "fiber_id": "1",
+          "factor": "0.554806",
+          "quality": "0.872505",
+          "prog_mult": "1.200000",
+          "score": "0.199730",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "33",
+          "observe_index": "2",
+          "target_id": "V4T003365",
+          "fiber_id": "2",
+          "factor": "0.236184",
+          "quality": "0.874320",
+          "prog_mult": "1.200000",
+          "score": "0.127539",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "34",
+          "observe_index": "2",
+          "target_id": "V4T005888",
+          "fiber_id": "3",
+          "factor": "0.368356",
+          "quality": "0.874304",
+          "prog_mult": "1.200000",
+          "score": "0.132608",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "35",
+          "observe_index": "2",
+          "target_id": "V4T002090",
+          "fiber_id": "4",
+          "factor": "0.148932",
+          "quality": "0.876306",
+          "prog_mult": "1.200000",
+          "score": "0.080423",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "36",
+          "observe_index": "2",
+          "target_id": "V4T007645",
+          "fiber_id": "5",
+          "factor": "0.109282",
+          "quality": "0.876287",
+          "prog_mult": "1.200000",
+          "score": "0.131138",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "37",
+          "observe_index": "2",
+          "target_id": "V4T005309",
+          "fiber_id": "7",
+          "factor": "0.094992",
+          "quality": "0.875816",
+          "prog_mult": "1.200000",
+          "score": "0.113990",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "38",
+          "observe_index": "2",
+          "target_id": "V4T004586",
+          "fiber_id": "8",
+          "factor": "0.045804",
+          "quality": "0.877200",
+          "prog_mult": "1.200000",
+          "score": "0.054965",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "39",
+          "observe_index": "2",
+          "target_id": "V4T006218",
+          "fiber_id": "9",
+          "factor": "0.050859",
+          "quality": "0.879558",
+          "prog_mult": "1.200000",
+          "score": "0.061031",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "40",
+          "observe_index": "2",
+          "target_id": "V4T004158",
+          "fiber_id": "10",
+          "factor": "0.447622",
+          "quality": "0.879585",
+          "prog_mult": "1.200000",
+          "score": "0.161144",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "41",
+          "observe_index": "2",
+          "target_id": "V4T003915",
+          "fiber_id": "11",
+          "factor": "0.375659",
+          "quality": "0.878882",
+          "prog_mult": "1.200000",
+          "score": "0.135237",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "42",
+          "observe_index": "2",
+          "target_id": "V4T006059",
+          "fiber_id": "12",
+          "factor": "0.147248",
+          "quality": "0.882253",
+          "prog_mult": "1.200000",
+          "score": "0.079514",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "43",
+          "observe_index": "2",
+          "target_id": "V4T006661",
+          "fiber_id": "13",
+          "factor": "0.650619",
+          "quality": "0.880110",
+          "prog_mult": "1.200000",
+          "score": "0.234223",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "44",
+          "observe_index": "2",
+          "target_id": "V4T006140",
+          "fiber_id": "14",
+          "factor": "0.198607",
+          "quality": "0.882390",
+          "prog_mult": "1.200000",
+          "score": "0.107248",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "45",
+          "observe_index": "2",
+          "target_id": "V4T001711",
+          "fiber_id": "15",
+          "factor": "0.566662",
+          "quality": "0.881711",
+          "prog_mult": "1.200000",
+          "score": "0.203998",
+          "valid": "true",
+          "invalidated_by": ""
+        }
+      ]
+    },
+    "search": {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000055",
+          "1": "V4T003365",
+          "10": "V4T004158",
+          "11": "V4T005573",
+          "12": "V4T007388",
+          "13": "V4T002471",
+          "14": "V4T001711",
+          "15": "V4T007408",
+          "2": "V4T005888",
+          "3": "V4T002985",
+          "4": "V4T007645",
+          "6": "V4T006992",
+          "7": "V4T005309",
+          "8": "V4T007108",
+          "9": "V4T006661"
+        },
+        "duration_seconds": 64,
+        "pointing": {
+          "alt_deg": 65.0054199,
+          "az_deg": 94.9954163
+        },
+        "program": "DARK"
+      },
+      "decision": {
+        "decision_id": "3",
+        "observe_index": "2",
+        "action": "observe",
+        "start_utc": "2026-11-02T00:36:50Z",
+        "end_utc": "2026-11-02T00:37:54Z",
+        "duration_seconds": "64",
+        "alt_deg": "65.0054",
+        "az_deg": "94.9954",
+        "program": "DARK",
+        "assigned_count": "15",
+        "hit_count": "15",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      "rounded_csv_science_gain": "1.938168",
+      "observations": [
+        {
+          "observation_id": "31",
+          "observe_index": "2",
+          "target_id": "V4T000055",
+          "fiber_id": "0",
+          "factor": "0.554806",
+          "quality": "0.872505",
+          "prog_mult": "1.200000",
+          "score": "0.199730",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "32",
+          "observe_index": "2",
+          "target_id": "V4T003365",
+          "fiber_id": "1",
+          "factor": "0.236184",
+          "quality": "0.874320",
+          "prog_mult": "1.200000",
+          "score": "0.127539",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "33",
+          "observe_index": "2",
+          "target_id": "V4T005888",
+          "fiber_id": "2",
+          "factor": "0.368356",
+          "quality": "0.874304",
+          "prog_mult": "1.200000",
+          "score": "0.132608",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "34",
+          "observe_index": "2",
+          "target_id": "V4T002985",
+          "fiber_id": "3",
+          "factor": "0.117823",
+          "quality": "0.873341",
+          "prog_mult": "1.200000",
+          "score": "0.063624",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "35",
+          "observe_index": "2",
+          "target_id": "V4T007645",
+          "fiber_id": "4",
+          "factor": "0.109282",
+          "quality": "0.876287",
+          "prog_mult": "1.200000",
+          "score": "0.131138",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "36",
+          "observe_index": "2",
+          "target_id": "V4T006992",
+          "fiber_id": "6",
+          "factor": "0.248627",
+          "quality": "0.876336",
+          "prog_mult": "1.200000",
+          "score": "0.089506",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "37",
+          "observe_index": "2",
+          "target_id": "V4T005309",
+          "fiber_id": "7",
+          "factor": "0.094992",
+          "quality": "0.875816",
+          "prog_mult": "1.200000",
+          "score": "0.113990",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "38",
+          "observe_index": "2",
+          "target_id": "V4T007108",
+          "fiber_id": "8",
+          "factor": "0.043612",
+          "quality": "0.878339",
+          "prog_mult": "1.200000",
+          "score": "0.052334",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "39",
+          "observe_index": "2",
+          "target_id": "V4T006661",
+          "fiber_id": "9",
+          "factor": "0.650619",
+          "quality": "0.880110",
+          "prog_mult": "1.200000",
+          "score": "0.234223",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "40",
+          "observe_index": "2",
+          "target_id": "V4T004158",
+          "fiber_id": "10",
+          "factor": "0.447622",
+          "quality": "0.879585",
+          "prog_mult": "1.200000",
+          "score": "0.161144",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "41",
+          "observe_index": "2",
+          "target_id": "V4T005573",
+          "fiber_id": "11",
+          "factor": "0.146525",
+          "quality": "0.877652",
+          "prog_mult": "1.200000",
+          "score": "0.079123",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "42",
+          "observe_index": "2",
+          "target_id": "V4T007388",
+          "fiber_id": "12",
+          "factor": "0.040505",
+          "quality": "0.881354",
+          "prog_mult": "1.200000",
+          "score": "0.048606",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "43",
+          "observe_index": "2",
+          "target_id": "V4T002471",
+          "fiber_id": "13",
+          "factor": "0.078422",
+          "quality": "0.881186",
+          "prog_mult": "1.200000",
+          "score": "0.094106",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "44",
+          "observe_index": "2",
+          "target_id": "V4T001711",
+          "fiber_id": "14",
+          "factor": "0.566662",
+          "quality": "0.881711",
+          "prog_mult": "1.200000",
+          "score": "0.203998",
+          "valid": "true",
+          "invalidated_by": ""
+        },
+        {
+          "observation_id": "45",
+          "observe_index": "2",
+          "target_id": "V4T007408",
+          "fiber_id": "15",
+          "factor": "0.172082",
+          "quality": "0.882598",
+          "prog_mult": "1.200000",
+          "score": "0.206499",
+          "valid": "true",
+          "invalidated_by": ""
+        }
+      ]
+    }
+  },
+  "pid": 554406,
+  "started_utc": "2026-10-03T16:45:00.744447+00:00",
+  "completed_file_mtime_utc": "2026-10-03T16:55:17.871082466+00:00",
+  "source_lock_sha256": "7f29415256f2c461284236e1d429d7e6c21380b4a2423852fa5477b3656b3c54",
+  "cpp_sha256": "dafa96942e68fc8377bee84fc54ae88c2a2ff8d16beef7e6ac1055b3516c5aa5",
+  "no_L2_launch": "Predeclared gate requires complete L1 score improvement; gate failed.",
+  "native_reference_note": "The historical expected-score flag is false; this comparison uses its actual complete official score and resource ledger."
+}

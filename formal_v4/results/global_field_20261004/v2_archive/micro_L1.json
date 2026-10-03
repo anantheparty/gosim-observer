@@ -1,0 +1,171 @@
+{
+  "stats": {
+    "planning_seconds": 0.3176693751011044,
+    "candidates": 400,
+    "visible_useful": 4442,
+    "anchors": 24,
+    "cpu_phase_mode": "phase",
+    "phase_fixed_workload": true,
+    "phase_improved": true,
+    "phase_exact_evaluations": 16,
+    "phase_emergency_triggered": false,
+    "base_exact_rate": 0.7666211567376163,
+    "selected_exact_rate": 0.7679312115172131,
+    "phase_candidates": 13279,
+    "phase_seeds": 4,
+    "phase_local_counts": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "phase_full_local_counts": [
+      125,
+      124,
+      137,
+      118
+    ],
+    "phase_boundary_counts": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "phase_duration_count": 8,
+    "phase_durations": [
+      60,
+      120,
+      138,
+      240,
+      400,
+      900,
+      1800,
+      3600
+    ],
+    "phase_build_seconds": 0.004711291985586286,
+    "phase_exact_seed_counts": [
+      16,
+      0,
+      0,
+      0
+    ],
+    "phase_scan_seconds": 0.082139166072011,
+    "phase_exact_seconds": 0.00573833379894495,
+    "phase_geometry_target_pairs": 663950,
+    "choose_calls_total": 1,
+    "phase_calls_total": 1,
+    "phase_candidates_total": 13279,
+    "phase_exact_evaluations_total": 16,
+    "phase_emergency_count_total": 0,
+    "phase_improvements_total": 1,
+    "global_search_seconds": 0.0624956670217216,
+    "global_nodes": 256,
+    "global_roots": 39,
+    "global_native_improvements": 1,
+    "global_root_pool_entries": 377910,
+    "global_root_full_entries": 3198240,
+    "global_improved": true,
+    "global_base_rate": 0.7679312115172131,
+    "global_selected_rate": 1.0615893178801938
+  },
+  "baseline_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 38.3575723,
+      "az_deg": 135.6203192
+    },
+    "assignments": {
+      "0": "V4T006386",
+      "1": "V4T003555",
+      "2": "V4T001626",
+      "3": "V4T002723",
+      "4": "V4T001179",
+      "5": "V4T002603",
+      "6": "V4T003083",
+      "7": "V4T001671",
+      "8": "V4T004783",
+      "9": "V4T003638",
+      "10": "V4T006643",
+      "11": "V4T000493",
+      "12": "V4T000185",
+      "13": "V4T004417",
+      "14": "V4T002666",
+      "15": "V4T000976"
+    },
+    "duration_seconds": 138,
+    "program": "BRIGHT"
+  },
+  "native_result": [
+    1.0615893178801938,
+    34.2553006,
+    140.0,
+    98.0,
+    1.0,
+    104.03575315225899,
+    3279.0,
+    3817.0,
+    1352.0,
+    -1.0,
+    -1.0,
+    2475.0,
+    1607.0,
+    1138.0,
+    3533.0,
+    762.0,
+    1705.0,
+    10.0,
+    1719.0,
+    2104.0,
+    1712.0,
+    -1.0
+  ],
+  "native_stats": [
+    39.0,
+    256.0,
+    82.0,
+    256.0,
+    445.0,
+    1.0,
+    377910.0,
+    3198240.0
+  ],
+  "card": "L1",
+  "seconds": 0.32486545806750655,
+  "action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 34.2553006,
+      "az_deg": 140.0
+    },
+    "assignments": {
+      "0": "V4T005760",
+      "1": "V4T006656",
+      "2": "V4T002366",
+      "5": "V4T004388",
+      "6": "V4T002825",
+      "7": "V4T001991",
+      "8": "V4T006176",
+      "9": "V4T001297",
+      "10": "V4T003003",
+      "11": "V4T000019",
+      "12": "V4T003030",
+      "13": "V4T003752",
+      "14": "V4T003016"
+    },
+    "duration_seconds": 98,
+    "program": "BRIGHT"
+  },
+  "official_geometry_valid": true,
+  "summary": {
+    "calls": 1,
+    "searched": 1,
+    "improved": 1,
+    "roots": 39,
+    "nodes": 256,
+    "matchings": 445,
+    "native_improvements": 1,
+    "root_pool_entries": 377910,
+    "root_full_entries": 3198240,
+    "search_seconds": 0.0624956670217216
+  }
+}
