@@ -1,0 +1,878 @@
+{
+  "schema": "search-budget-determinism-offline-audit-v1",
+  "production_or_package_changes": false,
+  "new_evaluation_or_score": false,
+  "fake_clock_scope": "isolated process; fixed current public snapshot/zero ledger, time.perf_counter mocked only during choose",
+  "fake_clock_gates": [
+    {
+      "card": "alpha",
+      "path": "timed_base",
+      "all_actions_equal": false,
+      "base_candidate_count_equal": false,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+        "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+        "public/footprint.csv": "6f62b8733c3d0a405bde82a131110b28b383f01f91bac6e6324fb3f0661b8882"
+      },
+      "runs": [
+        {
+          "action_sha256": "811d2fa93f86a81c68df0b398e905aac8661f278e8cf8d0df2c23c80b27da9b7",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 46.0195363,
+              "az_deg": 73.6429007
+            },
+            "assignments": {
+              "0": "V4T004757",
+              "1": "V4T008707",
+              "2": "V4T004499",
+              "3": "V4T009545",
+              "4": "V4T006600",
+              "5": "V4T007898",
+              "6": "V4T007030",
+              "7": "V4T007180",
+              "8": "V4T008681",
+              "9": "V4T009274",
+              "10": "V4T006584",
+              "11": "V4T008645",
+              "12": "V4T006305",
+              "13": "V4T001716",
+              "14": "V4T007507",
+              "15": "V4T005650"
+            },
+            "duration_seconds": 98,
+            "program": "DARK"
+          },
+          "clock_step_per_read": 0.0,
+          "clock_reads": 425,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": null,
+          "phase_candidate_count": null
+        },
+        {
+          "action_sha256": "e002acdf49b8502a98f210fc1f7734a4cbfc2c02d5dc37be2d87acf3014068cd",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 45.7049807,
+              "az_deg": 104.7186704
+            },
+            "assignments": {
+              "0": "V4T009374",
+              "1": "V4T003386",
+              "2": "V4T006527",
+              "3": "V4T003860",
+              "4": "V4T006659",
+              "5": "V4T009874",
+              "6": "V4T009818",
+              "7": "V4T008164",
+              "9": "V4T003744",
+              "10": "V4T007802",
+              "11": "V4T009144",
+              "12": "V4T001054",
+              "13": "V4T002393",
+              "14": "V4T000201"
+            },
+            "duration_seconds": 268,
+            "program": "DARK"
+          },
+          "clock_step_per_read": 1.0,
+          "clock_reads": 6,
+          "base_candidate_evaluations": 1,
+          "phase_exact_evaluations": null,
+          "phase_candidate_count": null
+        }
+      ]
+    },
+    {
+      "card": "alpha",
+      "path": "fixed_CPU_phase",
+      "all_actions_equal": true,
+      "base_candidate_count_equal": true,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+        "public/v4_night_calendar.csv": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+        "public/footprint.csv": "6f62b8733c3d0a405bde82a131110b28b383f01f91bac6e6324fb3f0661b8882"
+      },
+      "runs": [
+        {
+          "action_sha256": "811d2fa93f86a81c68df0b398e905aac8661f278e8cf8d0df2c23c80b27da9b7",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 46.0195363,
+              "az_deg": 73.6429007
+            },
+            "assignments": {
+              "0": "V4T004757",
+              "1": "V4T008707",
+              "2": "V4T004499",
+              "3": "V4T009545",
+              "4": "V4T006600",
+              "5": "V4T007898",
+              "6": "V4T007030",
+              "7": "V4T007180",
+              "8": "V4T008681",
+              "9": "V4T009274",
+              "10": "V4T006584",
+              "11": "V4T008645",
+              "12": "V4T006305",
+              "13": "V4T001716",
+              "14": "V4T007507",
+              "15": "V4T005650"
+            },
+            "duration_seconds": 98,
+            "program": "DARK"
+          },
+          "clock_step_per_read": 0.0,
+          "clock_reads": 431,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": 16,
+          "phase_candidate_count": 13174
+        },
+        {
+          "action_sha256": "811d2fa93f86a81c68df0b398e905aac8661f278e8cf8d0df2c23c80b27da9b7",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 46.0195363,
+              "az_deg": 73.6429007
+            },
+            "assignments": {
+              "0": "V4T004757",
+              "1": "V4T008707",
+              "2": "V4T004499",
+              "3": "V4T009545",
+              "4": "V4T006600",
+              "5": "V4T007898",
+              "6": "V4T007030",
+              "7": "V4T007180",
+              "8": "V4T008681",
+              "9": "V4T009274",
+              "10": "V4T006584",
+              "11": "V4T008645",
+              "12": "V4T006305",
+              "13": "V4T001716",
+              "14": "V4T007507",
+              "15": "V4T005650"
+            },
+            "duration_seconds": 98,
+            "program": "DARK"
+          },
+          "clock_step_per_read": 1.0,
+          "clock_reads": 431,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": 16,
+          "phase_candidate_count": 13174
+        }
+      ]
+    },
+    {
+      "card": "delta",
+      "path": "timed_base",
+      "all_actions_equal": false,
+      "base_candidate_count_equal": false,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+      },
+      "runs": [
+        {
+          "action_sha256": "896f17358cc0aca44f41bfa0d5aa96c642ed9cf920703e7d0851f3697e93b818",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 41.7428998,
+              "az_deg": 88.0286507
+            },
+            "assignments": {
+              "0": "V4T000839",
+              "1": "V4T002094",
+              "2": "V4T000999",
+              "3": "V4T007266",
+              "4": "V4T004412",
+              "5": "V4T001750",
+              "6": "V4T005781",
+              "7": "V4T002411",
+              "8": "V4T000482",
+              "9": "V4T005109",
+              "10": "V4T001177",
+              "11": "V4T009031",
+              "12": "V4T008585",
+              "13": "V4T003220",
+              "14": "V4T001001",
+              "15": "V4T004271"
+            },
+            "duration_seconds": 103,
+            "program": "BRIGHT"
+          },
+          "clock_step_per_read": 0.0,
+          "clock_reads": 425,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": null,
+          "phase_candidate_count": null
+        },
+        {
+          "action_sha256": "0b32097a84a538382afb2e49f872fb4a6b65ba9a01d08cfb2c7e2bed43715e83",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 60.0379734,
+              "az_deg": 66.1245604
+            },
+            "assignments": {
+              "0": "V4T001270",
+              "1": "V4T000165",
+              "2": "V4T004078",
+              "4": "V4T003938",
+              "5": "V4T009292",
+              "6": "V4T006311",
+              "8": "V4T004582",
+              "9": "V4T001348",
+              "10": "V4T003735",
+              "11": "V4T009355",
+              "12": "V4T002630",
+              "13": "V4T001113",
+              "14": "V4T002145",
+              "15": "V4T000749"
+            },
+            "duration_seconds": 267,
+            "program": "BRIGHT"
+          },
+          "clock_step_per_read": 1.0,
+          "clock_reads": 6,
+          "base_candidate_evaluations": 1,
+          "phase_exact_evaluations": null,
+          "phase_candidate_count": null
+        }
+      ]
+    },
+    {
+      "card": "delta",
+      "path": "fixed_CPU_phase",
+      "all_actions_equal": true,
+      "base_candidate_count_equal": true,
+      "public_input_hashes": {
+        "config/v4_scenario.json": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+        "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+        "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+        "public/targets.csv": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+        "public/v4_night_calendar.csv": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+        "public/footprint.csv": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe"
+      },
+      "runs": [
+        {
+          "action_sha256": "896f17358cc0aca44f41bfa0d5aa96c642ed9cf920703e7d0851f3697e93b818",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 41.7428998,
+              "az_deg": 88.0286507
+            },
+            "assignments": {
+              "0": "V4T000839",
+              "1": "V4T002094",
+              "2": "V4T000999",
+              "3": "V4T007266",
+              "4": "V4T004412",
+              "5": "V4T001750",
+              "6": "V4T005781",
+              "7": "V4T002411",
+              "8": "V4T000482",
+              "9": "V4T005109",
+              "10": "V4T001177",
+              "11": "V4T009031",
+              "12": "V4T008585",
+              "13": "V4T003220",
+              "14": "V4T001001",
+              "15": "V4T004271"
+            },
+            "duration_seconds": 103,
+            "program": "BRIGHT"
+          },
+          "clock_step_per_read": 0.0,
+          "clock_reads": 431,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": 16,
+          "phase_candidate_count": 12707
+        },
+        {
+          "action_sha256": "896f17358cc0aca44f41bfa0d5aa96c642ed9cf920703e7d0851f3697e93b818",
+          "action": {
+            "action": "observe",
+            "pointing": {
+              "alt_deg": 41.7428998,
+              "az_deg": 88.0286507
+            },
+            "assignments": {
+              "0": "V4T000839",
+              "1": "V4T002094",
+              "2": "V4T000999",
+              "3": "V4T007266",
+              "4": "V4T004412",
+              "5": "V4T001750",
+              "6": "V4T005781",
+              "7": "V4T002411",
+              "8": "V4T000482",
+              "9": "V4T005109",
+              "10": "V4T001177",
+              "11": "V4T009031",
+              "12": "V4T008585",
+              "13": "V4T003220",
+              "14": "V4T001001",
+              "15": "V4T004271"
+            },
+            "duration_seconds": 103,
+            "program": "BRIGHT"
+          },
+          "clock_step_per_read": 1.0,
+          "clock_reads": 431,
+          "base_candidate_evaluations": 400,
+          "phase_exact_evaluations": 16,
+          "phase_candidate_count": 12707
+        }
+      ]
+    }
+  ],
+  "source_clock_conditions": [
+    {
+      "file": "policy.py",
+      "line": 366,
+      "type": "If",
+      "condition": "self.remote and self.remote.enabled and self.remote_budget.allow(time_remaining, estimated_decisions)"
+    },
+    {
+      "file": "research/spatial_candidates.py",
+      "line": 358,
+      "type": "If",
+      "condition": "best is not None and time.perf_counter() - started > budget"
+    },
+    {
+      "file": "research/spatial_candidates.py",
+      "line": 345,
+      "type": "If",
+      "condition": "best is not None and time.perf_counter() - started > budget"
+    },
+    {
+      "file": "research/spatial_candidates.py",
+      "line": 366,
+      "type": "If",
+      "condition": "time.perf_counter() - started > budget"
+    },
+    {
+      "file": "research/cpu_phase_candidates.py",
+      "line": 181,
+      "type": "If",
+      "condition": "fixed_workload"
+    },
+    {
+      "file": "research/request_deadline_common.py",
+      "line": 371,
+      "type": "If",
+      "condition": "float((snapshot.get(\"wallclock\") or {}).get(\"remaining_seconds\",900))<30"
+    },
+    {
+      "file": "research/request_remote_planner.py",
+      "line": 66,
+      "type": "If",
+      "condition": "not crop and transport is not None and getattr(transport,'enabled',False) and budget is not None\n                and budget.allow(remaining,self._remaining_decisions(snapshot))"
+    },
+    {
+      "file": "research/gpu_phase_candidates.py",
+      "line": 94,
+      "type": "If",
+      "condition": "time.perf_counter() - scanned > float(env.get(\"gpu_phase_emergency_seconds\", 3.0))"
+    },
+    {
+      "file": "research/agent_model_gpu.py",
+      "line": 61,
+      "type": "If",
+      "condition": "float(remaining_seconds) <= self.reserve + setup_limit + decision_limit"
+    }
+  ],
+  "historical_runs": [
+    {
+      "card": "alpha",
+      "route_archive": "cloud_phase_gpu",
+      "total": 7289.494481,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 596.021,
+      "agent_wallclock_seconds": 581.654,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1317,
+      "received_action_lines": 1317,
+      "committed_decision_rows": 1877,
+      "public_simulation_end_utc": "2026-11-11T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1317,
+        "exposures": 1184,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 7239.830393,
+        "required_missing_bound": 3,
+        "planning_seconds": 538.001,
+        "C": 0.7846,
+        "E": 0.9431,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 12.02
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1184,
+          "phase_calls": 1184,
+          "phase_candidates": 15237982,
+          "phase_exact_evaluations": 18944,
+          "phase_emergency_count": 0,
+          "phase_improvements": 1075
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "4b5d9e79bceebe76e1d0ecdecc7c39bdbcc060ee72da3b34970e1259a6c60f85",
+        "decisions.csv": "d7b4941c3066a9ced497c805e1e36ee8c4aa38dbc25cb03a19a3852e30a0b3a5",
+        "workflow_result.json": "194a06c7e26821dd21e4b1bab0ea9595cdf0ea750936b3b1a86a04177b88e6e7",
+        "agent.log": "faf09a4bb1c80a3a37ad9cb10be68c8aec47b19eb53a4042c9f2fe3339dee068"
+      }
+    },
+    {
+      "card": "beta",
+      "route_archive": "cloud_phase_gpu",
+      "total": 6602.149692,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 647.299,
+      "agent_wallclock_seconds": 631.639,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1265,
+      "received_action_lines": 1265,
+      "committed_decision_rows": 1840,
+      "public_simulation_end_utc": "2026-11-25T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1265,
+        "exposures": 1138,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6853.011246,
+        "required_missing_bound": 9,
+        "planning_seconds": 581.973,
+        "C": 1.055,
+        "E": 0.7243,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 12.013
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1138,
+          "phase_calls": 1138,
+          "phase_candidates": 14575467,
+          "phase_exact_evaluations": 18208,
+          "phase_emergency_count": 0,
+          "phase_improvements": 1021
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "d8acb86717f36fb260a654b59a041eba82713b711ed133cfe82920e5df39e7bc",
+        "decisions.csv": "d22733b64ced0c1ac3ac9e9304ab5dbce46a8cf8428386972b1bdc058dbb8254",
+        "workflow_result.json": "ab8cdc82f99657bf5712e50d74b60fffc6a7c11887de6417a7d5b2aaae8bb7f2",
+        "agent.log": "df4931b0f336e16cd64ceda009ce0b1f345d4c58d4a59296a10e7cb90dea2a4f"
+      }
+    },
+    {
+      "card": "gamma",
+      "route_archive": "cloud_phase_gpu",
+      "total": 7033.080199,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 688.393,
+      "agent_wallclock_seconds": 672.119,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1276,
+      "received_action_lines": 1276,
+      "committed_decision_rows": 1842,
+      "public_simulation_end_utc": "2026-11-16T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1276,
+        "exposures": 1165,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6983.668456000001,
+        "required_missing_bound": 3,
+        "planning_seconds": 621.452,
+        "C": 0.6055,
+        "E": 0.9429,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 12.013
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1166,
+          "phase_calls": 1166,
+          "phase_candidates": 14886129,
+          "phase_exact_evaluations": 18656,
+          "phase_emergency_count": 0,
+          "phase_improvements": 1013
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "c68c62ce881ac2159cb01418a7be52f0601607929e92dfca67df4ac895eafe6b",
+        "decisions.csv": "0de34ebedb46ae8130fa7cb38594fbdab886cc2f0c189685c3c9dbde877f61ae",
+        "workflow_result.json": "4bebe05974f3666d3860c109a4524b13862d49be731ce8d8fb634e1c6db2a048",
+        "agent.log": "a5c27cf63bf27304caee74dc5684230e14f4787d4b735b64bb6f46b50c187f43"
+      }
+    },
+    {
+      "card": "delta",
+      "route_archive": "cloud_phase_gpu",
+      "total": 5206.005545,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 365.121,
+      "agent_wallclock_seconds": 357.649,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1170,
+      "received_action_lines": 1170,
+      "committed_decision_rows": 1751,
+      "public_simulation_end_utc": "2026-12-01T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1170,
+        "exposures": 999,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 5962.871477,
+        "required_missing_bound": 19,
+        "planning_seconds": 326.932,
+        "C": 0.9084,
+        "E": 0.8952,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 12.009
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1000,
+          "phase_calls": 1000,
+          "phase_candidates": 12864601,
+          "phase_exact_evaluations": 16000,
+          "phase_emergency_count": 0,
+          "phase_improvements": 877
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "78a296a4dca7aeca114f8ae48c4a372281073f3b2916136981572bf6209e6f1c",
+        "decisions.csv": "2a0f98f0e1ac7ec97045580aa7c867237fd0a7bb655ce07f0b4f4f17d053daee",
+        "workflow_result.json": "3055f34acaba65630a4f3388ea8ccba3864a221038a6f13dfd141ce9da44a6cf",
+        "agent.log": "88cc0ebbca2e02eb8bf26d0d127cdbb5014919f60903b4710a3183d4697bcfd8"
+      }
+    },
+    {
+      "card": "alpha",
+      "route_archive": "cloud_request_gpu",
+      "total": 5891.78913,
+      "termination_reason": "global_wallclock_expired",
+      "accounted_wallclock_seconds": 900.0,
+      "agent_wallclock_seconds": 888.268,
+      "ignored_in_flight_response": true,
+      "decision_requests": 1057,
+      "received_action_lines": 1056,
+      "committed_decision_rows": 1445,
+      "public_simulation_end_utc": "2026-10-31T07:55:29Z",
+      "finish_summary_present": false,
+      "summary": null,
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "fcbfa6090858269178881a56d3e20475a185fe3abf5ced390b17d6c17ec41ba8",
+        "decisions.csv": "4be2129d1797d20b4badd72fe74c20a53dc4aecf8d7b0db16873532be3287b57",
+        "workflow_result.json": "159347a0dbaa1b304bd01a8bd412bbbf555f7a5b7eb65b5ec217a4eb871982ff",
+        "agent.log": "9703b22a25d896a3a65bc7eaeb2d7bce548d271d0f48351fa9ce60135195f86f"
+      }
+    },
+    {
+      "card": "beta",
+      "route_archive": "cloud_request_gpu",
+      "total": 6138.150947,
+      "termination_reason": "global_wallclock_expired",
+      "accounted_wallclock_seconds": 900.0,
+      "agent_wallclock_seconds": 885.635,
+      "ignored_in_flight_response": true,
+      "decision_requests": 1210,
+      "received_action_lines": 1209,
+      "committed_decision_rows": 1736,
+      "public_simulation_end_utc": "2026-11-22T06:24:17Z",
+      "finish_summary_present": false,
+      "summary": null,
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "f3394fe9e89dff20e2a919f678ffbbc9d318a79b6e5613671c7ba3ce5a8e0487",
+        "decisions.csv": "c82cc4032b6031eeb7705f869c157543236267a9a5ddd0b2b891db4f4110e936",
+        "workflow_result.json": "7d96fd8d670aa8691adc4e869974429e2f27d17ea7a9268c83f1f7dd72ebf68c",
+        "agent.log": "d4e6fb4121006e8f6ba3313c0b429ec5ad596caf2640960479e8262bbf6c3b8f"
+      }
+    },
+    {
+      "card": "gamma",
+      "route_archive": "cloud_request_gpu",
+      "total": 6668.777631,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 826.132,
+      "agent_wallclock_seconds": 813.144,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1199,
+      "received_action_lines": 1199,
+      "committed_decision_rows": 1765,
+      "public_simulation_end_utc": "2026-11-16T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1199,
+        "exposures": 1095,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6569.393625,
+        "required_missing_bound": 4,
+        "planning_seconds": 721.469,
+        "C": 0.6283,
+        "E": 0.8931,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 60.047
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1099,
+          "phase_calls": 1099,
+          "phase_candidates": 14131656,
+          "phase_exact_evaluations": 17584,
+          "phase_emergency_count": 0,
+          "phase_improvements": 968
+        },
+        "terrain": {
+          "schema": "terrain-positive-version-space-v1",
+          "directions": [
+            "N",
+            "W"
+          ],
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "remaining_boxes": {
+            "N": 540,
+            "W": 513
+          },
+          "positive_count": 15039,
+          "zero_feedback_ignored": 238,
+          "conditional_domain_conflicts": [],
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+        },
+        "terrain_feedback_exposures": 1095,
+        "request_dp": {
+          "builds": 12,
+          "build_seconds": 216.7388698759999,
+          "dp_solves": 81,
+          "dp_seconds": 1.2340667080002277,
+          "request_observes": 2,
+          "boundary_waits": 1,
+          "clipped_baselines": 3,
+          "rejected_by_cost": 0,
+          "infeasible": 0,
+          "forecast_failures": 1,
+          "cached_requests": 2,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret"
+        },
+        "distributed_request": {
+          "remote_baselines": 0,
+          "cpu_baselines": 1099,
+          "forced_cpu_crops": 3,
+          "transport_failures": 0,
+          "cpu_baseline_seconds": 503.4545311019994,
+          "remote_baseline_seconds": 0.0,
+          "budget": {
+            "accepted": 0,
+            "skipped": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "failed_initializations": 0
+          },
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "38604cc93986bf3b6fd0673e014494ca7df834840ba6266a55cb581af8d3e108",
+        "decisions.csv": "74f51222cb9d95ae8242717f6cfb692bbab607dfc517a02c3aef5741ba0653a6",
+        "workflow_result.json": "4ea83f3ee9a84284c50a9d6f6b49f8abe76c2d749c3cb0fa0e773d0743844625",
+        "agent.log": "f23c99d6150cbcd7aac296ff32a341492e7daf9615e77b300813a0213079b969"
+      }
+    },
+    {
+      "card": "delta",
+      "route_archive": "cloud_request_gpu",
+      "total": 6423.086757,
+      "termination_reason": "survey_complete",
+      "accounted_wallclock_seconds": 475.229,
+      "agent_wallclock_seconds": 464.407,
+      "ignored_in_flight_response": false,
+      "decision_requests": 1275,
+      "received_action_lines": 1275,
+      "committed_decision_rows": 1856,
+      "public_simulation_end_utc": "2026-12-01T08:15:00Z",
+      "finish_summary_present": true,
+      "summary": {
+        "decisions": 1275,
+        "exposures": 1095,
+        "reports": 1,
+        "correct_reports": 1,
+        "best_science_sum": 6520.713018,
+        "required_missing_bound": 6,
+        "planning_seconds": 385.965,
+        "C": 1.2695,
+        "E": 0.6788,
+        "remote_check": {
+          "remote_check": "failed",
+          "transport": "official-compatible-api",
+          "exception": "TimeoutError",
+          "seconds": 60.037
+        },
+        "remote_calls": 0,
+        "remote_seconds": 0,
+        "remote_budget": null,
+        "cpu_phase": {
+          "choose_calls": 1101,
+          "phase_calls": 1101,
+          "phase_candidates": 14154479,
+          "phase_exact_evaluations": 17616,
+          "phase_emergency_count": 0,
+          "phase_improvements": 949
+        },
+        "terrain": {
+          "schema": "terrain-positive-version-space-v1",
+          "directions": [
+            "E",
+            "NE",
+            "NW"
+          ],
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "remaining_boxes": {
+            "E": 372,
+            "NE": 518,
+            "NW": 503
+          },
+          "positive_count": 14370,
+          "zero_feedback_ignored": 772,
+          "conditional_domain_conflicts": [],
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+        },
+        "terrain_feedback_exposures": 1095,
+        "request_dp": {
+          "builds": 8,
+          "build_seconds": 84.26257651300011,
+          "dp_solves": 116,
+          "dp_seconds": 0.7565487950002421,
+          "request_observes": 2,
+          "boundary_waits": 1,
+          "clipped_baselines": 4,
+          "rejected_by_cost": 0,
+          "infeasible": 0,
+          "forecast_failures": 0,
+          "cached_requests": 2,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret"
+        },
+        "distributed_request": {
+          "remote_baselines": 0,
+          "cpu_baselines": 1101,
+          "forced_cpu_crops": 4,
+          "transport_failures": 0,
+          "cpu_baseline_seconds": 300.9103149620024,
+          "remote_baseline_seconds": 0.0,
+          "budget": {
+            "accepted": 0,
+            "skipped": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "failed_initializations": 0
+          },
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+        }
+      },
+      "per_decision_wallclock_present_in_actions": false,
+      "per_decision_wallclock_column_in_decisions": false,
+      "output_sha256": {
+        "actions.jsonl": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44",
+        "decisions.csv": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176",
+        "workflow_result.json": "5c96b45e72d6cd833c4a6521e924c4aa458a11197650f64aa0d51623a822470f",
+        "agent.log": "5a2534837cabd36788d509096225ff7c2199dd3659003715b5af179492cdc502"
+      }
+    }
+  ],
+  "history_package_identity": {
+    "phase_zip_sha256": "a6fca473886bc1ea5d763f6a358eb5006163b072b807abc8946d141ccfcfee42",
+    "request_zip_sha256": "bfcc8ed738229e961c2135415d44dbef27e78b5386c3bdfdabaee915904e91ec",
+    "same_source_packages": false
+  },
+  "source_sha256": {
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "research/request_deadline_common.py": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+    "research/request_remote_planner.py": "fa0a2aef6ec095ca4d50b93e21b855faa5a97a48ced1ec1c401bf49a527b2654",
+    "research/gpu_phase_candidates.py": "832e11564847693105b29ad1f445e2ccee3f0e06051196f39422d78a65738f18",
+    "research/search_budget_determinism_audit.py": "abca7414bc74a6d3c17ba1d68f2d86d0529438aab1499921ee5d3c134909d9ef"
+  }
+}

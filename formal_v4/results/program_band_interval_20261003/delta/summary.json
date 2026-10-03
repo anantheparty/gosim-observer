@@ -1,0 +1,39 @@
+{
+  "card": "delta",
+  "source_run": "formal_v4/results/cloud_request_gpu_delta_20261003",
+  "W_definition": "transparency * sky_quality / seeing; 0 for closed slots",
+  "repair_cuts_used": false,
+  "E_in_band_matrix": false,
+  "finite_W_cap_assumed": false,
+  "slot_cells": 1179,
+  "raw_prog_mult_labels": 15156,
+  "convex_constraint_rows": 14011,
+  "label_counts": {
+    "BRIGHT mismatch; B<bright OR B>=dark": 1145,
+    "DARK matched": 11768,
+    "BRIGHT matched; upper strict": 908,
+    "DARK mismatch; upper strict": 1010,
+    "BACKUP mismatch": 84,
+    "BACKUP matched; upper strict": 241
+  },
+  "convex_rows_from_invalidated_data": 280,
+  "raw_label_rows_from_zero_quality": 772,
+  "positive_lower_cells": 236,
+  "finite_upper_cells": 260,
+  "unbounded_upper_cells": 919,
+  "propagation_iterations": 6,
+  "exact_label_unbounded_ray_cells": 919,
+  "convex_LP_feasible": true,
+  "convex_LP_max_constraint_violation": 1.1102230246251565e-16,
+  "convex_point_not_certified_for_omitted_disjunctions": true,
+  "strict_upper_relaxed_to_closed_for_outer_bounds": true,
+  "official_band_quality_oracle": {
+    "synthetic_official_band_quality_checks": 18,
+    "max_error": 8.326672684688674e-17,
+    "instrument_efficiency": 0.07,
+    "interpretation": "Changing E does not enter the W band matrix; synthetic chosen slot values only."
+  },
+  "hidden_inputs_read": false,
+  "source_sha256": "c5a948de067a31c6ccec2db628e711140c0a86833f3be17d1b4b4780d609227a",
+  "elapsed_seconds": 0.26973429089412093
+}

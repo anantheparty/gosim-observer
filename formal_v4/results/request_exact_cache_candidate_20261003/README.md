@@ -1,6 +1,6 @@
 # 独立 Request 严格等价缓存候选
 
-**本地门检 READY。本轮已在界面点击上传并准备（20:02 JST 前），最后观察到上传 0%；之后浏览器控制断连，尚未确认准备完成，未启动完整评测。**
+**官方公开测试通过，指纹一致；20:09 JST 已确认，20:10 JST 已启动四卡完整评测。公开测试432.668244分，59.384秒，0远端调用；公开卡无REQ，完整分数待结果。**
 
 - ZIP：`/Users/kamico/Downloads/observer_request_exact_cache.zip`
 - ZIP SHA256：`e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a`
@@ -26,3 +26,8 @@ wrapper先导入冻结的distributed entry，再在first initialize之前绑定 
 所有build manifest SHA、官方ZIP校验、冻结原文件字节一致检查通过。实际私有runtime token匹配0，hidden/server文件0；公开initial由六个public文件重建，ledger/messages来自本队公开下载输出。完整窗口gate使用的REQ/输出只存在测试临时文件，不打入候选ZIP。
 
 详见 `package_gates.json` 与 `exact_cache_provenance.json`。本子任务没有UI、提交、评测、部署或Git index操作。候选可用于后续单次四卡对照，但去掉health耗时会改变剩余wallclock，不能保证重现原分数，更不能把局部加速当整卡加速。
+
+At 20:28 JST, delta completed with **6423.086757** and 587.273 accounted seconds.
+All action, decision, message, observation and score-report bytes match the
+original Request delta. The three other cards are still running; no full-batch
+mean is available yet. See `../cloud_request_cache_delta_20261003/`.

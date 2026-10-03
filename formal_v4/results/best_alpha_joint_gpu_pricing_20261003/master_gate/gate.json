@@ -1,0 +1,77 @@
+{
+  "baseline_official_total": 7289.494481,
+  "baseline": {
+    "total_conditional_conservative": 7289.494439125726,
+    "science": 7239.8303929997555,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1184
+  },
+  "conditional_primal": {
+    "total_conditional_conservative": 7289.494439125727,
+    "science": 7239.830392999756,
+    "required_missing": 3,
+    "missing_ids": [
+      "V4T001295",
+      "V4T005424",
+      "V4T008897"
+    ],
+    "request_rewards": [
+      0,
+      100.0
+    ],
+    "report_fixed": 100.0,
+    "uniformity_penalty": 0.33595387402991506,
+    "observe_columns": 1156
+  },
+  "conditional_net_change": 9.094947017729282e-13,
+  "source_columns": 1376,
+  "new_columns": 120,
+  "new_selected_indices": [],
+  "finite_optimistic_LP_change": 0.0,
+  "old_finite_optimistic_LP": 7373.168525333393,
+  "new_finite_optimistic_LP": 7373.168525333393,
+  "mip_status": 0,
+  "mip_gap": 0.0,
+  "mip_stats": {
+    "variables": 23463,
+    "rows": 31566,
+    "nonzeros": 67959,
+    "time_nodes": 1266,
+    "seconds": 0.107604208169505,
+    "mode": "lower"
+  },
+  "incumbent_kept": true,
+  "uniformity_in_MIP_objective": false,
+  "uniformity_recomputed": true,
+  "rounding_comparison_tolerance": 0.009599002,
+  "old_dual_audit": {
+    "lp_objective_without_constants": 32273.168525333393,
+    "seconds": 1.1808996249455959,
+    "max_stationarity_residual": 1.6537882174816332e-12,
+    "dual_primal_objective_residual": 5.093170329928398e-11,
+    "max_inequality_marginal": -0.0,
+    "redundant_flow_and_winner_upper_bounds_removed": true
+  },
+  "new_dual_audit": {
+    "lp_objective_without_constants": 32273.168525333393,
+    "seconds": 0.9553730830084532,
+    "max_stationarity_residual": 3.632649736573512e-13,
+    "dual_primal_objective_residual": 5.820766091346741e-11,
+    "max_inequality_marginal": 2.842170943040401e-14,
+    "redundant_flow_and_winner_upper_bounds_removed": true
+  },
+  "new_official_score": false,
+  "global_optimality_certificate": false,
+  "elapsed_seconds": 2.840043667005375
+}

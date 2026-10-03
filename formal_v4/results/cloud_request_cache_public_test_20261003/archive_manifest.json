@@ -1,0 +1,69 @@
+{
+  "schema": "official-output-download-v1",
+  "download_filename": "gosim_request_cache_public_test.zip",
+  "download_sha256": "14c828539d1e9738db511aab12b1a76636ded82f09989963544d5852258a470c",
+  "file_sha256": {
+    "actions.jsonl": "f33175287cce08d98c109db3cd21208783ba188b2379c81483ba865aa8ce1b02",
+    "agent.log": "157f7d5efec35306b37a59295717560ff976b5f4e983687f598701ed6fbe1d01",
+    "decisions.csv": "9af43a027af7bc2d1a76f2db648b4ebd9543e5fba7ac8b24aa33435e2ba9d08a",
+    "messages.jsonl": "97dc20c639c2db4d3feb5c05abf9c870e36482c1296781b8349494136ccccb7f",
+    "observations.csv": "5a663c5354707715e80a2b71698b3ffa8838e81ed42ec7a66b852fca22d9bcbd",
+    "score_report.json": "335dd103cced68b1b4dba85ac55b35940aebf030a0090d6f44a027c89c22a570",
+    "workflow_result.json": "ae26b21f3c8a8870bc681884b554cf3ede537ee2233452092264deef0cff6834"
+  },
+  "checks": {
+    "decisions": true,
+    "messages": true,
+    "observations": true,
+    "workflow_report_equal": true
+  },
+  "scenario": "v4-public-test",
+  "total": 432.668244,
+  "components": {
+    "observation_request_reward": 0,
+    "report_settlement": 0.0,
+    "required_penalty": -700.0,
+    "sum_best_scores": 1167.043318,
+    "uniformity_penalty": -34.375073
+  },
+  "counts": {
+    "decisions": 424,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": 2916,
+    "observe_actions": 283,
+    "required_missing": 14,
+    "targets_observed": 1598
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "accounted_wallclock_seconds": 59.384,
+  "comparison": {
+    "prior_directory": "cloud_request_gpu_public_test_20261003",
+    "prior_total": 430.598521,
+    "delta_total": 2.0697230000000104,
+    "components_delta": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": 0.0,
+      "sum_best_scores": 2.348705000000109,
+      "uniformity_penalty": -0.2789810000000017
+    },
+    "same_scenario_hash": true,
+    "semantic_first_action_difference_zero_based": 186,
+    "prior_action_lines": 340,
+    "current_action_lines": 338,
+    "same_output_bytes": {
+      "actions.jsonl": false,
+      "agent.log": false,
+      "decisions.csv": false,
+      "messages.jsonl": true,
+      "observations.csv": false,
+      "score_report.json": false,
+      "workflow_result.json": false
+    }
+  }
+}

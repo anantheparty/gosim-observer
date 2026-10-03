@@ -82,6 +82,29 @@ It failed immediately with `OSError errno=101` (network unreachable), not DNS;
 the quota remained four. See `research/IP_TRANSPORT_ZH.md`. The platform's
 current runtime cannot reach this external GPU route.
 
+## Latest platform evaluation (2026-10-03 JST)
+
+`Observer Verified Portfolio` completed the four practice cards with a displayed
+exact mean **6714.98391975**, improving on the previous complete batch mean of
+6532.68247925 by 182.30144050. The card scores are 7279.188726, 6571.727518,
+6585.932678 and 6423.086757. All four completed the survey. Official downloads
+are archived under `results/cloud_verified_portfolio_{card}_20261003/`; all
+published output hashes and nested workflow reports match. These measured scores differ from the historical componentwise mean
+6836.95278225; that arithmetic value was never a new-package measurement.
+
+The strict Request cache package passed its free public interface test with
+432.668244 points in 59.384 accounted seconds and zero remote calls. Its full
+four-card evaluation started at 20:10 JST. Delta completed at 6423.086757;
+actions, decisions, messages, observations and score-report bytes match the
+original Request delta run. The other cards are pending. The platform currently
+shows a practice daily limit of eight; six remain after this start. No remarks
+or design materials were supplied.
+
+The latest mathematical records cover a 1376-column incumbent-based alpha
+master, full optimal-face dual stabilization, and actual GPU column pricing.
+They have not established a global optimum or an additional measured score.
+See their result READMEs for assumptions and finite-model coverage.
+
 ## Run and package
 
 ```sh

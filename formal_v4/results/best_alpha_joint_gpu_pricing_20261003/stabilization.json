@@ -1,0 +1,49 @@
+{
+  "raw": {
+    "secondary_status": 0,
+    "secondary_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "secondary_solve_seconds": 2.793595625087619,
+    "stationarity_max_abs": 2.266520304772257e-13,
+    "original_min_objective": -32273.168525333393,
+    "stabilized_min_dual_objective": -32273.168525332847,
+    "optimal_face_objective_error": 5.456968210637569e-10,
+    "mu_max": 4.87979434637964e-10,
+    "alpha_min": 0.0,
+    "beta_max": 0.0,
+    "primal_equality_error": 0.0,
+    "primal_inequality_violation": 2.220446049250313e-16,
+    "inequality_complementarity_max": 4.87979434637964e-10,
+    "lower_bound_complementarity_max": 0.0,
+    "upper_bound_complementarity_max": 0.0,
+    "finite_lower_bounds": 21964,
+    "finite_upper_bounds": 518,
+    "original_bound_arrays_preserved": true,
+    "dual_variables": 52677,
+    "dual_equalities": 21965,
+    "minimum_completed_mandatory_price_sum": 22.497161068722903
+  },
+  "cleanup": {
+    "mu_positive_count": 1,
+    "mu_positive_max": 4.87979434637964e-10,
+    "total_multiplier_l1_change": 4.87979434637964e-10,
+    "stationarity_max_abs_after": 4.879791293266322e-10,
+    "objective_error_after": 5.456968210637569e-10,
+    "complementarity_max_after": 3.700743415417189e-15,
+    "clean_signs_exact": true,
+    "numeric_gate_tolerance_stationarity": 1e-07,
+    "numeric_gate_tolerance_objective_complementarity": 1e-06,
+    "existing_pool_reduced_profit_max_after": 4.879789350376029e-10
+  },
+  "fresh_primal_audit": {
+    "lp_objective_without_constants": 32273.168525333393,
+    "seconds": 1.1526977920439094,
+    "max_stationarity_residual": 1.6537882174816332e-12,
+    "dual_primal_objective_residual": 5.093170329928398e-11,
+    "max_inequality_marginal": -0.0,
+    "redundant_flow_and_winner_upper_bounds_removed": true
+  },
+  "completed_nu_sum_before": 188.5459304576322,
+  "completed_nu_sum_after": 22.497161068722903,
+  "baseline_official_total": 7289.494481,
+  "source_pool_sha256": "21bc59a47930643499c7dec957218097187ca0db15754499af3af1d229cf5b5d"
+}

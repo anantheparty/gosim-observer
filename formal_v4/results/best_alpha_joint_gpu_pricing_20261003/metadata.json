@@ -1,0 +1,85 @@
+{
+  "card": "alpha",
+  "cases": [
+    {
+      "case": 0,
+      "start": 1791185400.0,
+      "start_utc": "2026-10-05T07:30:00Z",
+      "file": "case_0.npz",
+      "sha256": "ca6b0b0556474c0bdc5e86c0cbba24e90073dcc401ab08ec21246697c502c706",
+      "D": 12,
+      "missing_visible_factor_ge_half": {
+        "V4T001295": 1,
+        "V4T005424": 1,
+        "V4T008897": 0
+      }
+    },
+    {
+      "case": 1,
+      "start": 1791272390.0,
+      "start_utc": "2026-10-06T07:39:50Z",
+      "file": "case_1.npz",
+      "sha256": "2a82ef4cd4068f59025d7426339df0789cbf4edff7947286acab7e82c45467bd",
+      "D": 9,
+      "missing_visible_factor_ge_half": {
+        "V4T001295": 1,
+        "V4T005424": 1,
+        "V4T008897": 0
+      }
+    },
+    {
+      "case": 2,
+      "start": 1791184500.0,
+      "start_utc": "2026-10-05T07:15:00Z",
+      "file": "case_2.npz",
+      "sha256": "782e61063c41e4061be68ac8d59ed4611fb151b3a162a4696e0bf9b3742c59db",
+      "D": 12,
+      "missing_visible_factor_ge_half": {
+        "V4T001295": 1,
+        "V4T005424": 1,
+        "V4T008897": 1
+      }
+    },
+    {
+      "case": 3,
+      "start": 1791263700.0,
+      "start_utc": "2026-10-06T05:15:00Z",
+      "file": "case_3.npz",
+      "sha256": "f8fbbd3aa01e65d5727a898b9a12be5a1f62963cb95a501a60e4e2e9cceeef12",
+      "D": 9,
+      "missing_visible_factor_ge_half": {
+        "V4T001295": 0,
+        "V4T005424": 0,
+        "V4T008897": 1
+      }
+    },
+    {
+      "case": 4,
+      "start": 1791183600.0,
+      "start_utc": "2026-10-05T07:00:00Z",
+      "file": "case_4.npz",
+      "sha256": "78990ee10ec7ed5e62cf77deeeb573021ac79d009c9d2b9e77908b0769ceb363",
+      "D": 12,
+      "missing_visible_factor_ge_half": {
+        "V4T001295": 3,
+        "V4T005424": 3,
+        "V4T008897": 3
+      }
+    }
+  ],
+  "programs": [
+    "DARK",
+    "BRIGHT",
+    "BACKUP"
+  ],
+  "glass": 0.6324555320336759,
+  "pitch": 0.6324555320336759,
+  "nfib": 16,
+  "pricing_source_sha256": "8399734948df7f918150733e040be7e32d6abc455f33cd68c9966005c92f8567",
+  "dual_path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/best_alpha_joint_gpu_pricing_20261003/pricing_duals_stabilized.json",
+  "dual_sha256": "59ab76f27e6e2621d90946137e54ecbfdc47246e8f4de52106e46d9b8e0bd34b",
+  "profile_sha256": "4dc18c53e0bf1f6dcba73d256820cefe8c66cb51ef0029d0dc47d9e09a09266a",
+  "hypotheses": "fresh Phase alpha report/E partition; conditional narrow same-realization Z gate; zerooffset; reference event direction bounds; program bounds; .03 margin",
+  "fresh_pool_sha256": "21bc59a47930643499c7dec957218097187ca0db15754499af3af1d229cf5b5d",
+  "prepare_seconds": 6.797484250040725
+}

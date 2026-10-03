@@ -1,0 +1,69 @@
+{
+  "schema": "official-output-download-v1",
+  "download_filename": "gosim_request_cache_delta_result.zip",
+  "download_sha256": "57cf167efc26f39ad98a0fa0df859548fe329c18cb84c4764cd291f05655c4bd",
+  "file_sha256": {
+    "actions.jsonl": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44",
+    "agent.log": "2b3a873eeb004060ed4ffd8ea0410d4ea68e0586a52d779f5b8b93c481dfec4e",
+    "decisions.csv": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176",
+    "messages.jsonl": "fe58d058c34f76554f5c0aca21d1c04f6b1a29756c6661b5bdd775abb8d36048",
+    "observations.csv": "bc63bb44ce5cba0fbb0419e27fd2c70e2fee8120eceb5084ecac14fa2edc81b9",
+    "score_report.json": "6bee139b7d18b0e42cfc01aaaa3c858a0c2a87f95296d8d6aa069d8f12b94193",
+    "workflow_result.json": "c143df34f20babb839157b5fa069f2a917b309a8ad264bb5ae3e2a814e51664e"
+  },
+  "checks": {
+    "decisions": true,
+    "messages": true,
+    "observations": true,
+    "workflow_report_equal": true
+  },
+  "scenario": "v4-practice-delta",
+  "total": 6423.086757,
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 100.0,
+    "required_penalty": -300.0,
+    "sum_best_scores": 6523.825782,
+    "uniformity_penalty": -0.739024
+  },
+  "counts": {
+    "decisions": 1856,
+    "invalidated_observations": 280,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 2,
+    "observations": 15156,
+    "observe_actions": 1096,
+    "required_missing": 6,
+    "targets_observed": 8917
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "accounted_wallclock_seconds": 587.273,
+  "comparison": {
+    "prior_directory": "cloud_request_gpu_delta_20261003",
+    "prior_total": 6423.086757,
+    "delta_total": 0.0,
+    "components_delta": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": 0.0,
+      "sum_best_scores": 0.0,
+      "uniformity_penalty": 0.0
+    },
+    "same_scenario_hash": true,
+    "semantic_first_action_difference_zero_based": null,
+    "prior_action_lines": 1275,
+    "current_action_lines": 1275,
+    "same_output_bytes": {
+      "actions.jsonl": true,
+      "agent.log": false,
+      "decisions.csv": true,
+      "messages.jsonl": true,
+      "observations.csv": true,
+      "score_report.json": true,
+      "workflow_result.json": false
+    }
+  }
+}

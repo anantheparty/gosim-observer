@@ -1,0 +1,154 @@
+{
+  "schema": "verified-portfolio-official-full-batch-v1",
+  "project_name": "Observer Verified Portfolio",
+  "started_at_jst": "2026-10-03T19:41:00+09:00",
+  "official_source_fingerprint": "e78056d354317f27d7ad0cb3a97330c2df4e3ba8944a7e7c90516a8b2c472ce0",
+  "new_official_score_measured": true,
+  "cards": {
+    "alpha": {
+      "total": 7279.188726,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -150.0,
+        "sum_best_scores": 7229.468982,
+        "uniformity_penalty": -0.280256
+      },
+      "counts": {
+        "decisions": 1868,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 16130,
+        "observe_actions": 1175,
+        "required_missing": 3,
+        "targets_observed": 9519
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 688.125,
+      "planning_seconds": 630.677,
+      "remote_calls": 0,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-verified-portfolio",
+        "seconds": 0.0
+      },
+      "phase_emergency_count": 0,
+      "archive_manifest": "../cloud_verified_portfolio_alpha_20261003/archive_manifest.json"
+    },
+    "beta": {
+      "total": 6571.727518,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -450.0,
+        "sum_best_scores": 6822.558045,
+        "uniformity_penalty": -0.830526
+      },
+      "counts": {
+        "decisions": 1831,
+        "invalidated_observations": 0,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15413,
+        "observe_actions": 1126,
+        "required_missing": 9,
+        "targets_observed": 9141
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 410.487,
+      "planning_seconds": 374.145,
+      "remote_calls": 0,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-verified-portfolio",
+        "seconds": 0.0
+      },
+      "phase_emergency_count": 0,
+      "archive_manifest": "../cloud_verified_portfolio_beta_20261003/archive_manifest.json"
+    },
+    "gamma": {
+      "total": 6585.932678,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -200.0,
+        "sum_best_scores": 6587.563337,
+        "uniformity_penalty": -1.630659
+      },
+      "counts": {
+        "decisions": 1776,
+        "invalidated_observations": 309,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15249,
+        "observe_actions": 1104,
+        "required_missing": 4,
+        "targets_observed": 9331
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 329.164,
+      "planning_seconds": 294.878,
+      "remote_calls": 0,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-verified-portfolio",
+        "seconds": 0.0
+      },
+      "phase_emergency_count": 0,
+      "archive_manifest": "../cloud_verified_portfolio_gamma_20261003/archive_manifest.json"
+    },
+    "delta": {
+      "total": 6423.086757,
+      "components": {
+        "observation_request_reward": 100.0,
+        "report_settlement": 100.0,
+        "required_penalty": -300.0,
+        "sum_best_scores": 6523.825782,
+        "uniformity_penalty": -0.739024
+      },
+      "counts": {
+        "decisions": 1856,
+        "invalidated_observations": 280,
+        "observation_requests_completed": 1,
+        "observation_requests_issued": 2,
+        "observations": 15156,
+        "observe_actions": 1096,
+        "required_missing": 6,
+        "targets_observed": 8917
+      },
+      "termination": {
+        "detail": "",
+        "reason": "survey_complete"
+      },
+      "accounted_wallclock_seconds": 725.685,
+      "planning_seconds": 680.809,
+      "remote_calls": 0,
+      "remote_check": {
+        "remote_check": "disabled",
+        "transport": "offline-verified-portfolio",
+        "seconds": 0.0
+      },
+      "phase_emergency_count": 0,
+      "archive_manifest": "../cloud_verified_portfolio_delta_20261003/archive_manifest.json"
+    }
+  },
+  "mean_exact": "6714.98391975",
+  "previous_best_full_mean": "6532.68247925",
+  "gain_over_previous_best_full_mean": "182.30144050",
+  "historical_componentwise_mean_not_reproduced": "6836.95278225",
+  "all_output_hash_checks": true,
+  "all_cards_completed": true,
+  "all_remote_calls_zero": true,
+  "remarks_added": false,
+  "difference_attribution": "No cause established yet. Same frozen algorithms/configs, but optional health/runtime and process layout differ; first semantic action differences need protocol-prefix reconstruction."
+}

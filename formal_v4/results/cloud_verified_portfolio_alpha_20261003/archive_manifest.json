@@ -1,0 +1,69 @@
+{
+  "schema": "official-output-download-v1",
+  "download_filename": "gosim_verified_portfolio_alpha_result.zip",
+  "download_sha256": "bcf9fc1e68baee6eddbd821d117a92785bfceae5e23e4867c6f8f6b5ba3eec81",
+  "file_sha256": {
+    "actions.jsonl": "2b091070e0e320838527169386f713a2b239bfd37594e94996c7addb7a3d55f0",
+    "agent.log": "cf90b01c09e5415b149603da5ffb9b764b6275021a9ca6d30957d3b2a34ccbab",
+    "decisions.csv": "ad76261517682ded00fdbabc0f4934265c19ed8c5aa883c18244c9ce714eaab2",
+    "messages.jsonl": "1dcb55f547ecec41cd12b1828ae8b3b8d9fa432300cb301f4d34ffe3b8a068a8",
+    "observations.csv": "9576da240cd4536ab4e2a937aca6c8a9543a36e6c23a1f646ab8fe5f3bc0ed14",
+    "score_report.json": "4a8ea654ca64bfeee5abca4a3b143b94d53ca066b9ff06c23f97de81d56628db",
+    "workflow_result.json": "4b9c2cfde2ae47599a4d79e0910213aed6a0993e67783a2623ca24653fee31ed"
+  },
+  "checks": {
+    "decisions": true,
+    "messages": true,
+    "observations": true,
+    "workflow_report_equal": true
+  },
+  "scenario": "v4-practice-alpha",
+  "total": 7279.188726,
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 100.0,
+    "required_penalty": -150.0,
+    "sum_best_scores": 7229.468982,
+    "uniformity_penalty": -0.280256
+  },
+  "counts": {
+    "decisions": 1868,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 2,
+    "observations": 16130,
+    "observe_actions": 1175,
+    "required_missing": 3,
+    "targets_observed": 9519
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "accounted_wallclock_seconds": 688.125,
+  "comparison": {
+    "prior_directory": "cloud_phase_gpu_alpha_20261003",
+    "prior_total": 7289.494481,
+    "delta_total": -10.305754999999408,
+    "components_delta": {
+      "observation_request_reward": 0.0,
+      "report_settlement": 0.0,
+      "required_penalty": 0.0,
+      "sum_best_scores": -10.361452999999528,
+      "uniformity_penalty": 0.05569799999999997
+    },
+    "same_scenario_hash": true,
+    "semantic_first_action_difference_zero_based": 24,
+    "prior_action_lines": 1317,
+    "current_action_lines": 1308,
+    "same_output_bytes": {
+      "actions.jsonl": false,
+      "agent.log": false,
+      "decisions.csv": false,
+      "messages.jsonl": false,
+      "observations.csv": false,
+      "score_report.json": false,
+      "workflow_result.json": false
+    }
+  }
+}

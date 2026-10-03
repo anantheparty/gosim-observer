@@ -1,0 +1,49 @@
+{
+  "card": "alpha",
+  "source_run": "formal_v4/results/cloud_phase_gpu_alpha_20261003",
+  "W_definition": "transparency * sky_quality / seeing; 0 for closed slots",
+  "repair_cuts_used": false,
+  "E_in_band_matrix": false,
+  "finite_W_cap_assumed": false,
+  "slot_cells": 1252,
+  "raw_prog_mult_labels": 16282,
+  "convex_constraint_rows": 15369,
+  "label_counts": {
+    "BRIGHT mismatch; B<bright OR B>=dark": 913,
+    "DARK matched": 12553,
+    "DARK mismatch; upper strict": 1235,
+    "BRIGHT matched; upper strict": 1056,
+    "BACKUP matched; upper strict": 509,
+    "BACKUP mismatch": 16
+  },
+  "convex_rows_from_invalidated_data": 0,
+  "raw_label_rows_from_zero_quality": 356,
+  "positive_lower_cells": 250,
+  "finite_upper_cells": 365,
+  "unbounded_upper_cells": 887,
+  "propagation_iterations": 5,
+  "exact_label_unbounded_ray_cells": 887,
+  "convex_LP_feasible": true,
+  "convex_LP_max_constraint_violation": 5.551115123125783e-16,
+  "convex_point_not_certified_for_omitted_disjunctions": true,
+  "strict_upper_relaxed_to_closed_for_outer_bounds": true,
+  "official_band_quality_oracle": {
+    "synthetic_official_band_quality_checks": 18,
+    "max_error": 5.551115123125783e-17,
+    "instrument_efficiency": 0.07,
+    "interpretation": "Changing E does not enter the W band matrix; synthetic chosen slot values only."
+  },
+  "hidden_inputs_read": false,
+  "source_sha256": "c5a948de067a31c6ccec2db628e711140c0a86833f3be17d1b4b4780d609227a",
+  "elapsed_seconds": 0.29800291708670557,
+  "alpha_coupon_audit": {
+    "conditional_coupon_columns": 192,
+    "assigned_target_rows": 2523,
+    "finite_band_upper_rows": 0,
+    "DARK_excluded_rows": 0,
+    "sum_per_column_science_upper_reduction": 0.0,
+    "all_assigned_rows_have_exact_label_positive_unbounded_ray": true,
+    "not_a_schedule_or_competition_score_gain": true,
+    "column_pool_sha256": "21bc59a47930643499c7dec957218097187ca0db15754499af3af1d229cf5b5d"
+  }
+}

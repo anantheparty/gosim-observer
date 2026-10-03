@@ -2,24 +2,38 @@
   "schema": "verified-portfolio-upload-lifecycle-v1",
   "project_name": "Observer Verified Portfolio",
   "uploaded_at_local": "2026-10-03T09:12:00+09:00",
-  "last_observed_state": "running_partial_scores",
+  "last_observed_state": "scored",
   "local_zip_sha256": "fd5533686bb4348a3d70740048544c050f824951d0d3ed512fa09803f2e9d2a2",
   "local_official_source_fingerprint": "e78056d354317f27d7ad0cb3a97330c2df4e3ba8944a7e7c90516a8b2c472ce0",
   "platform_source_fingerprint_confirmed": true,
   "platform_interface_check_confirmed": true,
   "full_evaluation_started": true,
-  "new_score_measured": false,
+  "new_score_measured": true,
   "continuation_check_at_local": "2026-10-03T20:04:00+09:00",
   "confirmed_at_local": "2026-10-03T19:40:00+09:00",
   "full_evaluation_started_at_local": "2026-10-03T19:41:00+09:00",
   "daily_evaluation_limit_observed": 8,
   "daily_remaining_after_start": 7,
-  "browser_control_recovered": false,
+  "browser_control_recovered": true,
   "previous_continuation_blocker": "Computer Use getState timed out and Chrome getTab failed with nodeRepl.fetch request failed; platform state unavailable.",
   "public_test_archive_manifest": "../cloud_verified_portfolio_public_test_20261003/archive_manifest.json",
   "observed_partial_scores": {
     "beta_ui_rounded": 6571.73,
     "gamma_ui_rounded": 6585.93
   },
-  "continuation_blocker": "Chrome getTab timed out and native getApp pipe closed; final results unavailable."
+  "observed_total_ui_rounded": 6714.98,
+  "observed_scores_ui_rounded": {
+    "alpha": 7279.19,
+    "beta": 6571.73,
+    "gamma": 6585.93,
+    "delta": 6423.09
+  },
+  "downloaded_card_archives": {
+    "alpha": "../cloud_verified_portfolio_alpha_20261003/archive_manifest.json",
+    "beta": "../cloud_verified_portfolio_beta_20261003/archive_manifest.json",
+    "gamma": "../cloud_verified_portfolio_gamma_20261003/archive_manifest.json",
+    "delta": "../cloud_verified_portfolio_delta_20261003/archive_manifest.json"
+  },
+  "official_mean_exact": "6714.98391975",
+  "official_full_batch_summary": "../cloud_verified_portfolio_batch_20261003/summary.json"
 }

@@ -1,0 +1,231 @@
+{
+  "card": "alpha",
+  "cross_run_W_pool_is_conditional": true,
+  "repair_cuts_used": false,
+  "rows": 57250,
+  "coverage": [
+    {
+      "source": "cloud_cd2_alpha_20261003",
+      "convex_rows": 14716
+    },
+    {
+      "source": "cloud_phase_gpu_alpha_20261003",
+      "convex_rows": 15369
+    },
+    {
+      "source": "cloud_request_gpu_alpha_20261003",
+      "convex_rows": 12198
+    },
+    {
+      "source": "cloud_verified_portfolio_alpha_20261003",
+      "convex_rows": 14967
+    }
+  ],
+  "omitted_exact_BRIGHT_mismatch_disjunctions": 4193,
+  "conditional_joint_convex_LP_feasible": true,
+  "finite_upper_cells_before": 365,
+  "finite_upper_cells_merged": 492,
+  "unbounded_ray_cells_merged": 760,
+  "interval_iterations": 295,
+  "own_run_finite_consistency": [
+    {
+      "first": "cloud_phase_gpu_alpha_20261003",
+      "second": "cloud_cd2_alpha_20261003",
+      "identical_timed_observe_action_prefix": 0,
+      "identical_target_start_end_rows": 13,
+      "paired_same_declared_program_rows": 13,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": 0.0,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 1258,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "second_repairs": [
+        "2026-10-30T01:50:01Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    },
+    {
+      "first": "cloud_phase_gpu_alpha_20261003",
+      "second": "cloud_request_gpu_alpha_20261003",
+      "identical_timed_observe_action_prefix": 0,
+      "identical_target_start_end_rows": 0,
+      "paired_same_declared_program_rows": 0,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": null,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 909,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "second_repairs": [
+        "2026-10-30T01:37:55Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    },
+    {
+      "first": "cloud_phase_gpu_alpha_20261003",
+      "second": "cloud_verified_portfolio_alpha_20261003",
+      "identical_timed_observe_action_prefix": 24,
+      "identical_target_start_end_rows": 415,
+      "paired_same_declared_program_rows": 415,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": 0.0,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 1257,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "second_repairs": [
+        "2026-10-30T01:30:04Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    }
+  ],
+  "new_portfolio_pair_checks": [
+    {
+      "first": "cloud_phase_gpu_alpha_20261003",
+      "second": "cloud_verified_portfolio_alpha_20261003",
+      "identical_timed_observe_action_prefix": 24,
+      "identical_target_start_end_rows": 415,
+      "paired_same_declared_program_rows": 415,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": 0.0,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 1257,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-10-30T01:54:35Z"
+      ],
+      "second_repairs": [
+        "2026-10-30T01:30:04Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    },
+    {
+      "first": "cloud_phase_gpu_beta_20261003",
+      "second": "cloud_verified_portfolio_beta_20261003",
+      "identical_timed_observe_action_prefix": 278,
+      "identical_target_start_end_rows": 4384,
+      "paired_same_declared_program_rows": 4384,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": 0.0,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 1204,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-11-24T01:52:57Z"
+      ],
+      "second_repairs": [
+        "2026-11-24T06:30:30Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    },
+    {
+      "first": "cloud_phase_gpu_gamma_20261003",
+      "second": "cloud_verified_portfolio_gamma_20261003",
+      "identical_timed_observe_action_prefix": 334,
+      "identical_target_start_end_rows": 5007,
+      "paired_same_declared_program_rows": 5007,
+      "paired_same_program_different_multiplier_rows": 0,
+      "differences": [],
+      "paired_quality_max_absolute_difference": 0.0,
+      "paired_rows_within_repair_disagreement_gap": 0,
+      "paired_quality_max_difference_in_repair_gap": null,
+      "paired_rows_after_both_repairs": 0,
+      "shared_bulletin_forecast_records": 1240,
+      "changed_shared_public_weather_records": 0,
+      "first_repairs": [
+        "2026-10-28T02:25:19Z"
+      ],
+      "second_repairs": [
+        "2026-11-14T00:59:32Z"
+      ],
+      "scenario_hash_equal": true,
+      "scope": "finite identical integrals/labels and public-message consistency; does not prove unseen weather truth equal"
+    }
+  ],
+  "coupon_target_rows": 2523,
+  "coupon_finite_B_upper_rows": 0,
+  "coupon_DARK_excluded_rows": 0,
+  "sum_per_column_score_upper_reduction_under_shared_W": 0.0,
+  "not_a_schedule_or_competition_score_change": true,
+  "synthetic_counterexamples": {
+    "same_Z_different_W_and_E": [
+      {
+        "W": 1.0,
+        "E": 0.001,
+        "B": 1.3492558096050669,
+        "clean_q_same_geometry": 0.001349255809605067,
+        "seeing": 1.0,
+        "synthetic_slot_inputs_not_hidden_data": true
+      },
+      {
+        "W": 1000000000.0,
+        "E": 1e-12,
+        "B": 1349255809.6050668,
+        "clean_q_same_geometry": 0.0013492558096050667,
+        "seeing": 1e-09,
+        "synthetic_slot_inputs_not_hidden_data": true
+      }
+    ],
+    "universal_E_positive_floor_follows_from_public_scorer": false,
+    "universal_W_upper_follows_from_public_scorer": false,
+    "qualification": "Counterexamples are accepted by the scorer primitives; not claims about task-generator support."
+  },
+  "hidden_inputs_read": false,
+  "generator_read": false,
+  "source_sha256": "cc8ad5ebb0d6566ff9b84cf54fdf2253860103138f7637bb2451d40be66d6cc0",
+  "own_output_input_sha256": {
+    "formal_v4/results/cloud_cd2_alpha_20261003/observations.csv": "d9721fcf061555926dea81df4aaa5a44a910e8c0387af01c08b62308453e33f9",
+    "formal_v4/results/cloud_cd2_alpha_20261003/decisions.csv": "bb7b45aa73b24f8b3c6ba87f1883bdd44924ef43e5151ba819f961ed68590f40",
+    "formal_v4/results/cloud_cd2_alpha_20261003/messages.jsonl": "c76f9bcbebbbee4a4f2c8e413cebeccfcc741a0968f108ffe43fd4805ebc05c7",
+    "formal_v4/results/cloud_cd2_alpha_20261003/actions.jsonl": "18d1c63751c1dddf7fe244191e6e8525e1ee620c4b72551b107f9942314ab222",
+    "formal_v4/results/cloud_cd2_alpha_20261003/score_report.json": "d92ba7092b045a24ccaceff972a6e17bbc16019ddd8d2409fd9a2fc3fa572065",
+    "formal_v4/results/cloud_phase_gpu_alpha_20261003/observations.csv": "1f924b4c4739f945c918974bea2b8f154e47a40fffe227b4be0e853804541cf0",
+    "formal_v4/results/cloud_phase_gpu_alpha_20261003/decisions.csv": "d7b4941c3066a9ced497c805e1e36ee8c4aa38dbc25cb03a19a3852e30a0b3a5",
+    "formal_v4/results/cloud_phase_gpu_alpha_20261003/messages.jsonl": "10240003e846a7c7daed903babae5a9cc588107942a8f285512c6cfa2bf276b2",
+    "formal_v4/results/cloud_phase_gpu_alpha_20261003/actions.jsonl": "4b5d9e79bceebe76e1d0ecdecc7c39bdbcc060ee72da3b34970e1259a6c60f85",
+    "formal_v4/results/cloud_phase_gpu_alpha_20261003/score_report.json": "0576b1c4160409d21efd15a728dd0555a356a25625891a28bb3bd52cc9d5af0c",
+    "formal_v4/results/cloud_request_gpu_alpha_20261003/observations.csv": "e1812c59e04e9798960143e3cbbe31e4a36fb73fe9b3958405eb90fd0ab4fc3a",
+    "formal_v4/results/cloud_request_gpu_alpha_20261003/decisions.csv": "4be2129d1797d20b4badd72fe74c20a53dc4aecf8d7b0db16873532be3287b57",
+    "formal_v4/results/cloud_request_gpu_alpha_20261003/messages.jsonl": "9b515a3fd0042c851af3438333acca5d4db4f2cfaeffc18dab148745745e3248",
+    "formal_v4/results/cloud_request_gpu_alpha_20261003/actions.jsonl": "fcbfa6090858269178881a56d3e20475a185fe3abf5ced390b17d6c17ec41ba8",
+    "formal_v4/results/cloud_request_gpu_alpha_20261003/score_report.json": "84fe172e1f1519409c573597e681c9789832efc8e61220b335b4f68b5c916cad",
+    "formal_v4/results/cloud_verified_portfolio_alpha_20261003/observations.csv": "9576da240cd4536ab4e2a937aca6c8a9543a36e6c23a1f646ab8fe5f3bc0ed14",
+    "formal_v4/results/cloud_verified_portfolio_alpha_20261003/decisions.csv": "ad76261517682ded00fdbabc0f4934265c19ed8c5aa883c18244c9ce714eaab2",
+    "formal_v4/results/cloud_verified_portfolio_alpha_20261003/messages.jsonl": "1dcb55f547ecec41cd12b1828ae8b3b8d9fa432300cb301f4d34ffe3b8a068a8",
+    "formal_v4/results/cloud_verified_portfolio_alpha_20261003/actions.jsonl": "2b091070e0e320838527169386f713a2b239bfd37594e94996c7addb7a3d55f0",
+    "formal_v4/results/cloud_verified_portfolio_alpha_20261003/score_report.json": "4a8ea654ca64bfeee5abca4a3b143b94d53ca066b9ff06c23f97de81d56628db"
+  },
+  "public_bound_sources_sha256": {
+    "formal_v4/upstream/gosim-observer-examples/docs/participant-guide.zh.md": "bd8dcf669d35cca9ba13a52544d8c864b26562230ff163f6aa22fa5789360d42",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8"
+  },
+  "elapsed_seconds": 1.8792320829816163
+}
