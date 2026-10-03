@@ -121,3 +121,8 @@ L3在源/选择冻结后，官方局部末动作packet检验条件增益 **+104.
 新 `cold_population_search` 以 `fork_turns="none"` 实际启动：独立读正式源码后研究跨曝光 `(时刻,fiber)→target` 稀疏图的联合指派，尝试用增广路径/流处理Hall资源争用；不是已有预约时间块方案。化简适用条件、science/required不同witness、REQ gate与loss仍须显式验证，原型尚未完成。
 
 实际L1/L2训练诊断已见明显卡间差异：127非control分支中正56/负69/tie2；L1正49负14，L2正7负55/tie2。正样本数量并非主要不足；独立世界/场景覆盖和行为条件偏移更值得处理。诊断尚未作为验证提分或新模型结果。
+
+
+### 末动作策略完整L3实际通过（07:30 JST）
+
+修复后的2CPU/2GiB/900秒官方完整L3 **6004.504542→6108.908435（+104.403893）**，accounted454.047秒，42项门检全部通过。report+100、science+4.375265、Jain改善+0.028629，required/REQ不变。移除唯一新增终局report后原1141个动作逐项相同，完整prefix、frozen尾动作、observe rank、旧loss和其他messages都同reference；仅public输入，无truth挂载。`results/cold_policy_breakthrough_20261004/complete_L3/`已保留全部真实输出并核对gate列出的SHA。这个本地真实改善不能称正式alpha–delta均分提升。当前wrapper/参数冻结，剩余L1/L2/L4一次/卡的独立回放工具正在准备，不重复control，不修改L3已锁工具。
