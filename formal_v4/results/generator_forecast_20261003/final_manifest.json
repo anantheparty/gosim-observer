@@ -1,0 +1,83 @@
+{
+  "finished_utc": "2026-10-03T14:43:44.877299+00:00",
+  "status": "complete; reject weather clock and current free-coupon diagnostic",
+  "weather_fixed_bypass24_mean_delta": -51.42054950000011,
+  "diagnostic_bypass24_mean_delta": 7.700140999999803,
+  "diagnostic_strong_phase24_mean_delta": -92.29010550000021,
+  "strong_gate_passed": false,
+  "strong_source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/runs/cold_neural_value_20261003/production_frozen",
+  "source_hashes": {
+    "policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "policy_config.json": "67f1c852562480f4046993d796c2d0287498e611a610534d97a610a6ee51fc84",
+    "research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e"
+  },
+  "locked_controller": {
+    "locked_at_utc": "2026-10-03T14:14:41.660645+00:00",
+    "mode": "diagnostic-reserve",
+    "reserve_coupons": 1,
+    "efficiency_threshold": 0.68,
+    "confidence_loss": 0.5,
+    "fresh_seconds": 7200,
+    "cooldown_seconds": 86400,
+    "minimum_feedback": 3,
+    "choice_uses_only": "L1 training",
+    "L1_scores": {
+      "baseline": 6096.185388,
+      "all_free": 5876.515621,
+      "reserve_one": 6132.248607
+    },
+    "L1_reserve_delta": 36.06321900000057,
+    "entry_sha256": "a8ed2bb7cc6912009f54cc6025ae44b8ec3b2b340da5ee112d47cfe6c5659c70",
+    "model_sha256": "034399ae956484492518f1769c65a3898068aa847c3eae3683a4e2a17fe57dfd",
+    "validation_card": "L2",
+    "heldout_cards": [
+      "L3",
+      "L4"
+    ],
+    "no_heldout_tuning": true
+  },
+  "strong_params": {
+    "cpu_phase_mode": "phase",
+    "cpu_phase_fixed_workload": true,
+    "anchor_count": 24,
+    "cpu_phase_top_count": 4,
+    "cpu_phase_local_target_count": 50,
+    "cpu_phase_boundary_target_count": 24,
+    "cpu_phase_exact_count": 16,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "PYTHONHASHSEED": 0
+  },
+  "strong_audit": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/generator_forecast_20261003/diagnostic/strong_phase24_summary.json",
+  "strong_results": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/generator_forecast_20261003/diagnostic/strong_phase24_results.json",
+  "strong_prior_L4_reproduced": {
+    "score_equal": true,
+    "components_equal": true,
+    "counts_equal": true,
+    "decisions_sha256_equal": true
+  },
+  "concrete_interaction": "A false report executes the existing Policy reset C=seasonal_quality(now)[0], E=.95; the ensuing estimates/actions differ. The added branch does not prevent this reset.",
+  "native_combination": "cancelled after negative strong gate; no native snapshot/test created",
+  "production_changed_by_this_agent": false,
+  "Git_index_changed_by_this_agent": false,
+  "LLM_in_solver": false,
+  "GPU_used": false,
+  "strong_driver_pid": 2936,
+  "strong_runner_pids": [
+    2996,
+    2997,
+    2998,
+    2999
+  ],
+  "strong_elapsed_seconds_range": [
+    247.3004487089347,
+    261.00842545880005
+  ],
+  "interrupted_retained": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/generator_forecast_20261003/diagnostic/strong_phase24_interrupted_to_parallel",
+  "old_210_file_manifest_unchanged": true,
+  "old_210_file_manifest": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/generator_forecast_20261003/completed_archive_manifest.json"
+}

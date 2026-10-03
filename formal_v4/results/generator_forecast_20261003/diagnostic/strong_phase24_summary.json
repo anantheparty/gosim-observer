@@ -1,0 +1,215 @@
+{
+  "params": {
+    "cpu_phase_mode": "phase",
+    "cpu_phase_fixed_workload": true,
+    "anchor_count": 24,
+    "cpu_phase_top_count": 4,
+    "cpu_phase_local_target_count": 50,
+    "cpu_phase_boundary_target_count": 24,
+    "cpu_phase_exact_count": 16,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "PYTHONHASHSEED": 0
+  },
+  "source_hashes_unchanged": true,
+  "model_lock_unchanged": true,
+  "rows": [
+    {
+      "card": "L3",
+      "baseline_score": 5910.930583,
+      "diagnostic_score": 5909.315457,
+      "delta": -1.6151260000006005,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -1.4071029999995517,
+        "uniformity_penalty": -0.20802199999999993
+      },
+      "baseline_counts": {
+        "decisions": 1710,
+        "invalidated_observations": 14,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13665,
+        "observe_actions": 991,
+        "required_missing": 5,
+        "targets_observed": 8217
+      },
+      "diagnostic_counts": {
+        "decisions": 1712,
+        "invalidated_observations": 15,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13638,
+        "observe_actions": 992,
+        "required_missing": 5,
+        "targets_observed": 8229
+      },
+      "baseline_planner": {
+        "choose_calls": 991,
+        "phase_calls": 991,
+        "phase_candidates": 12686817,
+        "phase_exact_evaluations": 15856,
+        "phase_emergency_count": 0,
+        "phase_improvements": 879
+      },
+      "diagnostic_planner": {
+        "choose_calls": 992,
+        "phase_calls": 992,
+        "phase_candidates": 12571797,
+        "phase_exact_evaluations": 15872,
+        "phase_emergency_count": 0,
+        "phase_improvements": 869
+      },
+      "baseline_report_audit": {
+        "reports": [],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-24T03:36:43Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 952,
+        "coupon_reports": 1,
+        "coupon_reports_with_quake": 0,
+        "original_reports": 0,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 1,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      }
+    },
+    {
+      "card": "L4",
+      "baseline_score": 6095.293215,
+      "diagnostic_score": 5912.32813,
+      "delta": -182.96508499999982,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": -100.0,
+        "sum_best_scores": -84.16223300000001,
+        "uniformity_penalty": 1.197147
+      },
+      "baseline_counts": {
+        "decisions": 1684,
+        "invalidated_observations": 392,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13155,
+        "observe_actions": 944,
+        "required_missing": 0,
+        "targets_observed": 8121
+      },
+      "diagnostic_counts": {
+        "decisions": 1684,
+        "invalidated_observations": 410,
+        "observation_requests_completed": 2,
+        "observation_requests_issued": 2,
+        "observations": 13269,
+        "observe_actions": 949,
+        "required_missing": 2,
+        "targets_observed": 8113
+      },
+      "baseline_planner": {
+        "choose_calls": 944,
+        "phase_calls": 944,
+        "phase_candidates": 12185775,
+        "phase_exact_evaluations": 15104,
+        "phase_emergency_count": 0,
+        "phase_improvements": 832
+      },
+      "diagnostic_planner": {
+        "choose_calls": 949,
+        "phase_calls": 949,
+        "phase_candidates": 12228274,
+        "phase_exact_evaluations": 15184,
+        "phase_emergency_count": 0,
+        "phase_improvements": 826
+      },
+      "baseline_report_audit": {
+        "reports": [
+          {
+            "correct": true,
+            "issued_at_utc": "2026-12-29T02:28:25Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 2,
+            "fault_start_utc": "2026-12-05T05:15:00Z",
+            "fault_repair_delay_hours": 573.2236111111112,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_report_audit": {
+        "reports": [
+          {
+            "correct": false,
+            "issued_at_utc": "2026-11-25T03:15:00Z",
+            "record_type": "report_result",
+            "repaired": false,
+            "score_delta": 0.0,
+            "free_coupons_before": 2,
+            "false_since_correct_after": 1
+          },
+          {
+            "correct": true,
+            "issued_at_utc": "2026-12-29T03:57:13Z",
+            "record_type": "report_result",
+            "repaired": true,
+            "score_delta": 100.0,
+            "free_coupons_before": 1,
+            "fault_start_utc": "2026-12-05T05:15:00Z",
+            "fault_repair_delay_hours": 574.7036111111111,
+            "false_since_correct_after": 0
+          }
+        ],
+        "all_direct_report_settlements_nonnegative": true,
+        "no_coupon_overspend": true,
+        "reports_zero_time_and_no_observe_index": true
+      },
+      "diagnostic_stats": {
+        "fresh_fits": 925,
+        "coupon_reports": 1,
+        "coupon_reports_with_quake": 0,
+        "original_reports": 1,
+        "correct_coupon_reports": 0,
+        "false_coupon_reports": 1,
+        "minimum_coupon_remaining_before_report": 2,
+        "reserve_coupons": 1
+      }
+    }
+  ],
+  "mean_delta": -92.29010550000021,
+  "gate_passed": false,
+  "prior_strong_L4_reproduction": {
+    "score_equal": true,
+    "components_equal": true,
+    "counts_equal": true,
+    "decisions_sha256_equal": true
+  },
+  "decision": "Reject the current diagnostic controller. Bypass24 gains do not carry over to strong phase24.",
+  "native": "Not started because parent required a passing strong phase24 gate first.",
+  "finding": "Direct report cost is zero, but false-diagnostic belief resets and subsequent exposure trajectories can lose science/required credit."
+}

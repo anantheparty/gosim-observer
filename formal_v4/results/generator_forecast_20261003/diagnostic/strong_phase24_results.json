@@ -1,0 +1,172 @@
+[
+  {
+    "card": "L4",
+    "mode": "baseline",
+    "planner": "phase24",
+    "exit_code": 0,
+    "elapsed": 247.3004487089347,
+    "score": 6095.293215,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 5797.55276,
+      "uniformity_penalty": -2.259544
+    },
+    "counts": {
+      "decisions": 1684,
+      "invalidated_observations": 392,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 13155,
+      "observe_actions": 944,
+      "required_missing": 0,
+      "targets_observed": 8121
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "planner_summary": {
+      "choose_calls": 944,
+      "phase_calls": 944,
+      "phase_candidates": 12185775,
+      "phase_exact_evaluations": 15104,
+      "phase_emergency_count": 0,
+      "phase_improvements": 832
+    },
+    "diagnostic": null
+  },
+  {
+    "card": "L3",
+    "mode": "baseline",
+    "planner": "phase24",
+    "exit_code": 0,
+    "elapsed": 255.25709658418782,
+    "score": 5910.930583,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5962.35813,
+      "uniformity_penalty": -1.427548
+    },
+    "counts": {
+      "decisions": 1710,
+      "invalidated_observations": 14,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 13665,
+      "observe_actions": 991,
+      "required_missing": 5,
+      "targets_observed": 8217
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "planner_summary": {
+      "choose_calls": 991,
+      "phase_calls": 991,
+      "phase_candidates": 12686817,
+      "phase_exact_evaluations": 15856,
+      "phase_emergency_count": 0,
+      "phase_improvements": 879
+    },
+    "diagnostic": null
+  },
+  {
+    "card": "L4",
+    "mode": "diagnostic-reserve",
+    "planner": "phase24",
+    "exit_code": 0,
+    "elapsed": 256.9306944999844,
+    "score": 5912.32813,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 100.0,
+      "required_penalty": -100.0,
+      "sum_best_scores": 5713.390527,
+      "uniformity_penalty": -1.062397
+    },
+    "counts": {
+      "decisions": 1684,
+      "invalidated_observations": 410,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 13269,
+      "observe_actions": 949,
+      "required_missing": 2,
+      "targets_observed": 8113
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "planner_summary": {
+      "choose_calls": 949,
+      "phase_calls": 949,
+      "phase_candidates": 12228274,
+      "phase_exact_evaluations": 15184,
+      "phase_emergency_count": 0,
+      "phase_improvements": 826
+    },
+    "diagnostic": {
+      "fresh_fits": 925,
+      "coupon_reports": 1,
+      "coupon_reports_with_quake": 0,
+      "original_reports": 1,
+      "correct_coupon_reports": 0,
+      "false_coupon_reports": 1,
+      "minimum_coupon_remaining_before_report": 2,
+      "reserve_coupons": 1
+    }
+  },
+  {
+    "card": "L3",
+    "mode": "diagnostic-reserve",
+    "planner": "phase24",
+    "exit_code": 0,
+    "elapsed": 261.00842545880005,
+    "score": 5909.315457,
+    "components": {
+      "observation_request_reward": 200.0,
+      "report_settlement": 0.0,
+      "required_penalty": -250.0,
+      "sum_best_scores": 5960.951027,
+      "uniformity_penalty": -1.63557
+    },
+    "counts": {
+      "decisions": 1712,
+      "invalidated_observations": 15,
+      "observation_requests_completed": 2,
+      "observation_requests_issued": 2,
+      "observations": 13638,
+      "observe_actions": 992,
+      "required_missing": 5,
+      "targets_observed": 8229
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "planner_summary": {
+      "choose_calls": 992,
+      "phase_calls": 992,
+      "phase_candidates": 12571797,
+      "phase_exact_evaluations": 15872,
+      "phase_emergency_count": 0,
+      "phase_improvements": 869
+    },
+    "diagnostic": {
+      "fresh_fits": 952,
+      "coupon_reports": 1,
+      "coupon_reports_with_quake": 0,
+      "original_reports": 0,
+      "correct_coupon_reports": 0,
+      "false_coupon_reports": 1,
+      "minimum_coupon_remaining_before_report": 2,
+      "reserve_coupons": 1
+    }
+  }
+]
