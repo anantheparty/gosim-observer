@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_IMPLEMENTATION_PATH",
+  "command": "python3 formal_v4/results/cold_physics_quotient_model_20261004/stage1.py",
+  "error": "ModuleNotFoundError: No module named 'challenge'",
+  "cause": "HERE.parents[2] resolved OBSERVER rather than formal_v4; official import root therefore pointed to absent OBSERVER/upstream.",
+  "repair": "Use HERE.parents[1]; no model, data or selection parameter exists or changes.",
+  "failed_source": "FAILED_STAGE1_IMPORT_PATH.py"
+}

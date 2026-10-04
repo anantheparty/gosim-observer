@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_NUMERICAL_STABILITY",
+  "error": "Convexity numerical residual 6.68032296147203e-11 exceeded 2e-12 mechanical tolerance.",
+  "cause": "Two near-equal gain primitives were subtracted over six-decimal score bins, then divided by a small observation likelihood.",
+  "repair": "Factor primitive differences by interval width; integrate linear and saturated pieces separately; use log1p for short C intervals. Keep the original 2e-12 check.",
+  "failed_source": "FAILED_PRIMITIVE_SUBTRACTION.py",
+  "failed_runs": "FAILED_STAGE1_*.txt"
+}

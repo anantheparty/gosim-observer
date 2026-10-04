@@ -1,0 +1,94 @@
+{
+  "status": "PASS_RESTRICTED_MECHANICS_ONLY",
+  "seed": 970401,
+  "no_fitting": true,
+  "no_formal_season": true,
+  "no_old_teacher_or_truth": true,
+  "scope": "one slot; constant C/E; no directional event; explicit toy prior",
+  "tests": {
+    "official_800_target_checks": {
+      "max_score_or_band_error": 8.881784197001252e-16,
+      "max_quality_quotient_error": 6.661338147750939e-16,
+      "saturated_examples": 55
+    },
+    "joint_quantized_likelihood": {
+      "continuous_cells": 1,
+      "likelihood_probability": 4.75402322686355e-10,
+      "posterior_closed_probability": 0.0,
+      "cells": [
+        {
+          "c_lo": 0.7337964700969318,
+          "c_hi": 0.7455864944201216,
+          "z_lo": 0.45879999338804967,
+          "z_hi": 0.45880004532335694,
+          "posterior_mass": 1.0
+        }
+      ]
+    },
+    "same_exposure_duplicate_invariance": true,
+    "saturation_is_one_sided": {
+      "continuous_cells": 3,
+      "likelihood_probability": 0.6290812503514671,
+      "posterior_closed_probability": 0.0,
+      "cells": [
+        {
+          "c_lo": 0.02,
+          "c_hi": 0.4015436630054792,
+          "z_lo": 0.1505788157119875,
+          "z_hi": null,
+          "posterior_mass": 0.09427662574636916
+        },
+        {
+          "c_lo": 0.4015436630054792,
+          "c_hi": 0.6525084523839038,
+          "z_lo": 0.1344453711714174,
+          "z_hi": 0.13444547459118028,
+          "posterior_mass": 4.583722713601729e-08
+        },
+        {
+          "c_lo": 0.6525084523839038,
+          "c_hi": 1.8,
+          "z_lo": 0.1505788157119875,
+          "z_hi": null,
+          "posterior_mass": 0.9057233284164037
+        }
+      ]
+    },
+    "hit_zero_supports_closed_atom": true,
+    "empty_hit_list_preserves_prior_not_closed_certainty": true,
+    "mixed_zero_positive_rejected_in_restricted_scope": "zero likelihood in this restricted prior/scope",
+    "continuous_expected_hinge_vs_direct_quadrature": {
+      "analytic": 0.050990173520774285,
+      "direct_density_midpoint": 0.05099017351908739,
+      "absolute_error": 1.6868936802971746e-12
+    },
+    "250_fixed_history_gain_invariants": {
+      "decreasing_convex_one_lipschitz_in_best": true,
+      "monotone_in_future_flux": true,
+      "joint_weight_best_homogeneity_error": 8.881784197001252e-16
+    },
+    "mean_before_best_counterexample": {
+      "expected_positive_part": 1.0,
+      "positive_part_of_mean": 0.0
+    },
+    "unfitted_lognormal_kernel_vs_normal_quadrature": {
+      "cases": 4,
+      "max_absolute_error": 9.79430270220405e-09
+    },
+    "local_unrestricted_prototype_cost": {
+      "update_16hits_median_seconds": 0.00035460456274449825,
+      "score_32queries_median_seconds": 9.247916750609875e-05,
+      "measured_actor_2cpu_2gib_cost": false,
+      "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+      "platform": "darwin"
+    }
+  },
+  "read_source_sha256": {
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_opportunity_cost_20261004/official/challenge/v4_weather_simulator.py": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a"
+  }
+}
