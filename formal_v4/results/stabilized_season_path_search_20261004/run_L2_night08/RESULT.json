@@ -1,0 +1,27 @@
+{
+  "budget_seconds": 480.0,
+  "cpu_seconds": 0.227102,
+  "environment": {
+    "numpy": "2.4.4",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "scipy": "1.17.0",
+    "threads": 1
+  },
+  "frozen_plan": {
+    "max_price_rounds_per_branch": 200,
+    "max_repair_sweeps": 4,
+    "price_seconds": 240.0,
+    "repair_seconds": 150.0
+  },
+  "futuretruth_used": false,
+  "input_receipt_sha256": "379affacfb7878d8aad89ddf4ce17ee74001dcff5d1c054d5efd7215784bd7a8",
+  "old_sources_modified": false,
+  "peak_rss_bytes": 361250816,
+  "reason": "Python integer 256 out of bounds for uint8",
+  "science_proxy_only": true,
+  "status": "error",
+  "stochastic_or_formal_score_claim": false,
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/stabilized_season_path_search_20261004/run_search.py\", line 106, in run\n    for path in old_paths:pool.add(path,'old57')\n                          ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/stabilized_season_path_search_20261004/run_search.py\", line 66, in add\n    controls.append(self.g.match(branch['first'], admissible));self.matches+=1\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/stabilized_season_path_search_20261004/fixed_graph.py\", line 115, in match\n    rr.extend((k * self.nf + fib[use]).tolist()); cc.extend(ids[use].tolist()); vv.extend((1. + gains[use]).tolist())\n               ~~~~~~~~~~~~^~~~~~~~~~\nOverflowError: Python integer 256 out of bounds for uint8\n",
+  "wall_seconds": 0.8945423332042992
+}

@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-04T07:54:06.128690+00:00",
+  "source_lock_sha256": "a9ec06c0c6adb37d1094ae5de4a4af83c7130a315c2db5d0fb68cfaa1f645565",
+  "all_v1_source_bytes_unchanged": true,
+  "minimal_change_verified": [
+    "fiber resource uint8 explicitly promoted toint64 before scalar offset",
+    "entry import only points at repaired loader"
+  ],
+  "contract_new_uint8_boundary_256_271": {
+    "status": "passed",
+    "actual_graph_loaded": false,
+    "exposures": 17,
+    "fiber_dtype": "uint8",
+    "boundary_resource_rows": [
+      256,
+      271
+    ],
+    "old_v1_overflow_reproduced": true,
+    "old_error": "Python integer 256 out of bounds for uint8",
+    "nonempty_gain": 34.0,
+    "empty_gain": 0.0,
+    "nonempty_audit": {
+      "nonoverlap": true,
+      "fibers": true,
+      "unique_winner_target": true,
+      "exact_fixed_coefficient_scores": true,
+      "max_ledger_error": 0.0,
+      "exposures": 17,
+      "assignments": 34
+    },
+    "empty_audit": {
+      "nonoverlap": true,
+      "fibers": true,
+      "unique_winner_target": true,
+      "exact_fixed_coefficient_scores": true,
+      "max_ledger_error": 0.0,
+      "exposures": 17,
+      "assignments": 0
+    }
+  },
+  "v1_actual_failure": {
+    "failed_result_sha256": "4035e3023a6f80d0ad4424f7203775f5fb223ff0533fc6cc78a7b70a59ac734b",
+    "failure": "uint8 fiber resource scalar256 overflow",
+    "no_pricing_rounds_completed": true,
+    "receipt_sha256": "217a1ab321e02e57b8fcd87f4031f682d2e61f71c43963983c080a86ef8d7145",
+    "wall_seconds": 0.8945423332042992
+  },
+  "new_actual_run_started": false,
+  "ready_for_same480sec_run_after_private_backup": true
+}

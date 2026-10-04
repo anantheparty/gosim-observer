@@ -1,0 +1,91 @@
+{
+  "entry": "python run_search_v2.py --output <absolute new directory>/run_L2_night08_v2 --seconds 480",
+  "files": {
+    "CONTRACTS.json": {
+      "sha256": "9783bfeb9e9a8dfcaf16397ce3eadc11e6fb355847219b7be5033701afee4dec",
+      "size_bytes": 785
+    },
+    "DTYPE_CONTRACT_V2.json": {
+      "sha256": "cfeaebd073519d9b94a4d43688b6abe5162c98ad95d381379553fad56480f62f",
+      "size_bytes": 737
+    },
+    "INPUT_RECEIPT.json": {
+      "sha256": "379affacfb7878d8aad89ddf4ce17ee74001dcff5d1c054d5efd7215784bd7a8",
+      "size_bytes": 3078
+    },
+    "README.md": {
+      "sha256": "0a0e013e4e4504ef910f0f8ccece5bd7c1ae468d6577cc31c20673dd9a0c8679",
+      "size_bytes": 1293
+    },
+    "RESEARCH_PLAN.json": {
+      "sha256": "de23e1b5329d8864b59e18a4afa22b3c991c9a03d2d028abf1d232ff7fa64c9a",
+      "size_bytes": 1375
+    },
+    "SOURCE_LOCK.json": {
+      "sha256": "867c33fb27c164f73ccc28ee33138a8cf8914c78ee1b851a2d48ba6aee537032",
+      "size_bytes": 2044
+    },
+    "build_native.py": {
+      "sha256": "02c0f0e7f7bf500f6ff565162baec7388caf9dc12d3dd0eb8e55bfb2edbcf5cf",
+      "size_bytes": 486
+    },
+    "bundle_search.py": {
+      "sha256": "99a36c888897eaf0b7a740557ae7c0388be544f6e2695b20e5a6bd1590534488",
+      "size_bytes": 6217
+    },
+    "contracts.py": {
+      "sha256": "ee18049537ea13e1da78620bdf40d20308d87427b0dc5358d6b9d154103573aa",
+      "size_bytes": 3849
+    },
+    "dtype_contract_v2.py": {
+      "sha256": "3d95e5b46a3569ef65be4ed9e9b22d776ed164867223368a75287aa98719353b",
+      "size_bytes": 1518
+    },
+    "fixed_graph.py": {
+      "sha256": "7f3535acbd340de3939dc01f59662b82686fa1fae0e45b0010340cf191939b66",
+      "size_bytes": 9462
+    },
+    "fixed_graph_v2.py": {
+      "sha256": "b1c45e7f3b768014c85fda1765f36d933e19433d8334193b4f91bed2a4a3d943",
+      "size_bytes": 9479
+    },
+    "oracle.cpp": {
+      "sha256": "ee2fc55267988cd82c9f58098c1093a8a58e61ab834303c44f2b43b8945bcbcb",
+      "size_bytes": 1701
+    },
+    "run_search.py": {
+      "sha256": "bdbf1647c61908cb226df2b131bafc557ba0b0ad06451c816de7bdb65b6cc1f8",
+      "size_bytes": 13051
+    },
+    "run_search_v2.py": {
+      "sha256": "f694c3dbcc89998a42cb77a0178a69a51b2284de9dc27e87af232ab8d5c8afcc",
+      "size_bytes": 13054
+    }
+  },
+  "input_receipt_sha256": "379affacfb7878d8aad89ddf4ce17ee74001dcff5d1c054d5efd7215784bd7a8",
+  "minimal_algorithm_diff": [
+    "fixed_graph_v2.py is fixed_graph.py with one resource-index replacement: k*nf+fib[use].astype(np.int64)",
+    "run_search_v2.py is run_search.py with only its FixedGraph import pointing to fixed_graph_v2"
+  ],
+  "new_contract_sha256": "cfeaebd073519d9b94a4d43688b6abe5162c98ad95d381379553fad56480f62f",
+  "source_v1_sha256": "867c33fb27c164f73ccc28ee33138a8cf8914c78ee1b851a2d48ba6aee537032",
+  "status": "frozen_pending_root_v2_backup",
+  "unchanged": [
+    "score coefficients",
+    "graph",
+    "ledger",
+    "prox and bundle",
+    "common pool comparison",
+    "480-second budget",
+    "night-block reconstruction"
+  ],
+  "v1_launch": {
+    "failed_result_sha256": "4035e3023a6f80d0ad4424f7203775f5fb223ff0533fc6cc78a7b70a59ac734b",
+    "failure": "uint8 fiber resource scalar256 overflow",
+    "no_pricing_rounds_completed": true,
+    "receipt_sha256": "217a1ab321e02e57b8fcd87f4031f682d2e61f71c43963983c080a86ef8d7145",
+    "wall_seconds": 0.8945423332042992
+  },
+  "v1_preserved_byte_identical": true,
+  "version": 2
+}
