@@ -1,0 +1,17 @@
+{
+  "schema": "root-public-free-quota-exhaustion-causal-trace-v1",
+  "candidate_physical_actions_equal_original_strong_when_reports_removed": true,
+  "candidate_observations_csv_byte_identical_original_strong": true,
+  "candidate_score_components_equal_original_strong": true,
+  "baseline_faultv1_correct_reports": 1,
+  "candidate_correct_reports": 0,
+  "candidate_free_false_reports": 2,
+  "nn_reports_observe_indices": [
+    767,
+    769
+  ],
+  "NN_query_seconds": 0.14433710696175694,
+  "source_changed": false,
+  "actual_future_or_fault_dates_read": false,
+  "mechanism": "Two early free false reports reduce quota to zero and remove future repair availability; reports alone do not alter the original physical actions."
+}

@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "gates": {
+    "original_and_candidate_normal_complete": true,
+    "all_raw_hashes": true,
+    "frozen_actor_sources": true,
+    "same_scenario": true,
+    "actor_no_truth_or_network": true,
+    "same_cpu_memory_wallclock_budget": true,
+    "official_workflow_matches_score": true,
+    "component_sum_matches_total": true,
+    "component_delta_sum_matches_total": true,
+    "all_insertions_have_official_public_report_result": true,
+    "public_only_guard_receipt": true,
+    "first_action_difference_is_report_after_equal_prefix": true
+  },
+  "control": "strategy_reassessment_actual_20261004/seasons/fault/L3",
+  "control_total": 6553.045588,
+  "candidate_total": 6141.421958,
+  "actual_total_delta": "-411.623630",
+  "component_delta": {
+    "observation_request_reward": "0.0",
+    "report_settlement": "-100.0",
+    "required_penalty": "0.0",
+    "sum_best_scores": "-311.584980",
+    "uniformity_penalty": "-0.038650"
+  },
+  "accounted_seconds": 406.331,
+  "count_delta": {
+    "decisions": -47,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": -581,
+    "observe_actions": -44,
+    "required_missing": 0,
+    "targets_observed": -86
+  },
+  "required_and_request_components_unchanged": true,
+  "loss_plan_unchanged": true,
+  "first_action_difference": 876,
+  "inserted_reports": [
+    {
+      "event": "sparse_calibrated_report",
+      "now_utc": "2026-12-03T08:01:21Z",
+      "observe_action_index": 767,
+      "posterior": 0.826689498670667,
+      "report_minus_wait": 3.9158534463747685,
+      "quota": 2,
+      "progress": 0.49412465627864344,
+      "nuisance": [
+        1,
+        0
+      ]
+    },
+    {
+      "event": "sparse_calibrated_report",
+      "now_utc": "2026-12-04T01:16:25Z",
+      "observe_action_index": 769,
+      "posterior": 0.6588966402342094,
+      "report_minus_wait": 2.1054660715184923,
+      "quota": 1,
+      "progress": 0.4959619105815256,
+      "nuisance": [
+        1,
+        0
+      ]
+    }
+  ],
+  "official_report_results": [
+    {
+      "correct": false,
+      "issued_at_utc": "2026-12-03T08:01:21Z",
+      "record_type": "report_result",
+      "repaired": false,
+      "score_delta": 0.0
+    },
+    {
+      "correct": false,
+      "issued_at_utc": "2026-12-04T01:16:25Z",
+      "record_type": "report_result",
+      "repaired": false,
+      "score_delta": 0.0
+    }
+  ],
+  "public_guard_summary": {
+    "enabled": true,
+    "inserted_reports": 2,
+    "correct_reports": 0,
+    "false_reports_since_correct": 2,
+    "config": {
+      "normal_efficiency_reference": 0.95,
+      "product_ratio_threshold": 0.6,
+      "minimum_unsaturated_hits_per_exposure": 3,
+      "distinct_public_slots": 8,
+      "minimum_low_slots": 6,
+      "minimum_nights": 2,
+      "minimum_field_sectors": 2,
+      "minimum_observing_span_seconds": 5400,
+      "maximum_recent_nights": 3,
+      "free_quota_reserve": 1,
+      "minimum_wallclock_seconds": 15,
+      "exclude_direction_distance_deg": 60,
+      "new_level_after_false_ratio": 0.6,
+      "cooldown_observing_seconds": 14400,
+      "report_mode": "dp_free"
+    },
+    "events": [
+      {
+        "event": "sparse_calibrated_report",
+        "now_utc": "2026-12-03T08:01:21Z",
+        "observe_action_index": 767,
+        "posterior": 0.826689498670667,
+        "report_minus_wait": 3.9158534463747685,
+        "quota": 2,
+        "progress": 0.49412465627864344,
+        "nuisance": [
+          1,
+          0
+        ]
+      },
+      {
+        "event": "sparse_false_frozen_action_released",
+        "now_utc": "2026-12-03T08:01:21Z",
+        "observe_action_index": 767
+      },
+      {
+        "event": "sparse_calibrated_report",
+        "now_utc": "2026-12-04T01:16:25Z",
+        "observe_action_index": 769,
+        "posterior": 0.6588966402342094,
+        "report_minus_wait": 2.1054660715184923,
+        "quota": 1,
+        "progress": 0.4959619105815256,
+        "nuisance": [
+          1,
+          0
+        ]
+      },
+      {
+        "event": "sparse_false_frozen_action_released",
+        "now_utc": "2026-12-04T01:16:25Z",
+        "observe_action_index": 769
+      }
+    ],
+    "latest_features": {
+      "distinct_slots": 8,
+      "low_slots": 8,
+      "nights": 1,
+      "field_sectors": 3,
+      "programs": [
+        "DARK"
+      ],
+      "observing_span_seconds": 22770.0,
+      "median_ratio_upper": 0.544030057156347,
+      "earthquake_samples": 8,
+      "evidence_ranks": [
+        997,
+        998,
+        999,
+        1000,
+        1001,
+        1002,
+        1003,
+        1004
+      ],
+      "qualified": false
+    },
+    "reads_truth": false,
+    "reads_teacher_labels": false,
+    "sparse_report": {
+      "contract": true,
+      "queries": 713,
+      "seconds": 0.14433710696175694,
+      "supported": 631,
+      "rejected": {
+        "sparse_history_support": 57,
+        "public_resync": 1
+      },
+      "latest": {
+        "posterior": 0.6588966402342094,
+        "report_minus_wait": 2.1054660715184923,
+        "quota": 1,
+        "progress": 0.4959619105815256,
+        "nuisance": [
+          1,
+          0
+        ]
+      },
+      "public_only": true
+    }
+  }
+}

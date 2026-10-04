@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "gates": {
+    "original_and_candidate_normal_complete": true,
+    "all_raw_hashes": true,
+    "frozen_actor_sources": true,
+    "same_scenario": true,
+    "actor_no_truth_or_network": true,
+    "same_cpu_memory_wallclock_budget": true,
+    "official_workflow_matches_score": true,
+    "component_sum_matches_total": true,
+    "component_delta_sum_matches_total": true,
+    "all_insertions_have_official_public_report_result": true,
+    "public_only_guard_receipt": true,
+    "first_action_difference_is_report_after_equal_prefix": true
+  },
+  "control": "strategy_reassessment_actual_20261004/seasons/fault/L1",
+  "control_total": 6272.923354,
+  "candidate_total": 6361.70351,
+  "actual_total_delta": "88.780156",
+  "component_delta": {
+    "observation_request_reward": "0.0",
+    "report_settlement": "0.0",
+    "required_penalty": "0.0",
+    "sum_best_scores": "88.710132",
+    "uniformity_penalty": "0.070025"
+  },
+  "accounted_seconds": 341.254,
+  "count_delta": {
+    "decisions": 13,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": 191,
+    "observe_actions": 13,
+    "required_missing": 0,
+    "targets_observed": 9
+  },
+  "required_and_request_components_unchanged": true,
+  "loss_plan_unchanged": true,
+  "first_action_difference": 939,
+  "inserted_reports": [
+    {
+      "event": "sparse_calibrated_report",
+      "now_utc": "2026-11-25T02:42:08Z",
+      "observe_action_index": 857,
+      "posterior": 0.4436688228114642,
+      "report_minus_wait": 0.9491566198307453,
+      "quota": 2,
+      "progress": 0.7326600705106334,
+      "nuisance": [
+        2,
+        0
+      ]
+    }
+  ],
+  "official_report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-11-25T02:42:08Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ],
+  "public_guard_summary": {
+    "enabled": true,
+    "inserted_reports": 1,
+    "correct_reports": 1,
+    "false_reports_since_correct": 0,
+    "config": {
+      "normal_efficiency_reference": 0.95,
+      "product_ratio_threshold": 0.6,
+      "minimum_unsaturated_hits_per_exposure": 3,
+      "distinct_public_slots": 8,
+      "minimum_low_slots": 6,
+      "minimum_nights": 2,
+      "minimum_field_sectors": 2,
+      "minimum_observing_span_seconds": 5400,
+      "maximum_recent_nights": 3,
+      "free_quota_reserve": 1,
+      "minimum_wallclock_seconds": 15,
+      "exclude_direction_distance_deg": 60,
+      "new_level_after_false_ratio": 0.6,
+      "cooldown_observing_seconds": 14400,
+      "report_mode": "dp_free"
+    },
+    "events": [
+      {
+        "event": "sparse_calibrated_report",
+        "now_utc": "2026-11-25T02:42:08Z",
+        "observe_action_index": 857,
+        "posterior": 0.4436688228114642,
+        "report_minus_wait": 0.9491566198307453,
+        "quota": 2,
+        "progress": 0.7326600705106334,
+        "nuisance": [
+          2,
+          0
+        ]
+      },
+      {
+        "event": "persistent_correct_replanning",
+        "now_utc": "2026-11-25T02:42:08Z",
+        "observe_action_index": 857
+      }
+    ],
+    "latest_features": {
+      "distinct_slots": 8,
+      "low_slots": 0,
+      "nights": 0,
+      "field_sectors": 0,
+      "programs": [],
+      "observing_span_seconds": 16818.0,
+      "median_ratio_upper": 0.9968206795458905,
+      "earthquake_samples": 0,
+      "evidence_ranks": [],
+      "qualified": false
+    },
+    "reads_truth": false,
+    "reads_teacher_labels": false,
+    "sparse_report": {
+      "contract": true,
+      "queries": 940,
+      "seconds": 0.1886061091790907,
+      "supported": 629,
+      "rejected": {
+        "sparse_history_support": 60
+      },
+      "latest": {
+        "posterior": 0.0038524208685275342,
+        "report_minus_wait": -0.20045953867641964,
+        "quota": 2,
+        "progress": 0.9986295917206869,
+        "nuisance": [
+          0,
+          1
+        ]
+      },
+      "public_only": true
+    }
+  }
+}

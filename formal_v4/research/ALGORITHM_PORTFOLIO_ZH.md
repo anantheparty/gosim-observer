@@ -1,13 +1,15 @@
 # 算法路线、独立探索与采用标准
 
-更新：2026-10-04 07:15 JST。本文件区分已完成实验与正在计算的路线。目标是提高完整赛季的实际得分；参赛程序允许传统算法与普通神经网络。
+更新：2026-10-04 11:53 JST。下方按时间保留每条路线的历史正负结果；本节给出当前可核验证据。目标是提高正常完整赛季实际得分，为正式隐藏测试建立可执行公开策略。传统算法与普通神经网络允许。
 
 ## 当前证据
 
-- 最新完整官方批次 Request Cache 四卡均分 **6735.09250250**。历史不同批次的单卡最高值算术平均 **6836.95278225**，尚未作为新包完整实测。
-- 20:51 JST 榜单截图记录的榜首四卡均分约 **7580.7075**。相差约 **845.615**；约 **670.692** 来自科学分，required 缺失约150，请求约25。该榜单值按页面两位小数计算，随之后提交可能变化。
-- 旧 alpha 有限列 LP 值 **7373.168525333**，低于榜首该卡可行分 **7937.94**。它约束了候选池和质量模型，不能充当原问题上界。
-- 公开本地 L1–L4 的生产 CPU 基线为 6096.185388、6534.787015、5633.730701、5869.556485；与平台 alpha–delta 是不同数据。旧 GPU L1 的一个源快照实测6348.155319，源快照必须一起记录。
+- **当前完整本地最佳**是持续故障v1：L1/L2/L3/L4分别6272.923354、6723.359693、6553.045588、7084.531835；同四卡mean6658.4651175，相对原强RequestCache +355.426697。actor只接公开信息，全部正常2CPU/2GiB/900、survey_complete、完整source/raw/协议门检。新public跨夜设备证据纠正原earthquake公告硬禁report漏洞。对应 `results/strategy_reassessment_actual_20261004/ROOT_FAULT_FOUR_CARD_RESULT.json`。
+- **同决策算术加速**已完整L1/L2实测：所有actoractions/observations/messages/score相同，accounted623.466→345.193与721.531→405.599秒，真实省44%左右。当前已验证部署ZIP `results/cold_sparse_science_runtime_20261004/observer_sparse_exact_fault_20261004.zip`，SHA5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29；原27strongsource、faultv1guard不变。不能用旧native BasePolicy收益迁移为本包收益。
+- **新稀疏公开历史NN+report quota DP**已独立test，普通1568→128→128→1实际PRO6000训练16.63秒；fixed-design16world DP−p90 +283.655(SE104.635)不是生产收益。已冻结与exact组合ZIPfa7a8e7c8de173331a64e160e4df6f34710c9e59a37b199271c2444e5d46126b；正常L1/L2/L3完整闭环已终结：6361.703510/6723.359693/6141.421958，相对faultv1 +88.780156/0/−411.623630，mean−107.6144913333，当前新包拒绝部署、不据L4救参。结果 `results/sparse_report_actual_20261004/ROOT_THREE_CARD_RESULT.json` 全部12门检通过；L3两次early false耗尽freequota、未修复，移除report后全部physicalactions/observations.csv/scorecomponents与原strong逐字相同，见ROOT_L3_PUBLIC_CAUSAL_TRACE.json。
+- **最新已核实线上只有alpha/delta快照**：2026-10-04 00:06:17/00:05:52UTC，Pleiades两卡均5/53；alpha7248.87(science7149.12)对CCB7937.94(7788.10)，delta6423.09(6523.83)对7411.98(7263.27)，science gap638.98/739.44。beta/gamma未刷新；旧RequestCache线上四卡mean6735.0925025仅历史批次，不能与本地L卡相减。02:27UTC正常Chrome CUA仍Maclocked，新fault/NN包尚未提交；原manualunlock请求pending。
+- 正式A–D仅目录/日历/站点/仪器/评分公开，future真实天气/事件/fault/请求逐轮提供，最终E–H未见；actor不能使用local hosttruth。生成器独立world truth仅用于训练/评分，正式实际future seed未恢复，数据规律有限域恢复/不可识别反例在 `research/cold_public_rng_identifiability_20261004.md`。
+- 旧有限列LP与有限quality projection都不是原问题上界；本轮不再反复计算宽松global bound。最高分目标仍未达成，优先寻找新决策机制与实际strong完整收益。
 
 ## 路线与需要改变的决策
 
@@ -286,3 +288,12 @@ cold_report_sparse_domain 的新1568→128→128→1普通NN真实PRO6000训练1
 正式正常L1/L2/L3闭环于2026-10-04 02:33:09.028134UTC启动Rhodes1 PID2211875，results/sparse_report_actual_20261004/。实际已查到三个owned运行participant，分别core14,15 /16,17 /18,19，2CPU2GiB/networknone/只挂code+NumPy，900sec、无forcedprefix/STOP、host原truth正常评分。引用已有faultv1完整三卡，不重跑control，L4未选择留后续holdout。source lock387370e112e91daab35d6df9a81e4fd8241ac6695475433aa97c4851a25dd718、casesb31a4afdd234ca56a23a64952e14b56c99a722fd1cae750e7563b447625514ff、固定harness4816125；job/lock/source/runtime5file receipt已本地保存。
 
 此前02:27UTC正常CUA访问Chrome再次明确Mac locked，原手动解锁请求pending，没有提交新候选。NN已结束GPU训练，当前PID是CPU受限生产回放；没有新NN整季分数或线上增益断言。
+
+
+### 新报告NN/DP完整三卡终结与可复核失败机制（11:53 JST）
+
+Rhodes1 PID2211875已终结，三条全部survey_complete，accounted341.254/399.257/406.331秒、source/package/所有raw/同场景/完整workflow/组件和/publiconly/zero-time插入前equalprefix等root门检全过。冻结包没有根据实际结果改变任何模型/阈值/DP。L1 6361.703510相对faultv1 +88.780156（science+88.710132/Jain+.070025、report/REQ/required同）；NN提出的唯一报修public posterior .443669且官方correct，早于v1原报修。L2 6723.359693全components同，仅terminal追加一次free false且原尾动作冻结释放。L3 6141.421958相对faultv1−411.623630（science−311.584980/report−100/Jain−.038650）。同三卡mean6516.4428783333→6408.8283870000，−107.6144913333，明确拒绝当前组合，不开L4救参，不称有限synthetic test +283是production提升。
+
+L3公开trace明确rank767 posterior.826689/delta3.915853/quota2报告false，rank769 posterior.658897/delta2.105466/quota1再次false，correct0、false_since_correct2、NN713queries/.144s。v1的freequota_reserve1使第一false后q1已无法额外v1报修，第二false使所有free耗尽。root将新完整actions移除report与原未修强control逐项比较全部相等；observations.csv原始bytesSHA相等、全部scorecomponents相等。失败由报告介入/额度路径造成，不是重排质量、时间预算或actor私有数据。两个actual日期仅事后日志审计不可作为触发/训练标签。ROOT_L3_PUBLIC_CAUSAL_TRACE保存完整因果证据。
+
+cold_report_value_model只读新实际publicreport/action/feedback继续机制诊断：scalar后验+quota+quakeage+correctcount的近似Bellman没有保留原v1的witness/cooldown/background与controller等待行为；false结果的健康起点也需正式hazard更新。旧包/模型/独立test不再改，任何新训练应先锁新的生成/行为域并在PRO6000实际拟合，不能调原阈值救分。新cold_full_altitude_quality_control与cold_completed_target_exchange独立从formal源抽象后查重；前者研究完整几何积分下的分布饱和duration算子，后者Jain计数精确指派的1000枚举87严格赢梯度但18真实strong公开题全部tie，当前限定机制停止。两者只写自有目录，无新full/线上提交。
