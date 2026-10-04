@@ -1,6 +1,6 @@
 {
   "schema": "user-requested-pause-and-submission-receipt-v1",
-  "as_of_utc": "2026-10-04T09:52:12.402743+00:00",
+  "as_of_utc": "2026-10-04T09:59:33.532238+00:00",
   "user_request": "提交一下然后收尾吧，我感觉大方向有问题，写个报告，我思考一下再继续",
   "project": "Observer Sparse Exact",
   "zip": "formal_v4/results/cold_sparse_science_runtime_20261004/observer_sparse_exact_fault_20261004.zip",
@@ -41,18 +41,19 @@
     "upload_error": "Post https://api.github.com/graphql: EOF",
     "all_545_dataset_files_already_in_private_commit": "f5d9cc891bf7aa9e79db6196753165c96ceacac4"
   },
-  "note": "One authorized ordinary practice batch has been queued. Scoring pending; highest-score goal paused after wrap-up, not complete.",
+  "note": "One authorized ordinary practice batch is visibly running. No additional submissions or tests. Highest-score goal will be paused at the end of wrap-up as explicitly requested.",
   "evaluation": {
-    "status": "queued",
+    "status": "running",
     "display_submitted_at": "2026/10/04 18:51",
     "type": "single ordinary practice batch",
     "cards": {
-      "alpha": "queued",
-      "beta": "queued",
-      "gamma": "queued",
-      "delta": "queued"
+      "alpha": "running",
+      "beta": "running",
+      "gamma": "running",
+      "delta": "running"
     },
     "practice_remaining_after": 39,
-    "visible_confirmation": "已加入评测队列"
+    "visible_confirmation": "已加入评测队列",
+    "last_visible_result": "All four cards running; no new score yet"
   }
 }
