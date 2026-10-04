@@ -1,0 +1,22 @@
+{
+  "host": "rhodes1",
+  "container_id": "c90e10323a37e0ec9925fa6cd919e0cc3380b14cc4c4b78c2445119808215304",
+  "host_pid": 2655990,
+  "started_utc": "2026-10-04T05:24:42.69240266Z",
+  "workers": 12,
+  "docker_cpus": 16,
+  "docker_memory_gib": 8,
+  "network": "none",
+  "source_mount": "readonly",
+  "python": "3.12.15",
+  "numpy": "2.2.6",
+  "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "source_freeze_sha256": "127444cd52a2800db383b7905e62b38baa6622caf4dc933d0cbcd1e1f3cdf2cb",
+  "splits": [
+    "train96",
+    "cal16",
+    "val24"
+  ],
+  "test_generated": false,
+  "scope": "CPU new-data generation, not participant gate"
+}
