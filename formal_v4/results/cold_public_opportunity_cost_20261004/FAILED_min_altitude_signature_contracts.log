@@ -1,0 +1,12 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"finite_contracts": 32, "all_passed": true}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_opportunity_cost_20261004/pilot.py", line 378, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_opportunity_cost_20261004/pilot.py", line 374, in main
+    finite_contracts();official_operator_contracts()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_opportunity_cost_20261004/pilot.py", line 311, in official_operator_contracts
+    exact_alt=min_altitude_during(float(p.ra[i]),float(p.dec[i]),start,end,p.lat,p.lon)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_opportunity_cost_20261004/official/challenge/v4_fiber_map.py", line 312, in min_altitude_during
+    raise ValueError("step_seconds must be positive")
+ValueError: step_seconds must be positive

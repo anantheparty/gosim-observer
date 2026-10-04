@@ -1,0 +1,279 @@
+{
+  "status": "pass_synthetic_reference_only",
+  "torch": "2.5.1",
+  "numpy": "2.0.2",
+  "fit_performed": false,
+  "GPU_fit_performed": false,
+  "production_candidate": false,
+  "intent": "Independent structure/reference implementation; producer child owns production architecture, data, fit and exports.",
+  "checks": [
+    {
+      "with_history": true,
+      "parameters": 129411,
+      "cases": 704,
+      "states": 16,
+      "temperature": 1.2,
+      "errors": {
+        "logits": 1.4901161193847656e-07,
+        "probability": 2.3283064365386963e-09,
+        "soft_ce": 9.782597771845758e-07,
+        "probability_sum": 2.384185791015625e-07
+      }
+    },
+    {
+      "with_history": false,
+      "parameters": 20547,
+      "cases": 704,
+      "states": 16,
+      "temperature": 1.2,
+      "errors": {
+        "logits": 1.7881393432617188e-07,
+        "probability": 2.3283064365386963e-09,
+        "soft_ce": 9.781970220501535e-07,
+        "probability_sum": 2.384185791015625e-07
+      }
+    }
+  ],
+  "warnings_preserved": [
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "overflow encountered in matmul"
+    },
+    {
+      "type": "RuntimeWarning",
+      "message": "invalid value encountered in matmul"
+    }
+  ]
+}
