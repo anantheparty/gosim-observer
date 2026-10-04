@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-10-04T05:45:36.900299+00:00",
+  "launcher_windows_pid": 6548,
+  "venv_redirector_pid": 109736,
+  "actual_cuda_interpreter_pid": 48172,
+  "parent_relationship": {
+    "109736": 6548,
+    "48172": 109736
+  },
+  "source": "Read-only Windows Get-CimInstance Win32_Process and nvidia-smi compute-apps during actual fit",
+  "model_source_unchanged": true,
+  "gpu_memory_attribution": "WDDM compute-app used_gpu_memory reports N/A. Telemetry records device total observed memory/power/utilization; no exact per-training-process allocated peak is claimed."
+}

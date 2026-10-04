@@ -1,0 +1,432 @@
+{
+  "schema": "direct-target-score-distribution-final-stage2-negative-v1",
+  "optimizer_fit_complete": true,
+  "actual_gpu_training": true,
+  "completed_checkpoints": 24,
+  "driver_completed_successfully": false,
+  "raw_driver_exit_code": 1,
+  "failure": "Original prelocked NumPy/CUDA selected logits gate3e-5 failed with max3.0517578125e-5; no threshold/source repair",
+  "descriptive_prelocked_best": {
+    "mode": "fullhistory",
+    "epoch": 12,
+    "temperature": 1.0
+  },
+  "architectures": {
+    "fullhistory": {
+      "epoch": 12,
+      "temperature": 1.0,
+      "worldmean_actual_rate": 0.00986832636339028,
+      "worldmean_original_point_rate": 0.010464122404857577,
+      "paired_vs_original_point": {
+        "worlds": 24,
+        "worldmean_delta": -0.0005957960414672968,
+        "paired_world_bootstrap95": [
+          -0.0006546206657192709,
+          -0.0005411683441595649
+        ],
+        "positive_launch_gate": false,
+        "bootstrap_seed": 949221,
+        "draws": 20000
+      },
+      "world_rates": [
+        {
+          "seed": 963000,
+          "actual_rate": 0.008394039641646785,
+          "point_rate": 0.008908342640257319,
+          "delta_point": -0.0005143029986105336
+        },
+        {
+          "seed": 963001,
+          "actual_rate": 0.009102021276748778,
+          "point_rate": 0.009561740838043186,
+          "delta_point": -0.0004597195612944083
+        },
+        {
+          "seed": 963002,
+          "actual_rate": 0.007123092977636705,
+          "point_rate": 0.007910490342951017,
+          "delta_point": -0.0007873973653143118
+        },
+        {
+          "seed": 963003,
+          "actual_rate": 0.009155089131379263,
+          "point_rate": 0.009685416523109351,
+          "delta_point": -0.0005303273917300882
+        },
+        {
+          "seed": 963004,
+          "actual_rate": 0.011557967613866446,
+          "point_rate": 0.01224711499023244,
+          "delta_point": -0.0006891473763659926
+        },
+        {
+          "seed": 963005,
+          "actual_rate": 0.008643354611679505,
+          "point_rate": 0.009136217288814197,
+          "delta_point": -0.0004928626771346918
+        },
+        {
+          "seed": 963006,
+          "actual_rate": 0.009386910767775057,
+          "point_rate": 0.009992030165092435,
+          "delta_point": -0.0006051193973173774
+        },
+        {
+          "seed": 963007,
+          "actual_rate": 0.010905597871567883,
+          "point_rate": 0.011527994786731572,
+          "delta_point": -0.000622396915163689
+        },
+        {
+          "seed": 963008,
+          "actual_rate": 0.00996710317676082,
+          "point_rate": 0.01061434356959775,
+          "delta_point": -0.0006472403928369288
+        },
+        {
+          "seed": 963009,
+          "actual_rate": 0.01039977665120368,
+          "point_rate": 0.010845073229834645,
+          "delta_point": -0.00044529657863096473
+        },
+        {
+          "seed": 963010,
+          "actual_rate": 0.010966114347322873,
+          "point_rate": 0.011695956520848542,
+          "delta_point": -0.0007298421735256681
+        },
+        {
+          "seed": 963011,
+          "actual_rate": 0.009369746820169547,
+          "point_rate": 0.00990232953497253,
+          "delta_point": -0.0005325827148029828
+        },
+        {
+          "seed": 963012,
+          "actual_rate": 0.008424043445768458,
+          "point_rate": 0.009265340174075081,
+          "delta_point": -0.0008412967283066238
+        },
+        {
+          "seed": 963013,
+          "actual_rate": 0.008357563764324921,
+          "point_rate": 0.009036180225106254,
+          "delta_point": -0.0006786164607813343
+        },
+        {
+          "seed": 963014,
+          "actual_rate": 0.010363191751125034,
+          "point_rate": 0.011331786216417606,
+          "delta_point": -0.0009685944652925707
+        },
+        {
+          "seed": 963015,
+          "actual_rate": 0.010044170306553041,
+          "point_rate": 0.010409991921938571,
+          "delta_point": -0.00036582161538553
+        },
+        {
+          "seed": 963016,
+          "actual_rate": 0.01055677306693928,
+          "point_rate": 0.011161310732456077,
+          "delta_point": -0.0006045376655167958
+        },
+        {
+          "seed": 963017,
+          "actual_rate": 0.011317332567088084,
+          "point_rate": 0.011720268710833065,
+          "delta_point": -0.0004029361437449812
+        },
+        {
+          "seed": 963018,
+          "actual_rate": 0.010533675233458266,
+          "point_rate": 0.011178855487567942,
+          "delta_point": -0.0006451802541096768
+        },
+        {
+          "seed": 963019,
+          "actual_rate": 0.011119673295837487,
+          "point_rate": 0.011594924657502587,
+          "delta_point": -0.0004752513616650998
+        },
+        {
+          "seed": 963020,
+          "actual_rate": 0.007866895239068528,
+          "point_rate": 0.008556860010310224,
+          "delta_point": -0.0006899647712416973
+        },
+        {
+          "seed": 963021,
+          "actual_rate": 0.011171507837930774,
+          "point_rate": 0.011677155969132564,
+          "delta_point": -0.0005056481312017897
+        },
+        {
+          "seed": 963022,
+          "actual_rate": 0.010874402882346066,
+          "point_rate": 0.011425268986961348,
+          "delta_point": -0.0005508661046152823
+        },
+        {
+          "seed": 963023,
+          "actual_rate": 0.01123978844316946,
+          "point_rate": 0.011753944193795563,
+          "delta_point": -0.0005141557506261037
+        }
+      ]
+    },
+    "current-public-only": {
+      "epoch": 8,
+      "temperature": 1.0,
+      "worldmean_actual_rate": 0.009241981820714168,
+      "worldmean_original_point_rate": 0.010464122404857577,
+      "paired_vs_original_point": {
+        "worlds": 24,
+        "worldmean_delta": -0.0012221405841434092,
+        "paired_world_bootstrap95": [
+          -0.0013268796145874846,
+          -0.001120297375265862
+        ],
+        "positive_launch_gate": false,
+        "bootstrap_seed": 949221,
+        "draws": 20000
+      },
+      "world_rates": [
+        {
+          "seed": 963000,
+          "actual_rate": 0.007920536229801427,
+          "point_rate": 0.008908342640257319,
+          "delta_point": -0.0009878064104558914
+        },
+        {
+          "seed": 963001,
+          "actual_rate": 0.008584506318765669,
+          "point_rate": 0.009561740838043186,
+          "delta_point": -0.0009772345192775186
+        },
+        {
+          "seed": 963002,
+          "actual_rate": 0.006167211328283063,
+          "point_rate": 0.007910490342951017,
+          "delta_point": -0.0017432790146679532
+        },
+        {
+          "seed": 963003,
+          "actual_rate": 0.008650503248568543,
+          "point_rate": 0.009685416523109351,
+          "delta_point": -0.001034913274540808
+        },
+        {
+          "seed": 963004,
+          "actual_rate": 0.01079449763897217,
+          "point_rate": 0.01224711499023244,
+          "delta_point": -0.0014526173512602663
+        },
+        {
+          "seed": 963005,
+          "actual_rate": 0.008195883595341978,
+          "point_rate": 0.009136217288814197,
+          "delta_point": -0.0009403336934722189
+        },
+        {
+          "seed": 963006,
+          "actual_rate": 0.008447078225140812,
+          "point_rate": 0.009992030165092435,
+          "delta_point": -0.0015449519399516214
+        },
+        {
+          "seed": 963007,
+          "actual_rate": 0.01026380346636211,
+          "point_rate": 0.011527994786731572,
+          "delta_point": -0.0012641913203694608
+        },
+        {
+          "seed": 963008,
+          "actual_rate": 0.009353813419801502,
+          "point_rate": 0.01061434356959775,
+          "delta_point": -0.0012605301497962454
+        },
+        {
+          "seed": 963009,
+          "actual_rate": 0.009727349547303818,
+          "point_rate": 0.010845073229834645,
+          "delta_point": -0.001117723682530828
+        },
+        {
+          "seed": 963010,
+          "actual_rate": 0.010085114182875742,
+          "point_rate": 0.011695956520848542,
+          "delta_point": -0.0016108423379727998
+        },
+        {
+          "seed": 963011,
+          "actual_rate": 0.008882490343923334,
+          "point_rate": 0.00990232953497253,
+          "delta_point": -0.0010198391910491978
+        },
+        {
+          "seed": 963012,
+          "actual_rate": 0.007650259768185639,
+          "point_rate": 0.009265340174075081,
+          "delta_point": -0.001615080405889442
+        },
+        {
+          "seed": 963013,
+          "actual_rate": 0.007846766216770364,
+          "point_rate": 0.009036180225106254,
+          "delta_point": -0.0011894140083358938
+        },
+        {
+          "seed": 963014,
+          "actual_rate": 0.009734508606832209,
+          "point_rate": 0.011331786216417606,
+          "delta_point": -0.0015972776095853998
+        },
+        {
+          "seed": 963015,
+          "actual_rate": 0.009290363020425931,
+          "point_rate": 0.010409991921938571,
+          "delta_point": -0.0011196289015126407
+        },
+        {
+          "seed": 963016,
+          "actual_rate": 0.00978455980235304,
+          "point_rate": 0.011161310732456077,
+          "delta_point": -0.001376750930103037
+        },
+        {
+          "seed": 963017,
+          "actual_rate": 0.010952957103678395,
+          "point_rate": 0.011720268710833065,
+          "delta_point": -0.0007673116071546707
+        },
+        {
+          "seed": 963018,
+          "actual_rate": 0.009838553061851319,
+          "point_rate": 0.011178855487567942,
+          "delta_point": -0.0013403024257166237
+        },
+        {
+          "seed": 963019,
+          "actual_rate": 0.010585529987696827,
+          "point_rate": 0.011594924657502587,
+          "delta_point": -0.0010093946698057597
+        },
+        {
+          "seed": 963020,
+          "actual_rate": 0.0074025741533437425,
+          "point_rate": 0.008556860010310224,
+          "delta_point": -0.0011542858569664834
+        },
+        {
+          "seed": 963021,
+          "actual_rate": 0.010511159604059793,
+          "point_rate": 0.011677155969132564,
+          "delta_point": -0.0011659963650727692
+        },
+        {
+          "seed": 963022,
+          "actual_rate": 0.010245056856744482,
+          "point_rate": 0.011425268986961348,
+          "delta_point": -0.0011802121302168663
+        },
+        {
+          "seed": 963023,
+          "actual_rate": 0.010892487970058134,
+          "point_rate": 0.011753944193795563,
+          "delta_point": -0.0008614562237374316
+        }
+      ]
+    }
+  },
+  "history_increment_vs_current": {
+    "worlds": 24,
+    "worldmean_delta": 0.0006263445426761125,
+    "paired_world_bootstrap95": [
+      0.0005615161191118008,
+      0.0006934098630679124
+    ],
+    "positive_launch_gate": true,
+    "bootstrap_seed": 949221,
+    "draws": 20000
+  },
+  "finite_validation_performance_rejected": true,
+  "selected_model_lock_written": false,
+  "test_world_count": 0,
+  "production_adopted": false,
+  "full_season_run": false,
+  "source_freeze_sha256": "127444cd52a2800db383b7905e62b38baa6622caf4dc933d0cbcd1e1f3cdf2cb",
+  "all95_source_hashes_unchanged": true,
+  "all136_new_world_npz_local_sha_verified": true,
+  "all87_fit_artifact_local_sha_verified": true,
+  "source_snapshot_tar_sha256": "9a1c3c9a83a968c84a128d78b124059caeb4e57db3b49c3184838dc8aba9e419",
+  "fit_archive_sha256": "8e431669919d5ee1df3cf46c99ea40c80b4f791052079ef72c133d5da8cd61a6",
+  "original_best_zip_sha256": "5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29",
+  "gpu_cost": {
+    "actual_gpu_training": true,
+    "raw_exit_code": 1,
+    "external_observed_start_to_completion_seconds": 644.356384,
+    "completion_poll_interval_seconds": 20,
+    "epoch_cost_scope": "each epoch elapsed includes training plus fixed cal and finite val callback; not just optimizer GPU time",
+    "architecture_epoch_costs": {
+      "fullhistory": {
+        "epochs": 12,
+        "sum_epoch_train_cal_val_seconds": 332.05687849997776,
+        "optimizer_updates_total": 18432,
+        "first_train_soft_ce": 2.9824350791362426,
+        "last_train_soft_ce": 1.9045498092891648,
+        "minimum_train_soft_ce": 1.9045498092891648
+      },
+      "current-public-only": {
+        "epochs": 12,
+        "sum_epoch_train_cal_val_seconds": 287.1017256999621,
+        "optimizer_updates_total": 18432,
+        "first_train_soft_ce": 3.0727146161564938,
+        "last_train_soft_ce": 2.2693119074683636,
+        "minimum_train_soft_ce": 2.2693119074683636
+      }
+    },
+    "telemetry_samples": 33,
+    "device_first_sample": {
+      "utc": "2026-10-04T05:42:43.858887+00:00",
+      "memory_total_MiB": 97887.0,
+      "memory_used_MiB": 10235.0,
+      "power_W": 112.22,
+      "power_limit_W": 600.0,
+      "util_percent": 7.0
+    },
+    "device_last_sample": {
+      "utc": "2026-10-04T05:53:28.083451+00:00",
+      "memory_total_MiB": 97887.0,
+      "memory_used_MiB": 10235.0,
+      "power_W": 111.05,
+      "power_limit_W": 600.0,
+      "util_percent": 4.0
+    },
+    "device_observed_peak_memory_used_MiB": 11963.0,
+    "device_observed_peak_power_W": 144.49,
+    "device_observed_peak_utilization_percent": 18.0,
+    "power_limit_W_values": [
+      600.0
+    ],
+    "memory_attribution": "Device totals include foreign processes. WDDM per-process used_gpu_memory is N/A; no precise training allocated peak claimed. Sampling does not guarantee capture of instantaneous device peak.",
+    "negative_validation": true,
+    "test_world_count": 0,
+    "best_zip_changed": false
+  },
+  "public_inputs": "Pure physical F/b with single195 joint head; original strong outergeometry; public six-decimal observations/notice/forecast/report/resync cutoff. Futureprivate only host labels/realized evaluation. No old test or dictionary, no test/generated/private L4 read.",
+  "runtime_completeness": "Complete data/labels/public adapter/Torchfit/NumPyexport/finite executableaction evaluator sources retained. Final driver selection failed; selected inference parity gate failed. Production strong science evaluator installation/fullseason runtime/2CPU2GiB gate not performed.",
+  "scope": "Finite additive science/actualseconds only; not formal season points, REQ/Jain, or causal proof that history alone explains model differences.",
+  "evidence_paths": [
+    "PARITY_FAILURE_DIAGNOSTIC.json",
+    "GPU_FIT_ARTIFACT_MANIFEST.json",
+    "GPU_PROCESS_RECEIPT.json",
+    "GPU_PROCESS_TREE_RECEIPT.json",
+    "FAILED_FIT_SOURCE_SNAPSHOT_RECEIPT.json",
+    "DATA_MANIFEST.json",
+    "DATA_TRANSPORT_RESTORE_MAPPING.json",
+    "GPU_FIT_TRANSPORT_RECEIPT.json",
+    "GPU_ACTUAL_COST_SUMMARY.json",
+    "CPU_DATA_COST_COVERAGE_SUMMARY.json"
+  ]
+}

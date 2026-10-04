@@ -1,0 +1,52 @@
+{
+  "actual_gpu_training": true,
+  "raw_exit_code": 1,
+  "external_observed_start_to_completion_seconds": 644.356384,
+  "completion_poll_interval_seconds": 20,
+  "epoch_cost_scope": "each epoch elapsed includes training plus fixed cal and finite val callback; not just optimizer GPU time",
+  "architecture_epoch_costs": {
+    "fullhistory": {
+      "epochs": 12,
+      "sum_epoch_train_cal_val_seconds": 332.05687849997776,
+      "optimizer_updates_total": 18432,
+      "first_train_soft_ce": 2.9824350791362426,
+      "last_train_soft_ce": 1.9045498092891648,
+      "minimum_train_soft_ce": 1.9045498092891648
+    },
+    "current-public-only": {
+      "epochs": 12,
+      "sum_epoch_train_cal_val_seconds": 287.1017256999621,
+      "optimizer_updates_total": 18432,
+      "first_train_soft_ce": 3.0727146161564938,
+      "last_train_soft_ce": 2.2693119074683636,
+      "minimum_train_soft_ce": 2.2693119074683636
+    }
+  },
+  "telemetry_samples": 33,
+  "device_first_sample": {
+    "utc": "2026-10-04T05:42:43.858887+00:00",
+    "memory_total_MiB": 97887.0,
+    "memory_used_MiB": 10235.0,
+    "power_W": 112.22,
+    "power_limit_W": 600.0,
+    "util_percent": 7.0
+  },
+  "device_last_sample": {
+    "utc": "2026-10-04T05:53:28.083451+00:00",
+    "memory_total_MiB": 97887.0,
+    "memory_used_MiB": 10235.0,
+    "power_W": 111.05,
+    "power_limit_W": 600.0,
+    "util_percent": 4.0
+  },
+  "device_observed_peak_memory_used_MiB": 11963.0,
+  "device_observed_peak_power_W": 144.49,
+  "device_observed_peak_utilization_percent": 18.0,
+  "power_limit_W_values": [
+    600.0
+  ],
+  "memory_attribution": "Device totals include foreign processes. WDDM per-process used_gpu_memory is N/A; no precise training allocated peak claimed. Sampling does not guarantee capture of instantaneous device peak.",
+  "negative_validation": true,
+  "test_world_count": 0,
+  "best_zip_changed": false
+}

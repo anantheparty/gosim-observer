@@ -1,0 +1,46 @@
+{
+  "source_freeze_sha256": "127444cd52a2800db383b7905e62b38baa6622caf4dc933d0cbcd1e1f3cdf2cb",
+  "completed_checkpoints": 24,
+  "descriptive_locked_choice": {
+    "mode": "fullhistory",
+    "epoch": 12,
+    "temperature": 1.0
+  },
+  "selection_driver_failed": true,
+  "no_selected_model_lock_written": true,
+  "original_logit_gate": 3e-05,
+  "logit_gate_preserved": true,
+  "public_fixture_states": 8,
+  "public_valid_queries": 2060,
+  "numpy_gpu_logits_max_difference": 3.0517578125e-05,
+  "numpy_cpu_logits_max_difference": 3.0517578125e-05,
+  "cpu_gpu_logits_max_difference": 1.9073486328125e-05,
+  "double_numpy_gpu_logits_max_difference": 2.288818359375e-05,
+  "logits_max_absolute": 149.32009887695312,
+  "numpy_gpu_logits_max_difference_valid": 3.0517578125e-05,
+  "numpy_gpu_pmf_max_difference": 7.748603820800781e-07,
+  "numpy_gpu_mean_max_difference": 6.443445962345251e-07,
+  "numpy_gpu_expected_science_gain_max_difference": 7.536869626179055e-07,
+  "public_fixture_assignments_equal": true,
+  "input_max_absolute": {
+    "ht": 1.6666666269302368,
+    "hn": 1.0,
+    "hm": 1.0,
+    "cn": 1.0,
+    "cm": 1.0,
+    "q": 1.0
+  },
+  "history_increment_vs_current": {
+    "worlds": 24,
+    "worldmean_delta": 0.0006263445426761125,
+    "paired_world_bootstrap95": [
+      0.0005615161191118008,
+      0.0006934098630679124
+    ],
+    "positive_launch_gate": true,
+    "bootstrap_seed": 949221,
+    "draws": 20000
+  },
+  "test_world_count": 0,
+  "scope": "Retained failed-fit read-only diagnostic. Same prelocked selection describes completed checkpoints; no gate loosened, no fit rerun, no test generated or production adoption."
+}

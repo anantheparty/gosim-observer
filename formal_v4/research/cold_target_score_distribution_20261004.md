@@ -134,3 +134,33 @@ Mac BLAS曾对有限random-weight输入发 floating flag warning，输出有限�
 `torch_helper/` 子agent已完成两架构、单joint195、state-balanced CE、NumPy导出/推理和公开CPUfixture；无优化器fit。CPU logits/PMF/stats maxerr1.788e-7，state-balanced loss误差0，gradient误差5.82e-11。`finite_evaluator.py` 与 `fit_driver.py` 已可执行finiteaction/cal/val/checkpoint选择，但尚未实际fit。仍没有替换原season science evaluator的生产runtime或新提交ZIP。
 
 PRO6000 fresh环境read已验：Torch2.7.1+cu128、NumPy2.2.6、CUDA可用，GPU97887MiB/~10203MiB占用、108.68W/600W、5%使用；复用既有venv，不安装、不改功耗、不终止其他任务。大数据CPU生成与实际GPU拟合分别保存成本与日志。
+
+## 9. 冻结 v2 与实际 CPU 生成
+
+最终95项source冻结SHA `127444cd52a2800db383b7905e62b38baa6622caf4dc933d0cbcd1e1f3cdf2cb`，四fresh机械gate以及v2执行动作receipt amendment均通过root独立核验。V2仅新增host实际hit/publiccommandedpointing/start收据，四world18核心数组与v1逐元素一致，512动作通过officialnormalize。V1冻结tar全部95原hash可回溯；早期失败source/log未覆盖。
+
+Rhodes1既有Python3.12.15镜像、NumPy2.2.6中12独立worker，实际136world数据生成完成：train96/cal16/val24、test0。墙钟308.058秒，worker累计3436.054秒，其中freshweather14.472秒、futurelabels186.259秒；3,943,796有效future行，136NPZ共355,392,736字节，全部SHA通过。过去新观测包含727miss、125,934 hit却scorezero与98loss-resync，公开有效性按query时刻更新。每split细项写CPU_DATA_COST_COVERAGE_SUMMARY.json。
+
+原detached容器用--rm，启动时未注册dockerwait，因此原始Docker退出码缺失，不能据容器消失宣称exit0。GENERATION_COMPLETION_RECEIPT.json保留此缺口；完成证据是coordinator最终manifest/stdout、136worldreceipt及全部NPZhash。自己的数据容器初始8GiB接近限制后改16GiB，资源更新有独立票据，外部服务未更改。该成本是离线数据生成，不是正式participant2CPU2GiB900s表现。
+
+WindowsPRO6000接收同一冻结source和四个lossless数据shard，hash验证通过后才启动实际12epoch×两架构。外部launch_gpu_receipt.py仅记录真实WindowsPID、原始进程退出码及nvidia-smi功率/显存，不改变冻结模型source。此处尚未给训练accuracy、validation或season分数结论。
+
+## 10. 实际 PRO6000 拟合与最终拒绝
+
+2026-10-04 05:42:43.858 UTC 开始，PRO6000 普通Torch2.7.1cu128实际完成两架构各12epochs，共24 checkpoints、36,864次optimizer update。Fullhistory epochs训练+校准+有限validation共332.057秒，current-only共287.102秒；外部观测启动至退出644.356秒，退出采样间隔20秒。33个nvidia样本设备total memory peak11,963MiB、power peak144.49W，功率limit始终600W。WDDM每进程显存N/A，total含其它进程且采样未保证瞬时峰，不能称本训练的精确allocated peak。
+
+| 预锁 architecture 最佳 | epoch/T | finite mean science/actualsecond | 相对原point Δ | paired95%world-bootstrap |
+|---|---|---:|---:|---|
+| 原冻结强point control | — | 0.010464122405 | — | — |
+| 完整history | 12/1.0 | 0.009868326363 | -0.000595796041 | [-0.000654620666,-0.000541168344] |
+| 当前全部public-only | 8/1.0 | 0.009241981821 | -0.001222140584 | [-0.001326879615,-0.001120297375] |
+
+Full−current mean+0.000626344543、CI[+0.000561516119,+0.000693409863]，仅是两预声明架构的有限动作模型对照，不能单独归因于history、不能转述成season收益。整体最好模型仍比原强point低约5.69%，两模型相对point的区间均严格负，所以性能门拒绝；新24test world保持未生成。原最强ZIP5b00e6a…完全不变，无生产adopt、900秒full或REQ/Jain得分结论。
+
+**最终driver原始exit1，而不是成功结束。** 24模型文件和逐epochval/action收据已写完，复制描述性的最高val weights后，NumPy-vs-CUDA public logit门 `<3e-5` 失败，因此SELECTION_RESULT和SELECTED_MODEL_LOCK均未写。原始rawstdout、exit1、全95source指纹、完整publiccache frozen snapshot、所有24PT/NPZ/eval/config/trainlogs/遥测均归档。未修改source、放宽门或重fit。
+
+只读具体诊断：8publicstates、2060validqueries，原float32 NumPy/CUDA maxlogit差3.0517578125e-5，最大logit绝对值149.32；CPU/CUDA差1.90735e-5，float64 accumulation NumPy/CUDA差2.28882e-5。PMF max差7.74860e-7、均值6.44345e-7、expectedsciencegain7.53687e-7，抽查动作assignment完全相同。这与累加roundoff一致，但严格冻结门仍记失败，不作全输入部署正确性证明；因性能已有拒绝原因，本轮不修部署parity。
+
+136原NPZ+各world JSON全部本地SHA匹配，87拟合源产物全部SHA匹配。4个lossless数据tar和拟合gzip tar为重复运输资料，移至owned/tmp；DATA_TRANSPORT_RESTORE_MAPPING/GPU_FIT_TRANSPORT_RECEIPT记录SHA与恢复路径，Git备份保留原始小文件本体。远端artifact manifest一处literal trailing newline错误也保留原文本与hash，并仅规范JSON语法，产物hash未改。
+
+本轮完整可执行的数据/operator/publicfeature/训练/NumPyexport/有限动作source已实现，但最终selection driver失败且模型性能门拒绝；**生产runtime集成与正式2CPU2GiB gate尚未做**。下一物理结构路线（已知flux×duration×H缩放可能应显式使用）只是root另记的研究假设，本轮结果不证明它是失败原因，也不救本轮参数。
