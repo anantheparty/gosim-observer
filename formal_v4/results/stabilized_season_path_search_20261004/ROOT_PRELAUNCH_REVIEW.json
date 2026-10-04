@@ -1,7 +1,7 @@
 {
   "utc": "2026-10-04T07:44:27.487562+00:00",
   "source_lock_sha256": "867c33fb27c164f73ccc28ee33138a8cf8914c78ee1b851a2d48ba6aee537032",
-  "status": "SOURCE_PRESERVED_BEFORE_STATIC_EMPTY_CUT_CORRECTION_NO_LARGE_RUN",
+  "status": "FROZEN_SOURCE_REVIEWED_READY_FOR_480SEC_EXISTING_MAC_EXPERIMENT",
   "verified_source_sha256": {
     "formal_v4/results/stabilized_season_path_search_20261004/CONTRACTS.json": "9783bfeb9e9a8dfcaf16397ce3eadc11e6fb355847219b7be5033701afee4dec",
     "formal_v4/results/stabilized_season_path_search_20261004/INPUT_RECEIPT.json": "379affacfb7878d8aad89ddf4ce17ee74001dcff5d1c054d5efd7215784bd7a8",
@@ -119,14 +119,21 @@
     "sparse matching +1 shift/dummy correct, max-ledger target cap only fixed deterministic law",
     "global common pool across three fixed prefix ledgers/first gains, all paths fair re-estimation",
     "crossing exposure removed whole; matching preserves empty-exposure times",
-    "native time interval compression recomputed each price; fixed onehour-grid limit explicit"
+    "native time interval compression recomputed each price; fixed onehour-grid limit explicit",
+    "frozen Bundle initialization and64cut aggregation both explicitly retain zero support"
   ],
-  "static_issue": {
-    "report": "claims explicit empty-path support retained",
-    "code": "Bundle cuts starts empty, aggregation lacks explicit zero support",
-    "required_next": "preserve this source via Git then add explicit zero support with stable retention and new freeze before big graph search"
-  },
   "actual_graph_run_started": false,
   "existing_contracts_read_only_reviewed": true,
-  "no_old_tests_rerun": true
+  "no_old_tests_rerun": true,
+  "review_correction": {
+    "utc": "2026-10-04T07:45:54.394397+00:00",
+    "previous_root_claim": {
+      "report": "claims explicit empty-path support retained",
+      "code": "Bundle cuts starts empty, aggregation lacks explicit zero support",
+      "required_next": "preserve this source via Git then add explicit zero support with stable retention and new freeze before big graph search"
+    },
+    "finding": "Previous root logic review used pre-freeze development text. Already-frozen source SHA99a36... explicitly initializes zero cut and preserves it during aggregation. Agent frozen code/report unchanged; no source repair needed.",
+    "zero_support_static_checked": true
+  },
+  "execution_environment": "existing macOS primary3.12.14 with cached NumPy2.4.4/SciPy1.17.0 and singleBLAS thread; no Linux formal runtime claim"
 }
