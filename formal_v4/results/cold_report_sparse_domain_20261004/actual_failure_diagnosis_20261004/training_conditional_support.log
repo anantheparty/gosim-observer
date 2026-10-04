@@ -1,0 +1,117 @@
+{
+  "train": {
+    "all": {
+      "records": 64625,
+      "worlds": 64,
+      "active_prevalence": 0.07247969052224372,
+      "mean_prediction": 0.05597763511512622,
+      "high_p_ge65_records": 1933,
+      "high_p_ge65_actual": 0.9844800827728919
+    },
+    "negative_report_history": {
+      "records": 56703,
+      "worlds": 64,
+      "active_prevalence": 0.08047193270197343,
+      "mean_prediction": 0.06260969357414234,
+      "high_p_ge65_records": 1912,
+      "high_p_ge65_actual": 0.9843096234309623
+    },
+    "negative_report_quake_first4nights": {
+      "records": 4775,
+      "worlds": 45,
+      "active_prevalence": 0.0843979057591623,
+      "mean_prediction": 0.09489825212764495,
+      "high_p_ge65_records": 155,
+      "high_p_ge65_actual": 0.896774193548387
+    },
+    "L3_second_attempt_coarse_state": {
+      "records": 1388,
+      "worlds": 27,
+      "active_prevalence": 0.12752161383285301,
+      "mean_prediction": 0.11269668174981232,
+      "high_p_ge65_records": 55,
+      "high_p_ge65_actual": 0.9454545454545454
+    },
+    "negative_report_next17h": {
+      "records": 11783,
+      "worlds": 64,
+      "active_prevalence": 0.01154205210897055,
+      "mean_prediction": 0.008693128337707702,
+      "high_p_ge65_records": 17,
+      "high_p_ge65_actual": 1.0
+    },
+    "negative_report_next17h_quake_phase3": {
+      "records": 96,
+      "worlds": 7,
+      "active_prevalence": 0.0,
+      "mean_prediction": 0.03710739460538837,
+      "high_p_ge65_records": 0,
+      "high_p_ge65_actual": null
+    }
+  },
+  "cal": {
+    "all": {
+      "records": 8075,
+      "worlds": 8,
+      "active_prevalence": 0.0660061919504644,
+      "mean_prediction": 0.06575672049161625,
+      "high_p_ge65_records": 234,
+      "high_p_ge65_actual": 0.7435897435897436
+    },
+    "negative_report_history": {
+      "records": 7058,
+      "worlds": 8,
+      "active_prevalence": 0.07551714366676113,
+      "mean_prediction": 0.0747388661539716,
+      "high_p_ge65_records": 234,
+      "high_p_ge65_actual": 0.7435897435897436
+    },
+    "negative_report_quake_first4nights": {
+      "records": 723,
+      "worlds": 6,
+      "active_prevalence": 0.04149377593360996,
+      "mean_prediction": 0.11776490461798468,
+      "high_p_ge65_records": 33,
+      "high_p_ge65_actual": 0.030303030303030304
+    },
+    "L3_second_attempt_coarse_state": {
+      "records": 145,
+      "worlds": 2,
+      "active_prevalence": 0.20689655172413793,
+      "mean_prediction": 0.10010565549513917,
+      "high_p_ge65_records": 1,
+      "high_p_ge65_actual": 1.0
+    },
+    "negative_report_next17h": {
+      "records": 1272,
+      "worlds": 8,
+      "active_prevalence": 0.0031446540880503146,
+      "mean_prediction": 0.007489167914127472,
+      "high_p_ge65_records": 0,
+      "high_p_ge65_actual": null
+    },
+    "negative_report_next17h_quake_phase3": {
+      "records": 21,
+      "worlds": 1,
+      "active_prevalence": 0.14285714285714285,
+      "mean_prediction": 0.12019981371368567,
+      "high_p_ge65_records": 0,
+      "high_p_ge65_actual": null
+    }
+  },
+  "source_prior_innovation": {
+    "public_L3_total_slots": 1091,
+    "slot_steps_between_false_and_second_attempt": 2,
+    "source_fault_count_prior": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "source_nominal_jitter": "uniform integer -200..200",
+    "conditional_new_first_fault_prior": 0.0072288078729591575,
+    "LR_required_to_reach_second_report_p": 265.2856632601358,
+    "limitation": "Uses declared training count/jitter prior on public L3 calendar; no actual onset/date read. Weather likelihood and prior shifts can change posterior; this is not a universal upper bound."
+  },
+  "no_train_or_validation_claim": true,
+  "no_test_read_or_model_tuning": true
+}

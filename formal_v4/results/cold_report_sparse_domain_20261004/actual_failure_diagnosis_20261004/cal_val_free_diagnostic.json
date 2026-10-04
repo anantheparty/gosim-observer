@@ -1,0 +1,604 @@
+{
+  "cal": {
+    "shadow_price_state_projection": "phase midpoint in identical original vs constrained lookup; samples at old fixed cal/val histories",
+    "quota_shadow": {
+      "quota1_minus_quota0": {
+        "original_paid_continuation_mean": 24.634689409043272,
+        "constrained_free_continuation_mean": 195.9205613276493,
+        "original_quantiles": [
+          0.0,
+          24.79989794160832,
+          29.66008994220364,
+          63.39056066076612
+        ],
+        "free_quantiles": [
+          0.0,
+          242.91536780955835,
+          246.40838591172712,
+          271.8645493420547
+        ]
+      },
+      "quota2_minus_quota1": {
+        "original_paid_continuation_mean": 7.477364556187136,
+        "constrained_free_continuation_mean": 26.009720146837612,
+        "original_quantiles": [
+          0.0,
+          7.133478116425152,
+          10.259877593091474,
+          22.63509415708745
+        ],
+        "free_quantiles": [
+          0.0,
+          30.707734773442766,
+          32.26063278328792,
+          48.51239520090611
+        ]
+      }
+    },
+    "fixed_design_mean_scores": {
+      "original_free_actor": 5382.1776308749995,
+      "constrained_free_Bellman": 5374.220177874999
+    },
+    "paired_constrained_minus_original": -7.957452999999987,
+    "raw": [
+      {
+        "original_free_actor": {
+          "seed": 830000,
+          "card": "L1",
+          "science": 5264.045642999997,
+          "report": 0.0,
+          "score": 5264.045642999997,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 984,
+          "measured_slots": 839,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830000,
+          "card": "L1",
+          "science": 5264.045642999997,
+          "report": 0.0,
+          "score": 5264.045642999997,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 984,
+          "measured_slots": 839,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830001,
+          "card": "L2",
+          "science": 5377.697461999996,
+          "report": 0.0,
+          "score": 5377.697461999996,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 704,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830001,
+          "card": "L2",
+          "science": 5377.697461999996,
+          "report": 0.0,
+          "score": 5377.697461999996,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 704,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830002,
+          "card": "L1",
+          "science": 5555.0033140000005,
+          "report": 100.0,
+          "score": 5655.0033140000005,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 849,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830002,
+          "card": "L1",
+          "science": 5554.060725,
+          "report": 100.0,
+          "score": 5654.060725,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 849,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830003,
+          "card": "L2",
+          "science": 6130.528886999993,
+          "report": 200.0,
+          "score": 6330.528886999993,
+          "reports": 2,
+          "correct": 2,
+          "false": 0,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830003,
+          "card": "L2",
+          "science": 6127.251595999994,
+          "report": 200.0,
+          "score": 6327.251595999994,
+          "reports": 2,
+          "correct": 2,
+          "false": 0,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830004,
+          "card": "L1",
+          "science": 4106.677871999995,
+          "report": 100.0,
+          "score": 4206.677871999995,
+          "reports": 4,
+          "correct": 1,
+          "false": 3,
+          "observed_records": 984,
+          "measured_slots": 641,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830004,
+          "card": "L1",
+          "science": 4054.2828759999948,
+          "report": 100.0,
+          "score": 4154.282875999995,
+          "reports": 4,
+          "correct": 1,
+          "false": 3,
+          "observed_records": 984,
+          "measured_slots": 641,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830005,
+          "card": "L2",
+          "science": 5634.1563080000005,
+          "report": 0.0,
+          "score": 5634.1563080000005,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830005,
+          "card": "L2",
+          "science": 5634.1563080000005,
+          "report": 0.0,
+          "score": 5634.1563080000005,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830006,
+          "card": "L1",
+          "science": 4737.835397000001,
+          "report": 0.0,
+          "score": 4737.835397000001,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 984,
+          "measured_slots": 829,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830006,
+          "card": "L1",
+          "science": 4737.835397000001,
+          "report": 0.0,
+          "score": 4737.835397000001,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 984,
+          "measured_slots": 829,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 830007,
+          "card": "L2",
+          "science": 5751.476164000009,
+          "report": 100.0,
+          "score": 5851.476164000009,
+          "reports": 4,
+          "correct": 1,
+          "false": 3,
+          "observed_records": 1088,
+          "measured_slots": 725,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 830007,
+          "card": "L2",
+          "science": 5744.4314160000085,
+          "report": 100.0,
+          "score": 5844.4314160000085,
+          "reports": 4,
+          "correct": 1,
+          "false": 3,
+          "observed_records": 1088,
+          "measured_slots": 725,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      }
+    ]
+  },
+  "val": {
+    "shadow_price_state_projection": "phase midpoint in identical original vs constrained lookup; samples at old fixed cal/val histories",
+    "quota_shadow": {
+      "quota1_minus_quota0": {
+        "original_paid_continuation_mean": 24.818556918142203,
+        "constrained_free_continuation_mean": 206.72110209228612,
+        "original_quantiles": [
+          7.500000000000014,
+          24.81275724522399,
+          28.744332134879052,
+          52.5
+        ],
+        "free_quantiles": [
+          17.941873943739548,
+          242.91536780955835,
+          246.40838591172712,
+          258.7812495846674
+        ]
+      },
+      "quota2_minus_quota1": {
+        "original_paid_continuation_mean": 7.413024494866068,
+        "constrained_free_continuation_mean": 27.14040759663406,
+        "original_quantiles": [
+          0.837111863196597,
+          7.414342630172001,
+          9.507942304572566,
+          19.464637567149705
+        ],
+        "free_quantiles": [
+          0.8948279402543733,
+          30.9212808163864,
+          32.36194344394353,
+          42.45716132579736
+        ]
+      }
+    },
+    "fixed_design_mean_scores": {
+      "original_free_actor": 5536.063306875001,
+      "constrained_free_Bellman": 5502.4292833750005
+    },
+    "paired_constrained_minus_original": -33.63402350000115,
+    "raw": [
+      {
+        "original_free_actor": {
+          "seed": 840000,
+          "card": "L1",
+          "science": 5124.555337000004,
+          "report": 100.0,
+          "score": 5224.555337000004,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 819,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840000,
+          "card": "L1",
+          "science": 5086.742302000005,
+          "report": 100.0,
+          "score": 5186.742302000005,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 819,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840001,
+          "card": "L2",
+          "science": 5303.385637000002,
+          "report": 0.0,
+          "score": 5303.385637000002,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 715,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840001,
+          "card": "L2",
+          "science": 5303.385637000002,
+          "report": 0.0,
+          "score": 5303.385637000002,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 715,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840002,
+          "card": "L1",
+          "science": 4940.161196000006,
+          "report": 100.0,
+          "score": 5040.161196000006,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 637,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840002,
+          "card": "L1",
+          "science": 4871.055751000004,
+          "report": 100.0,
+          "score": 4971.055751000004,
+          "reports": 1,
+          "correct": 1,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 637,
+          "dropout": 0.35,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840003,
+          "card": "L2",
+          "science": 5470.012217999997,
+          "report": 0.0,
+          "score": 5470.012217999997,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840003,
+          "card": "L2",
+          "science": 5470.012217999997,
+          "report": 0.0,
+          "score": 5470.012217999997,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 1088,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840004,
+          "card": "L1",
+          "science": 5557.409958999997,
+          "report": 200.0,
+          "score": 5757.409958999997,
+          "reports": 3,
+          "correct": 2,
+          "false": 1,
+          "observed_records": 984,
+          "measured_slots": 984,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840004,
+          "card": "L1",
+          "science": 5405.051942999992,
+          "report": 200.0,
+          "score": 5605.051942999992,
+          "reports": 2,
+          "correct": 2,
+          "false": 0,
+          "observed_records": 984,
+          "measured_slots": 984,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840005,
+          "card": "L2",
+          "science": 6229.47615,
+          "report": 0.0,
+          "score": 6229.47615,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 918,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840005,
+          "card": "L2",
+          "science": 6229.47615,
+          "report": 0.0,
+          "score": 6229.47615,
+          "reports": 2,
+          "correct": 0,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 918,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840006,
+          "card": "L1",
+          "science": 5623.355671000002,
+          "report": 0.0,
+          "score": 5623.355671000002,
+          "reports": 1,
+          "correct": 0,
+          "false": 1,
+          "observed_records": 984,
+          "measured_slots": 984,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840006,
+          "card": "L1",
+          "science": 5623.355671000002,
+          "report": 0.0,
+          "score": 5623.355671000002,
+          "reports": 1,
+          "correct": 0,
+          "false": 1,
+          "observed_records": 984,
+          "measured_slots": 984,
+          "dropout": 0.0,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      },
+      {
+        "original_free_actor": {
+          "seed": 840007,
+          "card": "L2",
+          "science": 5540.1502869999995,
+          "report": 100.0,
+          "score": 5640.1502869999995,
+          "reports": 3,
+          "correct": 1,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 921,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        },
+        "constrained_free_Bellman": {
+          "seed": 840007,
+          "card": "L2",
+          "science": 5530.354594999996,
+          "report": 100.0,
+          "score": 5630.354594999996,
+          "reports": 3,
+          "correct": 1,
+          "false": 2,
+          "observed_records": 1088,
+          "measured_slots": 921,
+          "dropout": 0.15,
+          "training_records": 0,
+          "qdim": 1568
+        }
+      }
+    ]
+  },
+  "limitations": "Diagnostic q0 action-set consistency only, same model/calibration/prior/K/L; not current faultv1 controller value; no test read, no threshold/model selection, not production candidate.",
+  "seconds": 27.690023183822632
+}

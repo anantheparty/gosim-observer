@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_DP_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+  "diagnostic_DP_sha256": "77860d6a33b03cca2f6b5d714ad46f86cfddbe64a2e2f8c20d8da12573de4a69",
+  "model_and_calibration_unchanged": true,
+  "generation_prior_unchanged": true,
+  "production_candidate_unchanged": true,
+  "feasible_action_contract": "q0 V=W, report illegal; q1/2 report legal only public current p>0 within max2 research state; true quota2; false q-1; correctcount2 healthy absorption",
+  "all_states_checked": 414720,
+  "all_state_Bellman_error": 0.0,
+  "exhaustive_two_epoch_trees": 126,
+  "max_tree_error": 7.105427357601002e-15,
+  "illustrative_last_free_shadow_price": {
+    "future_certain_fault_science_recovery": 400,
+    "future_correct_reward": 100,
+    "paid_Bellman_q0_vs_q1_shadow": 0,
+    "deployed_free_only_q0_vs_q1_shadow": 500
+  },
+  "limitations": "Only action-set mismatch repaired in diagnostic DP. Same fixed-action kernels, posterior and missing baseline controller remain. No production permission or new test claim."
+}

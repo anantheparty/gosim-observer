@@ -1,0 +1,50 @@
+{
+  "completed_at": "2026-10-04T03:13:54.539256+00:00",
+  "status": "production_rejected_failure_diagnosis_complete",
+  "original_SOURCE_LOCK_all_hashes_unchanged": true,
+  "original_model_calibration_DP_prior_package_test_unchanged": true,
+  "private_fault_dates_read": false,
+  "L4_read": false,
+  "old_test_reread_for_selection": false,
+  "new_actual_full_started": false,
+  "new_NN_training_started": false,
+  "actual_three_card_gain_against_v1": [
+    88.780156,
+    0,
+    -411.62363
+  ],
+  "actual_mean_gain": -107.614491,
+  "q0_diagnostic_only_contract": {
+    "passed": true,
+    "source_DP_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+    "diagnostic_DP_sha256": "77860d6a33b03cca2f6b5d714ad46f86cfddbe64a2e2f8c20d8da12573de4a69",
+    "model_and_calibration_unchanged": true,
+    "generation_prior_unchanged": true,
+    "production_candidate_unchanged": true,
+    "feasible_action_contract": "q0 V=W, report illegal; q1/2 report legal only public current p>0 within max2 research state; true quota2; false q-1; correctcount2 healthy absorption",
+    "all_states_checked": 414720,
+    "all_state_Bellman_error": 0.0,
+    "exhaustive_two_epoch_trees": 126,
+    "max_tree_error": 7.105427357601002e-15,
+    "illustrative_last_free_shadow_price": {
+      "future_certain_fault_science_recovery": 400,
+      "future_correct_reward": 100,
+      "paid_Bellman_q0_vs_q1_shadow": 0,
+      "deployed_free_only_q0_vs_q1_shadow": 500
+    },
+    "limitations": "Only action-set mismatch repaired in diagnostic DP. Same fixed-action kernels, posterior and missing baseline controller remain. No production permission or new test claim."
+  },
+  "sha256": {
+    "public_causal_diagnosis.json": "13154821bf5c3d777cf801f09d30ca792f37ef33a1a8d294e82e0123d7b44c54",
+    "actual_public_features.npz": "e3aeb66fd76c005fc24f76ad87e42647c4281c9f16a3f166ac5e3a7e0194b21c",
+    "training_conditional_support.json": "f19a8ac17da2260cf3344bbcac41b85df7f1557774a70af1b5154c94fbbf947b",
+    "free_only_contract_checks.json": "98e1e2aed6796a6412a58322cac00014096c3030f5e8a3cd634c23096f434df9",
+    "diagnostic_free_only_dp.npz": "77860d6a33b03cca2f6b5d714ad46f86cfddbe64a2e2f8c20d8da12573de4a69",
+    "cal_val_free_diagnostic.json": "e1fa89bd924db404ae9e9a915ce16c84992dbd974a2c22a99b9493bba359b65c",
+    "diagnose_public.py": "7dff76d709e1d28f21112862cb6d8b6348603a916ece5b089c0252d15d30d6cb",
+    "analyze_training_support.py": "538b1ad8907a546a5431a0b877d178f3e2a3110e5e6d7ae9f63d3575d8ff96ae",
+    "free_only_contract.py": "b6a09d2635602e577e81c4f2d9e593782690bb3c29c6d28b511cb085d0c76e21",
+    "cal_val_free_diagnostic.py": "db156ecbb755973c00f36a2f56503cc6001d4ee57c5b0a16af066c457c15928f"
+  },
+  "report": "formal_v4/research/cold_report_sparse_domain_actual_failure_20261004.md"
+}

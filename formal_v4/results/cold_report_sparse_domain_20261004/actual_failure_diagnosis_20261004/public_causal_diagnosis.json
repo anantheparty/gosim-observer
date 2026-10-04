@@ -1,0 +1,2012 @@
+{
+  "public_only": true,
+  "actual_private_fault_dates_read": false,
+  "L4_read": false,
+  "frozen_model_or_policy_changed": false,
+  "seconds": 18.264323949813843,
+  "cards": {
+    "L1": {
+      "actual_reports": [
+        {
+          "observe_action_index": 857,
+          "posterior": 0.4436688228114642,
+          "report_minus_wait": 0.9491566198307453,
+          "quota": 2,
+          "progress": 0.7326600705106334,
+          "nuisance": [
+            2,
+            0
+          ]
+        }
+      ],
+      "public_report_results": [
+        {
+          "correct": true,
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "final_false_count": 0,
+      "correct_reports": 1,
+      "NN_queries": 940,
+      "NN_seconds": 0.1886061091790907,
+      "selected_public_states": [
+        {
+          "rank": 857,
+          "action": "report",
+          "public_false_count": 0,
+          "p": 0.44466393223653583,
+          "p_without_last_report_public_scalars": 0.44466393223653583,
+          "progress": 0.7326600705106334,
+          "nuisance": [
+            2,
+            0
+          ],
+          "quota": 2,
+          "pgrid": 0.5,
+          "report_age_clock_slots": 96.0,
+          "quake_age_nights": 14.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": true,
+          "report_minus_wait": 0.9491566198307453,
+          "dp_decomposition": {
+            "immediate_correct_reward": 50.0,
+            "immediate_wait_loss": 0.880761420306487,
+            "wait_future": 176.3134718662751,
+            "correct_future": 81.17570632523751,
+            "false_future": 171.58802780636123,
+            "report_future_mixture": 126.38186706579937
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 834,
+              "night": 21,
+              "slot": 19,
+              "ratio_lo": 0.5673576911780072,
+              "ratio_hi": 0.6808296885448835,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 835,
+              "night": 21,
+              "slot": 23,
+              "ratio_lo": 0.5958438843831722,
+              "ratio_hi": 0.7150140887808426,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 836,
+              "night": 21,
+              "slot": 25,
+              "ratio_lo": 0.5826116865874721,
+              "ratio_hi": 0.6991353036094937,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 837,
+              "night": 21,
+              "slot": 27,
+              "ratio_lo": 0.6016927608768158,
+              "ratio_hi": 0.7220326924418777,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 839,
+              "night": 21,
+              "slot": 29,
+              "ratio_lo": 0.6589668073901023,
+              "ratio_hi": 0.7907632351488039,
+              "earthquake_notice": true
+            }
+          ]
+        },
+        {
+          "rank": 857,
+          "action": "observe",
+          "public_false_count": 0,
+          "p": 0.0,
+          "p_without_last_report_public_scalars": 0.2309092039776718,
+          "progress": 0.7326600705106334,
+          "nuisance": [
+            2,
+            1
+          ],
+          "quota": 2,
+          "pgrid": 0.0,
+          "report_age_clock_slots": 0.0,
+          "quake_age_nights": 14.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": true,
+          "report_minus_wait": -8.898671953860116,
+          "dp_decomposition": {
+            "immediate_correct_reward": 0.0,
+            "immediate_wait_loss": 0.0,
+            "wait_future": 81.16833919102629,
+            "correct_future": 0.0,
+            "false_future": 72.26966723716619,
+            "report_future_mixture": 72.26966723716619
+          },
+          "public_recent_ratios": []
+        }
+      ],
+      "v1_qualified_states": [],
+      "first_blocked_v1_qualified": null,
+      "public_source_sha256": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_initialize_public.json": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L1/actions.jsonl": "8c17f55b9f28a49b6d8c25e3d7bdbf65f803b6e3e27592fe67696da746b206c1",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L1/decisions.csv": "fe5f309d5cb4021b7f489b4731c9739dee5ffec7e76d1735a745ac5616f5d82b",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L1/observations.csv": "2c8890a2c01988ef0f569d8821beb86e909ced10129ce046d4e13608d97d36fc",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L1/messages.jsonl": "db6a7d75c6acfd0677ad39b1fee81b33aaba6c1b6992c3dd6b1d94c7b00a568e"
+      },
+      "original_private_fields_read": false
+    },
+    "L2": {
+      "actual_reports": [
+        {
+          "observe_action_index": 1087,
+          "posterior": 0.005961205250405454,
+          "report_minus_wait": 0.5082740049691576,
+          "quota": 2,
+          "progress": 0.9999359768690623,
+          "nuisance": [
+            0,
+            1
+          ]
+        }
+      ],
+      "public_report_results": [
+        {
+          "correct": true,
+          "repaired": true,
+          "score_delta": 100.0
+        },
+        {
+          "correct": false,
+          "repaired": false,
+          "score_delta": 0.0
+        }
+      ],
+      "final_false_count": 1,
+      "correct_reports": 1,
+      "NN_queries": 1033,
+      "NN_seconds": 0.2086414180812426,
+      "selected_public_states": [
+        {
+          "rank": 1087,
+          "action": "report",
+          "public_false_count": 0,
+          "p": 0.005961205250405454,
+          "p_without_last_report_public_scalars": 0.010342555452737951,
+          "progress": 0.9999359768690623,
+          "nuisance": [
+            0,
+            1
+          ],
+          "quota": 2,
+          "pgrid": 0.005,
+          "report_age_clock_slots": 96.0,
+          "quake_age_nights": 0.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": true,
+          "report_minus_wait": 0.5082740049691576,
+          "dp_decomposition": {
+            "immediate_correct_reward": 0.5,
+            "immediate_wait_loss": 0.00827400496915767,
+            "wait_future": 0.0,
+            "correct_future": 0.0,
+            "false_future": 0.0,
+            "report_future_mixture": 0.0
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 1075,
+              "night": 35,
+              "slot": 18,
+              "ratio_lo": 1.152510405195228,
+              "ratio_hi": 1.383016833141097,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1079,
+              "night": 35,
+              "slot": 21,
+              "ratio_lo": 1.1616575724733766,
+              "ratio_hi": 1.3939903563437663,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1083,
+              "night": 35,
+              "slot": 25,
+              "ratio_lo": 1.1621170387301571,
+              "ratio_hi": 1.3945426798876537,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1085,
+              "night": 35,
+              "slot": 27,
+              "ratio_lo": 1.1987478288657076,
+              "ratio_hi": 1.4384992461776105,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1086,
+              "night": 35,
+              "slot": 28,
+              "ratio_lo": 1.1796581352447069,
+              "ratio_hi": 1.4156016420796433,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 1087,
+          "action": "observe",
+          "public_false_count": 1,
+          "p": 0.0,
+          "p_without_last_report_public_scalars": 0.010342555452737951,
+          "progress": 0.9999359768690623,
+          "nuisance": [
+            0,
+            1
+          ],
+          "quota": 1,
+          "pgrid": 0.0,
+          "report_age_clock_slots": 0.0,
+          "quake_age_nights": 0.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": 0.0,
+          "dp_decomposition": {
+            "immediate_correct_reward": 0.0,
+            "immediate_wait_loss": 0.0,
+            "wait_future": 0.0,
+            "correct_future": 0.0,
+            "false_future": 0.0,
+            "report_future_mixture": 0.0
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 1075,
+              "night": 35,
+              "slot": 18,
+              "ratio_lo": 1.152510405195228,
+              "ratio_hi": 1.383016833141097,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1079,
+              "night": 35,
+              "slot": 21,
+              "ratio_lo": 1.1616575724733766,
+              "ratio_hi": 1.3939903563437663,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1083,
+              "night": 35,
+              "slot": 25,
+              "ratio_lo": 1.1621170387301571,
+              "ratio_hi": 1.3945426798876537,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1085,
+              "night": 35,
+              "slot": 27,
+              "ratio_lo": 1.1987478288657076,
+              "ratio_hi": 1.4384992461776105,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 1086,
+              "night": 35,
+              "slot": 28,
+              "ratio_lo": 1.1796581352447069,
+              "ratio_hi": 1.4156016420796433,
+              "earthquake_notice": false
+            }
+          ]
+        }
+      ],
+      "v1_qualified_states": [],
+      "first_blocked_v1_qualified": null,
+      "public_source_sha256": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L2_initialize_public.json": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L2/actions.jsonl": "96e75a36bf0ae3de3f2d4bc21e60ca6764395d3618c4feff423672985b31d2d5",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L2/decisions.csv": "c65876be1d7c57c2194a9688b23851b46d1a2e3a198d00ace73e4701292fdc49",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L2/observations.csv": "73bc2a058b308c6eaf27d190b95a6004423a1f91d5582d63e4d1c07fd2122236",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L2/messages.jsonl": "036097d25e0f6c007b4080bc767c22cc0f5661c07db211277963d2fe1be6018c"
+      },
+      "original_private_fields_read": false
+    },
+    "L3": {
+      "actual_reports": [
+        {
+          "observe_action_index": 767,
+          "posterior": 0.826689498670667,
+          "report_minus_wait": 3.9158534463747685,
+          "quota": 2,
+          "progress": 0.49412465627864344,
+          "nuisance": [
+            1,
+            0
+          ]
+        },
+        {
+          "observe_action_index": 769,
+          "posterior": 0.6588966402342094,
+          "report_minus_wait": 2.1054660715184923,
+          "quota": 1,
+          "progress": 0.4959619105815256,
+          "nuisance": [
+            1,
+            0
+          ]
+        }
+      ],
+      "public_report_results": [
+        {
+          "correct": false,
+          "repaired": false,
+          "score_delta": 0.0
+        },
+        {
+          "correct": false,
+          "repaired": false,
+          "score_delta": 0.0
+        }
+      ],
+      "final_false_count": 2,
+      "correct_reports": 0,
+      "NN_queries": 713,
+      "NN_seconds": 0.14433710696175694,
+      "selected_public_states": [
+        {
+          "rank": 767,
+          "action": "report",
+          "public_false_count": 0,
+          "p": 0.8266894986706667,
+          "p_without_last_report_public_scalars": 0.8266894986706667,
+          "progress": 0.49412465627864344,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 2,
+          "pgrid": 0.8,
+          "report_age_clock_slots": 96.0,
+          "quake_age_nights": 1.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": true,
+          "report_minus_wait": 3.9158534463747685,
+          "dp_decomposition": {
+            "immediate_correct_reward": 80.0,
+            "immediate_wait_loss": 1.0638450673274829,
+            "wait_future": 176.4867233608928,
+            "correct_future": 82.36899357512382,
+            "false_future": 167.21768439920484,
+            "report_future_mixture": 99.33873173994003
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 767,
+          "action": "observe",
+          "public_false_count": 1,
+          "p": 0.0,
+          "p_without_last_report_public_scalars": 0.8266894986706667,
+          "progress": 0.49412465627864344,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 1,
+          "pgrid": 0.0,
+          "report_age_clock_slots": 0.0,
+          "quake_age_nights": 1.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": -23.798836531126142,
+          "dp_decomposition": {
+            "immediate_correct_reward": 0.0,
+            "immediate_wait_loss": 0.0,
+            "wait_future": 167.36847759408812,
+            "correct_future": 82.4124103826021,
+            "false_future": 143.56964106296192,
+            "report_future_mixture": 143.56964106296192
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 769,
+          "action": "report",
+          "public_false_count": 1,
+          "p": 0.658896640234209,
+          "p_without_last_report_public_scalars": 0.6040339920211173,
+          "progress": 0.4959619105815256,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 1,
+          "pgrid": 0.65,
+          "report_age_clock_slots": 69.00444444444445,
+          "quake_age_nights": 2.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": 2.1054660715184923,
+          "dp_decomposition": {
+            "immediate_correct_reward": 65.0,
+            "immediate_wait_loss": 1.1588530263456052,
+            "wait_future": 167.73744067388586,
+            "correct_future": 82.41938787976441,
+            "false_future": 143.17557599203388,
+            "report_future_mixture": 103.68405371905872
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 769,
+          "action": "observe",
+          "public_false_count": 2,
+          "p": 0.0,
+          "p_without_last_report_public_scalars": 0.6040339920211173,
+          "progress": 0.4959619105815256,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 0,
+          "pgrid": 0.0,
+          "report_age_clock_slots": 0.0,
+          "quake_age_nights": 2.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": -149.93333299369172,
+          "dp_decomposition": {
+            "immediate_correct_reward": 0.0,
+            "immediate_wait_loss": 0.0,
+            "wait_future": 143.48128787041,
+            "correct_future": 82.40715155983345,
+            "false_future": 143.54795487671828,
+            "report_future_mixture": 143.54795487671828
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 770,
+          "action": "observe",
+          "public_false_count": 2,
+          "p": 0.1617100615679272,
+          "p_without_last_report_public_scalars": 0.4300690242361614,
+          "progress": 0.4980619207658621,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 0,
+          "pgrid": 0.2,
+          "report_age_clock_slots": 2.2911111111111113,
+          "quake_age_nights": 2.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": -111.06704323446239,
+          "dp_decomposition": {
+            "immediate_correct_reward": 20.0,
+            "immediate_wait_loss": 0.3655488776533227,
+            "wait_future": 142.29957400744087,
+            "correct_future": 82.42042817078412,
+            "false_future": 142.97862032646043,
+            "report_future_mixture": 130.86698189532518
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 771,
+          "action": "observe",
+          "public_false_count": 2,
+          "p": 0.09769736231498102,
+          "p_without_last_report_public_scalars": 0.27776486569994135,
+          "progress": 0.5000549954170486,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 0,
+          "pgrid": 0.1,
+          "report_age_clock_slots": 4.4655555555555555,
+          "quake_age_nights": 2.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": -130.47626591473946,
+          "dp_decomposition": {
+            "immediate_correct_reward": 10.0,
+            "immediate_wait_loss": 0.1491169727661393,
+            "wait_future": 142.57841626714384,
+            "correct_future": 82.4541947227322,
+            "false_future": 143.0084598970722,
+            "report_future_mixture": 136.9530333796382
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 772,
+          "action": "observe",
+          "public_false_count": 2,
+          "p": 0.03054830924864382,
+          "p_without_last_report_public_scalars": 0.09666232096711577,
+          "progress": 0.5021478765658417,
+          "nuisance": [
+            1,
+            0
+          ],
+          "quota": 0,
+          "pgrid": 0.025,
+          "report_age_clock_slots": 6.748888888888889,
+          "quake_age_nights": 2.0,
+          "v1_qualified": false,
+          "v1_quota_eligible": false,
+          "report_minus_wait": -144.9488066857765,
+          "dp_decomposition": {
+            "immediate_correct_reward": 2.5,
+            "immediate_wait_loss": 0.03991427123546601,
+            "wait_future": 142.8063900112202,
+            "correct_future": 82.44526870106347,
+            "false_future": 143.08362803762222,
+            "report_future_mixture": 141.56766905420827
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 551,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607687305267465,
+              "ratio_hi": 1.3929324906824563,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 552,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1607691680048626,
+              "ratio_hi": 1.3929285619332916,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 553,
+              "night": 10,
+              "slot": 28,
+              "ratio_lo": 1.1487074995756497,
+              "ratio_hi": 1.3784524820169215,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 554,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.0769185138992619,
+              "ratio_hi": 1.2923038430079072,
+              "earthquake_notice": false
+            },
+            {
+              "rank": 555,
+              "night": 10,
+              "slot": 29,
+              "ratio_lo": 1.07691740765401,
+              "ratio_hi": 1.2923072026813625,
+              "earthquake_notice": false
+            }
+          ]
+        },
+        {
+          "rank": 961,
+          "action": "observe",
+          "public_false_count": 2,
+          "p": 0.8808568073964043,
+          "p_without_last_report_public_scalars": 0.6670177162870591,
+          "progress": 0.8973418881759854,
+          "nuisance": [
+            2,
+            0
+          ],
+          "quota": 0,
+          "pgrid": 0.9,
+          "report_age_clock_slots": 96.0,
+          "quake_age_nights": 17.0,
+          "v1_qualified": true,
+          "v1_quota_eligible": false,
+          "report_minus_wait": 112.08261256511472,
+          "dp_decomposition": {
+            "immediate_correct_reward": 90.0,
+            "immediate_wait_loss": 1.9327989578247071,
+            "wait_future": -0.45934873472873117,
+            "correct_future": 38.60994507730531,
+            "false_future": -0.5848569701353195,
+            "report_future_mixture": 34.69046487256125
+          },
+          "public_recent_ratios": [
+            {
+              "rank": 956,
+              "night": 32,
+              "slot": 20,
+              "ratio_lo": 0.3228328271752963,
+              "ratio_hi": 0.3874000480465005,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 957,
+              "night": 32,
+              "slot": 22,
+              "ratio_lo": 0.34163621412861495,
+              "ratio_hi": 0.40996388991373806,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 958,
+              "night": 32,
+              "slot": 26,
+              "ratio_lo": 0.3543400156732471,
+              "ratio_hi": 0.4252086947840065,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 959,
+              "night": 32,
+              "slot": 28,
+              "ratio_lo": 0.3638497950826463,
+              "ratio_hi": 0.4366440912484949,
+              "earthquake_notice": true
+            },
+            {
+              "rank": 960,
+              "night": 33,
+              "slot": 0,
+              "ratio_lo": 0.40830045508547486,
+              "ratio_hi": 0.48996118886599527,
+              "earthquake_notice": true
+            }
+          ]
+        }
+      ],
+      "v1_qualified_states": [
+        {
+          "rank": 961,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19604.0,
+            "median_ratio_upper": 0.4107326416827979,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              953,
+              954,
+              955,
+              956,
+              957,
+              958,
+              959,
+              960
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 962,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 18349.0,
+            "median_ratio_upper": 0.4175862923488723,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              954,
+              955,
+              956,
+              957,
+              958,
+              959,
+              960,
+              961
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 963,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19901.0,
+            "median_ratio_upper": 0.4309263930162507,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              955,
+              956,
+              957,
+              958,
+              959,
+              960,
+              961,
+              962
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 964,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 20052.0,
+            "median_ratio_upper": 0.4502617985704599,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              956,
+              957,
+              958,
+              959,
+              960,
+              961,
+              962,
+              963
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 965,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 20107.0,
+            "median_ratio_upper": 0.4502617985704599,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              957,
+              958,
+              959,
+              960,
+              961,
+              962,
+              963,
+              964
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 966,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 18877.0,
+            "median_ratio_upper": 0.4502617985704599,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              958,
+              959,
+              960,
+              961,
+              962,
+              963,
+              964,
+              965
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 967,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 20136.0,
+            "median_ratio_upper": 0.471935608296357,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              959,
+              960,
+              961,
+              962,
+              963,
+              964,
+              965,
+              966
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 973,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 13924.0,
+            "median_ratio_upper": 0.4799403033468335,
+            "earthquake_samples": 9,
+            "evidence_ranks": [
+              964,
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 974,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 16368.0,
+            "median_ratio_upper": 0.4799403033468335,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              964,
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 975,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 16670.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 976,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 18918.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 976,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19512.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 977,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 20220.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 977,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 20412.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              965,
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 978,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 18943.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 10,
+            "evidence_ranks": [
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974,
+              977
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 979,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19919.0,
+            "median_ratio_upper": 0.48555636411475733,
+            "earthquake_samples": 11,
+            "evidence_ranks": [
+              966,
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974,
+              977,
+              978
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 980,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 18462.0,
+            "median_ratio_upper": 0.4799403033468335,
+            "earthquake_samples": 11,
+            "evidence_ranks": [
+              967,
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974,
+              977,
+              978,
+              979
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 981,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 18977.0,
+            "median_ratio_upper": 0.47485181319858594,
+            "earthquake_samples": 11,
+            "evidence_ranks": [
+              968,
+              969,
+              970,
+              971,
+              972,
+              973,
+              974,
+              977,
+              978,
+              979,
+              980
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 982,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 20129.0,
+            "median_ratio_upper": 0.4596226393062429,
+            "earthquake_samples": 11,
+            "evidence_ranks": [
+              969,
+              970,
+              971,
+              972,
+              973,
+              974,
+              977,
+              978,
+              979,
+              980,
+              981
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 983,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 21456.0,
+            "median_ratio_upper": 0.45744936243335077,
+            "earthquake_samples": 11,
+            "evidence_ranks": [
+              970,
+              971,
+              972,
+              973,
+              974,
+              977,
+              978,
+              979,
+              980,
+              981,
+              982
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 987,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 19178.0,
+            "median_ratio_upper": 0.4708453395826863,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              979,
+              980,
+              981,
+              982,
+              983,
+              984,
+              985,
+              986
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 988,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 20873.0,
+            "median_ratio_upper": 0.486034393617001,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              980,
+              981,
+              982,
+              983,
+              984,
+              985,
+              986,
+              987
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 989,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 22802.0,
+            "median_ratio_upper": 0.5002789936619355,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              981,
+              982,
+              983,
+              984,
+              985,
+              986,
+              987,
+              988
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 990,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 22766.0,
+            "median_ratio_upper": 0.5171988606322473,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              982,
+              983,
+              984,
+              985,
+              986,
+              987,
+              988,
+              989
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 991,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 23860.0,
+            "median_ratio_upper": 0.5171988606322473,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              982,
+              983,
+              984,
+              985,
+              986,
+              987,
+              988,
+              989
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 992,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 23532.0,
+            "median_ratio_upper": 0.5286886097486359,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              983,
+              984,
+              985,
+              986,
+              987,
+              988,
+              989,
+              991
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 993,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 24188.0,
+            "median_ratio_upper": 0.5314814633143894,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              984,
+              985,
+              986,
+              987,
+              988,
+              989,
+              991,
+              992
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 994,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 27553.0,
+            "median_ratio_upper": 0.5314814633143894,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              984,
+              985,
+              986,
+              987,
+              988,
+              989,
+              991,
+              992
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 995,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 26296.0,
+            "median_ratio_upper": 0.5314814633143894,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              985,
+              986,
+              987,
+              988,
+              989,
+              991,
+              992,
+              994
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 997,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 25443.0,
+            "median_ratio_upper": 0.5286886097486359,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              987,
+              988,
+              989,
+              991,
+              992,
+              994,
+              995,
+              996
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 998,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 24578.0,
+            "median_ratio_upper": 0.5202623107394075,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              988,
+              989,
+              991,
+              992,
+              994,
+              995,
+              996,
+              997
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 999,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 4,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 24110.0,
+            "median_ratio_upper": 0.5161480296583063,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              989,
+              991,
+              992,
+              994,
+              995,
+              996,
+              997,
+              998
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 1000,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 23348.0,
+            "median_ratio_upper": 0.5161480296583063,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              991,
+              992,
+              994,
+              995,
+              996,
+              997,
+              998,
+              999
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 1001,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 22683.0,
+            "median_ratio_upper": 0.5161480296583063,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              992,
+              994,
+              995,
+              996,
+              997,
+              998,
+              999,
+              1000
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 1002,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 2,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 18346.0,
+            "median_ratio_upper": 0.5161480296583063,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              994,
+              995,
+              996,
+              997,
+              998,
+              999,
+              1000,
+              1001
+            ],
+            "qualified": true
+          }
+        },
+        {
+          "rank": 1003,
+          "free": 0,
+          "quota_eligible": false,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19555.0,
+            "median_ratio_upper": 0.527147721130397,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              995,
+              996,
+              997,
+              998,
+              999,
+              1000,
+              1001,
+              1002
+            ],
+            "qualified": true
+          }
+        }
+      ],
+      "first_blocked_v1_qualified": {
+        "rank": 961,
+        "free": 0,
+        "quota_eligible": false,
+        "features": {
+          "distinct_slots": 8,
+          "low_slots": 8,
+          "nights": 2,
+          "field_sectors": 3,
+          "programs": [
+            "DARK"
+          ],
+          "observing_span_seconds": 19604.0,
+          "median_ratio_upper": 0.4107326416827979,
+          "earthquake_samples": 8,
+          "evidence_ranks": [
+            953,
+            954,
+            955,
+            956,
+            957,
+            958,
+            959,
+            960
+          ],
+          "qualified": true
+        }
+      },
+      "public_source_sha256": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L3_initialize_public.json": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L3/actions.jsonl": "94a8dc63b2270e31d36ab0b309da15ddd683b379bf5175387fb77f290bcf0b48",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L3/decisions.csv": "85f1ee21eef7ffbc343b43e4ac304109a5aeab9cafa408f34f56a4aed54ee840",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L3/observations.csv": "151727d8bb597afffb95d36937d9dfdc652405ecd18a7acafb0ad8537f05c43d",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_report_actual_20261004/seasons/sparse_report/L3/messages.jsonl": "7df2e66a6be9ff9280adcc025cc6fc7d478bcf7619c31b036d0cad93e17a689b"
+      },
+      "original_private_fields_read": false
+    },
+    "L3_action_parity": {
+      "new_without_reports": 1169,
+      "control_without_reports": 1169,
+      "exact_equal": true,
+      "first_difference": null,
+      "v1_pre_correct_report_prefix_equal_control": true,
+      "v1_pre_report_prefix_actions": 1119
+    }
+  }
+}
