@@ -1,0 +1,35 @@
+{
+  "train": {
+    "seed_first": 740000,
+    "seed_last": 740127,
+    "worlds": 128,
+    "records": 129630,
+    "faultprevalence": 0.0776903494561444
+  },
+  "cal": {
+    "seed_first": 750000,
+    "seed_last": 750015,
+    "worlds": 16,
+    "records": 16359,
+    "faultprevalence": 0.058988935754019194
+  },
+  "val": {
+    "seed_first": 750016,
+    "seed_last": 750031,
+    "worlds": 16,
+    "records": 16101,
+    "faultprevalence": 0.06738711881249612
+  },
+  "test": {
+    "seed_first": 760000,
+    "seed_last": 760031,
+    "worlds": 32,
+    "unopened": true
+  },
+  "seconds": 63.642308950424194,
+  "official_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+  "generator_sha256": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a",
+  "xdim": 1382,
+  "host_labels_only": true,
+  "limitations": "protected high-altitude common-H sensor; fixed random fields; best-only science; no REQ/Jain/data-loss; empirical projected Bellman"
+}

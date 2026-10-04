@@ -1,0 +1,26 @@
+         197454 function calls in 0.164 seconds
+
+   Ordered by: cumulative time
+   List reduced from 207 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.164    0.164 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:176(choose)
+        1    0.003    0.003    0.120    0.120 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:235(choose)
+      416    0.003    0.000    0.112    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/benchmark.py:48(record_fine)
+      400    0.000    0.000    0.110    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:158(_evaluate)
+      416    0.065    0.000    0.109    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:399(_evaluate)
+        4    0.000    0.000    0.038    0.009 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/benchmark.py:50(record_coarse)
+        4    0.024    0.006    0.038    0.009 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:68(coarse_numpy_local)
+      416    0.008    0.000    0.014    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:193(_classify)
+     6711    0.003    0.000    0.010    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/numeric.py:658(flatnonzero)
+      672    0.009    0.000    0.009    0.000 {method 'at' of 'numpy.ufunc' objects}
+    13333    0.003    0.000    0.008    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:51(_wrapfunc)
+     2654    0.007    0.000    0.007    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     1290    0.001    0.000    0.005    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:2255(sum)
+      699    0.000    0.000    0.005    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/lib/_arraysetops_impl.py:144(unique)
+     1303    0.001    0.000    0.004    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:69(_wrapreduction)
+      400    0.002    0.000    0.004    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:57(_shift_altaz)
+      699    0.002    0.000    0.004    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/lib/_arraysetops_impl.py:342(_unique1d)
+     4875    0.002    0.000    0.004    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:1208(argmax)
+
+

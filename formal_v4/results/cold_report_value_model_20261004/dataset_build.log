@@ -1,0 +1,21 @@
+train 0 1011
+train 16 17294
+train 32 33420
+train 48 49614
+train 64 65841
+train 80 82019
+train 96 98101
+train 112 114322
+cal 0 1028
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_world.py", line 164, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_world.py", line 154, in main
+    r,_=trajectory(offset+k,collect=True);rows.extend(r)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_world.py", line 144, in trajectory
+    old=state.best[a['ids']].copy();state.ingest(w,a,raw)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_world.py", line 97, in ingest
+    token=score_token(scores,world.w[a['ids']],world.flux[a['ids']],a['h'],a['duration'],a['program'],
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/sensor_core.py", line 25, in score_token
+    pred=np.minimum(1.,C[:,None]*E[:,None]*flux*duration*h/450.)*mult
+KeyboardInterrupt

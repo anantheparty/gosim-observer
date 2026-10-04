@@ -1,0 +1,19 @@
+{
+  "selected": "dp_free",
+  "rule": "dp_free remains selected from original validation; mechanical deterministic public-count repair; no threshold/model retuning",
+  "model_sha256": "4e153a292813a449c2c1e6db1f909e3dcf453a3618e46a6cff241c43d6feeb29",
+  "dp_sha256": "9e39d111e42dd93067d1978a0959f6ae58d67d0d592251a1d297ec009fd50ebf",
+  "test_seed_first": 770000,
+  "test_seed_last": 770031,
+  "test_unopened": false,
+  "test_once_complete": true,
+  "prior_test": {
+    "seeds": [
+      760000,
+      760031
+    ],
+    "file": "test_evaluation.json",
+    "qualification": "implementation-defective v1 DP; retained; not used for v2 choices"
+  },
+  "test_output_prefix": "test_v2"
+}

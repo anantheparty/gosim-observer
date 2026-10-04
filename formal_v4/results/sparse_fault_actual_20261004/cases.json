@@ -1,0 +1,41 @@
+{
+  "schema": "root-normal-exact-accelerator-and-debias-cases-v1",
+  "cases": [
+    {
+      "variant": "fault_fast",
+      "card": "L1",
+      "package": "fault_package",
+      "entry_argv": [
+        "sparse_entry.py"
+      ],
+      "cpus": "20,21"
+    },
+    {
+      "variant": "fault_fast",
+      "card": "L2",
+      "package": "fault_package",
+      "entry_argv": [
+        "sparse_entry.py"
+      ],
+      "cpus": "22,23"
+    },
+    {
+      "variant": "debias_fast",
+      "card": "L1",
+      "package": "debias_package",
+      "entry_argv": [
+        "sparse_entry.py"
+      ],
+      "cpus": "14,15"
+    },
+    {
+      "variant": "debias_fast",
+      "card": "L2",
+      "package": "debias_package",
+      "entry_argv": [
+        "sparse_entry.py"
+      ],
+      "cpus": "12,13"
+    }
+  ]
+}

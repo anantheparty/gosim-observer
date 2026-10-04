@@ -1,0 +1,6 @@
+{"card": "L1", "fraction": 0, "name": "strong", "action_equal": true, "samples": {"original": [0.5600830330513418, 0.5610815910040401, 0.5537029520492069], "sparse": [0.2546456450363621, 0.2510153210023418, 0.2518597030430101]}, "original_seconds": 0.5600830330513418, "sparse_seconds": 0.2518597030430101, "speedup": 2.223789777738666}
+Traceback (most recent call last):
+  File "/experiment/fair_benchmark.py", line 26, in <module>
+    assert a==reference,(card,fraction,name,mode)
+           ^^^^^^^^^^^^
+AssertionError: ('L1', 0, 'debias', 'sparse')

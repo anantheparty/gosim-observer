@@ -1,0 +1,25 @@
+{
+  "sorted_numpy_attempt": {
+    "status": "rejected",
+    "candidate_values_equal": true,
+    "example_original_coarse_seconds": 0.088,
+    "example_sorted_coarse_seconds": 0.123,
+    "reason": "Sorting/gathering cost exceeded scatter reduction savings; it did not address array-construction overhead.",
+    "shipped": false
+  },
+  "native_stride_bug": {
+    "status": "fixed_before_freeze",
+    "first_coarse_max_rate_error": 1.5725669876723938,
+    "reason": "NumPy advanced-index score arrays can have Fortran rather than C layout; the initial native pointer consumer assumed C layout.",
+    "fix": "max_cells makes all incoming arrays C-contiguous before passing pointers; fine inputs are already contiguous and checked.",
+    "subsequent_contract": "All 1000 arithmetic/quota cases and all fixed-state coarse candidates match."
+  },
+  "linux_timer_harness": {
+    "status": "fixed_in_benchmark_only",
+    "first_failure": "L1 initial direct debias choose action differed after ordinary 0.22-second budget cut off only the slower original.",
+    "reason": "The benchmark initially called the bare child with policy_config planning_budget_seconds=0.22. Production debias_entry already calls that child with planning_budget_seconds=1e9.",
+    "fix": "Use exactly the existing production child setting of 1e9 for both original and accelerated direct-debias workload calls.",
+    "actor_package_changed": false,
+    "failure_log": "fair_timer_harness_failure.txt"
+  }
+}

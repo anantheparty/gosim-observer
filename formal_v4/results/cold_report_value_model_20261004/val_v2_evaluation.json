@@ -1,0 +1,1053 @@
+{
+  "split": "val_v2",
+  "seeds": [
+    750016,
+    750031
+  ],
+  "worlds": 16,
+  "seconds": 11.253047943115234,
+  "summary": {
+    "none": {
+      "score_mean": 3567.512538374999,
+      "gain_over_none": 0.0,
+      "gain_standard_error": 0.0,
+      "decision_regret": 409.5867693124999,
+      "science_mean": 3567.512538374999,
+      "report_mean": 0.0,
+      "correct_mean": 0.0,
+      "false_mean": 0.0,
+      "wins_over_none": 0,
+      "losses_over_none": 0
+    },
+    "oracle": {
+      "score_mean": 3977.0993076874993,
+      "gain_over_none": 409.5867693124999,
+      "gain_standard_error": 101.76906603652039,
+      "decision_regret": 0.0,
+      "science_mean": 3889.5993076874993,
+      "report_mean": 87.5,
+      "correct_mean": 0.875,
+      "false_mean": 0.0,
+      "wins_over_none": 9,
+      "losses_over_none": 0
+    },
+    "p90_free": {
+      "score_mean": 3732.228944812499,
+      "gain_over_none": 164.71640643749984,
+      "gain_standard_error": 58.88950521194502,
+      "decision_regret": 244.87036287500007,
+      "science_mean": 3694.728944812499,
+      "report_mean": 37.5,
+      "correct_mean": 0.375,
+      "false_mean": 0.0,
+      "wins_over_none": 6,
+      "losses_over_none": 0
+    },
+    "dp_free": {
+      "score_mean": 3922.7494189999998,
+      "gain_over_none": 355.2368806250003,
+      "gain_standard_error": 90.19612863560526,
+      "decision_regret": 54.3498886874996,
+      "science_mean": 3841.4994189999993,
+      "report_mean": 81.25,
+      "correct_mean": 0.8125,
+      "false_mean": 0.9375,
+      "wins_over_none": 9,
+      "losses_over_none": 0
+    }
+  },
+  "raw": [
+    {
+      "none": {
+        "seed": 750016,
+        "score": 4381.784991000001,
+        "science": 4381.784991000001,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750016,
+        "score": 4381.784991000001,
+        "science": 4381.784991000001,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750016,
+        "score": 4381.784991000001,
+        "science": 4381.784991000001,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750016,
+        "score": 4381.784991000001,
+        "science": 4381.784991000001,
+        "report": 0.0,
+        "reports": 1,
+        "correct": 0,
+        "false": 1,
+        "trace": [
+          [
+            804,
+            0,
+            1,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750017,
+        "score": 3210.214359999998,
+        "science": 3210.214359999998,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750017,
+        "score": 3946.195862999996,
+        "science": 3746.195862999996,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            294,
+            1,
+            2,
+            0.872004
+          ],
+          [
+            701,
+            1,
+            2,
+            2.4589620000000014
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750017,
+        "score": 3593.696524999998,
+        "science": 3493.696524999998,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            320,
+            1,
+            2,
+            2.8546949999999995
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750017,
+        "score": 3923.094136999998,
+        "science": 3723.094136999998,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            303,
+            1,
+            2,
+            2.0218690000000006
+          ],
+          [
+            722,
+            1,
+            2,
+            1.2894580000000002
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750018,
+        "score": 3659.3975039999955,
+        "science": 3659.3975039999955,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750018,
+        "score": 3659.3975039999955,
+        "science": 3659.3975039999955,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750018,
+        "score": 3659.3975039999955,
+        "science": 3659.3975039999955,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750018,
+        "score": 3659.3975039999955,
+        "science": 3659.3975039999955,
+        "report": 0.0,
+        "reports": 2,
+        "correct": 0,
+        "false": 2,
+        "trace": [
+          [
+            417,
+            0,
+            1,
+            0.0
+          ],
+          [
+            788,
+            0,
+            0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750019,
+        "score": 2932.065776,
+        "science": 2932.065776,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750019,
+        "score": 3599.9985129999964,
+        "science": 3399.9985129999964,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            333,
+            1,
+            2,
+            2.0747599999999995
+          ],
+          [
+            590,
+            1,
+            2,
+            0.271255
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750019,
+        "score": 3155.097063999997,
+        "science": 3055.097063999997,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            396,
+            1,
+            2,
+            2.762461
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750019,
+        "score": 3547.1514649999976,
+        "science": 3347.1514649999976,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            340,
+            1,
+            2,
+            2.2322770000000016
+          ],
+          [
+            666,
+            1,
+            2,
+            0.529196
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750020,
+        "score": 4139.009284999999,
+        "science": 4139.009284999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750020,
+        "score": 4139.009284999999,
+        "science": 4139.009284999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750020,
+        "score": 4139.009284999999,
+        "science": 4139.009284999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750020,
+        "score": 4139.009284999999,
+        "science": 4139.009284999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      }
+    },
+    {
+      "none": {
+        "seed": 750021,
+        "score": 3853.3200090000005,
+        "science": 3853.3200090000005,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750021,
+        "score": 3853.3200090000005,
+        "science": 3853.3200090000005,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750021,
+        "score": 3853.3200090000005,
+        "science": 3853.3200090000005,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750021,
+        "score": 3853.3200090000005,
+        "science": 3853.3200090000005,
+        "report": 0.0,
+        "reports": 2,
+        "correct": 0,
+        "false": 2,
+        "trace": [
+          [
+            832,
+            0,
+            1,
+            0.0
+          ],
+          [
+            1007,
+            0,
+            0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750022,
+        "score": 4014.8385039999966,
+        "science": 4014.8385039999966,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750022,
+        "score": 4014.8385039999966,
+        "science": 4014.8385039999966,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750022,
+        "score": 4014.8385039999966,
+        "science": 4014.8385039999966,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750022,
+        "score": 4014.8385039999966,
+        "science": 4014.8385039999966,
+        "report": 0.0,
+        "reports": 1,
+        "correct": 0,
+        "false": 1,
+        "trace": [
+          [
+            528,
+            0,
+            1,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750023,
+        "score": 3680.0562210000076,
+        "science": 3680.0562210000076,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750023,
+        "score": 4072.618951,
+        "science": 3972.618951,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            613,
+            1,
+            2,
+            1.0806699999999998
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750023,
+        "score": 3680.0562210000076,
+        "science": 3680.0562210000076,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750023,
+        "score": 3999.649524000002,
+        "science": 3899.649524000002,
+        "report": 100.0,
+        "reports": 2,
+        "correct": 1,
+        "false": 1,
+        "trace": [
+          [
+            711,
+            1,
+            2,
+            0.5884690000000001
+          ],
+          [
+            960,
+            0,
+            1,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750024,
+        "score": 3526.0078579999945,
+        "science": 3526.0078579999945,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750024,
+        "score": 4037.526711,
+        "science": 3937.526711,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            395,
+            1,
+            2,
+            0.0
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750024,
+        "score": 3526.0078579999945,
+        "science": 3526.0078579999945,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750024,
+        "score": 4020.6328570000014,
+        "science": 3920.6328570000014,
+        "report": 100.0,
+        "reports": 3,
+        "correct": 1,
+        "false": 2,
+        "trace": [
+          [
+            425,
+            1,
+            2,
+            0.0
+          ],
+          [
+            657,
+            0,
+            1,
+            0.0
+          ],
+          [
+            664,
+            0,
+            0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750025,
+        "score": 3130.0185060000013,
+        "science": 3130.0185060000013,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750025,
+        "score": 4255.23962,
+        "science": 4055.2396200000007,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            338,
+            1,
+            2,
+            1.760971
+          ],
+          [
+            585,
+            1,
+            2,
+            0.0
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750025,
+        "score": 3580.593888000002,
+        "science": 3480.593888000002,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            349,
+            1,
+            2,
+            1.6844260000000002
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750025,
+        "score": 4242.4943250000015,
+        "science": 4042.4943250000015,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            343,
+            1,
+            2,
+            3.3358869999999996
+          ],
+          [
+            594,
+            1,
+            2,
+            1.4209910000000001
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750026,
+        "score": 3698.057356999999,
+        "science": 3698.057356999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750026,
+        "score": 3698.057356999999,
+        "science": 3698.057356999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750026,
+        "score": 3698.057356999999,
+        "science": 3698.057356999999,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750026,
+        "score": 3698.057356999999,
+        "science": 3698.057356999999,
+        "report": 0.0,
+        "reports": 1,
+        "correct": 0,
+        "false": 1,
+        "trace": [
+          [
+            314,
+            0,
+            1,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750027,
+        "score": 3799.7663060000036,
+        "science": 3799.7663060000036,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750027,
+        "score": 3799.7663060000036,
+        "science": 3799.7663060000036,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "p90_free": {
+        "seed": 750027,
+        "score": 3799.7663060000036,
+        "science": 3799.7663060000036,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750027,
+        "score": 3799.7663060000036,
+        "science": 3799.7663060000036,
+        "report": 0.0,
+        "reports": 2,
+        "correct": 0,
+        "false": 2,
+        "trace": [
+          [
+            842,
+            0,
+            1,
+            0.0
+          ],
+          [
+            847,
+            0,
+            0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750028,
+        "score": 2865.6884640000007,
+        "science": 2865.6884640000007,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750028,
+        "score": 3824.3971460000025,
+        "science": 3624.3971460000025,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            311,
+            1,
+            2,
+            3.1898210000000002
+          ],
+          [
+            792,
+            1,
+            2,
+            1.8576070000000002
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750028,
+        "score": 3343.704412,
+        "science": 3243.704412,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            376,
+            1,
+            2,
+            2.378515
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750028,
+        "score": 3406.8188830000026,
+        "science": 3306.8188830000026,
+        "report": 100.0,
+        "reports": 3,
+        "correct": 1,
+        "false": 2,
+        "trace": [
+          [
+            317,
+            1,
+            2,
+            0.886012
+          ],
+          [
+            682,
+            0,
+            1,
+            0.0
+          ],
+          [
+            685,
+            0,
+            0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750029,
+        "score": 3302.342886999997,
+        "science": 3302.342886999997,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750029,
+        "score": 4051.9735959999966,
+        "science": 3951.9735959999966,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            646,
+            1,
+            2,
+            3.8277850000000004
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750029,
+        "score": 3980.3988889999982,
+        "science": 3880.3988889999982,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            685,
+            1,
+            2,
+            1.262466
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750029,
+        "score": 4043.1587809999965,
+        "science": 3943.1587809999965,
+        "report": 100.0,
+        "reports": 2,
+        "correct": 1,
+        "false": 1,
+        "trace": [
+          [
+            615,
+            0,
+            1,
+            0.0
+          ],
+          [
+            651,
+            1,
+            2,
+            4.114336999999999
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750030,
+        "score": 3603.9688459999934,
+        "science": 3603.9688459999934,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750030,
+        "score": 4415.860320999997,
+        "science": 4215.860320999997,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            392,
+            1,
+            2,
+            0.7361950000000004
+          ],
+          [
+            713,
+            1,
+            2,
+            0.2890190000000001
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750030,
+        "score": 4026.2705639999926,
+        "science": 3926.2705639999926,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            743,
+            1,
+            2,
+            2.143361
+          ]
+        ]
+      },
+      "dp_free": {
+        "seed": 750030,
+        "score": 4155.160599999995,
+        "science": 3955.1605999999947,
+        "report": 200.0,
+        "reports": 2,
+        "correct": 2,
+        "false": 0,
+        "trace": [
+          [
+            693,
+            1,
+            2,
+            0.35826100000000005
+          ],
+          [
+            731,
+            1,
+            2,
+            3.6271009999999997
+          ]
+        ]
+      }
+    },
+    {
+      "none": {
+        "seed": 750031,
+        "score": 3283.663739999998,
+        "science": 3283.663739999998,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "oracle": {
+        "seed": 750031,
+        "score": 3883.6042460000003,
+        "science": 3783.6042460000003,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            600,
+            1,
+            2,
+            2.824373000000001
+          ]
+        ]
+      },
+      "p90_free": {
+        "seed": 750031,
+        "score": 3283.663739999998,
+        "science": 3283.663739999998,
+        "report": 0.0,
+        "reports": 0,
+        "correct": 0,
+        "false": 0,
+        "trace": []
+      },
+      "dp_free": {
+        "seed": 750031,
+        "score": 3879.656176000001,
+        "science": 3779.656176000001,
+        "report": 100.0,
+        "reports": 1,
+        "correct": 1,
+        "false": 0,
+        "trace": [
+          [
+            603,
+            1,
+            2,
+            1.726248
+          ]
+        ]
+      }
+    }
+  ],
+  "limitation": "Official generated weather and repair semantics; finite protected random sensor trajectories, best-only score, no production season score or REQ/Jain/data-loss claim",
+  "selected": "dp_free"
+}

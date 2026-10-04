@@ -1,0 +1,26 @@
+         200529 function calls in 0.197 seconds
+
+   Ordered by: cumulative time
+   List reduced from 207 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.197    0.197 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:176(choose)
+        1    0.003    0.003    0.109    0.109 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:235(choose)
+      416    0.001    0.000    0.103    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/benchmark.py:48(record_fine)
+      416    0.059    0.000    0.102    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:399(_evaluate)
+      400    0.000    0.000    0.100    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:158(_evaluate)
+        4    0.000    0.000    0.078    0.019 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/benchmark.py:50(record_coarse)
+        4    0.051    0.013    0.078    0.019 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/cpu_phase_candidates.py:68(coarse_numpy_local)
+      872    0.015    0.000    0.015    0.000 {method 'at' of 'numpy.ufunc' objects}
+      416    0.008    0.000    0.014    0.000 /Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/package/research/spatial_candidates.py:193(_classify)
+     6711    0.003    0.000    0.010    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/numeric.py:658(flatnonzero)
+    13371    0.003    0.000    0.008    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:51(_wrapfunc)
+     3054    0.008    0.000    0.008    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+      670    0.000    0.000    0.006    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/lib/_arraysetops_impl.py:144(unique)
+     9345    0.006    0.000    0.006    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+      670    0.002    0.000    0.005    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/lib/_arraysetops_impl.py:342(_unique1d)
+     1290    0.001    0.000    0.005    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:2255(sum)
+      175    0.000    0.000    0.004    0.000 /Users/kamico/work/GOSIM/OBSERVER/.venv-solver/lib/python3.10/site-packages/numpy/_core/einsumfunc.py:1057(einsum)
+      175    0.004    0.000    0.004    0.000 {built-in method numpy._core._multiarray_umath.c_einsum}
+
+

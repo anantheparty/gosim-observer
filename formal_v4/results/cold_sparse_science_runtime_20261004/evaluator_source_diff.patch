@@ -1,0 +1,181 @@
+--- original SpatialPlanner._evaluate
++++ sparse_evaluator.py
+@@ -1,97 +1,81 @@
+-    def _evaluate(self, center, pool, vectors, up, k, scores, factors, multiplier, req_missing,
+-                  request_reward, request_threshold, request_deadline, uniform_bonus, urgency,
+-                  seconds_left, safety, focus_request=None):
+-        if not len(pool):
+-            return None
+-        fiber, valid, margin = self._classify(vectors[pool], *center)
+-        idx, fiber, margin = pool[valid], fiber[valid], margin[valid]
+-        if not len(idx):
+-            return None
+-        ki = k[idx]
+-        # Exact breakpoints for the frozen-Q model, rounded upward to integer seconds.
+-        times = [self.tmin, seconds_left]
+-        times.extend(np.ceil(1.0 / np.maximum(ki, 1e-12)).tolist())
+-        times.extend(np.floor(1.0 / np.maximum(ki, 1e-12)).tolist())
+-        for threshold, mask in ((self.req_threshold, req_missing[idx]),
+-                                (self.uniform_threshold, factors[idx] < self.uniform_threshold)):
+-            times.extend(np.ceil(threshold * safety / np.maximum(ki[mask], 1e-12)).tolist())
+-        rt = request_threshold[idx]
+-        rm = request_reward[idx] > 0
+-        times.extend(np.ceil(rt[rm] * safety / np.maximum(ki[rm], 1e-12)).tolist())
+-        if focus_request is not None:
+-            membership, _, _, focus_threshold, _ = focus_request
+-            focus_mask = membership[idx]
+-            times.extend(np.ceil(focus_threshold * safety / np.maximum(ki[focus_mask], 1e-12)).tolist())
+-        times.extend(np.floor(up[idx]).tolist())
+-        times.extend((300, 600, 900, 1200, 1800, 2400, 3600))
+-        durations = np.unique(np.clip(np.asarray(times, dtype=int), self.tmin, seconds_left))
+-        durations = durations[(durations >= self.tmin) & (durations <= seconds_left)]
+-        if len(durations) > 72:
+-            durations = durations[np.unique(np.rint(np.linspace(0, len(durations) - 1, 72)).astype(int))]
+-        t = durations[:, None]
+-        raw = np.minimum(1., t * ki[None, :])
+-        robust_raw = np.minimum(1., t * ki[None, :] / safety)
+-        req_done = req_missing[idx][None, :] & (robust_raw + 1e-10 >= self.req_threshold)
+-        uniform_done = (factors[idx][None, :] < self.uniform_threshold) & (robust_raw + 1e-10 >= self.uniform_threshold)
+-        request_done = (request_reward[idx][None, :] > 0) & (robust_raw + 1e-10 >= rt[None, :]) & (t <= request_deadline[idx][None, :])
+-        science = np.maximum(0., self.weight[idx][None, None, :] * raw[:, None, :] * multiplier[:, idx][None, :, :] - scores[idx][None, None, :])
+-        terminal = req_done * self.req_penalty + uniform_done * uniform_bonus[idx][None, :] + request_done * request_reward[idx][None, :]
+-        focus_eligible = None
+-        if focus_request is not None:
+-            membership, focus_reward, focus_left, focus_threshold, focus_deadline = focus_request
+-            focus_eligible = membership[idx][None, :] & (robust_raw + 1e-10 >= focus_threshold) & (t <= focus_deadline)
+-            # Replace one request's distributed shadow price with its exact quota.
+-            terminal -= focus_eligible * (focus_reward / focus_left)
+-        # Scarcity is the primal-dual scheduling price; current score remains separate.
+-        value = (science + terminal[:, None, :]) * urgency[idx][None, None, :]
+-        allowed = t <= up[idx][None, :]
+-        value = np.where(allowed[:, None, :], value, -np.inf)
+-        shape = (len(durations), 3, self.nfib)
+-        best_cell = np.zeros(shape)
+-        offsets = np.arange(len(durations) * 3)[:, None] * self.nfib + fiber[None, :]
+-        np.maximum.at(best_cell.ravel(), offsets.ravel(), value.reshape(len(durations) * 3, -1).ravel())
+-        total = best_cell.sum(axis=2)
+-        focus_costs = None
+-        force_counts = None
+-        if focus_eligible is not None:
+-            eligible_values = np.where((focus_eligible & allowed)[:, None, :], value, -np.inf)
+-            eligible_cell = np.full(shape, -np.inf)
+-            np.maximum.at(eligible_cell.ravel(), offsets.ravel(), eligible_values.reshape(len(durations) * 3, -1).ravel())
+-            focus_costs = best_cell - eligible_cell
+-            ordered_costs = np.sort(focus_costs, axis=2)
+-            # Exact for a single completion reward: cover the quota by choosing the
+-            # fibres whose request-target alternatives have the smallest regret.
+-            quota = min(focus_left, self.nfib)
+-            available = np.sum(np.isfinite(focus_costs), axis=2)
+-            complete_possible = (focus_left <= self.nfib) & (available >= focus_left)
+-            quota_cost = ordered_costs[:, :, :quota].sum(axis=2)
+-            full_value = np.where(complete_possible, total + focus_reward - quota_cost, -np.inf)
+-            # If a field cannot finish the request, price progress as the fraction
+-            # of the terminal reward, capped at its remaining quota.
+-            partial_gain = np.maximum(0., focus_reward / focus_left - ordered_costs[:, :, :quota]).sum(axis=2)
+-            partial_value = total + partial_gain
+-            use_full = complete_possible & (full_value >= total - 1e-10)
+-            total = np.where(complete_possible, np.maximum(total, full_value), partial_value)
+-            force_counts = np.where(complete_possible, np.where(use_full, focus_left, 0), np.sum(ordered_costs[:, :, :quota] < focus_reward / focus_left, axis=2))
+-        rates = total / durations[:, None]
+-        # For a new target, gain/t is flat before saturation.  Prefer the
+-        # largest gain on such a plateau so the best-only ledger does not invite
+-        # several non-accumulating short exposures of the same field.
+-        max_rate = float(rates.max())
+-        tied = rates >= max_rate - 1e-10 * max(1.0, max_rate)
+-        flat = int(np.argmax(np.where(tied, total, -np.inf)))
+-        d, p = divmod(flat, 3)
+-        if rates[d, p] <= 1e-12:
+-            return None
+-        selected, fibers = [], []
+-        force_fibers = set()
+-        if focus_costs is not None:
+-            force_fibers = set(int(f) for f in np.argsort(focus_costs[d, p])[:int(force_counts[d, p])])
+-        for f in range(self.nfib):
+-            candidates = np.flatnonzero((fiber == f) & (focus_eligible[d] if f in force_fibers else True))
+-            if len(candidates):
+-                j = int(candidates[np.argmax(value[d, p, candidates])])
+-                if value[d, p, j] > 0 or f in force_fibers:
+-                    selected.append(int(idx[j]))
+-                    fibers.append(f)
+-        return float(rates[d, p]), center, int(durations[d]), p, np.asarray(selected, dtype=int), np.asarray(fibers, dtype=int)
++"""Original duration/quota/tie evaluator with fused value/fibre reductions."""
++import numpy as np
++from sparse_native import fine_cells
++
++def _evaluate(self, center, pool, vectors, up, k, scores, factors, multiplier, req_missing,
++              request_reward, request_threshold, request_deadline, uniform_bonus, urgency,
++              seconds_left, safety, focus_request=None):
++    if not len(pool):
++        return None
++    fiber, valid, margin = self._classify(vectors[pool], *center)
++    idx, fiber, margin = pool[valid], fiber[valid], margin[valid]
++    if not len(idx):
++        return None
++    ki = k[idx]
++    # Exact breakpoints for the frozen-Q model, rounded upward to integer seconds.
++    times = [self.tmin, seconds_left]
++    times.extend(np.ceil(1.0 / np.maximum(ki, 1e-12)).tolist())
++    times.extend(np.floor(1.0 / np.maximum(ki, 1e-12)).tolist())
++    for threshold, mask in ((self.req_threshold, req_missing[idx]),
++                            (self.uniform_threshold, factors[idx] < self.uniform_threshold)):
++        times.extend(np.ceil(threshold * safety / np.maximum(ki[mask], 1e-12)).tolist())
++    rt = request_threshold[idx]
++    rm = request_reward[idx] > 0
++    times.extend(np.ceil(rt[rm] * safety / np.maximum(ki[rm], 1e-12)).tolist())
++    if focus_request is not None:
++        membership, _, _, focus_threshold, _ = focus_request
++        focus_mask = membership[idx]
++        times.extend(np.ceil(focus_threshold * safety / np.maximum(ki[focus_mask], 1e-12)).tolist())
++    times.extend(np.floor(up[idx]).tolist())
++    times.extend((300, 600, 900, 1200, 1800, 2400, 3600))
++    durations = np.unique(np.clip(np.asarray(times, dtype=int), self.tmin, seconds_left))
++    durations = durations[(durations >= self.tmin) & (durations <= seconds_left)]
++    if len(durations) > 72:
++        durations = durations[np.unique(np.rint(np.linspace(0, len(durations) - 1, 72)).astype(int))]
++    t = durations[:, None]
++    if focus_request is not None:
++        membership, focus_reward, focus_left, focus_threshold, focus_deadline = focus_request
++    best_cell, eligible_cell, winner, eligible_winner = fine_cells(self, idx, fiber, durations,
++        (up, k, scores, factors, multiplier, req_missing, request_reward, request_threshold,
++         request_deadline, uniform_bonus, urgency, safety, focus_request))
++    focus_eligible = focus_request
++    total = best_cell.sum(axis=2)
++    focus_costs = None
++    force_counts = None
++    if focus_eligible is not None:
++        focus_costs = best_cell - eligible_cell
++        ordered_costs = np.sort(focus_costs, axis=2)
++        # Exact for a single completion reward: cover the quota by choosing the
++        # fibres whose request-target alternatives have the smallest regret.
++        quota = min(focus_left, self.nfib)
++        available = np.sum(np.isfinite(focus_costs), axis=2)
++        complete_possible = (focus_left <= self.nfib) & (available >= focus_left)
++        quota_cost = ordered_costs[:, :, :quota].sum(axis=2)
++        full_value = np.where(complete_possible, total + focus_reward - quota_cost, -np.inf)
++        # If a field cannot finish the request, price progress as the fraction
++        # of the terminal reward, capped at its remaining quota.
++        partial_gain = np.maximum(0., focus_reward / focus_left - ordered_costs[:, :, :quota]).sum(axis=2)
++        partial_value = total + partial_gain
++        use_full = complete_possible & (full_value >= total - 1e-10)
++        total = np.where(complete_possible, np.maximum(total, full_value), partial_value)
++        force_counts = np.where(complete_possible, np.where(use_full, focus_left, 0), np.sum(ordered_costs[:, :, :quota] < focus_reward / focus_left, axis=2))
++    rates = total / durations[:, None]
++    # For a new target, gain/t is flat before saturation.  Prefer the
++    # largest gain on such a plateau so the best-only ledger does not invite
++    # several non-accumulating short exposures of the same field.
++    max_rate = float(rates.max())
++    tied = rates >= max_rate - 1e-10 * max(1.0, max_rate)
++    flat = int(np.argmax(np.where(tied, total, -np.inf)))
++    d, p = divmod(flat, 3)
++    if rates[d, p] <= 1e-12:
++        return None
++    selected, fibers = [], []
++    force_fibers = set()
++    if focus_costs is not None:
++        force_fibers = set(int(f) for f in np.argsort(focus_costs[d, p])[:int(force_counts[d, p])])
++    forced = np.asarray([f in force_fibers for f in range(self.nfib)], dtype=bool)
++    chosen = np.where(forced, eligible_winner[d, p], winner[d, p])
++    keep = (chosen >= 0) & ((best_cell[d, p] > 0) | forced)
++    selected = chosen[keep]
++    fibers = np.flatnonzero(keep)
++    return float(rates[d, p]), center, int(durations[d]), p, np.asarray(selected, dtype=int), np.asarray(fibers, dtype=int)

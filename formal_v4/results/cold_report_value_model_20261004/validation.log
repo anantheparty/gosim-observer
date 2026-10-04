@@ -1,0 +1,34 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_core.py:22: RuntimeWarning: divide by zero encountered in matmul
+  x=x@self.data[f'weight{k}'].T+self.data[f'bias{k}']
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_core.py:22: RuntimeWarning: overflow encountered in matmul
+  x=x@self.data[f'weight{k}'].T+self.data[f'bias{k}']
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_core.py:22: RuntimeWarning: invalid value encountered in matmul
+  x=x@self.data[f'weight{k}'].T+self.data[f'bias{k}']
+{"split": "val", "k": 0, "seed": 750016, "scores": {"none": 4381.785, "oracle": 4381.785, "p90_free": 4381.785, "myopic": 4381.785, "dp": 4381.785, "dp_free": 4381.785}, "seconds": 12.16173505783081}
+{"split": "val", "k": 1, "seed": 750017, "scores": {"none": 3210.2144, "oracle": 3946.1959, "p90_free": 3593.6965, "myopic": 3916.4972, "dp": 3923.0941, "dp_free": 3923.0941}, "seconds": 21.655612230300903}
+{"split": "val", "k": 2, "seed": 750018, "scores": {"none": 3659.3975, "oracle": 3659.3975, "p90_free": 3659.3975, "myopic": 3509.3975, "dp": 3659.3975, "dp_free": 3659.3975}, "seconds": 31.47697925567627}
+{"split": "val", "k": 3, "seed": 750019, "scores": {"none": 2932.0658, "oracle": 3599.9985, "p90_free": 3155.0971, "myopic": 3396.6593, "dp": 3246.6593, "dp_free": 3211.3842}, "seconds": 39.286219120025635}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/evaluate.py", line 56, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/evaluate.py", line 44, in main
+    out=run('val',750016,16,['none','oracle','p90_free','myopic','dp','dp_free'])
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/evaluate.py", line 26, in run
+    _,res=trajectory(offset+k,policy=make(name),collect=False);scores[name]=res
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_world.py", line 142, in trajectory
+    else:do_report=bool(policy(x,quota,phase,nuisance,j,len(w.actions)))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/evaluate.py", line 19, in policy
+    if name=='dp_free':return q>0 and dp.report(p,q,phase,nuisance,j,total)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_core.py", line 36, in report
+    return nuisance[1]<2 and p>0 and self.delta(p,quota,phase,nuisance,step,total)>0
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_value_model_20261004/report_core.py", line 34, in delta
+    s=int(state_index(p,*nuisance));return float(self.data['delta'][i,max(0,min(2,quota)),s])
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 256, in __getitem__
+    return format.read_array(bytes,
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/format.py", line 858, in read_array
+    data = _read_bytes(fp, read_size, "array data")
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/format.py", line 993, in _read_bytes
+    r = fp.read(size - len(data))
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/zipfile.py", line 906, in read
+    if self.closed:
+KeyboardInterrupt

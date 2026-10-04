@@ -1,0 +1,32 @@
+{
+  "schema": "root-exact-native-strong-four-full-launch-v1",
+  "pid": 2072634,
+  "started_utc": "2026-10-04T01:36:56.904900+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-u",
+    "/tmp/geometry_native_20261003/results/sparse_fault_actual_20261004/run_strong_candidates.py",
+    "--experiment",
+    "/tmp/geometry_native_20261003/results/sparse_fault_actual_20261004",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps",
+    "--cases",
+    "/tmp/geometry_native_20261003/results/sparse_fault_actual_20261004/cases.json"
+  ],
+  "source_lock_sha256": "ef0d31396894ebb574aefffa91f3b65fde3cbcfba573f04f56e905706257ac3c",
+  "cases_sha256": "c355ea06fdd50d1d2871a822d2a1c6d5939605dd050b92357ceccc5ad089f1fd",
+  "harness_sha256": "481612511c05a68d07cf5112bf281944cd0a644f71975605091aec08981d00d3",
+  "runtime_source_receipt_sha256": "6c663a41d53843850f49634ac451b4fe5ce5d9e9d9bfcb37049e47227c081dc6",
+  "normal_complete_season": true,
+  "forced_prefix": false,
+  "maximum_decisions_stop": null,
+  "actor_truth_mount": false,
+  "limits": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "wallclock_seconds": 900
+  },
+  "no_control_rerun": true
+}
