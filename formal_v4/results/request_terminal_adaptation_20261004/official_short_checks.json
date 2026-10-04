@@ -1,0 +1,58 @@
+{
+  "schema": "request-terminal-official-short-check-v1",
+  "passed": true,
+  "guard_checks": [
+    "nonterminal action unchanged",
+    "official occupied-night clipping rejects earlier-night tail; final-night and gap effective ends match",
+    "false quota exhaustion rejects",
+    "consecutive request quota rejects",
+    "post-selection wallclock reserve rejects",
+    "request result without threshold uses publication and replacement revokes proof",
+    "resync conservatively revokes stale request certificates",
+    "one inserted report releases exact tail without actor report ingestion",
+    "changed UTC/rank or settlement cannot release frozen tail"
+  ],
+  "official_packets": [
+    {
+      "kind": "wait",
+      "synthetic_correct": false,
+      "total_delta": 0.0,
+      "runner_loop_and_report_code_unchanged": true
+    },
+    {
+      "kind": "wait",
+      "synthetic_correct": true,
+      "total_delta": 100.0,
+      "runner_loop_and_report_code_unchanged": true
+    },
+    {
+      "kind": "observe",
+      "synthetic_correct": false,
+      "total_delta": 0.0,
+      "runner_loop_and_report_code_unchanged": true
+    },
+    {
+      "kind": "observe",
+      "synthetic_correct": true,
+      "total_delta": 100.0,
+      "runner_loop_and_report_code_unchanged": true
+    },
+    {
+      "kind": "finish",
+      "synthetic_correct": false,
+      "total_delta": 0.0,
+      "runner_loop_and_report_code_unchanged": true
+    },
+    {
+      "kind": "finish",
+      "synthetic_correct": true,
+      "total_delta": 100.0,
+      "runner_loop_and_report_code_unchanged": true
+    }
+  ],
+  "official_earlier_night_clipping_then_gap_packet_passed": true,
+  "real_card_loaded": false,
+  "real_card_truth_read": false,
+  "synthetic_weather_fixture_only": true,
+  "real_score_gain_claimed": false
+}

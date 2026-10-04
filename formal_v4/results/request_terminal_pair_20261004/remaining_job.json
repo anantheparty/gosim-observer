@@ -1,0 +1,45 @@
+{
+  "schema": "root-frozen-request-terminal-remaining-launch-v1",
+  "pid": 1900820,
+  "started_utc": "2026-10-04T00:28:09.263009+00:00",
+  "expected": 4,
+  "work": [
+    [
+      "terminal",
+      "L1"
+    ],
+    [
+      "terminal",
+      "L2"
+    ],
+    [
+      "control",
+      "L4"
+    ],
+    [
+      "terminal",
+      "L4"
+    ]
+  ],
+  "limits_per_worker": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "wallclock_seconds": 900
+  },
+  "source_lock_sha256": "aec7816610d81951d92e733403690d85a1d7e50fed12881cb5f378e076073a50",
+  "new_harness_sha256": "6910a19938550caa371dfdb6bac5f96c8233ad9a2bd823eef88acef0fc81113b",
+  "reused_frozen_harness_sha256": "1ab500efb5c353e6473aa800aca59a877bd99fcc6000b145efe6701430acb827",
+  "command": [
+    "python3",
+    "-u",
+    "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004/run_request_terminal_remaining.py",
+    "--experiment",
+    "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps"
+  ],
+  "no_teacher_labels_read": true,
+  "actor_truth_mount": false
+}

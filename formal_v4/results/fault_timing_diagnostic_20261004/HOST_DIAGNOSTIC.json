@@ -1,0 +1,145 @@
+{
+  "schema": "post-hoc-host-fixed-hit-science-loss-diagnostic-v1",
+  "purpose": "Measure a mechanism capable of causing hundreds of points of loss; not actor triggers or measured deployable gain.",
+  "scope": "Same actual hit set, original valid/invalid ledger and program multipliers; repair complete exposures before the first actual repair; crossing exposures unchanged.",
+  "future_data_used_for_host_diagnosis": true,
+  "future_data_used_by_actor": false,
+  "new_policy_evaluated": false,
+  "science_only": true,
+  "full_score_claim": null,
+  "L4_teacher_read": false,
+  "cards": {
+    "L1": {
+      "fault_intervals_host_only": [
+        {
+          "event_id": "V4EV0012",
+          "event_type": "instrument_fault",
+          "actual_start_utc": "2026-11-21T06:45:00Z",
+          "actual_end_utc": "2026-12-03T08:15:00Z",
+          "scope_type": "ALL",
+          "azimuth_start_deg": "",
+          "azimuth_end_deg": "",
+          "min_altitude_deg": "",
+          "max_altitude_deg": "",
+          "magnitude": "",
+          "severity": "1.000000",
+          "force_close": "false",
+          "zero_score": "false",
+          "seeing_multiplier": "1.000000",
+          "transparency_multiplier": "1.000000",
+          "sky_quality_multiplier": "1.000000",
+          "instrument_efficiency_multiplier": "0.654867"
+        }
+      ],
+      "actual_public_reports": [
+        {
+          "correct": true,
+          "issued_at_utc": "2026-11-29T06:05:40Z",
+          "record_type": "report_result",
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "baseline_science_from_rounded_rows": 6067.463610999826,
+      "fixed_hit_trajectory_repair_science_delta_approx": 172.29979745914716,
+      "conservative_rounding_delta_interval": [
+        172.29239215056623,
+        172.30742676816953
+      ],
+      "affected_valid_hits": 1301,
+      "individual_hits_increased": 837
+    },
+    "L2": {
+      "fault_intervals_host_only": [
+        {
+          "event_id": "V4EV0013",
+          "event_type": "instrument_fault",
+          "actual_start_utc": "2026-11-21T04:45:00Z",
+          "actual_end_utc": "2026-12-14T08:15:00Z",
+          "scope_type": "ALL",
+          "azimuth_start_deg": "",
+          "azimuth_end_deg": "",
+          "min_altitude_deg": "",
+          "max_altitude_deg": "",
+          "magnitude": "",
+          "severity": "1.000000",
+          "force_close": "false",
+          "zero_score": "false",
+          "seeing_multiplier": "1.000000",
+          "transparency_multiplier": "1.000000",
+          "sky_quality_multiplier": "1.000000",
+          "instrument_efficiency_multiplier": "0.464072"
+        }
+      ],
+      "actual_public_reports": [
+        {
+          "correct": true,
+          "issued_at_utc": "2026-11-21T05:44:43Z",
+          "record_type": "report_result",
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "baseline_science_from_rounded_rows": 6574.271983999807,
+      "fixed_hit_trajectory_repair_science_delta_approx": 3.578183466754126,
+      "conservative_rounding_delta_interval": [
+        3.569851091269811,
+        3.5865168422442366
+      ],
+      "affected_valid_hits": 51,
+      "individual_hits_increased": 49
+    },
+    "L3": {
+      "fault_intervals_host_only": [
+        {
+          "event_id": "V4EV0015",
+          "event_type": "instrument_fault",
+          "actual_start_utc": "2026-12-07T07:00:00Z",
+          "actual_end_utc": "2026-12-22T08:15:00Z",
+          "scope_type": "ALL",
+          "azimuth_start_deg": "",
+          "azimuth_end_deg": "",
+          "min_altitude_deg": "",
+          "max_altitude_deg": "",
+          "magnitude": "",
+          "severity": "1.000000",
+          "force_close": "false",
+          "zero_score": "false",
+          "seeing_multiplier": "1.000000",
+          "transparency_multiplier": "1.000000",
+          "sky_quality_multiplier": "1.000000",
+          "instrument_efficiency_multiplier": "0.442516"
+        }
+      ],
+      "actual_public_reports": [],
+      "baseline_science_from_rounded_rows": 5992.056803999831,
+      "fixed_hit_trajectory_repair_science_delta_approx": 438.1722644144975,
+      "conservative_rounding_delta_interval": [
+        438.16418826247263,
+        438.1806440239152
+      ],
+      "affected_valid_hits": 2035,
+      "individual_hits_increased": 1377
+    }
+  },
+  "source_sha256": {
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L1/truth/v4_events.csv": "7ef54bc5403048a14856c7683ef5eb943f5ac1f70795eebb0954c108205bc949",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L1/public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/decisions.csv": "d9da2d51c461de9c0f7c564bf7866e43b36104ea331bf0b37f22a52a047263a7",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/observations.csv": "b8b7f92177b818e7b6e8a4d0da959761b60040bdae4d2ec542ab7d282fc94325",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/messages.jsonl": "68280558c661c7fcab3137159e929ac5d90e7ca5d256e6dbdd7573ee34c28bfb",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/score_report.json": "865a30d6b79986b4d4ffe06f372bcd6b16c3e07d53561762b95c5b79d42f2ad6",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L2/truth/v4_events.csv": "6ae25757056c2b8258bb392d02040e8c0a2161fd65ca8e879ec50a60c6e2f022",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L2/public/targets.csv": "a85d6f8571be0e1f06c11a34943f786e21feccb32b240f8a17c5d68744ed39db",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/decisions.csv": "226aa3b71277ccc43c389536dd4d27b31fc21cee00313f93a92f709ce993a94d",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/observations.csv": "73bc2a058b308c6eaf27d190b95a6004423a1f91d5582d63e4d1c07fd2122236",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/messages.jsonl": "466c78b829db778a4b848d8677b892210f06ccb3bdd3f9759d3d046fcb94574a",
+    "formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/score_report.json": "1db1cbeb879f0e01f073f137ad134f98a119065670ecc82f65c1ddf4b7adfd7e",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L3/truth/v4_events.csv": "2568aea2fdc1410c7cd31d3a8d9d0c6654db6adbf13639d7bc3ea4a7cf402f9a",
+    "formal_v4/upstream/gosim-observer-examples/local-cards/L3/public/targets.csv": "cb0114de562a9199167e8ad4fd3fb030afcffe498cda58021f3a6ce336bd5ffc",
+    "formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/decisions.csv": "2b9cefd270edd23ccc9a81dec167e7bef13ea7d0336ad664cbbf0cd6c3658a24",
+    "formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/observations.csv": "151727d8bb597afffb95d36937d9dfdc652405ecd18a7acafb0ad8537f05c43d",
+    "formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/messages.jsonl": "e8c583299dfd6649e63c732dbc390fc4bf8d62965ad757d07c0664473845efbe",
+    "formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/score_report.json": "b9d9212cca857e811ca1ae0cd249c63978533e08dc70b57c3f1ab3688b2b809d"
+  }
+}

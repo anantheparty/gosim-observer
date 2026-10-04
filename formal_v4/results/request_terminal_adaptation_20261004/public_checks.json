@@ -1,0 +1,2046 @@
+{
+  "actual_score_delta_measured": false,
+  "cards": {
+    "L1": {
+      "entry": {
+        "actual_RequestCache_feedbacks": 2,
+        "decisions_per_variant": 3,
+        "entire_original_trajectory_policy_parity_claimed": false,
+        "original_recorded_action_parity": [
+          true,
+          true,
+          true
+        ],
+        "passed": true,
+        "same_input_response_parity": true,
+        "variants": {
+          "control": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "duration_seconds": 61,
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "duration_seconds": 293,
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "duration_seconds": 60,
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 0.8002753341570497,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 61,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 293,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 60,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9797,
+              "E": 0.9497,
+              "best_science_sum": 8.417570000000001,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 37245,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 2
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.6225672080181539,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.623,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 384,
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "SW",
+                  "SE"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "SE": 540,
+                  "SW": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          },
+          "wrapper_disabled": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "duration_seconds": 61,
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "duration_seconds": 293,
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "duration_seconds": 60,
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 1.1136069162748754,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 61,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 293,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 60,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9797,
+              "E": 0.9497,
+              "best_science_sum": 8.417570000000001,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 37245,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 2
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.8880437090992928,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.888,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 384,
+              "terminal_report": {
+                "all_correct_reports_received": 0,
+                "all_reports_sent": 0,
+                "enabled": false,
+                "events": [],
+                "false_reports_since_correct": 0,
+                "gate_checks": {},
+                "inserted_reports": 0,
+                "reads_teacher_labels": false,
+                "reads_truth": false,
+                "terminal_correct": null,
+                "terminal_score_delta": null
+              },
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "SW",
+                  "SE"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "SE": 540,
+                  "SW": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          },
+          "wrapper_enabled": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "duration_seconds": 61,
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "duration_seconds": 293,
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "duration_seconds": 60,
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 0.8362910002470016,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T006622",
+                  "1": "V4T003309",
+                  "10": "V4T007094",
+                  "11": "V4T004659",
+                  "12": "V4T006792",
+                  "13": "V4T000855",
+                  "14": "V4T007427",
+                  "15": "V4T006027",
+                  "2": "V4T000710",
+                  "3": "V4T002302",
+                  "4": "V4T004689",
+                  "5": "V4T000968",
+                  "6": "V4T003940",
+                  "7": "V4T007727",
+                  "8": "V4T006676",
+                  "9": "V4T000165"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 61,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 69.7415275,
+                  "az_deg": 90.452398
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T004149",
+                  "1": "V4T001449",
+                  "10": "V4T001114",
+                  "11": "V4T002384",
+                  "12": "V4T000374",
+                  "13": "V4T002945",
+                  "15": "V4T000744",
+                  "2": "V4T002046",
+                  "3": "V4T002124",
+                  "4": "V4T004248",
+                  "5": "V4T000219",
+                  "6": "V4T005723",
+                  "7": "V4T003697",
+                  "8": "V4T001151",
+                  "9": "V4T005444"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 293,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 54.3624462,
+                  "az_deg": 83.8114613
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T003446",
+                  "1": "V4T002482",
+                  "10": "V4T001303",
+                  "11": "V4T004219",
+                  "12": "V4T003890",
+                  "13": "V4T007615",
+                  "14": "V4T005092",
+                  "15": "V4T005330",
+                  "2": "V4T004638",
+                  "4": "V4T002056",
+                  "5": "V4T003722",
+                  "6": "V4T004111",
+                  "7": "V4T005531",
+                  "8": "V4T002971",
+                  "9": "V4T003845"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 60,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 55.0433054,
+                  "az_deg": 116.3305748
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9797,
+              "E": 0.9497,
+              "best_science_sum": 8.417570000000001,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 37245,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 2
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.6207087077200413,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.621,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 384,
+              "terminal_report": {
+                "all_correct_reports_received": 0,
+                "all_reports_sent": 0,
+                "enabled": true,
+                "events": [],
+                "false_reports_since_correct": 0,
+                "gate_checks": {
+                  "not_terminal": 3
+                },
+                "inserted_reports": 0,
+                "reads_teacher_labels": false,
+                "reads_truth": false,
+                "terminal_correct": null,
+                "terminal_score_delta": null
+              },
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "SW",
+                  "SE"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "SE": 540,
+                  "SW": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          }
+        }
+      },
+      "guard_tail_audit": {
+        "card": "L1",
+        "entire_original_trajectory_policy_parity_claimed": false,
+        "gate": {
+          "conditional_correct_gain_lower": 100.0,
+          "consecutive_reports": 0,
+          "event": "terminal_report_frozen",
+          "free_reports_remaining": 2,
+          "frozen_action": {
+            "action": "wait",
+            "until_utc": "2026-12-03T08:15:00Z"
+          },
+          "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+          "ledger_bound": {},
+          "now_utc": "2026-12-03T08:14:29Z",
+          "observe_action_index": 984,
+          "selection_elapsed_seconds": 0.0,
+          "terminal_kind": "wait",
+          "wallclock_remaining": 900.0,
+          "worst_jain_harm": 0.0
+        },
+        "inserted_reports": 1,
+        "passed": true,
+        "recorded_action_fixture_count": 1093,
+        "report_removed_actions_equal_recorded_control": true,
+        "summary": {
+          "all_correct_reports_received": 1,
+          "all_reports_sent": 2,
+          "enabled": true,
+          "events": [
+            {
+              "conditional_correct_gain_lower": 100.0,
+              "consecutive_reports": 0,
+              "event": "terminal_report_frozen",
+              "free_reports_remaining": 2,
+              "frozen_action": {
+                "action": "wait",
+                "until_utc": "2026-12-03T08:15:00Z"
+              },
+              "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+              "ledger_bound": {},
+              "now_utc": "2026-12-03T08:14:29Z",
+              "observe_action_index": 984,
+              "selection_elapsed_seconds": 0.0,
+              "terminal_kind": "wait",
+              "wallclock_remaining": 900.0,
+              "worst_jain_harm": 0.0
+            },
+            {
+              "correct": false,
+              "event": "terminal_report_result",
+              "now_utc": "2026-12-03T08:14:29Z",
+              "observe_action_index": 984,
+              "score_delta": 0.0
+            },
+            {
+              "actor_belief_update_suppressed": true,
+              "event": "terminal_report_frozen_action_released",
+              "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0"
+            }
+          ],
+          "false_reports_since_correct": 1,
+          "gate_checks": {
+            "not_terminal": 1092
+          },
+          "inserted_reports": 1,
+          "reads_teacher_labels": false,
+          "reads_truth": false,
+          "terminal_correct": false,
+          "terminal_score_delta": 0.0
+        },
+        "terminal_report_outcome": "synthetic false acknowledgement only; no actual outcome measured",
+        "uses_actual_RequestCache_public_trajectory": true
+      },
+      "reconstruction": {
+        "actions": 1093,
+        "card": "L1",
+        "includes_terminal_observation_feedback": false,
+        "last_feedback_rank": 983,
+        "projected_observation_fields": [
+          "observe_index",
+          "target_id",
+          "score"
+        ],
+        "recoverable_fields": [
+          "initialize verbatim",
+          "actions verbatim",
+          "now_utc from executed decision start",
+          "observe rank from executed observe rows",
+          "last_result score/hit counts",
+          "delivered messages with report round-trip ordering",
+          "latest bulletin/forecast",
+          "running_total from rounded public score ledger and resync best_scores"
+        ],
+        "sources": {
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_initialize_public.json": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/actions.jsonl": "2cd70cded91a8de7c57ed2496e72951cf223494c0291b6aa88946b8a97d61339",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/decisions.csv": "d9da2d51c461de9c0f7c564bf7866e43b36104ea331bf0b37f22a52a047263a7",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/messages.jsonl": "68280558c661c7fcab3137159e929ac5d90e7ca5d256e6dbdd7573ee34c28bfb",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/observations.csv": "b8b7f92177b818e7b6e8a4d0da959761b60040bdae4d2ec542ab7d282fc94325"
+        },
+        "substituted_fields": {
+          "active_requests": "empty fixture; prefix precedes first request publication",
+          "wallclock": "fixed 0/900 for equal-input prefix checks"
+        },
+        "terminal_action_rank": 984,
+        "terminal_end": "2026-12-03T08:15:00Z",
+        "terminal_kind": "wait",
+        "terminal_start": "2026-12-03T08:14:29Z",
+        "unrecoverable_fields": [
+          "original wallclock elapsed/remaining",
+          "active_requests completed_target_ids before settlement",
+          "any original snapshot fields outside the documented v4 runner contract"
+        ]
+      }
+    },
+    "L2": {
+      "entry": {
+        "actual_RequestCache_feedbacks": 2,
+        "decisions_per_variant": 3,
+        "entire_original_trajectory_policy_parity_claimed": false,
+        "original_recorded_action_parity": [
+          true,
+          true,
+          true
+        ],
+        "passed": true,
+        "same_input_response_parity": true,
+        "variants": {
+          "control": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "duration_seconds": 105,
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "duration_seconds": 273,
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "duration_seconds": 70,
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 0.802826083265245,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 105,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 273,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 70,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9098,
+              "E": 0.9984,
+              "best_science_sum": 9.657491000000002,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 40199,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 3
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.6391380415298045,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.639,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 424,
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "E"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "E": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          },
+          "wrapper_disabled": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "duration_seconds": 105,
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "duration_seconds": 273,
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "duration_seconds": 70,
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 0.8406292092986405,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 105,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 273,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 70,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9098,
+              "E": 0.9984,
+              "best_science_sum": 9.657491000000002,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 40199,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 3
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.6676831250078976,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.668,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 424,
+              "terminal_report": {
+                "all_correct_reports_received": 0,
+                "all_reports_sent": 0,
+                "enabled": false,
+                "events": [],
+                "false_reports_since_correct": 0,
+                "gate_checks": {},
+                "inserted_reports": 0,
+                "reads_teacher_labels": false,
+                "reads_truth": false,
+                "terminal_correct": null,
+                "terminal_score_delta": null
+              },
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "E"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "E": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          },
+          "wrapper_enabled": {
+            "actions": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "duration_seconds": 105,
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "duration_seconds": 273,
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "duration_seconds": 70,
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK"
+              }
+            ],
+            "elapsed_seconds": 0.795992917381227,
+            "exit_code": 0,
+            "responses": [
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007727",
+                  "1": "V4T000666",
+                  "10": "V4T005587",
+                  "11": "V4T006265",
+                  "13": "V4T005356",
+                  "14": "V4T000665",
+                  "15": "V4T007101",
+                  "2": "V4T005258",
+                  "3": "V4T002353",
+                  "4": "V4T000554",
+                  "5": "V4T005507",
+                  "6": "V4T003774",
+                  "8": "V4T003324",
+                  "9": "V4T005244"
+                },
+                "decision_sequence": 1,
+                "duration_seconds": 105,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 53.1422982,
+                  "az_deg": 94.2879934
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T008200",
+                  "1": "V4T005670",
+                  "10": "V4T002240",
+                  "11": "V4T000362",
+                  "12": "V4T000902",
+                  "13": "V4T006599",
+                  "14": "V4T004056",
+                  "15": "V4T006177",
+                  "2": "V4T005916",
+                  "3": "V4T004647",
+                  "4": "V4T000449",
+                  "5": "V4T002281",
+                  "6": "V4T001526",
+                  "7": "V4T004288",
+                  "8": "V4T000367",
+                  "9": "V4T004277"
+                },
+                "decision_sequence": 2,
+                "duration_seconds": 273,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 49.4311502,
+                  "az_deg": 100.897739
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              },
+              {
+                "action": "observe",
+                "assignments": {
+                  "0": "V4T007105",
+                  "1": "V4T006830",
+                  "10": "V4T001907",
+                  "11": "V4T007602",
+                  "12": "V4T005810",
+                  "13": "V4T002265",
+                  "14": "V4T004676",
+                  "2": "V4T003012",
+                  "3": "V4T008053",
+                  "4": "V4T007170",
+                  "5": "V4T005114",
+                  "6": "V4T002629",
+                  "7": "V4T004103",
+                  "8": "V4T002318",
+                  "9": "V4T006094"
+                },
+                "decision_sequence": 3,
+                "duration_seconds": 70,
+                "message_type": "decision_response",
+                "pointing": {
+                  "alt_deg": 66.8265474,
+                  "az_deg": 82.6866267
+                },
+                "program": "DARK",
+                "protocol_version": "participant-agent-protocol-v4"
+              }
+            ],
+            "summary": {
+              "C": 0.9098,
+              "E": 0.9984,
+              "best_science_sum": 9.657491000000002,
+              "correct_reports": 0,
+              "cpu_phase": {
+                "choose_calls": 3,
+                "phase_calls": 3,
+                "phase_candidates": 40199,
+                "phase_emergency_count": 0,
+                "phase_exact_evaluations": 48,
+                "phase_improvements": 3
+              },
+              "decisions": 3,
+              "distributed_request": {
+                "budget": {
+                  "accepted": 0,
+                  "failed_initializations": 0,
+                  "initialization_seconds": 0.0,
+                  "observed_remote_seconds": 0.0,
+                  "skipped": 0
+                },
+                "cpu_baseline_seconds": 0.6233319160528481,
+                "cpu_baselines": 3,
+                "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+                "forced_cpu_crops": 0,
+                "remote_baseline_seconds": 0.0,
+                "remote_baselines": 0,
+                "transport_failures": 0
+              },
+              "exposures": 2,
+              "planning_seconds": 0.623,
+              "remote_budget": null,
+              "remote_calls": 0,
+              "remote_check": {
+                "remote_check": "disabled",
+                "seconds": 0.0,
+                "transport": "offline-request-exact-cache"
+              },
+              "remote_seconds": 0,
+              "reports": 0,
+              "request_dp": {
+                "boundary_waits": 0,
+                "build_seconds": 0.0,
+                "builds": 0,
+                "cached_requests": 0,
+                "clipped_baselines": 0,
+                "dp_seconds": 0.0,
+                "dp_solves": 0,
+                "forecast_failures": 0,
+                "infeasible": 0,
+                "model": "full-deadline finite columns; frozen same-duration scientific regret",
+                "rejected_by_cost": 0,
+                "request_observes": 0
+              },
+              "request_exact_cache": {
+                "midpoint_hits": 0,
+                "midpoint_misses": 0,
+                "midpoint_peak_bytes": 0
+              },
+              "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+              "required_missing_bound": 424,
+              "terminal_report": {
+                "all_correct_reports_received": 0,
+                "all_reports_sent": 0,
+                "enabled": true,
+                "events": [],
+                "false_reports_since_correct": 0,
+                "gate_checks": {
+                  "not_terminal": 3
+                },
+                "inserted_reports": 0,
+                "reads_teacher_labels": false,
+                "reads_truth": false,
+                "terminal_correct": null,
+                "terminal_score_delta": null
+              },
+              "terrain": {
+                "altitude_range": [
+                  35.0,
+                  50.0
+                ],
+                "boxes_per_family": 540,
+                "conditional_domain_conflicts": [],
+                "directions": [
+                  "E"
+                ],
+                "positive_count": 30,
+                "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+                "remaining_boxes": {
+                  "E": 540
+                },
+                "schema": "terrain-positive-version-space-v1",
+                "width_range": [
+                  30.0,
+                  70.0
+                ],
+                "zero_feedback_ignored": 0
+              },
+              "terrain_feedback_exposures": 2
+            }
+          }
+        }
+      },
+      "guard_tail_audit": {
+        "card": "L2",
+        "entire_original_trajectory_policy_parity_claimed": false,
+        "gate": {
+          "conditional_correct_gain_lower": 99.66733602892538,
+          "consecutive_reports": 0,
+          "event": "terminal_report_frozen",
+          "free_reports_remaining": 2,
+          "frozen_action": {
+            "action": "observe",
+            "assignments": {
+              "12": "V4T007027",
+              "13": "V4T005505",
+              "14": "V4T008353",
+              "3": "V4T007172",
+              "9": "V4T000287"
+            },
+            "duration_seconds": 62,
+            "pointing": {
+              "alt_deg": 72.0301839,
+              "az_deg": 283.2863306
+            },
+            "program": "DARK"
+          },
+          "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+          "ledger_bound": {
+            "bands": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "invalidated_feedback_ranks": [],
+            "lower_ratios": [
+              0.725050916496945,
+              0.7362525458248472,
+              0.8157389635316699,
+              0.8386075949367089,
+              0.8181818181818182,
+              0.7503852080123267,
+              0.8492462311557789,
+              0.856301531213192,
+              0.6792452830188679,
+              0.8254649499284692,
+              0.8645484949832776,
+              0.8170731707317073
+            ],
+            "possible_final_increments": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.006775067750677507
+            ],
+            "q_min": 7.681249523724451,
+            "request_certificate_targets": 13,
+            "upper_ratios": [
+              0.7657841140529531,
+              0.7861507128309573,
+              0.8464491362763915,
+              0.8670886075949367,
+              0.8181818181818182,
+              0.7904468412942989,
+              0.8815506101938263,
+              0.889281507656066,
+              0.7169811320754716,
+              0.8755364806866953,
+              0.8971571906354515,
+              0.8617886178861789
+            ],
+            "valid_feedback_ranks": 1087
+          },
+          "now_utc": "2026-12-14T08:13:58Z",
+          "observe_action_index": 1087,
+          "selection_elapsed_seconds": 0.0,
+          "terminal_kind": "observe",
+          "wallclock_remaining": 900.0,
+          "worst_jain_harm": 0.3326639710746254
+        },
+        "inserted_reports": 1,
+        "passed": true,
+        "recorded_action_fixture_count": 1214,
+        "report_removed_actions_equal_recorded_control": true,
+        "summary": {
+          "all_correct_reports_received": 1,
+          "all_reports_sent": 2,
+          "enabled": true,
+          "events": [
+            {
+              "conditional_correct_gain_lower": 99.66733602892538,
+              "consecutive_reports": 0,
+              "event": "terminal_report_frozen",
+              "free_reports_remaining": 2,
+              "frozen_action": {
+                "action": "observe",
+                "assignments": {
+                  "12": "V4T007027",
+                  "13": "V4T005505",
+                  "14": "V4T008353",
+                  "3": "V4T007172",
+                  "9": "V4T000287"
+                },
+                "duration_seconds": 62,
+                "pointing": {
+                  "alt_deg": 72.0301839,
+                  "az_deg": 283.2863306
+                },
+                "program": "DARK"
+              },
+              "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+              "ledger_bound": {
+                "bands": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11
+                ],
+                "invalidated_feedback_ranks": [],
+                "lower_ratios": [
+                  0.725050916496945,
+                  0.7362525458248472,
+                  0.8157389635316699,
+                  0.8386075949367089,
+                  0.8181818181818182,
+                  0.7503852080123267,
+                  0.8492462311557789,
+                  0.856301531213192,
+                  0.6792452830188679,
+                  0.8254649499284692,
+                  0.8645484949832776,
+                  0.8170731707317073
+                ],
+                "possible_final_increments": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.006775067750677507
+                ],
+                "q_min": 7.681249523724451,
+                "request_certificate_targets": 13,
+                "upper_ratios": [
+                  0.7657841140529531,
+                  0.7861507128309573,
+                  0.8464491362763915,
+                  0.8670886075949367,
+                  0.8181818181818182,
+                  0.7904468412942989,
+                  0.8815506101938263,
+                  0.889281507656066,
+                  0.7169811320754716,
+                  0.8755364806866953,
+                  0.8971571906354515,
+                  0.8617886178861789
+                ],
+                "valid_feedback_ranks": 1087
+              },
+              "now_utc": "2026-12-14T08:13:58Z",
+              "observe_action_index": 1087,
+              "selection_elapsed_seconds": 0.0,
+              "terminal_kind": "observe",
+              "wallclock_remaining": 900.0,
+              "worst_jain_harm": 0.3326639710746254
+            },
+            {
+              "correct": false,
+              "event": "terminal_report_result",
+              "now_utc": "2026-12-14T08:13:58Z",
+              "observe_action_index": 1087,
+              "score_delta": 0.0
+            },
+            {
+              "actor_belief_update_suppressed": true,
+              "event": "terminal_report_frozen_action_released",
+              "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5"
+            }
+          ],
+          "false_reports_since_correct": 1,
+          "gate_checks": {
+            "not_terminal": 1213
+          },
+          "inserted_reports": 1,
+          "reads_teacher_labels": false,
+          "reads_truth": false,
+          "terminal_correct": false,
+          "terminal_score_delta": 0.0
+        },
+        "terminal_report_outcome": "synthetic false acknowledgement only; no actual outcome measured",
+        "uses_actual_RequestCache_public_trajectory": true
+      },
+      "reconstruction": {
+        "actions": 1214,
+        "card": "L2",
+        "includes_terminal_observation_feedback": false,
+        "last_feedback_rank": 1086,
+        "projected_observation_fields": [
+          "observe_index",
+          "target_id",
+          "score"
+        ],
+        "recoverable_fields": [
+          "initialize verbatim",
+          "actions verbatim",
+          "now_utc from executed decision start",
+          "observe rank from executed observe rows",
+          "last_result score/hit counts",
+          "delivered messages with report round-trip ordering",
+          "latest bulletin/forecast",
+          "running_total from rounded public score ledger and resync best_scores"
+        ],
+        "sources": {
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L2_initialize_public.json": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/actions.jsonl": "6645ff564a24abe5474e9faffd88447234cc9caba6b010ab3bcebec9eb69618f",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/decisions.csv": "226aa3b71277ccc43c389536dd4d27b31fc21cee00313f93a92f709ce993a94d",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/messages.jsonl": "466c78b829db778a4b848d8677b892210f06ccb3bdd3f9759d3d046fcb94574a",
+          "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/observations.csv": "73bc2a058b308c6eaf27d190b95a6004423a1f91d5582d63e4d1c07fd2122236"
+        },
+        "substituted_fields": {
+          "active_requests": "empty fixture; prefix precedes first request publication",
+          "wallclock": "fixed 0/900 for equal-input prefix checks"
+        },
+        "terminal_action_rank": 1087,
+        "terminal_end": "2026-12-14T08:15:00Z",
+        "terminal_kind": "observe",
+        "terminal_start": "2026-12-14T08:13:58Z",
+        "unrecoverable_fields": [
+          "original wallclock elapsed/remaining",
+          "active_requests completed_target_ids before settlement",
+          "any original snapshot fields outside the documented v4 runner contract"
+        ]
+      }
+    }
+  },
+  "gpu_calls": 0,
+  "numpy": "2.0.2",
+  "passed": true,
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "reads_raw_factor_quality_program_multiplier": false,
+  "reads_teacher_labels": false,
+  "reads_weather_truth": false,
+  "schema": "request-terminal-adaptation-public-checks-v1",
+  "seasons_launched": 0,
+  "ssh_calls": 0
+}

@@ -1,0 +1,74 @@
+{
+  "card": "L1",
+  "entire_original_trajectory_policy_parity_claimed": false,
+  "gate": {
+    "conditional_correct_gain_lower": 100.0,
+    "consecutive_reports": 0,
+    "event": "terminal_report_frozen",
+    "free_reports_remaining": 2,
+    "frozen_action": {
+      "action": "wait",
+      "until_utc": "2026-12-03T08:15:00Z"
+    },
+    "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+    "ledger_bound": {},
+    "now_utc": "2026-12-03T08:14:29Z",
+    "observe_action_index": 984,
+    "selection_elapsed_seconds": 0.0,
+    "terminal_kind": "wait",
+    "wallclock_remaining": 900.0,
+    "worst_jain_harm": 0.0
+  },
+  "inserted_reports": 1,
+  "passed": true,
+  "recorded_action_fixture_count": 1093,
+  "report_removed_actions_equal_recorded_control": true,
+  "summary": {
+    "all_correct_reports_received": 1,
+    "all_reports_sent": 2,
+    "enabled": true,
+    "events": [
+      {
+        "conditional_correct_gain_lower": 100.0,
+        "consecutive_reports": 0,
+        "event": "terminal_report_frozen",
+        "free_reports_remaining": 2,
+        "frozen_action": {
+          "action": "wait",
+          "until_utc": "2026-12-03T08:15:00Z"
+        },
+        "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+        "ledger_bound": {},
+        "now_utc": "2026-12-03T08:14:29Z",
+        "observe_action_index": 984,
+        "selection_elapsed_seconds": 0.0,
+        "terminal_kind": "wait",
+        "wallclock_remaining": 900.0,
+        "worst_jain_harm": 0.0
+      },
+      {
+        "correct": false,
+        "event": "terminal_report_result",
+        "now_utc": "2026-12-03T08:14:29Z",
+        "observe_action_index": 984,
+        "score_delta": 0.0
+      },
+      {
+        "actor_belief_update_suppressed": true,
+        "event": "terminal_report_frozen_action_released",
+        "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0"
+      }
+    ],
+    "false_reports_since_correct": 1,
+    "gate_checks": {
+      "not_terminal": 1092
+    },
+    "inserted_reports": 1,
+    "reads_teacher_labels": false,
+    "reads_truth": false,
+    "terminal_correct": false,
+    "terminal_score_delta": 0.0
+  },
+  "terminal_report_outcome": "synthetic false acknowledgement only; no actual outcome measured",
+  "uses_actual_RequestCache_public_trajectory": true
+}

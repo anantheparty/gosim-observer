@@ -181,3 +181,29 @@ CUDA后端已实际在RTX PRO6000执行：首次job在Windows RSS计量HANDLE类
 上条所述价格任务已真实完成123.501秒、58新GPU oracle。统一最优μ=.000162101411819458，finite F37730.40414090836；总需求16,977,711.37，略高于容量111.37fiber秒，上端16,977,364.33。最佳统一价仍16窗过载，peak7.60736×。32次Kelley没改善uniform最佳；含数值cut余量LP lower33123.17912734773/gap4607.225432013722，未收敛且无严格floating-point下界证书。交叉cut、梯度单位和统一需求非增经独立审查及现有日志核验通过，但不变为实际全题最优或正式分数。价格阶段Torch峰453MB/RSS1.338GB，整卡242次采样最高229.09W。PRO6000任务全部结束回闲置。冻结backend与去重manifest/原计量失败/两完整数值结果和59oracle原日志在`results/quality_window_cuda_20261004/`。已保存的三步过冲不能被新uniform结果替代为成功部署。暂不增加32Kelley预算、改PMF、重开相同模型。
 
 新`cold_common_exposure_control`以fork_turns="none"实际开始，先读正式源后抽象再查重：用真正共享16fiber曝光弧、nonoverlap时间path与target score-layer coverage MILP研究中早季窗口竞争。固定L1/L2第8/18夜四个无活动REQ公开prefix，4h公共窗口、包含原强action时长及300/900/1800秒，按first arc分别解共同suffix及同duration空曝光suffix，计算全目录时间机会损失；短预算8秒HiGHS/次。模型仍需要公开belief和完整曝光天文积分、不看未来真实天气，固定.9/1/1.1敏感性只作机制稳定性，不是校准概率。此刻尚无微结果/完整策略分。若原完整snapshot字段不可恢复须明确重建state，不能假称重现历史action。末动作RequestCache适配另在进行，尚无新完整回放。
+
+
+### 最强RequestCache末动作实际提分与策略重新审视（2026-10-04 09:35 JST）
+
+最终适配ZIP保留29原成员，27原源码字节不变；全包31成员SHA fa62269215a7f7d5d5472caa38fb495553d907cd79955e0b4492599b10bc621c。初版terminal判断忽略夜末裁剪，已在首次完整季节前修复，失败审计保留。原RequestCache与适配包的实际L3双对照于00:09:21 UTC启动，PID1854611已结束，两条2CPU/2GiB/900秒完整survey_complete：6141.421958→6242.640810（+101.218852），report +100、science +1.208811、Jain +.010042、required/REQ不变。原全部动作在移除唯一终局report后逐项相同，所有旧CSV决策字段/observe rank/data-loss/messages相同，报告不推进模拟时间，实际gain满足public guard条件下界99.275059；完整原始输出和root复核见 results/request_terminal_pair_20261004/ROOT_ACTUAL_RESULT.json。actual actor请求1169次、CSV/committed动作1745条的差是wait-until自动展开，首次root审查误用actor索引删CSV已修，保留ROOT_REVIEW_FAILURE_1，无需重跑季节。这是原最强包本地L3改善，不是线上均分变化。
+
+同一冻结包剩余检查已启动：2026-10-04 00:28:09 UTC，Rhodes1 PID1900820，terminal L1/L2、control L4和terminal L4四条，每条2CPU/2GiB/900秒；L1/L2使用前次同源真实control，不重跑。记录 remaining_job.json/remaining_launch.log，输出同目录seasons各卡。L4仅作已锁策略的实际完整验证，不打开此前封存的teacher标签，不据L4救参。
+
+最新能核实的线上α/δ均为第5/53。2026-10-04 00:06:17/00:05:52 UTC：α ours science7149.12对CCB7788.10差638.98，δ6523.83对7263.27差739.44；ours目标覆盖均更多。β/γ本次未刷新；Mac重新锁定，原手动解锁问题仍pending。该分差支持研究质量/资源分配，不能由榜单唯一识别对手策略。
+
+策略判断需要数学约束：对于单target已有best B和完整曝光价值A，u(d)=(A·min(kd,1)−B)+；在线性正区间u(d)/d=A k−B/d，导数B/d²≥0。因此不能笼统宣称gain/d必偏短。新的cold_strategy_rebuild以fork_turns=none从官方source重建，研究science anchor额外min(k·900)筛选偏差，以及来自真实共享曝光continuation path的时间机会价，保留control/debias/surplus对照。λ若等于当前max rate则只是原quotient的等价变换，不算新路线。当前已做可运行public入口，L1第8夜实际host短续局尚待结果，不能称已提分。
+
+另发现具有百级损失规模的持续故障控制漏洞：原Policy._repair遇到任何earthquake公告便禁止report，infer-efficiency witness又遇到任意notice便停止积累。当前原强本地L1修复延迟约八天，L3整季未修直到本次terminal intervention。root仅作为事后host诊断读取L1/L2/L3既有truth/已发生factor，保持原hit/有效失效ledger/program不变，对完全位于故障未修区间的曝光恢复efficiency，跨边界曝不改变。科学分损失规模约172.2998/3.5782/438.1723，六位舍入保守区间分别[172.2924,172.3074]/[3.5699,3.5865]/[438.1642,438.1806]。这是固定轨迹条件科学潜力，不是可执行public策略收益/完整net增益；没有读取封存L4。脚本与host证据在 results/fault_timing_diagnostic_20261004/，不得将truth故障时间或参数交给actor。
+
+故障路线cold_persistent_fault_control以fork_turns=none独立从source开始，只获上述损失规模，不读取host诊断时间/参数。研究公开跨曝质量变化、C/E不可识别性、有限免费quota的动态机会价值和false报告后的belief保持；正确修复后继续正常反馈重规划。不能重复曾被拒绝的无条件花光quota/弱基线报修方式。目标是可运行原最强闭环候选及真实完整对照。
+
+已完成的cold_calendar_boundary独立审计找到了真正新动作域：pre-night起曝可提前固定光纤天球方向，明确合成例science .750480胜任意night-inside排程上界.389706；52秒tail合成条件+.745417，但非terminal新增observe可改变loss rank或Jain，不能无条件采用。18条官方短loop、全源/输出manifest保存。新calendar_binding_policy实施研究暂缓，优先资源给持续故障和整季科学决策偏差；其未完成状态保留，不称策略已部署。
+
+
+#### 上述共同曝光与初次新策略的实际短局结果
+
+共同曝光研究已完成四个固定状态：0/4符合预声明overall winner三档稳定gate，108个有限solve中25optimal，手工fixed-path Hungarian 43次优于MILP当前incumbent；枚举12/官方synthetic72/geometry1617arc+20357assignment通过。手工匹配median16ms但整体build24.9–38秒，不是生产可用controller；不扩大预算。L1night18的稳定pair反转保留作时间机会机制证据，不能称整季提升。报告/audit_summary及全部正负/noincumbent在 results/cold_common_exposure_control_20261004/。
+
+cold_strategy_rebuild初版短harness因官方清理host env，两分支均误跑surplus整季6172.484006，已判FAILED_ENV_SCRUB并保留，不能算control差。修显式participant env后的真实第8夜短对照：L1 surplus−76.942429（science−26.691654、多1required missing），L2−60.782648（science−10.201892、多1missing），停止surplus、不扫λ救参。去science anchor额外min(k900)的debias：L1 +22.055487（science+21.793800、required同），L2−6.095593（science−5.842259、required同），均是短截止完整评分而不是整季收益。单卡负不等于整体期望负；root允许一次同冻结debias正常闭环L1/L2整季判断，不改历史gate，不把短局平均+7.979947当部署均分。
+
+新cold_predictive_world_model以fork_turns=none从官方source独立建立C/E多峰共享天气路径 posterior，先逐slot积分q_exp/q_band并计算cap/program/best，再平均；用公开six-decimal score的band/饱和likelihood更新。若官方生成过程可复用可训练普通NN或批量PF在PRO6000；它不是旧32状态窄教师拟合或同16先验场景bank，要求实际decision regret/官方strong闭环评价。此刻尚无训练/部署/得分结果。

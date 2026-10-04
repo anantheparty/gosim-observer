@@ -1,0 +1,220 @@
+{
+  "card": "L2",
+  "entire_original_trajectory_policy_parity_claimed": false,
+  "gate": {
+    "conditional_correct_gain_lower": 99.66733602892538,
+    "consecutive_reports": 0,
+    "event": "terminal_report_frozen",
+    "free_reports_remaining": 2,
+    "frozen_action": {
+      "action": "observe",
+      "assignments": {
+        "12": "V4T007027",
+        "13": "V4T005505",
+        "14": "V4T008353",
+        "3": "V4T007172",
+        "9": "V4T000287"
+      },
+      "duration_seconds": 62,
+      "pointing": {
+        "alt_deg": 72.0301839,
+        "az_deg": 283.2863306
+      },
+      "program": "DARK"
+    },
+    "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+    "ledger_bound": {
+      "bands": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "invalidated_feedback_ranks": [],
+      "lower_ratios": [
+        0.725050916496945,
+        0.7362525458248472,
+        0.8157389635316699,
+        0.8386075949367089,
+        0.8181818181818182,
+        0.7503852080123267,
+        0.8492462311557789,
+        0.856301531213192,
+        0.6792452830188679,
+        0.8254649499284692,
+        0.8645484949832776,
+        0.8170731707317073
+      ],
+      "possible_final_increments": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.006775067750677507
+      ],
+      "q_min": 7.681249523724451,
+      "request_certificate_targets": 13,
+      "upper_ratios": [
+        0.7657841140529531,
+        0.7861507128309573,
+        0.8464491362763915,
+        0.8670886075949367,
+        0.8181818181818182,
+        0.7904468412942989,
+        0.8815506101938263,
+        0.889281507656066,
+        0.7169811320754716,
+        0.8755364806866953,
+        0.8971571906354515,
+        0.8617886178861789
+      ],
+      "valid_feedback_ranks": 1087
+    },
+    "now_utc": "2026-12-14T08:13:58Z",
+    "observe_action_index": 1087,
+    "selection_elapsed_seconds": 0.0,
+    "terminal_kind": "observe",
+    "wallclock_remaining": 900.0,
+    "worst_jain_harm": 0.3326639710746254
+  },
+  "inserted_reports": 1,
+  "passed": true,
+  "recorded_action_fixture_count": 1214,
+  "report_removed_actions_equal_recorded_control": true,
+  "summary": {
+    "all_correct_reports_received": 1,
+    "all_reports_sent": 2,
+    "enabled": true,
+    "events": [
+      {
+        "conditional_correct_gain_lower": 99.66733602892538,
+        "consecutive_reports": 0,
+        "event": "terminal_report_frozen",
+        "free_reports_remaining": 2,
+        "frozen_action": {
+          "action": "observe",
+          "assignments": {
+            "12": "V4T007027",
+            "13": "V4T005505",
+            "14": "V4T008353",
+            "3": "V4T007172",
+            "9": "V4T000287"
+          },
+          "duration_seconds": 62,
+          "pointing": {
+            "alt_deg": 72.0301839,
+            "az_deg": 283.2863306
+          },
+          "program": "DARK"
+        },
+        "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+        "ledger_bound": {
+          "bands": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "invalidated_feedback_ranks": [],
+          "lower_ratios": [
+            0.725050916496945,
+            0.7362525458248472,
+            0.8157389635316699,
+            0.8386075949367089,
+            0.8181818181818182,
+            0.7503852080123267,
+            0.8492462311557789,
+            0.856301531213192,
+            0.6792452830188679,
+            0.8254649499284692,
+            0.8645484949832776,
+            0.8170731707317073
+          ],
+          "possible_final_increments": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.006775067750677507
+          ],
+          "q_min": 7.681249523724451,
+          "request_certificate_targets": 13,
+          "upper_ratios": [
+            0.7657841140529531,
+            0.7861507128309573,
+            0.8464491362763915,
+            0.8670886075949367,
+            0.8181818181818182,
+            0.7904468412942989,
+            0.8815506101938263,
+            0.889281507656066,
+            0.7169811320754716,
+            0.8755364806866953,
+            0.8971571906354515,
+            0.8617886178861789
+          ],
+          "valid_feedback_ranks": 1087
+        },
+        "now_utc": "2026-12-14T08:13:58Z",
+        "observe_action_index": 1087,
+        "selection_elapsed_seconds": 0.0,
+        "terminal_kind": "observe",
+        "wallclock_remaining": 900.0,
+        "worst_jain_harm": 0.3326639710746254
+      },
+      {
+        "correct": false,
+        "event": "terminal_report_result",
+        "now_utc": "2026-12-14T08:13:58Z",
+        "observe_action_index": 1087,
+        "score_delta": 0.0
+      },
+      {
+        "actor_belief_update_suppressed": true,
+        "event": "terminal_report_frozen_action_released",
+        "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5"
+      }
+    ],
+    "false_reports_since_correct": 1,
+    "gate_checks": {
+      "not_terminal": 1213
+    },
+    "inserted_reports": 1,
+    "reads_teacher_labels": false,
+    "reads_truth": false,
+    "terminal_correct": false,
+    "terminal_score_delta": 0.0
+  },
+  "terminal_report_outcome": "synthetic false acknowledgement only; no actual outcome measured",
+  "uses_actual_RequestCache_public_trajectory": true
+}

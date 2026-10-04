@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 349, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 344, in main
+    for card,night in declaration['prefixes']:rows.append(run_state(card,night))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 287, in run_state
+    begun=time.perf_counter();pol,snap,env,meta=public_prefix(card,night)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 59, in public_prefix
+    init=initial(card);p=entry.ExactCachedRequestPolicy(init)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/agent_request_exact_cache.py", line 45, in __init__
+    super().__init__(initial)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/agent_request_distributed.py", line 23, in __init__
+    super().__init__(initial)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/terrain_policy.py", line 38, in __init__
+    super().__init__(initial)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/agent_model_gpu.py", line 91, in __init__
+    super().__init__(initial)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/policy.py", line 66, in __init__
+    self.calibrator = PointingCalibrator(initial)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/pointing_calibration.py", line 87, in __init__
+    self.side = int(instrument["grid_side"])
+KeyError: 'grid_side'

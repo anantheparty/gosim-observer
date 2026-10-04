@@ -1,0 +1,49 @@
+{
+  "prefixes": [
+    [
+      "L1",
+      7
+    ],
+    [
+      "L1",
+      17
+    ],
+    [
+      "L2",
+      7
+    ],
+    [
+      "L2",
+      17
+    ]
+  ],
+  "horizon_seconds": 14400,
+  "future_start_step": 600,
+  "common_start_offsets": "0 plus every first-candidate duration; identical domain for all first candidates",
+  "field_count": 4,
+  "durations": [
+    300,
+    900,
+    1800
+  ],
+  "future_assignment": "joint target-to-(exposure,fibre) winner matching; no fixed greedy suffix assignment",
+  "first_alternatives": "strong actual source action plus same field duration variants",
+  "sensitivity": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "milp_seconds_per_solve": 8,
+  "mip_rel_gap": 1e-07,
+  "positive": "same nonzero first candidate is certified strict winner at all three fixed sensitivities",
+  "no_incumbent": "retain greedy nonoverlap time path with exact fixed-path fibre matching and upper certificate; classify as failed solver; do not extend time",
+  "negative": "no stable certified change; retain result and stop without expanding samples",
+  "forbidden_inputs": [
+    "future weather",
+    "future bulletin/forecast publication",
+    "raw observation factor/quality/prog_mult"
+  ],
+  "scope": "public-prefix conditional model ranking only; no old feedback after changed action; no full season",
+  "control_zip_sha256": "e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a",
+  "source_members": 29
+}

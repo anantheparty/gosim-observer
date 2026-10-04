@@ -1,0 +1,819 @@
+{
+  "actual_RequestCache_feedbacks": 2,
+  "decisions_per_variant": 3,
+  "entire_original_trajectory_policy_parity_claimed": false,
+  "original_recorded_action_parity": [
+    true,
+    true,
+    true
+  ],
+  "passed": true,
+  "same_input_response_parity": true,
+  "variants": {
+    "control": {
+      "actions": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "duration_seconds": 105,
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "duration_seconds": 273,
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "duration_seconds": 70,
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK"
+        }
+      ],
+      "elapsed_seconds": 0.802826083265245,
+      "exit_code": 0,
+      "responses": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "decision_sequence": 1,
+          "duration_seconds": 105,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "decision_sequence": 2,
+          "duration_seconds": 273,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "decision_sequence": 3,
+          "duration_seconds": 70,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        }
+      ],
+      "summary": {
+        "C": 0.9098,
+        "E": 0.9984,
+        "best_science_sum": 9.657491000000002,
+        "correct_reports": 0,
+        "cpu_phase": {
+          "choose_calls": 3,
+          "phase_calls": 3,
+          "phase_candidates": 40199,
+          "phase_emergency_count": 0,
+          "phase_exact_evaluations": 48,
+          "phase_improvements": 3
+        },
+        "decisions": 3,
+        "distributed_request": {
+          "budget": {
+            "accepted": 0,
+            "failed_initializations": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "skipped": 0
+          },
+          "cpu_baseline_seconds": 0.6391380415298045,
+          "cpu_baselines": 3,
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+          "forced_cpu_crops": 0,
+          "remote_baseline_seconds": 0.0,
+          "remote_baselines": 0,
+          "transport_failures": 0
+        },
+        "exposures": 2,
+        "planning_seconds": 0.639,
+        "remote_budget": null,
+        "remote_calls": 0,
+        "remote_check": {
+          "remote_check": "disabled",
+          "seconds": 0.0,
+          "transport": "offline-request-exact-cache"
+        },
+        "remote_seconds": 0,
+        "reports": 0,
+        "request_dp": {
+          "boundary_waits": 0,
+          "build_seconds": 0.0,
+          "builds": 0,
+          "cached_requests": 0,
+          "clipped_baselines": 0,
+          "dp_seconds": 0.0,
+          "dp_solves": 0,
+          "forecast_failures": 0,
+          "infeasible": 0,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret",
+          "rejected_by_cost": 0,
+          "request_observes": 0
+        },
+        "request_exact_cache": {
+          "midpoint_hits": 0,
+          "midpoint_misses": 0,
+          "midpoint_peak_bytes": 0
+        },
+        "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+        "required_missing_bound": 424,
+        "terrain": {
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "conditional_domain_conflicts": [],
+          "directions": [
+            "E"
+          ],
+          "positive_count": 30,
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+          "remaining_boxes": {
+            "E": 540
+          },
+          "schema": "terrain-positive-version-space-v1",
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "zero_feedback_ignored": 0
+        },
+        "terrain_feedback_exposures": 2
+      }
+    },
+    "wrapper_disabled": {
+      "actions": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "duration_seconds": 105,
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "duration_seconds": 273,
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "duration_seconds": 70,
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK"
+        }
+      ],
+      "elapsed_seconds": 0.8406292092986405,
+      "exit_code": 0,
+      "responses": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "decision_sequence": 1,
+          "duration_seconds": 105,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "decision_sequence": 2,
+          "duration_seconds": 273,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "decision_sequence": 3,
+          "duration_seconds": 70,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        }
+      ],
+      "summary": {
+        "C": 0.9098,
+        "E": 0.9984,
+        "best_science_sum": 9.657491000000002,
+        "correct_reports": 0,
+        "cpu_phase": {
+          "choose_calls": 3,
+          "phase_calls": 3,
+          "phase_candidates": 40199,
+          "phase_emergency_count": 0,
+          "phase_exact_evaluations": 48,
+          "phase_improvements": 3
+        },
+        "decisions": 3,
+        "distributed_request": {
+          "budget": {
+            "accepted": 0,
+            "failed_initializations": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "skipped": 0
+          },
+          "cpu_baseline_seconds": 0.6676831250078976,
+          "cpu_baselines": 3,
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+          "forced_cpu_crops": 0,
+          "remote_baseline_seconds": 0.0,
+          "remote_baselines": 0,
+          "transport_failures": 0
+        },
+        "exposures": 2,
+        "planning_seconds": 0.668,
+        "remote_budget": null,
+        "remote_calls": 0,
+        "remote_check": {
+          "remote_check": "disabled",
+          "seconds": 0.0,
+          "transport": "offline-request-exact-cache"
+        },
+        "remote_seconds": 0,
+        "reports": 0,
+        "request_dp": {
+          "boundary_waits": 0,
+          "build_seconds": 0.0,
+          "builds": 0,
+          "cached_requests": 0,
+          "clipped_baselines": 0,
+          "dp_seconds": 0.0,
+          "dp_solves": 0,
+          "forecast_failures": 0,
+          "infeasible": 0,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret",
+          "rejected_by_cost": 0,
+          "request_observes": 0
+        },
+        "request_exact_cache": {
+          "midpoint_hits": 0,
+          "midpoint_misses": 0,
+          "midpoint_peak_bytes": 0
+        },
+        "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+        "required_missing_bound": 424,
+        "terminal_report": {
+          "all_correct_reports_received": 0,
+          "all_reports_sent": 0,
+          "enabled": false,
+          "events": [],
+          "false_reports_since_correct": 0,
+          "gate_checks": {},
+          "inserted_reports": 0,
+          "reads_teacher_labels": false,
+          "reads_truth": false,
+          "terminal_correct": null,
+          "terminal_score_delta": null
+        },
+        "terrain": {
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "conditional_domain_conflicts": [],
+          "directions": [
+            "E"
+          ],
+          "positive_count": 30,
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+          "remaining_boxes": {
+            "E": 540
+          },
+          "schema": "terrain-positive-version-space-v1",
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "zero_feedback_ignored": 0
+        },
+        "terrain_feedback_exposures": 2
+      }
+    },
+    "wrapper_enabled": {
+      "actions": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "duration_seconds": 105,
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "duration_seconds": 273,
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "duration_seconds": 70,
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK"
+        }
+      ],
+      "elapsed_seconds": 0.795992917381227,
+      "exit_code": 0,
+      "responses": [
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007727",
+            "1": "V4T000666",
+            "10": "V4T005587",
+            "11": "V4T006265",
+            "13": "V4T005356",
+            "14": "V4T000665",
+            "15": "V4T007101",
+            "2": "V4T005258",
+            "3": "V4T002353",
+            "4": "V4T000554",
+            "5": "V4T005507",
+            "6": "V4T003774",
+            "8": "V4T003324",
+            "9": "V4T005244"
+          },
+          "decision_sequence": 1,
+          "duration_seconds": 105,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 53.1422982,
+            "az_deg": 94.2879934
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T008200",
+            "1": "V4T005670",
+            "10": "V4T002240",
+            "11": "V4T000362",
+            "12": "V4T000902",
+            "13": "V4T006599",
+            "14": "V4T004056",
+            "15": "V4T006177",
+            "2": "V4T005916",
+            "3": "V4T004647",
+            "4": "V4T000449",
+            "5": "V4T002281",
+            "6": "V4T001526",
+            "7": "V4T004288",
+            "8": "V4T000367",
+            "9": "V4T004277"
+          },
+          "decision_sequence": 2,
+          "duration_seconds": 273,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 49.4311502,
+            "az_deg": 100.897739
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        },
+        {
+          "action": "observe",
+          "assignments": {
+            "0": "V4T007105",
+            "1": "V4T006830",
+            "10": "V4T001907",
+            "11": "V4T007602",
+            "12": "V4T005810",
+            "13": "V4T002265",
+            "14": "V4T004676",
+            "2": "V4T003012",
+            "3": "V4T008053",
+            "4": "V4T007170",
+            "5": "V4T005114",
+            "6": "V4T002629",
+            "7": "V4T004103",
+            "8": "V4T002318",
+            "9": "V4T006094"
+          },
+          "decision_sequence": 3,
+          "duration_seconds": 70,
+          "message_type": "decision_response",
+          "pointing": {
+            "alt_deg": 66.8265474,
+            "az_deg": 82.6866267
+          },
+          "program": "DARK",
+          "protocol_version": "participant-agent-protocol-v4"
+        }
+      ],
+      "summary": {
+        "C": 0.9098,
+        "E": 0.9984,
+        "best_science_sum": 9.657491000000002,
+        "correct_reports": 0,
+        "cpu_phase": {
+          "choose_calls": 3,
+          "phase_calls": 3,
+          "phase_candidates": 40199,
+          "phase_emergency_count": 0,
+          "phase_exact_evaluations": 48,
+          "phase_improvements": 3
+        },
+        "decisions": 3,
+        "distributed_request": {
+          "budget": {
+            "accepted": 0,
+            "failed_initializations": 0,
+            "initialization_seconds": 0.0,
+            "observed_remote_seconds": 0.0,
+            "skipped": 0
+          },
+          "cpu_baseline_seconds": 0.6233319160528481,
+          "cpu_baselines": 3,
+          "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP",
+          "forced_cpu_crops": 0,
+          "remote_baseline_seconds": 0.0,
+          "remote_baselines": 0,
+          "transport_failures": 0
+        },
+        "exposures": 2,
+        "planning_seconds": 0.623,
+        "remote_budget": null,
+        "remote_calls": 0,
+        "remote_check": {
+          "remote_check": "disabled",
+          "seconds": 0.0,
+          "transport": "offline-request-exact-cache"
+        },
+        "remote_seconds": 0,
+        "reports": 0,
+        "request_dp": {
+          "boundary_waits": 0,
+          "build_seconds": 0.0,
+          "builds": 0,
+          "cached_requests": 0,
+          "clipped_baselines": 0,
+          "dp_seconds": 0.0,
+          "dp_solves": 0,
+          "forecast_failures": 0,
+          "infeasible": 0,
+          "model": "full-deadline finite columns; frozen same-duration scientific regret",
+          "rejected_by_cost": 0,
+          "request_observes": 0
+        },
+        "request_exact_cache": {
+          "midpoint_hits": 0,
+          "midpoint_misses": 0,
+          "midpoint_peak_bytes": 0
+        },
+        "request_exact_cache_class": "ExactCachedRequestRemotePlanner",
+        "required_missing_bound": 424,
+        "terminal_report": {
+          "all_correct_reports_received": 0,
+          "all_reports_sent": 0,
+          "enabled": true,
+          "events": [],
+          "false_reports_since_correct": 0,
+          "gate_checks": {
+            "not_terminal": 3
+          },
+          "inserted_reports": 0,
+          "reads_teacher_labels": false,
+          "reads_truth": false,
+          "terminal_correct": null,
+          "terminal_score_delta": null
+        },
+        "terrain": {
+          "altitude_range": [
+            35.0,
+            50.0
+          ],
+          "boxes_per_family": 540,
+          "conditional_domain_conflicts": [],
+          "directions": [
+            "E"
+          ],
+          "positive_count": 30,
+          "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature",
+          "remaining_boxes": {
+            "E": 540
+          },
+          "schema": "terrain-positive-version-space-v1",
+          "width_range": [
+            30.0,
+            70.0
+          ],
+          "zero_feedback_ignored": 0
+        },
+        "terrain_feedback_exposures": 2
+      }
+    }
+  }
+}

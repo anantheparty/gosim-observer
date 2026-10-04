@@ -1,0 +1,66 @@
+{
+  "adoption_rule": "Only a passed matched actual L3 can establish this RequestCache gain; do not assume +100.",
+  "card": "L3",
+  "container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "no_L4_read_or_run_planned": true,
+  "no_native_score_or_FOUR_CARD_ACTUAL_RESULT_used_as_RequestCache_evidence": true,
+  "owner": "root must explicitly run this next step",
+  "required_preflight": [
+    "verify this source lock and both package ZIP hashes",
+    "same official L3 card/runner/scorer/dependencies/container image",
+    "disjoint two-core pinning per variant and simultaneous start",
+    "fresh output directories; preserve raw failures and timeout outcomes"
+  ],
+  "required_result_gates": [
+    "both complete survey_complete within 900s; no ignored response/OOM/traceback",
+    "source trees remain locked before/after; store every output hash",
+    "control is this 29-member RequestCache package, not a native-policy old score",
+    "full wrapper emits at most one extra report, immediately before control final action",
+    "after deleting only that inserted report all action objects equal matched control",
+    "all original decision fields except sequential decision_id equal after deletion",
+    "UTC/rank unchanged across report; final observe rank and loss plan equal",
+    "public false quota/consecutive limit/Jain/remaining budget gate satisfied",
+    "report outcome agrees between public report_result and actor summary",
+    "false outcome has score_delta=0 and every score component/total equal",
+    "correct outcome reward positive; required/request contributions do not decrease",
+    "actual Jain change respects public bound and total delta meets conditional lower bound",
+    "if zero insertions report gate reason and treat fitness gain as unmeasured/unavailable"
+  ],
+  "resources_each": {
+    "cpus": 2,
+    "global_wallclock_seconds": 900,
+    "memory_mib": 2048,
+    "network": "none",
+    "participant_mounts": [
+      "readonly locked package",
+      "readonly numpy==2.2.6 dependencies"
+    ],
+    "truth_mount": false
+  },
+  "runner": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/upstream/gosim-observer-examples/runner/run_local.py",
+  "schema": "request-terminal-future-matched-L3-plan-v1",
+  "status": "prepared_only_not_started",
+  "variants": {
+    "control": {
+      "entry": [
+        "python3",
+        "-u",
+        "-m",
+        "research.agent_request_exact_cache"
+      ],
+      "package": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/control_package"
+    },
+    "intervention": {
+      "entry": [
+        "python3",
+        "-u",
+        "wrapper.py"
+      ],
+      "environment": {
+        "REQUEST_TERMINAL_REPORT_ENABLE": "1",
+        "REQUEST_TERMINAL_REPORT_MIN_WALLCLOCK": "10"
+      },
+      "package": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/full_wrapper_package"
+    }
+  }
+}

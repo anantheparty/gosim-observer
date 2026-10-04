@@ -1,0 +1,63 @@
+{
+  "schema": "root-request-terminal-actual-launch-v1",
+  "pid": 1854611,
+  "started_utc": "2026-10-04T00:09:21.755497+00:00",
+  "expected": 2,
+  "card": "L3",
+  "variants": [
+    "control",
+    "terminal"
+  ],
+  "official_runtime_sources": [
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/python/agent_core/protocol.py",
+      "verified_path": "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004/protocol.reference.py",
+      "runtime_source": false,
+      "sha256": "470c26cae91e2d40fd629d31d024338e32a2ca645cec669cace2433f7e76edcf"
+    },
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_config_check.py",
+      "verified_path": "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/challenge/v4_config_check.py",
+      "runtime_source": true,
+      "sha256": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8"
+    },
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py",
+      "verified_path": "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/challenge/v4_fiber_map.py",
+      "runtime_source": true,
+      "sha256": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892"
+    },
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_runner.py",
+      "verified_path": "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/challenge/v4_runner.py",
+      "runtime_source": true,
+      "sha256": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d"
+    },
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py",
+      "verified_path": "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/challenge/v4_scorer.py",
+      "runtime_source": true,
+      "sha256": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66"
+    },
+    {
+      "original_source": "formal_v4/upstream/gosim-observer-examples/runner/challenge/v4_workflow.py",
+      "verified_path": "/tmp/geometry_native_20261003/upstream/gosim-observer-examples/runner/challenge/v4_workflow.py",
+      "runtime_source": true,
+      "sha256": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba"
+    }
+  ],
+  "source_lock_sha256": "aec7816610d81951d92e733403690d85a1d7e50fed12881cb5f378e076073a50",
+  "harness_sha256": "1ab500efb5c353e6473aa800aca59a877bd99fcc6000b145efe6701430acb827",
+  "command": [
+    "python3",
+    "-u",
+    "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004/run_request_terminal_pair.py",
+    "--experiment",
+    "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps"
+  ],
+  "remote_result_dir": "/tmp/geometry_native_20261003/results/request_terminal_pair_20261004"
+}

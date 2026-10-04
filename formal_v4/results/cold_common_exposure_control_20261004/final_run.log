@@ -1,0 +1,17 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/spatial_candidates.py:201: RuntimeWarning: invalid value encountered in cast
+  row = np.clip(np.floor(north_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/spatial_candidates.py:202: RuntimeWarning: invalid value encountered in cast
+  col = np.clip(np.floor(east_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 364, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 359, in main
+    for card,night in declaration['prefixes']:rows.append(run_state(card,night))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 308, in run_state
+    got=solve(p,arcs,scores,lower,env,scale,first=first,time_limit=8.)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 279, in solve
+    result=milp(objective,integrality=integrality,bounds=Bounds(np.zeros(n),np.ones(n)),
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/deps/scipy/optimize/_milp.py", line 372, in milp
+    highs_res = _highs_wrapper(c, indptr, indices, data, b_l, b_u,
+KeyboardInterrupt

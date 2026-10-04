@@ -1,0 +1,18 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/spatial_candidates.py:201: RuntimeWarning: invalid value encountered in cast
+  row = np.clip(np.floor(north_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/control_package/research/spatial_candidates.py:202: RuntimeWarning: invalid value encountered in cast
+  col = np.clip(np.floor(east_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+{"card": "L1", "night": 7, "sensitivity": 0.9, "order": [1, 2, 0, 3], "certified": false, "no_incumbent_solves": 0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 404, in <module>
+    win=order[0];certified=all(ranked[win]['joint']['value']>ranked[j]['joint']['upper_value']+1e-6 for j in order[1:])
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 394, in main
+    all_target_time_opportunity_loss=opportunity,
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 334, in run_state
+    # domain is a safe finite-model upper bound when HiGHS has not produced
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/common_exposure.py", line 284, in solve
+    if cells:
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_common_exposure_control_20261004/deps/scipy/optimize/_milp.py", line 372, in milp
+    highs_res = _highs_wrapper(c, indptr, indices, data, b_l, b_u,
+KeyboardInterrupt

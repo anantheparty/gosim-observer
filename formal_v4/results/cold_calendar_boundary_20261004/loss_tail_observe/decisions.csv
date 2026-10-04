@@ -1,0 +1,8 @@
+decision_id,observe_index,action,start_utc,end_utc,duration_seconds,alt_deg,az_deg,program,assigned_count,hit_count,valid,invalidated_by
+1,0,observe,2026-11-03T06:00:00Z,2026-11-03T06:01:00Z,60,70.0000,30.0000,BACKUP,0,0,true,
+2,1,observe,2026-11-03T06:01:00Z,2026-11-03T06:02:00Z,60,70.0000,30.0000,BACKUP,0,0,true,
+3,2,observe,2026-11-03T06:02:00Z,2026-11-03T06:17:00Z,900,70.2234,28.6929,DARK,1,1,false,DL_SYN
+4,3,observe,2026-11-03T06:17:00Z,2026-11-03T06:18:00Z,60,70.0000,30.0000,BACKUP,0,0,true,
+5,,wait,2026-11-03T06:18:00Z,2026-11-03T06:19:30Z,90,,,,0,0,true,
+6,4,observe,2026-11-03T06:19:30Z,2026-11-03T06:20:00Z,30,70.0000,30.0000,BACKUP,0,0,true,
+7,,wait,2026-11-03T06:20:00Z,2026-11-03T06:40:00Z,1200,,,,0,0,true,

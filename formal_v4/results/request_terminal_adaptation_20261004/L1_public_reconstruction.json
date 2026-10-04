@@ -1,0 +1,41 @@
+{
+  "actions": 1093,
+  "card": "L1",
+  "includes_terminal_observation_feedback": false,
+  "last_feedback_rank": 983,
+  "projected_observation_fields": [
+    "observe_index",
+    "target_id",
+    "score"
+  ],
+  "recoverable_fields": [
+    "initialize verbatim",
+    "actions verbatim",
+    "now_utc from executed decision start",
+    "observe rank from executed observe rows",
+    "last_result score/hit counts",
+    "delivered messages with report round-trip ordering",
+    "latest bulletin/forecast",
+    "running_total from rounded public score ledger and resync best_scores"
+  ],
+  "sources": {
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_initialize_public.json": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/actions.jsonl": "2cd70cded91a8de7c57ed2496e72951cf223494c0291b6aa88946b8a97d61339",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/decisions.csv": "d9da2d51c461de9c0f7c564bf7866e43b36104ea331bf0b37f22a52a047263a7",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/messages.jsonl": "68280558c661c7fcab3137159e929ac5d90e7ca5d256e6dbdd7573ee34c28bfb",
+    "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/observations.csv": "b8b7f92177b818e7b6e8a4d0da959761b60040bdae4d2ec542ab7d282fc94325"
+  },
+  "substituted_fields": {
+    "active_requests": "empty fixture; prefix precedes first request publication",
+    "wallclock": "fixed 0/900 for equal-input prefix checks"
+  },
+  "terminal_action_rank": 984,
+  "terminal_end": "2026-12-03T08:15:00Z",
+  "terminal_kind": "wait",
+  "terminal_start": "2026-12-03T08:14:29Z",
+  "unrecoverable_fields": [
+    "original wallclock elapsed/remaining",
+    "active_requests completed_target_ids before settlement",
+    "any original snapshot fields outside the documented v4 runner contract"
+  ]
+}

@@ -1,0 +1,257 @@
+--- reviewed_native_terminal_report_agent.py
++++ request_terminal_report_agent.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Opt-in terminal report wrapper for the unchanged native READY policy.
++"""Terminal report guard adapted to the unchanged offline RequestCache policy.
+ 
+ Reads only initialization and live protocol messages.  It freezes the final
+ already selected action, reports once, and returns that exact action without
+@@ -15,6 +15,7 @@
+ import os
+ import sys
+ import traceback
++import time
+ from datetime import datetime, timedelta
+ from pathlib import Path
+ 
+@@ -47,7 +48,7 @@
+         self.band_width=float(self.cfg['uniformity']['ra_band_width_deg'])
+         self.weight=float(self.cfg['uniformity']['weight'])
+         # Official v4 initialize uses a columnar public catalogue, exactly as
+-        # v4_workflow.initialize_payload and the unchanged native planner do.
++        # v4_workflow.initialize_payload and the unchanged RequestCache planner do.
+         targets=initial['targets']
+         columns=targets['columns']
+         col={name:i for i,name in enumerate(columns)}
+@@ -57,6 +58,8 @@
+                       for row in targets['rows']}
+         self.band_totals=collections.Counter(t['band'] for t in self.catalog.values())
+         self.entries={}
++        self.request_thresholds={}
++        self.request_completed={}
+         self.invalid=set()
+         self.last_sent=None
+         self.awaiting_feedback=False
+@@ -72,6 +75,7 @@
+         self.terminal_correct=None
+         self.terminal_score_delta=None
+         self.gate_checks=collections.Counter()
++        self.last_bound_details={}
+ 
+     def _record(self,event,**fields):
+         record={'event':event,**fields}
+@@ -109,19 +113,49 @@
+                     tid=hit['target_id']
+                     weight=self.catalog[tid]['weight']
+                     score=float(hit['score'])
+-                    if not math.isfinite(score) or weight<=0:
++                    if not math.isfinite(score) or score<0 or weight<0:
+                         raise RuntimeError('Invalid public target score/weight')
+                     eps=0.500001e-6
+-                    lo=min(1.,max(0.,score-eps)/(weight*max(multiplier,mismatch)))
+-                    hi=min(1.,max(0.,score+eps)/(weight*min(multiplier,mismatch)))
++                    denominator_lo=weight*max(multiplier,mismatch)
++                    denominator_hi=weight*min(multiplier,mismatch)
++                    lo=min(1.,max(0.,score-eps)/denominator_lo) if denominator_lo>0 else 0.
++                    hi=min(1.,max(0.,score+eps)/denominator_hi) if denominator_hi>0 else 1.
+                     rows.append((tid,lo,hi))
++                if rank in self.entries:raise RuntimeError('Duplicate public observation feedback')
+                 self.entries[rank]=rows
+             self.awaiting_feedback=False
++        # Request results omit threshold; publications (including those carried
++        # over a wait-until) establish it before results are consumed.
+         for message in snapshot.get('new_messages',[]):
+-            if message.get('record_type')=='state_resync':
++            if message.get('record_type')=='observation_request':
++                self._request(message)
++        for message in snapshot.get('new_messages',[]):
++            kind=message.get('record_type')
++            if kind=='state_resync':
+                 window=message['invalidated_window']
+                 self.invalid.update(range(int(window['action_index_start']),
+                                           int(window['action_index_end_exclusive'])))
++                # Conservatively revoke every cached request certificate. An
++                # unaffected expired request need not be re-announced; losing
++                # its certificate makes the bound weaker and remains safe.
++                self.request_completed.clear()
++                for request in message.get('observation_requests',[]):self._request(request)
++            elif kind=='observation_request_result':self._request(message)
++        for request in snapshot.get('active_requests',[]):self._request(request)
++
++    def _request(self,request):
++        request_id=str(request['request_id'])
++        threshold=request.get('completion_factor_threshold',self.request_thresholds.get(request_id))
++        if threshold is not None:
++            threshold=float(threshold)
++            if not math.isfinite(threshold) or not 0<threshold<=1:
++                raise RuntimeError('Invalid public request threshold')
++            self.request_thresholds[request_id]=threshold
++        if 'completion_reward' in request and float(request['completion_reward'])<0:
++            raise RuntimeError('Negative request reward violates official v4 contract')
++        if 'completed_target_ids' in request:
++            # Replace, rather than union: a revised result revokes lost proofs.
++            self.request_completed[request_id]=set(map(str,request['completed_target_ids']))
+ 
+     def sent(self,snapshot,action):
+         if not self.enabled:return
+@@ -143,13 +177,15 @@
+                 return 'wait' if parse_utc(action['until_utc'])>=self.end else None
+             return 'wait' if now+timedelta(seconds=int(action['duration_seconds']))>=self.end else None
+         if kind!='observe':return None
+-        if now+timedelta(seconds=int(action['duration_seconds']))<self.end:return None
+-        # The runner cuts at the current night end.  A command spanning a daytime
+-        # gap is not sufficient proof that the action ends the survey.
++        effective_end=min(now+timedelta(seconds=int(action['duration_seconds'])),self.end)
++        # Official v4_runner also clips to night_end when exposure start lies
++        # inside a slot. Public nights give those occupied interval bounds.
++        # In a daytime gap the runner only applies duration/survey clipping.
+         for start,end in self.nights:
+             if start<=now<end:
+-                return 'observe' if end>=self.end else None
+-        return None
++                effective_end=min(effective_end,end)
++                break
++        return 'observe' if effective_end>=self.end else None
+ 
+     def uniformity_harm_bound(self,action):
+         if action['action'] in ('wait','finish'):return 0.
+@@ -160,6 +196,13 @@
+             for tid,l,u in rows:
+                 lo[tid]=max(lo[tid],l)
+                 hi[tid]=max(hi[tid],u)
++        for request_id,completed in self.request_completed.items():
++            threshold=self.request_thresholds.get(request_id)
++            if threshold is None:continue
++            for tid in completed:
++                if tid in self.catalog:
++                    lo[tid]=max(lo[tid],threshold)
++                    hi[tid]=max(hi[tid],threshold)
+         low_counts=collections.Counter()
+         high_counts=collections.Counter()
+         for tid,target in self.catalog.items():
+@@ -174,13 +217,19 @@
+         upper=[high_counts[b]/self.band_totals[b] for b in bands]
+         delta=[increments[b]/self.band_totals[b] for b in bands]
+         q_min=sum(l*l for l in lower)
+-        if not any(delta):return 0.
+-        if q_min<=0:return math.inf
++        self.last_bound_details={'valid_feedback_ranks':len(set(self.entries)-self.invalid),
++            'invalidated_feedback_ranks':sorted(self.invalid),
++            'request_certificate_targets':len(set().union(*self.request_completed.values())) if self.request_completed else 0,
++            'bands':bands,'lower_ratios':lower,'upper_ratios':upper,
++            'possible_final_increments':delta,'q_min':q_min}
++        if not any(delta) or self.weight==0:return 0.
++        if q_min<=0:return self.weight
+         s_max=sum(u+d for u,d in zip(upper,delta))
+-        return sum(2*self.weight*s_max*s_max*(u+d)*d/(len(bands)*q_min*q_min)
+-                   for u,d in zip(upper,delta))
+-
+-    def propose(self,snapshot,action):
++        derivative=sum(2*self.weight*s_max*s_max*(u+d)*d/(len(bands)*q_min*q_min)
++                       for u,d in zip(upper,delta))
++        return min(self.weight,derivative)
++
++    def propose(self,snapshot,action,decision_started=None):
+         if not self.enabled:return action
+         if self.fired:return action
+         terminal=self.terminal_kind(snapshot,action)
+@@ -195,7 +244,9 @@
+             self.gate_checks['consecutive_limit']+=1
+             return action
+         remaining=snapshot.get('wallclock',{}).get('remaining_seconds')
+-        if remaining is None or float(remaining)<self.minimum_wallclock:
++        elapsed=max(0.,time.perf_counter()-decision_started) if decision_started is not None else 0.
++        remaining=None if remaining is None else float(remaining)-elapsed
++        if remaining is None or not math.isfinite(remaining) or remaining<self.minimum_wallclock:
+             self.gate_checks['wallclock']+=1
+             return action
+         harm=self.uniformity_harm_bound(action)
+@@ -203,6 +254,13 @@
+         if not math.isfinite(harm) or harm>reward or reward<0:
+             self.gate_checks['jain_bound']+=1
+             return action
++        # The catalogue/ledger scan itself also consumes the public budget.
++        if decision_started is not None:
++            elapsed=max(0.,time.perf_counter()-decision_started)
++            remaining=float(snapshot['wallclock']['remaining_seconds'])-elapsed
++            if remaining<self.minimum_wallclock:
++                self.gate_checks['wallclock']+=1
++                return action
+         self.cached=copy.deepcopy(action)
+         self.cache_now=snapshot['now_utc']
+         self.cache_rank=int(snapshot['observe_action_index'])
+@@ -212,15 +270,22 @@
+                      frozen_action_hash=action_hash(action),frozen_action=action,
+                      free_reports_remaining=quota,consecutive_reports=self.consecutive_reports,
+                      worst_jain_harm=harm,conditional_correct_gain_lower=reward-harm,
+-                     wallclock_remaining=remaining)
++                     wallclock_remaining=remaining,selection_elapsed_seconds=elapsed,
++                     ledger_bound=copy.deepcopy(self.last_bound_details))
+         return {'action':'report'}
+ 
+     def release(self,snapshot):
+         if self.cached is None:raise RuntimeError('No frozen terminal action')
+         if snapshot['now_utc']!=self.cache_now or int(snapshot['observe_action_index'])!=self.cache_rank:
+             raise RuntimeError('Report unexpectedly changed public time or observation rank')
+-        if (snapshot.get('last_result') or {}).get('action')!='report':
++        result=snapshot.get('last_result') or {}
++        if result.get('action')!='report' or not isinstance(result.get('correct'),bool):
+             raise RuntimeError('Terminal report acknowledgement missing')
++        expected=float(self.reporting['correct_reward']) if result['correct'] else 0.
++        if result.get('score_delta')!=expected:
++            raise RuntimeError('Report settlement differs from the certified public quota')
++        if any(message.get('record_type')!='report_result' for message in snapshot.get('new_messages',[])):
++            raise RuntimeError('Unexpected new public information between report and frozen tail')
+         action=self.cached
+         self.cached=None
+         self._record('terminal_report_frozen_action_released',
+@@ -243,6 +308,7 @@
+             self.terminal_guard=TerminalReportGuard(initial,enabled,minimum_wallclock,emit)
+ 
+         def decide(self,snapshot):
++            decision_started=time.perf_counter()
+             guard=self.terminal_guard
+             if not guard.enabled:return super().decide(snapshot)
+             guard.ingest(snapshot)
+@@ -250,7 +316,7 @@
+                 action=guard.release(snapshot)
+             else:
+                 action=super().decide(snapshot)
+-                action=guard.propose(snapshot,action)
++                action=guard.propose(snapshot,action,decision_started)
+             guard.sent(snapshot,action)
+             return action
+ 
+@@ -288,31 +354,3 @@
+             break
+     if policy and getattr(policy,'remote',None):policy.remote.close()
+     return policy
+-
+-
+-def main():
+-    # The existing native source remains untouched; this entry installs the same
+-    # in-memory planner binding as release/research/agent_geometry_native.py.
+-    base_root=Path(os.environ.get('TERMINAL_REPORT_BASE_ROOT',str(Path.cwd()))).resolve()
+-    if not (base_root/'policy.py').is_file():
+-        raise RuntimeError('Set TERMINAL_REPORT_BASE_ROOT to the unchanged native READY participant root')
+-    sys.path.insert(0,str(base_root))
+-    import policy
+-    from research.geometry_native import load_library
+-    from research.candidate_geometry_sweep import CandidateGeometryPlanner
+-    load_library()
+-    mode=os.environ.get('GEOMETRY_NATIVE_PLANNER','sweep')
+-    if mode=='sweep':policy.SpatialPlanner=CandidateGeometryPlanner
+-    elif mode=='union':
+-        from research.candidate_geometry_union import CandidateGeometryUnionPlanner
+-        policy.SpatialPlanner=CandidateGeometryUnionPlanner
+-    else:raise ValueError('Unknown native geometry planner: '+mode)
+-    enabled=os.environ.get('TERMINAL_REPORT_ENABLE','0')=='1'
+-    minimum=float(os.environ.get('TERMINAL_REPORT_MIN_WALLCLOCK','10'))
+-    def emit(record):
+-        print(json.dumps(record,separators=(',',':'),allow_nan=False),file=sys.stderr,flush=True)
+-    wrapped=make_policy_class(policy.Policy,enabled,minimum,emit)
+-    serve(sys.stdin,sys.stdout,sys.stderr,wrapped)
+-
+-
+-if __name__=='__main__':main()
