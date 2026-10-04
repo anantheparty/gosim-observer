@@ -268,7 +268,7 @@ private GitHub已确认`6dceb0d6cbb740a4d2538676981af6f0b7c7a49e`包含所有前
 新的forknone `cold_public_rng_identifiability`已独立读官方代码，24源SHA与公开GitHub e01939d0一致。有限1024-domain合成12world master blind恢复全中、4域外正确abstain；同master可复现未来多流，不代表实际同master路径。另用官方build_spec独立weather seeds，构造两world相同catalog/public初始化及9次过去反馈（7正/2共同关闭），下一动作0 vs .038914，证明public catalog/past prefix一般不唯一决定future。实际已存在0..2^32−1公共seed/模型审计，没有受公开证据支持的新小域；不重复0..1023、不读actual truth证明。报告仍须冻结，不视为actor已有future数据。
 
 
-### 新稀疏公开诊断域完成独立 test（2026-10-04 11:30 JST）
+### 新稀疏公开诊断域完成独立 test（2026-10-04 11:24 JST）
 
 cold_report_sparse_domain 的新1568→128→128→1普通NN真实PRO6000训练16.63秒，selectedepoch3；源/模型/DP于02:15:08UTC锁定，test850000–850015一次完成且所有hash不变。固定public design的16独立world：DPfree mean5298.429271、p90free5014.773878、oracle5467.681328；paired DP−p90 +283.655393(SE104.634663)，11胜1负4平，DP regret169.252056。这是best-only固定动作研究，不是对现有生产faultv1的完整分数收益。研究prior max2fault不属于正式协议保证；actor public correct_count>=2立即fallback原faultv1，不调用NN/DP，原v1可以继续第三次report，微合同通过。
 
@@ -277,3 +277,12 @@ cold_report_sparse_domain 的新1568→128→128→1普通NN真实PRO6000训练1
 原研究包不再修改。独立sparse runtime agent正在自有目录组合冻结native exact算术+新report_entry；原NN/DP/actor/强策略及faultv1source/model必须原样保持，只新增入口和已验证算术安装，先真实protocol及false/true/count2合同。root随后正常2CPU/2GB/900完整L1/L2/L3闭环与已有faultv1比较；不重跑control，不拿test的+283当生产gain，L4留作之后冻结holdout。此时尚未启动新actualfull或平台提交。
 
 最新已完成raw、精确加速四条full、calendar正负/合同与RNG反例/源校验均已privateGit推送并ls-remote确认3727fbbcf1890c62efb0f3250b85e306c63c2d7f。在线仍没有提交新faultv1；Mac locked原手动解锁请求pending。
+
+
+### 新 NN/DP 加精确算术组合实际整季启动（11:33 JST）
+
+组合43fileZIP `fa7a8e7c8de173331a64e160e4df6f34710c9e59a37b199271c2444e5d46126b` 完成Linux正式Py3.12.15/NumPy2.2.6、2CPU2GiB的official L1/L2各五decision公开request/response10对完全相同；四participant退出0。真假报修、quota、public correct>=2完全不加载feature/NN/DP和原faultv1第三fault保留的micro合同全过，真实science动作traces原/加速全同。源/NN/DP自freeze未修改，只run/build manifest和新增native安装入口；原faultv1 guard与27strong成员全byte相同。root再次单独核对ZIP原members改变集合、native字节及所有合同，COMBINATION_FINAL_RECEIPT.json全部12gate通过。
+
+正式正常L1/L2/L3闭环于2026-10-04 02:33:09.028134UTC启动Rhodes1 PID2211875，results/sparse_report_actual_20261004/。实际已查到三个owned运行participant，分别core14,15 /16,17 /18,19，2CPU2GiB/networknone/只挂code+NumPy，900sec、无forcedprefix/STOP、host原truth正常评分。引用已有faultv1完整三卡，不重跑control，L4未选择留后续holdout。source lock387370e112e91daab35d6df9a81e4fd8241ac6695475433aa97c4851a25dd718、casesb31a4afdd234ca56a23a64952e14b56c99a722fd1cae750e7563b447625514ff、固定harness4816125；job/lock/source/runtime5file receipt已本地保存。
+
+此前02:27UTC正常CUA访问Chrome再次明确Mac locked，原手动解锁请求pending，没有提交新候选。NN已结束GPU训练，当前PID是CPU受限生产回放；没有新NN整季分数或线上增益断言。

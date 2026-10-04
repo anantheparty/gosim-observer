@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "accelerated": true,
+  "actual_science_actions_used": true,
+  "false_exact_action_pending_and_C_E_clock_scores_factors_ledger_preserved": true,
+  "false_does_not_replan": true,
+  "true_normal_replan_and_reset": true,
+  "quota1_usable_quota0_declined": true,
+  "public_correct_count_ge2_excludes_model_DP_feature_and_constructor_calls": true,
+  "future_third_fault_v1_reporting_and_correct_replan": true,
+  "single_SparseReportGuard_no_fault_wrapper": true,
+  "baseline_action_traces": {
+    "sparse_false": [
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 38.35757,
+          "az_deg": 135.6555775
+        },
+        "assignments": {
+          "0": "V4T006386",
+          "1": "V4T003555",
+          "2": "V4T001626",
+          "3": "V4T002723",
+          "4": "V4T001179",
+          "5": "V4T002328",
+          "6": "V4T003083",
+          "7": "V4T001671",
+          "8": "V4T004783",
+          "9": "V4T003638",
+          "10": "V4T006643",
+          "11": "V4T000493",
+          "12": "V4T000185",
+          "13": "V4T004417",
+          "14": "V4T002666",
+          "15": "V4T000976"
+        },
+        "duration_seconds": 143,
+        "program": "BRIGHT"
+      }
+    ],
+    "sparse_true": [
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 38.35757,
+          "az_deg": 135.6555775
+        },
+        "assignments": {
+          "0": "V4T006386",
+          "1": "V4T003555",
+          "2": "V4T001626",
+          "3": "V4T002723",
+          "4": "V4T001179",
+          "5": "V4T002328",
+          "6": "V4T003083",
+          "7": "V4T001671",
+          "8": "V4T004783",
+          "9": "V4T003638",
+          "10": "V4T006643",
+          "11": "V4T000493",
+          "12": "V4T000185",
+          "13": "V4T004417",
+          "14": "V4T002666",
+          "15": "V4T000976"
+        },
+        "duration_seconds": 143,
+        "program": "BRIGHT"
+      },
+      {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 54.1192783,
+          "az_deg": 83.8908329
+        },
+        "assignments": {
+          "0": "V4T004149",
+          "1": "V4T001449",
+          "2": "V4T002046",
+          "3": "V4T002124",
+          "4": "V4T004248",
+          "5": "V4T000219",
+          "6": "V4T005723",
+          "7": "V4T003697",
+          "8": "V4T001151",
+          "9": "V4T005444",
+          "10": "V4T001114",
+          "11": "V4T002111",
+          "12": "V4T000374",
+          "13": "V4T002945",
+          "15": "V4T000744"
+        },
+        "duration_seconds": 154,
+        "program": "DARK"
+      }
+    ],
+    "count2_declined": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 38.35757,
+        "az_deg": 135.6555775
+      },
+      "assignments": {
+        "0": "V4T006386",
+        "1": "V4T003555",
+        "2": "V4T001626",
+        "3": "V4T002723",
+        "4": "V4T001179",
+        "5": "V4T002328",
+        "6": "V4T003083",
+        "7": "V4T001671",
+        "8": "V4T004783",
+        "9": "V4T003638",
+        "10": "V4T006643",
+        "11": "V4T000493",
+        "12": "V4T000185",
+        "13": "V4T004417",
+        "14": "V4T002666",
+        "15": "V4T000976"
+      },
+      "duration_seconds": 143,
+      "program": "BRIGHT"
+    },
+    "count2_cached": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 38.35757,
+        "az_deg": 135.6555775
+      },
+      "assignments": {
+        "0": "V4T006386",
+        "1": "V4T003555",
+        "2": "V4T001626",
+        "3": "V4T002723",
+        "4": "V4T001179",
+        "5": "V4T002328",
+        "6": "V4T003083",
+        "7": "V4T001671",
+        "8": "V4T004783",
+        "9": "V4T003638",
+        "10": "V4T006643",
+        "11": "V4T000493",
+        "12": "V4T000185",
+        "13": "V4T004417",
+        "14": "V4T002666",
+        "15": "V4T000976"
+      },
+      "duration_seconds": 143,
+      "program": "BRIGHT"
+    },
+    "third_after_correct": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 54.1192783,
+        "az_deg": 83.8908329
+      },
+      "assignments": {
+        "0": "V4T004149",
+        "1": "V4T001449",
+        "2": "V4T002046",
+        "3": "V4T002124",
+        "4": "V4T004248",
+        "5": "V4T000219",
+        "6": "V4T005723",
+        "7": "V4T003697",
+        "8": "V4T001151",
+        "9": "V4T005444",
+        "10": "V4T001114",
+        "11": "V4T002111",
+        "12": "V4T000374",
+        "13": "V4T002945",
+        "15": "V4T000744"
+      },
+      "duration_seconds": 154,
+      "program": "DARK"
+    }
+  },
+  "policy_mro": [
+    "PersistentPolicy",
+    "GeometryMemoPolicy",
+    "ExactCachedRequestPolicy",
+    "DistributedRequestPolicy",
+    "TerrainPolicy",
+    "ModelGPUPolicy",
+    "Policy",
+    "object"
+  ],
+  "evaluator_module": "sparse_evaluator",
+  "no_network_or_truth": true
+}

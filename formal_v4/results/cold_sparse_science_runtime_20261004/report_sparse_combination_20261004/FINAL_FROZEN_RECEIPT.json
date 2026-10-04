@@ -1,0 +1,64 @@
+{
+  "status": "final_frozen_combination_contracts_passed",
+  "report_source_zip_sha256": "069c346450412437a96b02d48abe886d4201b7a87dc583c87715b995c42a9823",
+  "sparse_source_fault_zip_sha256": "5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29",
+  "candidate_zip_sha256": "fa7a8e7c8de173331a64e160e4df6f34710c9e59a37b199271c2444e5d46126b",
+  "candidate_members": 43,
+  "original_report_members": 36,
+  "report_members_byte_identical": 34,
+  "only_original_members_changed": [
+    "build_manifest.json",
+    "observer.project.json"
+  ],
+  "report_support_equals_original_faultv1": true,
+  "report_model_sha256": "aa6ee228fe4e529aab93787901081f569b596a725671c92e1690c14a9702d35e",
+  "report_dp_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+  "native_extras_byte_identical": true,
+  "call_order": [
+    "report_sparse_entry imports sparse_exact",
+    "sparse_exact.install replaces SpatialPlanner._evaluate and CPUPhase coarse_numpy_local",
+    "import original report_entry",
+    "original ExactCache factories are installed",
+    "original report_policy wraps ExactCachedRequestPolicy",
+    "agent.main receives initialize and decision messages"
+  ],
+  "no_fault_wrapper_imported": true,
+  "source_lock_sha256": "387370e112e91daab35d6df9a81e4fd8241ac6695475433aa97c4851a25dd718",
+  "frozen_package_never_modified_after_creation": true,
+  "linux_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "linux_cpus": "16,17",
+  "linux_memory_bytes": 2147483648,
+  "linux_numpy": "2.2.6",
+  "linux_micro_original_and_sparse_passed": true,
+  "linux_actual_science_action_traces_equal": true,
+  "false_true_quota_count2_and_third_fault_fallback_passed": true,
+  "public_count_ge2_NN_DP_feature_constructor_calls": 0,
+  "single_guard_and_original_report_entry_factory_verified": true,
+  "official_five_decision_pairs": [
+    {
+      "variant": "report_sparse",
+      "card": "L1",
+      "official_same_public_requests_responses": true,
+      "responses": 5,
+      "original_wall_seconds": 3.5423565179808065,
+      "sparse_wall_seconds": 2.109256105031818,
+      "original_returncode": 0,
+      "sparse_returncode": 0
+    },
+    {
+      "variant": "report_sparse",
+      "card": "L2",
+      "official_same_public_requests_responses": true,
+      "responses": 5,
+      "original_wall_seconds": 3.4732056070351973,
+      "sparse_wall_seconds": 2.1010203709593043,
+      "original_returncode": 0,
+      "sparse_returncode": 0
+    }
+  ],
+  "local_and_remote_source_lock_match_after_checks": true,
+  "package_changes_after_source_freeze": false,
+  "actor_truth_or_network": false,
+  "whole_season_started_by_this_agent": false,
+  "remaining_gate": "Root normal 900s L1/L2/L3 full closed-loop evaluation."
+}

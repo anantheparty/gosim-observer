@@ -1,0 +1,7 @@
+{
+ "package_changed": false,
+ "failures": [
+  {"case": "original count2 v1 false release", "reason": "The forced-evidence test double returned a feature dict but did not preserve evidence()'s required latest_features side effect.", "fix": "Set latest_features and return it from the test double; production evidence code is unchanged."},
+  {"case": "accelerated entry introspection", "reason": "The composition module intentionally exposes the original report_entry as a child module, while the first harness expected agent/policy on the outer module.", "fix": "Inspect entry.report_entry for the accelerated wrapper, preserving the normal entry source."}
+ ]
+}
