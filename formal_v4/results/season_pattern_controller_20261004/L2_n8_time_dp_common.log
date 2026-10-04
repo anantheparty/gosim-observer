@@ -1,0 +1,4 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/season_pattern_controller_20261004/target_dual_dp.py:79: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(np.ones(g.n+1),A_ub=A,b_ub=np.asarray(rhs),bounds=np.c_[np.zeros(g.n+1),np.r_[gmax,np.inf]],method='highs',options={'threads':1,'time_limit':max(.001,deadline-time.perf_counter())})
+{"card": "L2", "night_index": 7, "status": "completed", "reason": null, "process_seconds": 19.16907029086724, "peak_rss_bytes": 594149376, "different_action": false, "joint_feasible_delta": 0.0, "strict_finite_model_certificate": false}

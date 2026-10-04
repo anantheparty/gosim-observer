@@ -1,0 +1,316 @@
+{
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T008406",
+      "1": "V4T006512",
+      "10": "V4T006990",
+      "11": "V4T004958",
+      "12": "V4T003974",
+      "13": "V4T001172",
+      "14": "V4T006976",
+      "15": "V4T006645",
+      "2": "V4T001370",
+      "3": "V4T006298",
+      "4": "V4T008112",
+      "5": "V4T000312",
+      "6": "V4T002952",
+      "7": "V4T006240",
+      "8": "V4T002782",
+      "9": "V4T006599"
+    },
+    "duration_seconds": 2431,
+    "pointing": {
+      "alt_deg": 72.2600674,
+      "az_deg": 97.108739
+    },
+    "program": "DARK"
+  },
+  "branches": [
+    {
+      "common_path_pool_size": 57,
+      "current_gain": 21.786628080481123,
+      "joint_feasible_lower": 1536.8405728322216,
+      "joint_full_upper": 5341.123120001863,
+      "model": {
+        "converged": false,
+        "dual_gap": 2960.0198985542156,
+        "dual_master_lower": 2359.316593367166,
+        "elapsed_seconds": 3.0663332920521498,
+        "feasible_gap": 4094.918223888859,
+        "feasible_lower": 1224.4182680325227,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5319.336491921382
+      },
+      "name": "B"
+    },
+    {
+      "common_path_pool_size": 57,
+      "current_gain": 22.79278133761897,
+      "joint_feasible_lower": 1515.0624315707598,
+      "joint_full_upper": 5303.899673906675,
+      "model": {
+        "converged": false,
+        "dual_gap": 2915.713915351767,
+        "dual_master_lower": 2365.392977217289,
+        "elapsed_seconds": 3.089024166110903,
+        "feasible_gap": 3959.434787281688,
+        "feasible_lower": 1321.6721052873684,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5281.106892569056
+      },
+      "name": "priced0"
+    },
+    {
+      "common_path_pool_size": 57,
+      "current_gain": 22.65398432306189,
+      "joint_feasible_lower": 1515.5939447517405,
+      "joint_full_upper": 5304.55540693493,
+      "model": {
+        "converged": false,
+        "dual_gap": 2869.2840860597157,
+        "dual_master_lower": 2412.617336552152,
+        "elapsed_seconds": 3.0459852078929543,
+        "feasible_gap": 3987.2659811249837,
+        "feasible_lower": 1294.6354414868842,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5281.901422611868
+      },
+      "name": "priced1"
+    }
+  ],
+  "cached_graph_reused": true,
+  "card": "L2",
+  "cost": {
+    "limit": 40.0,
+    "selector_seconds": 16.57267395919189,
+    "stages": [
+      {
+        "rss_bytes": 427278336,
+        "seconds": 0.1798993330448866,
+        "stage": "reused_shared_public_graph"
+      },
+      {
+        "rss_bytes": 560234496,
+        "seconds": 5.003535708412528,
+        "stage": "initial_target_dual_time_DP"
+      },
+      {
+        "rss_bytes": 594149376,
+        "seconds": 3.0664246659725904,
+        "stage": "common_B"
+      },
+      {
+        "rss_bytes": 594149376,
+        "seconds": 3.0892172921448946,
+        "stage": "common_priced0"
+      },
+      {
+        "rss_bytes": 594149376,
+        "seconds": 3.046328333672136,
+        "stage": "common_priced1"
+      },
+      {
+        "path_pool": 57,
+        "rss_bytes": 594149376,
+        "seconds": 1.6921561248600483,
+        "stage": "common_physical_path_incumbent_revaluation"
+      }
+    ]
+  },
+  "different_action": false,
+  "feasible_continuation_winner": "B",
+  "futuretruth_used": false,
+  "graph": {
+    "actions": 3709602,
+    "bank_bytes": 59598000,
+    "fields": 430618,
+    "graph_array_bytes": 245455472,
+    "materialized_program_duration_edges": 0,
+    "patterns": 0,
+    "public_targets": 8600,
+    "referenced_edges": 110431545,
+    "shared_incidence_edges": 12845824,
+    "starts": 231,
+    "target_coverage": 8600,
+    "time_atoms": 681
+  },
+  "initial": {
+    "converged": false,
+    "dual_gap": 2525.028125284308,
+    "dual_master_lower": 2814.7140869848718,
+    "elapsed_seconds": 5.003404582850635,
+    "feasible_gap": 3809.496339604476,
+    "feasible_lower": 1530.2458726647035,
+    "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+    "no_exposure_solver_variables": true,
+    "no_time_solver_rows": true,
+    "stop": "bundle_master_budget",
+    "upper": 5339.74221226918
+  },
+  "joint_feasible_delta": 0.0,
+  "ledger": {
+    "active_requests": 0,
+    "positive_targets": 3389,
+    "required_debt": 26,
+    "science_sum": 2198.719561
+  },
+  "meta": {
+    "C": 0.8118281990132376,
+    "E": 0.9496364988140721,
+    "active_request_count": 0,
+    "card": "L2",
+    "decision_row": 386,
+    "historical_action_parity_claimed": false,
+    "night_index": 7,
+    "now_utc": "2026-11-16T01:40:51Z",
+    "pointing_offset_estimate": [
+      0.0011863695439608118,
+      -0.0012839277083985627
+    ],
+    "prefix_sha256": "8febf3399f10b0a3fb2c7e2d3737e6d49c4bded42e3eeb742df980daea5db476",
+    "score_sum": 2198.719561,
+    "trace_root": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2"
+  },
+  "night_index": 7,
+  "peak_rss_bytes": 594149376,
+  "process_seconds": 19.16907029086724,
+  "proposals": [
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T001695",
+          "1": "V4T002891",
+          "10": "V4T000493",
+          "11": "V4T002448",
+          "12": "V4T002871",
+          "13": "V4T005367",
+          "14": "V4T007224",
+          "15": "V4T004285",
+          "2": "V4T001923",
+          "3": "V4T001385",
+          "4": "V4T006351",
+          "5": "V4T000987",
+          "6": "V4T001772",
+          "7": "V4T001124",
+          "8": "V4T008466",
+          "9": "V4T003201"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 80.6202591,
+          "az_deg": 102.2718779
+        },
+        "program": "DARK"
+      },
+      "differs_from_B": true,
+      "graph_action": 98178,
+      "reduced_current_value": 22.792781337618965
+    },
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T002450",
+          "1": "V4T000306",
+          "10": "V4T004258",
+          "11": "V4T000472",
+          "12": "V4T002417",
+          "13": "V4T001707",
+          "14": "V4T003899",
+          "15": "V4T004502",
+          "2": "V4T000785",
+          "3": "V4T001224",
+          "4": "V4T007008",
+          "5": "V4T002041",
+          "6": "V4T001405",
+          "7": "V4T001575",
+          "8": "V4T000677",
+          "9": "V4T002990"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 39.4413487,
+          "az_deg": 113.5072071
+        },
+        "program": "DARK"
+      },
+      "differs_from_B": true,
+      "graph_action": 170574,
+      "reduced_current_value": 22.653984323061884
+    }
+  ],
+  "shared_graph_sha256": "f5f97c632b657738688aba27ed50fa0176d84a90bde59283de9ea4d992e3db1f",
+  "state_scope": "full actual public catalogue and reconstructed past public score ledger; action parity not claimed",
+  "status": "completed",
+  "strict_finite_model_certificate": false,
+  "unshared_incumbent_branches": [
+    {
+      "current_gain": 21.786628080481123,
+      "joint_feasible_lower": 1246.2048961130038,
+      "joint_full_upper": 5341.123120001863,
+      "model": {
+        "converged": false,
+        "dual_gap": 2960.0198985542156,
+        "dual_master_lower": 2359.316593367166,
+        "elapsed_seconds": 3.0663332920521498,
+        "feasible_gap": 4094.918223888859,
+        "feasible_lower": 1224.4182680325227,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5319.336491921382
+      },
+      "name": "B"
+    },
+    {
+      "current_gain": 22.79278133761897,
+      "joint_feasible_lower": 1344.4648866249872,
+      "joint_full_upper": 5303.899673906675,
+      "model": {
+        "converged": false,
+        "dual_gap": 2915.713915351767,
+        "dual_master_lower": 2365.392977217289,
+        "elapsed_seconds": 3.089024166110903,
+        "feasible_gap": 3959.434787281688,
+        "feasible_lower": 1321.6721052873684,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5281.106892569056
+      },
+      "name": "priced0"
+    },
+    {
+      "current_gain": 22.65398432306189,
+      "joint_feasible_lower": 1317.2894258099461,
+      "joint_full_upper": 5304.55540693493,
+      "model": {
+        "converged": false,
+        "dual_gap": 2869.2840860597157,
+        "dual_master_lower": 2412.617336552152,
+        "elapsed_seconds": 3.0459852078929543,
+        "feasible_gap": 3987.2659811249837,
+        "feasible_lower": 1294.6354414868842,
+        "model": "deterministic finite shared-exposure LP bound; target Lagrange plus exact interval path",
+        "no_exposure_solver_variables": true,
+        "no_time_solver_rows": true,
+        "stop": "bundle_master_budget",
+        "upper": 5281.901422611868
+      },
+      "name": "priced1"
+    }
+  ]
+}

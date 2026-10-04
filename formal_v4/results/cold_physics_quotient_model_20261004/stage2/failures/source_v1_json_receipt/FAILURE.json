@@ -1,0 +1,10 @@
+{
+  "status": "FINAL_RECEIPT_JSON_INT64_FAILURE",
+  "container_exit_code": 1,
+  "container_wall_seconds": 38.075235555,
+  "original_source_freeze_sha256": "af9ed266d2637007db3675d76bf64adb6c77b4c031a8eb19e3fd243463161f87",
+  "cause": "np.bool comparison counters became numpy.int64; final receipt JSON failed after data/source gates and writes",
+  "unrecoverable": "phase timings/counters existed in exited process only; do not infer them from total container wall",
+  "repair": "JSON converts numpy.generic item; same seed/sampling/model/calibration/objective/numerical unchanged",
+  "retry": "all four world pilot after source refreeze; failedworld outputs retained"
+}

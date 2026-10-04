@@ -1,0 +1,26 @@
+/work/official/challenge/v4_weather_simulator.py:693: UserWarning: stress_tests.data_loss trigger is after_earthquake but the survey has no earthquake events; skipping data_loss generation
+  warnings.warn(
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/work/pilot.py", line 337, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/work/pilot.py", line 334, in main
+    try:build(args.index)
+        ^^^^^^^^^^^^^^^^^
+  File "/work/pilot.py", line 286, in build
+    run_begin=time.perf_counter();report=run_scenario(base/'config/v4_scenario.json',factory,base/'short_official_run');timings['short_official_runner_seconds']=time.perf_counter()-run_begin
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/official/challenge/v4_runner.py", line 633, in run_scenario
+    raw_action = agent(snapshot)
+                 ^^^^^^^^^^^^^^^
+  File "/work/pilot.py", line 263, in actor
+    ingest_public(snapshot);now=utc(snapshot['now_utc'])
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/pilot.py", line 159, in ingest_public
+    integrals=host_integrals(physics.mesh(start,d,idx),physics,scenario,weather)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/physical_operator.py", line 101, in host_integrals
+    F=np.minimum(1,physics.p.flux[idx]*raw/(cfg['flux_zero_point']*cfg['exposure_zero_point_seconds']))
+                   ~~~~~~~~~~~~~~^^^^^
+IndexError: arrays used as indices must be of integer (or boolean) type

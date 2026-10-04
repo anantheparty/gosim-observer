@@ -1,0 +1,566 @@
+{
+  "actor_futuretruth_used": false,
+  "actual_execution": false,
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T005731",
+      "1": "V4T000724",
+      "10": "V4T002513",
+      "11": "V4T006263",
+      "14": "V4T002039",
+      "15": "V4T003934",
+      "2": "V4T003898",
+      "3": "V4T000363",
+      "4": "V4T006234",
+      "5": "V4T001096",
+      "6": "V4T004795",
+      "7": "V4T000316",
+      "8": "V4T003434",
+      "9": "V4T003378"
+    },
+    "duration_seconds": 273,
+    "pointing": {
+      "alt_deg": 75.8255546,
+      "az_deg": 154.7740768
+    },
+    "program": "DARK"
+  },
+  "baseline_action_sha256": "6dd3117c21af0ddafde08c026a882e7fe6c1650907e4c8a00f73226b655886c0",
+  "branches": [
+    {
+      "control_exposures": 197,
+      "current_gain": 4.185624267906428,
+      "joint_feasible_lower": 1669.3730985389038,
+      "joint_full_upper": 4817.346697951981,
+      "joint_relaxed_lower": 2356.315447531455,
+      "model": {
+        "elapsed_seconds": 4.013848874717951,
+        "gap": 2461.0312504205253,
+        "lower": 2352.1298232635486,
+        "residual": 15.906674420539161,
+        "rounds": 2,
+        "stop": "time_budget",
+        "upper": 4813.161073684074
+      },
+      "name": "B"
+    },
+    {
+      "control_exposures": 197,
+      "current_gain": 20.218304018970386,
+      "joint_feasible_lower": 1654.7993863263155,
+      "joint_full_upper": 4990.736218630691,
+      "joint_relaxed_lower": 2635.7896731368905,
+      "model": {
+        "elapsed_seconds": 4.01623620884493,
+        "gap": 2354.9465454938004,
+        "lower": 2615.5713691179203,
+        "residual": 15.653199532765852,
+        "rounds": 1,
+        "stop": "time_budget",
+        "upper": 4970.517914611721
+      },
+      "name": "priced0"
+    },
+    {
+      "control_exposures": 197,
+      "current_gain": 20.659222512323108,
+      "joint_feasible_lower": 1679.0084742477113,
+      "joint_full_upper": 4150.375387804595,
+      "joint_relaxed_lower": 2816.4258903164387,
+      "model": {
+        "elapsed_seconds": 4.073615542147309,
+        "gap": 1333.9494974881568,
+        "lower": 2795.7666678041155,
+        "residual": 9.942035672079149,
+        "rounds": 1,
+        "stop": "time_budget",
+        "upper": 4129.716165292272
+      },
+      "name": "priced1"
+    }
+  ],
+  "card": "L1",
+  "current_ledger": {
+    "active_requests": 0,
+    "positive_targets": 4783,
+    "required_debt": 3,
+    "science_sum": 2848.635837
+  },
+  "different_current_action": true,
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "darwin",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "threads": 1
+  },
+  "final_graph": {
+    "actions": 2917131,
+    "bank_bytes": 46566000,
+    "fields": 334781,
+    "graph_array_bytes": 191261759,
+    "materialized_program_duration_edges": 0,
+    "patterns": 13697,
+    "public_targets": 7800,
+    "referenced_edges": 85786266,
+    "shared_incidence_edges": 9828461,
+    "starts": 199,
+    "target_coverage": 7800,
+    "time_atoms": 596
+  },
+  "graph": {
+    "actions": 2917131,
+    "bank_bytes": 46566000,
+    "fields": 334781,
+    "graph_array_bytes": 191261759,
+    "materialized_program_duration_edges": 0,
+    "patterns": 0,
+    "public_targets": 7800,
+    "referenced_edges": 85786266,
+    "shared_incidence_edges": 9828461,
+    "starts": 199,
+    "target_coverage": 7800,
+    "time_atoms": 596
+  },
+  "history_rebuild_seconds": 3.6796460417099297,
+  "initial_model": {
+    "elapsed_seconds": 4.011620708275586,
+    "gap": 2861.6267012563753,
+    "lower": 1711.2685637682985,
+    "residual": 17.76667442053916,
+    "rounds": 3,
+    "stop": "time_budget",
+    "upper": 4572.895265024674
+  },
+  "meta": {
+    "C": 1.3871946785078706,
+    "E": 0.646842698441945,
+    "active_request_count": 0,
+    "card": "L1",
+    "decision_row": 522,
+    "historical_action_parity_claimed": false,
+    "night_index": 7,
+    "now_utc": "2026-11-09T01:39:40Z",
+    "pointing_offset_estimate": [
+      -0.0004211365688258223,
+      -0.009312073481380722
+    ],
+    "prefix_sha256": "afa859f2ee2b62a14b1e469bafb241f0be860ad333af8168d235866fc8b08cf5",
+    "score_sum": 2848.635837,
+    "trace_root": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L1"
+  },
+  "model_scope": "fixed conditional deterministic science best-only; finite one-hour geometry candidate domain",
+  "night_index": 7,
+  "peak_rss_bytes": 885800960,
+  "process_seconds": 48.283354667015374,
+  "proposals": [
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T003968",
+          "10": "V4T006474",
+          "11": "V4T006412",
+          "12": "V4T004954",
+          "13": "V4T002218",
+          "14": "V4T000284",
+          "15": "V4T003620",
+          "2": "V4T005075",
+          "3": "V4T005845",
+          "4": "V4T006719",
+          "5": "V4T007656",
+          "6": "V4T002749",
+          "7": "V4T000151",
+          "8": "V4T006430",
+          "9": "V4T000544"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 78.671989,
+          "az_deg": 173.034803
+        },
+        "program": "DARK"
+      },
+      "action_differs_from_B": true,
+      "graph_action": 128220,
+      "prediction": {
+        "V4T000151": {
+          "alt_deg": 78.17565057086473,
+          "az_deg": 177.75207575990183,
+          "factor": 1.0,
+          "fiber_id": 7,
+          "index": 150,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T000284": {
+          "alt_deg": 79.87060160312186,
+          "az_deg": 173.697966719507,
+          "factor": 1.0,
+          "fiber_id": 14,
+          "index": 283,
+          "predicted_band": "DARK",
+          "science_gain": 0.266087
+        },
+        "V4T000544": {
+          "alt_deg": 78.71937867558427,
+          "az_deg": 171.10184082376466,
+          "factor": 1.0,
+          "fiber_id": 9,
+          "index": 543,
+          "predicted_band": "DARK",
+          "science_gain": 2.04
+        },
+        "V4T002218": {
+          "alt_deg": 79.75638306415085,
+          "az_deg": 170.91188575500826,
+          "factor": 1.0,
+          "fiber_id": 13,
+          "index": 2217,
+          "predicted_band": "DARK",
+          "science_gain": 0.44163299999999994
+        },
+        "V4T002749": {
+          "alt_deg": 78.12103435903512,
+          "az_deg": 175.65073911881208,
+          "factor": 0.9655824307510779,
+          "fiber_id": 6,
+          "index": 2748,
+          "predicted_band": "DARK",
+          "science_gain": 1.9697881587321986
+        },
+        "V4T003620": {
+          "alt_deg": 79.42407405194021,
+          "az_deg": 178.5461232030485,
+          "factor": 0.876400521543842,
+          "fiber_id": 15,
+          "index": 3619,
+          "predicted_band": "DARK",
+          "science_gain": 1.7424500639494374
+        },
+        "V4T003968": {
+          "alt_deg": 78.02662494574156,
+          "az_deg": 172.87085677790705,
+          "factor": 1.0,
+          "fiber_id": 1,
+          "index": 3967,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T004954": {
+          "alt_deg": 79.65942226225087,
+          "az_deg": 168.19152361239745,
+          "factor": 1.0,
+          "fiber_id": 12,
+          "index": 4953,
+          "predicted_band": "DARK",
+          "science_gain": 1.128924
+        },
+        "V4T005075": {
+          "alt_deg": 77.94223288279787,
+          "az_deg": 173.12682463257397,
+          "factor": 1.0,
+          "fiber_id": 2,
+          "index": 5074,
+          "predicted_band": "DARK",
+          "science_gain": 2.04
+        },
+        "V4T005845": {
+          "alt_deg": 77.9086735229321,
+          "az_deg": 176.1419459448065,
+          "factor": 0.6987412830197077,
+          "fiber_id": 3,
+          "index": 5844,
+          "predicted_band": "DARK",
+          "science_gain": 1.4254322173602036
+        },
+        "V4T006412": {
+          "alt_deg": 79.25710339105491,
+          "az_deg": 177.62435913996498,
+          "factor": 0.49315210085756406,
+          "fiber_id": 11,
+          "index": 6411,
+          "predicted_band": "DARK",
+          "science_gain": 1.0060302857494305
+        },
+        "V4T006430": {
+          "alt_deg": 79.14245402386766,
+          "az_deg": 167.2283971001728,
+          "factor": 1.0,
+          "fiber_id": 8,
+          "index": 6429,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T006474": {
+          "alt_deg": 78.68937808734808,
+          "az_deg": 175.12567594281376,
+          "factor": 0.6526923005779964,
+          "fiber_id": 10,
+          "index": 6473,
+          "predicted_band": "DARK",
+          "science_gain": 1.3314922931791127
+        },
+        "V4T006719": {
+          "alt_deg": 78.55576469034791,
+          "az_deg": 167.56915058719545,
+          "factor": 1.0,
+          "fiber_id": 4,
+          "index": 6718,
+          "predicted_band": "DARK",
+          "science_gain": 1.186467
+        },
+        "V4T007656": {
+          "alt_deg": 78.1496236821385,
+          "az_deg": 172.82462613801593,
+          "factor": 1.0,
+          "fiber_id": 5,
+          "index": 7655,
+          "predicted_band": "DARK",
+          "science_gain": 2.04
+        }
+      },
+      "pricing_value": 3.9909810189703823
+    },
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T003914",
+          "1": "V4T003052",
+          "10": "V4T000131",
+          "11": "V4T003847",
+          "12": "V4T000589",
+          "13": "V4T000454",
+          "14": "V4T003724",
+          "15": "V4T000517",
+          "2": "V4T004955",
+          "3": "V4T000164",
+          "4": "V4T005015",
+          "5": "V4T004321",
+          "6": "V4T001209",
+          "7": "V4T005547",
+          "8": "V4T004176",
+          "9": "V4T003011"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 50.940648,
+          "az_deg": 136.4794694
+        },
+        "program": "DARK"
+      },
+      "action_differs_from_B": true,
+      "graph_action": 196827,
+      "prediction": {
+        "V4T000131": {
+          "alt_deg": 51.15821078250695,
+          "az_deg": 136.91422507142514,
+          "factor": 1.0,
+          "fiber_id": 10,
+          "index": 130,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T000164": {
+          "alt_deg": 50.05899383196313,
+          "az_deg": 138.18769620420446,
+          "factor": 1.0,
+          "fiber_id": 3,
+          "index": 163,
+          "predicted_band": "DARK",
+          "science_gain": 1.8254380000000001
+        },
+        "V4T000454": {
+          "alt_deg": 51.696310785037525,
+          "az_deg": 136.43837660111015,
+          "factor": 1.0,
+          "fiber_id": 13,
+          "index": 453,
+          "predicted_band": "DARK",
+          "science_gain": 0.936272
+        },
+        "V4T000517": {
+          "alt_deg": 51.58207319866645,
+          "az_deg": 138.21526876106907,
+          "factor": 1.0,
+          "fiber_id": 15,
+          "index": 516,
+          "predicted_band": "DARK",
+          "science_gain": 0.943238
+        },
+        "V4T000589": {
+          "alt_deg": 51.85558484258868,
+          "az_deg": 134.44214207530104,
+          "factor": 1.0,
+          "fiber_id": 12,
+          "index": 588,
+          "predicted_band": "DARK",
+          "science_gain": 0.13707500000000006
+        },
+        "V4T001209": {
+          "alt_deg": 50.774125386043636,
+          "az_deg": 136.67818309622314,
+          "factor": 0.9024728750407034,
+          "fiber_id": 6,
+          "index": 1208,
+          "predicted_band": "DARK",
+          "science_gain": 1.8410446650830348
+        },
+        "V4T003011": {
+          "alt_deg": 51.0592811370216,
+          "az_deg": 136.38991813895402,
+          "factor": 1.0,
+          "fiber_id": 9,
+          "index": 3010,
+          "predicted_band": "DARK",
+          "science_gain": 0.7193909999999999
+        },
+        "V4T003052": {
+          "alt_deg": 50.22293301404635,
+          "az_deg": 136.38697399510173,
+          "factor": 1.0,
+          "fiber_id": 1,
+          "index": 3051,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T003724": {
+          "alt_deg": 51.64903654190022,
+          "az_deg": 137.2074369008234,
+          "factor": 1.0,
+          "fiber_id": 14,
+          "index": 3723,
+          "predicted_band": "DARK",
+          "science_gain": 2.04
+        },
+        "V4T003847": {
+          "alt_deg": 51.132442666940875,
+          "az_deg": 137.77385004341733,
+          "factor": 1.0,
+          "fiber_id": 11,
+          "index": 3846,
+          "predicted_band": "DARK",
+          "science_gain": 1.040406
+        },
+        "V4T003914": {
+          "alt_deg": 50.21612092074943,
+          "az_deg": 135.3542010919348,
+          "factor": 1.0,
+          "fiber_id": 0,
+          "index": 3913,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        },
+        "V4T004176": {
+          "alt_deg": 51.08739220881548,
+          "az_deg": 134.785810138205,
+          "factor": 1.0,
+          "fiber_id": 8,
+          "index": 4175,
+          "predicted_band": "DARK",
+          "science_gain": 0.8394889999999999
+        },
+        "V4T004321": {
+          "alt_deg": 50.43000682034803,
+          "az_deg": 136.25417212110275,
+          "factor": 0.834479827078467,
+          "fiber_id": 5,
+          "index": 4320,
+          "predicted_band": "DARK",
+          "science_gain": 1.7023388472400727
+        },
+        "V4T004955": {
+          "alt_deg": 50.05270610992313,
+          "az_deg": 136.96621353661675,
+          "factor": 1.0,
+          "fiber_id": 2,
+          "index": 4954,
+          "predicted_band": "DARK",
+          "science_gain": 2.04
+        },
+        "V4T005015": {
+          "alt_deg": 50.557971501080644,
+          "az_deg": 135.03320960197507,
+          "factor": 1.0,
+          "fiber_id": 4,
+          "index": 5014,
+          "predicted_band": "DARK",
+          "science_gain": 1.79453
+        },
+        "V4T005547": {
+          "alt_deg": 50.40788869938541,
+          "az_deg": 137.71891148855022,
+          "factor": 1.0,
+          "fiber_id": 7,
+          "index": 5546,
+          "predicted_band": "DARK",
+          "science_gain": 1.2
+        }
+      },
+      "pricing_value": 3.891274319044145
+    }
+  ],
+  "selected_by_feasible_continuation": "priced1",
+  "selected_nominal_delta_lower": 9.635375708807487,
+  "selector_cost": {
+    "limit_seconds": 52.0,
+    "seconds": 44.239671792369336,
+    "stages": [
+      {
+        "rss_bytes": 161300480,
+        "seconds": 0.09314570808783174,
+        "stage": "original_strong_request_planner_action"
+      },
+      {
+        "public_targets": 7800,
+        "representatives": 1038,
+        "rss_bytes": 161366016,
+        "seconds": 0.01051287492737174,
+        "stage": "catalogue_geometric_representatives",
+        "start_count": 199
+      },
+      {
+        "actions": 2917131,
+        "bank_bytes": 46566000,
+        "fields": 334781,
+        "graph_array_bytes": 191261759,
+        "materialized_program_duration_edges": 0,
+        "patterns": 0,
+        "public_targets": 7800,
+        "referenced_edges": 85786266,
+        "rss_bytes": 779993088,
+        "seconds": 27.59072120906785,
+        "shared_incidence_edges": 9828461,
+        "stage": "shared_whole_season_geometry_incidence_and_action_index",
+        "starts": 199,
+        "target_coverage": 7800,
+        "time_atoms": 596
+      },
+      {
+        "rss_bytes": 780156928,
+        "seconds": 0.7495838329195976,
+        "seed_patterns": 2603,
+        "stage": "full_catalogue_seed_patterns"
+      },
+      {
+        "rss_bytes": 885800960,
+        "seconds": 4.033005916979164,
+        "stage": "branch_B"
+      },
+      {
+        "rss_bytes": 885800960,
+        "seconds": 4.038537375163287,
+        "stage": "branch_priced0"
+      },
+      {
+        "rss_bytes": 885800960,
+        "seconds": 4.09697008272633,
+        "stage": "branch_priced1"
+      }
+    ]
+  },
+  "state_scope": "reconstructed from past public hits/scores/messages; no historical action parity claimed",
+  "status": "completed",
+  "strict_finite_model_certificate": false
+}

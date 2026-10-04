@@ -1,0 +1,16 @@
+{
+  "status": "FROZEN_V2_LOGGING_ONLY_REPAIR",
+  "v1_freeze_sha256": "af9ed266d2637007db3675d76bf64adb6c77b4c031a8eb19e3fd243463161f87",
+  "v2_freeze_sha256": "38d89fd2535da76ca5af0e516d6f9cc29e5719fba5952611b733c19174112b65",
+  "changed_locked_files": {
+    "pilot.py": {
+      "old": "04ccb18833b6ef92832327205ca83996e0e8c70eac16922f70c2a573b71746ea",
+      "new": "7f535ac8abb0c00066db7b9b8a5292b05d624fd4f659f21bf1977d8ebd5d017e"
+    }
+  },
+  "model_sampling_numerical_objective_unchanged": true,
+  "same_seed_retry_index": 0,
+  "v1_output_preservation": "original output/worlds/pilot_0 and output/datasets/pilot retained in own remote directory; duplicate world copy in output/failures/v1_json_receipt_failure/world_pilot0; helper relocate PermissionError preserved",
+  "retry_output": "new output_v2, does not overwrite v1 output",
+  "v1_lost_metrics": "Only segmented timing and memory counters in process memory; not reconstructed or claimed"
+}

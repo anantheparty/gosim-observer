@@ -40,7 +40,7 @@ class PublicPhysics:
                 pe=min(right,piece+timedelta(seconds=120));t=piece+(pe-piece)/2;h,a,z=self.at(idx,t)
                 seconds.append((pe-piece).total_seconds());times.append(t);slots.append(si);H.append(h);alts.append(a);azs.append(z);piece=pe
             cursor=right
-        result=dict(start=start,duration=duration,indices=np.asarray(idx),night=night,seconds=np.asarray(seconds),times=times,slots=np.asarray(slots),H=np.asarray(H),alt=np.asarray(alts),az=np.asarray(azs))
+        result=dict(start=start,duration=duration,indices=np.asarray(idx,dtype=np.int64),night=night,seconds=np.asarray(seconds),times=times,slots=np.asarray(slots),H=np.asarray(H),alt=np.asarray(alts),az=np.asarray(azs))
         self.cache[key]=result;return result
     def query(self,mesh):
         idx=mesh['indices'];start=mesh['start'];d=mesh['duration'];p=self.p;seconds=mesh['seconds'];out=np.zeros((len(idx),51),np.float32)

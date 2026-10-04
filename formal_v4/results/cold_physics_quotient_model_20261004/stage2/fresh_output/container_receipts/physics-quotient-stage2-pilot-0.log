@@ -1,0 +1,31 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/work/pilot.py", line 334, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/work/pilot.py", line 331, in main
+    try:build(args.index)
+        ^^^^^^^^^^^^^^^^^
+  File "/work/pilot.py", line 323, in build
+    dump(ROOT/'datasets/pilot'/f'{index}_receipt.json',receipt)
+  File "/work/pilot.py", line 31, in dump
+    path.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/local/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

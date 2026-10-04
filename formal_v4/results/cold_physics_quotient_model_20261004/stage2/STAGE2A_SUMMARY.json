@@ -1,0 +1,52 @@
+{
+  "status": "STAGE2A_FOUR_FRESH_WORLD_SUPPORT_PASS_PRODUCTION_COST_NOT_PASSED",
+  "utc": "2026-10-04T07:05:42.113978+00:00",
+  "pilot_source_versions": {
+    "0": "v2 38d89fd2535da76ca5af0e516d6f9cc29e5719fba5952611b733c19174112b65",
+    "1": "v3 b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086",
+    "2": "v3 b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086",
+    "3": "v3 b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086"
+  },
+  "states": 128,
+  "observe_states": 115,
+  "original_wait_states": 13,
+  "future_rows": 59059,
+  "cases": 1138,
+  "scalar_samples": 3745,
+  "scalar_max_error": 8.881784197001252e-16,
+  "original_pairs": 1699,
+  "historical_actual_miss": 2203,
+  "historical_zero_public_hit": 1182,
+  "historical_emptyassignments": 2,
+  "band_counts": {
+    "DARK": 45661,
+    "BRIGHT": 11639,
+    "BACKUP": 1759
+  },
+  "all_public_inputs_finite": true,
+  "pilot_budget_all_pass": true,
+  "uncovered": [
+    "healthyreport execution",
+    "REQ tasks",
+    "NN numerical export",
+    "NN production completeactor extra cost",
+    "jointfuture paths"
+  ],
+  "production_cost_observation": "public_history_features average85.49\u201388.40ms/state exceeds original20ms median/50ms p95 contract; no deployment or cost pass claimed",
+  "point_control_scope": "finitefamily current science increment/sec; fulloriginal optionzero retained, no wholecompetition score inference",
+  "finite_point_world_delta": [
+    0.0007031473540788842,
+    0.0010686615514387081,
+    0.0006523965731720427,
+    0.001069165202129774
+  ],
+  "NN_fit_started": false,
+  "train_cal_val_generated": false,
+  "test_generated": false,
+  "failures_preserved": [
+    "v1 JSON np.int64 receipt exit1",
+    "v2 legalemptyassignment index exit1",
+    "output relocation PermissionError; original retained",
+    "transfer hash assertion before SCP completion; final archive verified after completion"
+  ]
+}

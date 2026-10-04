@@ -1,0 +1,84 @@
+{
+  "status": "PASS_REAL_PILOT",
+  "pilot_index": 3,
+  "seed": 10049662520314146878,
+  "public_catalog": "L2",
+  "source_freeze_sha256": "b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086",
+  "world_generation_seconds": 0.23365502298111096,
+  "full_worker_seconds": 41.38230829901295,
+  "peak_process_rss_bytes": 237170688,
+  "npz_sha256": "97487eeeb28ea978d881cb4acec8b9bbeb0113e2e21b8c6bb9b0cce5f00e2bab",
+  "npz_bytes": 1347356,
+  "states": 32,
+  "point_nonobserve_states": {
+    "wait": 4
+  },
+  "future_rows": 14780,
+  "candidate_cases": 280,
+  "checks": {
+    "past_hit_checks": 3710,
+    "past_interval_contains_true_R": 3100,
+    "public_pool_capped": 33,
+    "future_slots_1": 4805,
+    "future_with_directional_events": 14780,
+    "future_rows": 14780,
+    "future_zero_R": 0,
+    "future_saturated_F": 6784,
+    "future_nominal_altitude_invalid": 0,
+    "future_actual_misses": 0,
+    "official_scalar": 926,
+    "future_slots_2": 4532,
+    "future_slots_3": 2487,
+    "future_slots_5": 2487,
+    "original_point_pairs_retained": 422,
+    "future_slots_4": 469,
+    "resyncs": 1,
+    "initial_terrain_exact_direction_support": 1,
+    "public_csv_score_checks": 3100
+  },
+  "maximum_errors": {
+    "factorization": 3.3306690738754696e-16,
+    "official_scalar": 8.881784197001252e-16
+  },
+  "timing_seconds": {
+    "past_label_seconds": 1.9071387051371858,
+    "full_point_selector_seconds": 7.76020072598476,
+    "public_history_features_seconds": 2.8289484851411544,
+    "scalar_check_seconds": 0.16283839469542727,
+    "future_query_H_labels_cases_seconds": 5.712746211967897,
+    "short_official_runner_seconds": 40.74855858302908,
+    "write_seconds": 0.1531712890136987
+  },
+  "initial_terrain_public": [
+    "N",
+    "W"
+  ],
+  "source_selector_full_output_retained": true,
+  "actor_input_arrays": [
+    "ht",
+    "hn",
+    "hm",
+    "cn",
+    "cm",
+    "q"
+  ],
+  "no_future_flux_in_query": true,
+  "label_arrays": [
+    "R",
+    "b",
+    "F",
+    "actual_hit",
+    "truebest",
+    "point_factor",
+    "point_band"
+  ],
+  "prototype_scope": "current candidate marginal, no joint future paths; fresh official short execution; original full point non-science control retained",
+  "future_point_offset_labels_host_only": true,
+  "public_mesh_does_not_include_hidden_event_boundaries": true,
+  "official_short_termination": {
+    "reason": "agent_finished",
+    "detail": ""
+  },
+  "budget_pass": true,
+  "no_fit_no_formal_test_no_900season": true
+}

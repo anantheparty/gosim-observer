@@ -1,0 +1,25 @@
+--- v1/pilot.py
++++ v2/pilot.py
+@@ -26,9 +26,12 @@
+ from physical_operator import PublicPhysics,host_integrals
+ from model import encode
+ 
++def json_default(value):
++    if isinstance(value,np.generic):return value.item()
++    raise TypeError(type(value).__name__)
+ def dump(path,value):
+     path.parent.mkdir(parents=True,exist_ok=True)
+-    path.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
++    path.write_text(json.dumps(value,indent=2,allow_nan=False,default=json_default)+'\n')
+ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+ def verify_freeze():
+     lock=json.loads((ROOT/'SOURCE_FREEZE.json').read_text())
+@@ -321,7 +324,7 @@
+         official_short_termination=report.get('termination'),budget_pass=budget_pass,
+         no_fit_no_formal_test_no_900season=True)
+     dump(ROOT/'datasets/pilot'/f'{index}_receipt.json',receipt)
+-    print(json.dumps(receipt,allow_nan=False),flush=True)
++    print(json.dumps(receipt,allow_nan=False,default=json_default),flush=True)
+     if not budget_pass:raise RuntimeError('predeclared pilot cost failed; do not launch later worlds')
+     return receipt
+ 

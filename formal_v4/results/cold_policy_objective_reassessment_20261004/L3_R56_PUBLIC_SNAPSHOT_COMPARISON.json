@@ -1,0 +1,354 @@
+{
+  "card": "L3",
+  "rank": 56,
+  "snapshot": {
+    "now_utc": "2026-11-16T05:36:47Z",
+    "observe_action_index": 57,
+    "last_result": {
+      "action": "observe",
+      "observe_index": 56,
+      "assigned_count": 16,
+      "hit_count": 16,
+      "hits": [
+        {
+          "target_id": "V4T006909",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T006048",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T006152",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T002045",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T007429",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T004269",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T007905",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T001438",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T007075",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T000295",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T003062",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T002338",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T000827",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T002209",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T005036",
+          "score": 0.0
+        },
+        {
+          "target_id": "V4T007133",
+          "score": 0.0
+        }
+      ]
+    },
+    "new_messages": [],
+    "latest_bulletin": {
+      "initial": false,
+      "issued_at_utc": "2026-11-16T05:30:00Z",
+      "night_id": "N20261115",
+      "notices": [],
+      "record_type": "bulletin",
+      "slot_id": "N20261115-S021"
+    },
+    "latest_forecast": {
+      "coverage_end_utc": "2026-11-23T00:30:00Z",
+      "coverage_start_utc": "2026-11-16T00:30:00Z",
+      "issued_at_utc": "2026-11-16T00:30:00Z",
+      "notices": [],
+      "record_type": "forecast"
+    },
+    "active_requests": [],
+    "wallclock": {
+      "remaining_seconds": 900.0
+    }
+  },
+  "control_action": {
+    "action": "wait",
+    "until_utc": "2026-11-16T05:45:00Z"
+  },
+  "candidate_action": {
+    "action": "observe",
+    "pointing": {
+      "alt_deg": 57.110361,
+      "az_deg": 173.0484004
+    },
+    "assignments": {
+      "1": "V4T004647",
+      "2": "V4T001494",
+      "3": "V4T002094",
+      "4": "V4T004074",
+      "5": "V4T008293",
+      "7": "V4T000537",
+      "8": "V4T002386",
+      "9": "V4T007682",
+      "10": "V4T003609",
+      "11": "V4T002106",
+      "12": "V4T002641",
+      "13": "V4T008509",
+      "14": "V4T006513",
+      "15": "V4T005829"
+    },
+    "duration_seconds": 65,
+    "program": "DARK"
+  },
+  "prefix_feedback_seconds": 0.7278544576838613,
+  "control_decide_seconds": 0.008520500268787146,
+  "candidate_decide_seconds": 0.09760087495669723,
+  "recovery_events": [
+    {
+      "now_utc": "2026-11-16T05:36:47Z",
+      "observe_action_index": 57,
+      "public_anchor": {
+        "observe_index": 55,
+        "start_utc": "2026-11-16T05:30:00Z",
+        "end_utc": "2026-11-16T05:31:18Z",
+        "positive_hits": 3
+      },
+      "slot_end": "2026-11-16T05:45:00Z",
+      "recoverable_seconds": 493,
+      "terrain_maximum_height_conditional_deg": 50.0,
+      "clear_targets": 4443,
+      "geometry_seconds": 0.0012144590727984905,
+      "clearance_scope": "existing production reference terrain domain, not a universal protocol bound",
+      "action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 57.110361,
+          "az_deg": 173.0484004
+        },
+        "assignments": {
+          "1": "V4T004647",
+          "2": "V4T001494",
+          "3": "V4T002094",
+          "4": "V4T004074",
+          "5": "V4T008293",
+          "7": "V4T000537",
+          "8": "V4T002386",
+          "9": "V4T007682",
+          "10": "V4T003609",
+          "11": "V4T002106",
+          "12": "V4T002641",
+          "13": "V4T008509",
+          "14": "V4T006513",
+          "15": "V4T005829"
+        },
+        "duration_seconds": 65,
+        "program": "DARK"
+      }
+    }
+  ],
+  "prediction": {
+    "V4T004647": {
+      "index": 4646,
+      "fiber_id": 1,
+      "factor": 0.07664638383611243,
+      "public_quality": 1.3186012207957756,
+      "quality": 0.8849707572289706,
+      "directional_scale": 1.0000000000000002,
+      "predicted_band": "DARK",
+      "alt_deg": 56.4507614894398,
+      "az_deg": 172.12161802272857
+    },
+    "V4T001494": {
+      "index": 1493,
+      "fiber_id": 2,
+      "factor": 0.5523332123188229,
+      "public_quality": 1.315398571425404,
+      "quality": 0.8828213196327227,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 56.102081157421296,
+      "az_deg": 174.08941519198632
+    },
+    "V4T002094": {
+      "index": 2093,
+      "fiber_id": 3,
+      "factor": 0.12113830371289648,
+      "public_quality": 1.3135740868675005,
+      "quality": 0.8815968285164579,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 55.905099601845315,
+      "az_deg": 174.3043625551454
+    },
+    "V4T004074": {
+      "index": 4073,
+      "fiber_id": 4,
+      "factor": 0.06067844739275627,
+      "public_quality": 1.321756705034159,
+      "quality": 0.8870885402492084,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 56.79802233454276,
+      "az_deg": 171.1118383062883
+    },
+    "V4T008293": {
+      "index": 8292,
+      "fiber_id": 5,
+      "factor": 0.2294875627393702,
+      "public_quality": 1.3207217814385164,
+      "quality": 0.8863939579117545,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 56.68371558152204,
+      "az_deg": 172.40124741082624
+    },
+    "V4T000537": {
+      "index": 536,
+      "fiber_id": 7,
+      "factor": 0.2621146511829885,
+      "public_quality": 1.3225530818342925,
+      "quality": 0.8876230234339187,
+      "directional_scale": 1.0000000000000002,
+      "predicted_band": "DARK",
+      "alt_deg": 56.886260075282955,
+      "az_deg": 175.36534730139
+    },
+    "V4T002386": {
+      "index": 2385,
+      "fiber_id": 8,
+      "factor": 0.17764467995039182,
+      "public_quality": 1.3283095419531485,
+      "quality": 0.8914864347443282,
+      "directional_scale": 0.9999999999999999,
+      "predicted_band": "DARK",
+      "alt_deg": 57.53145492901369,
+      "az_deg": 170.9198940777084
+    },
+    "V4T007682": {
+      "index": 7681,
+      "fiber_id": 9,
+      "factor": 0.0968430990433906,
+      "public_quality": 1.3257221784888678,
+      "quality": 0.8897499423400294,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 57.239831567137955,
+      "az_deg": 173.04063754377378
+    },
+    "V4T003609": {
+      "index": 3608,
+      "fiber_id": 10,
+      "factor": 0.070796094022777,
+      "public_quality": 1.3252063137487191,
+      "quality": 0.8894037230263224,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 57.18200858996914,
+      "az_deg": 173.73245040099076
+    },
+    "V4T002106": {
+      "index": 2105,
+      "fiber_id": 11,
+      "factor": 0.14361579602925387,
+      "public_quality": 1.3299165842291394,
+      "quality": 0.8925649908668718,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 57.71395703943616,
+      "az_deg": 175.35569705690284
+    },
+    "V4T002641": {
+      "index": 2640,
+      "fiber_id": 12,
+      "factor": 0.06111614243157463,
+      "public_quality": 1.3311724043043005,
+      "quality": 0.8934078264606292,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 57.8573183568329,
+      "az_deg": 171.51712611335356
+    },
+    "V4T008509": {
+      "index": 8508,
+      "fiber_id": 13,
+      "factor": 0.03443966555448102,
+      "public_quality": 1.3338232491040496,
+      "quality": 0.8951869239563183,
+      "directional_scale": 0.9999999999999999,
+      "predicted_band": "DARK",
+      "alt_deg": 58.16212147695846,
+      "az_deg": 172.94195583291292
+    },
+    "V4T006513": {
+      "index": 6512,
+      "fiber_id": 14,
+      "factor": 0.45287412166248675,
+      "public_quality": 1.3346329171361067,
+      "quality": 0.8957303274661386,
+      "directional_scale": 1.0,
+      "predicted_band": "DARK",
+      "alt_deg": 58.25582219338502,
+      "az_deg": 174.30800285639663
+    },
+    "V4T005829": {
+      "index": 5828,
+      "fiber_id": 15,
+      "factor": 0.06784592338534871,
+      "public_quality": 1.3351135070068254,
+      "quality": 0.8960528722773363,
+      "directional_scale": 1.0000000000000002,
+      "predicted_band": "DARK",
+      "alt_deg": 58.31157477902602,
+      "az_deg": 175.42441941862515
+    }
+  },
+  "assigned_public_best": {
+    "V4T004647": 0.0,
+    "V4T001494": 0.0,
+    "V4T002094": 0.0,
+    "V4T004074": 0.0,
+    "V4T008293": 0.0,
+    "V4T000537": 0.0,
+    "V4T002386": 0.0,
+    "V4T007682": 0.0,
+    "V4T003609": 0.0,
+    "V4T002106": 0.0,
+    "V4T002641": 0.0,
+    "V4T008509": 0.0,
+    "V4T006513": 0.0,
+    "V4T005829": 0.0
+  },
+  "public_point_predicted_science_gain": 1.654400171868581,
+  "public_point_predicted_science_rate": 0.025452310336439708,
+  "source_initializer_sha256": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+  "scope": "one normal planning call from public reconstructed prefix; no official future scoring or full season",
+  "actor_base_best_science": 352.31143499999996,
+  "prefix_decisions": 60,
+  "public_future_truth_reads": 0
+}

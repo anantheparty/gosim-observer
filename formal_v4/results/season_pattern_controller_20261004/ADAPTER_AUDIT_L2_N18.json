@@ -1,0 +1,85 @@
+{
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T005950",
+      "1": "V4T001640",
+      "13": "V4T007770",
+      "14": "V4T003854",
+      "15": "V4T005767",
+      "2": "V4T005464",
+      "3": "V4T000685",
+      "4": "V4T007977",
+      "6": "V4T005831",
+      "7": "V4T001550"
+    },
+    "duration_seconds": 151,
+    "pointing": {
+      "alt_deg": 88.0610006,
+      "az_deg": 230.2090416
+    },
+    "program": "DARK"
+  },
+  "elapsed_seconds": 2.2554898327216506,
+  "events": [
+    {
+      "dual_gap": 1181.2634181657404,
+      "event": "season_target_dual",
+      "feasible_lower": 905.0706765119575,
+      "night": 17,
+      "positive_prices": 204,
+      "rounds": 13,
+      "stop": "bundle_master_budget",
+      "upper": 2911.919553069824
+    },
+    {
+      "event": "season_no_distinct_science_proposal",
+      "night": 17
+    }
+  ],
+  "extra_seconds": 2.171251832973212,
+  "ledger_unchanged": true,
+  "meta": {
+    "C": 0.8760642216785517,
+    "E": 0.6095006977950179,
+    "active_request_count": 0,
+    "card": "L2",
+    "decision_row": 977,
+    "historical_action_parity_claimed": false,
+    "night_index": 17,
+    "now_utc": "2026-11-26T02:07:17Z",
+    "pointing_offset_estimate": [
+      0.0011863695439608118,
+      -0.0012839277083985627
+    ],
+    "prefix_sha256": "49ee534a665c79208ebf26a453193f1d61459dc5d95100ec027dbffbb7ad803f",
+    "score_sum": 4031.5822630000002,
+    "trace_root": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2"
+  },
+  "original_request_and_fault_class_inherited": true,
+  "passed": true,
+  "peak_rss_bytes": 538951680,
+  "scope": "actual reconstructed public L2night18 with night8 physical bank frozen from earlier public data; no action parity or official execution claim",
+  "selected_action": {
+    "action": "observe",
+    "assignments": {
+      "0": "V4T005950",
+      "1": "V4T001640",
+      "13": "V4T007770",
+      "14": "V4T003854",
+      "15": "V4T005767",
+      "2": "V4T005464",
+      "3": "V4T000685",
+      "4": "V4T007977",
+      "6": "V4T005831",
+      "7": "V4T001550"
+    },
+    "duration_seconds": 151,
+    "pointing": {
+      "alt_deg": 88.0610006,
+      "az_deg": 230.2090416
+    },
+    "program": "DARK"
+  },
+  "selected_matches_original_same_state": true
+}

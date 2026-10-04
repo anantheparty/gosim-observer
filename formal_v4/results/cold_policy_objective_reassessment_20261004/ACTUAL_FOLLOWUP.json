@@ -1,0 +1,68 @@
+{
+  "schema": "cold-policy-objective-reassessment-actual-followup-v1",
+  "authoritative_result_path": "formal_v4/results/public_open_actual_20261004/ROOT_ACTUAL_RESULT.json",
+  "authoritative_result_sha256": "3d22df8d45cb57dda19a2370a39548f5d89aeb87984ce1932da597054d318c90",
+  "authoritative_result_utc": "2026-10-04T07:06:36.185168+00:00",
+  "candidate_total": 6501.055556,
+  "control_total": 6553.045588,
+  "delta": -51.990032,
+  "components_delta": {
+    "science": -52.215562,
+    "Jain": 0.22553,
+    "REQ": 0.0,
+    "report": 0.0,
+    "required": 0.0
+  },
+  "candidate_counts": {
+    "decisions": 1795,
+    "invalidated_observations": 15,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 14521,
+    "observe_actions": 1056,
+    "required_missing": 1,
+    "targets_observed": 8377
+  },
+  "control_counts": {
+    "decisions": 1794,
+    "invalidated_observations": 31,
+    "observation_requests_completed": 2,
+    "observation_requests_issued": 2,
+    "observations": 14541,
+    "observe_actions": 1050,
+    "required_missing": 1,
+    "targets_observed": 8329
+  },
+  "same_actor_action_prefix_count": 60,
+  "first_difference_is_first_public_open_recovery": true,
+  "public_open_events": 4,
+  "normal_complete_season": true,
+  "resource_protocol_passed": true,
+  "source_and_raw_output_hashes_verified": true,
+  "resources": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "global_limit_seconds": 900,
+    "accounted_seconds": 433.177,
+    "termination": "survey_complete",
+    "authority": "root verified result and trusted follow-up dispatch"
+  },
+  "adopted": false,
+  "no_extra_card_rerun": true,
+  "no_parameter_rescue": true,
+  "best_zip_unchanged": true,
+  "native_L3_control_full_parity_remeasured": false,
+  "conclusion": "Strict same-slot observability semantics and an immediate positive recovery do not guarantee higher final best-only science under changed subsequent planning/ranks; candidate rejected.",
+  "report_path": "formal_v4/research/cold_policy_objective_reassessment_20261004.md",
+  "report_before_sha256": "48d6df82afcb0cedd9a5cd0c2c15b30a416f96402354a24ae1bbcd42c39c131b",
+  "report_after_sha256": "78143e28ca245dff2e23bc328addcac8ce94e28230ac8030b444d1001036c228",
+  "preserved_original_artifact_sha256": {
+    "AUDIT.json": "a555f3c53f4449b3685d3a63515543cb890b001d8fe220640c82bc3622608c99",
+    "MANIFEST.json": "7125c21a55ac560a3a9c427506ffafb5a4d72a9e9a15019ce593d70abcd3c731",
+    "SOURCE_FREEZE.json": "2be692c4e8b1a209f1ec6c5ca476d0d55058a2ffaf115b52955b81ac08e77593",
+    "observer_public_open_recovery_fault_candidate_20261004.zip": "bab39ca84027531ecd0fd9c60fe4eabe219e1914d2739325ee7a9bd3af730fcb"
+  },
+  "all_frozen_candidate_members_unchanged": true,
+  "original_manifest_scope": "Pre-trial report snapshot retained unchanged; this follow-up records the appended report version.",
+  "new_tests_or_runs": 0
+}

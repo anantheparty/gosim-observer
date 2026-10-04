@@ -1,0 +1,376 @@
+{
+  "schema": "cold-policy-objective-reassessment-v1",
+  "finding": "strong controller discards same-slot public positive certificate and mistakes local all-zero for global closure",
+  "status": "source proof and real current-control triggers confirmed; executable candidate frozen; root-owned full L3 result pending",
+  "primary_code_refs": [
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/feedback_model.py",
+      "line": 67
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/policy.py",
+      "line": 171
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/policy.py",
+      "line": 342
+    }
+  ],
+  "official_proof_refs": [
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_weather_simulator.py",
+      "line": 814
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_scorer.py",
+      "line": 195
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_runner.py",
+      "line": 749
+    }
+  ],
+  "current_best_trigger_counts": {
+    "L1": {
+      "count": 1,
+      "seconds": 526
+    },
+    "L2": {
+      "count": 0,
+      "seconds": 0
+    },
+    "L3": {
+      "count": 3,
+      "seconds": 1627
+    }
+  },
+  "old_online_trigger_counts": {
+    "alpha": {
+      "count": 1,
+      "seconds": 246
+    },
+    "beta": {
+      "count": 4,
+      "seconds": 1164
+    },
+    "gamma": {
+      "count": 0,
+      "seconds": 0
+    },
+    "delta": {
+      "count": 6,
+      "seconds": 2478
+    }
+  },
+  "logical_global_open_guarantee": "whole positive exposure lies in the same official fixed site slot; even partial ALL events are folded into its SlotTruth",
+  "physical_clearance_guarantee": "conditional on unchanged production reference terrain domain; exact whole remaining interval target minAlt exceeds remaining max sector height; not universal protocol max-height guarantee",
+  "de_duplication": "basic zero/closure and positive semantics already in CLOSURE_PROBE_VALUE_ZH.md; new item is existing-certificate no-probe recovery, confirmed real best triggers, executable strong-planner branch",
+  "scope_guards": [
+    "activeREQ must be empty",
+    "no current dynamic notice other than terrain/earthquake",
+    "terrain domain has no conflict",
+    "both anchor and all-zero exposure are fully in current slot",
+    "remaining at least original tmin",
+    "recovery observation cannot cross slot end",
+    "normal report quota and faultv1 classes unchanged"
+  ],
+  "source_freeze_sha256": "2be692c4e8b1a209f1ec6c5ca476d0d55058a2ffaf115b52955b81ac08e77593",
+  "candidate_zip_sha256": "bab39ca84027531ecd0fd9c60fe4eabe219e1914d2739325ee7a9bd3af730fcb",
+  "candidate_project_entry": [
+    "python3",
+    "-u",
+    "public_open_recovery_entry.py"
+  ],
+  "root_full_L3_dispatch": {
+    "pid": 2851723,
+    "started_utc": "2026-10-04T06:43:42.126633Z",
+    "cpu_cores": [
+      22,
+      23
+    ],
+    "memory_gib": 2,
+    "global_seconds": 900,
+    "network": "none",
+    "actor_truth_mount": false,
+    "result_directory": "formal_v4/results/public_open_actual_20261004",
+    "control_total": 6553.045588,
+    "control_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/strategy_reassessment_actual_20261004/seasons/fault/L3",
+    "native_L3_complete_parity_preexisting": false
+  },
+  "exact_official_assigned_trajectory_checks": [
+    {
+      "card": "L3",
+      "rank": 56,
+      "all_assigned_exact_official_minimum_above_conditional_terrain_height": true,
+      "min_remaining_interval_target_altitude": 55.90509960184532,
+      "conditional_height": 50.0,
+      "duration": 65,
+      "targets": 14,
+      "public_model_predicted_science": 1.654400171868581,
+      "public_model_predicted_rate": 0.025452310336439708,
+      "candidate_seconds": 0.12632187502458692,
+      "geometry_seconds": 0.0011777500621974468
+    },
+    {
+      "card": "L3",
+      "rank": 59,
+      "all_assigned_exact_official_minimum_above_conditional_terrain_height": true,
+      "min_remaining_interval_target_altitude": 50.438392029418125,
+      "conditional_height": 50.0,
+      "duration": 400,
+      "targets": 15,
+      "public_model_predicted_science": 9.405365314975421,
+      "public_model_predicted_rate": 0.023513413287438552,
+      "candidate_seconds": 0.13037916598841548,
+      "geometry_seconds": 0.0015101251192390919
+    },
+    {
+      "card": "L3",
+      "rank": 61,
+      "all_assigned_exact_official_minimum_above_conditional_terrain_height": true,
+      "min_remaining_interval_target_altitude": 53.665952571636744,
+      "conditional_height": 50.0,
+      "duration": 199,
+      "targets": 15,
+      "public_model_predicted_science": 4.895783728154545,
+      "public_model_predicted_rate": 0.024601928282183643,
+      "candidate_seconds": 0.1291607078164816,
+      "geometry_seconds": 0.0017721247859299183
+    },
+    {
+      "card": "L1",
+      "rank": 420,
+      "all_assigned_exact_official_minimum_above_conditional_terrain_height": true,
+      "min_remaining_interval_target_altitude": 59.86288919237845,
+      "conditional_height": 47.0,
+      "duration": 322,
+      "targets": 14,
+      "public_model_predicted_science": 4.9627925529093195,
+      "public_model_predicted_rate": 0.015412399232637639,
+      "candidate_seconds": 0.08525379095226526,
+      "geometry_seconds": 0.0009658751077950001
+    }
+  ],
+  "modest_scale": "L3 1627 seconds; public point sensitivity about10\u201341 science, not a bound or realized retained gain; cannot explain old delta739 science gap",
+  "other_rejected_hypothesis": "REQ DP-veto baseline reward inconsistency is real in code but current L1/L2/L3 and available old gamma/delta logs have no infeasible/rejected triggers; alpha/beta summary unavailable",
+  "learned_distribution_difference": "fresh directF uses fixed L1/L2 old public action/time templates, noREQ, reports every64 within public free quota; cannot explain same-domain negative validation causally",
+  "restrictions": {
+    "futuretruth_read": false,
+    "sealedL4_teacher_read": false,
+    "new_training": false,
+    "subagent_full_season_run": false,
+    "online_submission": false,
+    "git_operations": false
+  },
+  "source_manifest": [
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_scorer.py",
+      "sha256": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66"
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_runner.py",
+      "sha256": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d"
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_weather_simulator.py",
+      "sha256": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a"
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/official/challenge/v4_fiber_map.py",
+      "sha256": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/policy.py",
+      "sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/feedback_model.py",
+      "sha256": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/terrain_policy.py",
+      "sha256": "b49a85585ffdc6fab935a04dc0b47026de6837083896abaa970d353e8a019037"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/terrain_version_space.py",
+      "sha256": "82d7619dc55b94836a119b36e6aa41b88c7df30398bd449e899bc62721653008"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/request_deadline_common.py",
+      "sha256": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/spatial_candidates.py",
+      "sha256": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/research/cpu_phase_candidates.py",
+      "sha256": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e"
+    },
+    {
+      "path": "formal_v4/results/cold_sparse_science_runtime_20261004/fault_package/sparse_evaluator.py",
+      "sha256": "24e9032df5bf903d98f3fc70c1bb19d45b90d2966daef58229b094a115211adb"
+    },
+    {
+      "path": "formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py",
+      "sha256": "95a4a91b1a58a14fec4d1ce105325bcdc82cf7222d6226598eb76d6006a10905"
+    },
+    {
+      "path": "formal_v4/research/ALGORITHM_PORTFOLIO_ZH.md",
+      "sha256": "30ebb6357523ee72b3d072711fe28733042cb4d3042b4d99890a88c6fbd739bd"
+    },
+    {
+      "path": "formal_v4/research/CLOSURE_PROBE_VALUE_ZH.md",
+      "sha256": "e6f2456b8fe52d28ffc2e6614bc8d4e7ebb29b0b28e7952d91b75ca89e351945"
+    },
+    {
+      "path": "formal_v4/results/strategy_reassessment_actual_20261004/ROOT_FAULT_FOUR_CARD_RESULT.json",
+      "sha256": "839120a1dbc15953bc1e9fa2a85e86fd215f119787975a412355b5e750044667"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/ROOT_FAULT_FAST_TWO_CARD_RESULT.json",
+      "sha256": "48d2ced4e86c8884860cebe2a72f95b2edc5a29d0fab143851a9eb148cb789d0"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_alpha_20261003/actions.jsonl",
+      "sha256": "3f0f1d27fd134afc282d344c5cbf1a929350f0fb483186f34f80e81717f513a5"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_alpha_20261003/decisions.csv",
+      "sha256": "8fbf6be0b07e425f1592a8ebf824b19f1b6cecf1ef8be021857aefde4885c6a8"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_alpha_20261003/observations.csv",
+      "sha256": "a282ae158e21541dcbdb9d3490541a0790d280483270292f5341d2dd236137e3"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_alpha_20261003/messages.jsonl",
+      "sha256": "4918cc3580888f9c01cc36ec74bebc7fe7599c43180c87ed0e98431071f49902"
+    },
+    {
+      "path": "formal_v4/practice_cards/alpha/alpha/public/v4_night_calendar.csv",
+      "sha256": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_beta_20261003/actions.jsonl",
+      "sha256": "85e390d5b6375d370cf266d373592bb09342db277282ab3e1a317c8f7e2e1423"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_beta_20261003/decisions.csv",
+      "sha256": "e2b83757d337c4a5359a4ae5926577e572bc1556b216b56d83b1a675891f8e92"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_beta_20261003/observations.csv",
+      "sha256": "bb64710bef65ea4b6488efe452e169ac9d058ed6a00d3948001bb6e4a934e59a"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_beta_20261003/messages.jsonl",
+      "sha256": "15613f60e5c4f04cc877b547728d350c601fdc7ad388de0fcc3cdd6c903b5ac4"
+    },
+    {
+      "path": "formal_v4/practice_cards/beta/beta/public/v4_night_calendar.csv",
+      "sha256": "32813747337d6d2057a93ea7bb99e90fa52d0ea2b3701f0d87a0eaf135a577b5"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_gamma_20261003/actions.jsonl",
+      "sha256": "b5496697f7e424db1fb4c0b2e82d3c82eb4aed9433bccccbdd4c0ed3e21d9640"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_gamma_20261003/decisions.csv",
+      "sha256": "bf47a67a330a7097d94df87029409bc3b715294e6a7344e49a312279a3f05d71"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_gamma_20261003/observations.csv",
+      "sha256": "0dc6b071fc30b7a1f1bb3cb9cd9a2915f17a8321fe87fdb2d0e883489ace1c98"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_gamma_20261003/messages.jsonl",
+      "sha256": "1c149405beb5df36d87b063fd6f5421af13a625231dc0c1cb35112ff63b53614"
+    },
+    {
+      "path": "formal_v4/practice_cards/gamma/gamma/public/v4_night_calendar.csv",
+      "sha256": "55da1bc4ab5dbbafd19c24abc01eedf5278b11552ecb04bd8a36c784734d6a16"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_delta_20261003/actions.jsonl",
+      "sha256": "a1e5fb59bdeb21a73ec27c277f8fe634c66010fa96c54e63cdea996a61373e44"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_delta_20261003/decisions.csv",
+      "sha256": "08f1a1da32fea9299eeb447f9559aa625fa5ea7a081650bc25264f78289c6176"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_delta_20261003/observations.csv",
+      "sha256": "bc63bb44ce5cba0fbb0419e27fd2c70e2fee8120eceb5084ecac14fa2edc81b9"
+    },
+    {
+      "path": "formal_v4/results/cloud_request_cache_delta_20261003/messages.jsonl",
+      "sha256": "fe58d058c34f76554f5c0aca21d1c04f6b1a29756c6661b5bdd775abb8d36048"
+    },
+    {
+      "path": "formal_v4/practice_cards/delta/delta/public/v4_night_calendar.csv",
+      "sha256": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L1/actions.jsonl",
+      "sha256": "22efe1493974b8dd5d32470d827093e0b3c56548f5f9b83bf404feb81f9c5926"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L1/decisions.csv",
+      "sha256": "23e2fab14e07db4ad11aab97541918a9f22134fe5cb54c723fc6fd3183f42c11"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L1/observations.csv",
+      "sha256": "73ea3f5e261182ae57c147000443751d41510d7128b268389963da64e58e3685"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L1/messages.jsonl",
+      "sha256": "ddca675a0feb6613a604c2f7587d6576fd41e263b2a6c8e45441cd38141add8e"
+    },
+    {
+      "path": "formal_v4/results/policy_iteration_20261004/L1_initialize_public.json",
+      "sha256": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2/actions.jsonl",
+      "sha256": "6645ff564a24abe5474e9faffd88447234cc9caba6b010ab3bcebec9eb69618f"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2/decisions.csv",
+      "sha256": "226aa3b71277ccc43c389536dd4d27b31fc21cee00313f93a92f709ce993a94d"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2/observations.csv",
+      "sha256": "73bc2a058b308c6eaf27d190b95a6004423a1f91d5582d63e4d1c07fd2122236"
+    },
+    {
+      "path": "formal_v4/results/sparse_fault_actual_20261004/seasons/fault_fast/L2/messages.jsonl",
+      "sha256": "466c78b829db778a4b848d8677b892210f06ccb3bdd3f9759d3d046fcb94574a"
+    },
+    {
+      "path": "formal_v4/results/policy_iteration_20261004/L2_initialize_public.json",
+      "sha256": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a"
+    },
+    {
+      "path": "formal_v4/results/strategy_reassessment_actual_20261004/seasons/fault/L3/actions.jsonl",
+      "sha256": "d9b1b55a6054a75beb8c8bf50469f87ba4b7b70f3cc473312e2275cccd290918"
+    },
+    {
+      "path": "formal_v4/results/strategy_reassessment_actual_20261004/seasons/fault/L3/decisions.csv",
+      "sha256": "069fa0f7a80f6dce89f59ab9dd8c337668dc0fdaff834338d2f8702c2d1ed87c"
+    },
+    {
+      "path": "formal_v4/results/strategy_reassessment_actual_20261004/seasons/fault/L3/observations.csv",
+      "sha256": "debbe778fa5f52708c1c400e86056b03046beef2ac3c08e6784fcdac73b0a267"
+    },
+    {
+      "path": "formal_v4/results/strategy_reassessment_actual_20261004/seasons/fault/L3/messages.jsonl",
+      "sha256": "bb44dd4aa102689fb2fce23746c506b0e566938db89323e4d0c95748b097e1b4"
+    },
+    {
+      "path": "formal_v4/results/policy_iteration_20261004/L3_initialize_public.json",
+      "sha256": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7"
+    }
+  ],
+  "report_path": "formal_v4/research/cold_policy_objective_reassessment_20261004.md"
+}
