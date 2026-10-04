@@ -1,0 +1,217 @@
+{
+  "schema": "independent-cold-distribution-contract-audit-v1",
+  "status": "pass_limited_scope",
+  "scope": {
+    "reviewed_source_root": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004",
+    "mathematical_target": "physical (F, physical band); effective I_hit*F pilot split explicitly distinguished",
+    "decision_objective": "fixed legal assignment additive science hinge only",
+    "fresh_world_inputs": [
+      940901,
+      940902,
+      940903,
+      940904
+    ],
+    "no_fit": true,
+    "no_online": true,
+    "no_old_sealed_L4": true,
+    "no_old_calibration_or_test": true,
+    "did_not_modify_reviewed_sources_or_git": true
+  },
+  "blocking_findings_remaining_for_reviewed_reference_science_contract": [],
+  "resolved_findings": [
+    {
+      "id": "A1_actual_duration",
+      "severity": "blocking_before_new_training_freeze",
+      "pre_fix_locations": [
+        "public_features.py geometry/query/history directly used action.duration_seconds",
+        "pilot.py labels used requested duration"
+      ],
+      "official_reference": "official/challenge/v4_runner.py:711-717",
+      "counterexample": "NIGHTTAIL_PRE_FIX_EXAMPLE.json",
+      "minimal_example": {
+        "night": "N20261001",
+        "target": "V4T000919",
+        "start": "2026-10-02T08:59:00+00:00",
+        "requested_seconds": 900,
+        "official_actual_seconds": 60,
+        "q_band_unclipped": 0.051937773515308656,
+        "q_band_actual": 0.7790666027296299,
+        "band_unclipped": "BACKUP",
+        "band_actual": "DARK",
+        "F_unclipped": 0.04960285588722927,
+        "F_actual": 0.04960285588722928,
+        "science_weight": 1.0,
+        "DARK_score_unclipped": 0.04960285588722927,
+        "DARK_score_actual": 0.05952342706467513
+      },
+      "resolution": "public_features.clip_duration and query/geometry/history/action_metadata all canonicalize actual duration; pilot.labels preserves requested and actual separately",
+      "verified": true,
+      "existing_stage1_pilot_result_affected": false,
+      "current_best_zip_affected": false
+    },
+    {
+      "id": "A2_history_weight_precision",
+      "severity": "contract_edge",
+      "official_reference": "official/challenge/v4_config_check.py:174 permits w=0; v4_runner.py:826 publishes six-decimal score",
+      "pre_fix": "history normalized score divided by w without zero guard or precision token",
+      "resolution": "w<=0 yields empty score token; public hit retained externally; index21 stores .5/w in micro units",
+      "verified": true,
+      "reference_weights": [
+        0.3,
+        0.45,
+        1.0,
+        1.7
+      ]
+    },
+    {
+      "id": "A3_pointing_invariance",
+      "severity": "representation_contract",
+      "official_reference": "official/challenge/v4_runner.py:718-784; official/challenge/v4_scorer.py:248-402",
+      "minimal_example": {
+        "world_seed": 940901,
+        "target": "V4T000002",
+        "start": "2026-10-02T00:00:00+00:00",
+        "actualduration": 900,
+        "hit_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 67.4180622794475,
+            "az_deg": 109.000554698011
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "10": "V4T000002"
+          }
+        },
+        "miss_action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 67.4180622794475,
+            "az_deg": 109.390554698011
+          },
+          "duration_seconds": 900,
+          "program": "DARK",
+          "assignments": {
+            "10": "V4T000002"
+          }
+        },
+        "physical_factor": 1.0,
+        "physical_band": 0,
+        "host_actual_hit": [
+          true,
+          false
+        ],
+        "effective_factor": [
+          1.0,
+          0.0
+        ],
+        "both_public_nominal_assignments_on_glass": true
+      },
+      "resolution": "Future physical query removes5 center/offset dimensions (56->51); public history separately keeps nominal tangent offset",
+      "verified": true
+    }
+  ],
+  "limitations": [
+    {
+      "id": "L1_hit_gate",
+      "description": "Physical PMF action science equality requires outer hit/altitude admissibility; uncertain future hit cannot be multiplied by an assumed independent probability."
+    },
+    {
+      "id": "L2_hard_completion_tail",
+      "description": "Hinge quantization bound does not cover discontinuous 0.5 completion event; F=.5-1e-6 projects .999936 probability at knots>=.5 although official completion is false. Current proposal leaves required/REQ/Jain outside histogram threshold substitution."
+    },
+    {
+      "id": "L3_fitting",
+      "description": "Projection guarantee is not a bound on learned NN distribution error."
+    },
+    {
+      "id": "L4_reference_config",
+      "description": "K=64, five slot input, coefficient max1.2 and weights<=1.7 are reference scope; generalized coefficient bound must include mismatch multiplier and actual weight."
+    },
+    {
+      "id": "L5_extreme_weight",
+      "description": "History precision feature caps .5/w at1e6 micro units for extreme tiny nonreference w; cannot claim exact normalized rounding likelihood for arbitrary weights."
+    },
+    {
+      "id": "L6_new_builder",
+      "description": "New builder/trainer/evaluator/export not yet frozen or reviewed; final historical validity must not be backfilled before public resync cutoff, and final repair state must not rewrite prior measurements."
+    }
+  ],
+  "analytic_results": {
+    "official_score": "w*m_program_band*F",
+    "joint_shape": [
+      3,
+      65
+    ],
+    "total_logits": 195,
+    "mu_source": "same joint PMF",
+    "first_gain": "w*sum_b m_p(b)*mu_b",
+    "gain_shape_in_best": [
+      "continuous",
+      "convex",
+      "nonincreasing",
+      "one_lipschitz"
+    ],
+    "projected_gain_error_lower": 0,
+    "projected_gain_error_upper": "E[w*m_p(Band)]/(4K) <= w*max_band m_p(b)/(4K)",
+    "global_reference_per_target_bound": 0.00796875,
+    "reference_16_target_bound": 0.1275,
+    "public_best_rounding_per_target_bound": 5e-07,
+    "public_best_rounding_16_target_bound": 8e-06,
+    "reported_final_total_additional_rounding_bound": 5e-07,
+    "actual_duration_public_methods": [
+      "initialize calendar min(requested_end,survey_end,night_end)-start",
+      "next observe decision snapshot.now_utc - saved_start_utc"
+    ],
+    "physical_pointing_invariance": true,
+    "cross_field_cache_scope": "same target/start/actualduration/public context/model/temperature/site/scoring/flux and repair branch"
+  },
+  "probe_result": "PROBE_RESULT.json",
+  "research": "research.md",
+  "source_sha256_at_last_pass": {
+    "target_core.py": "e9c1203d8ea01f47d7d0e2387609d916c42d3fd7f5f1e02d8a13949cb5556e49",
+    "public_features.py": "d907f8d2d79e29d6f2ee1d353a527816f3068cf99fbd47ee8560e07baa3894dd",
+    "pilot.py": "9b9db9f73b33711c9ed70a1b1ccda856d9e839c51af6cb6dbb5a66875420d7cd",
+    "math_contract.py": "f1649de43ac15c5392fe4e94c07bd51f8ba817e86928a9ffc839cfb94197098f",
+    "input_probe.py": "e149f6c3ab7e8e2f1c481a8b52a311fb69dcda06707af234a32a41ec5bcb692b",
+    "official/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "official/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "official/challenge/v4_weather_simulator.py": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a",
+    "official/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "official/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+    "v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd"
+  },
+  "next_gate": "Audit upcoming builder/trainer/evaluator/export and source lock separately before fitting; this pass covers core math, public_features and pilot label semantics only.",
+  "query_dimensions_current": 51,
+  "history_target_dimensions_current": 24,
+  "notice_dimensions_current": 129,
+  "action_metadata_dimensions_current": 16,
+  "source_lock_status": "Independently verified source snapshot; upcoming stage2 builder/trainer source freeze is not reviewed by this report.",
+  "probe_checks": {
+    "actual_duration_clipping": true,
+    "query_history_metadata_clipping_parity": true,
+    "night_and_final_survey_boundaries": true,
+    "full_five_slot_geometry": true,
+    "query_excludes_weight_best_program": true,
+    "physical_query_pointing_invariant": true,
+    "zero_weight_history_safe": true,
+    "history_rounding_halfwidth_in_micro_units": true,
+    "issue_time_future_censor": true,
+    "forecast_coverage_distinguishable": true,
+    "all_256_terrain_sets": true,
+    "false_report_same_time_healthy_anchor": true,
+    "loss_retains_measurements_and_invalidates_best": true,
+    "assigned_miss_differs_zero_hit": true,
+    "joint_195_mean_and_hinge_bound": true,
+    "directional_boundary_integral": true,
+    "band_excludes_directional_and_efficiency": true
+  },
+  "artifacts_sha256": {
+    "audit_probe.py": "60eaa5bc80da856f23c6e6fd8a34779cf45c70a67f3e20d799cc5e2385a9edb8",
+    "PROBE_RESULT.json": "afc0c23592a12770b2e71bbd47fcc40c7288f28a89b512fad011f08c6be613ba",
+    "NIGHTTAIL_PRE_FIX_EXAMPLE.json": "ecb4feb1eff50b05b81d26b992dac3c4ec5d552bca955481316034bbf03975dc",
+    "POINTING_INVARIANCE_EXAMPLE.json": "faf9df4f4a14a092913eb014167c18f981fc121c0d37cc9e559f53b68f03faed",
+    "research.md": "7a90b6d17e2cab182000ef9922d5d617c732d857e400877743220a006d70c6a8"
+  }
+}
