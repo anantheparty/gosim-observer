@@ -1,0 +1,34 @@
+{
+  "approval_checkpoint": "root source review plus private backup before actual graph scan",
+  "blas_threads": 1,
+  "branches": [
+    "B",
+    "priced0",
+    "priced1"
+  ],
+  "cpu_limit": 2,
+  "dependencies": {
+    "local_numpy": "2.4.4",
+    "local_platform": "macOS-15.5-arm64-arm-64bit",
+    "local_python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "local_scipy": "1.17.0"
+  },
+  "execute": "python build_native.py && python run_search.py --output /absolute/repository/formal_v4/results/stabilized_season_path_search_20261004/run_L2_night08 --seconds 480",
+  "known_time_domain": "future start mesh 3600 seconds; durations 900/1800/3600 seconds; no new or interpolated actions",
+  "max_price_rounds_per_branch": 200,
+  "max_repair_sweeps": 4,
+  "mechanisms": [
+    "proximal cut-simplex bundle with serious/null steps",
+    "full fixed-path exact global matching, separately attributed",
+    "outside-max-ledger continuous night-block DP reconstruction"
+  ],
+  "memory_limit_bytes": 2147483648,
+  "no_formal_or_stochastic_score_claim": true,
+  "no_large_computation_before_root_review": true,
+  "objective": "same finite deterministic science max-ledger, all candidates evaluated on one common path pool",
+  "old_common_paths": 57,
+  "preferred_host": "Rhodes CPU",
+  "price_seconds": 240.0,
+  "repair_seconds": 150.0,
+  "total_wall_seconds": 480.0
+}

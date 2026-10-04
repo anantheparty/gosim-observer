@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "catalogue": {
+      "path": "formal_v4/upstream/gosim-observer-examples/local-cards/L2/public/targets.csv",
+      "sha256": "a85d6f8571be0e1f06c11a34943f786e21feccb32b240f8a17c5d68744ed39db",
+      "size_bytes": 508600
+    },
+    "fiber_config": {
+      "path": "formal_v4/upstream/gosim-observer-examples/local-cards/L2/config/v4_fiber_config.json",
+      "sha256": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+      "size_bytes": 360
+    },
+    "first_B": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/COMMON_CONTROL_B.json",
+      "sha256": "a40728784039f9dcff26ff5861734a86c580dc5666cc801e17aab5e601d9a2a3",
+      "size_bytes": 318558
+    },
+    "first_priced0": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/COMMON_CONTROL_priced0.json",
+      "sha256": "cc9c8b8a16bf5fc6d9a06e26a7f2a89342cdc78df7bfdd6d8cf1ca5c44763834",
+      "size_bytes": 317456
+    },
+    "first_priced1": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/COMMON_CONTROL_priced1.json",
+      "sha256": "40dd60eae579ac91b668e7a65b25cb0e01e1b2bee547d7b1fa3acb3c15cab19d",
+      "size_bytes": 317946
+    },
+    "graph": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp/L2_night08/SHARED_PUBLIC_GRAPH.npz",
+      "sha256": "f5f97c632b657738688aba27ed50fa0176d84a90bde59283de9ea4d992e3db1f",
+      "size_bytes": 50571584
+    },
+    "ledger": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/CURRENT_PUBLIC_LEDGER.npz",
+      "sha256": "cb112f6291a6e89c215f965b23b2a7c151f417159c3f43fa3fd96897c561a541",
+      "size_bytes": 45740
+    },
+    "nights": {
+      "path": "formal_v4/upstream/gosim-observer-examples/local-cards/L2/public/v4_night_calendar.csv",
+      "sha256": "e6149422d04de96c469aaaa18b9116c7c11ce1b976c0a42ad983208fcdd89484",
+      "size_bytes": 4217
+    },
+    "pool": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/COMMON_PATH_POOL.json",
+      "sha256": "e5a74edaa9511be998887ded737d30e08c1afe407549da44d228571fb741baa3",
+      "size_bytes": 167929
+    },
+    "prior_result": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/RESULT.json",
+      "sha256": "cb0870850b9a7252245fd4574abdb8446129605108ff6630cd61db79ff1549af",
+      "size_bytes": 9765
+    },
+    "scoring": {
+      "path": "formal_v4/upstream/gosim-observer-examples/local-cards/L2/config/v4_score_config.json",
+      "sha256": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "size_bytes": 909
+    },
+    "snapshot": {
+      "path": "formal_v4/results/season_pattern_controller_20261004/time_dp_reuse/L2_night08/CURRENT_PUBLIC_SNAPSHOT.json",
+      "sha256": "4a9cebfbe54edd803a4f7e4e068e98be14001b3b18c96ca33fef9fc9c2b6e4d7",
+      "size_bytes": 2824
+    }
+  },
+  "scope": "Frozen L2 night08 public deterministic graph and score ledger only"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "actual_graph_loaded": false,
+  "rows": [
+    {
+      "name": "greedy_10_vs_matching_19",
+      "gain": 19.0,
+      "audit": {
+        "nonoverlap": true,
+        "fibers": true,
+        "unique_winner_target": true,
+        "exact_fixed_coefficient_scores": true,
+        "max_ledger_error": 0.0,
+        "exposures": 2,
+        "assignments": 2
+      }
+    },
+    {
+      "name": "matching_vs_full_max_ledger_enumeration",
+      "cases": 30
+    },
+    {
+      "name": "empty_exposure_time_retained",
+      "cases": 1
+    },
+    {
+      "name": "cut_simplex_prox_vs_direct_epigraph_QP",
+      "cases": 15,
+      "max_error": 5.8190671503588476e-08
+    },
+    {
+      "name": "crossing_exposure_removed_and_outside_ledger_exact",
+      "cases": 1
+    }
+  ]
+}
