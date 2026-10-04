@@ -1,0 +1,595 @@
+{
+  "utc": "2026-10-04T07:24:40.051384+00:00",
+  "status": "SOURCE_REVIEWED_AND_READY_FOR_PRIVATE_BACKUP_BEFORE_DATA",
+  "source_freeze_sha256": "3a1e822aae54cad17716c40a6a9b2ff749972485b93975b73be166770dcc653d",
+  "parent_source_files_verified": 70,
+  "new_source_files_verified": 9,
+  "verified_sha256": {
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/CALIBRATION_LOCK.json": "8c1d05dc7aa6ecd78494134c54473e36892fea9d9df57b073ca25d9edd48bad4",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/MICRO_OBJECTIVE_LOCK.json": "6ac44f42f2858ed141b92ed1a743f03d297f5b0cdfabc11fa32b891e54e572b1",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/MODEL_CONTRACT.json": "75840d249b199b97a6908d115f449ce2aa73f9d61eb9095104d4a3aac77b3120",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/NUMERICAL_CONTRACT.json": "8569d1e446b3d41fc18b5370248772af41c943861f393a08c2b4d821fd09302d",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/SAMPLING_LOCK.json": "dab0292265908921c65c4a36cdc010ec51a540adce2be7ea2e03168d2a48cabf",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/SOURCE_ORIGIN_RECEIPT.json": "28ec5303acab97f0e719c2003382251ab0c143e19a8ed5e649ff5cfa472f254a",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/model.py": "51a0970a46c0cf4c1238f95c1e2de28f47bf3505f9e16d208531bc309b936b54",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/numerical_contract.py": "9aee7e794ba41f535743ff599fa50c07647de07ed50f89792e910256758525d3",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/challenge_workflow.py": "a790769bab713fe3e15f83087724264c74afa09f7f7bc1167e0da979835fa45e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/contracts.py": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/observing_calendar.py": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/project_paths.py": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_catalog_config.json": "8a817f469bcd47c2bafa270f5b56140bad28e5cb673c61132ccd4014004966bb",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_fiber_config.json": "16aa2ef0fb7466691a4f8a006f64ecc21767ad4f052df39eaf1bfe9cb29a6dfe",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_scenario_default.json": "6d7e48e26067505c5451b85e7b06a6b02e71cf26e50ddeed89936fe6a317cacb",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_scenario_stress.json": "fe6772608cbd22d73d6fae0bc98fc253ef26939b2d1664b2005f096edb241490",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_score_config.json": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_weather_config.json": "3e9c1f03c5d925ab5bfe3402077524e92e052cd911488055a9959fdf2335ef57",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_weather_stress_config.json": "d13006552dd4d2984ad702c28cda1065d8f071e3cdcf5d68c234510f1a59e98e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/scenario_builder.py": "c7b9128dc65f9688ea1365bf1b7d434695f3b187b8388e0562b3621b772fa9df",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/tile_geometry_simulator.py": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_bundle.py": "66ca1813dc9ef007df3d014708ee91f7632ab9a5cb1123e7115a3a99bba9f516",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_catalog_generator.py": "ffe70e0064b3b73fec787d4f3ab0895f5a4d816ab1c3888914fa4051248c8eb0",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_config_check.py": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_observation_requests.py": "77f015eff3e888b7e94c9353c726cfde06c95e2e3410cc70b05e41fb030ff423",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_weather_simulator.py": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/physical_operator.py": "fef9d21f48c51e562c8802b4eb3525b67c9e4c0a89d6078d11c42304f34de4bc",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/pilot.py": "7f535ac8abb0c00066db7b9b8a5292b05d624fd4f659f21bf1977d8ebd5d017e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/agent.py": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/persistent_fault_guard.py": "3aa5c137ff7ac28d179da38c28675023e106c853b73c67bfbec3c5308799cba6",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/policy.py": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/policy_config.json": "590da7144349854de6a5d19a233e1d68bd14ff638a41d851e31921d064ea2890",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/remote_planner.py": "1edac49a8bef7f4a4d07ada6e74e2e8b250716fc4e9d4b1cdd4e6ab15635ee0b",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/remote_runtime.json": "63f6111b56a5478a02041c5cf1fc360c990590b511c8d33c64a9b0d7fb9c9fb1",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_model_gpu.py": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_request_distributed.py": "238248530d9c62c0f85ae5a235504c7aad7bb523d34e27dfe909eb0b498393b5",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_request_exact_cache.py": "751d9a3222e352dddd09921ced88686d44b8b0a567026157383887b38dc351c9",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/belief_clock.py": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/cpu_phase_candidates.py": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/efficiency_bounds.py": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/feedback_model.py": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/geometry.py": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/model_gpu_transport.py": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/pointing_calibration.py": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/remote_budget.py": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_deadline_common.py": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_exact_cache.py": "dee600f6b2dabc1d7b89e8035dbf1c287f1b11a4717ccc3cc8b2360aeb6ed3ec",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_future_field.py": "5a9531c854b1541a0f56bcd62031281dcdba1c355c2eabd58758a7eef5d23489",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_mask_dp.py": "07195b89c184912fb196550f533739ae939ab7658f80188001329a5fab639163",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_remote_planner.py": "fa0a2aef6ec095ca4d50b93e21b855faa5a97a48ced1ec1c401bf49a527b2654",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/spatial_candidates.py": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/terrain_policy.py": "b49a85585ffdc6fab935a04dc0b47026de6837083896abaa970d353e8a019037",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/terrain_version_space.py": "82d7619dc55b94836a119b36e6aa41b88c7df30398bd449e899bc62721653008",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_entry.py": "b4beade262f18a00f019e00f1ce2d055966bf841e53a3c70cecb7d8a9b18ab1e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_evaluator.py": "24e9032df5bf903d98f3fc70c1bb19d45b90d2966daef58229b094a115211adb",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_exact.py": "884ec791566e58435e652b224d15016d1cb09d16aafb8ee4665107a4b0238866",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel.cpp": "7824696a5cf9d86801bc776ff95a3d8af50404b3ca6c4b49a1193650bd967a5b",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel_darwin_arm64.dylib": "dd85cc9722c04825256b1d964d30af881e78e8ba2ccb8c25343163fbcc6bcc3e",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel_linux_x86_64.so": "bdeedc759fb159c3f9cf625a1615b49c5185e94a8c162267b6d4f776221e040c",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_native.py": "bb176912e8bcd409f6343732be7ee2342758ec7cb2c690d41e77eb5cac2e0030",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/wrapper.py": "c698bfaca41ba4f754340639f8d150d669fbf3cbec98ab3f2c3b384b28aebd96",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_core.py": "5a2d242282edcbd4d91eed14bbe253657d594ab0a630f602f12119c6b5219745",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_features.py": "e4c37995e71c911f3114e54ec8d5eb600450ab9e064fbfdc193f75b796aa6f54",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_initializers/L1.json": "929168b2f9b03c06674fff172d847880d0b8f8089f9c4ef34ff142dc5de684ac",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_initializers/L2.json": "d7c29d808871dd22a45d118ce87efd01d947d5b3c0cf20e1932e9c6289725183",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/EXECUTION_LOCK.json": "28538a37d2979febb111d6bd51efce6437927f9d6f3370b3620879a17dc2831f",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/TRIAL_PROTOCOL.json": "803edf783fbd6baeea3ddd4f63cdf0ec29f18bc7b9a04102ccfa0fdd9442420a",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/dataset_driver.py": "293177225c249128cc9f7c853167a8f4ef875deebb29c940fb9dc4d26321e425",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/decision.py": "3884e4547454a04bdcd7d22e052de201cffb6fd3e30b0df2ca4bd34e1b184528",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/fit_driver.py": "dc325094fdaefafee3d72a895f4e352f580d1bc0df067cd1bf0b13d05a4c4985",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/generate.py": "2068381a77ed57bb81db9d23f6917a1323247409b38a8cdea335f239cbd320ab",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/gpu_math.py": "84204f5affb080f0eb03a100c2e499d3bd7390c967f842428231055d7db94277",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/launch_fit.ps1": "f44fb9fc17ebc7b1b215c7d45f643552e1d2a70b264f6f969c92ade613ae5ea4",
+    "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/numerical_fixture.py": "b7df1203d291a9b7701265fa7c0a3c72ea1d60e08bb185e9d9427eb419a152a7"
+  },
+  "static_python_parse_passed": true,
+  "no_new_data_or_fit_undertaken_by_root": true,
+  "reviewed_logic": [
+    "train-only normalization; shared float32 decoded input; history ablation",
+    "all original pairs preserved; same-family point comparison",
+    "cal-only checkpoint, calibration and full/current selection; two paired val comparisons",
+    "fixed split/weather sampling; no test; immutable four pilots",
+    "900sec permodel/16GiB prospective offline override, parent contracts and failed production cost unchanged",
+    "source-readonly owned 2CPU2GiB Rhodes workers; firstfailure no new launch",
+    "numeric helper action/fiber identities, unscaled math bounds and CPU/CUDA transformed kernels static review only"
+  ],
+  "transport_source_package": {
+    "path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/SOURCE_PACKAGE.tar.gz",
+    "bytes": 579846,
+    "sha256": "050ace57a3634a21a2ed8012d02001307a324d8d3a0b57b197fefbf0eee32aa7",
+    "omitted_duplicate_transport": true,
+    "members_restore_file_contents": [
+      {
+        "member": "CALIBRATION_LOCK.json",
+        "bytes": 1212,
+        "sha256": "8c1d05dc7aa6ecd78494134c54473e36892fea9d9df57b073ca25d9edd48bad4",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/CALIBRATION_LOCK.json"
+      },
+      {
+        "member": "MICRO_OBJECTIVE_LOCK.json",
+        "bytes": 1041,
+        "sha256": "6ac44f42f2858ed141b92ed1a743f03d297f5b0cdfabc11fa32b891e54e572b1",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/MICRO_OBJECTIVE_LOCK.json"
+      },
+      {
+        "member": "MODEL_CONTRACT.json",
+        "bytes": 1611,
+        "sha256": "75840d249b199b97a6908d115f449ce2aa73f9d61eb9095104d4a3aac77b3120",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/MODEL_CONTRACT.json"
+      },
+      {
+        "member": "NUMERICAL_CONTRACT.json",
+        "bytes": 1077,
+        "sha256": "8569d1e446b3d41fc18b5370248772af41c943861f393a08c2b4d821fd09302d",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/NUMERICAL_CONTRACT.json"
+      },
+      {
+        "member": "SAMPLING_LOCK.json",
+        "bytes": 6266,
+        "sha256": "dab0292265908921c65c4a36cdc010ec51a540adce2be7ea2e03168d2a48cabf",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/SAMPLING_LOCK.json"
+      },
+      {
+        "member": "SOURCE_ORIGIN_RECEIPT.json",
+        "bytes": 24421,
+        "sha256": "28ec5303acab97f0e719c2003382251ab0c143e19a8ed5e649ff5cfa472f254a",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/SOURCE_ORIGIN_RECEIPT.json"
+      },
+      {
+        "member": "model.py",
+        "bytes": 4093,
+        "sha256": "51a0970a46c0cf4c1238f95c1e2de28f47bf3505f9e16d208531bc309b936b54",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/model.py"
+      },
+      {
+        "member": "numerical_contract.py",
+        "bytes": 2430,
+        "sha256": "9aee7e794ba41f535743ff599fa50c07647de07ed50f89792e910256758525d3",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/numerical_contract.py"
+      },
+      {
+        "member": "official/challenge/__init__.py",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/__init__.py"
+      },
+      {
+        "member": "official/challenge/challenge_workflow.py",
+        "bytes": 22358,
+        "sha256": "a790769bab713fe3e15f83087724264c74afa09f7f7bc1167e0da979835fa45e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/challenge_workflow.py"
+      },
+      {
+        "member": "official/challenge/contracts.py",
+        "bytes": 7620,
+        "sha256": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/contracts.py"
+      },
+      {
+        "member": "official/challenge/observing_calendar.py",
+        "bytes": 15529,
+        "sha256": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/observing_calendar.py"
+      },
+      {
+        "member": "official/challenge/project_paths.py",
+        "bytes": 436,
+        "sha256": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/project_paths.py"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_catalog_config.json",
+        "bytes": 1751,
+        "sha256": "8a817f469bcd47c2bafa270f5b56140bad28e5cb673c61132ccd4014004966bb",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_catalog_config.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_fiber_config.json",
+        "bytes": 506,
+        "sha256": "16aa2ef0fb7466691a4f8a006f64ecc21767ad4f052df39eaf1bfe9cb29a6dfe",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_fiber_config.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_scenario_default.json",
+        "bytes": 901,
+        "sha256": "6d7e48e26067505c5451b85e7b06a6b02e71cf26e50ddeed89936fe6a317cacb",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_scenario_default.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_scenario_stress.json",
+        "bytes": 1014,
+        "sha256": "fe6772608cbd22d73d6fae0bc98fc253ef26939b2d1664b2005f096edb241490",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_scenario_stress.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_score_config.json",
+        "bytes": 869,
+        "sha256": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_score_config.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_weather_config.json",
+        "bytes": 3501,
+        "sha256": "3e9c1f03c5d925ab5bfe3402077524e92e052cd911488055a9959fdf2335ef57",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_weather_config.json"
+      },
+      {
+        "member": "official/challenge/reference/v4/v4_weather_stress_config.json",
+        "bytes": 3507,
+        "sha256": "d13006552dd4d2984ad702c28cda1065d8f071e3cdcf5d68c234510f1a59e98e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/reference/v4/v4_weather_stress_config.json"
+      },
+      {
+        "member": "official/challenge/scenario_builder.py",
+        "bytes": 14889,
+        "sha256": "c7b9128dc65f9688ea1365bf1b7d434695f3b187b8388e0562b3621b772fa9df",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/scenario_builder.py"
+      },
+      {
+        "member": "official/challenge/tile_geometry_simulator.py",
+        "bytes": 29204,
+        "sha256": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/tile_geometry_simulator.py"
+      },
+      {
+        "member": "official/challenge/v4_bundle.py",
+        "bytes": 9533,
+        "sha256": "66ca1813dc9ef007df3d014708ee91f7632ab9a5cb1123e7115a3a99bba9f516",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_bundle.py"
+      },
+      {
+        "member": "official/challenge/v4_catalog_generator.py",
+        "bytes": 35673,
+        "sha256": "ffe70e0064b3b73fec787d4f3ab0895f5a4d816ab1c3888914fa4051248c8eb0",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_catalog_generator.py"
+      },
+      {
+        "member": "official/challenge/v4_config_check.py",
+        "bytes": 13668,
+        "sha256": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_config_check.py"
+      },
+      {
+        "member": "official/challenge/v4_fiber_map.py",
+        "bytes": 24635,
+        "sha256": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_fiber_map.py"
+      },
+      {
+        "member": "official/challenge/v4_observation_requests.py",
+        "bytes": 10967,
+        "sha256": "77f015eff3e888b7e94c9353c726cfde06c95e2e3410cc70b05e41fb030ff423",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_observation_requests.py"
+      },
+      {
+        "member": "official/challenge/v4_runner.py",
+        "bytes": 43344,
+        "sha256": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_runner.py"
+      },
+      {
+        "member": "official/challenge/v4_scorer.py",
+        "bytes": 22703,
+        "sha256": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_scorer.py"
+      },
+      {
+        "member": "official/challenge/v4_weather_simulator.py",
+        "bytes": 49695,
+        "sha256": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_weather_simulator.py"
+      },
+      {
+        "member": "official/challenge/v4_workflow.py",
+        "bytes": 17308,
+        "sha256": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/official/challenge/v4_workflow.py"
+      },
+      {
+        "member": "physical_operator.py",
+        "bytes": 8088,
+        "sha256": "fef9d21f48c51e562c8802b4eb3525b67c9e4c0a89d6078d11c42304f34de4bc",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/physical_operator.py"
+      },
+      {
+        "member": "pilot.py",
+        "bytes": 27803,
+        "sha256": "7f535ac8abb0c00066db7b9b8a5292b05d624fd4f659f21bf1977d8ebd5d017e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/pilot.py"
+      },
+      {
+        "member": "point_source/agent.py",
+        "bytes": 1548,
+        "sha256": "edaf82b1fb23826934eb3c945e30cda7405c47981ca9584c2d22d716ba1dd796",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/agent.py"
+      },
+      {
+        "member": "point_source/persistent_fault_guard.py",
+        "bytes": 13901,
+        "sha256": "3aa5c137ff7ac28d179da38c28675023e106c853b73c67bfbec3c5308799cba6",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/persistent_fault_guard.py"
+      },
+      {
+        "member": "point_source/policy.py",
+        "bytes": 21545,
+        "sha256": "e7ab68f3b647eb8c57c5e06b354c0e5ee480ca0501ee6d3891617dcd2d803531",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/policy.py"
+      },
+      {
+        "member": "point_source/policy_config.json",
+        "bytes": 1017,
+        "sha256": "590da7144349854de6a5d19a233e1d68bd14ff638a41d851e31921d064ea2890",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/policy_config.json"
+      },
+      {
+        "member": "point_source/remote_planner.py",
+        "bytes": 5420,
+        "sha256": "1edac49a8bef7f4a4d07ada6e74e2e8b250716fc4e9d4b1cdd4e6ab15635ee0b",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/remote_planner.py"
+      },
+      {
+        "member": "point_source/remote_runtime.json",
+        "bytes": 43,
+        "sha256": "63f6111b56a5478a02041c5cf1fc360c990590b511c8d33c64a9b0d7fb9c9fb1",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/remote_runtime.json"
+      },
+      {
+        "member": "point_source/research/agent_model_gpu.py",
+        "bytes": 4140,
+        "sha256": "b4a66983f313b59f0252cfd829595604c8d98a09f087771a5b9aaa79cc449218",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_model_gpu.py"
+      },
+      {
+        "member": "point_source/research/agent_request_distributed.py",
+        "bytes": 1551,
+        "sha256": "238248530d9c62c0f85ae5a235504c7aad7bb523d34e27dfe909eb0b498393b5",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_request_distributed.py"
+      },
+      {
+        "member": "point_source/research/agent_request_exact_cache.py",
+        "bytes": 2158,
+        "sha256": "751d9a3222e352dddd09921ced88686d44b8b0a567026157383887b38dc351c9",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/agent_request_exact_cache.py"
+      },
+      {
+        "member": "point_source/research/belief_clock.py",
+        "bytes": 4732,
+        "sha256": "8244ae50b4fc41ec1edd65592fb50a3ccee2940b24f7343da08c74ecc4dfc6ed",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/belief_clock.py"
+      },
+      {
+        "member": "point_source/research/cpu_phase_candidates.py",
+        "bytes": 19097,
+        "sha256": "3d3b20745eff3979a3954ffcbaca129373930d278825b6c895b83883c3bae67e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/cpu_phase_candidates.py"
+      },
+      {
+        "member": "point_source/research/efficiency_bounds.py",
+        "bytes": 3582,
+        "sha256": "1e0906fa46b984a124ec78f24313e3b94d5423a092a7a9ac2656e45405488bc3",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/efficiency_bounds.py"
+      },
+      {
+        "member": "point_source/research/feedback_model.py",
+        "bytes": 8288,
+        "sha256": "0e1312f0ef9d4719c6afd1372e4b9c0750d4e0838c94a887ff0fdc0cb769239a",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/feedback_model.py"
+      },
+      {
+        "member": "point_source/research/geometry.py",
+        "bytes": 10165,
+        "sha256": "b74bf06524123dfda2157f03f2459766d232e811de9328a26e0eedd30627a1fd",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/geometry.py"
+      },
+      {
+        "member": "point_source/research/model_gpu_transport.py",
+        "bytes": 11175,
+        "sha256": "c6cc81270b96a1568956528624ccedbc81d502bf440af16621202d20aab9005e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/model_gpu_transport.py"
+      },
+      {
+        "member": "point_source/research/pointing_calibration.py",
+        "bytes": 13984,
+        "sha256": "2c173fb37c2eb4c5cb5987afc40cbd6cf3d1c55ae068e215a1751e9cae5ddc6d",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/pointing_calibration.py"
+      },
+      {
+        "member": "point_source/research/remote_budget.py",
+        "bytes": 2815,
+        "sha256": "141682d69d7b8a56d75e959f35f4326f39b31c44a159dc407128654fc17fe1e0",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/remote_budget.py"
+      },
+      {
+        "member": "point_source/research/request_deadline_common.py",
+        "bytes": 26114,
+        "sha256": "37e13ab4c8469e340dfce2c074cf397055424f4c2e3f31142f2ea752e47271b0",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_deadline_common.py"
+      },
+      {
+        "member": "point_source/research/request_exact_cache.py",
+        "bytes": 6233,
+        "sha256": "dee600f6b2dabc1d7b89e8035dbf1c287f1b11a4717ccc3cc8b2360aeb6ed3ec",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_exact_cache.py"
+      },
+      {
+        "member": "point_source/research/request_future_field.py",
+        "bytes": 4910,
+        "sha256": "5a9531c854b1541a0f56bcd62031281dcdba1c355c2eabd58758a7eef5d23489",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_future_field.py"
+      },
+      {
+        "member": "point_source/research/request_mask_dp.py",
+        "bytes": 8498,
+        "sha256": "07195b89c184912fb196550f533739ae939ab7658f80188001329a5fab639163",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_mask_dp.py"
+      },
+      {
+        "member": "point_source/research/request_remote_planner.py",
+        "bytes": 4601,
+        "sha256": "fa0a2aef6ec095ca4d50b93e21b855faa5a97a48ced1ec1c401bf49a527b2654",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/request_remote_planner.py"
+      },
+      {
+        "member": "point_source/research/spatial_candidates.py",
+        "bytes": 31189,
+        "sha256": "99b97b4a17c142ba7e74dc0fc9cbaad8e1ee98afdb0c3f10c056f2117fe2cf85",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/spatial_candidates.py"
+      },
+      {
+        "member": "point_source/research/terrain_policy.py",
+        "bytes": 4741,
+        "sha256": "b49a85585ffdc6fab935a04dc0b47026de6837083896abaa970d353e8a019037",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/terrain_policy.py"
+      },
+      {
+        "member": "point_source/research/terrain_version_space.py",
+        "bytes": 11008,
+        "sha256": "82d7619dc55b94836a119b36e6aa41b88c7df30398bd449e899bc62721653008",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/research/terrain_version_space.py"
+      },
+      {
+        "member": "point_source/sparse_entry.py",
+        "bytes": 339,
+        "sha256": "b4beade262f18a00f019e00f1ce2d055966bf841e53a3c70cecb7d8a9b18ab1e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_entry.py"
+      },
+      {
+        "member": "point_source/sparse_evaluator.py",
+        "bytes": 4734,
+        "sha256": "24e9032df5bf903d98f3fc70c1bb19d45b90d2966daef58229b094a115211adb",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_evaluator.py"
+      },
+      {
+        "member": "point_source/sparse_exact.py",
+        "bytes": 3911,
+        "sha256": "884ec791566e58435e652b224d15016d1cb09d16aafb8ee4665107a4b0238866",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_exact.py"
+      },
+      {
+        "member": "point_source/sparse_kernel.cpp",
+        "bytes": 2702,
+        "sha256": "7824696a5cf9d86801bc776ff95a3d8af50404b3ca6c4b49a1193650bd967a5b",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel.cpp"
+      },
+      {
+        "member": "point_source/sparse_kernel_darwin_arm64.dylib",
+        "bytes": 33552,
+        "sha256": "dd85cc9722c04825256b1d964d30af881e78e8ba2ccb8c25343163fbcc6bcc3e",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel_darwin_arm64.dylib"
+      },
+      {
+        "member": "point_source/sparse_kernel_linux_x86_64.so",
+        "bytes": 19696,
+        "sha256": "bdeedc759fb159c3f9cf625a1615b49c5185e94a8c162267b6d4f776221e040c",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_kernel_linux_x86_64.so"
+      },
+      {
+        "member": "point_source/sparse_native.py",
+        "bytes": 3307,
+        "sha256": "bb176912e8bcd409f6343732be7ee2342758ec7cb2c690d41e77eb5cac2e0030",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/sparse_native.py"
+      },
+      {
+        "member": "point_source/wrapper.py",
+        "bytes": 707,
+        "sha256": "c698bfaca41ba4f754340639f8d150d669fbf3cbec98ab3f2c3b384b28aebd96",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/point_source/wrapper.py"
+      },
+      {
+        "member": "public_core.py",
+        "bytes": 2350,
+        "sha256": "5a2d242282edcbd4d91eed14bbe253657d594ab0a630f602f12119c6b5219745",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_core.py"
+      },
+      {
+        "member": "public_features.py",
+        "bytes": 11184,
+        "sha256": "e4c37995e71c911f3114e54ec8d5eb600450ab9e064fbfdc193f75b796aa6f54",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_features.py"
+      },
+      {
+        "member": "public_initializers/L1.json",
+        "bytes": 1101202,
+        "sha256": "929168b2f9b03c06674fff172d847880d0b8f8089f9c4ef34ff142dc5de684ac",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_initializers/L1.json"
+      },
+      {
+        "member": "public_initializers/L2.json",
+        "bytes": 1213632,
+        "sha256": "d7c29d808871dd22a45d118ce87efd01d947d5b3c0cf20e1932e9c6289725183",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/public_initializers/L2.json"
+      },
+      {
+        "member": "SOURCE_FREEZE.json",
+        "bytes": 8242,
+        "sha256": "b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/SOURCE_FREEZE.json"
+      },
+      {
+        "member": "stage2b/EXECUTION_LOCK.json",
+        "bytes": 1895,
+        "sha256": "28538a37d2979febb111d6bd51efce6437927f9d6f3370b3620879a17dc2831f",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/EXECUTION_LOCK.json"
+      },
+      {
+        "member": "stage2b/TRIAL_PROTOCOL.json",
+        "bytes": 3107,
+        "sha256": "803edf783fbd6baeea3ddd4f63cdf0ec29f18bc7b9a04102ccfa0fdd9442420a",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/TRIAL_PROTOCOL.json"
+      },
+      {
+        "member": "stage2b/dataset_driver.py",
+        "bytes": 28422,
+        "sha256": "293177225c249128cc9f7c853167a8f4ef875deebb29c940fb9dc4d26321e425",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/dataset_driver.py"
+      },
+      {
+        "member": "stage2b/decision.py",
+        "bytes": 4238,
+        "sha256": "3884e4547454a04bdcd7d22e052de201cffb6fd3e30b0df2ca4bd34e1b184528",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/decision.py"
+      },
+      {
+        "member": "stage2b/fit_driver.py",
+        "bytes": 16299,
+        "sha256": "dc325094fdaefafee3d72a895f4e352f580d1bc0df067cd1bf0b13d05a4c4985",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/fit_driver.py"
+      },
+      {
+        "member": "stage2b/generate.py",
+        "bytes": 4152,
+        "sha256": "2068381a77ed57bb81db9d23f6917a1323247409b38a8cdea335f239cbd320ab",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/generate.py"
+      },
+      {
+        "member": "stage2b/gpu_math.py",
+        "bytes": 2182,
+        "sha256": "84204f5affb080f0eb03a100c2e499d3bd7390c967f842428231055d7db94277",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/gpu_math.py"
+      },
+      {
+        "member": "stage2b/launch_fit.ps1",
+        "bytes": 1890,
+        "sha256": "f44fb9fc17ebc7b1b215c7d45f643552e1d2a70b264f6f969c92ade613ae5ea4",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/launch_fit.ps1"
+      },
+      {
+        "member": "stage2b/numerical_fixture.py",
+        "bytes": 25101,
+        "sha256": "b7df1203d291a9b7701265fa7c0a3c72ea1d60e08bb185e9d9427eb419a152a7",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/numerical_fixture.py"
+      },
+      {
+        "member": "stage2b/SOURCE_FREEZE.json",
+        "bytes": 1180,
+        "sha256": "3a1e822aae54cad17716c40a6a9b2ff749972485b93975b73be166770dcc653d",
+        "stored_path": "formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/SOURCE_FREEZE.json"
+      }
+    ]
+  },
+  "secret_content_hits": 0,
+  "scope": "Static source and artifact identity review; no fitted numeric pass, benefit or runtime deployment claimed."
+}

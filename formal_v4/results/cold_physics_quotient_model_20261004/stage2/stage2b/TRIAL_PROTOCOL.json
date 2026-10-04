@@ -1,0 +1,28 @@
+{
+  "status": "PROSPECTIVE_BEFORE_ANY_2B_TRAIN_CAL_VAL",
+  "parent_70_source_freeze_sha256": "b9dee489acbeab31f14627bc97c10b9372494960f8310e33a6ce425f7ad0a086",
+  "splits": {
+    "train": 96,
+    "cal": 16,
+    "val": 24,
+    "test": 0
+  },
+  "seed_source": "parentSAMPLING_LOCK exact train/cal/val lists; public-sampling and weather-prior SHA prefixes role/index independently",
+  "pilot_data_usage": "never train/cal/teacher; supportaudit only",
+  "input_normalization": "train-row-weighted means/populationstd computedfloat64; zerovariance scale1; roundedfloat32 normalizedx sharedCUDA/NumPy; current history5768 valueszero, current exportmean0/scale1 history",
+  "label_statistics": "positive trainlogR mean/std; no Rcap; Rpositive<=1e-30 reject; same logR stats full/current",
+  "training": "same parent ordinaryMLP, uniformrows jointband/RNLL;12epochs;AdamW lr.0007 weightdecay.0001 batch512 seed107040441",
+  "checkpoint": "min uncalibrated calworldmean NLL across12epochs, strictless firsttie; no val/tuning",
+  "calibration": "25 jointtemperature/sigma grids exactly parentCALIBRATION_LOCK; select min calworldmean NLL firstlexicaltie; choosefull/current via calibratedcalNLL fullfirsttie",
+  "microobjective": "onecurrent sciencepositiveincrement/actualsecond, Gbeforefibermax, controls full originalaction option0 and point samefinitefamily; compareactualsameworld privatejudge only",
+  "full_original_control": "all assignments/program/actualduration retained; publicaltitudeinvalid predictionzero but originalpairsstay; actualhit gate hostjudge only",
+  "nonobserve": "original controls retained; no NNforceobserve; no science rows for nonobserve",
+  "empty_world": "supportempty q(0,50); no trainrows; calibrationNLLexclude empty scienceworld; valscience\u03940 with originalcontroller retained; no selectedphysicaldensity inference; allcalempty reject",
+  "mean_before_hinge_diagnostic": "exact E[c] fromsamecapped bandjointlaw then(E[c]-B)+; not a planner or exactfutureEmax",
+  "adoption_gate": "cal-selected full/current must \u0394fulloriginal>0 and\u0394samefamily point>0 with bothpairedworld95%bootstrap lower>0;2000 resamples seed107040442; no valmodelchoice or rescue",
+  "numerical": "parent probability/\u03bc\u03c3/gain/action coupled contract unchanged; calfirstnonemptyscienceworld firstobservestate allfamily rows; no extra toy/scalar repeats",
+  "runtime_source_changes_from_2A": "role seeds/outputs,2Bfreezeverification,integeremptyindexalreadyv3,no repeatedscalarproof; legalzero-science inputshapes handled prospectively",
+  "test": "none; no code to generatetest; reportroot evenifpositive; productioncostgate remainsfailed",
+  "scope": "offlinecurrentmarginal/finitefamily only; no jointfuturepath/posterior, no formal900/online/wholecompetitionscore claim",
+  "offline_resource_override": "Prospective root-authorized 2B offline budget900s/model and16GiB tensorCUDA allocation replacesstage1planning120s/1GiB only in2B; parent MODEL_CONTRACT unchanged; architecture/epochs/labels/calibration/numeric/adoption criteria unchanged; production20/50ms64MiB remainsfailed."
+}
