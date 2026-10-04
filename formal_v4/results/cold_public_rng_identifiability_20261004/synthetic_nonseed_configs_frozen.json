@@ -1,0 +1,383 @@
+{
+  "card": {
+    "card_id": "synthetic-only",
+    "name": "SYNTHETIC identifiability fixture",
+    "observation_requests": {
+      "count": 2,
+      "include_required_targets": true,
+      "minimum_feature_flux": 0.0,
+      "targets_per_request": 2
+    },
+    "phase": "synthetic-only",
+    "scenario_slug": "synthetic-only",
+    "stress": true
+  },
+  "catalog": {
+    "footprint": {
+      "area_tolerance_fraction": 0.02,
+      "component_area_weights": [
+        0.5,
+        0.5
+      ],
+      "component_centers": [
+        [
+          30.0,
+          -35.0
+        ],
+        [
+          75.0,
+          -35.0
+        ],
+        [
+          120.0,
+          -35.0
+        ]
+      ],
+      "component_gap_deg": 5.0,
+      "harmonic_amplitude_ranges": [
+        0.06,
+        0.04,
+        0.02
+      ],
+      "n_components": 2,
+      "pole_margin_deg": 5.0,
+      "total_area_deg2": 900.0,
+      "vertices_per_component": 24
+    },
+    "observability": {
+      "end_date": "2027-02-01",
+      "max_position_attempts": 64,
+      "minimum_altitude_deg": 30.0,
+      "minimum_window_seconds": 600,
+      "start_date": "2027-01-01",
+      "sun_altitude_limit_deg": -18.0
+    },
+    "output": {
+      "directory": "products"
+    },
+    "schema_version": "v4-catalog-v2",
+    "seed_derivation": "sha256-v1",
+    "site": {
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "name": "VISTA/Paranal (4MOST)",
+      "utc_offset_hours": -4.0
+    },
+    "targets": {
+      "class_fractions": {
+        "BGS": 0.24,
+        "ELG": 0.34,
+        "LRG": 0.2,
+        "QSO": 0.14,
+        "Star": 0.08
+      },
+      "cluster_sigma_deg": 0.5,
+      "clustered_fraction": 0.0,
+      "models": {
+        "BGS": {
+          "flux_log_sigma": 0.3,
+          "flux_median": 1.25,
+          "science_weight": 0.45
+        },
+        "ELG": {
+          "flux_log_sigma": 0.4,
+          "flux_median": 0.55,
+          "science_weight": 1.0
+        },
+        "LRG": {
+          "flux_log_sigma": 0.35,
+          "flux_median": 0.35,
+          "science_weight": 1.0
+        },
+        "QSO": {
+          "flux_log_sigma": 0.5,
+          "flux_median": 0.18,
+          "science_weight": 1.7
+        },
+        "Star": {
+          "flux_log_sigma": 0.25,
+          "flux_median": 4.0,
+          "science_weight": 0.3
+        }
+      },
+      "n_cluster_centers": 1,
+      "required_fraction": 0.05,
+      "total_count": 96
+    }
+  },
+  "fiber": {
+    "demo": {
+      "moment_utc": "2026-10-02T04:00:00Z",
+      "png_output": "products/v4_fiber_demo.png",
+      "targets_csv": "products/targets.csv"
+    },
+    "exposure": {
+      "max_duration_seconds": 3600,
+      "min_duration_seconds": 60
+    },
+    "field": {
+      "fiber_area_deg2": 0.4,
+      "gap_deg": 0.0,
+      "n_fibers": 16
+    },
+    "schema_version": "v4-fiber-map-v1",
+    "site": {
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "name": "VISTA/Paranal (4MOST)",
+      "utc_offset_hours": -4.0
+    }
+  },
+  "score": {
+    "airmass_exponent": 0.6,
+    "exposure_zero_point_seconds": 900,
+    "flux_zero_point": 0.5,
+    "lunar_model": {
+      "altitude_exponent": 1.0,
+      "angular_decay_scale_deg": 35.0,
+      "maximum_penalty": 0.75
+    },
+    "observation_requests": {
+      "completion_factor_threshold": 0.5,
+      "miss_penalty": 0
+    },
+    "program": {
+      "bands": {
+        "BRIGHT": 0.4,
+        "DARK": 0.65
+      },
+      "mismatch_multiplier": 1.0,
+      "multipliers": {
+        "BACKUP": 1.06,
+        "BRIGHT": 1.12,
+        "DARK": 1.2
+      }
+    },
+    "q0": 0.68,
+    "reporting": {
+      "correct_reward": 100,
+      "false_penalty": -150,
+      "false_report_free_allowance": 2,
+      "max_consecutive_reports": 32
+    },
+    "required": {
+      "observed_factor_threshold": 0.5,
+      "penalty_per_missing": 50
+    },
+    "schema_version": "v4-score-v1",
+    "uniformity": {
+      "observed_factor_threshold": 0.5,
+      "ra_band_width_deg": 10.0,
+      "weight": 200.0
+    }
+  },
+  "weather": {
+    "background_closure": {
+      "reopen_probability_per_closed_slot": 0.32,
+      "seasonal_probability_amplitude": 0.006,
+      "start_probability_per_open_slot": 0.008
+    },
+    "earthquake": {
+      "count": 1,
+      "decay_nights": 4.0,
+      "impact_coefficient": 0.75,
+      "magnitude_range": [
+        4.5,
+        7.0
+      ],
+      "max_degradation": 0.95,
+      "negligible_degradation": 0.01,
+      "reference_magnitude": 6.8,
+      "seeing_impact_coefficient": 0.0,
+      "sky_quality_impact_coefficient": 0.0,
+      "transparency_impact_coefficient": 0.0
+    },
+    "instrument_fault": {
+      "count": 1,
+      "instrument_efficiency_multiplier_range": [
+        0.3,
+        0.5
+      ]
+    },
+    "output": {
+      "directory": "products/stress"
+    },
+    "publication": {
+      "forecast_horizon_days": 7,
+      "forecast_interval_days": 7
+    },
+    "quality": {
+      "instrument_efficiency": {
+        "jitter_maximum": 1.0,
+        "jitter_minimum": 0.9,
+        "maximum": 1.0,
+        "minimum": 0.1
+      },
+      "night_correlation": 0.82,
+      "seasonal_phase_day": 210,
+      "seeing_arcsec": {
+        "maximum": 4.0,
+        "minimum": 0.5,
+        "night_sigma": 0.16,
+        "nominal": 1.1,
+        "seasonal_amplitude": 0.15,
+        "slot_sigma": 0.07
+      },
+      "sky_quality": {
+        "maximum": 1.5,
+        "minimum": 0.05,
+        "night_sigma": 0.1,
+        "nominal": 1.0,
+        "seasonal_amplitude": 0.12,
+        "slot_sigma": 0.035
+      },
+      "slot_correlation": 0.88,
+      "transparency": {
+        "maximum": 1.0,
+        "minimum": 0.08,
+        "night_sigma": 0.06,
+        "nominal": 0.88,
+        "seasonal_amplitude": 0.07,
+        "slot_sigma": 0.025
+      }
+    },
+    "rocket_launch": {
+      "azimuth_sector_width_deg": [
+        40.0,
+        80.0
+      ],
+      "count": 1,
+      "duration_slots": [
+        2,
+        5
+      ],
+      "max_altitude_deg": [
+        30.0,
+        60.0
+      ]
+    },
+    "schema_version": "v4-weather-v2",
+    "seed_derivation": "sha256-v1",
+    "site": {
+      "latitude_deg": -24.6157,
+      "longitude_deg": -70.3976,
+      "name": "VISTA/Paranal (4MOST)",
+      "utc_offset_hours": -4.0
+    },
+    "stress_tests": {
+      "data_loss": {
+        "trigger": "after_earthquake",
+        "window_max_fraction": 0.05
+      },
+      "enabled": true,
+      "pointing_offset": {
+        "max_abs_alt_rad": 0.002,
+        "max_abs_az_rad": 0.002
+      }
+    },
+    "survey": {
+      "end_date": "2027-02-01",
+      "slot_seconds": 900,
+      "start_date": "2027-01-01",
+      "sun_altitude_limit_deg": -18.0
+    },
+    "terrain_obstruction": {
+      "max_altitude_deg_range": [
+        35.0,
+        50.0
+      ],
+      "sector_count": [
+        1,
+        3
+      ],
+      "width_deg_range": [
+        30.0,
+        70.0
+      ]
+    },
+    "weather_events": {
+      "conditions": {
+        "cloudy": {
+          "count": 1,
+          "duration_slots": [
+            8,
+            32
+          ],
+          "force_close": false,
+          "scope_weights": {
+            "ALL": 0.35,
+            "HORIZON_SECTOR": 0.65
+          },
+          "seeing_multiplier": 1.25,
+          "sky_quality_multiplier": 0.65,
+          "transparency_multiplier": 0.55
+        },
+        "cold_wave": {
+          "count": 1,
+          "duration_slots": [
+            48,
+            192
+          ],
+          "force_close": false,
+          "scope_weights": {
+            "ALL": 1.0
+          },
+          "seeing_multiplier": 1.05,
+          "sky_quality_multiplier": 0.98,
+          "transparency_multiplier": 0.96
+        },
+        "rainy": {
+          "count": 1,
+          "duration_slots": [
+            8,
+            40
+          ],
+          "force_close": true,
+          "scope_weights": {
+            "ALL": 1.0
+          },
+          "seeing_multiplier": 1.8,
+          "sky_quality_multiplier": 0.35,
+          "transparency_multiplier": 0.25
+        },
+        "smoggy": {
+          "count": 1,
+          "duration_slots": [
+            24,
+            96
+          ],
+          "force_close": false,
+          "scope_weights": {
+            "ALL": 0.3,
+            "HORIZON_SECTOR": 0.7
+          },
+          "seeing_multiplier": 1.15,
+          "sky_quality_multiplier": 0.72,
+          "transparency_multiplier": 0.68
+        },
+        "tornado": {
+          "count": 1,
+          "duration_slots": [
+            4,
+            12
+          ],
+          "force_close": true,
+          "scope_weights": {
+            "ALL": 1.0
+          },
+          "seeing_multiplier": 2.0,
+          "sky_quality_multiplier": 0.25,
+          "transparency_multiplier": 0.15
+        }
+      },
+      "sector_altitude_limit_deg_range": [
+        40.0,
+        80.0
+      ],
+      "sector_width_deg_range": [
+        40.0,
+        120.0
+      ]
+    }
+  }
+}

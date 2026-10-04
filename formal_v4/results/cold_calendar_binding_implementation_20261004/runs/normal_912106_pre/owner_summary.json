@@ -1,0 +1,82 @@
+{
+  "decisions": 29,
+  "exposures": 23,
+  "reports": 0,
+  "correct_reports": 0,
+  "best_science_sum": 81.34418600000001,
+  "required_missing_bound": 349,
+  "planning_seconds": 9.716,
+  "C": 1.2695,
+  "E": 0.9469,
+  "remote_check": {
+    "remote_check": "disabled",
+    "transport": "offline-request-exact-cache",
+    "seconds": 0.0
+  },
+  "remote_calls": 0,
+  "remote_seconds": 0,
+  "remote_budget": null,
+  "cpu_phase": {
+    "choose_calls": 23,
+    "phase_calls": 23,
+    "phase_candidates": 308245,
+    "phase_exact_evaluations": 368,
+    "phase_emergency_count": 0,
+    "phase_improvements": 17
+  },
+  "terrain": {
+    "schema": "terrain-positive-version-space-v1",
+    "directions": [],
+    "width_range": [
+      30.0,
+      70.0
+    ],
+    "altitude_range": [
+      35.0,
+      50.0
+    ],
+    "boxes_per_family": 540,
+    "remaining_boxes": {},
+    "positive_count": 350,
+    "zero_feedback_ignored": 0,
+    "conditional_domain_conflicts": [],
+    "prediction_assumption": "independent one sector per deduplicated direction; midpoint quadrature"
+  },
+  "terrain_feedback_exposures": 23,
+  "request_dp": {
+    "builds": 0,
+    "build_seconds": 0.0,
+    "dp_solves": 0,
+    "dp_seconds": 0.0,
+    "request_observes": 0,
+    "boundary_waits": 0,
+    "clipped_baselines": 0,
+    "rejected_by_cost": 0,
+    "infeasible": 0,
+    "forecast_failures": 0,
+    "cached_requests": 0,
+    "model": "full-deadline finite columns; frozen same-duration scientific regret"
+  },
+  "distributed_request": {
+    "remote_baselines": 0,
+    "cpu_baselines": 23,
+    "forced_cpu_crops": 0,
+    "transport_failures": 0,
+    "cpu_baseline_seconds": 9.7154399669962,
+    "remote_baseline_seconds": 0.0,
+    "budget": {
+      "accepted": 0,
+      "skipped": 0,
+      "initialization_seconds": 0.0,
+      "observed_remote_seconds": 0.0,
+      "failed_initializations": 0
+    },
+    "cpu_sample_scope": "actual baseline search only; excludes transport, REQ pool and DP"
+  },
+  "request_exact_cache": {
+    "midpoint_hits": 0,
+    "midpoint_misses": 0,
+    "midpoint_peak_bytes": 0
+  },
+  "request_exact_cache_class": "ExactCachedRequestRemotePlanner"
+}

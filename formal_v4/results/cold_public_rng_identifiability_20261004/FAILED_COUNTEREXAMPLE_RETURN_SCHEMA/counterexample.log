@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/counterexample.py", line 115, in <module>
+    no_agent_errors=all(r['termination_reason']=='agent_finished' for r in returns))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/counterexample.py", line 115, in <genexpr>
+    no_agent_errors=all(r['termination_reason']=='agent_finished' for r in returns))
+KeyError: 'termination_reason'

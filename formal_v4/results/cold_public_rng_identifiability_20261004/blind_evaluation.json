@@ -1,0 +1,481 @@
+{
+  "failed": [],
+  "negatives": 4,
+  "passed": 16,
+  "positives": 12,
+  "predictions_sha256_before_label_read": "039a179fc8c0e4c08a028baffb4df196a3580ce07a68870eb5963aba0501374c",
+  "worlds": [
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 610,
+        "footprint_sha256": "c41cd3f9c46233d3f67c60411d7613c3e6cb950d405e70b082c6c6c694b42e5d",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W00"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          610
+        ],
+        "future_hashes": {
+          "earthquake_effects": "ab845cee3397b5daa21064718c0ea2396ec9f96d6fe0d35fec7ef5c817a490fb",
+          "events": "6d4155cd6a61b75aabcf8645758dfaf512b1c30240fb320028250b01aa5c63bb",
+          "requests": "d0878db6f440ef6f61bf5d0533245bca8230b23ed3e0e8ee3d8fede874badf14",
+          "stress": "8a71dd2c7849534b043f3a7250d9d3c9c98ada8ef9e80ab8f694df88c08a2ad5",
+          "weather_future": "d281a8dc43f2225d13da28d839ed0619866c0300f7ed479526312968d6861bd0"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 610,
+        "status": "unique",
+        "world_id": "W00"
+      }
+    },
+    {
+      "label": {
+        "SYNTHETIC_master": 1650,
+        "footprint_sha256": "405273e65663abb37dfe17f1b7057879e91c6b83e20e9a75cdd7b446ea16e5a3",
+        "in_domain": false,
+        "status": "generated",
+        "world_id": "W01"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [],
+        "generation_status": "generated",
+        "status": "abstain",
+        "world_id": "W01"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 963,
+        "footprint_sha256": "7374a9f74c260dcb2de320404ee8b6984a4590d32ab003aec3ab1cf69a4f07cc",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W02"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          963
+        ],
+        "future_hashes": {
+          "earthquake_effects": "04d27c30b3f657d6eb079f75bde056809851ed6550d368a3d31512dbb06d9814",
+          "events": "ed32671ac9a3b32a80d56749de95b1b88ccf494ec41258fcf2a2e1081557f4b3",
+          "requests": "942d294fda461ce42afeafbd3685c36da3820ad58b8bda6edaf3ebf76aa88a1f",
+          "stress": "2df6b1d063f110318052d7d170df87256ceae2eae11b9a3f475c370a21274b03",
+          "weather_future": "9c58e493d0dd13771d53e93ef543584f8f3b48f5427ee9f02b07ef8737306090"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 963,
+        "status": "unique",
+        "world_id": "W02"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 342,
+        "footprint_sha256": "3e992ecb2b1b946fb7b2c6d5526e27d094caeb1c6d4fa7a0b481445dbf721195",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W03"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          342
+        ],
+        "future_hashes": {
+          "earthquake_effects": "ebdb9a419e26e2d5f879ed82552d7729842c2d546371f1e2791d2fde2d8f16d3",
+          "events": "b89fcde57206a566f1653bab14f9365ab7a34f04ed3ad8c60ae80b47d2054c75",
+          "requests": "b60fe675fff376b3d1497d9d71676406182afa7beb545ca339c18b80d9267277",
+          "stress": "f3614e15a5052510fff1fd595fa4d9696ef5c45c65701844815ebc41a6420ea9",
+          "weather_future": "d5d78c1b6ffda23407f7b0d713ab7c2cab32749ecb2352a653f7ab4e10eefc92"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 342,
+        "status": "unique",
+        "world_id": "W03"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 564,
+        "footprint_sha256": "7fe12b3445eb2b520ca710824c00731879af30e28dbd3acf1cc10475ad88ae97",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W04"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          564
+        ],
+        "future_hashes": {
+          "earthquake_effects": "eb70e125e1854b17fd6133bc54b3a77d211209686bf3acb54397ccfd336836b4",
+          "events": "2349c0f5599a6f97b2e617df4d757e85c04125fbd25ca6ae1cef79248df65c8b",
+          "requests": "350fa03ef702b8fe3e087941bbe33448b9539fd8506b1989b3bf8e4615179d23",
+          "stress": "4dfa19e7c9f1451eccf1536d67b0d6cc3b2087ce09b3b3f58f10f0c4d04f6ec2",
+          "weather_future": "2587a2594f694e67489c2da2e73f2bf7ec315f4eb96a52eca5de00cc78e6b98a"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 564,
+        "status": "unique",
+        "world_id": "W04"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 452,
+        "footprint_sha256": "7184d08380045b51406e07cc790dec131db0774cd595a831332409b4feea8832",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W05"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          452
+        ],
+        "future_hashes": {
+          "earthquake_effects": "8fd3967642be0197f1a6cc701a3829e09306b3552c871125300362b5ef9533db",
+          "events": "4387a71795da132cdc0844acaff3e6a39bfb8c81f89dbe9d120f38c7f7c4641e",
+          "requests": "e6769c32d4597dc818ff83c1bd9f5710cf6e706e815a39fdb3017254d2a45179",
+          "stress": "3dd4a8a6d36015013903701683f729e389789cbaeb9edafe5ffb78495e37157b",
+          "weather_future": "c5550fe74c285fa8ce37fef236722a452e3e656ef7bfa4d75b2292f953da850b"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 452,
+        "status": "unique",
+        "world_id": "W05"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 667,
+        "footprint_sha256": "ddfb99f098031e745407c0739ffc21058ef677eb80661cd7a5f3fcd4bf0c1040",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W06"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          667
+        ],
+        "future_hashes": {
+          "earthquake_effects": "9c76119bcd84f91381e4c432c57910ff0d4e292121f54991fb914c54b18d5d6f",
+          "events": "8861e09174826141e9fa72cc0768ae88b9c7d774a3478c5c30996517a927f5f1",
+          "requests": "b8334ac7c06cae09bbe4d445a803ff65e26846f8fa8b01fa547d1bc9b6ad381f",
+          "stress": "c76da95f9ee3838ad74ee0b7a525dd9421e7224693da7b7251fcf120b2e43162",
+          "weather_future": "da863a1363c51a1f8e7033d51f8da99e8e0698a33d38ce708bb7ed2e8eb6e4c6"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 667,
+        "status": "unique",
+        "world_id": "W06"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 969,
+        "footprint_sha256": "491b35a3a9154fd537a91e6fa298461fe43d27c4158cb692f474699507ae0013",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W07"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          969
+        ],
+        "future_hashes": {
+          "earthquake_effects": "64a2ba253f483acadacead2f98e51c724a26cdb61e90da36285d17e4e83e254b",
+          "events": "3f66af24735abf231acb438faf27cebc74279e7b49ff2024ea91be0810fef85b",
+          "requests": "343a092dbd131388528a8aaded9b2d19a730cab2def1cf55f748319b72d4de18",
+          "stress": "3da85a8f2c0bb767fbe2d1fa288d60e6f1c12abc19ac0664191de1a3cee8d88e",
+          "weather_future": "fb9ec0980939f7c93ce3a10a3d14464570c2daeece2986db81295eebe1aaa8ce"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 969,
+        "status": "unique",
+        "world_id": "W07"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 60,
+        "footprint_sha256": "dbf14f6177eaab32216e2e99a9bb0df026fed08a4c7c17b775cc5a37031e6a78",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W08"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          60
+        ],
+        "future_hashes": {
+          "earthquake_effects": "6923d3f1c0e6fea6aa9f7a82eaacaf03480a46f6a7576b7ee6e183b2eb581c49",
+          "events": "9afb47acd4f4bc71d273418bf93549f20d7d32c328bb67e98f391b6416886fa6",
+          "requests": "6797d17009b59cf87260d9aefe23c966aaee138d82fb231940f045ba48562b0d",
+          "stress": "8b2358c9e8ce9d4450979db7cc98ce3b6fe71d8f0d5c6fa67dbc064829070602",
+          "weather_future": "444e911be7d2332d0b118fe5ce7a2b5a67a113d9099b798de5a8241057f79b44"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 60,
+        "status": "unique",
+        "world_id": "W08"
+      }
+    },
+    {
+      "label": {
+        "SYNTHETIC_master": 1513,
+        "footprint_sha256": "8b0fd1950280e7f0b57a64473f2efdb721ffd72978fad35a286196b1aaeef300",
+        "in_domain": false,
+        "status": "generated",
+        "world_id": "W09"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [],
+        "generation_status": "generated",
+        "status": "abstain",
+        "world_id": "W09"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 684,
+        "footprint_sha256": "4f9b5e315ede0868b2fadafe285ffeb76cabc02ceadd59d403b5352fd2fe5d9f",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W10"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          684
+        ],
+        "future_hashes": {
+          "earthquake_effects": "1343e6207bc9757f65adc753691370cda1fec18e1e4f1ecb7146afcc04f6faa5",
+          "events": "ad088ad2b686b5455e24258cf9566542d639fdd4d1bb3a3e4d1a322b7c385c54",
+          "requests": "0ad19a3435644afeb7775c2bd479d153f9616bc47e1d2f306b70d81fcf2dbeb3",
+          "stress": "2027b9ec75954f4fa648d99e7708ce906e9b0d54c4c51ed27b1808d10a9ff703",
+          "weather_future": "f5913be6829ccd7f874b466329fa89017e0d9d0e038bab053f9b27c20a1cef1d"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 684,
+        "status": "unique",
+        "world_id": "W10"
+      }
+    },
+    {
+      "label": {
+        "SYNTHETIC_master": 1897,
+        "footprint_sha256": "df339147b392983af6a16b8ef0310929af838b640745aa975fb44d9380235cb9",
+        "in_domain": false,
+        "status": "generated",
+        "world_id": "W11"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [],
+        "generation_status": "generated",
+        "status": "abstain",
+        "world_id": "W11"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 42,
+        "footprint_sha256": "ab86406299f755f3e9cd6984cdc17a04fea465e55b35ef2ec3a4f32255ea0df7",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W12"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          42
+        ],
+        "future_hashes": {
+          "earthquake_effects": "b0f342ef0270be2f6cfbda948bd6fbb7ce05896fc3022cdd794b346dbe22fb22",
+          "events": "7b9491a8a75e38c5cf899bd8d341807c1f8a7127b8e942fce0c419332a5e5bb0",
+          "requests": "e2f9678e0fb7ed4a9df4f3e5e36965a4e7aea74276dede1bdd973d569b67b914",
+          "stress": "00b641c55b419db19bc5b6daf7f51128c24a04bb7a7648a00a0b20bbe9d6d7ef",
+          "weather_future": "4bd67a0dbe110e3cc9fc7f636b125a6cb58c2734a201e4ba61b7a44674a2fd58"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 42,
+        "status": "unique",
+        "world_id": "W12"
+      }
+    },
+    {
+      "label": {
+        "SYNTHETIC_master": 1907,
+        "footprint_sha256": "d26984d538b3218557ebd2537e77998e7d1b5d4c53efa5f5df85792d284d2c92",
+        "in_domain": false,
+        "status": "generated",
+        "world_id": "W13"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [],
+        "generation_status": "generated",
+        "status": "abstain",
+        "world_id": "W13"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 189,
+        "footprint_sha256": "322e6fc03659639ded8f196a923e2fd471d3112a68529d62bc47689b5a69161a",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W14"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          189
+        ],
+        "future_hashes": {
+          "earthquake_effects": "f88df0b7771b28678d67531d04a5dca23aacc2b11ce686f39872534cfe3f0a6d",
+          "events": "357a900df4bde53e36df1d1ed73012f9331d54a2cb11c4ced7ea5141dbe40272",
+          "requests": "4355c8c6fba61c7d2c4bd290302cee73caad4bac57316835a667a76f2f6cab10",
+          "stress": "e7914b5a95dab95fe364dc44ffe49c265f9fef6216d9c3c106fb4882913c358f",
+          "weather_future": "4c699cf0c948ca09d51b3702bcca8f2db1dfbcd0607a641d6a676097e3e610e0"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 189,
+        "status": "unique",
+        "world_id": "W14"
+      }
+    },
+    {
+      "future_equal": {
+        "earthquake_effects": true,
+        "events": true,
+        "requests": true,
+        "stress": true,
+        "weather_future": true
+      },
+      "label": {
+        "SYNTHETIC_master": 263,
+        "footprint_sha256": "e28ef316861f20f4fd83a169f3073b589044afa6f6c81509f4015e2fb02063ad",
+        "in_domain": true,
+        "status": "generated",
+        "world_id": "W15"
+      },
+      "pass": true,
+      "prediction": {
+        "candidates": [
+          263
+        ],
+        "future_hashes": {
+          "earthquake_effects": "de7d94bc0b0352930dfc076ec08046f9e1959e471bd227e7516409e7dd73e6c6",
+          "events": "178c68375028dc49a8d70d5d88ea147c90709dd43c83ac7035cd7a2972bf1be0",
+          "requests": "4475b86cf718f0f304f3e131ea538a8fd186b5cfebced3815eea60abb6718206",
+          "stress": "fe3093e4de2de9e05dc54c8218b28a77021253721f3236c9429f6d533578bf5d",
+          "weather_future": "4e64f1b9d3f023656fbcd14a80ead778dbd703e750168043203039d1424cf159"
+        },
+        "future_weather_rows": 919,
+        "generation_status": "generated",
+        "recovered_master": 263,
+        "status": "unique",
+        "world_id": "W15"
+      }
+    }
+  ]
+}

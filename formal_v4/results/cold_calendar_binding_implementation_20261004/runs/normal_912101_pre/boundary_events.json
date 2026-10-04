@@ -1,0 +1,161 @@
+[
+  {
+    "now_utc": "2026-11-02T23:45:00Z",
+    "observe_rank": 10,
+    "pre": {
+      "chosen": {
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 46.4215807,
+            "az_deg": 109.8917547
+          },
+          "assignments": {
+            "0": "V4T002614",
+            "1": "V4T001970",
+            "2": "V4T003602",
+            "3": "V4T001958",
+            "4": "V4T005530",
+            "5": "V4T001749",
+            "6": "V4T004574",
+            "7": "V4T007283",
+            "8": "V4T002836",
+            "9": "V4T006531",
+            "10": "V4T001946",
+            "11": "V4T004876",
+            "12": "V4T003868",
+            "13": "V4T002250",
+            "14": "V4T002492",
+            "15": "V4T006566"
+          },
+          "duration_seconds": 3600,
+          "program": "BACKUP"
+        },
+        "start_utc": "2026-11-02T23:45:00Z",
+        "lead_seconds": 2700,
+        "effective_seconds": 900,
+        "predicted_science_gain": 17.030116936499635,
+        "C": 1.107692743874413,
+        "E": 0.9449765389639048,
+        "predicted_factors": {
+          "V4T002614": 1.0,
+          "V4T001970": 1.0,
+          "V4T003602": 1.0,
+          "V4T001958": 0.8062304958420474,
+          "V4T005530": 1.0,
+          "V4T001749": 1.0,
+          "V4T004574": 0.8509554436790672,
+          "V4T007283": 1.0,
+          "V4T002836": 0.8398689872700225,
+          "V4T006531": 0.5231831917157466,
+          "V4T001946": 1.0,
+          "V4T004876": 0.9796817005936351,
+          "V4T003868": 1.0,
+          "V4T002250": 1.0,
+          "V4T002492": 1.0,
+          "V4T006566": 1.0
+        },
+        "future_truth_used": false
+      },
+      "seconds": 0.3096267089713365,
+      "eligible_count": 3360,
+      "centers_checked": 384,
+      "belief_forecast_only": true,
+      "exact_counterfactual_score": false
+    },
+    "inside": {
+      "chosen": {
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 54.0664239,
+            "az_deg": 82.8340829
+          },
+          "assignments": {
+            "0": "V4T001892",
+            "1": "V4T000894",
+            "3": "V4T002149",
+            "4": "V4T005838",
+            "5": "V4T005022",
+            "6": "V4T006257",
+            "7": "V4T000830",
+            "8": "V4T001141",
+            "9": "V4T000090",
+            "10": "V4T003660",
+            "11": "V4T003826",
+            "12": "V4T004064",
+            "13": "V4T003500",
+            "14": "V4T004774",
+            "15": "V4T002111"
+          },
+          "duration_seconds": 900,
+          "program": "DARK"
+        },
+        "start_utc": "2026-11-03T00:30:00Z",
+        "lead_seconds": 0,
+        "effective_seconds": 900,
+        "predicted_science_gain": 19.057188315863023,
+        "C": 1.107692743874413,
+        "E": 0.9449765389639048,
+        "predicted_factors": {
+          "V4T001892": 0.6675288409339203,
+          "V4T000894": 0.6252858842017722,
+          "V4T002149": 1.0,
+          "V4T005838": 0.9327666241090832,
+          "V4T005022": 1.0,
+          "V4T006257": 0.8684550389474122,
+          "V4T000830": 0.7861681021499535,
+          "V4T001141": 0.7584752776823148,
+          "V4T000090": 0.7366590644416285,
+          "V4T003660": 0.9912212575237688,
+          "V4T003826": 0.5325489688444263,
+          "V4T004064": 1.0,
+          "V4T003500": 1.0,
+          "V4T004774": 1.0,
+          "V4T002111": 0.8230293602359814
+        },
+        "future_truth_used": false
+      },
+      "seconds": 0.3549950789893046,
+      "eligible_count": 4545,
+      "centers_checked": 384,
+      "belief_forecast_only": true,
+      "exact_counterfactual_score": false
+    },
+    "original_strong_forecast_action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 33.6330384,
+        "az_deg": 126.7975081
+      },
+      "assignments": {
+        "0": "V4T003045",
+        "1": "V4T002551",
+        "2": "V4T004614",
+        "3": "V4T003532",
+        "4": "V4T000700",
+        "5": "V4T002978",
+        "6": "V4T004355",
+        "7": "V4T003599",
+        "8": "V4T003118",
+        "9": "V4T005225",
+        "10": "V4T001735",
+        "11": "V4T005436",
+        "12": "V4T005339",
+        "13": "V4T002007",
+        "14": "V4T007469",
+        "15": "V4T000390"
+      },
+      "duration_seconds": 537,
+      "program": "DARK"
+    },
+    "original_strong_forecast_first_science": 11.884121727167443,
+    "same_duration_inside_science": 19.057188315863023,
+    "forecast_science_delta": -2.027071379363388,
+    "adopted": false,
+    "gate": "research_only_expected_science_positive",
+    "strict_runtime_deployment": false,
+    "rank_loss_jain_requests_settled_by_actual_runner": true,
+    "unseen_future_information_used": false
+  }
+]

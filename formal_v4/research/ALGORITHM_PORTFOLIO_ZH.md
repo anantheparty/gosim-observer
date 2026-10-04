@@ -256,3 +256,13 @@ root新source-locked4任务于2026-10-04 01:36:56.904900UTC启动Rhodes1 PID2072
 report posterior+quotaDP v2也已冻结，但拒绝当前域的生产整季。SOURCE_LOCK_V2在01:29:48UTC先锁770000–770031新test：126两epoch穷举树最大误差2.84e−14，3240 transition全部correct_count合同通过，官方同future32 score分支误差0，false frozen action/belief与true正常replan及quota合同通过。新test finite protectedsensor regret DP35.839209 vs同posterior p>.9免费293.520539、平均差257.681329，18赢0输；仍不是strong生产收益。真正public轨迹支持审计L1/L2仅41/46 sensor、0 queries，L3 64 sensor/41 queries但maxp3.97e−5，无一wouldfire。因此不跑无信息的三整季，不宽gate救参。旧缺陷test/全部失败保留，report数据290035845B以64MiB×5片字节hash保存在`dataset_backup`以满足Git单文件限制。原source/model/两ZIP/源SHA由根复核通过。
 
 该代理转独立 `cold_report_sparse_domain_20261004/`：先4独立world pilot，用L1/L2公共catalog/calendar/field/time/assignment仅作采样设计、缓存真实120秒Moon/airmass/alt/az/fiber几何，再在新官方天气/quake/fault/forecast worlds结算各自score。报告后后续score必须按该world故障修复分支重算；新history可跨field/方向/slot稀疏、60–3600秒/30–85°，未支持状态fallback原faultv1。计划训练64/cal8/val8/test16 seed在训练前锁，不调用旧290MB数据、旧teacher或L4；固定公开行为设计明确不是counterfactual strong完整rollout。CPU估算/官方算子合同后再PRO6000普通NN，尚无训练/得分结果。
+
+### 精确加速完成整季证明，科学变域候选收束（11:00 JST）
+
+PID2072634已4/4完整结束、全部raw/source/同场景/协议hash在本地核验。fault_fast L1 6272.923354、L2 6723.359693与原faultv1完全同分；不止总分，actor actions、完整observations和全部官方messages均字节相同。accounted623.466→345.193、721.531→405.599秒，真实整季1.8061/1.7789倍加速，减少44.63%/43.79%。固定输入算子2.19倍不能替代这个完整workflow速度，但现在有真实强闭环证据。`ROOT_FAULT_FAST_TWO_CARD_RESULT.json`全部9类门检通过。该加速与faultv1组合成为当前优先提交候选，线上仍尚未操作。
+
+debias_fast现在也有真正完整结果，而不是前次900秒截断：L1 6267.103017→6229.693628（−37.409389）、L2 6723.359693→6755.858138（+32.498445），accounted528.678/654.466；REQ/required/report组件不变，science−37.500026/+32.131557。两卡均值−2.455472，没有当前冻结包的平均提升证据，停止当前变域候选，不据L3/L4救参；它不能否定其他science机会模型。`ROOT_FOUR_CARD_RESULT.json`保存完整正负和scope，引用原strong control，没重跑控制。
+
+private GitHub已确认`6dceb0d6cbb740a4d2538676981af6f0b7c7a49e`包含所有前轮原始结果、两新模型/失败及大dataset精确分片；byte校验后已删冗余290MB原NPZ，五片仍可按manifest原顺序恢复。新domain pilot原先只核固定hit score算子，发现不能冒称新stress geometry；已保留并补全geometry审计。最终pilot新stress实际assigned→hit/min-alt 56608案例、9368旧hit丢失/5旧miss成为hit，正式2846score误差0、244report/wait分支。actor只按官方公开actual-hit target_id/score列表接纳history，不取隐藏offset算出的actual H作特征。64/8/8 train/cal/val 64625/8075/8082 rows、81298560B、36.15秒生成，新test未生成；PRO6000独立目录开始1568→128→128→1新NN，未有生产得分。
+
+新的forknone `cold_public_rng_identifiability`已独立读官方代码，24源SHA与公开GitHub e01939d0一致。有限1024-domain合成12world master blind恢复全中、4域外正确abstain；同master可复现未来多流，不代表实际同master路径。另用官方build_spec独立weather seeds，构造两world相同catalog/public初始化及9次过去反馈（7正/2共同关闭），下一动作0 vs .038914，证明public catalog/past prefix一般不唯一决定future。实际已存在0..2^32−1公共seed/模型审计，没有受公开证据支持的新小域；不重复0..1023、不读actual truth证明。报告仍须冻结，不视为actor已有future数据。

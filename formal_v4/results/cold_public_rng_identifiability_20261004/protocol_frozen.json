@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "frozen_before_sampling": true,
+  "source_commit": "e01939d060f304c2a7cf04d9b3e46009b564fc23",
+  "scope": "SYNTHETIC_ONLY; never read actual card truth, root seeds or private labels",
+  "shared_master_blind": {
+    "candidate_domain": [
+      0,
+      1023
+    ],
+    "positive_world_count": 12,
+    "negative_outside_domain_world_count": 4,
+    "negative_domain": [
+      1024,
+      2047
+    ],
+    "selection": "SystemRandom.sample within each frozen domain; opaque shuffled world ids",
+    "fingerprint": "exact official six-decimal footprint CSV; candidate sets retained",
+    "predict": "official weather.slots, events, earthquake effects, stress and request outputs, all future rows after first public slot",
+    "solver_input": "synthetic public footprint/targets/calendar plus full synthetic nonseed generator config",
+    "holdout": "no fitted parameters, no labels used by solver, predictions frozen before evaluator opens synthetic labels",
+    "negative_expected": "no candidate; abstain instead of guessing"
+  },
+  "counterexample": {
+    "build_path": "build_spec_bundle, same catalog seed=7, independent weather seeds",
+    "weather_seed_candidates": [
+      100,
+      131
+    ],
+    "event_families": "all counts 0, terrain [0,0], stress false",
+    "quality": "constant fields and efficiency, Gaussian draws still consumed; only hidden background closure differs",
+    "closure_probability": 0.2,
+    "reopen_probability": 0.5,
+    "pair_selection": "lexicographically first pair with first 4 slots open and identical, first differing openness at index 4..11; preserve all candidate status",
+    "action": "one official 60 second one-fiber exposure per prefix slot plus public waits, target chosen by highest public geometric altitude",
+    "proof_gate": "all public/config bytes equal, all snapshots before divergent action equal, at least four positive score feedbacks equal, next action score differs"
+  },
+  "stopping": "no actual seed search, no GPU, no full season, no global bounds; stop after blind and two-world existence proof",
+  "python": "3.10.12 (main, Dec 13 2024, 00:58:18) [Clang 16.0.0 (clang-1600.0.26.4)]"
+}

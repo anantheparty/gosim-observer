@@ -1,0 +1,9 @@
+{
+  "status": "rejected_before_release",
+  "old_draft": "normalized_airmass>=1 hence raw quality<=3",
+  "reason": "Kasten-Young empirical normalized curve dips microscopically below1 near zenith; X>=1 is not a mathematical upper-bound justification",
+  "repair": "analytic lower Xlo=g0/[1+.50572*(96.07995-zmax)^(-1.6364)], raw_weather_ratio3*Xlo^(-public_exponent) with floating cushion",
+  "corrected_raw_quality_upper_at_30deg_exponent0_6": 3.002055939870124,
+  "earlier_short_output_archive": "INTEGRATED_INITIAL_NO_CANDIDATE",
+  "release_uses_old_draft": false
+}

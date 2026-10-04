@@ -1,0 +1,58 @@
+{
+  "by_class": {
+    "ELG": 1.2
+  },
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 0.0,
+    "required_penalty": -0.0,
+    "sum_best_scores": 1.2,
+    "uniformity_penalty": -0.0
+  },
+  "counts": {
+    "decisions": 25,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 1,
+    "observations": 1,
+    "observe_actions": 1,
+    "required_missing": 0,
+    "targets_observed": 1
+  },
+  "invalidations": [],
+  "observation_requests": [
+    {
+      "completed": true,
+      "completed_count": 1,
+      "completed_target_ids": [
+        "NEW_REQUEST"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-03T00:45:00Z",
+      "issued_at_utc": "2026-11-03T00:30:00Z",
+      "minimum_completed": 1,
+      "request_id": "R_NIGHT",
+      "reward": 100.0,
+      "target_ids": [
+        "NEW_REQUEST"
+      ]
+    }
+  ],
+  "scenario": "prenight_request",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "2df10765241fa356b6bdc9134356087a18ed1a16c1171fe86612673f0072aa78",
+    "messages": "43a029ee9964326375bf3267cb96238208529962633c0bdc1bdffa34690791c9",
+    "observations": "ee474530ee35649fe05228dbc2fdb29d96feeb854c55fd55c1d576af9e39dbec",
+    "scenario": "ed598ab2a5a25104845988626632e064d2fbc7f32c9d56346010e1ebf285c58a"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "total": 101.2,
+  "uniformity_bands": {
+    "ra_330_340": 1.0
+  }
+}

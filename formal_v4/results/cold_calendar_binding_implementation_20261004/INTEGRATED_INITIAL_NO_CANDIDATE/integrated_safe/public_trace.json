@@ -1,0 +1,68 @@
+[
+  {
+    "snapshot": {
+      "now_utc": "2026-11-03T08:28:30Z",
+      "survey_end_utc": "2026-11-03T08:30:00Z",
+      "observe_action_index": 0,
+      "running_total": 0,
+      "latest_bulletin": null,
+      "latest_forecast": null,
+      "active_requests": [],
+      "new_messages": [],
+      "last_result": null,
+      "wallclock": {
+        "remaining_seconds": 899.9979758459958,
+        "elapsed_seconds": 0.002024154004175216
+      }
+    },
+    "action": {
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 70.1793657,
+        "az_deg": 33.4417679
+      },
+      "assignments": {
+        "0": "LIVE_LOW",
+        "4": "LIVE_DONE"
+      },
+      "duration_seconds": 60,
+      "program": "DARK"
+    }
+  },
+  {
+    "snapshot": {
+      "now_utc": "2026-11-03T08:29:30Z",
+      "survey_end_utc": "2026-11-03T08:30:00Z",
+      "observe_action_index": 1,
+      "running_total": 0.612462,
+      "latest_bulletin": null,
+      "latest_forecast": null,
+      "active_requests": [],
+      "new_messages": [],
+      "last_result": {
+        "action": "observe",
+        "observe_index": 0,
+        "assigned_count": 2,
+        "hit_count": 2,
+        "hits": [
+          {
+            "target_id": "LIVE_LOW",
+            "score": 0.00304
+          },
+          {
+            "target_id": "LIVE_DONE",
+            "score": 0.609422
+          }
+        ]
+      },
+      "wallclock": {
+        "remaining_seconds": 899.9789425209747,
+        "elapsed_seconds": 0.021057479025330395
+      }
+    },
+    "action": {
+      "action": "wait",
+      "until_utc": "2026-11-03T08:30:00Z"
+    }
+  }
+]

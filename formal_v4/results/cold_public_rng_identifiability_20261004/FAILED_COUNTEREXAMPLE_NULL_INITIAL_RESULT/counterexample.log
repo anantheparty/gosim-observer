@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/counterexample.py", line 104, in <module>
+    past=[snap['last_result'] for snap in captures[0][:-1]
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/counterexample.py", line 105, in <listcomp>
+    if snap.get('last_result',{}).get('action')=='observe']
+AttributeError: 'NoneType' object has no attribute 'get'

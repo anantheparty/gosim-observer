@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/counterexample.py", line 80, in <module>
+    if min_altitude_during(ra,dec,start,end,lat,lon)>=float(cfg['catalog']['observability']['minimum_altitude_deg']):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_public_rng_identifiability_20261004/official/challenge/v4_fiber_map.py", line 312, in min_altitude_during
+    raise ValueError("step_seconds must be positive")
+ValueError: step_seconds must be positive

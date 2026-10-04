@@ -1,0 +1,114 @@
+{
+  "by_class": {
+    "BGS": 11.099379,
+    "ELG": 20.101678,
+    "LRG": 2.519118,
+    "QSO": 1.06949,
+    "Star": 14.227967
+  },
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 0.0,
+    "required_penalty": -18200.0,
+    "sum_best_scores": 49.017631,
+    "uniformity_penalty": -108.48107
+  },
+  "counts": {
+    "decisions": 68,
+    "invalidated_observations": 46,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 1,
+    "observations": 259,
+    "observe_actions": 17,
+    "required_missing": 364,
+    "targets_observed": 210
+  },
+  "invalidations": [
+    {
+      "event_id": "GENERATED_LOSS",
+      "invalidated_observations": 46,
+      "window": [
+        6,
+        9
+      ]
+    }
+  ],
+  "observation_requests": [
+    {
+      "completed": true,
+      "completed_count": 2,
+      "completed_target_ids": [
+        "V4T005089",
+        "V4T000644"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-03T00:45:00Z",
+      "issued_at_utc": "2026-11-03T00:30:00Z",
+      "minimum_completed": 1,
+      "request_id": "GENERATED_NIGHT_REQUEST",
+      "reward": 100.0,
+      "target_ids": [
+        "V4T002230",
+        "V4T000974",
+        "V4T005622",
+        "V4T005132",
+        "V4T001174",
+        "V4T005089",
+        "V4T007255",
+        "V4T003105",
+        "V4T000651",
+        "V4T000644",
+        "V4T002042",
+        "V4T003455",
+        "V4T002327",
+        "V4T002570",
+        "V4T003777",
+        "V4T003680",
+        "V4T005349",
+        "V4T007485",
+        "V4T000140",
+        "V4T006406",
+        "V4T005310",
+        "V4T003083",
+        "V4T001418",
+        "V4T000305",
+        "V4T005598",
+        "V4T002396",
+        "V4T004797",
+        "V4T000165",
+        "V4T003180",
+        "V4T006560",
+        "V4T004814",
+        "V4T007592"
+      ]
+    }
+  ],
+  "scenario": "independent_strong_world",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "b144f2faa36faf712d37357d36dd58999c77bededa525830531669fdd7c0707f",
+    "messages": "e9bf2a042161cefdcf7789145f453ea567b1acc9199a340e1551c49dd107e205",
+    "observations": "13ea492e9e8990748ad2432f34f0d08ed189160da6c38637db35bc2b7be3e61e",
+    "scenario": "b29b3fd8d667f3f589dbdd95f5df5ccf5ff6c52b93cb6d09da58f757d2505f33"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "total": -18159.463439,
+  "uniformity_bands": {
+    "ra_0_10": 0.011592,
+    "ra_100_110": 0.0,
+    "ra_10_20": 0.019517,
+    "ra_110_120": 0.0,
+    "ra_20_30": 0.004098,
+    "ra_30_40": 0.018293,
+    "ra_350_360": 0.00716,
+    "ra_40_50": 0.025239,
+    "ra_50_60": 0.008757,
+    "ra_60_70": 0.0,
+    "ra_70_80": 0.0,
+    "ra_90_100": 0.0
+  }
+}

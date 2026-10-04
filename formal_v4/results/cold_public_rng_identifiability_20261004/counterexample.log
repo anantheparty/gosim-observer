@@ -1,0 +1,75 @@
+{
+  "pass_gate": true,
+  "gate": {
+    "public_config_bytes_identical": true,
+    "initialize_identical": true,
+    "public_past_snapshots_identical": true,
+    "positive_past_feedback_count": 7,
+    "past_observe_feedback_count": 9,
+    "next_action_identical": true,
+    "next_score_feedback_differs": true,
+    "next_hits_one_each": true,
+    "no_agent_errors": true
+  },
+  "SYNTHETIC_catalog_seed": 7,
+  "SYNTHETIC_weather_seeds": [
+    100,
+    104
+  ],
+  "divergent_slot_index": 9,
+  "divergent_slot_id": "N20270101-S010",
+  "divergent_time": "2027-01-02T03:30:00Z",
+  "public_input_hashes": [
+    {
+      "config/v4_fiber_config.json": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed",
+      "config/v4_scenario.json": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca",
+      "config/v4_score_config.json": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40",
+      "public/footprint.csv": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88",
+      "public/targets.csv": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6",
+      "public/v4_bulletins.jsonl": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe",
+      "public/v4_forecasts.jsonl": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8",
+      "public/v4_night_calendar.csv": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "config/v4_fiber_config.json": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed",
+      "config/v4_scenario.json": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca",
+      "config/v4_score_config.json": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40",
+      "public/footprint.csv": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88",
+      "public/targets.csv": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6",
+      "public/v4_bulletins.jsonl": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe",
+      "public/v4_forecasts.jsonl": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8",
+      "public/v4_night_calendar.csv": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    }
+  ],
+  "initialize_sha256": "63ca88777fe6afd311f07a01c2ba1686183c44e1e5c81889ee3bee3a5788e935",
+  "identical_history_sha256": "dafca0a068c00c54325ff60caee663c13972201b8dbc93f8944044b2bca4d44b",
+  "future_score_only_feedback": [
+    {
+      "action": "observe",
+      "observe_index": 9,
+      "assigned_count": 1,
+      "hit_count": 1,
+      "hits": [
+        {
+          "target_id": "V4T000079",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "action": "observe",
+      "observe_index": 9,
+      "assigned_count": 1,
+      "hit_count": 1,
+      "hits": [
+        {
+          "target_id": "V4T000079",
+          "score": 0.038914
+        }
+      ]
+    }
+  ],
+  "generator_native": true,
+  "shared_master_required": false,
+  "limitation": "Independent-weather-seed build_spec path with synthetic nonreference quality; existence proof only, not an actual-card seed recovery or common-master collision"
+}

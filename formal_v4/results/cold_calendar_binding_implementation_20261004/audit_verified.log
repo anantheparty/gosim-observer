@@ -1,0 +1,120 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{
+  "adversarial": {
+    "orientation_delta": {
+      "total": 0.75048,
+      "components": {
+        "sum_best_scores": 0.75048,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "request_delta": {
+      "total": -100.14,
+      "components": {
+        "sum_best_scores": -0.14,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": -100.0
+      }
+    },
+    "program_dilution_delta": {
+      "total": -0.2,
+      "components": {
+        "sum_best_scores": -0.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "terminal_safe_delta": {
+      "total": 0.554013,
+      "components": {
+        "sum_best_scores": 0.554013,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "terminal_family_safe_delta": {
+      "total": 0.021893,
+      "components": {
+        "sum_best_scores": 0.021893,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "jain_naive_delta": {
+      "total": -18.8,
+      "components": {
+        "sum_best_scores": 1.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -20.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "jain_safe_delta": {
+      "total": 0.0,
+      "components": {
+        "sum_best_scores": 0.0,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "loss_extra_rank_delta": {
+      "total": -201.2,
+      "components": {
+        "sum_best_scores": -1.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -200.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "prenight_gate": {
+      "adopt": false,
+      "reason": "unseen_night_start_information_and_counterfactual_action",
+      "future_truth_used": false,
+      "rank_change": 0,
+      "pending_loss_rank_risk": false,
+      "same_end_does_not_certify_same_strong_action": true
+    }
+  },
+  "certificate": {
+    "rounding_boundary_rejected": true,
+    "above_boundary_accepted": true,
+    "resync_canonical_removes_proof": true
+  },
+  "integrated_tail_delta": {
+    "total": 0.018244,
+    "components": {
+      "sum_best_scores": 0.018244,
+      "required_penalty": 0.0,
+      "uniformity_penalty": 0.0,
+      "report_settlement": 0.0,
+      "observation_request_reward": 0
+    }
+  },
+  "generator_deltas": [
+    202.12,
+    202.103608,
+    201.557477,
+    202.12,
+    201.694641,
+    202.12,
+    202.12,
+    201.805642
+  ],
+  "seconds": 0.16243596002459526
+}

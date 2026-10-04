@@ -1,0 +1,10 @@
+[
+  {
+    "name": "normal_deepcopy_facade",
+    "archive": "FAILED_NORMAL_DEEPCOPY",
+    "cause": "copy.deepcopy probed original PlannerBudgetFacade __setstate__ before actual was constructed, causing recursion",
+    "repair": "pre-register independent facade objects in deepcopy memo; original strong source and params, eight seeds and research gate unchanged",
+    "original_source_sha256": "50ba8233a4370a97e230c52fddefe53560f1fcdfe6bbedaff9bcbb5e1363c4c7",
+    "repaired_source_sha256": "bbb8d5ee04a2f9a5ca2de2c3cc4377632c7ec1d2c36f60d13a7162e48535a41e"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "schema": "root-four-complete-sparse-candidates-result-v1",
+  "all_source_raw_and_complete_gates_passed": true,
+  "fault_acceleration": {
+    "schema": "root-full-exact-native-acceleration-two-card-result-v1",
+    "cards": {
+      "L1": {
+        "passed": true,
+        "gates": {
+          "complete_protocol": true,
+          "frozen_source": true,
+          "all_raw_hashes": true,
+          "all_actor_actions_identical": true,
+          "all_physical_observations_identical": true,
+          "all_official_messages_identical": true,
+          "all_components_and_score_identical": true,
+          "same_scenario": true,
+          "actor_no_truth_mount": true
+        },
+        "score": 6272.923354,
+        "original_accounted_seconds": 623.466,
+        "accelerated_accounted_seconds": 345.193,
+        "actual_speedup": 1.8061374361589024,
+        "actual_saved_fraction": 0.44633227794298325
+      },
+      "L2": {
+        "passed": true,
+        "gates": {
+          "complete_protocol": true,
+          "frozen_source": true,
+          "all_raw_hashes": true,
+          "all_actor_actions_identical": true,
+          "all_physical_observations_identical": true,
+          "all_official_messages_identical": true,
+          "all_components_and_score_identical": true,
+          "same_scenario": true,
+          "actor_no_truth_mount": true
+        },
+        "score": 6723.359693,
+        "original_accounted_seconds": 721.531,
+        "accelerated_accounted_seconds": 405.599,
+        "actual_speedup": 1.7789269697410495,
+        "actual_saved_fraction": 0.43786337662553654
+      }
+    },
+    "all_reviews_passed": true,
+    "actual_full_season": true,
+    "actor_actions_identical": true,
+    "online_gain": null,
+    "debias_complete_result": "pending"
+  },
+  "debias_actual_full_seasons": {
+    "L1": {
+      "complete": true,
+      "source_and_raw_hashes_verified": true,
+      "control_total": 6267.103017,
+      "candidate_total": 6229.693628,
+      "total_delta": "-37.409389",
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -37.500026,
+        "uniformity_penalty": 0.090638
+      },
+      "accounted_seconds": 528.678,
+      "original_loss_equal": true
+    },
+    "L2": {
+      "complete": true,
+      "source_and_raw_hashes_verified": true,
+      "control_total": 6723.359693,
+      "candidate_total": 6755.858138,
+      "total_delta": "32.498445",
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 32.131557,
+        "uniformity_penalty": 0.366887
+      },
+      "accounted_seconds": 654.466,
+      "original_loss_equal": true
+    }
+  },
+  "debias_two_card_mean_delta": "-2.455472",
+  "deploy_debias_current_candidate": false,
+  "reason": "No positive two-card mean relative to original strong control; retain both complete outcomes without rescue tuning.",
+  "formal_online_submission": false,
+  "formal_online_gain": null,
+  "batch_complete": true
+}

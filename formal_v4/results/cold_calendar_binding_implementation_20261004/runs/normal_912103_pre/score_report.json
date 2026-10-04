@@ -1,0 +1,64 @@
+{
+  "by_class": {
+    "BGS": 15.508205,
+    "ELG": 22.761624,
+    "LRG": 2.729372,
+    "QSO": 1.683264,
+    "Star": 16.733706
+  },
+  "components": {
+    "observation_request_reward": 0,
+    "report_settlement": 0.0,
+    "required_penalty": -17900.0,
+    "sum_best_scores": 59.416171,
+    "uniformity_penalty": -122.303562
+  },
+  "counts": {
+    "decisions": 70,
+    "invalidated_observations": 45,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": 287,
+    "observe_actions": 19,
+    "required_missing": 358,
+    "targets_observed": 238
+  },
+  "invalidations": [
+    {
+      "event_id": "GENERATED_LOSS",
+      "invalidated_observations": 45,
+      "window": [
+        4,
+        7
+      ]
+    }
+  ],
+  "observation_requests": [],
+  "scenario": "independent_strong_world",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "0134e52f1264c54687ab05c901eec1d90b33082e18153f065e10a64c32f5e931",
+    "messages": "4db4c3ba78c0f8e84afec53d94aab0228a93055cb28406c6455ea1176020b279",
+    "observations": "183606a9dc5c4ac555cb316832b7bcff7e1afc5fce28bcfe597129e979977eee",
+    "scenario": "380d2ac241f47a5595353a0cd4b07ca1c66ae0031570dce45868d7c23e7f4af2"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "total": -17962.887391,
+  "uniformity_bands": {
+    "ra_0_10": 0.017002,
+    "ra_100_110": 0.0,
+    "ra_10_20": 0.032528,
+    "ra_110_120": 0.0,
+    "ra_20_30": 0.004098,
+    "ra_30_40": 0.012195,
+    "ra_350_360": 0.00716,
+    "ra_40_50": 0.02611,
+    "ra_50_60": 0.003503,
+    "ra_60_70": 0.0,
+    "ra_70_80": 0.0,
+    "ra_90_100": 0.0
+  }
+}

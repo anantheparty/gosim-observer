@@ -1,0 +1,3052 @@
+{
+  "scope": "SYNTHETIC_ONLY generator-native experiments plus explicitly whitelisted actual public/config schema check",
+  "report": {
+    "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_public_rng_identifiability_20261004.md",
+    "sha256": "28a7d6b0e9df814b635da1a8af30f037d7d360509d2ed953e63a438a49d2a533"
+  },
+  "files": [
+    {
+      "path": "EXPERIMENT_SOURCE_LOCK_BEFORE_SAMPLING.json",
+      "bytes": 749,
+      "sha256": "4ae4c9f6e4a956f3fb076b93bbfad716da9f00e41339ad3e1ad660453d311052"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample.log",
+      "bytes": 499,
+      "sha256": "bea90c4cd0b054e371de83799fac7920576bc457e683d645121dc703e8996d6a"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample.py",
+      "bytes": 6641,
+      "sha256": "7e9e7570a7c98b785e82d7d8ed732aa0ce32d5dd05c004b84aa440c9323e5be5"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A/truth/v4_weather_truth.csv",
+      "bytes": 76124,
+      "sha256": "1ec80c33af4408739259bca1f9da4550959d3dd202e5f25fdd87e34673ed14ab"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "b8c64240c4e3b17acae0883173a8cd7bb7d0967aae6e82a6d71ba951e859cef6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B/truth/v4_weather_truth.csv",
+      "bytes": 75659,
+      "sha256": "7266859606933d997cb7204a50c9d645cd79c22758e892629dffb942317cde5e"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "f0aa33311b82a6ffe256e9e445c3c49ae6d1b56a5130a556fdf76aeb4ca66215"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_A/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_A/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_A/observations.csv",
+      "bytes": 681,
+      "sha256": "c3c8d674d869ecc723eecbb8102fb5a0ec6b01136439b061caed29488c41b01f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_A/score_report.json",
+      "bytes": 1313,
+      "sha256": "b8c142527bb1c06df2c58155373ab9a5f3fbb6238727608c8fc4bbea212e7db8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_B/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_B/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_B/observations.csv",
+      "bytes": 681,
+      "sha256": "c7a111cf6f309b53b83008721226009697346dc839cdfbe96d283c7bd99e1fbf"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_SYNTHETIC/runner_B/score_report.json",
+      "bytes": 1318,
+      "sha256": "f9780a7490f0b85cf793d25d85ea706cca5e6d63414c63c6b789cfd42472986a"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_public_action_tape.json",
+      "bytes": 3141,
+      "sha256": "1b49ef0685308bdb25f5681eec27185b0aaaf5755383cc826f2c4d9a8b7f22d7"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_public_snapshots_A.json",
+      "bytes": 18542,
+      "sha256": "5696ad9bb32ae67815be2c95a86299ad67a9a0b09542c2fb4870aadcdbdd6786"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_NULL_INITIAL_RESULT/counterexample_public_snapshots_B.json",
+      "bytes": 18547,
+      "sha256": "e2ef7d0cf50abc64dee2e8c3d1baf560b0b4fbcaead4dbac12486715ac723a3a"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample.log",
+      "bytes": 562,
+      "sha256": "b9961b20d07ccc4f2c83f1caf92b52cc28f6c16cdd3f3c0808c6b4f3ddec9ef0"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample.py",
+      "bytes": 6636,
+      "sha256": "dc03cb3bfb80974b43b8fcdd44dfd3d960bfa516dee18c28e6de998ea4d65f37"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A/truth/v4_weather_truth.csv",
+      "bytes": 76124,
+      "sha256": "1ec80c33af4408739259bca1f9da4550959d3dd202e5f25fdd87e34673ed14ab"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "b8c64240c4e3b17acae0883173a8cd7bb7d0967aae6e82a6d71ba951e859cef6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B/truth/v4_weather_truth.csv",
+      "bytes": 75659,
+      "sha256": "7266859606933d997cb7204a50c9d645cd79c22758e892629dffb942317cde5e"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "f0aa33311b82a6ffe256e9e445c3c49ae6d1b56a5130a556fdf76aeb4ca66215"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_all_pair_status.json",
+      "bytes": 50058,
+      "sha256": "cef4dce2c99b28b7ce0e0a9ea7aa15a2c59ec24eb84fae41cd2b98d10752c61a"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_candidate_prefix_status.json",
+      "bytes": 9882,
+      "sha256": "7f8a2c0929f06279898ec2b721baf7bbba9134d32612f802db5555462d4906af"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_PARAMETER_ORDER/counterexample_nonseed_config.json",
+      "bytes": 8848,
+      "sha256": "84e0408c7779c859da30f24bef72903c37e6434b5d957de77327356dcac7ff44"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample.log",
+      "bytes": 523,
+      "sha256": "4915171d84480f0bc8cc802321f2de41bcbaad186e13412254da35a8de81dd04"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample.py",
+      "bytes": 6646,
+      "sha256": "cf38baf68a1985482217285303fc182ec758a1904beb9323942d7e0d9f9ac5ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A/truth/v4_weather_truth.csv",
+      "bytes": 76124,
+      "sha256": "1ec80c33af4408739259bca1f9da4550959d3dd202e5f25fdd87e34673ed14ab"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "b8c64240c4e3b17acae0883173a8cd7bb7d0967aae6e82a6d71ba951e859cef6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B/truth/v4_weather_truth.csv",
+      "bytes": 75659,
+      "sha256": "7266859606933d997cb7204a50c9d645cd79c22758e892629dffb942317cde5e"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "f0aa33311b82a6ffe256e9e445c3c49ae6d1b56a5130a556fdf76aeb4ca66215"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_A/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_A/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_A/observations.csv",
+      "bytes": 681,
+      "sha256": "c3c8d674d869ecc723eecbb8102fb5a0ec6b01136439b061caed29488c41b01f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_A/score_report.json",
+      "bytes": 1313,
+      "sha256": "b8c142527bb1c06df2c58155373ab9a5f3fbb6238727608c8fc4bbea212e7db8"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_B/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_B/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_B/observations.csv",
+      "bytes": 681,
+      "sha256": "c7a111cf6f309b53b83008721226009697346dc839cdfbe96d283c7bd99e1fbf"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_SYNTHETIC/runner_B/score_report.json",
+      "bytes": 1318,
+      "sha256": "f9780a7490f0b85cf793d25d85ea706cca5e6d63414c63c6b789cfd42472986a"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_public_action_tape.json",
+      "bytes": 3141,
+      "sha256": "1b49ef0685308bdb25f5681eec27185b0aaaf5755383cc826f2c4d9a8b7f22d7"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_public_snapshots_A.json",
+      "bytes": 18542,
+      "sha256": "5696ad9bb32ae67815be2c95a86299ad67a9a0b09542c2fb4870aadcdbdd6786"
+    },
+    {
+      "path": "FAILED_COUNTEREXAMPLE_RETURN_SCHEMA/counterexample_public_snapshots_B.json",
+      "bytes": 18547,
+      "sha256": "e2ef7d0cf50abc64dee2e8c3d1baf560b0b4fbcaead4dbac12486715ac723a3a"
+    },
+    {
+      "path": "FINAL_VERIFICATION.json",
+      "bytes": 1761,
+      "sha256": "d0e3a64176c22188b802d101a68886ae06888f96afeafd9d0291d1078126be1f"
+    },
+    {
+      "path": "SYNTHETIC_SEALED_LABELS.json",
+      "bytes": 3241,
+      "sha256": "76e2ef81c15f6971c7c80bb9754b8c642c63131e7cb3bd79e98b82e456617a14"
+    },
+    {
+      "path": "actual_public_probe_frozen.json",
+      "bytes": 647,
+      "sha256": "a78d89181a7631669e0e4435a2303be345ee65f267e8ef58652b78a5cefb0f08"
+    },
+    {
+      "path": "actual_public_schema_probe.log",
+      "bytes": 161,
+      "sha256": "d996abda54cd17d90f58ef8e3ffa96c13b9207d581bb4c89e14d0bf263f065df"
+    },
+    {
+      "path": "actual_public_schema_probe.py",
+      "bytes": 2743,
+      "sha256": "26ba35fcb2dbd39b2d87b1d33cca07d151339452a2330e8a380b19635badb974"
+    },
+    {
+      "path": "actual_public_schema_probe_result.json",
+      "bytes": 13088,
+      "sha256": "9750b0660d462e7189833469efc44e723bedfe39ee0b475a38fe84965b3c07ac"
+    },
+    {
+      "path": "blind_evaluation.json",
+      "bytes": 16170,
+      "sha256": "037615938748c37e4e219bfd429fdaa35854c3d8452548c3ac514ea1abb8d3e1"
+    },
+    {
+      "path": "blind_predictions/W00/future_SYNTHETIC.json",
+      "bytes": 316279,
+      "sha256": "45dc44458225652fd46fe580fec26d5f202516252c5cdea1de6e75bd44afe9fc"
+    },
+    {
+      "path": "blind_predictions/W02/future_SYNTHETIC.json",
+      "bytes": 316378,
+      "sha256": "6fe078a2b7959ecead7ec04b044d1184108024c0b555d4cdeb9d4584403ec263"
+    },
+    {
+      "path": "blind_predictions/W03/future_SYNTHETIC.json",
+      "bytes": 314022,
+      "sha256": "152842a7543eb130e5ab8549daa991f364490e162042cf6077234dec9bce6ca2"
+    },
+    {
+      "path": "blind_predictions/W04/future_SYNTHETIC.json",
+      "bytes": 314746,
+      "sha256": "be1002b4440fe2432433422f3de2d9d4f17e9ec9e2607a7ca2e8a3b7857c9f4b"
+    },
+    {
+      "path": "blind_predictions/W05/future_SYNTHETIC.json",
+      "bytes": 315820,
+      "sha256": "9d1538884b4a670937fcb0268bb53ff46e005302b4de40ddeae3a54e83b7662c"
+    },
+    {
+      "path": "blind_predictions/W06/future_SYNTHETIC.json",
+      "bytes": 317078,
+      "sha256": "75af743165650cc7135788df781bdc7188939354567ff997f6cfe27d515af2f7"
+    },
+    {
+      "path": "blind_predictions/W07/future_SYNTHETIC.json",
+      "bytes": 314805,
+      "sha256": "b52fcf777fb70b0c62f718c7b879cd6edb86729e63c50b108eaa6eb34e6453dd"
+    },
+    {
+      "path": "blind_predictions/W08/future_SYNTHETIC.json",
+      "bytes": 317210,
+      "sha256": "223cdd218d69f7f5395278000dc0e264c8c081f2e6c151d98dd9dfa4f766a170"
+    },
+    {
+      "path": "blind_predictions/W10/future_SYNTHETIC.json",
+      "bytes": 317086,
+      "sha256": "4748ddad7718d40ac90193de71ac702af4b1cd9af35424bb92e5922ef7c288f2"
+    },
+    {
+      "path": "blind_predictions/W12/future_SYNTHETIC.json",
+      "bytes": 314635,
+      "sha256": "9df9b1ded31d27a49000eef35821d6cf461597a1fa882466fd66e1b0c85f3a4c"
+    },
+    {
+      "path": "blind_predictions/W14/future_SYNTHETIC.json",
+      "bytes": 315526,
+      "sha256": "f899f7708690e22963324e9dcd2a3db613dff90c885f64c401b9a39def61d97e"
+    },
+    {
+      "path": "blind_predictions/W15/future_SYNTHETIC.json",
+      "bytes": 316980,
+      "sha256": "9f0916910ac13d59e9175278d5d90e163825397c24f930d582eb8dc7c1fdf283"
+    },
+    {
+      "path": "blind_predictions_frozen.json",
+      "bytes": 12970,
+      "sha256": "039a179fc8c0e4c08a028baffb4df196a3580ce07a68870eb5963aba0501374c"
+    },
+    {
+      "path": "blind_public/W00/footprint.csv",
+      "bytes": 1389,
+      "sha256": "c41cd3f9c46233d3f67c60411d7613c3e6cb950d405e70b082c6c6c694b42e5d"
+    },
+    {
+      "path": "blind_public/W00/targets.csv",
+      "bytes": 5780,
+      "sha256": "2779923b17aee6fa414ac3940c98f9d3aeefc45c65c863813ebe4d86747c425f"
+    },
+    {
+      "path": "blind_public/W00/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W01/footprint.csv",
+      "bytes": 1389,
+      "sha256": "405273e65663abb37dfe17f1b7057879e91c6b83e20e9a75cdd7b446ea16e5a3"
+    },
+    {
+      "path": "blind_public/W01/targets.csv",
+      "bytes": 5793,
+      "sha256": "6fce945d3588ad9bcf520d16cbd1f1df70089d65ff1483ac791627e78c17e55d"
+    },
+    {
+      "path": "blind_public/W01/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W02/footprint.csv",
+      "bytes": 1365,
+      "sha256": "7374a9f74c260dcb2de320404ee8b6984a4590d32ab003aec3ab1cf69a4f07cc"
+    },
+    {
+      "path": "blind_public/W02/targets.csv",
+      "bytes": 5742,
+      "sha256": "898cfd6094850595228b4aad087001eaf134cd813c4d9bca4403ef67eabfc581"
+    },
+    {
+      "path": "blind_public/W02/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W03/footprint.csv",
+      "bytes": 1389,
+      "sha256": "3e992ecb2b1b946fb7b2c6d5526e27d094caeb1c6d4fa7a0b481445dbf721195"
+    },
+    {
+      "path": "blind_public/W03/targets.csv",
+      "bytes": 5792,
+      "sha256": "8a9145ab72cc01b1d8d96019d5694eb7d2019b08749fa3ed45b11fcbf706c73c"
+    },
+    {
+      "path": "blind_public/W03/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W04/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7fe12b3445eb2b520ca710824c00731879af30e28dbd3acf1cc10475ad88ae97"
+    },
+    {
+      "path": "blind_public/W04/targets.csv",
+      "bytes": 5787,
+      "sha256": "7880cf2110a1c29eea7d9e3b64c7f58307657ebc332396e44483be85e5f200e3"
+    },
+    {
+      "path": "blind_public/W04/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W05/footprint.csv",
+      "bytes": 1365,
+      "sha256": "7184d08380045b51406e07cc790dec131db0774cd595a831332409b4feea8832"
+    },
+    {
+      "path": "blind_public/W05/targets.csv",
+      "bytes": 5742,
+      "sha256": "84681011213bdaac979849c39142f5b0a9b56e5e83578add0833b9a3b5954ff4"
+    },
+    {
+      "path": "blind_public/W05/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W06/footprint.csv",
+      "bytes": 1365,
+      "sha256": "ddfb99f098031e745407c0739ffc21058ef677eb80661cd7a5f3fcd4bf0c1040"
+    },
+    {
+      "path": "blind_public/W06/targets.csv",
+      "bytes": 5742,
+      "sha256": "1a00c84f78f84256f36b040e5fc0ee33a1e5ae9df75ef70383038d3272d92f33"
+    },
+    {
+      "path": "blind_public/W06/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W07/footprint.csv",
+      "bytes": 1365,
+      "sha256": "491b35a3a9154fd537a91e6fa298461fe43d27c4158cb692f474699507ae0013"
+    },
+    {
+      "path": "blind_public/W07/targets.csv",
+      "bytes": 5742,
+      "sha256": "02020a503b60a15c7d1def6fa019b3b6d0802fd320930cdbad3f7ca598fd042c"
+    },
+    {
+      "path": "blind_public/W07/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W08/footprint.csv",
+      "bytes": 1389,
+      "sha256": "dbf14f6177eaab32216e2e99a9bb0df026fed08a4c7c17b775cc5a37031e6a78"
+    },
+    {
+      "path": "blind_public/W08/targets.csv",
+      "bytes": 5794,
+      "sha256": "f26860f28913040712f96394cb55313ae6ef313a3c527ee35b8be657965ee6f2"
+    },
+    {
+      "path": "blind_public/W08/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W09/footprint.csv",
+      "bytes": 1389,
+      "sha256": "8b0fd1950280e7f0b57a64473f2efdb721ffd72978fad35a286196b1aaeef300"
+    },
+    {
+      "path": "blind_public/W09/targets.csv",
+      "bytes": 5780,
+      "sha256": "1787dd3ec94c462b74a9a41852fe7753ae74de82adb3bf8ae6c264050b769e57"
+    },
+    {
+      "path": "blind_public/W09/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W10/footprint.csv",
+      "bytes": 1389,
+      "sha256": "4f9b5e315ede0868b2fadafe285ffeb76cabc02ceadd59d403b5352fd2fe5d9f"
+    },
+    {
+      "path": "blind_public/W10/targets.csv",
+      "bytes": 5786,
+      "sha256": "91b91c149a3b2fc4685828749ac164d405eaa857b68572ca4d138d1af6f2e54d"
+    },
+    {
+      "path": "blind_public/W10/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W11/footprint.csv",
+      "bytes": 1389,
+      "sha256": "df339147b392983af6a16b8ef0310929af838b640745aa975fb44d9380235cb9"
+    },
+    {
+      "path": "blind_public/W11/targets.csv",
+      "bytes": 5792,
+      "sha256": "be437dab368ee145c6607addfa9efe0e8f56a9bd3cbcb8c821b244712ddf9569"
+    },
+    {
+      "path": "blind_public/W11/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W12/footprint.csv",
+      "bytes": 1365,
+      "sha256": "ab86406299f755f3e9cd6984cdc17a04fea465e55b35ef2ec3a4f32255ea0df7"
+    },
+    {
+      "path": "blind_public/W12/targets.csv",
+      "bytes": 5742,
+      "sha256": "7f45feeac9528b98a779cd8104718996a069e5c52290e4fb079c135cfb79768b"
+    },
+    {
+      "path": "blind_public/W12/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W13/footprint.csv",
+      "bytes": 1365,
+      "sha256": "d26984d538b3218557ebd2537e77998e7d1b5d4c53efa5f5df85792d284d2c92"
+    },
+    {
+      "path": "blind_public/W13/targets.csv",
+      "bytes": 5742,
+      "sha256": "a4b96d76e0f1be8bf6af0cca3ef2ad713860be718538869daade81287cceab22"
+    },
+    {
+      "path": "blind_public/W13/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W14/footprint.csv",
+      "bytes": 1389,
+      "sha256": "322e6fc03659639ded8f196a923e2fd471d3112a68529d62bc47689b5a69161a"
+    },
+    {
+      "path": "blind_public/W14/targets.csv",
+      "bytes": 5787,
+      "sha256": "71bbe4720c9445da1f7daae968195d3b4033957d19696ddf1888379b2aa7fc20"
+    },
+    {
+      "path": "blind_public/W14/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/W15/footprint.csv",
+      "bytes": 1389,
+      "sha256": "e28ef316861f20f4fd83a169f3073b589044afa6f6c81509f4015e2fb02063ad"
+    },
+    {
+      "path": "blind_public/W15/targets.csv",
+      "bytes": 5795,
+      "sha256": "d7b84fff727784b6895f7a175c484d04b18f6316e1cba76fb97d684b08eb572e"
+    },
+    {
+      "path": "blind_public/W15/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "blind_public/inventory.json",
+      "bytes": 931,
+      "sha256": "e88df1e2cb44257d48e9020ed24a9861d1501559428ae77b33c6d8846f7d8cd3"
+    },
+    {
+      "path": "counterexample.log",
+      "bytes": 3173,
+      "sha256": "45be2c52772103085e170a5650e9a275c7052c858d2ecc9a9deb28700990128d"
+    },
+    {
+      "path": "counterexample.py",
+      "bytes": 6649,
+      "sha256": "08f4ad8eb54d82330659f16f0d0db42bc59fc6c6a660677c806db07d1e7baaa2"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A/truth/v4_weather_truth.csv",
+      "bytes": 76124,
+      "sha256": "1ec80c33af4408739259bca1f9da4550959d3dd202e5f25fdd87e34673ed14ab"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/A_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "b8c64240c4e3b17acae0883173a8cd7bb7d0967aae6e82a6d71ba951e859cef6"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/config/v4_fiber_config.json",
+      "bytes": 354,
+      "sha256": "5ecb0d1746717867464e122491fe9b08bf247cdf52c3b9a25012a99d7ca279ed"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/config/v4_scenario.json",
+      "bytes": 1083,
+      "sha256": "32caf2a1ffe740570c7d9d50a6cff75f8e245bf5b36f356bc1858fabb5c61fca"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7e7554f2d108cf0af44b290eeada7442710fea7d4b0f385271a3886a8dc66f88"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/public/targets.csv",
+      "bytes": 5790,
+      "sha256": "dd37bb301b786b6898946f916caccd548717741cbbad372be26c42c3febdcfb6"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/public/v4_bulletins.jsonl",
+      "bytes": 143519,
+      "sha256": "9850d76efc99a75cf593ba926963574c256a5bacbdad6db1e44b005d69ef85fe"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/public/v4_forecasts.jsonl",
+      "bytes": 870,
+      "sha256": "f90ffb75d0dac4bb4393194d752f0ba2f52d996c7a08df2a84e269a3c8dc12b8"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/truth/v4_earthquake_effects.csv",
+      "bytes": 138,
+      "sha256": "14ea2015dcc6d5c447acf09f82f1037f50531576915625d23cf79228e338d451"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/truth/v4_events.csv",
+      "bytes": 271,
+      "sha256": "e3b037d6790a668aa3e505a88f77131edc90a31117952954fe367e7b90eef627"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/truth/v4_observation_requests.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B/truth/v4_weather_truth.csv",
+      "bytes": 75659,
+      "sha256": "7266859606933d997cb7204a50c9d645cd79c22758e892629dffb942317cde5e"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B_spec_SYNTHETIC/card.json",
+      "bytes": 315,
+      "sha256": "273b59a65a1d40a5237b9dfa4980ba9ccbed16c7c5776fa6a1c07628f115f5dd"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1896,
+      "sha256": "7b854de9b7d0ff72330db2721a4b9827c14c35d4b6b025ec63564a090953bc06"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 503,
+      "sha256": "322afdb928dbf93d4e7db4fb57cee59f4f335403708c53a25f9ac51f36dff159"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/B_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4435,
+      "sha256": "f0aa33311b82a6ffe256e9e445c3c49ae6d1b56a5130a556fdf76aeb4ca66215"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_A/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_A/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_A/observations.csv",
+      "bytes": 681,
+      "sha256": "c3c8d674d869ecc723eecbb8102fb5a0ec6b01136439b061caed29488c41b01f"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_A/score_report.json",
+      "bytes": 1313,
+      "sha256": "b8c142527bb1c06df2c58155373ab9a5f3fbb6238727608c8fc4bbea212e7db8"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_B/decisions.csv",
+      "bytes": 9527,
+      "sha256": "784be278684e2bb1168aa765702605b087c520c2dd03d1cb1f39e8b5e977961f"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_B/messages.jsonl",
+      "bytes": 1733,
+      "sha256": "5a47936bd584b9efbd18491f21a82b39746a5a814619db76fd086d86b9fb5190"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_B/observations.csv",
+      "bytes": 681,
+      "sha256": "c7a111cf6f309b53b83008721226009697346dc839cdfbe96d283c7bd99e1fbf"
+    },
+    {
+      "path": "counterexample_SYNTHETIC/runner_B/score_report.json",
+      "bytes": 1318,
+      "sha256": "f9780a7490f0b85cf793d25d85ea706cca5e6d63414c63c6b789cfd42472986a"
+    },
+    {
+      "path": "counterexample_all_pair_status.json",
+      "bytes": 50058,
+      "sha256": "cef4dce2c99b28b7ce0e0a9ea7aa15a2c59ec24eb84fae41cd2b98d10752c61a"
+    },
+    {
+      "path": "counterexample_candidate_prefix_status.json",
+      "bytes": 9882,
+      "sha256": "7f8a2c0929f06279898ec2b721baf7bbba9134d32612f802db5555462d4906af"
+    },
+    {
+      "path": "counterexample_nonseed_config.json",
+      "bytes": 8848,
+      "sha256": "84e0408c7779c859da30f24bef72903c37e6434b5d957de77327356dcac7ff44"
+    },
+    {
+      "path": "counterexample_public_action_tape.json",
+      "bytes": 3141,
+      "sha256": "1b49ef0685308bdb25f5681eec27185b0aaaf5755383cc826f2c4d9a8b7f22d7"
+    },
+    {
+      "path": "counterexample_public_snapshots_A.json",
+      "bytes": 18542,
+      "sha256": "5696ad9bb32ae67815be2c95a86299ad67a9a0b09542c2fb4870aadcdbdd6786"
+    },
+    {
+      "path": "counterexample_public_snapshots_B.json",
+      "bytes": 18547,
+      "sha256": "e2ef7d0cf50abc64dee2e8c3d1baf560b0b4fbcaead4dbac12486715ac723a3a"
+    },
+    {
+      "path": "counterexample_result.json",
+      "bytes": 3173,
+      "sha256": "1fd571e041fda37e6bd51253e17dc917076816f1a330fe9be461b280b8f45810"
+    },
+    {
+      "path": "counterexample_revision1_receipt.json",
+      "bytes": 322,
+      "sha256": "f019d041a01c752fc93dcf46a122986169eb3eeec7f2930f4fb0563a06abbd49"
+    },
+    {
+      "path": "counterexample_revision2_receipt.json",
+      "bytes": 336,
+      "sha256": "469a18f0cc876d52b0c582fc7d07bc9235bdaf73457d3ab692485814b05ef82e"
+    },
+    {
+      "path": "counterexample_revision3_receipt.json",
+      "bytes": 362,
+      "sha256": "e71e0c25ebeb04c1a79c7d3dc11f8b3bf2281a2e89afc4149f2497a375aaaa28"
+    },
+    {
+      "path": "cpython/Lib/random.py",
+      "bytes": 33221,
+      "sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1"
+    },
+    {
+      "path": "cpython/Modules/_randommodule.c",
+      "bytes": 18189,
+      "sha256": "3dd0737e09d40fe0cb70cd81d888728f202492baf713d975e9b07fd0af575690"
+    },
+    {
+      "path": "cpython_source_manifest.json",
+      "bytes": 497,
+      "sha256": "c06e0ff1bd1741c63d9689089492e217b34d9a063a51f174c02f9ea64faf0d15"
+    },
+    {
+      "path": "dedup_source_manifest.json",
+      "bytes": 2790,
+      "sha256": "17ad30d3f7ea7c5ee0839436adfdc44bcd957fd548e93b3718a9a7cff6b7ef88"
+    },
+    {
+      "path": "evaluate_blind.log",
+      "bytes": 62,
+      "sha256": "d89e8965e7ad244204236489cabb603941806fc2b1a0d619431aa5d2d5c62e11"
+    },
+    {
+      "path": "evaluate_blind.py",
+      "bytes": 2286,
+      "sha256": "d7554017679768b0df3e169c3e803a802114adfb1319e3090564360a0cc7b253"
+    },
+    {
+      "path": "fixture.py",
+      "bytes": 4156,
+      "sha256": "9232eb5022766f3707ac66b6b433c86850cd99508788d66cfe2e1455a1c37ea3"
+    },
+    {
+      "path": "freeze_receipt.json",
+      "bytes": 302,
+      "sha256": "ad93f0f736ef6cba3ca63c69cfeba14a9a83a57bb86e351f49796c1cfc363607"
+    },
+    {
+      "path": "generate_blind.log",
+      "bytes": 32,
+      "sha256": "a0e3d4f30df885821a34a5fcfd5aaf8b5c5c465e4dde5055f3ea2b4f179b8517"
+    },
+    {
+      "path": "generate_blind.py",
+      "bytes": 1451,
+      "sha256": "75eb94d59d86fc26d69864a538793e26bf6e9ca2e12f4d55c93fe07478e39b8e"
+    },
+    {
+      "path": "official/challenge/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "official/challenge/challenge_workflow.py",
+      "bytes": 22358,
+      "sha256": "a790769bab713fe3e15f83087724264c74afa09f7f7bc1167e0da979835fa45e"
+    },
+    {
+      "path": "official/challenge/contracts.py",
+      "bytes": 7620,
+      "sha256": "a6ea14cec151450c1e0edb2023f2fd3e5980e87ee9c8fc1717188983979f1335"
+    },
+    {
+      "path": "official/challenge/observing_calendar.py",
+      "bytes": 15529,
+      "sha256": "897f81e4c0fd3b8eca5a6d490d96aff2e9ff2b6ca4a1d0b6837ee9a479125117"
+    },
+    {
+      "path": "official/challenge/project_paths.py",
+      "bytes": 436,
+      "sha256": "0bde3926c12a89d48694bcf8ec78c1a915936d5a02b647004184ac8887df6857"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_catalog_config.json",
+      "bytes": 1751,
+      "sha256": "8a817f469bcd47c2bafa270f5b56140bad28e5cb673c61132ccd4014004966bb"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "16aa2ef0fb7466691a4f8a006f64ecc21767ad4f052df39eaf1bfe9cb29a6dfe"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_scenario_default.json",
+      "bytes": 901,
+      "sha256": "6d7e48e26067505c5451b85e7b06a6b02e71cf26e50ddeed89936fe6a317cacb"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_scenario_stress.json",
+      "bytes": 1014,
+      "sha256": "fe6772608cbd22d73d6fae0bc98fc253ef26939b2d1664b2005f096edb241490"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_score_config.json",
+      "bytes": 869,
+      "sha256": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_weather_config.json",
+      "bytes": 3501,
+      "sha256": "3e9c1f03c5d925ab5bfe3402077524e92e052cd911488055a9959fdf2335ef57"
+    },
+    {
+      "path": "official/challenge/reference/v4/v4_weather_stress_config.json",
+      "bytes": 3507,
+      "sha256": "d13006552dd4d2984ad702c28cda1065d8f071e3cdcf5d68c234510f1a59e98e"
+    },
+    {
+      "path": "official/challenge/scenario_builder.py",
+      "bytes": 14889,
+      "sha256": "c7b9128dc65f9688ea1365bf1b7d434695f3b187b8388e0562b3621b772fa9df"
+    },
+    {
+      "path": "official/challenge/tile_geometry_simulator.py",
+      "bytes": 29204,
+      "sha256": "d651caa58d05db0619e408e7613db27e5665d2d15e3e13f038182e137deede73"
+    },
+    {
+      "path": "official/challenge/v4_bundle.py",
+      "bytes": 9533,
+      "sha256": "66ca1813dc9ef007df3d014708ee91f7632ab9a5cb1123e7115a3a99bba9f516"
+    },
+    {
+      "path": "official/challenge/v4_catalog_generator.py",
+      "bytes": 35673,
+      "sha256": "ffe70e0064b3b73fec787d4f3ab0895f5a4d816ab1c3888914fa4051248c8eb0"
+    },
+    {
+      "path": "official/challenge/v4_config_check.py",
+      "bytes": 13668,
+      "sha256": "afb7ed2e2d81230414047dad392d39a3ad5d94d2ee089d4e78e561beee5e72a8"
+    },
+    {
+      "path": "official/challenge/v4_fiber_map.py",
+      "bytes": 24635,
+      "sha256": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892"
+    },
+    {
+      "path": "official/challenge/v4_observation_requests.py",
+      "bytes": 10967,
+      "sha256": "77f015eff3e888b7e94c9353c726cfde06c95e2e3410cc70b05e41fb030ff423"
+    },
+    {
+      "path": "official/challenge/v4_runner.py",
+      "bytes": 43344,
+      "sha256": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d"
+    },
+    {
+      "path": "official/challenge/v4_scorer.py",
+      "bytes": 22703,
+      "sha256": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66"
+    },
+    {
+      "path": "official/challenge/v4_weather_simulator.py",
+      "bytes": 49695,
+      "sha256": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a"
+    },
+    {
+      "path": "official/challenge/v4_workflow.py",
+      "bytes": 17308,
+      "sha256": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba"
+    },
+    {
+      "path": "official/scripts/build-v4-practice-cards.py",
+      "bytes": 17483,
+      "sha256": "772c305d6b5a3de6c19e7e4519a160b8996c4410208310a397bb18f28430d4dd"
+    },
+    {
+      "path": "protocol_frozen.json",
+      "bytes": 2167,
+      "sha256": "2cf61e137c66601b0a98ca4980f58d56a752af4a0e2f203e19345b301d956aa1"
+    },
+    {
+      "path": "recover_blind.log",
+      "bytes": 147,
+      "sha256": "1843b6d1ed553d62fba35194e2986f45f807b65c796c2db1058bd4fcd5d00895"
+    },
+    {
+      "path": "recover_blind.py",
+      "bytes": 4764,
+      "sha256": "c53e0eee921a8e829a1bde4fcf1abed44097f4cfc6556700ebe2977c4656c162"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 8721,
+      "sha256": "c3641f90b12885413200f3bd19d9ca5e491c1ee4af63f930a0f6b67b64e24e84"
+    },
+    {
+      "path": "synthetic_nonseed_configs_frozen.json",
+      "bytes": 8863,
+      "sha256": "7753353ef6eee181ca40bd32dbb5d720e742246b799d252f87380de716f05f1b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "c41cd3f9c46233d3f67c60411d7613c3e6cb950d405e70b082c6c6c694b42e5d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/public/targets.csv",
+      "bytes": 5780,
+      "sha256": "2779923b17aee6fa414ac3940c98f9d3aeefc45c65c863813ebe4d86747c425f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/public/v4_bulletins.jsonl",
+      "bytes": 176526,
+      "sha256": "b967947ec313f21be4f8a046d752844f4a1a0d1148d5416cc9c3e9995a33ea07"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/public/v4_forecasts.jsonl",
+      "bytes": 1587,
+      "sha256": "590d970bf74d69586f85833a788e929f99f70cc40405a3a32ddcf6632e6882ee"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_earthquake_effects.csv",
+      "bytes": 978,
+      "sha256": "32288164aa4ae15a27032dfd84c61936858f607673bb99aa6cebd3475a4e1ba6"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_events.csv",
+      "bytes": 1886,
+      "sha256": "d007303002417c0044388c94241a2ba03df5741ddd81bfa967aceb4637f9c126"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "a9e667f2a2ebebef7313dfe6ab21a6bb15a12180d99470b0885a556326564add"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_stress_events.csv",
+      "bytes": 277,
+      "sha256": "a847c64ed881c04259ae4123193e578f8be8a15aa51c5a1fe5a419afb596bafd"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00/truth/v4_weather_truth.csv",
+      "bytes": 82572,
+      "sha256": "94acd75a3d1bd041a988e47909dcf9c9fae78dafd40e7f3fccd8d5e77d861760"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "044d63f2abb0080b34f78cbc84f3c1284fa8712017059be39144f8690de0877c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W00_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "9c6e95a23005e0293224e6a16e36cac12c7320a22bdf4f2be55dc7a09092699f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "405273e65663abb37dfe17f1b7057879e91c6b83e20e9a75cdd7b446ea16e5a3"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/public/targets.csv",
+      "bytes": 5793,
+      "sha256": "6fce945d3588ad9bcf520d16cbd1f1df70089d65ff1483ac791627e78c17e55d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/public/v4_bulletins.jsonl",
+      "bytes": 174706,
+      "sha256": "797b46959e3926eb58f0aaa564b71423a0573f9b783edbea7aff02015e6421db"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/public/v4_forecasts.jsonl",
+      "bytes": 1468,
+      "sha256": "86bca89ad83fe333333c00432fe08beb5c591c03d6f47fba33eebfd56a26af66"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_earthquake_effects.csv",
+      "bytes": 1118,
+      "sha256": "4d4ddd4ec5dad25ad82a6892ca321511a625d8172ef28f391303fa5d363f2901"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_events.csv",
+      "bytes": 1936,
+      "sha256": "43f200e36849c18eb91dee208dbb30cdc9f7b9e243cebafc02bc87022f50fe19"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "be8861e4605045ef3b509dc51c9e2cdb394d90b6d9d6758fc35281d62fdad0a0"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_stress_events.csv",
+      "bytes": 278,
+      "sha256": "96e621639db20b36acfff38178e878c88730d5841b01e7a23a82e5e043d58fad"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01/truth/v4_weather_truth.csv",
+      "bytes": 82603,
+      "sha256": "d7d6a7d1d47c665dd127803749a2d55669cecdd1e0951cd1279c29f0f0f5e63f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1899,
+      "sha256": "3daceea59fc4fd22b0d19992e3f9ff49d4c45d811d1d63c4470ce7416eb33640"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W01_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4449,
+      "sha256": "1ba3d735a620acb67fd425fada7e3f55868d51aafc0012e3fa234222fe382723"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "7374a9f74c260dcb2de320404ee8b6984a4590d32ab003aec3ab1cf69a4f07cc"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "898cfd6094850595228b4aad087001eaf134cd813c4d9bca4403ef67eabfc581"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/public/v4_bulletins.jsonl",
+      "bytes": 179045,
+      "sha256": "a38904feaec4a58832fa40a51e89be0a7679cbf41dd7b33a42062e0815edd851"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/public/v4_forecasts.jsonl",
+      "bytes": 1514,
+      "sha256": "6b4b9aaf298322bb62542dca0970429dff18d1ac4ace28c0c14eb9dbdd8262cc"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_earthquake_effects.csv",
+      "bytes": 1188,
+      "sha256": "eee4863e0e611e382adb7000d57b45b6dcc0ce1dabc4008e82cd3f0fe93944a9"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_events.csv",
+      "bytes": 1934,
+      "sha256": "34534a22f3d72f8276919c8cbc7375eab5a7b9de82fdd2929afb571047b1df54"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "7f902d39cdf11c9c42d9d39c346635c9b76e7507198ed5b62c17e0249e2743ea"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "b6ebc54b704893d86e3aeaf0fe17c488760e2c0232c590bfa37703e6eb40517e"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02/truth/v4_weather_truth.csv",
+      "bytes": 81673,
+      "sha256": "3d63b6f97120a4c9a4abf24b667ac52cae28c5391402f123aa317fc977635348"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "9f57430fd930b6a1e2dbfd5e23655afc2875ff0e6e82cbb2752e3a401be6b799"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W02_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "00109369d57645d5afcdc7570ed13886f311b3beb7ca70d4e0dccaf600c9cd10"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "3e992ecb2b1b946fb7b2c6d5526e27d094caeb1c6d4fa7a0b481445dbf721195"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/public/targets.csv",
+      "bytes": 5792,
+      "sha256": "8a9145ab72cc01b1d8d96019d5694eb7d2019b08749fa3ed45b11fcbf706c73c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/public/v4_bulletins.jsonl",
+      "bytes": 168321,
+      "sha256": "f757f9798972ae3876dba926223e89bcf744bd9a4b9098dc650ff437fec399b7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/public/v4_forecasts.jsonl",
+      "bytes": 1514,
+      "sha256": "798084b4e307d45ed503af7ae93fe441cd4ffe0ed5e0b0fa88f5f0acbf4dc3ad"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_earthquake_effects.csv",
+      "bytes": 908,
+      "sha256": "45512da956368d5e8d32e4a81c85ae1dec91dc77426200389c19d20c5c81cfc9"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_events.csv",
+      "bytes": 1568,
+      "sha256": "21da5b4585028be2cabb88a1970a5e7618d102ff0cdf7d2f8f0d1d954a4b23bd"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "3d1f9b02aff272d80d85be91ea8c57b65c35b932cefbc0c0c2213a5ee8f4aaa4"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "23e02d97839d0d3a0344136df7195aafb8f9c31512deb3218b7cb66db4f58742"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03/truth/v4_weather_truth.csv",
+      "bytes": 81921,
+      "sha256": "3abcfaeabe18498b8110925e1b5f3c9057f19aa5c6d21cf8927065c64d43c194"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "118fcee1a033ce4511db3b5af13e25dc9f5bf640c3bf7517e6d3d3681251cde1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W03_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "0d8a7fa14c08ebca61d4925cce4b60cc60509f6e1329b66c97f7fbba88d1f7a9"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "7fe12b3445eb2b520ca710824c00731879af30e28dbd3acf1cc10475ad88ae97"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/public/targets.csv",
+      "bytes": 5787,
+      "sha256": "7880cf2110a1c29eea7d9e3b64c7f58307657ebc332396e44483be85e5f200e3"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/public/v4_bulletins.jsonl",
+      "bytes": 170228,
+      "sha256": "e0d434db5b4b4305ced2ffbba8b3c3a9737eb4f2f70287cfbd1e80e6b4cd049f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/public/v4_forecasts.jsonl",
+      "bytes": 1427,
+      "sha256": "733327a74f92bd3539b57b3c20d47e2d988d80a1b5aec3776eedb1576809dd7d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_earthquake_effects.csv",
+      "bytes": 1048,
+      "sha256": "62c982f5f3c1ad8b79756ee98ef0382d31df890fd1efa177797b572081a8d36f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_events.csv",
+      "bytes": 1567,
+      "sha256": "cbea39cf3bb82189bbb03820555f15f5786ddbfa268b31ef8cb0f1fc55849cd5"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "6d2740ded9794dd8485b6ff161d0c184b92c34a5eed12e5bf84ffcadb59a05b7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "c134b258eb5d94d4ee5ff0b3cf50c097edc398d369225d737ddb1ecbb39b78fa"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04/truth/v4_weather_truth.csv",
+      "bytes": 82014,
+      "sha256": "5b099d592f0656ce798f4424fbd10bbc3193f26c13c8bf17e6e6ae168f44032d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "f3b45654a707d3fab5aa350ceeaa65522988dc3fd256bcbc1b4b048d0f10ac69"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W04_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "d0e62f7c755e912f871d1ee79431ae7394c26ae37c939123c0e4aeb3ba649a72"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "7184d08380045b51406e07cc790dec131db0774cd595a831332409b4feea8832"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "84681011213bdaac979849c39142f5b0a9b56e5e83578add0833b9a3b5954ff4"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/public/v4_bulletins.jsonl",
+      "bytes": 173547,
+      "sha256": "9d6c760855bb1d87f9e7f6c05978200263b6d49c322f527c7d1e928c7f07ecc1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/public/v4_forecasts.jsonl",
+      "bytes": 1386,
+      "sha256": "6289191c99e9a732e91bc24435bcb1845fb39711f52b1f0542a198d9ffd40d8d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_earthquake_effects.csv",
+      "bytes": 1118,
+      "sha256": "f9231c6909c0709603c9657840a400ace0ef8a0a5cfb4c0d953de412fe11cfb1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_events.csv",
+      "bytes": 1612,
+      "sha256": "3ad5a8f437bbfd50f23330c66159f75179a2fe7859feff606015957cc61a2ede"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "0dc3b0c1d4e53c5aba765a967eadac09b5504724f197382cfeedb134d80ecdca"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "d6cfc52d4fa3696c83b7f410cec5f6f85f3116ed09ed77b8f53fa6fde648331b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05/truth/v4_weather_truth.csv",
+      "bytes": 82727,
+      "sha256": "02d2d629558a189d3ef3af4be88d924c0370c1873d69c4cb7fbb51e216c2881f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "b4ddfd8d2a00db81ea037ca4198618924370464525f83922464e91cef10030de"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W05_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "dab831f82f97c21af7e7ab3f3c9a785b678d90695c3db052176c366493be5bf2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "ddfb99f098031e745407c0739ffc21058ef677eb80661cd7a5f3fcd4bf0c1040"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "1a00c84f78f84256f36b040e5fc0ee33a1e5ae9df75ef70383038d3272d92f33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/public/v4_bulletins.jsonl",
+      "bytes": 178053,
+      "sha256": "cdd88d16e0d440c9229dec9fe044f821634a3605e23ec23748bb587e23e1e684"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/public/v4_forecasts.jsonl",
+      "bytes": 1475,
+      "sha256": "97856980f6957842f9258fd6d1c989bec116e9936181d3b6b7cce96a8cca9014"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_earthquake_effects.csv",
+      "bytes": 1258,
+      "sha256": "36d4d5a5113b39c6d6b454c391c3a227515af0d6e75831e4505f25f2813d4a6b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_events.csv",
+      "bytes": 1752,
+      "sha256": "17eec5873134374227e0e6167905406cf66067d6dcb3cd7d72f523d1b032635f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "510269912641b6857d9838a63d5f50fbde006475c2ad36cc9c06c930a01052b4"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_stress_events.csv",
+      "bytes": 278,
+      "sha256": "ec693bc712f5226399279ad0ff888505a999f6514bfd0f6f09323f6fab565d42"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06/truth/v4_weather_truth.csv",
+      "bytes": 82727,
+      "sha256": "0a0b67db4eac831588ea30cbcbdf7baf82f38ce794c38aeb0bdc768a49d3bf0d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "7692f7554eb38f4bc5936ba984a1f781f484cb943f8482ce1787fb29d9893052"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W06_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "3fcbe6e514d6dda85a36c0155f6e257cb424c82a4642b546488ee75ea7626d3b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "491b35a3a9154fd537a91e6fa298461fe43d27c4158cb692f474699507ae0013"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "02020a503b60a15c7d1def6fa019b3b6d0802fd320930cdbad3f7ca598fd042c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/public/v4_bulletins.jsonl",
+      "bytes": 170138,
+      "sha256": "05e551cd8c5e0fbadcdf2f8ec0d775048e790cb7ec727c17516e9772aa803064"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/public/v4_forecasts.jsonl",
+      "bytes": 1541,
+      "sha256": "5aea7cbfb77d8b5c9432939cdd58fbc2dace3812e296dde805b0fb240c6233fb"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_earthquake_effects.csv",
+      "bytes": 768,
+      "sha256": "4d64d8ae1f4e4d4be2b2bc8e2be9f83c7d9857c10f73d45cc8de67afd794028d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_events.csv",
+      "bytes": 1752,
+      "sha256": "c69d27f1d0628c9fcb34fe47c2b7760accf6ebc7620443e51c310d0eed7f051d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "8f670400b02cd58c36ed5d793d0c0ed562817c892a2dec1a02283c5d3db34f55"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "9c874d1994aafa1514515ce48007ca9d4a1b86b1a80445f9d6a0ea2a6e331a63"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07/truth/v4_weather_truth.csv",
+      "bytes": 82665,
+      "sha256": "3182dd435993a54d946e870e39b0175bc6b8d351aec84353a6e59ea417497e75"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "dbc6a9694f8a543e4d60b86f7754922d41716cc7cce59cbb0976b082fc50bdff"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W07_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "0844526edfdc09c78c82ea24e417ea42cd163f24b25ea2906547d59387141e44"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "dbf14f6177eaab32216e2e99a9bb0df026fed08a4c7c17b775cc5a37031e6a78"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/public/targets.csv",
+      "bytes": 5794,
+      "sha256": "f26860f28913040712f96394cb55313ae6ef313a3c527ee35b8be657965ee6f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/public/v4_bulletins.jsonl",
+      "bytes": 175324,
+      "sha256": "507bad83cc24e0d5f41359d3ad1d13b98e81a169daa9f7fe2fa1cf03f7f95793"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/public/v4_forecasts.jsonl",
+      "bytes": 1388,
+      "sha256": "3044272b1bea55a9907c16d2c4b83943c5cd6c5524e061613a6e3521700a574b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_earthquake_effects.csv",
+      "bytes": 1258,
+      "sha256": "15baf153e5bc3c93abe48fd5f2c053f2ad4c2fe81139beda9355a6b5f118f654"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_events.csv",
+      "bytes": 1699,
+      "sha256": "85e9e1d9b3837ea15249eecf2af6e70b9adb19b1a36f7082f1fe22296eb82190"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "5cb5d7c6a4a4b31e3b773879abb7fdef9309db51862424d35237c4e85afdf7a7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_stress_events.csv",
+      "bytes": 277,
+      "sha256": "c3fc21500c93123b2203d490bb46b1d9fb1e3d9103f22f3d2161db4b6ee680d6"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08/truth/v4_weather_truth.csv",
+      "bytes": 82913,
+      "sha256": "03d5cd9887ceb86684545e8bf6542af636232a88b8c570ace19bd8b02187e336"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1897,
+      "sha256": "d425dd7a89e044fcffeea6725668a6c31f3dd6eddbf4a243a0d32b81a8c9c4c7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W08_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4447,
+      "sha256": "0799461b1b55eea178d36b1ddaf5d681cdda656e6b9d995cd2facce9107e4c4f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "8b0fd1950280e7f0b57a64473f2efdb721ffd72978fad35a286196b1aaeef300"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/public/targets.csv",
+      "bytes": 5780,
+      "sha256": "1787dd3ec94c462b74a9a41852fe7753ae74de82adb3bf8ae6c264050b769e57"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/public/v4_bulletins.jsonl",
+      "bytes": 168150,
+      "sha256": "453a878bf8e0473c5a2a1ff1ac456d5de93ba89733da6c5a3cd4368a3d9f2231"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/public/v4_forecasts.jsonl",
+      "bytes": 1356,
+      "sha256": "e025af636408ced3704b08b2ac8569d820cef0d638d65e03795d2b1f8f15066d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_earthquake_effects.csv",
+      "bytes": 1048,
+      "sha256": "acf11aa3aae0c797c4665a31570d2af3222b9374ca70a19db8e6fa1c46921cb0"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_events.csv",
+      "bytes": 1795,
+      "sha256": "4f966f077fe038eff87040b9279edb4c33608f36bdaab06f6a2aa81b07e7da8d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "4380e326cdff26509bb9167cd9c6d0348590f94012abdad9b5df61a0477ddc01"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "bbfbd41200126b3e6d5c6cc61d6817d6e69278e4723d6845d1a4c9411d6ef997"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09/truth/v4_weather_truth.csv",
+      "bytes": 82727,
+      "sha256": "df197aa396663db6463b2b1b28fd41667e5c8281ad8463839c2e06de809240e4"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1899,
+      "sha256": "a2513c4c09f9d37c589586c28e089791ce0543b3d35265dfb0bf157e5a95158c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W09_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4449,
+      "sha256": "f0cc2515da83a70670b516e68cd8d5b9cc3a3923c1e5b0d6c3dc2d10a38cb8f3"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "4f9b5e315ede0868b2fadafe285ffeb76cabc02ceadd59d403b5352fd2fe5d9f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/public/targets.csv",
+      "bytes": 5786,
+      "sha256": "91b91c149a3b2fc4685828749ac164d405eaa857b68572ca4d138d1af6f2e54d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/public/v4_bulletins.jsonl",
+      "bytes": 177388,
+      "sha256": "fd14ebe50df9574d63cd2746caf24c171756ef6362261acf40fd331c891e1677"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/public/v4_forecasts.jsonl",
+      "bytes": 1574,
+      "sha256": "98ccb6b174301cd53ad40d06bec7609ecf59c43cb6188d7dfb4bdc6273337372"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_earthquake_effects.csv",
+      "bytes": 1188,
+      "sha256": "8b331aca05c6c3abf68d1ec5da73aae8334aa7f0e05127d15756830e62ba9434"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_events.csv",
+      "bytes": 1929,
+      "sha256": "7e181dd91a93b4d8069c82a0d80a45e905521bf614d00335a49a1d1978ff71fa"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "239eb2e645430613b37b22f1e516dd9ceceb4d99d94e0f07430e1750a182fc3f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_stress_events.csv",
+      "bytes": 279,
+      "sha256": "7cd0c0055643ce9c99f2d415c328a1c4ec5512bdf93cba3eb28d78a6fb7af93e"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10/truth/v4_weather_truth.csv",
+      "bytes": 82386,
+      "sha256": "23e6e57fa158aec6bbc591c7fff09a19b680f6d54c9c3c3c353bba734084ddee"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "1afcb7499993d74b8b5602fbd76cf3215a4866fee25edc94fd812a795779a14a"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W10_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "3e4685a51979b6ebf88fab9a05ef237148e2718bb643183ba99abff8c4fe3e0a"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "df339147b392983af6a16b8ef0310929af838b640745aa975fb44d9380235cb9"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/public/targets.csv",
+      "bytes": 5792,
+      "sha256": "be437dab368ee145c6607addfa9efe0e8f56a9bd3cbcb8c821b244712ddf9569"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/public/v4_bulletins.jsonl",
+      "bytes": 178672,
+      "sha256": "e5de68fd01f469f82909951d2d1f8af1b0095d24c9abca8fce02a188102b7b58"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/public/v4_forecasts.jsonl",
+      "bytes": 1457,
+      "sha256": "3b77d50f78ac44c2b7555c335d01626fcd63f903c28498f9fee5fc78ac77f8f5"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_earthquake_effects.csv",
+      "bytes": 1398,
+      "sha256": "500d74fece5ebb2dda8f02ae00ff3a9c299033c5a4e5ac5c7094c5bb2a624d9c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_events.csv",
+      "bytes": 1798,
+      "sha256": "623ca78bfb52ce56090da2a3198424be0d8c493c474e6dfe700dd9522d291952"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "897d55f7562725cee1f3d57d3e4349a54c4554974c85e3594c908587b8015c00"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_stress_events.csv",
+      "bytes": 277,
+      "sha256": "76887c33ebb2b92e81cd804c1b8e5476d08c7a4c5c22d92a3e21008f3322f06d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11/truth/v4_weather_truth.csv",
+      "bytes": 82200,
+      "sha256": "2177acc332a2344c72b42f660e5620d7559cdabe56722b34921bc07e336425b0"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1899,
+      "sha256": "3fbf2f6011abeac1a4f6cf5a176818eb432e7728fe26b584e1d30af51c8a3717"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W11_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4449,
+      "sha256": "069357dc9c28dc0d2580c7cc451e3930fec10ab8012f036d0e4f42f8dc014b82"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "ab86406299f755f3e9cd6984cdc17a04fea465e55b35ef2ec3a4f32255ea0df7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "7f45feeac9528b98a779cd8104718996a069e5c52290e4fb079c135cfb79768b"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/public/v4_bulletins.jsonl",
+      "bytes": 172481,
+      "sha256": "a73836b240f8411b89ebb11e91b58777a458f6bb3444f2e82ebc7b35cb413234"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/public/v4_forecasts.jsonl",
+      "bytes": 1404,
+      "sha256": "9f9fee0b1faff77869edee0be9c3ae8236802fe92b16bf41a47ffbf9d16a35c3"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_earthquake_effects.csv",
+      "bytes": 1048,
+      "sha256": "0a5a6585165e3bf136b8645efc32ca3a45d4431335f28777399aa99a5df00a55"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_events.csv",
+      "bytes": 1519,
+      "sha256": "55b684ec5bbbf4b0a17f2edaee7884296306dc87643cd1fa6c5a9b7a0afd4256"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "a827540da38a9ef7fb2ad669810c81be6fae24de798f052aa320a7d5aeda92c0"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_stress_events.csv",
+      "bytes": 278,
+      "sha256": "4abe20a6710689b86201f2dadd17344ba3f9ba26e419f7fa89a696ced97d9827"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12/truth/v4_weather_truth.csv",
+      "bytes": 81952,
+      "sha256": "66945cca7f742923325aa325dcac35a68bfe4696a2c544efdf96b71fd38cac14"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1897,
+      "sha256": "b27db2b46cc249201e97ecf8d8fd1a1ba7afd64d6a6291f0f50dc3c5d4ec5a8a"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W12_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4447,
+      "sha256": "0b58a6db0ef8388ffa72654ab581f8bd8a9ca7769a236a50b150196a7958c156"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/public/footprint.csv",
+      "bytes": 1365,
+      "sha256": "d26984d538b3218557ebd2537e77998e7d1b5d4c53efa5f5df85792d284d2c92"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/public/targets.csv",
+      "bytes": 5742,
+      "sha256": "a4b96d76e0f1be8bf6af0cca3ef2ad713860be718538869daade81287cceab22"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/public/v4_bulletins.jsonl",
+      "bytes": 179380,
+      "sha256": "70f642d4f4c3ebb106fb601719e3220cf41666b77e90ca65c040273e50778ce9"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/public/v4_forecasts.jsonl",
+      "bytes": 1501,
+      "sha256": "5359b50241c8902026a8ab11323d3c66b47bc98f9fca1f7c26d80aed9f2af8f6"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_earthquake_effects.csv",
+      "bytes": 1188,
+      "sha256": "c7b1749c4c6ef3d76916fd498ed744ed39ea5d873fbd6b3b76851ed444b20aa5"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_events.csv",
+      "bytes": 1796,
+      "sha256": "caef87215ffac55ca21e8adc0c1e2e0862afe238f01b0a8f5090ff63db964fc5"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "1570ed59949b88cf5c8b211f8cfdb5ffc183c1f217a3d7595fc91fbf55ca4ed7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_stress_events.csv",
+      "bytes": 277,
+      "sha256": "b59632840982cd5ace252db65c8630c433248a9b18ffdc14931b05d904b0bc2d"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13/truth/v4_weather_truth.csv",
+      "bytes": 82293,
+      "sha256": "91981f15e6769a01842b93b7cbc982df6f17b64f0bbf2aaf664095a0c126c2e3"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1899,
+      "sha256": "7baba268342641b333e966625ff9df6ee0fbc1c309d65f92db05f85e91865001"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W13_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4449,
+      "sha256": "a91c2406074ac7edabb7b2bdb0fab43e0ce1f5eca6b72ef9f9f7a35b56ce15d6"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "322e6fc03659639ded8f196a923e2fd471d3112a68529d62bc47689b5a69161a"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/public/targets.csv",
+      "bytes": 5787,
+      "sha256": "71bbe4720c9445da1f7daae968195d3b4033957d19696ddf1888379b2aa7fc20"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/public/v4_bulletins.jsonl",
+      "bytes": 169292,
+      "sha256": "8796e11a4fbc3af97d5ebfc98c4e24f1d46afa7cf5b77f672555fdaa7cd2e675"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/public/v4_forecasts.jsonl",
+      "bytes": 1344,
+      "sha256": "4959c9f9cde593658ffd5938196684b7a53c374a7e9f58e3de366f39ff1a216c"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_earthquake_effects.csv",
+      "bytes": 1118,
+      "sha256": "7d509423f51da3140d894b3afa58c53a8e179d34ac95856388236b54055eda59"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_events.csv",
+      "bytes": 1567,
+      "sha256": "ffe6a8cd39f4ef0c483ec51b760e9c5f29cb8ccab2b827eb8f529258048059a7"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "e161fd2f9e2e007b8da152cd4dae5af5069d2b6c3bfd4902e5f2ff182ab503ba"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_stress_events.csv",
+      "bytes": 278,
+      "sha256": "18f5a5eaa42b77ac3ff9b35fce8f957e270b529caa52d04d352ad33708c653f1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14/truth/v4_weather_truth.csv",
+      "bytes": 82479,
+      "sha256": "53a2e06976484b83224e98eadf3054b046bbc8ff0131ae8242535f447721a940"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "5ba13627a5024468ee91195f2aa432ca5f6a4081196511deeba17f57ae4abb35"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W14_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "ea50e02f9e6d3d0d8ede0e20a24f2dad6082d2d5109edb40d5011386d08b7983"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/config/v4_fiber_config.json",
+      "bytes": 357,
+      "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/config/v4_scenario.json",
+      "bytes": 1140,
+      "sha256": "97fa6ac4cffb1aa134c8b9903eceb292ede4db73314eb4f84d90b9998267e6d1"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/config/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/public/footprint.csv",
+      "bytes": 1389,
+      "sha256": "e28ef316861f20f4fd83a169f3073b589044afa6f6c81509f4015e2fb02063ad"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/public/targets.csv",
+      "bytes": 5795,
+      "sha256": "d7b84fff727784b6895f7a175c484d04b18f6316e1cba76fb97d684b08eb572e"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/public/v4_bulletins.jsonl",
+      "bytes": 181050,
+      "sha256": "20ab1183609c821d5f3dbb26eef18320ab5f114d7b7b6b404bd3432c81504c1a"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/public/v4_forecasts.jsonl",
+      "bytes": 1473,
+      "sha256": "f6b3e0b48a4e0edbda39412acbde8ec5942f36f6d87259a19bfe84e5099f02df"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/public/v4_night_calendar.csv",
+      "bytes": 3647,
+      "sha256": "71e300e0e1fbd8ea786acd06200a0532100311d6e5c43c81cb2e16665d0a03ed"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_earthquake_effects.csv",
+      "bytes": 1398,
+      "sha256": "0ef86517c8bcf465d6a341acd1c5784ffd7b95c84fe92ca4211f0f14db55e9de"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_events.csv",
+      "bytes": 1797,
+      "sha256": "5dea79c75dd44c569fe95f5f692d37fd7557811bd247f8236a83e81cf89e0a42"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_observation_requests.jsonl",
+      "bytes": 720,
+      "sha256": "4fa5a6dafda36437d9546ad839896ec20e76571d18b461e4fd23d3c9ed7304eb"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_slots.csv",
+      "bytes": 46048,
+      "sha256": "1d737f5ffad1060ed95f077c66e71dc21a973be0d04448f5c766032b5d8a84f2"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_stress_events.csv",
+      "bytes": 278,
+      "sha256": "c6bef0b79c6f6f7bbbbe94c1419e6fd77b3ca5c893aea40049a2b9e6789b5209"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15/truth/v4_weather_truth.csv",
+      "bytes": 81952,
+      "sha256": "202fd122a5d7ce383c039f4024d00ebffeaf1aa3c8441d076f439eb0c04e366e"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15_spec_SYNTHETIC/card.json",
+      "bytes": 314,
+      "sha256": "598cf85eb45fe93b66b97497c0aac875a75aaf435a0a41d86364250809b94d33"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15_spec_SYNTHETIC/v4_catalog_config.json",
+      "bytes": 1898,
+      "sha256": "76b957622dfa6e3dbb7c61a64ab4fc456841009c332b5cd2e18d27c2c217b235"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15_spec_SYNTHETIC/v4_fiber_config.json",
+      "bytes": 506,
+      "sha256": "90f13127132e8cd5e6313d69227d4364f5b64184cdce25d7d66f4c2d2870282f"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15_spec_SYNTHETIC/v4_score_config.json",
+      "bytes": 909,
+      "sha256": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40"
+    },
+    {
+      "path": "worlds_SYNTHETIC/W15_spec_SYNTHETIC/v4_weather_config.json",
+      "bytes": 4448,
+      "sha256": "0c8410d1e3f3f5eeb596b66ab62063224ac795f214a3a8367dfd437fe6a45010"
+    }
+  ],
+  "actual_private_files_read": false,
+  "no_deployment_candidate": true,
+  "stopped": true
+}

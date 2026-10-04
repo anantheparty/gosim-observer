@@ -1,0 +1,195 @@
+[
+  {
+    "card": "L1",
+    "prefix_now_utc": "2026-12-03T08:14:13Z",
+    "observe_rank": 987,
+    "original_action": {
+      "action": "wait",
+      "until_utc": "2026-12-03T08:15:00Z"
+    },
+    "proposal": {
+      "chosen": {
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 68.0381059,
+            "az_deg": 314.6549725
+          },
+          "assignments": {
+            "3": "V4T004819",
+            "4": "V4T004144"
+          },
+          "duration_seconds": 60,
+          "program": "DARK"
+        },
+        "start_utc": "2026-12-03T08:14:13Z",
+        "lead_seconds": 0,
+        "effective_seconds": 47,
+        "predicted_science_gain": 0.0817887941291579,
+        "C": 0.8925977154683338,
+        "E": 0.95,
+        "predicted_factors": {
+          "V4T004819": 0.06486056542925585,
+          "V4T004144": 0.0866001644395551
+        },
+        "future_truth_used": false
+      },
+      "seconds": 0.29850212699966505,
+      "eligible_count": 3013,
+      "centers_checked": 384,
+      "belief_forecast_only": true,
+      "exact_counterfactual_score": false
+    },
+    "certificate": {
+      "adopt": true,
+      "reason": "terminal_completion_invariant_monotone",
+      "actual_duration_seconds": 47,
+      "assigned_count": 2,
+      "factor_lower": {
+        "V4T004144": 0.0,
+        "V4T004819": 0.0
+      },
+      "factor_upper_new": {
+        "V4T004144": 0.4785882340444703,
+        "V4T004819": 0.3594581736405
+      },
+      "certificate_scope": "official_v4_generator_family",
+      "maximum_raw_weather_quality": 3.002055939870124,
+      "science_delta_lower": 0.0,
+      "required_delta_lower": 0.0,
+      "jain_delta": 0.0,
+      "request_delta_lower": 0.0,
+      "loss_rank_future_effect": false
+    },
+    "legal_new_action": true,
+    "actual_weather_scored": false,
+    "actual_score_gain_known": false,
+    "private_columns_interpreted": [],
+    "belief": "original unconditional public seasonal C/E prior; actual fault-policy latent belief not reconstructed",
+    "baseline_comparison": "current fault-v1 literal terminal wait, not full-season replacement of fault-v1",
+    "original_terminal_report_guard": "would freeze the literal wait and release it after a report; no wait-to-observe conversion",
+    "public_resync_invalidated_ranks": [],
+    "maximum_weather_component_ratio": 3.0,
+    "official_protocol_and_normalizer_valid": true,
+    "official_nominal_geometry": {
+      "V4T004819": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 67.03202956301011
+      },
+      "V4T004144": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 67.60855225934722
+      }
+    },
+    "unknown_actual_pointing_offset_used": false,
+    "analytical_airmass_lower": 0.9988588539876737,
+    "maximum_raw_quality_with_airmass": 3.002055939870124,
+    "seconds": 0.40119607298402116
+  },
+  {
+    "card": "L3",
+    "prefix_now_utc": "2026-12-22T08:14:37Z",
+    "observe_rank": 1050,
+    "original_action": {
+      "action": "wait",
+      "until_utc": "2026-12-22T08:15:00Z"
+    },
+    "proposal": {
+      "chosen": {
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 81.6566479,
+            "az_deg": 287.1132646
+          },
+          "assignments": {
+            "0": "V4T002772",
+            "5": "V4T000781",
+            "6": "V4T006956",
+            "7": "V4T006606"
+          },
+          "duration_seconds": 60,
+          "program": "DARK"
+        },
+        "start_utc": "2026-12-22T08:14:37Z",
+        "lead_seconds": 0,
+        "effective_seconds": 23,
+        "predicted_science_gain": 0.10057155315428293,
+        "C": 0.9645730222441018,
+        "E": 0.95,
+        "predicted_factors": {
+          "V4T002772": 0.011591351065786458,
+          "V4T000781": 0.04661163858223575,
+          "V4T006956": 0.10159645313281979,
+          "V4T006606": 0.020764103260930634
+        },
+        "future_truth_used": false
+      },
+      "seconds": 0.36773972399532795,
+      "eligible_count": 5073,
+      "centers_checked": 384,
+      "belief_forecast_only": true,
+      "exact_counterfactual_score": false
+    },
+    "certificate": {
+      "adopt": true,
+      "reason": "terminal_completion_invariant_monotone",
+      "actual_duration_seconds": 23,
+      "assigned_count": 4,
+      "factor_lower": {
+        "V4T000781": 0.0,
+        "V4T002772": 0.0,
+        "V4T006606": 0.0,
+        "V4T006956": 0.0
+      },
+      "factor_upper_new": {
+        "V4T000781": 0.2261229341211354,
+        "V4T002772": 0.05632450496746738,
+        "V4T006606": 0.10076117244479281,
+        "V4T006956": 0.4929335343170708
+      },
+      "certificate_scope": "official_v4_generator_family",
+      "maximum_raw_weather_quality": 3.002055939870124,
+      "science_delta_lower": 0.0,
+      "required_delta_lower": 0.0,
+      "jain_delta": 0.0,
+      "request_delta_lower": 0.0,
+      "loss_rank_future_effect": false
+    },
+    "legal_new_action": true,
+    "actual_weather_scored": false,
+    "actual_score_gain_known": false,
+    "private_columns_interpreted": [],
+    "belief": "original unconditional public seasonal C/E prior; actual fault-policy latent belief not reconstructed",
+    "baseline_comparison": "current fault-v1 literal terminal wait, not full-season replacement of fault-v1",
+    "original_terminal_report_guard": "would freeze the literal wait and release it after a report; no wait-to-observe conversion",
+    "public_resync_invalidated_ranks": [
+      90,
+      91
+    ],
+    "maximum_weather_component_ratio": 3.0,
+    "official_protocol_and_normalizer_valid": true,
+    "official_nominal_geometry": {
+      "V4T002772": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 80.28866973111391
+      },
+      "V4T000781": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 81.26192676477943
+      },
+      "V4T006956": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 81.1779286795854
+      },
+      "V4T006606": {
+        "same_fiber": true,
+        "minimum_altitude_deg": 81.07850379081928
+      }
+    },
+    "unknown_actual_pointing_offset_used": false,
+    "analytical_airmass_lower": 0.9988588539876737,
+    "maximum_raw_quality_with_airmass": 3.002055939870124,
+    "seconds": 0.4752053400152363
+  }
+]

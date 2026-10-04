@@ -1,0 +1,400 @@
+{
+  "records": [
+    {
+      "card": "alpha",
+      "files": [
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/config/v4_scenario.json",
+          "sha256": "8910f40c25eddaec7db772277b8e89fad7968a0f0ef68992e3d74a256481ce9d",
+          "bytes": 1159,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "fiber_config",
+            "limits",
+            "minimum_altitude_deg",
+            "name",
+            "products",
+            "schema_version",
+            "score_config",
+            "site",
+            "stress",
+            "task_card"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/config/v4_fiber_config.json",
+          "sha256": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+          "bytes": 360,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "exposure",
+            "field",
+            "schema_version",
+            "site"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/config/v4_score_config.json",
+          "sha256": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+          "bytes": 909,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "airmass_exponent",
+            "exposure_zero_point_seconds",
+            "flux_zero_point",
+            "lunar_model",
+            "observation_requests",
+            "program",
+            "q0",
+            "reporting",
+            "required",
+            "schema_version",
+            "uniformity"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/public/targets.csv",
+          "sha256": "73242c16513c33f61dbe6cd96a358447e35267d1de6d7cef7cc4b71fad0ae0bc",
+          "bytes": 591701,
+          "columns": [
+            "target_id",
+            "ra_deg",
+            "dec_deg",
+            "target_class",
+            "feature_flux",
+            "science_weight",
+            "required"
+          ],
+          "rows": 10000
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/public/footprint.csv",
+          "sha256": "6f62b8733c3d0a405bde82a131110b28b383f01f91bac6e6324fb3f0661b8882",
+          "bytes": 3353,
+          "columns": [
+            "component_id",
+            "vertex_index",
+            "ra_deg",
+            "dec_deg"
+          ],
+          "rows": 120
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/alpha/alpha/public/v4_night_calendar.csv",
+          "sha256": "313243fdf7aba33fa476e4c31403ba08ee3b90c354c7bb0f82d102122d78be3c",
+          "bytes": 4445,
+          "columns": [
+            "night_id",
+            "night_date",
+            "solar_dusk_utc",
+            "solar_dawn_utc",
+            "observing_start_utc",
+            "observing_end_utc",
+            "night_seconds",
+            "slot_count"
+          ],
+          "rows": 38
+        }
+      ],
+      "generator_config_filenames_present_in_public_config_directory": []
+    },
+    {
+      "card": "beta",
+      "files": [
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/config/v4_scenario.json",
+          "sha256": "fbfc80887b0d50290d4bd20eb60a270111913c1cb6068a0b051010dd01c37c3c",
+          "bytes": 1156,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "fiber_config",
+            "limits",
+            "minimum_altitude_deg",
+            "name",
+            "products",
+            "schema_version",
+            "score_config",
+            "site",
+            "stress",
+            "task_card"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/config/v4_fiber_config.json",
+          "sha256": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+          "bytes": 360,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "exposure",
+            "field",
+            "schema_version",
+            "site"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/config/v4_score_config.json",
+          "sha256": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+          "bytes": 909,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "airmass_exponent",
+            "exposure_zero_point_seconds",
+            "flux_zero_point",
+            "lunar_model",
+            "observation_requests",
+            "program",
+            "q0",
+            "reporting",
+            "required",
+            "schema_version",
+            "uniformity"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/public/targets.csv",
+          "sha256": "4769aa6f76cd0225d58dff58e2cf8628ec4c95c9839d946bc8a80aa23cc0b166",
+          "bytes": 567618,
+          "columns": [
+            "target_id",
+            "ra_deg",
+            "dec_deg",
+            "target_class",
+            "feature_flux",
+            "science_weight",
+            "required"
+          ],
+          "rows": 9600
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/public/footprint.csv",
+          "sha256": "6437c9db4bb9d71f432b5b10eb953b8df4995435b75b232734f3beb5b92bd960",
+          "bytes": 3377,
+          "columns": [
+            "component_id",
+            "vertex_index",
+            "ra_deg",
+            "dec_deg"
+          ],
+          "rows": 120
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/beta/beta/public/v4_night_calendar.csv",
+          "sha256": "32813747337d6d2057a93ea7bb99e90fa52d0ea2b3701f0d87a0eaf135a577b5",
+          "bytes": 4445,
+          "columns": [
+            "night_id",
+            "night_date",
+            "solar_dusk_utc",
+            "solar_dawn_utc",
+            "observing_start_utc",
+            "observing_end_utc",
+            "night_seconds",
+            "slot_count"
+          ],
+          "rows": 38
+        }
+      ],
+      "generator_config_filenames_present_in_public_config_directory": []
+    },
+    {
+      "card": "gamma",
+      "files": [
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/config/v4_scenario.json",
+          "sha256": "2008e58fe43ed2c510466e626a1f00d52021a586f6fc6694f03fbf452e8335b1",
+          "bytes": 1216,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "fiber_config",
+            "limits",
+            "minimum_altitude_deg",
+            "name",
+            "products",
+            "schema_version",
+            "score_config",
+            "site",
+            "stress",
+            "task_card"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/config/v4_fiber_config.json",
+          "sha256": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+          "bytes": 360,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "exposure",
+            "field",
+            "schema_version",
+            "site"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/config/v4_score_config.json",
+          "sha256": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+          "bytes": 909,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "airmass_exponent",
+            "exposure_zero_point_seconds",
+            "flux_zero_point",
+            "lunar_model",
+            "observation_requests",
+            "program",
+            "q0",
+            "reporting",
+            "required",
+            "schema_version",
+            "uniformity"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/public/targets.csv",
+          "sha256": "3de3c2e917fab98d0e81f8280f512f85dbebf4576cd611ea1efe52c8c9e2d488",
+          "bytes": 586278,
+          "columns": [
+            "target_id",
+            "ra_deg",
+            "dec_deg",
+            "target_class",
+            "feature_flux",
+            "science_weight",
+            "required"
+          ],
+          "rows": 9900
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/public/footprint.csv",
+          "sha256": "da1bcfe970819a110034caf5212eddad4c7342762f1f574fb90d5facbce4263b",
+          "bytes": 3380,
+          "columns": [
+            "component_id",
+            "vertex_index",
+            "ra_deg",
+            "dec_deg"
+          ],
+          "rows": 120
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/gamma/gamma/public/v4_night_calendar.csv",
+          "sha256": "55da1bc4ab5dbbafd19c24abc01eedf5278b11552ecb04bd8a36c784734d6a16",
+          "bytes": 4445,
+          "columns": [
+            "night_id",
+            "night_date",
+            "solar_dusk_utc",
+            "solar_dawn_utc",
+            "observing_start_utc",
+            "observing_end_utc",
+            "night_seconds",
+            "slot_count"
+          ],
+          "rows": 38
+        }
+      ],
+      "generator_config_filenames_present_in_public_config_directory": []
+    },
+    {
+      "card": "delta",
+      "files": [
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/config/v4_scenario.json",
+          "sha256": "f189487ee3c40dd082be08f8d11890949d36d8a21c91715459d6cc4c47cb759a",
+          "bytes": 1216,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "fiber_config",
+            "limits",
+            "minimum_altitude_deg",
+            "name",
+            "products",
+            "schema_version",
+            "score_config",
+            "site",
+            "stress",
+            "task_card"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/config/v4_fiber_config.json",
+          "sha256": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+          "bytes": 360,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "exposure",
+            "field",
+            "schema_version",
+            "site"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/config/v4_score_config.json",
+          "sha256": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+          "bytes": 909,
+          "seed_key_paths": [],
+          "top_level_keys": [
+            "airmass_exponent",
+            "exposure_zero_point_seconds",
+            "flux_zero_point",
+            "lunar_model",
+            "observation_requests",
+            "program",
+            "q0",
+            "reporting",
+            "required",
+            "schema_version",
+            "uniformity"
+          ]
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/public/targets.csv",
+          "sha256": "a9bcbe621df83bbe074075f1a786e80490dd578fbc145b028cdc30ced220f2ea",
+          "bytes": 554321,
+          "columns": [
+            "target_id",
+            "ra_deg",
+            "dec_deg",
+            "target_class",
+            "feature_flux",
+            "science_weight",
+            "required"
+          ],
+          "rows": 9400
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/public/footprint.csv",
+          "sha256": "d33e3040681aa36993ab98c28205ecc4e4800a7b4452d197bfaf69cc261835fe",
+          "bytes": 3365,
+          "columns": [
+            "component_id",
+            "vertex_index",
+            "ra_deg",
+            "dec_deg"
+          ],
+          "rows": 120
+        },
+        {
+          "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/practice_cards/delta/delta/public/v4_night_calendar.csv",
+          "sha256": "81f8cdcdd099f2f4cb8c6216577c7274d2fe7188b68a3acff5ca1f5ad3f6c2d4",
+          "bytes": 4445,
+          "columns": [
+            "night_id",
+            "night_date",
+            "solar_dusk_utc",
+            "solar_dawn_utc",
+            "observing_start_utc",
+            "observing_end_utc",
+            "night_seconds",
+            "slot_count"
+          ],
+          "rows": 38
+        }
+      ],
+      "generator_config_filenames_present_in_public_config_directory": []
+    }
+  ],
+  "seed_values_emitted": false,
+  "future_publication_files_read": false,
+  "candidate_domain": null,
+  "conclusion": "No disclosed seed domain or complete generator configs in these six public inputs; seed recovery experiment not admitted"
+}

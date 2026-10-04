@@ -1,0 +1,47 @@
+{
+  "by_class": {},
+  "components": {
+    "observation_request_reward": 0,
+    "report_settlement": 0.0,
+    "required_penalty": -0.0,
+    "sum_best_scores": 0,
+    "uniformity_penalty": -200.0
+  },
+  "counts": {
+    "decisions": 7,
+    "invalidated_observations": 1,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": 1,
+    "observe_actions": 5,
+    "required_missing": 0,
+    "targets_observed": 0
+  },
+  "invalidations": [
+    {
+      "event_id": "DL",
+      "invalidated_observations": 1,
+      "window": [
+        2,
+        3
+      ]
+    }
+  ],
+  "observation_requests": [],
+  "scenario": "rank_loss",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "67e40df349ff247d2ea7e82f1ac2fd2a0f5e79f62237e9b69801d242fa5e5e8e",
+    "messages": "7a57a662de42720b7f89bd8632a7c81ab6e20707a0a4030b20dbe4f837a910dc",
+    "observations": "6f069331bdc4b22624c97fc7a4ce185131fd734cdfb1dae09363b44400997beb",
+    "scenario": "4a10c2417672ad803dabd83c2ed6b0a2b1c76c794112b46942e56c43f198e5f5"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "agent_finished"
+  },
+  "total": -200.0,
+  "uniformity_bands": {
+    "ra_70_80": 0.0
+  }
+}

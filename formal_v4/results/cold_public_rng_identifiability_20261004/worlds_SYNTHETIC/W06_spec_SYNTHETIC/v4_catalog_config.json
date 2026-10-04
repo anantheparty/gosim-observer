@@ -1,0 +1,94 @@
+{
+  "footprint": {
+    "area_tolerance_fraction": 0.02,
+    "component_area_weights": [
+      0.5,
+      0.5
+    ],
+    "component_centers": [
+      [
+        30.0,
+        -35.0
+      ],
+      [
+        75.0,
+        -35.0
+      ],
+      [
+        120.0,
+        -35.0
+      ]
+    ],
+    "component_gap_deg": 5.0,
+    "harmonic_amplitude_ranges": [
+      0.06,
+      0.04,
+      0.02
+    ],
+    "n_components": 2,
+    "pole_margin_deg": 5.0,
+    "total_area_deg2": 900.0,
+    "vertices_per_component": 24
+  },
+  "observability": {
+    "end_date": "2027-02-01",
+    "max_position_attempts": 64,
+    "minimum_altitude_deg": 30.0,
+    "minimum_window_seconds": 600,
+    "start_date": "2027-01-01",
+    "sun_altitude_limit_deg": -18.0
+  },
+  "output": {
+    "directory": "products"
+  },
+  "schema_version": "v4-catalog-v2",
+  "seed": 667,
+  "seed_derivation": "sha256-v1",
+  "site": {
+    "latitude_deg": -24.6157,
+    "longitude_deg": -70.3976,
+    "name": "VISTA/Paranal (4MOST)",
+    "utc_offset_hours": -4.0
+  },
+  "targets": {
+    "class_fractions": {
+      "BGS": 0.24,
+      "ELG": 0.34,
+      "LRG": 0.2,
+      "QSO": 0.14,
+      "Star": 0.08
+    },
+    "cluster_sigma_deg": 0.5,
+    "clustered_fraction": 0.0,
+    "models": {
+      "BGS": {
+        "flux_log_sigma": 0.3,
+        "flux_median": 1.25,
+        "science_weight": 0.45
+      },
+      "ELG": {
+        "flux_log_sigma": 0.4,
+        "flux_median": 0.55,
+        "science_weight": 1.0
+      },
+      "LRG": {
+        "flux_log_sigma": 0.35,
+        "flux_median": 0.35,
+        "science_weight": 1.0
+      },
+      "QSO": {
+        "flux_log_sigma": 0.5,
+        "flux_median": 0.18,
+        "science_weight": 1.7
+      },
+      "Star": {
+        "flux_log_sigma": 0.25,
+        "flux_median": 4.0,
+        "science_weight": 0.3
+      }
+    },
+    "n_cluster_centers": 1,
+    "required_fraction": 0.05,
+    "total_count": 96
+  }
+}

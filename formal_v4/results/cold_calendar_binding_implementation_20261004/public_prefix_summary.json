@@ -1,0 +1,380 @@
+[
+  {
+    "card": "L1",
+    "history_steps": 940,
+    "history_last_utc": "2026-11-26T01:00:00Z",
+    "survey_end_utc": "2026-12-03T08:15:00Z",
+    "all_short_wait_tails_in_supplied_prefix": 8,
+    "terminal_prefix_observed": false,
+    "rows": [
+      {
+        "step": 106,
+        "observe_rank": 106,
+        "kind": "tail",
+        "now_utc": "2026-11-02T08:29:59Z",
+        "original_action": {
+          "action": "wait",
+          "until_utc": "2026-11-02T08:30:00Z"
+        },
+        "certificate": {
+          "adopt": false,
+          "reason": "original_wait_is_not_terminal"
+        },
+        "proposal": {
+          "chosen": {
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 87.8393141,
+                "az_deg": 60.3807225
+              },
+              "assignments": {
+                "0": "V4T002607",
+                "1": "V4T005759",
+                "2": "V4T001206",
+                "3": "V4T006904",
+                "4": "V4T002416",
+                "5": "V4T006387",
+                "6": "V4T000247",
+                "7": "V4T005004",
+                "8": "V4T001875",
+                "9": "V4T003467",
+                "10": "V4T000666",
+                "11": "V4T002144",
+                "12": "V4T001465",
+                "13": "V4T003163",
+                "14": "V4T000115",
+                "15": "V4T005756"
+              },
+              "duration_seconds": 60,
+              "program": "DARK"
+            },
+            "start_utc": "2026-11-02T08:29:59Z",
+            "lead_seconds": 0,
+            "effective_seconds": 1,
+            "predicted_science_gain": 0.028615736057219506,
+            "C": 0.8395235292424383,
+            "E": 0.95,
+            "predicted_factors": {
+              "V4T002607": 0.00077477017706001,
+              "V4T005759": 0.005988184339927441,
+              "V4T001206": 0.010420372374012813,
+              "V4T006904": 0.0011186215980876122,
+              "V4T002416": 0.0021231820208094877,
+              "V4T006387": 0.0016528946939809873,
+              "V4T000247": 0.001232017526975659,
+              "V4T005004": 0.0022192013022087212,
+              "V4T001875": 0.003320089788679152,
+              "V4T003467": 0.0031444640093041287,
+              "V4T000666": 0.006836186601545055,
+              "V4T002144": 0.004970334142266353,
+              "V4T001465": 0.004616091557324469,
+              "V4T003163": 0.001172498580542465,
+              "V4T000115": 0.0032638283563802624,
+              "V4T005756": 0.008745136833492567
+            },
+            "future_truth_used": false
+          },
+          "seconds": 0.3580483020050451,
+          "eligible_count": 4767,
+          "centers_checked": 384,
+          "belief_forecast_only": true,
+          "exact_counterfactual_score": false
+        },
+        "certified_complete_targets": 818,
+        "certificate_family_weather_ratio": 3.0,
+        "certificate_family_maximum_raw_quality": 3.002055939870124,
+        "belief": "unconditional public seasonal prior; no fake feedback state",
+        "runtime_action_change": false,
+        "actual_score_evaluated": false,
+        "prefix_steps_consumed": 107
+      },
+      {
+        "step": 107,
+        "observe_rank": 106,
+        "kind": "gap",
+        "now_utc": "2026-11-02T08:30:00Z",
+        "original_action": {
+          "action": "wait",
+          "until_utc": "2026-11-03T00:30:00Z"
+        },
+        "certificate": {
+          "adopt": false,
+          "reason": "unseen_night_start_information_and_counterfactual_action",
+          "future_truth_used": false,
+          "rank_change": 1,
+          "pending_loss_rank_risk": true,
+          "same_end_does_not_certify_same_strong_action": true
+        },
+        "proposal": {
+          "chosen": {
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 46.4187927,
+                "az_deg": 109.8925148
+              },
+              "assignments": {
+                "0": "V4T000877",
+                "1": "V4T003687",
+                "2": "V4T003602",
+                "3": "V4T001958",
+                "4": "V4T005530",
+                "5": "V4T001749",
+                "6": "V4T004574",
+                "7": "V4T007283",
+                "8": "V4T000816",
+                "9": "V4T006531",
+                "10": "V4T001946",
+                "11": "V4T004876",
+                "12": "V4T007320",
+                "13": "V4T005418",
+                "14": "V4T003768",
+                "15": "V4T006566"
+              },
+              "duration_seconds": 3600,
+              "program": "BACKUP"
+            },
+            "start_utc": "2026-11-02T23:45:00Z",
+            "lead_seconds": 2700,
+            "effective_seconds": 900,
+            "predicted_science_gain": 13.805084498638355,
+            "C": 0.8399588779903537,
+            "E": 0.95,
+            "predicted_factors": {
+              "V4T000877": 0.5733778721738538,
+              "V4T003687": 0.848048767799608,
+              "V4T003602": 0.9220102917850941,
+              "V4T001958": 0.614611262529715,
+              "V4T005530": 0.8177478154435055,
+              "V4T001749": 0.771967783671327,
+              "V4T004574": 0.6487062971363838,
+              "V4T007283": 0.8337066557344676,
+              "V4T000816": 0.5120891022548008,
+              "V4T006531": 0.39883666476657104,
+              "V4T001946": 1.0,
+              "V4T004876": 0.7468377963676995,
+              "V4T007320": 0.863566441656359,
+              "V4T005418": 0.9192869252323721,
+              "V4T003768": 0.8100069775817877,
+              "V4T006566": 1.0
+            },
+            "future_truth_used": false
+          },
+          "seconds": 0.3068018900230527,
+          "eligible_count": 3360,
+          "centers_checked": 384,
+          "belief_forecast_only": true,
+          "exact_counterfactual_score": false
+        },
+        "certified_complete_targets": 818,
+        "certificate_family_weather_ratio": 3.0,
+        "certificate_family_maximum_raw_quality": 3.002055939870124,
+        "belief": "unconditional public seasonal prior; no fake feedback state",
+        "runtime_action_change": false,
+        "actual_score_evaluated": false,
+        "prefix_steps_consumed": 108
+      }
+    ],
+    "seconds": 0.7614846010110341,
+    "history_sha256": "09d342f050b3627a18db45f2fb68ffa82f737c8c1b25092f6aae8bac32356f96",
+    "initialize_sha256": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+    "actual_factor_columns_read": false,
+    "teacher_labels_read": false
+  },
+  {
+    "card": "L2",
+    "history_steps": 1194,
+    "history_last_utc": "2026-12-13T05:55:35Z",
+    "survey_end_utc": "2026-12-14T08:15:00Z",
+    "all_short_wait_tails_in_supplied_prefix": 16,
+    "terminal_prefix_observed": false,
+    "rows": [
+      {
+        "step": 88,
+        "observe_rank": 88,
+        "kind": "tail",
+        "now_utc": "2026-11-09T08:14:01Z",
+        "original_action": {
+          "action": "wait",
+          "until_utc": "2026-11-09T08:15:00Z"
+        },
+        "certificate": {
+          "adopt": false,
+          "reason": "original_wait_is_not_terminal"
+        },
+        "proposal": {
+          "chosen": {
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 81.3564846,
+                "az_deg": 15.2402038
+              },
+              "assignments": {
+                "0": "V4T005711",
+                "1": "V4T004872",
+                "2": "V4T007681",
+                "3": "V4T001581",
+                "4": "V4T006773",
+                "5": "V4T001318",
+                "6": "V4T000183",
+                "7": "V4T007000",
+                "9": "V4T005738",
+                "10": "V4T005723",
+                "11": "V4T007405",
+                "12": "V4T003623",
+                "13": "V4T003063",
+                "14": "V4T003455",
+                "15": "V4T002714"
+              },
+              "duration_seconds": 60,
+              "program": "DARK"
+            },
+            "start_utc": "2026-11-09T08:14:01Z",
+            "lead_seconds": 0,
+            "effective_seconds": 59,
+            "predicted_science_gain": 1.111308779045732,
+            "C": 0.8443986410291071,
+            "E": 0.95,
+            "predicted_factors": {
+              "V4T005711": 0.028931057786630375,
+              "V4T004872": 0.045752051153580366,
+              "V4T007681": 0.031226624968439354,
+              "V4T001581": 0.08197731627830616,
+              "V4T006773": 0.08991660049550383,
+              "V4T001318": 0.07306680111564855,
+              "V4T000183": 0.059197148236698395,
+              "V4T007000": 0.05356885350266154,
+              "V4T005738": 0.04327409847568134,
+              "V4T005723": 0.05840564256436852,
+              "V4T007405": 0.06467665385041645,
+              "V4T003623": 0.05240013026805082,
+              "V4T003063": 0.08995783245879524,
+              "V4T003455": 0.06401729566061999,
+              "V4T002714": 0.05920330460152269
+            },
+            "future_truth_used": false
+          },
+          "seconds": 0.3352614819887094,
+          "eligible_count": 4097,
+          "centers_checked": 384,
+          "belief_forecast_only": true,
+          "exact_counterfactual_score": false
+        },
+        "certified_complete_targets": 642,
+        "certificate_family_weather_ratio": 3.0,
+        "certificate_family_maximum_raw_quality": 3.002055939870124,
+        "belief": "unconditional public seasonal prior; no fake feedback state",
+        "runtime_action_change": false,
+        "actual_score_evaluated": false,
+        "prefix_steps_consumed": 89
+      },
+      {
+        "step": 89,
+        "observe_rank": 88,
+        "kind": "gap",
+        "now_utc": "2026-11-09T08:15:00Z",
+        "original_action": {
+          "action": "wait",
+          "until_utc": "2026-11-10T00:30:00Z"
+        },
+        "certificate": {
+          "adopt": false,
+          "reason": "unseen_night_start_information_and_counterfactual_action",
+          "future_truth_used": false,
+          "rank_change": 1,
+          "pending_loss_rank_risk": true,
+          "same_end_does_not_certify_same_strong_action": true
+        },
+        "proposal": {
+          "chosen": {
+            "action": {
+              "action": "observe",
+              "pointing": {
+                "alt_deg": 49.7831311,
+                "az_deg": 80.577767
+              },
+              "assignments": {
+                "0": "V4T005294",
+                "1": "V4T005369",
+                "2": "V4T003615",
+                "3": "V4T007482",
+                "4": "V4T002491",
+                "5": "V4T002916",
+                "6": "V4T008155",
+                "7": "V4T003135",
+                "8": "V4T003470",
+                "9": "V4T001783",
+                "10": "V4T002532",
+                "11": "V4T001492",
+                "12": "V4T003337",
+                "13": "V4T000575",
+                "14": "V4T007329",
+                "15": "V4T003133"
+              },
+              "duration_seconds": 3600,
+              "program": "BACKUP"
+            },
+            "start_utc": "2026-11-09T23:45:00Z",
+            "lead_seconds": 2700,
+            "effective_seconds": 900,
+            "predicted_science_gain": 15.13273067471721,
+            "C": 0.8454188076974856,
+            "E": 0.95,
+            "predicted_factors": {
+              "V4T005294": 0.823557006240039,
+              "V4T005369": 0.46897982297270935,
+              "V4T003615": 0.9727638860813065,
+              "V4T007482": 1.0,
+              "V4T002491": 1.0,
+              "V4T002916": 1.0,
+              "V4T008155": 0.9513702690343846,
+              "V4T003135": 0.7678200698840263,
+              "V4T003470": 0.873354701002941,
+              "V4T001783": 1.0,
+              "V4T002532": 1.0,
+              "V4T001492": 0.7668072652923157,
+              "V4T003337": 0.8582422546402583,
+              "V4T000575": 1.0,
+              "V4T007329": 1.0,
+              "V4T003133": 1.0
+            },
+            "future_truth_used": false
+          },
+          "seconds": 0.28782782197231427,
+          "eligible_count": 2831,
+          "centers_checked": 384,
+          "belief_forecast_only": true,
+          "exact_counterfactual_score": false
+        },
+        "certified_complete_targets": 642,
+        "certificate_family_weather_ratio": 3.0,
+        "certificate_family_maximum_raw_quality": 3.002055939870124,
+        "belief": "unconditional public seasonal prior; no fake feedback state",
+        "runtime_action_change": false,
+        "actual_score_evaluated": false,
+        "prefix_steps_consumed": 90
+      }
+    ],
+    "seconds": 0.7225431829574518,
+    "history_sha256": "18bc5944d0d85b376dae476ffa50889b212ad27f5f82039cdf83b6efd9c16e67",
+    "initialize_sha256": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a",
+    "actual_factor_columns_read": false,
+    "teacher_labels_read": false
+  },
+  {
+    "card": "L3",
+    "history_steps": 65,
+    "history_last_utc": "2026-11-16T04:56:40Z",
+    "survey_end_utc": "2026-12-22T08:15:00Z",
+    "all_short_wait_tails_in_supplied_prefix": 0,
+    "terminal_prefix_observed": false,
+    "rows": [],
+    "seconds": 0.016646456962917,
+    "history_sha256": "28ffcfae284d18b24d477cfecd45a9f268d613a5277dd7ca990f37994f35dba1",
+    "initialize_sha256": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+    "actual_factor_columns_read": false,
+    "teacher_labels_read": false
+  }
+]

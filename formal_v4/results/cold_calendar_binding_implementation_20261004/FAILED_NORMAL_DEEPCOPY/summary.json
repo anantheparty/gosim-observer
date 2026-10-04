@@ -1,0 +1,457 @@
+{
+  "adversarial": {
+    "orientation_delta": {
+      "total": 0.75048,
+      "components": {
+        "sum_best_scores": 0.75048,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "request_delta": {
+      "total": -100.14,
+      "components": {
+        "sum_best_scores": -0.14,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": -100.0
+      }
+    },
+    "program_dilution_delta": {
+      "total": -0.2,
+      "components": {
+        "sum_best_scores": -0.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "terminal_safe_delta": {
+      "total": 0.554013,
+      "components": {
+        "sum_best_scores": 0.554013,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "jain_naive_delta": {
+      "total": -18.8,
+      "components": {
+        "sum_best_scores": 1.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -20.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "jain_safe_delta": {
+      "total": 0.0,
+      "components": {
+        "sum_best_scores": 0.0,
+        "required_penalty": 0.0,
+        "uniformity_penalty": 0.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "loss_extra_rank_delta": {
+      "total": -201.2,
+      "components": {
+        "sum_best_scores": -1.2,
+        "required_penalty": 0.0,
+        "uniformity_penalty": -200.0,
+        "report_settlement": 0.0,
+        "observation_request_reward": 0
+      }
+    },
+    "prenight_gate": {
+      "adopt": false,
+      "reason": "unseen_night_start_information_and_counterfactual_action",
+      "future_truth_used": false,
+      "rank_change": 0,
+      "pending_loss_rank_risk": false,
+      "same_end_does_not_certify_same_strong_action": true
+    }
+  },
+  "generator": {
+    "seeds": [
+      910701,
+      910702,
+      910703,
+      910704,
+      910705,
+      910706,
+      910707,
+      910708
+    ],
+    "rows": [
+      {
+        "seed": 910701,
+        "delta": {
+          "total": 202.12,
+          "components": {
+            "sum_best_scores": 2.12,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.137291",
+            "transparency": "0.815559",
+            "sky_quality": "0.916124",
+            "instrument_efficiency": "0.916144"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.071434",
+            "transparency": "0.858945",
+            "sky_quality": "0.906590",
+            "instrument_efficiency": "0.983080"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910702,
+        "delta": {
+          "total": 202.103608,
+          "components": {
+            "sum_best_scores": 2.103608,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.170821",
+            "transparency": "0.927092",
+            "sky_quality": "0.906897",
+            "instrument_efficiency": "0.982619"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.063276",
+            "transparency": "0.874979",
+            "sky_quality": "0.933018",
+            "instrument_efficiency": "0.912691"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910703,
+        "delta": {
+          "total": 201.557477,
+          "components": {
+            "sum_best_scores": 1.557477,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.172568",
+            "transparency": "0.913227",
+            "sky_quality": "0.893211",
+            "instrument_efficiency": "0.975600"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.421163",
+            "transparency": "0.878688",
+            "sky_quality": "0.880441",
+            "instrument_efficiency": "0.953084"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910704,
+        "delta": {
+          "total": 202.12,
+          "components": {
+            "sum_best_scores": 2.12,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.080217",
+            "transparency": "0.858001",
+            "sky_quality": "1.008567",
+            "instrument_efficiency": "0.913846"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.072839",
+            "transparency": "0.823955",
+            "sky_quality": "0.994559",
+            "instrument_efficiency": "0.970290"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910705,
+        "delta": {
+          "total": 201.694641,
+          "components": {
+            "sum_best_scores": 1.694641,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.127142",
+            "transparency": "0.825283",
+            "sky_quality": "1.005367",
+            "instrument_efficiency": "0.992284"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.139654",
+            "transparency": "0.786722",
+            "sky_quality": "0.889109",
+            "instrument_efficiency": "0.919761"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910706,
+        "delta": {
+          "total": 202.12,
+          "components": {
+            "sum_best_scores": 2.12,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.120818",
+            "transparency": "0.875168",
+            "sky_quality": "1.085574",
+            "instrument_efficiency": "0.925418"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.061774",
+            "transparency": "0.883141",
+            "sky_quality": "1.035263",
+            "instrument_efficiency": "0.951883"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910707,
+        "delta": {
+          "total": 202.12,
+          "components": {
+            "sum_best_scores": 2.12,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.203766",
+            "transparency": "0.904132",
+            "sky_quality": "0.989274",
+            "instrument_efficiency": "0.938743"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.102318",
+            "transparency": "0.932000",
+            "sky_quality": "0.948613",
+            "instrument_efficiency": "0.924519"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      },
+      {
+        "seed": 910708,
+        "delta": {
+          "total": 201.805642,
+          "components": {
+            "sum_best_scores": 1.805642,
+            "required_penalty": 0.0,
+            "uniformity_penalty": 200.0,
+            "report_settlement": 0.0,
+            "observation_request_reward": 0
+          }
+        },
+        "generated_background_only": true,
+        "events": [],
+        "weather_truth": [
+          {
+            "slot_id": "N_PREV-S001",
+            "night_id": "N_PREV",
+            "timestamp_utc": "2026-11-02T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.100185",
+            "transparency": "0.866723",
+            "sky_quality": "0.980160",
+            "instrument_efficiency": "0.935152"
+          },
+          {
+            "slot_id": "N_NEXT-S001",
+            "night_id": "N_NEXT",
+            "timestamp_utc": "2026-11-03T00:30:00Z",
+            "duration_seconds": 900,
+            "is_observable": "true",
+            "seeing_arcsec": "1.259994",
+            "transparency": "0.855625",
+            "sky_quality": "0.900851",
+            "instrument_efficiency": "0.983251"
+          }
+        ],
+        "prenight_assignments": {
+          "0": "PAIR_LOW",
+          "15": "PAIR_HIGH"
+        },
+        "inside_same_center_assignments": {}
+      }
+    ],
+    "full_season": false,
+    "actual_cards_used": false,
+    "candidate_not_adopted": true
+  },
+  "certificate": {
+    "rounding_boundary_rejected": true,
+    "above_boundary_accepted": true,
+    "resync_canonical_removes_proof": true
+  },
+  "seconds": 0.04930065601365641
+}
