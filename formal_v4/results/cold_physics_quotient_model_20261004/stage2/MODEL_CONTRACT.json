@@ -1,0 +1,64 @@
+{
+  "status": "PLAN_FROZEN_NO_FIT",
+  "architecture": [
+    5963,
+    128,
+    128,
+    39
+  ],
+  "activation": "ReLU",
+  "history_shape": [
+    8,
+    16,
+    36
+  ],
+  "history_notice_shape": [
+    8,
+    129
+  ],
+  "history_meta_shape": [
+    8,
+    16
+  ],
+  "current_notice": 129,
+  "current_meta": 16,
+  "query_dim": 50,
+  "query_flux_removed": true,
+  "output": "3bands x (Rzero atom+4positive lognormal components);15joint probabilitylogits,12mu,12sigma",
+  "mu": "train_logR_mean+train_logR_std*8*tanh(raw_mu/8)",
+  "sigma": ".03+1.97*sigmoid(raw_sigma)",
+  "known_physics_outside_head": [
+    "futureflux",
+    "weight",
+    "cap",
+    "best",
+    "declaredprogram"
+  ],
+  "randomness_still_learned": [
+    "weathertransition",
+    "closure",
+    "directional nuisance",
+    "fault/repair history",
+    "band/R correlation",
+    "current/forecast conditions"
+  ],
+  "loss": "joint band/R density NLL; Rzero exactatom; positiveR lognormal jacobian included",
+  "models": [
+    "full_public_history",
+    "current_public_only_samehistoryslotszeroed"
+  ],
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0007,
+    "weight_decay": 0.0001,
+    "batch_rows": 512,
+    "epochs": 12,
+    "seed": 107040441
+  },
+  "checkpoint": "min cal world_equal NLL; selected full/current by min cal world_equal NLL only; val only gate",
+  "standardization": "train-only feature mean/scale and positive-logR mean/std; zero variance scale1",
+  "cuda_tf32": false,
+  "fit_max_seconds_per_model": 120,
+  "cuda_peak_max_bytes": 1073741824,
+  "scope": "one current candidate exposure marginal; no jointfuturepath posterior"
+}

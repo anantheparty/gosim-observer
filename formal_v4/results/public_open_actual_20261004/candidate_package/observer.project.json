@@ -1,0 +1,30 @@
+{
+  "schema_version": "observer-project-v1",
+  "protocol": "jsonl-v4",
+  "image": "python:3.12-slim",
+  "build": [
+    [
+      "python3",
+      "-m",
+      "pip",
+      "install",
+      "--no-cache-dir",
+      "--disable-pip-version-check",
+      "--target",
+      ".deps",
+      "numpy==2.2.6"
+    ]
+  ],
+  "run": [
+    "python3",
+    "-u",
+    "public_open_recovery_entry.py"
+  ],
+  "working_directory": ".",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": ".deps",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  }
+}

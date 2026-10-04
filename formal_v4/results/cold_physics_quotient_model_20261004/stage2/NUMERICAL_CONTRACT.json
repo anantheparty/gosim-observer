@@ -1,0 +1,15 @@
+{
+  "status": "PREDECLARED_NOT_OBSERVED_PASS",
+  "float32_unit_roundoff": 5.960464477539063e-08,
+  "float32_logit_bound": "layer recurrence |W|err+gamma(n+2)(|W|(|a|+err)+|bias|), gamma(n)=nu/(1-nu); decodedfloat32 x/W/b shared, ReLU1-Lipschitz, TF32 disabled; no unscaled fixed absolutelogit threshold",
+  "probability_practical_caps": {
+    "max_abs": 3e-06,
+    "max_perrow_l1": 3e-05
+  },
+  "transformed_parameters": "measuremu/sigma diffs; derivegain bound Mmax(TV+max(absdmu+sqrt2pi*absdsigma)+8e-8)",
+  "gain_practical_cap": "maxabsG <=1e-4*Mmax AND within derived coupling+kernel bound",
+  "numeric_gain_kernel": "both NumPy and CUDA comparison evaluatedfloat64; trainingNLLfloat32; sigma>0; sourceheadboundedmu/sigma assures finite kernel domain",
+  "action_gate": "if valuegap exceeds winner+runner gainerror sum require identicalcase/program/assignment; uncertified ties report changes and boundselected-value loss by summederrors; same deterministic indexordering and originalpoint first",
+  "kernel_allowance_per_Mmax": 8e-08,
+  "old_trial_gate_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "status": "FROZEN_BEFORE_WORLD_GENERATION",
+  "probability_temperature_grid": [
+    0.5,
+    0.7,
+    1.0,
+    1.4,
+    2.0
+  ],
+  "positive_R_sigma_multiplier_grid": [
+    0.5,
+    0.7,
+    1.0,
+    1.4,
+    2.0
+  ],
+  "criterion": "min cal worldequal jointdensity NLL; joint grid25; first lexicographic tie; no val/test adaptation",
+  "selection": "full/current/checkpoint on cal only",
+  "test_count": 24,
+  "validation_gate": "selected vs full original point output action AND samefinitefamily point-rescore mean realized science rate>0 with95%world-bootstrap lower>0; scopes exclude original nonobserve states",
+  "bootstrap_seed": 107040442,
+  "bootstrap_resamples": 2000,
+  "support_gates": [
+    "freshpublic reconstruction",
+    "originalpoint16pairs+program+actualduration retained",
+    "initialterrain directions exact",
+    "issuetime censoring",
+    "report healthy anchor",
+    "physicalR versus independentofficialscalar",
+    "miss/zero separation",
+    "actualoffset hostonly",
+    "no hiddeneventmesh query feature"
+  ],
+  "production_extra_cost_gate": {
+    "median_seconds": 0.02,
+    "p95_seconds": 0.05,
+    "additional_working_set_bytes": 67108864,
+    "container": "2CPU/2GiB"
+  }
+}
