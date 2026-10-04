@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-04T02:15:08.617208+00:00",
+  "trial": "sparse newdomain fixed free DP with byte-frozen faultv1 fallback",
+  "all_gates_passed": true,
+  "finite_public_posterior_states": 16157,
+  "exact_report_timestamp_and_post_two_correct_prior": true,
+  "test_seeds": [
+    850000,
+    850015
+  ],
+  "test_unopened": true,
+  "test_use": "one independent fixed-design decision-regret evaluation; no threshold/source/model selection after result",
+  "model_sha256": "aa6ee228fe4e529aab93787901081f569b596a725671c92e1690c14a9702d35e",
+  "dp_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+  "metric_diagnostic": "epochs14/15 preselection calNLL reported Infinity because float32 clip1-1e-8 rounded1; logits/output finite, selectedepoch3 and final float64 cal/val NLL finite. Raw logs retained; no model re-fit."
+}

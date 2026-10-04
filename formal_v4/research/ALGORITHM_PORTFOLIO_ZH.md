@@ -266,3 +266,14 @@ debias_fast现在也有真正完整结果，而不是前次900秒截断：L1 626
 private GitHub已确认`6dceb0d6cbb740a4d2538676981af6f0b7c7a49e`包含所有前轮原始结果、两新模型/失败及大dataset精确分片；byte校验后已删冗余290MB原NPZ，五片仍可按manifest原顺序恢复。新domain pilot原先只核固定hit score算子，发现不能冒称新stress geometry；已保留并补全geometry审计。最终pilot新stress实际assigned→hit/min-alt 56608案例、9368旧hit丢失/5旧miss成为hit，正式2846score误差0、244report/wait分支。actor只按官方公开actual-hit target_id/score列表接纳history，不取隐藏offset算出的actual H作特征。64/8/8 train/cal/val 64625/8075/8082 rows、81298560B、36.15秒生成，新test未生成；PRO6000独立目录开始1568→128→128→1新NN，未有生产得分。
 
 新的forknone `cold_public_rng_identifiability`已独立读官方代码，24源SHA与公开GitHub e01939d0一致。有限1024-domain合成12world master blind恢复全中、4域外正确abstain；同master可复现未来多流，不代表实际同master路径。另用官方build_spec独立weather seeds，构造两world相同catalog/public初始化及9次过去反馈（7正/2共同关闭），下一动作0 vs .038914，证明public catalog/past prefix一般不唯一决定future。实际已存在0..2^32−1公共seed/模型审计，没有受公开证据支持的新小域；不重复0..1023、不读actual truth证明。报告仍须冻结，不视为actor已有future数据。
+
+
+### 新稀疏公开诊断域完成独立 test（2026-10-04 11:30 JST）
+
+cold_report_sparse_domain 的新1568→128→128→1普通NN真实PRO6000训练16.63秒，selectedepoch3；源/模型/DP于02:15:08UTC锁定，test850000–850015一次完成且所有hash不变。固定public design的16独立world：DPfree mean5298.429271、p90free5014.773878、oracle5467.681328；paired DP−p90 +283.655393(SE104.634663)，11胜1负4平，DP regret169.252056。这是best-only固定动作研究，不是对现有生产faultv1的完整分数收益。研究prior max2fault不属于正式协议保证；actor public correct_count>=2立即fallback原faultv1，不调用NN/DP，原v1可以继续第三次report，微合同通过。
+
+原candidateZIP069c346450412437a96b02d48abe886d4201b7a87dc583c87715b995c42a9823平铺36members、入口python3 -u report_entry.py。root核验SOURCE_LOCK全部hash、ZIP所有成员、report_support与faultv1原persistent_fault_guard逐字相等、新test冻结与count2fallback全通过；ROOT_ARTIFACT_RECEIPT.json记录。数据81,298,560bytes由两40MiBpart按manifest可逆保存，不将public固定轨迹的私有旧score/factor/offset/valid作为训练输入。新world真实指向偏移重新分类assigned→actualhit，而actor只接official actual-hit ID/score与静态公开几何。
+
+原研究包不再修改。独立sparse runtime agent正在自有目录组合冻结native exact算术+新report_entry；原NN/DP/actor/强策略及faultv1source/model必须原样保持，只新增入口和已验证算术安装，先真实protocol及false/true/count2合同。root随后正常2CPU/2GB/900完整L1/L2/L3闭环与已有faultv1比较；不重跑control，不拿test的+283当生产gain，L4留作之后冻结holdout。此时尚未启动新actualfull或平台提交。
+
+最新已完成raw、精确加速四条full、calendar正负/合同与RNG反例/源校验均已privateGit推送并ls-remote确认3727fbbcf1890c62efb0f3250b85e306c63c2d7f。在线仍没有提交新faultv1；Mac locked原手动解锁请求pending。

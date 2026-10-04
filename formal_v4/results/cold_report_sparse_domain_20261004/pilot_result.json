@@ -1,0 +1,74 @@
+{
+  "worlds": [
+    {
+      "seed": 810000,
+      "card": "L1",
+      "science": 4362.218279999996,
+      "report": -1100.0,
+      "score": 3262.2182799999964,
+      "reports": 13,
+      "correct": 1,
+      "false": 12,
+      "observed_records": 984,
+      "measured_slots": 834,
+      "dropout": 0.15,
+      "training_records": 954,
+      "qdim": 1568
+    },
+    {
+      "seed": 810001,
+      "card": "L2",
+      "science": 5971.908650999999,
+      "report": -2150.0,
+      "score": 3821.908650999999,
+      "reports": 20,
+      "correct": 1,
+      "false": 19,
+      "observed_records": 1088,
+      "measured_slots": 926,
+      "dropout": 0.15,
+      "training_records": 1065,
+      "qdim": 1568
+    },
+    {
+      "seed": 810002,
+      "card": "L1",
+      "science": 5061.551014999999,
+      "report": -1350.0,
+      "score": 3711.551014999999,
+      "reports": 11,
+      "correct": 0,
+      "false": 11,
+      "observed_records": 984,
+      "measured_slots": 984,
+      "dropout": 0.0,
+      "training_records": 954,
+      "qdim": 1568
+    },
+    {
+      "seed": 810003,
+      "card": "L2",
+      "science": 5950.7009670000025,
+      "report": -200.0,
+      "score": 5750.7009670000025,
+      "reports": 7,
+      "correct": 1,
+      "false": 6,
+      "observed_records": 1088,
+      "measured_slots": 1088,
+      "dropout": 0.0,
+      "training_records": 1067,
+      "qdim": 1568
+    }
+  ],
+  "seconds": 1.575834035873413,
+  "seed_domain": "pilot810000-810003 distinct from later train/cal/val/test",
+  "actor_inputs": "only newworld public scores, report results, bulletin/forecast, physical public geometry and clocks",
+  "no_production_rollout": true,
+  "original_private_inputs": false,
+  "source_sha256": {
+    "public_design.py": "0bbebec44abb4968d9f2df0c34f82e02757cdab93ca7bec03a9423dfcbdd0036",
+    "sparse_world.py": "f991549c9aef9d7233e2ed5f5c5b137231640b291876009bfdd98cb32ed64561",
+    "sensor_core.py": "0520cb2f397859b9207ec259d40f1a9ff22cb8205658fd624f8644935cb6cd13"
+  }
+}

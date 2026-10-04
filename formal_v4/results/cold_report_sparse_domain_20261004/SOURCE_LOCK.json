@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-10-04T02:15:08.617208+00:00",
+  "trial": "sparse newdomain fixed free DP with byte-frozen faultv1 fallback",
+  "all_gates_passed": true,
+  "finite_public_posterior_states": 16157,
+  "exact_report_timestamp_and_post_two_correct_prior": true,
+  "test_seeds": [
+    850000,
+    850015
+  ],
+  "test_unopened": true,
+  "test_use": "one independent fixed-design decision-regret evaluation; no threshold/source/model selection after result",
+  "model_sha256": "aa6ee228fe4e529aab93787901081f569b596a725671c92e1690c14a9702d35e",
+  "dp_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+  "sha256": {
+    "report_model.npz": "aa6ee228fe4e529aab93787901081f569b596a725671c92e1690c14a9702d35e",
+    "report_dp.npz": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+    "report_core.py": "7e4aff37960b75817a046b1000fd3440081df5bc16fd272fe05567c9c69d1d3e",
+    "report_policy.py": "9248c34c6ff21b864f8cf376617466870f9596820dc97b5e5257eb5c27ca20a3",
+    "report_support.py": "3aa5c137ff7ac28d179da38c28675023e106c853b73c67bfbec3c5308799cba6",
+    "sensor_core.py": "0520cb2f397859b9207ec259d40f1a9ff22cb8205658fd624f8644935cb6cd13",
+    "report_entry.py": "7503a94c02c4320f665d27c90774a604ab58a2e60d23a2b076ba0bcc37b5cd85",
+    "public_design.py": "0bbebec44abb4968d9f2df0c34f82e02757cdab93ca7bec03a9423dfcbdd0036",
+    "sparse_world.py": "7edca7e3907fb1d62349419b7bf88b632294896cea3c5bbc41b5002e2ba81cbf",
+    "build_dataset.py": "057cba84ee569a7a0a3c0194a2dc365970880bdf4ff1eadbea0884add01548fe",
+    "train.py": "30175b41c1f0822000c50e0915b1c1f003721a4b4264435baa04e960399652a5",
+    "evaluate.py": "a71add69b3a8c544ba3832cfebf89edc032c204ef0eb6d4f66623c47f8dc0231",
+    "candidate_package.zip": "069c346450412437a96b02d48abe886d4201b7a87dc583c87715b995c42a9823",
+    "posterior_p90_control_package.zip": "22cdead3b7dc5925681f634e40dafa724289c207f884f6638e7538c9278b2600",
+    "public_design_cache.pkl": "221d59ee942ac94c1d618b9800d5107bf57af6c2efd52448cc4f2af311f9582f",
+    "report_dataset.npz": "90f4eb280752500549a0c9bc06eeea0615c952351e7621dc8af93b45e21f8022",
+    "SAMPLING_LOCK.json": "631b5cb0f5a120fec3dafc2a41ecbd0808ae31c7c792dce0c7a36740c0cf14af",
+    "DP_CONTRACT_AMENDMENT.json": "a742f566f19425068bbec55b3675c75516ed74ed3abf52c7c3a614385b972618"
+  },
+  "checks": {
+    "pilot_operator_checks": {
+      "passed": true,
+      "official_target_score_cases": 2846,
+      "max_six_decimal_error": 0.0,
+      "paired_report_wait_branches": 244,
+      "actual_repair_cases": 44,
+      "directional_degraded_branches": 66,
+      "repaired_continuation_cases": 44,
+      "history8_distinct_slot_contract": true,
+      "geometry_gate_cases": 56608,
+      "offset_nominal_hit_lost": 9368,
+      "offset_nominal_miss_gained": 5,
+      "newworld_assigned_to_actual_geometry_gate": true,
+      "earthquake_has_no_pointing_effect": true,
+      "independent_official_stress_pointing_offset": true,
+      "data_loss_not_simulated": true,
+      "fixed_public_geometry_true_target_ra_dec": true,
+      "original_private_columns_read": false,
+      "seconds": 1.6387956142425537,
+      "xdim": 1568
+    },
+    "semantics_checks": {
+      "passed": true,
+      "exhaustive_two_epoch_trees": 126,
+      "max_tree_error": 2.842170943040401e-14,
+      "all_transition_rows": 3240,
+      "public_count_violation_mass": 0.0,
+      "kernel_row_error": 2.220446049250313e-16,
+      "bellman_recompute_error": 0.0,
+      "max2fault_healthy_absorption_zero_value": true,
+      "quota_route": "wait same q; correct2; false max(q-1,0); paid penalty only q0; never implicit reset",
+      "official_shared_future_score_cases": 2846,
+      "official_score_error": 0.0,
+      "official_correct_reset_and_repeat_false": true,
+      "model_sha256": "aa6ee228fe4e529aab93787901081f569b596a725671c92e1690c14a9702d35e",
+      "dp_sha256": "4acb1ddffe391c0e0e16dbda24207c3b9e22a60961701ba6f2b05130d0ea7d25",
+      "test_read": false
+    },
+    "public_adapter_checks": {
+      "passed": true,
+      "public_features_compared": 1957,
+      "max_feature_absolute_error": 1.1867947069532647e-07,
+      "public_geometry_host_error": 3.3306690738754696e-16,
+      "memoized_H_bit_equal_original": true,
+      "zero_scores_retained": 2610,
+      "allzero_feedback_tokens": 233,
+      "public_report_result_cases": 13,
+      "seconds": 11.303257942199707,
+      "actor_receives_only": "public now, notices/forecast, actual-hit ids and scores, report result; never hidden offset/actual center/factor/quality/valid"
+    },
+    "public_interface_checks": {
+      "passed": true,
+      "false_exact_action_and_pending": true,
+      "false_C_E_clock_ledger_preserved": true,
+      "true_normal_replan": true,
+      "quota1_usable_quota0_declined": true,
+      "firstentry": {
+        "L1": {
+          "responses": 3,
+          "equal_original_disabled_dp_p90": true,
+          "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/public_entry/L1/public_input.jsonl",
+          "historical_clock_claim": false
+        },
+        "L2": {
+          "responses": 3,
+          "equal_original_disabled_dp_p90": true,
+          "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/public_entry/L2/public_input.jsonl",
+          "historical_clock_claim": false
+        }
+      },
+      "public_only": true,
+      "score_claim": false
+    }
+  },
+  "metric_diagnostic": "epochs14/15 preselection calNLL reported Infinity because float32 clip1-1e-8 rounded1; logits/output finite, selectedepoch3 and final float64 cal/val NLL finite. Raw logs retained; no model re-fit."
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_sparse_domain_20261004/public_design.py", line 68, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_sparse_domain_20261004/public_design.py", line 64, in main
+    start=time.time();pack={c:design(c) for c in ['L1','L2']}
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_sparse_domain_20261004/public_design.py", line 64, in <dictcomp>
+    start=time.time();pack={c:design(c) for c in ['L1','L2']}
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_sparse_domain_20261004/public_design.py", line 42, in design
+    hitids=[s for s,hit in hits.items() if hit and min_altitude_during(targets[s]['ra_deg'],targets[s]['dec_deg'],start,end,lat,lon)>=minimum]
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_report_sparse_domain_20261004/public_design.py", line 42, in <listcomp>
+    hitids=[s for s,hit in hits.items() if hit and min_altitude_during(targets[s]['ra_deg'],targets[s]['dec_deg'],start,end,lat,lon)>=minimum]
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_predictive_world_model_20261004/official/challenge/v4_fiber_map.py", line 312, in min_altitude_during
+    raise ValueError("step_seconds must be positive")
+ValueError: step_seconds must be positive

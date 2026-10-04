@@ -1,0 +1,34 @@
+{
+  "schema": "root-sparse-report-artifact-review-v1",
+  "created_utc": "2026-10-04T02:23:18.806534+00:00",
+  "gates": {
+    "source_lock_all_hashes": true,
+    "package_members_match_receipt": true,
+    "frozen_faultv1_guard_bytes_unchanged": true,
+    "independent_test_source_unchanged": true,
+    "count2_formal_fallback_contract": true
+  },
+  "all_passed": true,
+  "source_lock_sha256": "4ffa5711d9658a53dcda7b8728dce12fc5c9d83148e393d9fe196d220a1bdacc",
+  "candidate_zip_sha256": "069c346450412437a96b02d48abe886d4201b7a87dc583c87715b995c42a9823",
+  "dataset_backup": {
+    "source": "report_dataset.npz",
+    "bytes": 81298560,
+    "sha256": "90f4eb280752500549a0c9bc06eeea0615c952351e7621dc8af93b45e21f8022",
+    "parts": [
+      {
+        "path": "report_dataset.npz.part000",
+        "bytes": 41943040,
+        "sha256": "28c5bb375b93467b16a6375a99d0b1c2a60e343c7fa057acea065927d88337cc"
+      },
+      {
+        "path": "report_dataset.npz.part001",
+        "bytes": 39355520,
+        "sha256": "a2cbb6e3e0926527ad7a6183925ecbf754224c1f22ffdc7884b782471335df2a"
+      }
+    ],
+    "restore": "Concatenate parts in manifest order; verify full SHA256."
+  },
+  "actual_full_season_gain": null,
+  "formal_online_gain": null
+}

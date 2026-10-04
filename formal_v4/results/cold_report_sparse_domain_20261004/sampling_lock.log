@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-04T01:58:37.825323+00:00",
+  "trial": "new sparse public sampling domain; old fixed high-altitude trial immutable",
+  "splits": {
+    "pilot": [
+      810000,
+      810003
+    ],
+    "train": [
+      820000,
+      820063
+    ],
+    "cal": [
+      830000,
+      830007
+    ],
+    "val": [
+      840000,
+      840007
+    ],
+    "test": [
+      850000,
+      850015
+    ]
+  },
+  "action_design": "L1/L2 public original strong actions and times fixed; newworld does not replan physical actions; not production strong rollout",
+  "public_feedback": "official runner v4_runner.py:820-829: actual hit target_ids and six-decimal scores; no factor/quality/prog_mult/valid input",
+  "hit_geometry": "public assigned candidates -> per-world independent official stress pointing offset -> official start hit and minimum altitude; target H depends only public observed ids and RA/Dec",
+  "offset_prior": "official sha256-v1 v4.stress.pointing_offset; stress enabled in all new worlds; maxabs alt/az .002rad at survey start; earthquake does not alter pointing",
+  "data_loss": "not simulated; actor clears sparse history on public state_resync and falls back faultv1 until support rebuilt; scientific max-factor opportunity only approximated by fixed-path best ledger",
+  "weather_prior": "independent official events/weather/forecasts/bulletins; fault count probabilities0/1/2=.25/.50/.25; quake count uniform0..2; each weather kind count uniform0..3; official terrain/rocket distributions",
+  "sampling": "all public score feedback including zero/saturated; keep token if >=3 observed hit ids, distinct starting slot; random world dropout0,.15,.35; 8 latest tokens retain directional/terrain notices",
+  "feature_dim": 1568,
+  "classifier": "ordinary CUDA MLP1568-128-128-1 AdamW .0007 1e-4 16epochs; select minimum calNLL; then one cal logit affine LBFGS; seed82191",
+  "dp": "1024 epochs p15 x quake3 x correct_count3 q0/1/2; paired sameworld next score under report vs wait, shrink32; correct publiccount+1 false/waitsame; max2 independent faults; free-only candidate fixed",
+  "gates": [
+    "all official six-decimal scores equal",
+    "newworld assigned->actual geometry exact",
+    "history observed-ids-only, all-zero feedback retained",
+    "report/reset continuation sameworld recomputed",
+    "all Krows normalize and count transitions exact",
+    "exhaustive small Bellman tree matches",
+    "cal/val finite outputs and beats constant-prior NLL",
+    "GPU export finite and maxlogit deviation<1e-4",
+    "actor public feature adapter matches host fixture",
+    "unsupported actor states fallback frozen faultv1",
+    "freeze model/package/source before one test domain; test never chooses params"
+  ],
+  "source_sha256": {
+    "public_design.py": "0bbebec44abb4968d9f2df0c34f82e02757cdab93ca7bec03a9423dfcbdd0036",
+    "sparse_world.py": "7edca7e3907fb1d62349419b7bf88b632294896cea3c5bbc41b5002e2ba81cbf",
+    "sensor_core.py": "0520cb2f397859b9207ec259d40f1a9ff22cb8205658fd624f8644935cb6cd13",
+    "build_dataset.py": "057cba84ee569a7a0a3c0194a2dc365970880bdf4ff1eadbea0884add01548fe",
+    "train.py": "30175b41c1f0822000c50e0915b1c1f003721a4b4264435baa04e960399652a5",
+    "report_core.py": "aace318c9cde7b5b27c0ebb33104f0391251857ffb9a74b17184bddc234af835",
+    "check_pilot_operator.py": "cc2515c57da7f47d431dc0155e9dc48ec586144db50ae69b5e25c7fab11b4d66",
+    "public_design_cache.pkl": "221d59ee942ac94c1d618b9800d5107bf57af6c2efd52448cc4f2af311f9582f",
+    "public_design_manifest.json": "f37c113a18754a9f629173a0950d584082cdb784fccca477c895fb88fb09ceec",
+    "pilot_operator_checks.json": "baa61f2d35c343d6dcf83ae695ef6cc841c9b6769d765fed218eeb3702e55ace"
+  }
+}
