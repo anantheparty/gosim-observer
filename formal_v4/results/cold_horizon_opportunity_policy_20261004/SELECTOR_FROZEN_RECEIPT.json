@@ -1,0 +1,27 @@
+{
+  "catalog_seed": 20261004731,
+  "prior_seeds": [
+    77101,
+    77102,
+    77103
+  ],
+  "evaluation_seeds": [
+    89101,
+    89102,
+    89103,
+    89104
+  ],
+  "candidate_count": 3,
+  "domain": "192 targets / 240deg2 / 3 nights",
+  "candidates": "current B, diverse field from existing B candidates, 900s wait",
+  "selection": "mean final official total after same first action and unchanged B feedback continuation",
+  "pilot_gate": "positive mean with no incomplete episodes, candidate not B, online selector cost measured; no full-season claim",
+  "freeze_stage": "before generated worlds and selector ranking",
+  "pilot_source_sha256": "fcc8de42780f477251545763b51fc86e6657df1dc696f34cb8d9bdd01af57d2c",
+  "repairs_before_selector_ranking": [
+    "minimum_completed setting replaced by equivalent official minimum_completion_fraction=2/3",
+    "official score schema total key corrected after baseline measure"
+  ],
+  "generated_world_manifest_sha256": "5875a06a7052128350c780f2370327a6e78b24b051949a3310526136afc68c2e",
+  "selector_frozen_sha256": "f57b2ce8f043f7825bf25c43d01ec0ad080c44d7712ff7874e6ad66f16736a9e"
+}

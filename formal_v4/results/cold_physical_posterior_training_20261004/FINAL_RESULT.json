@@ -1,0 +1,769 @@
+{
+  "status": "negative_reject_current_model_and_unconditional_bank_for_production",
+  "created_at_utc": "2026-10-04T03:53:05.212696+00:00",
+  "decision": "Do not package, deploy, run actual 900s seasons, reopen test or rescue dictionary with new K/domain. Preserve original faultv1 exact strong package.",
+  "new_work": "Independently generated physical five-slot joint C/E/closure/fault/directional-sector path dictionary, raw public geometry/history class learner and official full-duration physics scoring; actual ordinary CUDA MLP fit.",
+  "known_evidence_support": "Dictionary path values individually obey physical support; coarse terrain/current notices must be compatible with public evidence. Many cal/val queries have zero matching prototypes, and positive posterior mass conflicts with notices. This is an inadequate finite dictionary support and conditioning mechanism, not future truth leakage; exact conditional-posterior claim rejected.",
+  "science_scope": "same finite public two-field x5-duration x3-program science gain/second family, common assignments; not full strong policy scores; clairvoyant dictionary oracle is coverage upper bound only",
+  "actual_gosim_score_gain": null,
+  "production_zip": null,
+  "new_actor_delivered": false,
+  "actual_full_or_online_runs_started": 0,
+  "best_preserved": {
+    "path": "formal_v4/results/cold_sparse_science_runtime_20261004/observer_sparse_exact_fault_20261004.zip",
+    "sha256": "5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29",
+    "original_controller": "faultv1 + REQ/RequestCache/Terrain/cache/exact; no reportNN combination"
+  },
+  "source_lock": {
+    "path": "SOURCE_LOCK.json",
+    "sha256": "a4515d36c105c1840bf6738ab6c481d9bced6733b1cca92262d5acf1cfacbec7",
+    "all_18_sources_parameters_data_and_26_official_sources_unchanged": true,
+    "mismatches": [],
+    "reference_weather_config_in_initial_source_lock": false,
+    "reference_weather_config_final_sha256": "3e9c1f03c5d925ab5bfe3402077524e92e052cd911488055a9959fdf2335ef57"
+  },
+  "split_lock": {
+    "pilot": [
+      909000,
+      909003
+    ],
+    "bank": [
+      910000,
+      910031
+    ],
+    "train": [
+      911000,
+      911095
+    ],
+    "cal": [
+      912000,
+      912015
+    ],
+    "val": [
+      913000,
+      913015
+    ],
+    "test": [
+      914000,
+      914015
+    ]
+  },
+  "data": {
+    "fit_data.npz": {
+      "bytes": 48585380,
+      "sha256": "ba5b660d322bcb4501ed70325e2aedb6fff0a6a9fa9705bce2cda2be21ab0d9d"
+    },
+    "test_data.npz": {
+      "bytes": 6079376,
+      "sha256": "0a34e625150dbcbe2ae11e54bd1fe439f97f6b679d42c2875b47c210fe4d75a6"
+    },
+    "public_design_cache.pkl": {
+      "bytes": 10060373,
+      "sha256": "221d59ee942ac94c1d618b9800d5107bf57af6c2efd52448cc4f2af311f9582f"
+    }
+  },
+  "bank": {
+    "paths": 2073,
+    "classes": 256,
+    "seconds": 6.347806930541992,
+    "selection": "single fixed farthest-point physical coverage, actual prototypes only",
+    "maxE": 0.999974,
+    "maxC": 2.5764452626416166
+  },
+  "training": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "model": "ordinary MLP 2736->128->128->256",
+    "parameter_count": 399872,
+    "selected_epoch": 5,
+    "temperature": 1.222764253616333,
+    "metrics": {
+      "cal": {
+        "soft_nll": 3.202890157699585,
+        "constant_prior_soft_nll": 4.462751388549805,
+        "prob_sum_error": 3.5762786865234375e-07
+      },
+      "val": {
+        "soft_nll": 3.143632650375366,
+        "constant_prior_soft_nll": 4.792824745178223,
+        "prob_sum_error": 4.76837158203125e-07
+      }
+    },
+    "seconds": 5.0424652099609375,
+    "max_cuda_bytes": 230416896,
+    "test_unopened": true,
+    "model_sha256": "9e75eb175695cadb915cd79e0919dcd38f018172eb06816f9acda65719f139cb"
+  },
+  "official_operator_gate": {
+    "checks": 1743,
+    "max_error": 8.881784197001252e-16,
+    "pass_gate": true
+  },
+  "gpu_export_numpy_gate": {
+    "queries": 157,
+    "numpy_float64_cuda_float32_probability_max_error": 4.808599520234047e-07,
+    "probability_sum_max_error": 4.440892098500626e-16,
+    "finite": true,
+    "same_timestamp_forbidden_mass": 0.0,
+    "bank_open_maxE": 0.999974,
+    "bank_open_minE": 0.1,
+    "bank_firsthealthy_futurefault_paths": 5,
+    "passed": true
+  },
+  "independent_support_audit": "independent_public_support_audit.json",
+  "independent_support_summary": {
+    "cal": {
+      "terrain": {
+        "rows": 2079,
+        "zero_matching_classes": 1297,
+        "zero_matching_fraction": 0.6238576238576239,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          0.0,
+          20.0,
+          20.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.05636936385040835,
+          0.9999999999999999,
+          1.0,
+          1.0000000000000002,
+          1.0000000000000004
+        ]
+      },
+      "current_directional_weather": {
+        "rows": 2079,
+        "zero_matching_classes": 37,
+        "zero_matching_fraction": 0.017797017797017797,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          217.0,
+          217.0,
+          217.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.005340345234959206,
+          0.1564232219017211,
+          0.7375408838304358,
+          1.0,
+          1.0000000000000004
+        ]
+      },
+      "terrain_and_current_directional_weather": {
+        "rows": 2079,
+        "zero_matching_classes": 1362,
+        "zero_matching_fraction": 0.6551226551226551,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          0.0,
+          20.0,
+          20.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.05636936385040835,
+          0.9999999999999999,
+          1.0,
+          1.0000000000000002,
+          1.0000000000000004
+        ]
+      },
+      "same_timestamp_report": {
+        "rows": 31,
+        "active_fault_mass_max": 0.0,
+        "finite_probabilities": true
+      },
+      "reference_ALL_force_close": {
+        "rows": 70,
+        "open_slot_mass_quantiles_0_50_90_100": [
+          0.03911664731358655,
+          0.22553581526198513,
+          0.6631214196538587,
+          0.9644344818416011
+        ],
+        "closed_classes": 51
+      }
+    },
+    "val": {
+      "terrain": {
+        "rows": 2067,
+        "zero_matching_classes": 1419,
+        "zero_matching_fraction": 0.6865021770682148,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          0.0,
+          11.0,
+          17.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.04853907354378478,
+          0.9999999999999999,
+          1.0,
+          1.0000000000000002,
+          1.0000000000000007
+        ]
+      },
+      "current_directional_weather": {
+        "rows": 2067,
+        "zero_matching_classes": 44,
+        "zero_matching_fraction": 0.021286889211417512,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          217.0,
+          217.0,
+          217.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.002090743414939215,
+          0.11826500571158448,
+          0.5206707914798298,
+          1.0,
+          1.0000000000000002
+        ]
+      },
+      "terrain_and_current_directional_weather": {
+        "rows": 2067,
+        "zero_matching_classes": 1451,
+        "zero_matching_fraction": 0.7019835510401549,
+        "matching_class_count_quantiles_0_50_90_100": [
+          0.0,
+          0.0,
+          11.0,
+          14.0
+        ],
+        "incompatible_mass_quantiles_0_50_90_99_100": [
+          0.05581805429877249,
+          1.0,
+          1.0,
+          1.0000000000000002,
+          1.0000000000000007
+        ]
+      },
+      "same_timestamp_report": {
+        "rows": 19,
+        "active_fault_mass_max": 0.0,
+        "finite_probabilities": true
+      },
+      "reference_ALL_force_close": {
+        "rows": 69,
+        "open_slot_mass_quantiles_0_50_90_100": [
+          0.09537729601123382,
+          0.3583326543904607,
+          0.6728162993091228,
+          0.9250873718828213
+        ],
+        "closed_classes": 51
+      }
+    }
+  },
+  "decision_regret": {
+    "cal": {
+      "split": "cal",
+      "queries": 253,
+      "regret_means": {
+        "posterior": 0.00045967661414717323,
+        "unconditional": 0.0004732221177373044,
+        "strong_point": 0.0010767931466922026,
+        "nearest_prototype": 0.0007702019445160591,
+        "perfect_soft_projection": 0.0006322036015933314
+      },
+      "dictionary_oracle_regret_mean": 1.2332714306084537e-05,
+      "posterior_vs_point": {
+        "win": 61,
+        "lose": 62,
+        "tie": 130,
+        "mean_rate": 0.0006171165325450295
+      },
+      "selection_change": {
+        "field": 53,
+        "duration": 105,
+        "program": 30
+      },
+      "prototype_score_error_quantiles": [
+        0.0,
+        0.019692963636936497,
+        0.251895191768133,
+        0.6469677412564164,
+        1.7249102075368303
+      ],
+      "prototype_band_mismatch": 0.20647238224330736,
+      "prototype_band_mismatch_near_boundary": 0.641925777331996,
+      "boundary_count": 5982,
+      "seconds": 39.3711998462677,
+      "scope": "same finite public two-field x5-duration x3-program science gain/second family, common assignments; not full strong policy scores; clairvoyant dictionary oracle is coverage upper bound only"
+    },
+    "val": {
+      "split": "val",
+      "queries": 253,
+      "regret_means": {
+        "posterior": 0.0006156604567583906,
+        "unconditional": 0.0006489304855477234,
+        "strong_point": 0.0012079093920083204,
+        "nearest_prototype": 0.0007682193111083319,
+        "perfect_soft_projection": 0.000595440276732945
+      },
+      "dictionary_oracle_regret_mean": 2.516491138071425e-05,
+      "posterior_vs_point": {
+        "win": 73,
+        "lose": 58,
+        "tie": 122,
+        "mean_rate": 0.0005922489352499297
+      },
+      "selection_change": {
+        "field": 58,
+        "duration": 105,
+        "program": 47
+      },
+      "prototype_score_error_quantiles": [
+        0.0,
+        0.03500662076555175,
+        0.25833156689972814,
+        0.639727559103733,
+        1.5143289021946749
+      ],
+      "prototype_band_mismatch": 0.28996843694250035,
+      "prototype_band_mismatch_near_boundary": 0.5839561534628799,
+      "boundary_count": 6021,
+      "seconds": 40.91517090797424,
+      "scope": "same finite public two-field x5-duration x3-program science gain/second family, common assignments; not full strong policy scores; clairvoyant dictionary oracle is coverage upper bound only"
+    },
+    "test": {
+      "split": "test",
+      "queries": 252,
+      "regret_means": {
+        "posterior": 0.0006196083405497823,
+        "unconditional": 0.0005914474386538036,
+        "strong_point": 0.0014062320439300082,
+        "nearest_prototype": 0.0008087012886996528,
+        "perfect_soft_projection": 0.0005862240745111143
+      },
+      "dictionary_oracle_regret_mean": 1.2421839308723033e-05,
+      "posterior_vs_point": {
+        "win": 63,
+        "lose": 61,
+        "tie": 128,
+        "mean_rate": 0.000786623703380226
+      },
+      "selection_change": {
+        "field": 67,
+        "duration": 104,
+        "program": 27
+      },
+      "prototype_score_error_quantiles": [
+        0.0,
+        0.013818095170566314,
+        0.23862776038965036,
+        0.6097176688574765,
+        1.2891311295817753
+      ],
+      "prototype_band_mismatch": 0.14374896231114062,
+      "prototype_band_mismatch_near_boundary": 0.58025520483546,
+      "boundary_count": 4467,
+      "seconds": 39.27417612075806,
+      "scope": "same finite public two-field x5-duration x3-program science gain/second family, common assignments; not full strong policy scores; clairvoyant dictionary oracle is coverage upper bound only"
+    }
+  },
+  "world_paired": {
+    "cal_val": {
+      "cal": {
+        "strong_point": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 0.0006230952320856605,
+          "world_SE": 0.00018008520995891334,
+          "normal95": [
+            0.0002701282205661904,
+            0.0009760622436051306
+          ],
+          "win": 14,
+          "lose": 2,
+          "tie": 0,
+          "world_deltas": {
+            "912000": 0.00011756877575631839,
+            "912001": 0.0010558277436373445,
+            "912002": 0.0002153073271211302,
+            "912003": 0.0021634029797073452,
+            "912004": 0.0011037498322047769,
+            "912005": -5.72725618897251e-05,
+            "912006": -5.8205451228003044e-05,
+            "912007": 0.0015314998023937742,
+            "912008": 3.351910694876536e-05,
+            "912009": 0.0011030126066244464,
+            "912010": 0.0007219649486093558,
+            "912011": 0.00013624545655791114,
+            "912012": 6.93209698049173e-05,
+            "912013": 0.0016708710038290553,
+            "912014": 4.79673051686545e-05,
+            "912015": 0.00011474386812450204
+          }
+        },
+        "unconditional": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 1.3229559629204804e-05,
+          "world_SE": 3.887379537521879e-05,
+          "normal95": [
+            -6.296307930622402e-05,
+            8.942219856463362e-05
+          ],
+          "win": 7,
+          "lose": 7,
+          "tie": 2,
+          "world_deltas": {
+            "912000": 0.00017654583680064439,
+            "912001": 0.0,
+            "912002": -0.0001889698624732521,
+            "912003": 0.00015509012180690203,
+            "912004": -0.00019533526503367292,
+            "912005": 7.281652603817484e-05,
+            "912006": -3.3558247684437785e-05,
+            "912007": -5.560570085928843e-06,
+            "912008": 9.817604408177709e-05,
+            "912009": 0.00016855202856294222,
+            "912010": 5.121260156412563e-05,
+            "912011": -3.26862408381581e-05,
+            "912012": -4.2042615050495724e-05,
+            "912013": 0.0002989616441021038,
+            "912014": -0.00031152904772344776,
+            "912015": 0.0
+          }
+        },
+        "nearest_prototype": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 0.0003121719262712863,
+          "world_SE": 0.00017831992759276662,
+          "normal95": [
+            -3.7335131810536275e-05,
+            0.000661678984353109
+          ],
+          "win": 12,
+          "lose": 4,
+          "tie": 0,
+          "world_deltas": {
+            "912000": 0.00010732326908901969,
+            "912001": 0.00011931505022671097,
+            "912002": 0.0002778659079253532,
+            "912003": 0.0013071966706019998,
+            "912004": 4.892484645458272e-05,
+            "912005": 3.427809467403199e-05,
+            "912006": -0.0005375706718526756,
+            "912007": 0.0025268073145883322,
+            "912008": 0.0004403198144704549,
+            "912009": 0.0001998451657329746,
+            "912010": 0.00036309334443346465,
+            "912011": -3.5821495836198985e-06,
+            "912012": 0.00031073412966587267,
+            "912013": 0.00023335488851926436,
+            "912014": -0.0004301378796697869,
+            "912015": -3.016974935397849e-06
+          }
+        },
+        "perfect_soft_projection": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 0.00017429825316807903,
+          "world_SE": 0.00012342672730610992,
+          "normal95": [
+            -6.76181323518964e-05,
+            0.00041621463868805447
+          ],
+          "win": 10,
+          "lose": 6,
+          "tie": 0,
+          "world_deltas": {
+            "912000": -3.143068801556847e-05,
+            "912001": 0.00011931505022671097,
+            "912002": 5.372269526068092e-06,
+            "912003": 0.0009345634533595166,
+            "912004": 3.9478508726072665e-05,
+            "912005": -7.633174541035026e-06,
+            "912006": -0.0005351621555140731,
+            "912007": 0.001614100172932481,
+            "912008": 0.00031060685856071607,
+            "912009": 1.034133184239341e-05,
+            "912010": 0.00011363115656806274,
+            "912011": -0.00025117522568133144,
+            "912012": 0.00031073412966587267,
+            "912013": 0.0002776170250072407,
+            "912014": -0.00011856968703846468,
+            "912015": -3.016974935397849e-06
+          }
+        }
+      },
+      "val": {
+        "strong_point": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 0.0005920671872084786,
+          "world_SE": 0.0001495195878797808,
+          "normal95": [
+            0.00029900879496410823,
+            0.0008851255794528489
+          ],
+          "win": 16,
+          "lose": 0,
+          "tie": 0,
+          "world_deltas": {
+            "913000": 4.48049988437845e-05,
+            "913001": 2.5026866411580976e-05,
+            "913002": 0.0010173004782130194,
+            "913003": 0.0003054300230342083,
+            "913004": 0.0017485799137444485,
+            "913005": 0.0006673667330165101,
+            "913006": 0.00034565882164810035,
+            "913007": 0.0007598310528751693,
+            "913008": 0.000575889088823928,
+            "913009": 0.0020805209605965075,
+            "913010": 9.275593917519638e-05,
+            "913011": 0.0004763230180457184,
+            "913012": 0.0007775732710468582,
+            "913013": 2.5394653900712055e-05,
+            "913014": 0.00029581567776519005,
+            "913015": 0.00023480349819472534
+          }
+        },
+        "unconditional": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 3.3299002396209954e-05,
+          "world_SE": 3.2826728477072183e-05,
+          "normal95": [
+            -3.104138541885152e-05,
+            9.763939021127142e-05
+          ],
+          "win": 10,
+          "lose": 4,
+          "tie": 2,
+          "world_deltas": {
+            "913000": 0.0002512998555443253,
+            "913001": -2.5287155460643006e-05,
+            "913002": 3.344344932963421e-05,
+            "913003": -0.0001322651357085559,
+            "913004": 6.996870790180375e-05,
+            "913005": 8.876438261339251e-05,
+            "913006": 0.0,
+            "913007": 5.423630909959259e-05,
+            "913008": -0.00019802769367616158,
+            "913009": -0.00017743745688049604,
+            "913010": 0.0002636996295575521,
+            "913011": 7.3017294701661754e-06,
+            "913012": 9.262387078820108e-05,
+            "913013": 0.0,
+            "913014": 3.714652138664379e-05,
+            "913015": 0.00016731702437390423
+          }
+        },
+        "nearest_prototype": {
+          "worlds": 16,
+          "paired_mean_rate_delta": 0.00014433707663478334,
+          "world_SE": 0.00010188166040831324,
+          "normal95": [
+            -5.535097776551061e-05,
+            0.0003440251310350773
+          ],
+          "win": 11,
+          "lose": 5,
+          "tie": 0,
+          "world_deltas": {
+            "913000": 0.00025577046846321733,
+            "913001": 0.00043837626361811055,
+            "913002": -6.049706417835961e-05,
+            "913003": 1.4297641027491209e-06,
+            "913004": 0.0003149143065377712,
+            "913005": 5.910619082419607e-05,
+            "913006": -6.50030509109051e-05,
+            "913007": -4.476735275339445e-05,
+            "913008": -0.00018981557822340766,
+            "913009": 0.0003805712263390621,
+            "913010": 0.0004060270322092206,
+            "913011": -0.0008244143776842766,
+            "913012": 1.7302233379406945e-06,
+            "913013": 0.00015794488802336494,
+            "913014": 0.00034420054803927007,
+            "913015": 0.0011338197384119745
+          }
+        },
+        "perfect_soft_projection": {
+          "worlds": 16,
+          "paired_mean_rate_delta": -2.7188471213334778e-05,
+          "world_SE": 9.195677783820294e-05,
+          "normal95": [
+            -0.00020742375577621254,
+            0.000153046813349543
+          ],
+          "win": 7,
+          "lose": 9,
+          "tie": 0,
+          "world_deltas": {
+            "913000": 0.0002557707156576996,
+            "913001": 0.00043837626361811055,
+            "913002": -8.024676216255433e-05,
+            "913003": 1.4297641027491209e-06,
+            "913004": 0.0004867742324313321,
+            "913005": -4.6696633807193565e-05,
+            "913006": -0.00036606616800620304,
+            "913007": -4.476735275339445e-05,
+            "913008": -0.00045185574859229056,
+            "913009": 6.764680125156467e-05,
+            "913010": 6.407683344754106e-05,
+            "913011": -0.0008972530766995039,
+            "913012": -5.003693077693068e-05,
+            "913013": -9.068163412390574e-05,
+            "913014": -0.00026981280177033396,
+            "913015": 0.0005483269587699567
+          }
+        }
+      }
+    },
+    "test": {
+      "strong_point": {
+        "worlds": 16,
+        "mean_rate_delta": 0.0008034844419562785,
+        "SE": 0.00029899662369682004,
+        "normal95": [
+          0.00021745105951051123,
+          0.0013895178244020456
+        ],
+        "win": 13,
+        "lose": 3,
+        "tie": 0,
+        "world_deltas": {
+          "914000": 0.00117959239864325,
+          "914001": 0.00024587625502792387,
+          "914002": 0.0005548078139052156,
+          "914003": -0.0006663251887499564,
+          "914004": 0.0008189804970117588,
+          "914005": 0.0010197822345236,
+          "914006": -0.0008138809571976197,
+          "914007": -0.0004537936115444075,
+          "914008": 0.00030315304579709,
+          "914009": 0.0024008707629849615,
+          "914010": 0.00015519392364348437,
+          "914011": 0.0011968121345673315,
+          "914012": 0.002324021884942358,
+          "914013": 0.0001784576294234544,
+          "914014": 0.0037099670677945822,
+          "914015": 0.0007022351805274292
+        }
+      },
+      "unconditional": {
+        "worlds": 16,
+        "mean_rate_delta": -2.533372962756321e-05,
+        "SE": 9.695296809927233e-05,
+        "normal95": [
+          -0.000215361547102137,
+          0.00016469408784701054
+        ],
+        "win": 11,
+        "lose": 4,
+        "tie": 1,
+        "world_deltas": {
+          "914000": 1.4687626830240698e-06,
+          "914001": 2.4286100937289306e-05,
+          "914002": 0.00012886428674658445,
+          "914003": 4.890527779659564e-06,
+          "914004": -4.621378889596705e-05,
+          "914005": 0.0,
+          "914006": -0.0012772849661325165,
+          "914007": -0.0002708202400999416,
+          "914008": 0.00013354179814281572,
+          "914009": 0.0006313884107974745,
+          "914010": -0.00025822421812941236,
+          "914011": 0.0001452778645128121,
+          "914012": 5.8963673406302615e-05,
+          "914013": 0.00012393128265528915,
+          "914014": 9.267043594956935e-05,
+          "914015": 0.00010192039560600543
+        }
+      },
+      "nearest_prototype": {
+        "worlds": 16,
+        "mean_rate_delta": 0.00019117238502788564,
+        "SE": 0.00016165881315833666,
+        "normal95": [
+          -0.0001256788887624542,
+          0.0005080236588182255
+        ],
+        "win": 12,
+        "lose": 4,
+        "tie": 0,
+        "world_deltas": {
+          "914000": 0.0012827384930790204,
+          "914001": 0.00031925864214565035,
+          "914002": 0.0003533229720488197,
+          "914003": -0.0005077479826179496,
+          "914004": -0.0002150948027954699,
+          "914005": 7.034974004852413e-06,
+          "914006": -0.0012153822214515705,
+          "914007": 0.00019903775662056917,
+          "914008": 7.855270515661405e-05,
+          "914009": 0.0011675915544032626,
+          "914010": -0.0007017227469725829,
+          "914011": 0.00047009219105793393,
+          "914012": 0.0008679865537773633,
+          "914013": 0.00040706847059920805,
+          "914014": 0.00035274663488273837,
+          "914015": 0.00019327496650771106
+        }
+      },
+      "perfect_soft_projection": {
+        "worlds": 16,
+        "mean_rate_delta": -2.9080849911961013e-05,
+        "SE": 0.00015332776225207367,
+        "normal95": [
+          -0.0003296032639260254,
+          0.00027144156410210333
+        ],
+        "win": 10,
+        "lose": 6,
+        "tie": 0,
+        "world_deltas": {
+          "914000": 0.0001932060453932674,
+          "914001": 0.00031925864214565035,
+          "914002": 0.00014372302027157614,
+          "914003": -0.0005077479826179496,
+          "914004": -0.0005888237888104201,
+          "914005": 7.034974004852413e-06,
+          "914006": -0.001516448077465289,
+          "914007": -0.00014783332451435738,
+          "914008": -0.00011135591353608671,
+          "914009": 0.0012568143741548726,
+          "914010": -0.000703669639696513,
+          "914011": 0.0003777207054771922,
+          "914012": 0.0005506526926757284,
+          "914013": 4.127621019605548e-05,
+          "914014": 3.727202434675314e-05,
+          "914015": 0.00018362643938329152
+        }
+      }
+    }
+  },
+  "pretest_receipt": "PRETEST_RECEIPT.json",
+  "test_executions": 1,
+  "hyperparameter_or_bank_selection_on_test": false,
+  "runtime": {
+    "scope": "public fixture inference and common fixed field durations/three programs; no actor/no complete season/no future truth/no generator invoked",
+    "python": "3.12.15",
+    "numpy": "2.2.6",
+    "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.41",
+    "max_rss_kib": 51224,
+    "cpus": 2,
+    "memory_limit_bytes": 2147483648,
+    "posterior_seconds": {
+      "mean": 0.00011729710386134684,
+      "p95": 0.00016259120020549751,
+      "max": 0.00024267996195703745
+    },
+    "integral_scores_seconds": {
+      "mean": 0.03541526415210683,
+      "p95": 0.04859441799635533,
+      "max": 0.04932394198840484
+    }
+  },
+  "runtime_contract": "COST_CONTRACT.json",
+  "failure_history": "failure_history.json",
+  "all_raw_failures_preserved": true,
+  "future_research_contract_only": [
+    "Condition path generation on known public coarse terrain/current/forecast notices; share known event kinds/directions while sampling continuous compatible severity/bounds/duration, including closures and C/E correlations.",
+    "Alternatively fit bounded five-slot continuous C/E and closure joint prediction with public event-conditioned physical nuisance; encode support masks with nonempty support by construction.",
+    "Use report_result true/false as exact same-timestamp healthy anchor; later new-fault hazard retained. Known all-site force closure under declared generator config must remove open paths.",
+    "Read band thresholds, program multipliers/mismatch, f0/T0, q0 and airmass exponent from initialize.scoring in future production operator; avoid applying terrain/directional attenuation twice.",
+    "Before any future training, lock fresh independent train/cal/val/test and candidate family; evaluate projection oracle and notice support before NLL; require same-family posterior versus unconditional improvement with world-paired statistics.",
+    "Expected edge increment precedes one public assignment. No path-wise optimal assignment average. Any production proposal must retain original strong field/duration/REQ/fault/exact framework and pass deployment/public-domain comparison."
+  ],
+  "complete_artifact_manifest": "ARTIFACT_MANIFEST.json",
+  "report": "formal_v4/research/cold_physical_posterior_training_20261004.md"
+}

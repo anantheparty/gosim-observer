@@ -1,0 +1,85 @@
+{
+  "accounted_wallclock_seconds": 4.668,
+  "agent_wallclock_seconds": 4.613,
+  "committed_action_count": 119,
+  "decision_requests": 89,
+  "global_wallclock_seconds": 120.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 89,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "Independent horizon pilot",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 23.948828,
+      "ELG": 75.985853,
+      "LRG": 41.223442,
+      "QSO": 44.51748,
+      "Star": 5.387732
+    },
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 100.0,
+      "required_penalty": -0.0,
+      "sum_best_scores": 191.063334,
+      "uniformity_penalty": -0.345524
+    },
+    "counts": {
+      "decisions": 119,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 1,
+      "observations": 446,
+      "observe_actions": 83,
+      "required_missing": 0,
+      "targets_observed": 192
+    },
+    "invalidations": [],
+    "observation_requests": [
+      {
+        "completed": true,
+        "completed_count": 3,
+        "completed_target_ids": [
+          "V4T000172",
+          "V4T000020",
+          "V4T000030"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-11-04T08:30:00Z",
+        "issued_at_utc": "2026-11-04T00:30:00Z",
+        "minimum_completed": 2,
+        "request_id": "V4RQ0001",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T000172",
+          "V4T000020",
+          "V4T000030"
+        ]
+      }
+    ],
+    "scenario": "Independent horizon pilot",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "5c959221804aae67a9288101390a945a8b9a2e10da08b9cf47cd1047cbec2a6d",
+      "messages": "3eb4e2724ed390eb72d138c6bd826b9535447cffabd17a7c669316fa3ed4b1f5",
+      "observations": "c81504d513739e8aaab958ed6bb06a845cee264fa36f43deb07786e823e58928",
+      "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": 390.71781,
+    "uniformity_bands": {
+      "ra_320_330": 1.0,
+      "ra_330_340": 0.933333,
+      "ra_340_350": 0.9,
+      "ra_50_60": 1.0,
+      "ra_60_70": 1.0,
+      "ra_70_80": 1.0
+    }
+  },
+  "termination_detail": "",
+  "termination_reason": "survey_complete"
+}

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 278, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 250, in main
+    if args.mode=='generate':generate();return
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 197, in generate
+    v4_bundle.build_spec_bundle(dest,spec)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_bundle.py", line 103, in build_spec_bundle
+    return _generate(root, int(catalog["seed"]), catalog, weather, scenario, fiber, spec_dir / "v4_score_config.json",
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_bundle.py", line 152, in _generate
+    v4_observation_requests.generate_requests(
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_observation_requests.py", line 259, in generate_requests
+    records = build_requests(
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_observation_requests.py", line 170, in build_requests
+    cfg = validate_settings(settings or {})
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_observation_requests.py", line 55, in validate_settings
+    raise ValueError(f"unknown observation request settings: {sorted(unknown)}")
+ValueError: unknown observation request settings: ['minimum_completed']

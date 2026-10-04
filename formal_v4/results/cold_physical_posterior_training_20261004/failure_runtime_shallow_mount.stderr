@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/runtime_bench.py", line 6, in <module>
+    from physical_core import Predictor
+  File "/workspace/physical_core.py", line 6, in <module>
+    from world import ROOT,World,KINDS,DIRECTIONS,designs
+  File "/workspace/world.py", line 6, in <module>
+    from public_design import ROOT,OFFICIAL,utc
+  File "/workspace/public_design.py", line 10, in <module>
+    ROOT=Path(__file__).resolve().parent;WORK=ROOT.parents[2]
+                                              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 2

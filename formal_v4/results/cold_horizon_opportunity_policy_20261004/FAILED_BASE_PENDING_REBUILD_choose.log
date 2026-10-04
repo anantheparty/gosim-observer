@@ -1,0 +1,49 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 279, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 257, in main
+    action,receipt=InitialSelector(ROOT/'chooser_probe')(initial,snapshot)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 227, in __call__
+    result=run_b(ROOT/'worlds/prior'/f'W{seed}',output,first=action,
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 154, in run_b
+    result=flow.run(decide, output, initialize=initialize, wallclock_seconds=SPEC['wallclock_seconds'])
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_workflow.py", line 281, in run
+    report = run_scenario(self.scenario_path, factory, Path(output_dir))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_runner.py", line 633, in run_scenario
+    raw_action = agent(snapshot)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/official/challenge/v4_workflow.py", line 261, in agent
+    response = decide(message, limit)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 137, in decide
+    action = actor.decide(snapshot)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/persistent_fault_guard.py", line 216, in decide
+    action=super().decide(snapshot)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/policy.py", line 381, in decide
+    action = p.choose(snapshot, self.scores, self.factor_lower, env, snapshot.get("active_requests", []))
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_remote_planner.py", line 52, in choose
+    try:return super().choose(*args,**kwargs)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_deadline_common.py", line 372, in choose
+    info = self._build_pool(req,now,scores,factors,env,snapshot);self._request_pools[rid]=info
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_exact_cache.py", line 67, in _build_pool
+    return super()._build_pool(*args, **kwargs)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_deadline_common.py", line 300, in _build_pool
+    fixed_baselines[duration] = self._price_planner.fixed_value(start,duration,scores,factors,fixed_env,h_all)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_deadline_common.py", line 49, in fixed_value
+    action = super().choose({"now_utc":now.isoformat()},scores,factors,
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/spatial_candidates.py", line 372, in choose
+    candidate = self._evaluate(center, pool, vectors, up, k, scores, factors, multiplier, req_missing,
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/request_deadline_common.py", line 36, in _evaluate
+    return super()._evaluate(*args, **kwargs)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/sparse_evaluator.py", line 10, in _evaluate
+    fiber, valid, margin = self._classify(vectors[pool], *center)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/baseline_package/research/spatial_candidates.py", line 206, in _classify
+    valid = (depth > 0) & (np.abs(north_offset) <= self.fov / 2) & (np.abs(east_offset) <= self.fov / 2) & (margin >= .008)
+KeyboardInterrupt

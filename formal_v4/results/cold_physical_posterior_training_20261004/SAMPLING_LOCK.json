@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-04T03:17:08.825722+00:00",
+  "splits": {
+    "pilot": [
+      909000,
+      909003
+    ],
+    "bank": [
+      910000,
+      910031
+    ],
+    "train": [
+      911000,
+      911095
+    ],
+    "cal": [
+      912000,
+      912015
+    ],
+    "val": [
+      913000,
+      913015
+    ],
+    "test": [
+      914000,
+      914015
+    ]
+  },
+  "queries": {
+    "bank": 64,
+    "each_fit_world": 128
+  },
+  "classes": 256,
+  "posterior": "full physical 5slot prototype, joint C/E/open/fault/directional sector; deterministic medoid coverage then ordinary NN soft class posterior",
+  "labels": "top8 closest physical features; exp negative excess squared distance/.5; firstslot healthy support forced immediately after public true OR false report",
+  "path_distance": "3open, open logC, 2openE, faultflag, .5directional attenuation on fixed5slotsx4altx8az probes; directions only labels, never actor features",
+  "C_support": {
+    "open_min": 0.0014705882352941176,
+    "open_max": 4.411764705882352,
+    "qualification": "reference synthetic prior support; absent from initialize, not a formal all-card bound"
+  },
+  "E_support": {
+    "open_min": 0.1,
+    "open_max": 1,
+    "closed": "no measured efficiency; stored0 multiplied by closure0"
+  },
+  "path_compression": "empirical actual physical medoids, no clipping or interpolation of old Gaussian samples; projection errors and prototype oracle regret must be separately reported",
+  "history": "8 latest raw public observations incl zero and saturated and missing hit, each assigned target RA/Dec flux score/weight five slotH weights, commanded field/program/actual duration/date, notices/forecast/report and resync indicator; no hidden factor/quality/offset/band",
+  "training": "single40epoch ordinary2736-128-128-256 AdamW lr.0007 wd.0001 batch512 seed915441; minimum calsoftNLL checkpoint; cal temperature1scalar; no decision regret model selection",
+  "prior": "official sha256 generator standalone seeds; randomized counts0..3weather/0..2quake/0..2fault; reference conditional parameter ranges; L1/L2 public physical action design only; independent stress pointing hits recomputed",
+  "scope": "fixed public action sampling design, not strong closed-loop worlds; fullgeometry scoring; finite posterior exact support of physical values but approximate conditional probability and incomplete empirical support",
+  "gates": [
+    "official operator error<1e-10",
+    "E no physical support violation",
+    "true/false same timestamp active fault posterior zero",
+    "finite NumPy GPU export error<1e-4",
+    "new val/test actual physical candidate regret compared to nearest prototype/dictionary oracle/nominal point/unconditional prototypeprior",
+    "new posterior changes science field/duration/program ranks before any full production run"
+  ],
+  "source_sha256": {
+    "physical_core.py": "930c5cf711f1e05286ab321ee974ba8f0a6011a906cd751464761269419231d2",
+    "physical_operator.py": "afb2101265a16a7449bb6b0bc733d252705a4f036255bb3231807bf669e9b3dd",
+    "build_data.py": "ef2f30a0fd9f74e1ec8d1e71f68d3afe27d629a54ab01e757fadacaad0d9c19b",
+    "train.py": "1aedafff5df3b8f82bc4fa397bd450e1d823b5e850e77e8c41108a86594b44b9",
+    "world.py": "9edc764e199fd16931882f3598d030f01a1b1875c5c6fc27869ee23ef65227dc",
+    "public_design.py": "1dbec4e8e55be12d11e2bdb44921d6d67a2b6412cbc730a5fbf9b2d7cb9f8583",
+    "public_design_cache.pkl": "221d59ee942ac94c1d618b9800d5107bf57af6c2efd52448cc4f2af311f9582f",
+    "public_design_manifest.json": "f37c113a18754a9f629173a0950d584082cdb784fccca477c895fb88fb09ceec"
+  }
+}

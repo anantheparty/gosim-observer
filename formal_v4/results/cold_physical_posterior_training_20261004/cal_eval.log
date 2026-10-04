@@ -1,0 +1,31 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: divide by zero encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: overflow encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: invalid value encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: divide by zero encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: overflow encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: invalid value encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+{"split": "cal", "seed": 912000, "queries": 16, "seconds": 2.141709804534912}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/official/challenge/v4_weather_simulator.py:693: UserWarning: stress_tests.data_loss trigger is after_earthquake but the survey has no earthquake events; skipping data_loss generation
+  warnings.warn(
+{"split": "cal", "seed": 912001, "queries": 16, "seconds": 4.5822577476501465}
+{"split": "cal", "seed": 912002, "queries": 16, "seconds": 7.127097845077515}
+{"split": "cal", "seed": 912003, "queries": 15, "seconds": 9.567438840866089}
+{"split": "cal", "seed": 912004, "queries": 15, "seconds": 12.055460691452026}
+{"split": "cal", "seed": 912005, "queries": 16, "seconds": 14.493707656860352}
+{"split": "cal", "seed": 912006, "queries": 16, "seconds": 17.049535989761353}
+{"split": "cal", "seed": 912007, "queries": 16, "seconds": 19.51698875427246}
+{"split": "cal", "seed": 912008, "queries": 16, "seconds": 22.064912796020508}
+{"split": "cal", "seed": 912009, "queries": 16, "seconds": 24.69799494743347}
+{"split": "cal", "seed": 912010, "queries": 16, "seconds": 26.9446017742157}
+{"split": "cal", "seed": 912011, "queries": 16, "seconds": 29.454324960708618}
+{"split": "cal", "seed": 912012, "queries": 16, "seconds": 31.8417489528656}
+{"split": "cal", "seed": 912013, "queries": 16, "seconds": 34.63598895072937}
+{"split": "cal", "seed": 912014, "queries": 16, "seconds": 37.0330708026886}
+{"split": "cal", "seed": 912015, "queries": 15, "seconds": 39.3635687828064}
+{"split": "cal", "queries": 253, "regret_means": {"posterior": 0.00045967661414717323, "unconditional": 0.0004732221177373044, "strong_point": 0.0010767931466922026, "nearest_prototype": 0.0007702019445160591, "perfect_soft_projection": 0.0006322036015933314}, "dictionary_oracle_regret_mean": 1.2332714306084537e-05, "posterior_vs_point": {"win": 61, "lose": 62, "tie": 130, "mean_rate": 0.0006171165325450295}, "selection_change": {"field": 53, "duration": 105, "program": 30}, "prototype_score_error_quantiles": [0.0, 0.019692963636936497, 0.251895191768133, 0.6469677412564164, 1.7249102075368303], "prototype_band_mismatch": 0.20647238224330736, "prototype_band_mismatch_near_boundary": 0.641925777331996, "boundary_count": 5982, "seconds": 39.3711998462677, "scope": "same finite public two-field x5-duration x3-program science gain/second family, common assignments; not full strong policy scores; clairvoyant dictionary oracle is coverage upper bound only"}

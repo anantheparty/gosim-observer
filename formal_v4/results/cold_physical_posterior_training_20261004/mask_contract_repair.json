@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-04T03:25:23.167096+00:00",
+  "cause": "trainer duplicated TOKEN_DIM=330 but 8 event kinds times9 directions gives TOKEN_DIM322; same2736totaldim hid wrong mask index",
+  "repair": "only TOKEN_DIM330->322; architecture/data/split/seed/optimizer/40epochs unchanged",
+  "old_train_sha256": "1aedafff5df3b8f82bc4fa397bd450e1d823b5e850e77e8c41108a86594b44b9",
+  "new_train_sha256": "054cea8f6b8e71305d10c0ba4841d0233cb8f3c2ade8097e426ed69ea14b8234",
+  "audit": {
+    "train": {
+      "same_timestamp_report": 158,
+      "forbidden_target_mass": 0.0
+    },
+    "cal": {
+      "same_timestamp_report": 31,
+      "forbidden_target_mass": 0.0
+    },
+    "val": {
+      "same_timestamp_report": 19,
+      "forbidden_target_mass": 0.0
+    }
+  },
+  "test_unopened": true,
+  "previous_model_rejected": true
+}

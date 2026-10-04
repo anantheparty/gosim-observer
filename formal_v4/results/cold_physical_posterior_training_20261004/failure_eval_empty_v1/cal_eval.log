@@ -1,0 +1,22 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: divide by zero encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: overflow encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/physical_core.py:112: RuntimeWarning: invalid value encountered in matmul
+  x=x@self.weights[k].T+self.bias[k]
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: divide by zero encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: overflow encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py:95: RuntimeWarning: invalid value encountered in matmul
+  picks={'posterior':int(np.argmax(table@p)),'unconditional':int(np.argmax(table@prior)),'strong_point':int(np.argmax(point)),'nearest_prototype':int(np.argmax(table[:,nearest])),'perfect_soft_projection':int(np.argmax(table[:,ix]@ys))}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py", line 115, in <module>
+    if __name__=='__main__':run(sys.argv[1] if len(sys.argv)>1 else 'val')
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py", line 92, in run
+    realized,table,point,desc,qe,be,bd,ah=family(w,j,repaired,cp,ep,best,bank)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py", line 44, in family
+    for field,ids,ra,dec,fibers,pointing in candidate_fields(w,j,duration,C,E,best):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physical_posterior_training_20261004/evaluate.py", line 34, in candidate_fields
+    ids=ids[legal];ra=ra[legal];dec=dec[legal];fibers=fibers[legal]
+IndexError: arrays used as indices must be of integer (or boolean) type

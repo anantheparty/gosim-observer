@@ -1,6 +1,6 @@
 # 算法路线、独立探索与采用标准
 
-更新：2026-10-04 12:38 JST。下方按时间保留每条路线的历史正负结果；本节给出当前可核验证据。目标是提高正常完整赛季实际得分，为正式隐藏测试建立可执行公开策略。传统算法与普通神经网络允许。
+更新：2026-10-04 12:58 JST。下方按时间保留每条路线的历史正负结果；本节给出当前可核验证据。目标是提高正常完整赛季实际得分，为正式隐藏测试建立可执行公开策略。传统算法与普通神经网络允许。
 
 ## 当前证据
 
@@ -9,8 +9,9 @@
 - **新稀疏公开历史NN+report quota DP**已独立test，普通1568→128→128→1实际PRO6000训练16.63秒；fixed-design16world DP−p90 +283.655(SE104.635)不是生产收益。已冻结与exact组合ZIPfa7a8e7c8de173331a64e160e4df6f34710c9e59a37b199271c2444e5d46126b；正常L1/L2/L3完整闭环已终结：6361.703510/6723.359693/6141.421958，相对faultv1 +88.780156/0/−411.623630，mean−107.6144913333，当前新包拒绝部署、不据L4救参。结果 `results/sparse_report_actual_20261004/ROOT_THREE_CARD_RESULT.json` 全部12门检通过；L3两次early false耗尽freequota、未修复，移除report后全部physicalactions/observations.csv/scorecomponents与原strong逐字相同，见ROOT_L3_PUBLIC_CAUSAL_TRACE.json。
 - **最新线上检查与提交状态**：03:20:58UTC alpha榜更新55队、Pleiades第6，分数仍7248.87；03:23UTC正常compete页面确认现best批次四卡7248.87/6517.86/6750.55/6423.09、mean6735.09，今天剩8/8评测。旧alpha/delta science gap638.98/739.44仍为已核实分项快照，不跨卡比较local分数。已选择private ZIP并填项目名Observer Sparse Exact，但文件选择操作超时，03:25UTC Chrome再次Maclocked。未点上传准备/接口/确认/评测，未完成新提交，备注为空，见 `results/online_candidate_attempt_20261004/ATTEMPT_RECEIPT.json`；原manualunlock请求pending。
 - **report DP实际失败的模型原因已查明**：旧Bellman允许q0 paid自救，生产actor却free-only；wait价值也遗漏真实v1的额度门禁。旧cal quake+false高p的33条相关记录仅1条active。独立诊断修q0 V=W后126小树/414720状态合同通过，但cal/val−7.96/−33.63，仍拒绝生产。原NN/DP/ZIP/test hash不变，见 `research/cold_report_sparse_domain_actual_failure_20261004.md`，不以改阈值代替联合belief与真实controller价值。
-- **五槽联合物理NN已真实训练并拒绝当前部署**：2736→128→128→256，PRO6000修正后训练5.042465秒；数据/参数锁与一次独立test保持不变。相同有限2field×5duration×3program及共同指派下，test252queries posterior regret .00061960834、unconditional .00059144744、strong point .00140623204；NN相对同bank固定先验更差。cal/val的NN相对prior世界聚类区间也跨0。有限物理期望比point的收益不是整季提分；bank又存在公开地形公告支持缺口，不能把prototype classifier称完整条件后验，亦不能把unconditional直接部署。原faultv1 exact不改，不开整季或救test。源/实际GPU/数据/失败/成本研究在 `results/cold_physical_posterior_training_20261004/`，等待完成receipt后备份。
-- **新的跨时间机会成本研究正在进行**：`cold_horizon_opportunity_policy` 先查重，旧common-exposure MILP/末夜beam不重跑；研究共同首动作、未来只按届时公开history分支的跨三夜随机rollout。评测真实world与chooser独立采样world严格隔离，全部replan成本计入正式900秒预算；当前仍为小合同/pilot，没有生产score、900秒季节或线上提交。
+- **五槽联合物理NN已完成并拒绝当前部署**：2736→128→128→256，PRO6000修正后训练5.042465秒；数据/参数锁与一次独立test保持不变。相同有限2field×5duration×3program及共同指派下，test252queries posterior regret .00061960834、unconditional .00059144744、strong point .00140623204；NN相对同bank固定先验更差。cal/val的NN相对prior世界聚类区间也跨0。有限物理期望比point的收益不是整季提分；bank又存在公开地形公告支持缺口，不能把prototype classifier称完整条件后验，亦不能把unconditional直接部署。原faultv1 exact不改，不开整季或救test。完整报告 `research/cold_physical_posterior_training_20261004.md`；170项SHA manifest和48.6MBfit/6.08MBtest/10.06MBpublicdesign全部保存，根逐项核查并为重复runtime运输目录记录恢复映射。2CPU受限公开fixture：MLP均值.117ms，256path单field几种duration+三program积分35.42ms，不是整季成本。
+- **跨三夜反馈rollout小实验已完成并停止**：`research/cold_horizon_opportunity_policy_20261004.md`，共同首动作、未来仅公开history分支，3prior与4eval严格隔离，原B38members/pending/action/CSV同源门检。192target/240deg²/3night，M3/K3从即时候选挑不同field或wait，仍选B；四对总分300.424230/283.228195/257.540850/390.717810均完全相同，meanΔ0。每次selector含prior生成38.093798CPU秒，66次需2514CPU秒，不部署。仅用公开geometry审查pilot及L1/L2八个三夜窗口，均无“只剩今夜可见”目标；不是全季未来质量/共享field-fiber容量不稀缺的证明。777项原始SHA与全部正负tie/五失败、解析rare-window反例保存；不据eval扩大原菜单或追加rollout。
+- **新的直接得分分布研究正在做数学合同与小pilot**：`cold_target_score_distribution` 只读正式合同及新独立generated4world，尚未训练/整季/线上。学习对象改为目标的联合factor/quality band，直接计算 `E[(score-best)_+]` 再做固定field/fiber指派。first best0可用三band加权factor moments精确表示，best>0需hinge分布；推导量化误差，避免不可辨识C/E与whole-eventset字典空支持。Jain/REQ仍需原controller处理，不能把科学加法的期望误称完整最优；是否进入PRO6000训练由新合同/生成成本与根审查决定。
 - 正式A–D仅目录/日历/站点/仪器/评分公开，future真实天气/事件/fault/请求逐轮提供，最终E–H未见；actor不能使用local hosttruth。生成器独立world truth仅用于训练/评分，正式实际future seed未恢复，数据规律有限域恢复/不可识别反例在 `research/cold_public_rng_identifiability_20261004.md`。
 - 旧有限列LP与有限quality projection都不是原问题上界；本轮不再反复计算宽松global bound。最高分目标仍未达成，优先寻找新决策机制与实际strong完整收益。
 

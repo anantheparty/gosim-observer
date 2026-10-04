@@ -1,0 +1,37 @@
+[
+  {
+    "log": "generate.log",
+    "log_sha256": "2a19b97c194ac9977340b28795d5740e27e4c3771ceceb7b66da14563250b89e",
+    "name": "invalid request setting",
+    "source": "FAILED_REQUEST_SETTINGS_pilot.py",
+    "source_sha256": "fcc8de42780f477251545763b51fc86e6657df1dc696f34cb8d9bdd01af57d2c"
+  },
+  {
+    "log": "measure.log",
+    "log_sha256": "7c9045407d01f42a55c9e34c3bece6df79de2759698d3ef13c512588fcbfd0ec",
+    "name": "score total schema discovered before ranking",
+    "source": "FAILED_SCORE_SCHEMA_pilot.py",
+    "source_sha256": "95a63bc3c87827fa5d66acca66acea4bc327b83113f18fdb75d7ff9def09296a"
+  },
+  {
+    "log": "FAILED_PUBLIC_FLOAT_BUDGET_choose.log",
+    "log_sha256": "10a6d41acac3b089daa858c341688f034f7acc1718a5b9b05452ec5f8c8ec633",
+    "name": "public budget int/float mismatch",
+    "source": "FAILED_PUBLIC_FLOAT_BUDGET_pilot.py",
+    "source_sha256": "f57b2ce8f043f7825bf25c43d01ec0ad080c44d7712ff7874e6ad66f16736a9e"
+  },
+  {
+    "log": "FAILED_BASE_PENDING_REBUILD_choose.log",
+    "log_sha256": "029950907ba43c500f8289d64ed3d91e2a087ef61530b42aee769ca5030119d6",
+    "name": "interrupted pending rebuild before adoption",
+    "source": "FAILED_BASE_PENDING_REBUILD_pilot.py",
+    "source_sha256": "ddaedd11af58f728c1da4383cb6d190b6194acca6bdc2d3be3a7bbcb1b295f15"
+  },
+  {
+    "log": "FAILED_ASSUMED_38_NIGHTS_public_scarcity_audit.log",
+    "log_sha256": "0b47b530dbc912c3a4be6f29d971c5e97e66bd8db707383b2896844aae8c3b3b",
+    "name": "assumed 38 local nights",
+    "source": "FAILED_ASSUMED_38_NIGHTS_public_scarcity_audit.py",
+    "source_sha256": "477a17e6cba5579424a662a8e81afea64b4ed15576d56f361cd5544a54757529"
+  }
+]

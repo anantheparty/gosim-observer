@@ -1,0 +1,11 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 278, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 256, in main
+    action,receipt=InitialSelector(ROOT/'chooser_probe')(initial,snapshot)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 226, in __call__
+    result=run_b(ROOT/'worlds/prior'/f'W{seed}',output,first=action,
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/pilot.py", line 157, in run_b
+    actor=holder['actor'].summary(), selector=holder.get('selector'), records=records)
+KeyError: 'actor'

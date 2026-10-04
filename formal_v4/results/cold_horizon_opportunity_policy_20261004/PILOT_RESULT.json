@@ -1,0 +1,644 @@
+{
+  "candidates": 3,
+  "catalog_seed": 20261004731,
+  "evaluation_seeds": [
+    89101,
+    89102,
+    89103,
+    89104
+  ],
+  "first_state": "initial public state, no observed scores",
+  "horizon_nights": 3,
+  "mean_delta": 0.0,
+  "no_tuning_or_expansion": true,
+  "pairs": [
+    {
+      "control": {
+        "by_class": {
+          "BGS": 24.824322,
+          "ELG": 76.707627,
+          "LRG": 45.659979,
+          "QSO": 47.84006,
+          "Star": 5.4
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 200.431988,
+          "uniformity_penalty": -0.007759
+        },
+        "counts": {
+          "decisions": 122,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 455,
+          "observe_actions": 87,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000186",
+              "V4T000173"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000123",
+              "V4T000186",
+              "V4T000173"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "c6730c737e57de0796c452b34a67a4edef5c22b5c18777109a9ba39fb48605fb",
+          "messages": "d162a7497d8cb3e99ff2aa0477bd7e9c6fb472da298a1697d99040f993fae6c4",
+          "observations": "87c2dbbe85896bee1b47b6d407c9a38c51e7451853aa7ffe7076c5e5f80bb8de",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 300.42423,
+        "uniformity_bands": {
+          "ra_320_330": 1.0,
+          "ra_330_340": 0.983333,
+          "ra_340_350": 1.0,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 1.0
+        }
+      },
+      "control_cpu_seconds": 3.9034989999999996,
+      "control_wall_seconds": 3.9122132495976985,
+      "delta": 0.0,
+      "horizon": {
+        "by_class": {
+          "BGS": 24.824322,
+          "ELG": 76.707627,
+          "LRG": 45.659979,
+          "QSO": 47.84006,
+          "Star": 5.4
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 200.431988,
+          "uniformity_penalty": -0.007759
+        },
+        "counts": {
+          "decisions": 122,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 455,
+          "observe_actions": 87,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000186",
+              "V4T000173"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000123",
+              "V4T000186",
+              "V4T000173"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "c6730c737e57de0796c452b34a67a4edef5c22b5c18777109a9ba39fb48605fb",
+          "messages": "d162a7497d8cb3e99ff2aa0477bd7e9c6fb472da298a1697d99040f993fae6c4",
+          "observations": "87c2dbbe85896bee1b47b6d407c9a38c51e7451853aa7ffe7076c5e5f80bb8de",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 300.42423,
+        "uniformity_bands": {
+          "ra_320_330": 1.0,
+          "ra_330_340": 0.983333,
+          "ra_340_350": 1.0,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 1.0
+        }
+      },
+      "horizon_cpu_seconds": 41.803664000000005,
+      "horizon_wall_seconds": 41.82369491737336,
+      "seed": 89101,
+      "selector_cpu_seconds": 37.786937,
+      "terminations": [
+        "survey_complete",
+        "survey_complete"
+      ],
+      "winner": 0
+    },
+    {
+      "control": {
+        "by_class": {
+          "BGS": 24.359556,
+          "ELG": 76.733419,
+          "LRG": 42.465543,
+          "QSO": 42.281814,
+          "Star": 5.4
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 191.240331,
+          "uniformity_penalty": -8.012136
+        },
+        "counts": {
+          "decisions": 114,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 442,
+          "observe_actions": 79,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000032",
+              "V4T000037"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000032",
+              "V4T000115",
+              "V4T000037"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "3348459d72659ecd638a0e74bab76d4493df47a040dbd13f860e2022b5d2bedc",
+          "messages": "9d07b38d6498c9ec3e60c1c162992c74f40ce3da15b16ebad4b146df1a3c0b47",
+          "observations": "334428bb30c0c156d063c2bd83b069d94089642660332612e4fd438c15a6565a",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 283.228195,
+        "uniformity_bands": {
+          "ra_320_330": 0.5,
+          "ra_330_340": 0.933333,
+          "ra_340_350": 0.8,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 0.96
+        }
+      },
+      "control_cpu_seconds": 3.441685999999997,
+      "control_wall_seconds": 3.4423241252079606,
+      "delta": 0.0,
+      "horizon": {
+        "by_class": {
+          "BGS": 24.359556,
+          "ELG": 76.733419,
+          "LRG": 42.465543,
+          "QSO": 42.281814,
+          "Star": 5.4
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 191.240331,
+          "uniformity_penalty": -8.012136
+        },
+        "counts": {
+          "decisions": 114,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 442,
+          "observe_actions": 79,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000032",
+              "V4T000037"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000032",
+              "V4T000115",
+              "V4T000037"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "3348459d72659ecd638a0e74bab76d4493df47a040dbd13f860e2022b5d2bedc",
+          "messages": "9d07b38d6498c9ec3e60c1c162992c74f40ce3da15b16ebad4b146df1a3c0b47",
+          "observations": "334428bb30c0c156d063c2bd83b069d94089642660332612e4fd438c15a6565a",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 283.228195,
+        "uniformity_bands": {
+          "ra_320_330": 0.5,
+          "ra_330_340": 0.933333,
+          "ra_340_350": 0.8,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 0.96
+        }
+      },
+      "horizon_cpu_seconds": 41.479899,
+      "horizon_wall_seconds": 41.50361379189417,
+      "seed": 89102,
+      "selector_cpu_seconds": 38.049647,
+      "terminations": [
+        "survey_complete",
+        "survey_complete"
+      ],
+      "winner": 0
+    },
+    {
+      "control": {
+        "by_class": {
+          "BGS": 23.180566,
+          "ELG": 69.930208,
+          "LRG": 37.385696,
+          "QSO": 27.965425,
+          "Star": 5.177973
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 163.639869,
+          "uniformity_penalty": -6.099019
+        },
+        "counts": {
+          "decisions": 105,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 434,
+          "observe_actions": 72,
+          "required_missing": 0,
+          "targets_observed": 191
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000127",
+              "V4T000153"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000127",
+              "V4T000124",
+              "V4T000153"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "001fc27bb2dc962fcbdfb15f746028a47d1a60176e9f6f39935c225c29c655d7",
+          "messages": "d92e80e6df7c7e47b26e4c96ff239a908c8a0c2fb55036907872a3a7af5b5454",
+          "observations": "8ac6fd86ab87aca94e6d3d673b90b8cc859d2aec7d662dea4c49175f486c6757",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 257.54085,
+        "uniformity_bands": {
+          "ra_320_330": 0.5,
+          "ra_330_340": 0.8,
+          "ra_340_350": 0.8,
+          "ra_50_60": 0.888889,
+          "ra_60_70": 0.941176,
+          "ra_70_80": 0.84
+        }
+      },
+      "control_cpu_seconds": 3.4318850000000083,
+      "control_wall_seconds": 3.433545334264636,
+      "delta": 0.0,
+      "horizon": {
+        "by_class": {
+          "BGS": 23.180566,
+          "ELG": 69.930208,
+          "LRG": 37.385696,
+          "QSO": 27.965425,
+          "Star": 5.177973
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 0.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 163.639869,
+          "uniformity_penalty": -6.099019
+        },
+        "counts": {
+          "decisions": 105,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 434,
+          "observe_actions": 72,
+          "required_missing": 0,
+          "targets_observed": 191
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 2,
+            "completed_target_ids": [
+              "V4T000127",
+              "V4T000153"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000127",
+              "V4T000124",
+              "V4T000153"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "001fc27bb2dc962fcbdfb15f746028a47d1a60176e9f6f39935c225c29c655d7",
+          "messages": "d92e80e6df7c7e47b26e4c96ff239a908c8a0c2fb55036907872a3a7af5b5454",
+          "observations": "8ac6fd86ab87aca94e6d3d673b90b8cc859d2aec7d662dea4c49175f486c6757",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 257.54085,
+        "uniformity_bands": {
+          "ra_320_330": 0.5,
+          "ra_330_340": 0.8,
+          "ra_340_350": 0.8,
+          "ra_50_60": 0.888889,
+          "ra_60_70": 0.941176,
+          "ra_70_80": 0.84
+        }
+      },
+      "horizon_cpu_seconds": 41.66203100000001,
+      "horizon_wall_seconds": 41.696888791862875,
+      "seed": 89103,
+      "selector_cpu_seconds": 38.213362000000004,
+      "terminations": [
+        "survey_complete",
+        "survey_complete"
+      ],
+      "winner": 0
+    },
+    {
+      "control": {
+        "by_class": {
+          "BGS": 23.948828,
+          "ELG": 75.985853,
+          "LRG": 41.223442,
+          "QSO": 44.51748,
+          "Star": 5.387732
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 100.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 191.063334,
+          "uniformity_penalty": -0.345524
+        },
+        "counts": {
+          "decisions": 119,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 446,
+          "observe_actions": 83,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 3,
+            "completed_target_ids": [
+              "V4T000172",
+              "V4T000020",
+              "V4T000030"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000172",
+              "V4T000020",
+              "V4T000030"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "5c959221804aae67a9288101390a945a8b9a2e10da08b9cf47cd1047cbec2a6d",
+          "messages": "3eb4e2724ed390eb72d138c6bd826b9535447cffabd17a7c669316fa3ed4b1f5",
+          "observations": "c81504d513739e8aaab958ed6bb06a845cee264fa36f43deb07786e823e58928",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 390.71781,
+        "uniformity_bands": {
+          "ra_320_330": 1.0,
+          "ra_330_340": 0.933333,
+          "ra_340_350": 0.9,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 1.0
+        }
+      },
+      "control_cpu_seconds": 4.670952,
+      "control_wall_seconds": 4.671318209264427,
+      "delta": 0.0,
+      "horizon": {
+        "by_class": {
+          "BGS": 23.948828,
+          "ELG": 75.985853,
+          "LRG": 41.223442,
+          "QSO": 44.51748,
+          "Star": 5.387732
+        },
+        "components": {
+          "observation_request_reward": 100.0,
+          "report_settlement": 100.0,
+          "required_penalty": -0.0,
+          "sum_best_scores": 191.063334,
+          "uniformity_penalty": -0.345524
+        },
+        "counts": {
+          "decisions": 119,
+          "invalidated_observations": 0,
+          "observation_requests_completed": 1,
+          "observation_requests_issued": 1,
+          "observations": 446,
+          "observe_actions": 83,
+          "required_missing": 0,
+          "targets_observed": 192
+        },
+        "invalidations": [],
+        "observation_requests": [
+          {
+            "completed": true,
+            "completed_count": 3,
+            "completed_target_ids": [
+              "V4T000172",
+              "V4T000020",
+              "V4T000030"
+            ],
+            "completion_factor_threshold": 0.5,
+            "completion_reward": 100.0,
+            "deadline_utc": "2026-11-04T08:30:00Z",
+            "issued_at_utc": "2026-11-04T00:30:00Z",
+            "minimum_completed": 2,
+            "request_id": "V4RQ0001",
+            "reward": 100.0,
+            "target_ids": [
+              "V4T000172",
+              "V4T000020",
+              "V4T000030"
+            ]
+          }
+        ],
+        "scenario": "Independent horizon pilot",
+        "schema_version": "v4-score-report-v1",
+        "sha256": {
+          "decisions": "5c959221804aae67a9288101390a945a8b9a2e10da08b9cf47cd1047cbec2a6d",
+          "messages": "3eb4e2724ed390eb72d138c6bd826b9535447cffabd17a7c669316fa3ed4b1f5",
+          "observations": "c81504d513739e8aaab958ed6bb06a845cee264fa36f43deb07786e823e58928",
+          "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+        },
+        "termination": {
+          "detail": "",
+          "reason": "survey_complete"
+        },
+        "total": 390.71781,
+        "uniformity_bands": {
+          "ra_320_330": 1.0,
+          "ra_330_340": 0.933333,
+          "ra_340_350": 0.9,
+          "ra_50_60": 1.0,
+          "ra_60_70": 1.0,
+          "ra_70_80": 1.0
+        }
+      },
+      "horizon_cpu_seconds": 42.727689,
+      "horizon_wall_seconds": 42.74975545797497,
+      "seed": 89104,
+      "selector_cpu_seconds": 38.059042000000005,
+      "terminations": [
+        "survey_complete",
+        "survey_complete"
+      ],
+      "winner": 0
+    }
+  ],
+  "prior_seeds": [
+    77101,
+    77102,
+    77103
+  ],
+  "resource_ru_maxrss": 100909056,
+  "selector_invocations_per_world": 1,
+  "total_process_cpu_seconds": 183.121305,
+  "wait_seconds": 900,
+  "wallclock_seconds": 120
+}

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/public_scarcity_audit.py", line 128, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/public_scarcity_audit.py", line 120, in main
+    r,e=audit_domain(root,[0,7,17,35],label);results+=r;errors.append(e)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_horizon_opportunity_policy_20261004/public_scarcity_audit.py", line 84, in audit_domain
+    eligible_start_counts_quantiles=np.quantile(count[count>0],[0,.1,.5,.9,1]).tolist(),
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 4663, in quantile
+    return _quantile_unchecked(
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 4676, in _quantile_unchecked
+    return _ureduce(a,
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 3764, in _ureduce
+    r = func(a, **kwargs)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 4853, in _quantile_ureduce_func
+    result = _quantile(arr,
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 4979, in _quantile
+    previous = arr[previous_indexes]
+IndexError: index -1 is out of bounds for axis 0 with size 0

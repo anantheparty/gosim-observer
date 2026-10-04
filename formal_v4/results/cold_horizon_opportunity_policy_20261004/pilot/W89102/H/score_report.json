@@ -1,0 +1,70 @@
+{
+  "by_class": {
+    "BGS": 24.359556,
+    "ELG": 76.733419,
+    "LRG": 42.465543,
+    "QSO": 42.281814,
+    "Star": 5.4
+  },
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 0.0,
+    "required_penalty": -0.0,
+    "sum_best_scores": 191.240331,
+    "uniformity_penalty": -8.012136
+  },
+  "counts": {
+    "decisions": 114,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 1,
+    "observations": 442,
+    "observe_actions": 79,
+    "required_missing": 0,
+    "targets_observed": 192
+  },
+  "invalidations": [],
+  "observation_requests": [
+    {
+      "completed": true,
+      "completed_count": 2,
+      "completed_target_ids": [
+        "V4T000032",
+        "V4T000037"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-04T08:30:00Z",
+      "issued_at_utc": "2026-11-04T00:30:00Z",
+      "minimum_completed": 2,
+      "request_id": "V4RQ0001",
+      "reward": 100.0,
+      "target_ids": [
+        "V4T000032",
+        "V4T000115",
+        "V4T000037"
+      ]
+    }
+  ],
+  "scenario": "Independent horizon pilot",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "3348459d72659ecd638a0e74bab76d4493df47a040dbd13f860e2022b5d2bedc",
+    "messages": "9d07b38d6498c9ec3e60c1c162992c74f40ce3da15b16ebad4b146df1a3c0b47",
+    "observations": "334428bb30c0c156d063c2bd83b069d94089642660332612e4fd438c15a6565a",
+    "scenario": "dd543852f33200e6a2621d64224e6613d68e2ba11358c71746163398d90fa6bd"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "survey_complete"
+  },
+  "total": 283.228195,
+  "uniformity_bands": {
+    "ra_320_330": 0.5,
+    "ra_330_340": 0.933333,
+    "ra_340_350": 0.8,
+    "ra_50_60": 1.0,
+    "ra_60_70": 1.0,
+    "ra_70_80": 0.96
+  }
+}

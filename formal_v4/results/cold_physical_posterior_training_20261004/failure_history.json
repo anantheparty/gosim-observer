@@ -1,0 +1,38 @@
+[
+  {
+    "phase": "operator gate write",
+    "error": "NumPy bool not JSON serializable",
+    "learner_or_parameter_change": false,
+    "repair": "explicit builtin float and bool",
+    "legacy_bank_exploration": "one bank seed910000 printed 8rawpaths before frozen contract; no fit or test, no K/distance changes based on it"
+  },
+  {
+    "phase": "actual GPU fit v1",
+    "error": "TOKEN_DIM330 trainer hard mask disagreed with public feature TOKEN_DIM322 although XDIM2736 matched; selected output invalid",
+    "legacy": "failure_mask_v1/",
+    "repair": "330->322 only, same dataset/architecture/config/seed/splits; no test read",
+    "learner_or_parameter_change": false,
+    "validation": "mask_contract_repair.json; forbidden label mass zero on 158 train/31 cal/19 val same-timestamp report rows"
+  },
+  {
+    "phase": "cal/val CPU evaluation v1",
+    "error": "empty alternate public field mask defaulted to float and raised NumPy indexing exception",
+    "legacy": "failure_eval_empty_v1/",
+    "repair": "explicit dtype=bool only; candidate family/model/weights unchanged; test unopened",
+    "learner_or_parameter_change": false
+  },
+  {
+    "phase": "2CPU public fixture runtime v1",
+    "error": "shallow /workspace mount failed public_design ROOT.parents[2] import",
+    "legacy": "failure_runtime_shallow_mount.stderr",
+    "repair": "deeper readonly mount /workspace/study/results/physical_posterior; no source changes",
+    "learner_or_parameter_change": false,
+    "qualification": "existing host path dependency is not a portable production actor"
+  },
+  {
+    "phase": "Mac NumPy export check",
+    "warning": "local NumPy matrix emitted floating warnings despite finite final probabilities and export max error4.8086e-7",
+    "repair": "none; no parameter changes; Linux 2CPU stdout finite and stderr empty",
+    "learner_or_parameter_change": false
+  }
+]

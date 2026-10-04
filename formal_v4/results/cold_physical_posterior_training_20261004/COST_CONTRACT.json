@@ -1,0 +1,34 @@
+{
+  "scope": "four public fixtures, five repeats each, no generated world/truth labels inside container; one fixed field per fixture, 5-6 durations, three programs, 256 paths; not strong complete candidate pool or complete season",
+  "host": "rhodes1",
+  "container_image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+  "limits": {
+    "cpus": 2,
+    "cpuset": "12,13",
+    "memory": "2048m",
+    "memory_swap": "2048m",
+    "network": "none",
+    "readonly": true,
+    "user": "1000:1000",
+    "cap_drop": "ALL",
+    "no_new_privileges": true,
+    "tmpfs_tmp": "256m"
+  },
+  "mounts": {
+    "runtime_package": "/workspace/study/results/physical_posterior:ro",
+    "numpy_deps": "/deps:ro"
+  },
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/deps"
+  },
+  "command": "python /workspace/study/results/physical_posterior/runtime_bench.py",
+  "result": "runtime_2cpu.json",
+  "stderr_bytes": 0,
+  "owned_running_container_after_completion": false,
+  "portable_actor_delivered": false,
+  "production_candidate_cost_measured": false
+}

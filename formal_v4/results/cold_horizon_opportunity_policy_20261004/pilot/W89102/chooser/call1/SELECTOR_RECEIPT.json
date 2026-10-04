@@ -1,0 +1,138 @@
+{
+  "candidates": [
+    {
+      "action": "observe",
+      "assignments": {
+        "10": "V4T000106",
+        "13": "V4T000081",
+        "14": "V4T000126",
+        "4": "V4T000046",
+        "6": "V4T000030"
+      },
+      "duration_seconds": 398,
+      "pointing": {
+        "alt_deg": 88.4787369,
+        "az_deg": 235.4390649
+      },
+      "program": "DARK"
+    },
+    {
+      "action": "observe",
+      "assignments": {
+        "13": "V4T000126",
+        "14": "V4T000081",
+        "2": "V4T000139",
+        "3": "V4T000091"
+      },
+      "duration_seconds": 398,
+      "pointing": {
+        "alt_deg": 89.3527744,
+        "az_deg": 48.6969926
+      },
+      "program": "DARK"
+    },
+    {
+      "action": "wait",
+      "duration_seconds": 900
+    }
+  ],
+  "continuation_policy": "unchanged B on participant-visible feedback",
+  "initial_history_sha256": "a951886b53aa78933b7fcb706aa8782a0e9a7c18beb5b3f6a01fb737380f15ee",
+  "initial_sha256": "f03af439575541f0da071dbf150cfd4796ef0c9298db60ccca56337ea1a6cd16",
+  "means": [
+    306.75846533333333,
+    301.545554,
+    270.8724233333333
+  ],
+  "prior_seeds": [
+    77101,
+    77102,
+    77103
+  ],
+  "prior_values": [
+    [
+      260.750359,
+      371.061615,
+      288.463422
+    ],
+    [
+      248.399744,
+      370.475125,
+      285.761793
+    ],
+    [
+      266.701218,
+      257.822368,
+      288.093684
+    ]
+  ],
+  "reads_evaluation_truth": false,
+  "rollouts": [
+    {
+      "candidate": 0,
+      "cpu_seconds": 3.738537000000001,
+      "prior_seed": 77101,
+      "score": 260.750359,
+      "wall_seconds": 3.7412097500637174
+    },
+    {
+      "candidate": 0,
+      "cpu_seconds": 4.652329000000002,
+      "prior_seed": 77102,
+      "score": 371.061615,
+      "wall_seconds": 4.654070999938995
+    },
+    {
+      "candidate": 0,
+      "cpu_seconds": 3.7753310000000013,
+      "prior_seed": 77103,
+      "score": 288.463422,
+      "wall_seconds": 3.779453916940838
+    },
+    {
+      "candidate": 1,
+      "cpu_seconds": 3.74719300000001,
+      "prior_seed": 77101,
+      "score": 248.399744,
+      "wall_seconds": 3.747930542100221
+    },
+    {
+      "candidate": 1,
+      "cpu_seconds": 5.253450000000001,
+      "prior_seed": 77102,
+      "score": 370.475125,
+      "wall_seconds": 5.255903957877308
+    },
+    {
+      "candidate": 1,
+      "cpu_seconds": 3.8385119999999944,
+      "prior_seed": 77103,
+      "score": 285.761793,
+      "wall_seconds": 3.839555624872446
+    },
+    {
+      "candidate": 2,
+      "cpu_seconds": 4.131878,
+      "prior_seed": 77101,
+      "score": 266.701218,
+      "wall_seconds": 4.132562333252281
+    },
+    {
+      "candidate": 2,
+      "cpu_seconds": 5.038536999999991,
+      "prior_seed": 77102,
+      "score": 257.822368,
+      "wall_seconds": 5.039731165859848
+    },
+    {
+      "candidate": 2,
+      "cpu_seconds": 3.810699999999997,
+      "prior_seed": 77103,
+      "score": 288.093684,
+      "wall_seconds": 3.812148166820407
+    }
+  ],
+  "selector_cpu_seconds": 38.049647,
+  "selector_wall_seconds": 38.07304345769808,
+  "winner": 0
+}

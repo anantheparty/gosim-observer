@@ -1,0 +1,423 @@
+{
+  "created_at": "2026-10-04T03:32:00.302677+00:00",
+  "source_lock_sha256": "a4515d36c105c1840bf6738ab6c481d9bced6733b1cca92262d5acf1cfacbec7",
+  "source_model_dataset_gpu_log_hashes_pass": {
+    "physical_core.py": true,
+    "physical_operator.py": true,
+    "build_data.py": true,
+    "train.py": true,
+    "evaluate.py": true,
+    "strong_feedback_model.py": true,
+    "strong_belief_clock.py": true,
+    "world.py": true,
+    "public_design.py": true,
+    "public_design_cache.pkl": true,
+    "fit_data.npz": true,
+    "physical_bank.json": true,
+    "bank_features.npy": true,
+    "physical_model.npz": true,
+    "training_result.json": true,
+    "train_gpu.log": true,
+    "SAMPLING_LOCK.json": true,
+    "mask_contract_repair.json": true
+  },
+  "scope": "Root independent audit of frozen finite shared candidate family cal and val, prior to one locked test. No 900s full production score claim. No test file read. World clusters, query observations are correlated.",
+  "cal": {
+    "sha256": "ce54329f7fe12068bb9ca0b17c6f7c027e77abb5913e4bb610a0f4900e1112a3",
+    "queries": 253,
+    "paired_deltas": {
+      "strong_point": {
+        "worlds": [
+          {
+            "seed": 912000,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00011756877575631839
+          },
+          {
+            "seed": 912001,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0010558277436373445
+          },
+          {
+            "seed": 912002,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0002153073271211302
+          },
+          {
+            "seed": 912003,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.002163402979707345
+          },
+          {
+            "seed": 912004,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.0011037498322047767
+          },
+          {
+            "seed": 912005,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -5.72725618897251e-05
+          },
+          {
+            "seed": 912006,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -5.8205451228003044e-05
+          },
+          {
+            "seed": 912007,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.001531499802393774
+          },
+          {
+            "seed": 912008,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 3.351910694876536e-05
+          },
+          {
+            "seed": 912009,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0011030126066244464
+          },
+          {
+            "seed": 912010,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0007219649486093557
+          },
+          {
+            "seed": 912011,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00013624545655791114
+          },
+          {
+            "seed": 912012,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 6.93209698049173e-05
+          },
+          {
+            "seed": 912013,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0016708710038290551
+          },
+          {
+            "seed": 912014,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 4.796730516865445e-05
+          },
+          {
+            "seed": 912015,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.00011474386812450204
+          }
+        ],
+        "equal_world_mean_delta": 0.0006230952320856605,
+        "world_cluster_SE": 0.00018008520995891331,
+        "descriptive_normal_95_interval": [
+          0.00027012822056619043,
+          0.0009760622436051306
+        ],
+        "world_positive": 14,
+        "world_negative": 2,
+        "query_mean_delta": 0.0006171165325450295
+      },
+      "unconditional": {
+        "worlds": [
+          {
+            "seed": 912000,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00017654583680064439
+          },
+          {
+            "seed": 912001,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0
+          },
+          {
+            "seed": 912002,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -0.0001889698624732521
+          },
+          {
+            "seed": 912003,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.00015509012180690203
+          },
+          {
+            "seed": 912004,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": -0.00019533526503367292
+          },
+          {
+            "seed": 912005,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 7.281652603817484e-05
+          },
+          {
+            "seed": 912006,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -3.3558247684437785e-05
+          },
+          {
+            "seed": 912007,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -5.560570085928843e-06
+          },
+          {
+            "seed": 912008,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 9.817604408177709e-05
+          },
+          {
+            "seed": 912009,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00016855202856294222
+          },
+          {
+            "seed": 912010,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 5.121260156412563e-05
+          },
+          {
+            "seed": 912011,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -3.26862408381581e-05
+          },
+          {
+            "seed": 912012,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -4.2042615050495724e-05
+          },
+          {
+            "seed": 912013,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0002989616441021038
+          },
+          {
+            "seed": 912014,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -0.00031152904772344776
+          },
+          {
+            "seed": 912015,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.0
+          }
+        ],
+        "equal_world_mean_delta": 1.3229559629204799e-05,
+        "world_cluster_SE": 3.887379537521879e-05,
+        "descriptive_normal_95_interval": [
+          -6.296307930622402e-05,
+          8.942219856463362e-05
+        ],
+        "world_positive": 7,
+        "world_negative": 7,
+        "query_mean_delta": 1.3545503590131221e-05
+      }
+    },
+    "selection_change": {
+      "field": 53,
+      "duration": 105,
+      "program": 30
+    },
+    "prototype_band_mismatch": 0.20647238224330736,
+    "near_boundary_mismatch": 0.641925777331996
+  },
+  "val": {
+    "sha256": "059a770e18c25eb63cfaddbffa5229b48e0bdd6be88d47f034e8698417f4cf1e",
+    "queries": 253,
+    "paired_deltas": {
+      "strong_point": {
+        "worlds": [
+          {
+            "seed": 913000,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 4.4804998843784525e-05
+          },
+          {
+            "seed": 913001,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 2.5026866411580976e-05
+          },
+          {
+            "seed": 913002,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0010173004782130194
+          },
+          {
+            "seed": 913003,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0003054300230342083
+          },
+          {
+            "seed": 913004,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0017485799137444487
+          },
+          {
+            "seed": 913005,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0006673667330165101
+          },
+          {
+            "seed": 913006,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00034565882164810035
+          },
+          {
+            "seed": 913007,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0007598310528751693
+          },
+          {
+            "seed": 913008,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.000575889088823928
+          },
+          {
+            "seed": 913009,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0020805209605965075
+          },
+          {
+            "seed": 913010,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 9.275593917519637e-05
+          },
+          {
+            "seed": 913011,
+            "queries": 14,
+            "mean_science_gain_per_second_delta": 0.00047632301804571836
+          },
+          {
+            "seed": 913012,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 0.0007775732710468582
+          },
+          {
+            "seed": 913013,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 2.539465390071204e-05
+          },
+          {
+            "seed": 913014,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00029581567776519
+          },
+          {
+            "seed": 913015,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00023480349819472534
+          }
+        ],
+        "equal_world_mean_delta": 0.0005920671872084786,
+        "world_cluster_SE": 0.00014951958787978083,
+        "descriptive_normal_95_interval": [
+          0.0002990087949641082,
+          0.000885125579452849
+        ],
+        "world_positive": 16,
+        "world_negative": 0,
+        "query_mean_delta": 0.0005922489352499298
+      },
+      "unconditional": {
+        "worlds": [
+          {
+            "seed": 913000,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0002512998555443253
+          },
+          {
+            "seed": 913001,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -2.5287155460643006e-05
+          },
+          {
+            "seed": 913002,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 3.344344932963421e-05
+          },
+          {
+            "seed": 913003,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -0.0001322651357085559
+          },
+          {
+            "seed": 913004,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 6.996870790180375e-05
+          },
+          {
+            "seed": 913005,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 8.876438261339251e-05
+          },
+          {
+            "seed": 913006,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0
+          },
+          {
+            "seed": 913007,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 5.423630909959259e-05
+          },
+          {
+            "seed": 913008,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -0.00019802769367616158
+          },
+          {
+            "seed": 913009,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": -0.00017743745688049604
+          },
+          {
+            "seed": 913010,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0002636996295575521
+          },
+          {
+            "seed": 913011,
+            "queries": 14,
+            "mean_science_gain_per_second_delta": 7.3017294701661754e-06
+          },
+          {
+            "seed": 913012,
+            "queries": 15,
+            "mean_science_gain_per_second_delta": 9.262387078820108e-05
+          },
+          {
+            "seed": 913013,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.0
+          },
+          {
+            "seed": 913014,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 3.714652138664379e-05
+          },
+          {
+            "seed": 913015,
+            "queries": 16,
+            "mean_science_gain_per_second_delta": 0.00016731702437390423
+          }
+        ],
+        "equal_world_mean_delta": 3.329900239620995e-05,
+        "world_cluster_SE": 3.282672847707218e-05,
+        "descriptive_normal_95_interval": [
+          -3.1041385418851514e-05,
+          9.763939021127141e-05
+        ],
+        "world_positive": 10,
+        "world_negative": 4,
+        "query_mean_delta": 3.327002878933286e-05
+      }
+    },
+    "selection_change": {
+      "field": 58,
+      "duration": 105,
+      "program": 47
+    },
+    "prototype_band_mismatch": 0.28996843694250035,
+    "near_boundary_mismatch": 0.5839561534628799
+  }
+}
