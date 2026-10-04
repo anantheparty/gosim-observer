@@ -1,0 +1,32 @@
+{
+  "status": "cost_stop",
+  "reason": "Initial full pricing not converged within declared working set budget",
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "10": "V4T000024",
+      "11": "V4T000038",
+      "13": "V4T000134",
+      "14": "V4T000010",
+      "15": "V4T000025",
+      "2": "V4T000174",
+      "3": "V4T000160",
+      "5": "V4T000117",
+      "6": "V4T000168",
+      "8": "V4T000099",
+      "9": "V4T000137"
+    },
+    "duration_seconds": 256,
+    "pointing": {
+      "alt_deg": 83.5570931,
+      "az_deg": 240.7957196
+    },
+    "program": "DARK"
+  },
+  "initial_public_graph": "INITIAL_PUBLIC_NOMINAL_GRAPH.npz",
+  "full_pricing_trace": "PRICING_TRACE.json",
+  "proposals_created": false,
+  "common_controls_created": false,
+  "winner_created": false,
+  "budget_changed": false
+}

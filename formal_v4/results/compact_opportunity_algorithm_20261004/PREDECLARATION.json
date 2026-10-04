@@ -1,0 +1,21 @@
+{
+  "scope": "existing public-only zero-history science-only deterministic pilots; fixed finite complete-field domain",
+  "reuse_worlds": ["W90501", "W90502"],
+  "full_calendar_preserved": true,
+  "future_truth_used": false,
+  "new_world_generation": false,
+  "full_season": false,
+  "deploy": false,
+  "solver": "Dantzig-Wolfe complete-assignment pattern master with full finite-graph pricing",
+  "max_master_solves_per_branch": 24,
+  "max_patterns": 8192,
+  "pricing_tolerance": 1e-7,
+  "new_patterns_per_start_atom_per_round": 2,
+  "total_selection_wall_seconds": 10.0,
+  "rss_limit_bytes": 536870912,
+  "solver_threads": 1,
+  "initial_seed": "one edge-score-max witness exposure per target and best score-max exposure per start/duration",
+  "common_recourse": ["B", "priced0", "priced1", "y_current=0", "empty_B_duration"],
+  "certificates": ["restricted primal lower bound", "full pricing residual", "start-atom-corrected feasible dual upper bound", "feasible integer greedy schedule"],
+  "mechanical_test": "new pattern equivalence, oracle pricing, blocked interval and dual repair only; no repeated official precision tests"
+}

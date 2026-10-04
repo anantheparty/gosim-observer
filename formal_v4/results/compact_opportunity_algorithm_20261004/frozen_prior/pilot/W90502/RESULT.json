@@ -1,0 +1,172 @@
+{
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "10": "V4T000024",
+      "11": "V4T000038",
+      "13": "V4T000134",
+      "14": "V4T000010",
+      "15": "V4T000025",
+      "2": "V4T000174",
+      "3": "V4T000160",
+      "5": "V4T000117",
+      "6": "V4T000168",
+      "8": "V4T000099",
+      "9": "V4T000137"
+    },
+    "duration_seconds": 256,
+    "pointing": {
+      "alt_deg": 83.5570931,
+      "az_deg": 240.7957196
+    },
+    "program": "DARK"
+  },
+  "baseline_pending_pickle_sha256": "5dedbd1953633543a5adb34ff9522c53e1fd38b365517a073728ef82a8a2dcf0",
+  "common_graph": {
+    "actions": 23739,
+    "constraints": 77297,
+    "nonempty_action_fibers": 76458,
+    "nonzeros": 350673,
+    "sparse_bytes": 4517268,
+    "target_edges": 107568,
+    "time_atoms": 647,
+    "variables": 131307
+  },
+  "cost": {
+    "cpu_seconds": 1.728285,
+    "max_rss_bytes": 562397184,
+    "rss_limit_bytes": 536870912,
+    "stages": [
+      {
+        "cpu_seconds": 0.042713999999999974,
+        "stage": "public_initialization_and_original_B",
+        "wall_seconds": 0.04413758311420679
+      },
+      {
+        "cpu_seconds": 0.42906999999999995,
+        "stage": "whole_calendar_public_geometry_and_columns",
+        "wall_seconds": 0.4290799591690302
+      },
+      {
+        "cpu_seconds": 0.05171999999999999,
+        "stage": "initial_sparse_graph_build",
+        "wall_seconds": 0.05463899997994304
+      },
+      {
+        "cpu_seconds": 0.5153110000000001,
+        "iterations": 4807,
+        "stage": "initial_LP_and_dual",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.5216377079486847
+      },
+      {
+        "cpu_seconds": 0.11692799999999992,
+        "stage": "current_pricing_all_target_four_phases",
+        "wall_seconds": 0.11984816659241915
+      },
+      {
+        "cpu_seconds": 0.07032100000000008,
+        "stage": "common_end_union_geometry_and_sparse_rebuild",
+        "wall_seconds": 0.07105141691863537
+      },
+      {
+        "cpu_seconds": 0.49912900000000016,
+        "iterations": 4502,
+        "stage": "common_recourse_B",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.5014488752931356
+      }
+    ],
+    "total_limit_seconds": 10.0,
+    "wall_seconds": 1.7449402082711458
+  },
+  "future_truth_used": false,
+  "host_truth_scoring": false,
+  "initial_LP": {
+    "dual_gap": 0.0,
+    "dual_value": 137.07772990741594,
+    "positive_target_prices": 128,
+    "positive_time_prices": 5,
+    "value": 137.07772990741594
+  },
+  "initial_graph": {
+    "actions": 23511,
+    "constraints": 76502,
+    "nonempty_action_fibers": 75666,
+    "nonzeros": 346632,
+    "sparse_bytes": 4465596,
+    "target_edges": 106332,
+    "time_atoms": 644,
+    "variables": 129843
+  },
+  "initial_only": true,
+  "initial_sha256": "0a8d0037eebd53065f716e4af53a94fb9a1dd004cc972a8252e043773a73e77d",
+  "nights": 32,
+  "pricing": {
+    "centers": 432,
+    "legal_complete_actions": 4922,
+    "pricing_rule": "reduced dual price; not action gain"
+  },
+  "proposals": [
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T000054",
+          "10": "V4T000171",
+          "11": "V4T000125",
+          "14": "V4T000040",
+          "15": "V4T000023",
+          "2": "V4T000149",
+          "3": "V4T000114",
+          "5": "V4T000173",
+          "7": "V4T000148",
+          "8": "V4T000127",
+          "9": "V4T000075"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 86.6009222,
+          "az_deg": 272.2428285
+        },
+        "program": "DARK"
+      },
+      "pricing_value": 6.894256206765251
+    },
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "1": "V4T000173",
+          "10": "V4T000171",
+          "11": "V4T000156",
+          "14": "V4T000040",
+          "15": "V4T000023",
+          "2": "V4T000149",
+          "3": "V4T000114",
+          "7": "V4T000022",
+          "8": "V4T000127",
+          "9": "V4T000075"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 86.6903009,
+          "az_deg": 271.5411565
+        },
+        "program": "DARK"
+      },
+      "pricing_value": 6.894256206765251
+    }
+  ],
+  "proposals_outside_B": [
+    true,
+    true
+  ],
+  "public_snapshot_sha256": "c3941e60943ed2747184af52887e5abb9baa4b0f8677ad987e9d68545e789748",
+  "reason": "selection max RSS exceeded 512 MiB",
+  "status": "cost_stop",
+  "targets": 192,
+  "world": "W90502"
+}

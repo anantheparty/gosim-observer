@@ -1,0 +1,257 @@
+{
+  "schema": "fresh-direct-target-world-manifest-v1",
+  "workers": 12,
+  "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.41",
+  "python": "3.12.15",
+  "elapsed_wall_seconds": 308.05838684900664,
+  "world_count": 136,
+  "sum_world_generation_seconds": 14.472109683323652,
+  "sum_future_label_seconds": 186.2589470659732,
+  "sum_full_world_worker_seconds": 3436.0540462443605,
+  "physical_label_rows": 3943796,
+  "bytes": 355392736,
+  "source_freeze_sha256": "127444cd52a2800db383b7905e62b38baa6622caf4dc933d0cbcd1e1f3cdf2cb",
+  "no_test_generated": true,
+  "scope": "CPU data-generation cost only; this is not participant2CPU2GiB900s production gate",
+  "split_summary": {
+    "train": {
+      "worlds": 96,
+      "seeds": [
+        961000,
+        961095
+      ],
+      "total_world_seconds": {
+        "sum": 2420.8515336452983,
+        "min": 15.522825104999356,
+        "median": 24.208876388001954,
+        "max": 38.42505597899435
+      },
+      "fresh_generation_seconds": {
+        "sum": 10.284522659319919,
+        "min": 0.09223997499793768,
+        "median": 0.10589947251719423,
+        "max": 0.14933788403868675
+      },
+      "future_label_seconds": {
+        "sum": 133.107353670639,
+        "min": 1.0969265372259542,
+        "median": 1.3872776510834228,
+        "max": 1.799995466019027
+      },
+      "past_observations": {
+        "sum": 99456.0,
+        "min": 984.0,
+        "median": 1036.0,
+        "max": 1088.0
+      },
+      "past_actual_hits": {
+        "sum": 1358078.0,
+        "min": 13394.0,
+        "median": 14147.0,
+        "max": 14898.0
+      },
+      "past_misses": {
+        "sum": 514.0,
+        "min": 1.0,
+        "median": 5.0,
+        "max": 10.0
+      },
+      "past_zero_hits": {
+        "sum": 87824.0,
+        "min": 207.0,
+        "median": 882.5,
+        "max": 2093.0
+      },
+      "past_saturated_hits": {
+        "sum": 273023.0,
+        "min": 1225.0,
+        "median": 2692.5,
+        "max": 5384.0
+      },
+      "reports": {
+        "sum": 194.0,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 4.0
+      },
+      "loss_resyncs": {
+        "sum": 67.0,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      "valid_future_rows": {
+        "sum": 2783856.0,
+        "min": 28929.0,
+        "median": 28998.5,
+        "max": 29068.0
+      },
+      "npz_bytes": {
+        "sum": 251060766.0,
+        "min": 2551315.0,
+        "median": 2612847.5,
+        "max": 2684911.0
+      }
+    },
+    "cal": {
+      "worlds": 16,
+      "seeds": [
+        962000,
+        962015
+      ],
+      "total_world_seconds": {
+        "sum": 422.05601796199335,
+        "min": 17.35958002100233,
+        "median": 25.820533941005124,
+        "max": 33.487467508006375
+      },
+      "fresh_generation_seconds": {
+        "sum": 1.7045496360515244,
+        "min": 0.09144970698980615,
+        "median": 0.10599889201694168,
+        "max": 0.12100664403988048
+      },
+      "future_label_seconds": {
+        "sum": 20.862192211963702,
+        "min": 1.164935007749591,
+        "median": 1.2468797839537729,
+        "max": 1.603725361987017
+      },
+      "past_observations": {
+        "sum": 16576.0,
+        "min": 984.0,
+        "median": 1036.0,
+        "max": 1088.0
+      },
+      "past_actual_hits": {
+        "sum": 226326.0,
+        "min": 13395.0,
+        "median": 14146.0,
+        "max": 14896.0
+      },
+      "past_misses": {
+        "sum": 106.0,
+        "min": 4.0,
+        "median": 7.0,
+        "max": 9.0
+      },
+      "past_zero_hits": {
+        "sum": 15158.0,
+        "min": 280.0,
+        "median": 863.5,
+        "max": 1858.0
+      },
+      "past_saturated_hits": {
+        "sum": 43099.0,
+        "min": 1180.0,
+        "median": 2788.0,
+        "max": 4823.0
+      },
+      "reports": {
+        "sum": 32.0,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 2.0
+      },
+      "loss_resyncs": {
+        "sum": 14.0,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      "valid_future_rows": {
+        "sum": 463976.0,
+        "min": 28929.0,
+        "median": 28998.5,
+        "max": 29068.0
+      },
+      "npz_bytes": {
+        "sum": 41932234.0,
+        "min": 2571261.0,
+        "median": 2618458.0,
+        "max": 2673897.0
+      }
+    },
+    "val": {
+      "worlds": 24,
+      "seeds": [
+        963000,
+        963023
+      ],
+      "total_world_seconds": {
+        "sum": 593.1464946370688,
+        "min": 16.63724584004376,
+        "median": 24.29444355351734,
+        "max": 32.75683455896797
+      },
+      "fresh_generation_seconds": {
+        "sum": 2.4830373879522085,
+        "min": 0.09244554798351601,
+        "median": 0.10541598801501095,
+        "max": 0.11502445698715746
+      },
+      "future_label_seconds": {
+        "sum": 32.2894011833705,
+        "min": 1.1142583500477485,
+        "median": 1.3268439070670865,
+        "max": 1.906012435327284
+      },
+      "past_observations": {
+        "sum": 24864.0,
+        "min": 984.0,
+        "median": 1036.0,
+        "max": 1088.0
+      },
+      "past_actual_hits": {
+        "sum": 339541.0,
+        "min": 13396.0,
+        "median": 14147.5,
+        "max": 14899.0
+      },
+      "past_misses": {
+        "sum": 107.0,
+        "min": 1.0,
+        "median": 5.0,
+        "max": 8.0
+      },
+      "past_zero_hits": {
+        "sum": 22952.0,
+        "min": 237.0,
+        "median": 982.5,
+        "max": 1623.0
+      },
+      "past_saturated_hits": {
+        "sum": 79220.0,
+        "min": 1325.0,
+        "median": 3143.0,
+        "max": 5183.0
+      },
+      "reports": {
+        "sum": 48.0,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 2.0
+      },
+      "loss_resyncs": {
+        "sum": 17.0,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      "valid_future_rows": {
+        "sum": 695964.0,
+        "min": 28929.0,
+        "median": 28998.5,
+        "max": 29068.0
+      },
+      "npz_bytes": {
+        "sum": 62399736.0,
+        "min": 2549913.0,
+        "median": 2589899.0,
+        "max": 2667296.0
+      }
+    }
+  },
+  "original_detached_docker_exit_code": "unavailable: --rm removed container, no docker wait registered",
+  "cost_interpretation": "Actual 12-worker offline generation wall and work are distinct from participant2CPU2GiB900s performance. Future scalar/operator label timing is part of full-world generation cost. Original raw exit unavailable; complete manifest/136 hashes provide completion evidence."
+}

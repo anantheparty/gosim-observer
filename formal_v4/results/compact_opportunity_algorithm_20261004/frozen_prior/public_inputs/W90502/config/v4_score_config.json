@@ -1,0 +1,43 @@
+{
+  "airmass_exponent": 0.6,
+  "exposure_zero_point_seconds": 900,
+  "flux_zero_point": 0.5,
+  "lunar_model": {
+    "altitude_exponent": 1.0,
+    "angular_decay_scale_deg": 35.0,
+    "maximum_penalty": 0.75
+  },
+  "observation_requests": {
+    "completion_factor_threshold": 0.5,
+    "miss_penalty": 0
+  },
+  "program": {
+    "bands": {
+      "BRIGHT": 0.4,
+      "DARK": 0.65
+    },
+    "mismatch_multiplier": 1.0,
+    "multipliers": {
+      "BACKUP": 1.06,
+      "BRIGHT": 1.12,
+      "DARK": 1.2
+    }
+  },
+  "q0": 0.68,
+  "reporting": {
+    "correct_reward": 100,
+    "false_penalty": -150,
+    "false_report_free_allowance": 2,
+    "max_consecutive_reports": 32
+  },
+  "required": {
+    "observed_factor_threshold": 0.5,
+    "penalty_per_missing": 50
+  },
+  "schema_version": "v4-score-v1",
+  "uniformity": {
+    "observed_factor_threshold": 0.5,
+    "ra_band_width_deg": 10.0,
+    "weight": 200.0
+  }
+}

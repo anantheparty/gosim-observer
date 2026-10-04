@@ -1,0 +1,7 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py:30: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  A=np.asarray(rows).T;lp=linprog(-np.asarray(scores),A_ub=A,b_ub=np.ones(A.shape[0]),bounds=(0,None),options=dict(threads=1))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py:45: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(-value,A_ub=A,b_ub=rhs,bounds=np.c_[np.zeros(ne+na),upper],options=dict(threads=1))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/pattern_master.py:95: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(-values,A_ub=A,b_ub=np.ones(self.n+self.nt),bounds=(0,None),method='highs',
+{"all_passed": true, "cases": 24, "deliberate_incomplete": true}

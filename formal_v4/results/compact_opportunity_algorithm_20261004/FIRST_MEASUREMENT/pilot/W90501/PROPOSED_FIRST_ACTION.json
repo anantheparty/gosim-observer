@@ -1,0 +1,81 @@
+{
+  "action": {
+    "action": "observe",
+    "assignments": {
+      "10": "V4T000104",
+      "12": "V4T000034",
+      "13": "V4T000129",
+      "14": "V4T000037",
+      "15": "V4T000172",
+      "4": "V4T000176",
+      "5": "V4T000132",
+      "6": "V4T000028",
+      "8": "V4T000174",
+      "9": "V4T000002"
+    },
+    "duration_seconds": 3600,
+    "pointing": {
+      "alt_deg": 81.6160178,
+      "az_deg": 302.9074999
+    },
+    "program": "DARK"
+  },
+  "certificate": {
+    "all_passed": true,
+    "branches": [
+      {
+        "all_valid": true,
+        "control_observations": 50,
+        "integer_nominal_value": 121.0660956267145,
+        "master_objective_error": 4.263256414560601e-14,
+        "max_target_load": 1.0,
+        "max_time_load": 1.0,
+        "name": "B"
+      },
+      {
+        "all_valid": true,
+        "control_observations": 50,
+        "integer_nominal_value": 130.07576226793083,
+        "master_objective_error": 4.263256414560601e-14,
+        "max_target_load": 1.0,
+        "max_time_load": 1.0,
+        "name": "priced0"
+      },
+      {
+        "all_valid": true,
+        "control_observations": 46,
+        "integer_nominal_value": 128.8509072065982,
+        "master_objective_error": 2.842170943040401e-14,
+        "max_target_load": 1.0,
+        "max_time_load": 1.0,
+        "name": "priced1"
+      },
+      {
+        "all_valid": true,
+        "control_observations": 50,
+        "integer_nominal_value": 120.4193394438941,
+        "master_objective_error": 1.4210854715202004e-14,
+        "max_target_load": 1.0000000000000007,
+        "max_time_load": 1.0000000000000002,
+        "name": "y_current=0"
+      },
+      {
+        "all_valid": true,
+        "control_observations": 48,
+        "integer_nominal_value": 121.93818890572163,
+        "master_objective_error": 0.0,
+        "max_target_load": 1.0,
+        "max_time_load": 1.0,
+        "name": "empty_B_duration"
+      }
+    ],
+    "graph_sha256": "1d7c6466ec1008c57766ed60bd3bd654472f58715a9f87ed1cf6487a24c10e60",
+    "scope": "serialized finite graph feasibility and fixed nominal science ledger; no actual weather/controller scoring",
+    "winner_integer_lower_exceeds_every_other_finite_LP_upper": 0.024855061332146988,
+    "world": "W90501"
+  },
+  "deployment_authorized": false,
+  "finite_nominal_delta_vs_B": 5.409666641216333,
+  "name": "priced0",
+  "scope": "existing zero-history public pilot only"
+}

@@ -1,0 +1,13 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/pattern_master.py:90: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(-values,A_ub=A,b_ub=np.ones(self.n+self.nt),bounds=(0,None),method='highs',
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py", line 58, in main
+    graph=pm.PatternGraph(n,nfib,cols);trace=[];cg,sigma,lam,support=graph.solve(b,blocked,0.,Cost(),'tiny',trace)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/pattern_master.py", line 92, in solve
+    if not lp.success:raise cost.stop_type('Restricted LP incomplete: '+lp.message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Restricted LP incomplete: (HiGHS Status 0: Not Set)

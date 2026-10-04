@@ -1,0 +1,25 @@
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py:29: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  A=np.asarray(rows).T;lp=linprog(-np.asarray(scores),A_ub=A,b_ub=np.ones(A.shape[0]),bounds=(0,None),options=dict(threads=1))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py:44: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(-value,A_ub=A,b_ub=rhs,bounds=np.c_[np.zeros(ne+na),upper],options=dict(threads=1))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/pattern_master.py:90: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  lp=linprog(-values,A_ub=A,b_ub=np.ones(self.n+self.nt),bounds=(0,None),method='highs',
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py", line 57, in main
+    full,A,v=full_pattern(n,nfib,cols,b,blocked);old=compact(n,nfib,cols,b,blocked)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/compact_opportunity_algorithm_20261004/contracts.py", line 29, in full_pattern
+    A=np.asarray(rows).T;lp=linprog(-np.asarray(scores),A_ub=A,b_ub=np.ones(A.shape[0]),bounds=(0,None),options=dict(threads=1))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kamico/.cache/uv/archive-v0/HpGhR81W0uAa5ndjg6p5V/scipy/optimize/_linprog.py", line 649, in linprog
+    lp, solver_options = _parse_linprog(lp, options, meth)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kamico/.cache/uv/archive-v0/HpGhR81W0uAa5ndjg6p5V/scipy/optimize/_linprog_util.py", line 1026, in _parse_linprog
+    lp = _clean_inputs(lp._replace(A_ub=A_ub, A_eq=A_eq))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kamico/.cache/uv/archive-v0/HpGhR81W0uAa5ndjg6p5V/scipy/optimize/_linprog_util.py", line 302, in _clean_inputs
+    raise ValueError(
+ValueError: Invalid input for linprog: c must be a 1-D array and must not have more than one non-singleton dimension

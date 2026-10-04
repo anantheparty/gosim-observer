@@ -1,0 +1,238 @@
+{
+  "baseline_action": {
+    "action": "observe",
+    "assignments": {
+      "15": "V4T000030",
+      "2": "V4T000006",
+      "3": "V4T000134",
+      "5": "V4T000191",
+      "7": "V4T000183",
+      "8": "V4T000189"
+    },
+    "duration_seconds": 160,
+    "pointing": {
+      "alt_deg": 84.1858058,
+      "az_deg": 263.4999426
+    },
+    "program": "DARK"
+  },
+  "baseline_pending_pickle_sha256": "132f8dce7a9e60bdb97593a12f3a492a071e552db94153eb65d81c19d0c92f81",
+  "common_graph": {
+    "actions": 19224,
+    "constraints": 53735,
+    "nonempty_action_fibers": 52896,
+    "nonzeros": 254460,
+    "sparse_bytes": 3268464,
+    "target_edges": 76767,
+    "time_atoms": 647,
+    "variables": 95991
+  },
+  "cost": {
+    "cpu_seconds": 1.9489969999999999,
+    "max_rss_bytes": 605044736,
+    "rss_limit_bytes": 536870912,
+    "stages": [
+      {
+        "cpu_seconds": 0.03496300000000002,
+        "stage": "public_initialization_and_original_B",
+        "wall_seconds": 0.03670479217544198
+      },
+      {
+        "cpu_seconds": 0.422188,
+        "stage": "whole_calendar_public_geometry_and_columns",
+        "wall_seconds": 0.42242245888337493
+      },
+      {
+        "cpu_seconds": 0.04199699999999995,
+        "stage": "initial_sparse_graph_build",
+        "wall_seconds": 0.045424249954521656
+      },
+      {
+        "cpu_seconds": 0.3486520000000001,
+        "iterations": 3825,
+        "stage": "initial_LP_and_dual",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.35528541589155793
+      },
+      {
+        "cpu_seconds": 0.12120799999999998,
+        "stage": "current_pricing_all_target_four_phases",
+        "wall_seconds": 0.12133287498727441
+      },
+      {
+        "cpu_seconds": 0.04598800000000014,
+        "stage": "common_end_union_geometry_and_sparse_rebuild",
+        "wall_seconds": 0.045987249817699194
+      },
+      {
+        "cpu_seconds": 0.30153399999999997,
+        "iterations": 3507,
+        "stage": "common_recourse_B",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.30164887523278594
+      },
+      {
+        "cpu_seconds": 0.326535,
+        "iterations": 3650,
+        "stage": "common_recourse_priced0",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.3271602080203593
+      },
+      {
+        "cpu_seconds": 0.3013919999999999,
+        "iterations": 3470,
+        "stage": "common_recourse_priced1",
+        "status": 0,
+        "success": true,
+        "wall_seconds": 0.30158629221841693
+      }
+    ],
+    "total_limit_seconds": 10.0,
+    "wall_seconds": 1.9620999582111835
+  },
+  "future_truth_used": false,
+  "host_truth_scoring": false,
+  "initial_LP": {
+    "dual_gap": 1.5631940186722204e-13,
+    "dual_value": 123.35933944389419,
+    "positive_target_prices": 110,
+    "positive_time_prices": 8,
+    "value": 123.35933944389403
+  },
+  "initial_graph": {
+    "actions": 19020,
+    "constraints": 53180,
+    "nonempty_action_fibers": 52344,
+    "nonzeros": 251529,
+    "sparse_bytes": 3231072,
+    "target_edges": 75927,
+    "time_atoms": 644,
+    "variables": 94947
+  },
+  "initial_only": true,
+  "initial_sha256": "cf370f632381589edb6d2205466896244aea6b704922ac5b795a4afb515720e5",
+  "nights": 32,
+  "pricing": {
+    "centers": 464,
+    "legal_complete_actions": 5409,
+    "pricing_rule": "reduced dual price; not action gain"
+  },
+  "proposals": [
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T000104",
+          "12": "V4T000034",
+          "13": "V4T000058",
+          "14": "V4T000037",
+          "15": "V4T000172",
+          "4": "V4T000066",
+          "5": "V4T000132",
+          "6": "V4T000028",
+          "8": "V4T000174",
+          "9": "V4T000002"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 81.6160178,
+          "az_deg": 302.9074999
+        },
+        "program": "DARK"
+      },
+      "pricing_value": 6.700242142498896
+    },
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "0": "V4T000176",
+          "1": "V4T000132",
+          "10": "V4T000058",
+          "11": "V4T000037",
+          "12": "V4T000034",
+          "13": "V4T000129",
+          "14": "V4T000166",
+          "15": "V4T000172",
+          "2": "V4T000028",
+          "4": "V4T000184",
+          "5": "V4T000021",
+          "6": "V4T000104",
+          "8": "V4T000056",
+          "9": "V4T000002"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 81.88785,
+          "az_deg": 302.0882021
+        },
+        "program": "DARK"
+      },
+      "pricing_value": 6.681418677033471
+    }
+  ],
+  "proposals_outside_B": [
+    true,
+    true
+  ],
+  "public_snapshot_sha256": "c3941e60943ed2747184af52887e5abb9baa4b0f8677ad987e9d68545e789748",
+  "reason": "selection max RSS exceeded 512 MiB",
+  "recourse": [
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "15": "V4T000030",
+          "2": "V4T000006",
+          "3": "V4T000134",
+          "5": "V4T000191",
+          "7": "V4T000183",
+          "8": "V4T000189"
+        },
+        "duration_seconds": 160,
+        "pointing": {
+          "alt_deg": 84.1858058,
+          "az_deg": 263.4999426
+        },
+        "program": "DARK"
+      },
+      "current_nominal_gain": 1.85576237449353,
+      "future_LP_increment": 122.81033325222118,
+      "joint_nominal_LP_value": 124.66609562671472,
+      "name": "B"
+    },
+    {
+      "action": {
+        "action": "observe",
+        "assignments": {
+          "10": "V4T000104",
+          "12": "V4T000034",
+          "13": "V4T000058",
+          "14": "V4T000037",
+          "15": "V4T000172",
+          "4": "V4T000066",
+          "5": "V4T000132",
+          "6": "V4T000028",
+          "8": "V4T000174",
+          "9": "V4T000002"
+        },
+        "duration_seconds": 3600,
+        "pointing": {
+          "alt_deg": 81.6160178,
+          "az_deg": 302.9074999
+        },
+        "program": "DARK"
+      },
+      "current_nominal_gain": 15.184485940836174,
+      "future_LP_increment": 114.89127632709489,
+      "joint_nominal_LP_value": 130.07576226793105,
+      "name": "priced0"
+    }
+  ],
+  "status": "cost_stop",
+  "targets": 192,
+  "world": "W90501"
+}

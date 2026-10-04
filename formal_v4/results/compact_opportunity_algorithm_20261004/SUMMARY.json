@@ -1,0 +1,39 @@
+{
+  "worlds": {
+    "W90501": {
+      "status": "completed",
+      "reason": null,
+      "wall_seconds": 1.5710704578086734,
+      "peak_rss_bytes": 154730496,
+      "initial_lower": 123.35933944389416,
+      "initial_feasible_upper": 123.35933944389436,
+      "pricing_residual": 5.773159728050814e-15,
+      "initial_converged": true,
+      "completed_common_recourse": 5,
+      "selected": "priced0",
+      "selected_model_delta_vs_B": 5.409666641216333
+    },
+    "W90502": {
+      "status": "cost_stop",
+      "reason": "Initial full pricing not converged within declared working set budget",
+      "wall_seconds": 1.2275548339821398,
+      "peak_rss_bytes": 159875072,
+      "initial_lower": 137.0714648680479,
+      "initial_feasible_upper": 137.40101549209803,
+      "pricing_residual": 0.008725662960910874,
+      "initial_converged": false,
+      "completed_common_recourse": 0,
+      "selected": null,
+      "selected_model_delta_vs_B": null
+    }
+  },
+  "scope": "fixed finite nominal science-only zero-history public pilot; no actual formal weather scoring",
+  "algorithm": "complete-assignment pattern Dantzig-Wolfe master, full exposure pricing, start-atom feasible dual repair",
+  "preserved_failure": "W90502 24-iteration stop without proposal or common recourse",
+  "audit_files": [
+    "PATTERN_CONTRACTS.json",
+    "PERSISTED_DUAL_CERTIFICATE_AUDIT.json",
+    "SERIALIZED_FEASIBILITY_AUDIT.json"
+  ],
+  "formal_deployed": false
+}
