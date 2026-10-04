@@ -1,0 +1,28 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/run_public.py", line 94, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/run_public.py", line 79, in main
+    card_states=states(card,[7,17,27,37])
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/public_states.py", line 82, in states
+    results.append((copy.deepcopy(p),copy.deepcopy(snapshot),copy.deepcopy(env),meta))
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 271, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/Users/kamico/.pyenv/versions/3.10.12/lib/python3.10/copy.py", line 272, in _reconstruct
+    if hasattr(y, '__setstate__'):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/strong_package/research/request_remote_planner.py", line 27, in __getattr__
+    def __getattr__(self,name):return getattr(self.actual,name)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/strong_package/research/request_remote_planner.py", line 27, in __getattr__
+    def __getattr__(self,name):return getattr(self.actual,name)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/strong_package/research/request_remote_planner.py", line 27, in __getattr__
+    def __getattr__(self,name):return getattr(self.actual,name)
+  [Previous line repeated 987 more times]
+RecursionError: maximum recursion depth exceeded

@@ -1,0 +1,43 @@
+{
+  "official_commit": "e01939d0",
+  "cases": 160,
+  "scores": 480,
+  "max_factor_error": 2.220446049250313e-16,
+  "max_band_error": 6.661338147750939e-16,
+  "max_gain_error": 4.440892098500626e-16,
+  "altitude_min": 30.064827980630948,
+  "five_slot_cases": 24,
+  "directional_cases": 106,
+  "expectation_duration_program": [
+    498.0,
+    0.0,
+    0.0008519277108433736,
+    0.0005638554216867469
+  ],
+  "mean_duration_program": [
+    789.0,
+    1.0,
+    0.00045400295732995355,
+    0.000975067173637516
+  ],
+  "same_slot_example_has_duration_change": true,
+  "independent_worlds": {
+    "seed_range": [
+      869600,
+      869615
+    ],
+    "worlds": 16,
+    "exposure_cases": 384,
+    "score_cases": 1152,
+    "five_slot_cases": 160,
+    "directional_event_overlap_cases": 384,
+    "altitude_start_range": [
+      30.12857499898865,
+      88.97827867403522
+    ],
+    "max_error": 5.551115123125783e-16,
+    "actor_used_world_truth": false,
+    "scope": "fresh official host worlds test algebra, not posterior or policy"
+  },
+  "scope": "Exact official algebra for constructed truth paths; no actor posterior or production improvement"
+}

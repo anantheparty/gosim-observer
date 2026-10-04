@@ -1,0 +1,94 @@
+{
+  "fifth_slot": {
+    "duration": 3600,
+    "start_fraction": 899,
+    "weather_slots": 5,
+    "same_first_four": true,
+    "worlds": [
+      {
+        "last_C": 0.2,
+        "first_four_C": [
+          0.65,
+          0.65,
+          0.65,
+          0.65
+        ],
+        "qband": 0.530711499933435,
+        "program": "BRIGHT",
+        "science_by_program": [
+          0.40334073994941055,
+          0.45174162874333984,
+          0.40334073994941055
+        ],
+        "chosen_program": "BRIGHT"
+      },
+      {
+        "last_C": 1.4,
+        "first_four_C": [
+          0.65,
+          0.65,
+          0.65,
+          0.65
+        ],
+        "qband": 0.8240628620982041,
+        "program": "DARK",
+        "science_by_program": [
+          0.7515453302335621,
+          0.6262877751946351,
+          0.6262877751946351
+        ],
+        "chosen_program": "DARK"
+      }
+    ]
+  },
+  "scalar_Cbar_not_sufficient": {
+    "H_by_slot": [
+      0.72,
+      0.75
+    ],
+    "C_paths": [
+      [
+        0.48421768707483,
+        0.6042176870748299
+      ],
+      [
+        0.6042176870748299,
+        0.48421768707483
+      ]
+    ],
+    "same_Cbar": 0.54421768707483,
+    "qbands": [
+      0.40090000000000003,
+      0.3991
+    ],
+    "programs": [
+      "BRIGHT",
+      "BACKUP"
+    ],
+    "scope": "algebraic weights example; no claim these exact H values came from one official field"
+  },
+  "closure_quality_joint_not_marginals": {
+    "C": [
+      0.7,
+      0.7
+    ],
+    "Z": [
+      0.7,
+      0.07
+    ],
+    "open_A": [
+      1,
+      0
+    ],
+    "open_B": [
+      0,
+      1
+    ],
+    "same_C_Z_open_marginals": true,
+    "expected_gain": [
+      0.1352,
+      0.0
+    ]
+  },
+  "claim": "existence proofs of missing sufficient information; no actual-card regret or production result"
+}

@@ -1,0 +1,354 @@
+{
+  "status": "complete_rejected_for_production",
+  "full_runs_started": 0,
+  "online_submissions": 0,
+  "GPU_training": false,
+  "remote_jobs": 0,
+  "L4_or_sealed_read": false,
+  "official_operator_check": {
+    "cases": 1000,
+    "enumeration_max_error": 0.0,
+    "official_uniformity_max_error": 0.0,
+    "exact_win": 87,
+    "tie": 913,
+    "negative": 0,
+    "counterexamples": [
+      {
+        "case": 25,
+        "sizes": [
+          16,
+          14
+        ],
+        "counts": [
+          1,
+          1
+        ],
+        "weight": 200.0,
+        "options": [
+          {
+            "target": 0,
+            "fiber": 0,
+            "gain": 2.071446897757188,
+            "band": 0
+          },
+          {
+            "target": 1,
+            "fiber": 1,
+            "gain": 4.952966310975307,
+            "band": 1
+          },
+          {
+            "target": 2,
+            "fiber": 1,
+            "gain": 1.1023002666243924,
+            "band": 0
+          },
+          {
+            "target": 3,
+            "fiber": 2,
+            "gain": 2.6593862636055254,
+            "band": 1
+          },
+          {
+            "target": 4,
+            "fiber": 3,
+            "gain": 4.341360334728143,
+            "band": -1
+          },
+          {
+            "target": 5,
+            "fiber": 3,
+            "gain": 0.2837465779873788,
+            "band": 1
+          },
+          {
+            "target": 6,
+            "fiber": 4,
+            "gain": 3.762570965172307,
+            "band": 1
+          },
+          {
+            "target": 7,
+            "fiber": 4,
+            "gain": 4.719588778911157,
+            "band": 1
+          },
+          {
+            "target": 8,
+            "fiber": 4,
+            "gain": 3.172589593728383,
+            "band": 0
+          }
+        ],
+        "linear": [
+          0,
+          2,
+          4,
+          8
+        ],
+        "exact": [
+          0,
+          1,
+          3,
+          4,
+          8
+        ],
+        "difference": 52.79490787649884
+      },
+      {
+        "case": 39,
+        "sizes": [
+          26,
+          22
+        ],
+        "counts": [
+          0,
+          1
+        ],
+        "weight": 200.0,
+        "options": [
+          {
+            "target": 0,
+            "fiber": 0,
+            "gain": 2.2925655258213733,
+            "band": 1
+          },
+          {
+            "target": 1,
+            "fiber": 1,
+            "gain": 1.4676371786200482,
+            "band": 1
+          },
+          {
+            "target": 2,
+            "fiber": 1,
+            "gain": 4.4935171599844095,
+            "band": 0
+          },
+          {
+            "target": 3,
+            "fiber": 2,
+            "gain": 4.0189030195598106,
+            "band": -1
+          },
+          {
+            "target": 4,
+            "fiber": 2,
+            "gain": 2.1319365444333864,
+            "band": 1
+          },
+          {
+            "target": 5,
+            "fiber": 3,
+            "gain": 4.468801557198706,
+            "band": 1
+          },
+          {
+            "target": 6,
+            "fiber": 3,
+            "gain": 0.47269318300637575,
+            "band": -1
+          },
+          {
+            "target": 7,
+            "fiber": 3,
+            "gain": 0.7097592294259203,
+            "band": 1
+          },
+          {
+            "target": 8,
+            "fiber": 4,
+            "gain": 0.550255991002444,
+            "band": 0
+          },
+          {
+            "target": 9,
+            "fiber": 4,
+            "gain": 1.9581395767378607,
+            "band": 0
+          },
+          {
+            "target": 10,
+            "fiber": 4,
+            "gain": 4.19366814905739,
+            "band": -1
+          }
+        ],
+        "linear": [
+          0,
+          2,
+          3,
+          5,
+          9
+        ],
+        "exact": [
+          2,
+          3,
+          5,
+          9
+        ],
+        "difference": 10.742089216632806
+      },
+      {
+        "case": 44,
+        "sizes": [
+          15,
+          11
+        ],
+        "counts": [
+          4,
+          4
+        ],
+        "weight": 200.0,
+        "options": [
+          {
+            "target": 0,
+            "fiber": 0,
+            "gain": 4.037355143359295,
+            "band": -1
+          },
+          {
+            "target": 1,
+            "fiber": 0,
+            "gain": 2.119222804779694,
+            "band": 0
+          },
+          {
+            "target": 2,
+            "fiber": 0,
+            "gain": 0.7900830107111112,
+            "band": -1
+          },
+          {
+            "target": 3,
+            "fiber": 1,
+            "gain": 0.4104496824998355,
+            "band": 0
+          },
+          {
+            "target": 4,
+            "fiber": 2,
+            "gain": 0.0966120694203787,
+            "band": 0
+          },
+          {
+            "target": 5,
+            "fiber": 2,
+            "gain": 2.0266128674272714,
+            "band": 0
+          },
+          {
+            "target": 6,
+            "fiber": 3,
+            "gain": 2.4037610407335745,
+            "band": 0
+          },
+          {
+            "target": 7,
+            "fiber": 3,
+            "gain": 2.2216836315557997,
+            "band": 1
+          },
+          {
+            "target": 8,
+            "fiber": 3,
+            "gain": 1.3848042334550825,
+            "band": 1
+          }
+        ],
+        "linear": [
+          1,
+          3,
+          5,
+          6
+        ],
+        "exact": [
+          0,
+          5,
+          6
+        ],
+        "difference": 7.966336422457741
+      },
+      {
+        "case": 53,
+        "sizes": [
+          23,
+          22,
+          21
+        ],
+        "counts": [
+          1,
+          5,
+          2
+        ],
+        "weight": 200.0,
+        "options": [
+          {
+            "target": 0,
+            "fiber": 0,
+            "gain": 1.3768146991996217,
+            "band": 2
+          },
+          {
+            "target": 1,
+            "fiber": 0,
+            "gain": 3.541900253833229,
+            "band": 0
+          },
+          {
+            "target": 2,
+            "fiber": 1,
+            "gain": 0.9199651289467548,
+            "band": 0
+          },
+          {
+            "target": 3,
+            "fiber": 2,
+            "gain": 2.244244831955227,
+            "band": 0
+          }
+        ],
+        "linear": [
+          1,
+          2,
+          3
+        ],
+        "exact": [
+          0,
+          2,
+          3
+        ],
+        "difference": 4.7661699633553525
+      }
+    ],
+    "seconds": 0.5945066250860691
+  },
+  "public_cases": {
+    "requested_states": 8,
+    "solved_states": 6,
+    "unavailable_states": 2,
+    "conditional_subproblems": 18,
+    "exact_vs_matched_linear": {
+      "positive": 0,
+      "negative": 0,
+      "tie": 18
+    },
+    "nominal_strong_action_unchanged": 6,
+    "stable_candidate_gate": 0
+  },
+  "official_geometry_assignments": 248,
+  "official_action_contracts": 18,
+  "all_38_frozen_package_members_byte_equal": true,
+  "engineering_failures": [
+    "FAILED_01_NIGHT_INDEX.log",
+    "FAILED_02_FACADE_DEEPCOPY.log",
+    "FAILED_03_REPORT_SAME_TIME.log"
+  ],
+  "historical_action_parity_claimed": false,
+  "conditional_raw_completion_known": false,
+  "report_path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/research/cold_completed_target_exchange_20261004.md",
+  "report_sha256": "c436dbb461874c13101eca809e87f4b1d7fa7b75dd5dec8bb22384c38317d2e7",
+  "artifact_manifest_sha256": "e266581c4657d677fce6569a4c2d737c28c8a8104cd02a02793bdea5bcf72721",
+  "research_archive_sha256": "9e82e9cbd45fbbc934cd2fda4c800883ee72584e4ea68f228a01717926f359ef",
+  "root_instruction": "preserve complete evidence and close; no new points, parameters or full runs"
+}

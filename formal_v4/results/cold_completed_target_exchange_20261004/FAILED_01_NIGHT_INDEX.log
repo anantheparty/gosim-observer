@@ -1,0 +1,9 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/run_public.py", line 90, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/run_public.py", line 79, in main
+    for actor,snapshot,env,meta in states(card,[7,17,27,37]):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_completed_target_exchange_20261004/public_states.py", line 49, in states
+    start,end=p.planner.nights[n]
+IndexError: list index out of range

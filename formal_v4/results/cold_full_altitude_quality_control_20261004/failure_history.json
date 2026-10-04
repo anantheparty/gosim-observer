@@ -1,0 +1,9 @@
+[
+  {
+    "version": "integral_audit_v1_json_failure.py",
+    "failure": "NumPy bool result was not JSON serializable",
+    "stage": "after all numerical checks passed, during result JSON serialization",
+    "repair": "convert comparison result to Python bool",
+    "numerical_rules_unchanged": true
+  }
+]

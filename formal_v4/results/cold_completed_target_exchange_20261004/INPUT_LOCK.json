@@ -1,0 +1,26 @@
+{
+  "zip": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_sparse_science_runtime_20261004/observer_sparse_exact_fault_20261004.zip",
+  "zip_sha256": "5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29",
+  "official_source": {
+    "v4_runner.py": "390cc6e7fa0a4ff31fa76fe4485511c026ee3355b3c4c203afea471e6a55af4d",
+    "v4_scorer.py": "46154188eb409fb8408845d0a40ea07c143e1bb1f297f7ee79ab1559ac24cd66",
+    "v4_workflow.py": "365d423055514373f574d924d6321735659e0eead0f6b0260904dfcdb2113fba",
+    "v4_fiber_map.py": "9ac7ffd1d865d7c5bc999e554ae9516d208980d948d39223d9f0a047f2d72892",
+    "v4_catalog_generator.py": "ffe70e0064b3b73fec787d4f3ab0895f5a4d816ab1c3888914fa4051248c8eb0",
+    "v4_weather_simulator.py": "b4675ead09e8cf333c12841ac051786c523394d4fb3cfb0b52397ad75dcc753a"
+  },
+  "portfolio_sha256": "8f99ac437d0f2879ef24ac648605658e04a010a69a13552058edc0f35795154e",
+  "public_cards": [
+    "L1",
+    "L2"
+  ],
+  "predeclared_night_indices": [
+    7,
+    17,
+    27,
+    37
+  ],
+  "state_rule": "first observe >= night start+3600; one fixed new strong choose per state; no active REQ; compare fixed field/duration/program assignments only; no future true weather",
+  "synthetic_seed": 20261004,
+  "synthetic_cases": 1000
+}
