@@ -207,3 +207,14 @@ CUDA后端已实际在RTX PRO6000执行：首次job在Windows RSS计量HANDLE类
 cold_strategy_rebuild初版短harness因官方清理host env，两分支均误跑surplus整季6172.484006，已判FAILED_ENV_SCRUB并保留，不能算control差。修显式participant env后的真实第8夜短对照：L1 surplus−76.942429（science−26.691654、多1required missing），L2−60.782648（science−10.201892、多1missing），停止surplus、不扫λ救参。去science anchor额外min(k900)的debias：L1 +22.055487（science+21.793800、required同），L2−6.095593（science−5.842259、required同），均是短截止完整评分而不是整季收益。单卡负不等于整体期望负；root允许一次同冻结debias正常闭环L1/L2整季判断，不改历史gate，不把短局平均+7.979947当部署均分。
 
 新cold_predictive_world_model以fork_turns=none从官方source独立建立C/E多峰共享天气路径 posterior，先逐slot积分q_exp/q_band并计算cap/program/best，再平均；用公开six-decimal score的band/饱和likelihood更新。若官方生成过程可复用可训练普通NN或批量PF在PRO6000；它不是旧32状态窄教师拟合或同16先验场景bank，要求实际decision regret/官方strong闭环评价。此刻尚无训练/部署/得分结果。
+
+
+### 冻结候选实际整季批次已开始（2026-10-04 09:49 JST）
+
+RequestCache terminal其余卡已完整结束且源/output/动作插入/旧loss/所有components逐项核验：L1/L2/L4各0，L3 +101.218852；同四卡local mean6303.0384205→6328.3431335（+25.304713），非线上均分。原PID1900820已结束，不重复季节。总表 ROOT_FOUR_CARD_RESULT.json，全部raw在request_terminal_pair_20261004/seasons。
+
+真正五条新的强闭环候选于2026-10-04 00:48:41.580UTC在Rhodes1启动PID1950907，每条2CPU/2GiB/900s，实际owned容器：fault v1 L1/L2/L3（16–21核）和debias L1/L2（22–23、14–15核）。fault原始ZIP SHA bd461164340f4adf490ace91003d49f7205a6ea631f712e9767f3527ec9549ba；debias cb5e8c423d40c85394ac2ab6e50b65005bc26a95cb3a4014b141d2a82884aee1。actor只挂自身代码+NumPy，host原卡truth评分；没有forcedprefix或STOP、无新truth进入actor。现有同源原29file control L1/L2/L3引用完整来源，未重跑。新通用harness run_strong_candidates.py SHA481612511c05a68d07cf5112bf281944cd0a644f71975605091aec08981d00d3，lock963a5c632b096e48dea80e85ae3d095c8e97aebae766542410fa8ed84ad2df4f，job/cases/source lock及待完成原始输出在results/strategy_reassessment_actual_20261004。
+
+fault v1独立冻结后完整public forecast遮蔽修正了分析记录的最早would-fire：L1 rank902；L2无；L3 rank961。早期未遮forecast的L3 rank790不是最终ZIP规则，不改ZIP、不参考实际fault日期。v2单列false后背景level+新下降的条件value控制，ZIP 2a2ab533099c36c32d25a46d532bac8f8c27cbb39b1194c73928d8a4e8ea6412，当前未开整季；其Normal change/prior/value外推未经实际标定，不能将参数choice当保证。v1五任务实际结果需回收完整组件/首次真实触发/协议后再判断，不能把host科学潜力438当candidate收益。
+
+预测world模型已生成192独立官方seed，train44579/val11719/test10936历史；普通MLP1306→128→128→196输出4component×4slot joint(logC,logZ)+16closure模式。初稿synthetic16fiber独立H造成band过度泄漏，在验标前停止own进程，改同field共同H±2%重新冻结；首GPU epoch0因NumPy int64日志JSON失败，未选checkpoint/test，仅修日志重跑同data/seed/config，失败保留。质量模型部署首版保留原强field/duration/REQ/rate域，先同动作重评分program/expected science；训练有限synthetic比较中的λ不可直接部署。当前没有模型整季得分结论。

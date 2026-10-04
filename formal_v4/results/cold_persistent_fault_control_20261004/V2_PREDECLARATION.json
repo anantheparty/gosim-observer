@@ -1,0 +1,23 @@
+{
+  "name": "public-negative-anchor-change-control-v2",
+  "v1_immutable_sha256": "bd461164340f4adf490ace91003d49f7205a6ea631f712e9767f3527ec9549ba",
+  "model": "A false diagnostic identifies no repairable fault at that public UTC. Subsequent clean score-derived product intervals establish a stable background that includes any earthquake efficiency. Only an additional common persistent drop relative to this background can spend the last free quota.",
+  "parameters": {
+    "background_distinct_slots": 8,
+    "background_min_nights": 2,
+    "background_relative_iqr_max": 0.20,
+    "new_drop_ratio_upper": 0.70,
+    "minimum_changed_slots": 6,
+    "change_fault_prior": 0.10,
+    "log_ratio_sigma_per_night": 0.22,
+    "hypothetical_fault_multiplier": 0.50,
+    "minimum_fault_posterior": 0.90,
+    "future_fault_probability_max": 0.10,
+    "novel_science_extrapolation_fraction": 0.05,
+    "future_quota_science_capture_fraction": 0.05
+  },
+  "decision": "For current log product ratio x and k observed nights, compare Normal(x;0,0.22/sqrt(k)) with Normal(x;log(0.5),0.22/sqrt(k)); posterior prior is 0.10. The final free quota can be spent only if posterior>=0.90 and p*(correct_reward+B_current_science)>(1-p)*V_future_quota. B extrapolates the currently chosen fixed science action's expected repair uplift over remaining public observing time at 5% novelty, capped by public remaining catalogue score room. V uses a <=0.10 future-fault prior times remaining observing fraction and reward plus 5% remaining catalogue score room.",
+  "qualification": "These are explicit, unvalidated decision priors, not calibrated probabilities or guaranteed gains. The product test plus publicly diversified persistence supplies the evidence. Earthquake is nuisance background learned from the negative intervention, not a permanent logical veto.",
+  "frozen_before_host_outcome": true,
+  "forbidden": ["HOST_DIAGNOSTIC", "truth dates", "truth multiplier", "private factor", "teacher labels"]
+}

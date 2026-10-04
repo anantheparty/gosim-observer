@@ -1,0 +1,94 @@
+{
+  "schema": "root-actual-request-terminal-pair-review-v1",
+  "passed": true,
+  "gates": {
+    "control_protocol_passed": true,
+    "control_all_output_hashes_match": true,
+    "control_frozen_actor_sources": true,
+    "terminal_protocol_passed": true,
+    "terminal_all_output_hashes_match": true,
+    "terminal_frozen_actor_sources": true,
+    "exactly_one_extra_action": true,
+    "one_frozen_event": true,
+    "one_released_event": true,
+    "one_report_result_event": true,
+    "inserted_action_is_only_report": true,
+    "all_actions_after_removing_that_report_equal_reference": true,
+    "report_immediately_precedes_final_reference_action": true,
+    "entire_prefix_digest_matches_reference": true,
+    "predecessor_action_hash_matches_reference": true,
+    "frozen_final_action_hash_matches_reference": true,
+    "frozen_final_action_is_reference_and_actual": true,
+    "released_hash_matches_frozen": true,
+    "actor_report_belief_ingestion_suppressed": true,
+    "report_public_time_and_rank_unchanged": true,
+    "terminal_events_match_summary": true,
+    "one_official_report_result": true,
+    "other_public_messages_unchanged": true,
+    "old_invalidation_plan_unchanged": true,
+    "report_precedes_final_committed_decision": true,
+    "all_original_decision_fields_unchanged": true,
+    "report_does_not_advance_time": true,
+    "science_required_request_not_reduced": true,
+    "observations_and_observe_rank_unchanged": true,
+    "false_terminal_report_has_zero_settlement": true,
+    "false_result_total_and_all_components_unchanged": true,
+    "official_report_matches_guard": true,
+    "decision_requests_accounted": true
+  },
+  "card": "L1",
+  "control_total": 6267.103017,
+  "terminal_total": 6267.103017,
+  "actual_full_season_delta": 0.0,
+  "component_delta": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 0.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": 0.0,
+    "uniformity_penalty": 0.0
+  },
+  "action_intervention_audit": {
+    "inserted_report_action_position": 1092,
+    "prefix_sha256": "cf57db340723e0ac46e51b2f31462e222b03ad6344928fba475adf12c353f19e",
+    "reference_prefix_sha256": "cf57db340723e0ac46e51b2f31462e222b03ad6344928fba475adf12c353f19e",
+    "predecessor_action_sha256": "115beabfebf3eb116308376c1b68cde871b26b4052417e24b8f2d77d7344960a",
+    "reference_predecessor_action_sha256": "115beabfebf3eb116308376c1b68cde871b26b4052417e24b8f2d77d7344960a",
+    "frozen": {
+      "event": "terminal_report_frozen",
+      "now_utc": "2026-12-03T08:14:29Z",
+      "observe_action_index": 984,
+      "terminal_kind": "wait",
+      "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+      "frozen_action": {
+        "action": "wait",
+        "until_utc": "2026-12-03T08:15:00Z"
+      },
+      "free_reports_remaining": 2,
+      "consecutive_reports": 0,
+      "worst_jain_harm": 0.0,
+      "conditional_correct_gain_lower": 100.0,
+      "wallclock_remaining": 289.0733364069974,
+      "selection_elapsed_seconds": 0.011663593002595007,
+      "ledger_bound": {}
+    },
+    "released": {
+      "event": "terminal_report_frozen_action_released",
+      "frozen_action_hash": "b05f01bdd14709741e461b17f4b249b92c97c456bc4d4d96a6f6eb1d0cbe68f0",
+      "actor_belief_update_suppressed": true
+    },
+    "report_result": {
+      "event": "terminal_report_result",
+      "correct": false,
+      "score_delta": 0.0,
+      "now_utc": "2026-12-03T08:14:29Z",
+      "observe_action_index": 984
+    }
+  },
+  "formal_online_gain": null,
+  "source_lock_sha256": "aec7816610d81951d92e733403690d85a1d7e50fed12881cb5f378e076073a50",
+  "local_run_limits": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "wallclock_seconds": 900
+  }
+}

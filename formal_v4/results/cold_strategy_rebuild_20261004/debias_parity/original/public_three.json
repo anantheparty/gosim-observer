@@ -1,0 +1,384 @@
+[
+  {
+    "request": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_request",
+      "decision_sequence": 1,
+      "payload": {
+        "schema_version": "v4-decision-snapshot-v1",
+        "now_utc": "2026-11-02T00:30:00Z",
+        "survey_end_utc": "2026-12-03T08:15:00Z",
+        "observe_action_index": 0,
+        "running_total": 0,
+        "latest_bulletin": {
+          "record_type": "bulletin",
+          "slot_id": "N20261101-S001",
+          "night_id": "N20261101",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "initial": true,
+          "notices": [
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SW"
+            },
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SE"
+            }
+          ]
+        },
+        "latest_forecast": {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "coverage_start_utc": "2026-11-02T00:30:00Z",
+          "coverage_end_utc": "2026-11-09T00:30:00Z",
+          "notices": []
+        },
+        "active_requests": [],
+        "new_messages": [
+          {
+            "record_type": "bulletin",
+            "slot_id": "N20261101-S001",
+            "night_id": "N20261101",
+            "issued_at_utc": "2026-11-02T00:30:00Z",
+            "initial": true,
+            "notices": [
+              {
+                "event_kind": "terrain_obstruction",
+                "direction": "SW"
+              },
+              {
+                "event_kind": "terrain_obstruction",
+                "direction": "SE"
+              }
+            ]
+          },
+          {
+            "record_type": "forecast",
+            "issued_at_utc": "2026-11-02T00:30:00Z",
+            "coverage_start_utc": "2026-11-02T00:30:00Z",
+            "coverage_end_utc": "2026-11-09T00:30:00Z",
+            "notices": []
+          }
+        ],
+        "last_result": null,
+        "wallclock": {
+          "elapsed_seconds": 0.0,
+          "remaining_seconds": 900.0
+        }
+      }
+    },
+    "response": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_response",
+      "decision_sequence": 1,
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 69.7415275,
+        "az_deg": 90.452398
+      },
+      "assignments": {
+        "0": "V4T006622",
+        "1": "V4T003309",
+        "2": "V4T000710",
+        "3": "V4T002302",
+        "4": "V4T004689",
+        "5": "V4T000968",
+        "6": "V4T003940",
+        "7": "V4T007727",
+        "8": "V4T006676",
+        "9": "V4T000165",
+        "10": "V4T007094",
+        "11": "V4T004659",
+        "12": "V4T006792",
+        "13": "V4T000855",
+        "14": "V4T007427",
+        "15": "V4T006027"
+      },
+      "duration_seconds": 61,
+      "program": "DARK"
+    }
+  },
+  {
+    "request": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_request",
+      "decision_sequence": 2,
+      "payload": {
+        "schema_version": "v4-decision-snapshot-v1",
+        "now_utc": "2026-11-02T00:31:01Z",
+        "survey_end_utc": "2026-12-03T08:15:00Z",
+        "observe_action_index": 1,
+        "running_total": 1.897435,
+        "latest_bulletin": {
+          "record_type": "bulletin",
+          "slot_id": "N20261101-S001",
+          "night_id": "N20261101",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "initial": true,
+          "notices": [
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SW"
+            },
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SE"
+            }
+          ]
+        },
+        "latest_forecast": {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "coverage_start_utc": "2026-11-02T00:30:00Z",
+          "coverage_end_utc": "2026-11-09T00:30:00Z",
+          "notices": []
+        },
+        "active_requests": [],
+        "new_messages": [],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 0,
+          "assigned_count": 16,
+          "hit_count": 16,
+          "hits": [
+            {
+              "target_id": "V4T006622",
+              "score": 0.174595
+            },
+            {
+              "target_id": "V4T003309",
+              "score": 0.23379
+            },
+            {
+              "target_id": "V4T000710",
+              "score": 0.107554
+            },
+            {
+              "target_id": "V4T002302",
+              "score": 0.080764
+            },
+            {
+              "target_id": "V4T004689",
+              "score": 0.134282
+            },
+            {
+              "target_id": "V4T000968",
+              "score": 0.083798
+            },
+            {
+              "target_id": "V4T003940",
+              "score": 0.073203
+            },
+            {
+              "target_id": "V4T007727",
+              "score": 0.072735
+            },
+            {
+              "target_id": "V4T006676",
+              "score": 0.18798
+            },
+            {
+              "target_id": "V4T000165",
+              "score": 0.246811
+            },
+            {
+              "target_id": "V4T007094",
+              "score": 0.060129
+            },
+            {
+              "target_id": "V4T004659",
+              "score": 0.10043
+            },
+            {
+              "target_id": "V4T006792",
+              "score": 0.057593
+            },
+            {
+              "target_id": "V4T000855",
+              "score": 0.079863
+            },
+            {
+              "target_id": "V4T007427",
+              "score": 0.094674
+            },
+            {
+              "target_id": "V4T006027",
+              "score": 0.109234
+            }
+          ]
+        },
+        "wallclock": {
+          "elapsed_seconds": 0.259,
+          "remaining_seconds": 899.741
+        }
+      }
+    },
+    "response": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_response",
+      "decision_sequence": 2,
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 54.3624462,
+        "az_deg": 83.8114613
+      },
+      "assignments": {
+        "0": "V4T004149",
+        "1": "V4T001449",
+        "2": "V4T002046",
+        "3": "V4T002124",
+        "4": "V4T004248",
+        "5": "V4T000219",
+        "6": "V4T005723",
+        "7": "V4T003697",
+        "8": "V4T001151",
+        "9": "V4T005444",
+        "10": "V4T001114",
+        "11": "V4T002384",
+        "12": "V4T000374",
+        "13": "V4T002945",
+        "15": "V4T000744"
+      },
+      "duration_seconds": 293,
+      "program": "DARK"
+    }
+  },
+  {
+    "request": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_request",
+      "decision_sequence": 3,
+      "payload": {
+        "schema_version": "v4-decision-snapshot-v1",
+        "now_utc": "2026-11-02T00:35:54Z",
+        "survey_end_utc": "2026-12-03T08:15:00Z",
+        "observe_action_index": 2,
+        "running_total": 8.417571,
+        "latest_bulletin": {
+          "record_type": "bulletin",
+          "slot_id": "N20261101-S001",
+          "night_id": "N20261101",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "initial": true,
+          "notices": [
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SW"
+            },
+            {
+              "event_kind": "terrain_obstruction",
+              "direction": "SE"
+            }
+          ]
+        },
+        "latest_forecast": {
+          "record_type": "forecast",
+          "issued_at_utc": "2026-11-02T00:30:00Z",
+          "coverage_start_utc": "2026-11-02T00:30:00Z",
+          "coverage_end_utc": "2026-11-09T00:30:00Z",
+          "notices": []
+        },
+        "active_requests": [],
+        "new_messages": [],
+        "last_result": {
+          "action": "observe",
+          "observe_index": 1,
+          "assigned_count": 15,
+          "hit_count": 14,
+          "hits": [
+            {
+              "target_id": "V4T004149",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T001449",
+              "score": 0.299311
+            },
+            {
+              "target_id": "V4T002046",
+              "score": 0.843092
+            },
+            {
+              "target_id": "V4T002124",
+              "score": 0.318578
+            },
+            {
+              "target_id": "V4T004248",
+              "score": 0.492548
+            },
+            {
+              "target_id": "V4T000219",
+              "score": 0.30254
+            },
+            {
+              "target_id": "V4T005723",
+              "score": 0.401478
+            },
+            {
+              "target_id": "V4T003697",
+              "score": 0.444663
+            },
+            {
+              "target_id": "V4T001151",
+              "score": 0.54
+            },
+            {
+              "target_id": "V4T005444",
+              "score": 0.70983
+            },
+            {
+              "target_id": "V4T001114",
+              "score": 0.467049
+            },
+            {
+              "target_id": "V4T000374",
+              "score": 0.35446
+            },
+            {
+              "target_id": "V4T002945",
+              "score": 0.358952
+            },
+            {
+              "target_id": "V4T000744",
+              "score": 0.447634
+            }
+          ]
+        },
+        "wallclock": {
+          "elapsed_seconds": 0.483,
+          "remaining_seconds": 899.517
+        }
+      }
+    },
+    "response": {
+      "protocol_version": "participant-agent-protocol-v4",
+      "message_type": "decision_response",
+      "decision_sequence": 3,
+      "action": "observe",
+      "pointing": {
+        "alt_deg": 55.0433054,
+        "az_deg": 116.3305748
+      },
+      "assignments": {
+        "0": "V4T003446",
+        "1": "V4T002482",
+        "2": "V4T004638",
+        "4": "V4T002056",
+        "5": "V4T003722",
+        "6": "V4T004111",
+        "7": "V4T005531",
+        "8": "V4T002971",
+        "9": "V4T003845",
+        "10": "V4T001303",
+        "11": "V4T004219",
+        "12": "V4T003890",
+        "13": "V4T007615",
+        "14": "V4T005092",
+        "15": "V4T005330"
+      },
+      "duration_seconds": 60,
+      "program": "DARK"
+    }
+  }
+]

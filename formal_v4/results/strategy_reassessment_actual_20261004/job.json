@@ -1,0 +1,129 @@
+{
+  "schema": "root-actual-two-family-launch-v1",
+  "pid": 1950907,
+  "started_utc": "2026-10-04T00:48:41.580088+00:00",
+  "expected": 5,
+  "source_lock_sha256": "963a5c632b096e48dea80e85ae3d095c8e97aebae766542410fa8ed84ad2df4f",
+  "harness_sha256": "481612511c05a68d07cf5112bf281944cd0a644f71975605091aec08981d00d3",
+  "cases": [
+    {
+      "variant": "fault",
+      "card": "L1",
+      "package": "fault_package",
+      "entry_argv": [
+        "wrapper.py"
+      ],
+      "cpus": "16,17"
+    },
+    {
+      "variant": "fault",
+      "card": "L2",
+      "package": "fault_package",
+      "entry_argv": [
+        "wrapper.py"
+      ],
+      "cpus": "18,19"
+    },
+    {
+      "variant": "fault",
+      "card": "L3",
+      "package": "fault_package",
+      "entry_argv": [
+        "wrapper.py"
+      ],
+      "cpus": "20,21"
+    },
+    {
+      "variant": "debias",
+      "card": "L1",
+      "package": "debias_package",
+      "entry_argv": [
+        "debias_entry.py"
+      ],
+      "cpus": "22,23"
+    },
+    {
+      "variant": "debias",
+      "card": "L2",
+      "package": "debias_package",
+      "entry_argv": [
+        "debias_entry.py"
+      ],
+      "cpus": "14,15"
+    }
+  ],
+  "command": [
+    "python3",
+    "-u",
+    "/tmp/geometry_native_20261003/results/strategy_reassessment_actual_20261004/run_strong_candidates.py",
+    "--experiment",
+    "/tmp/geometry_native_20261003/results/strategy_reassessment_actual_20261004",
+    "--kit",
+    "/tmp/geometry_native_20261003/upstream/gosim-observer-examples",
+    "--dependencies",
+    "/tmp/geometry_native_20261003/.deps",
+    "--cases",
+    "/tmp/geometry_native_20261003/results/strategy_reassessment_actual_20261004/cases.json"
+  ],
+  "actual_data_opaque_hashes": {
+    "L1": {
+      "card.md": "1d0e8f19827464ce4cdd8ccde9923b3fdd09d434e61dab6dbc099e2f3033a67e",
+      "config/._v4_fiber_config.json": "2f631c87ca409666120019d0fbf9780b46b275a38d03aeb69e9b3b5f0fb8c349",
+      "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+      "config/v4_scenario.json": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43",
+      "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "truth/v4_observation_requests.jsonl": "7d90a92826538634650f0af4748c794892def86a205485ab33155c2f49e9a045",
+      "truth/v4_events.csv": "7ef54bc5403048a14856c7683ef5eb943f5ac1f70795eebb0954c108205bc949",
+      "truth/v4_weather_truth.csv": "928967c171179d0770ba6bb190f3e0ef24e2d661f309c92edc8425f609ac55f4",
+      "truth/v4_earthquake_effects.csv": "1be7d1b67d9d622528cff41bc3026785230ead9c622f2ce4e88ebd90e429bc03",
+      "truth/v4_slots.csv": "188bdf4b41deb283eeb41d91787e773ac708644af39ffa1869205a3cbc7be600",
+      "public/v4_forecasts.jsonl": "84caf24aaacc921ed3e8f8a3220a06e471bb3484d5d752692f0a3f75259c4d83",
+      "public/v4_night_calendar.csv": "9aa147ecf804e3473d73a32cce6ab4065e282ec0a974dbaf5e3c9f10a93a0a0e",
+      "public/v4_bulletins.jsonl": "348130a34acdca228a4f3ee35dbda9fb487753cb80d50160fe7c72a8752297b5",
+      "public/targets.csv": "e6a451caaf075402a1e130b3411b3c1b70c8cc64484a5496e99a92b24cd30348",
+      "public/footprint.csv": "dc7392de3149ef361c920d064e1d308e504f0f0326b1976c4b969d4df34bcb34"
+    },
+    "L2": {
+      "card.md": "ab26d886f8ab0eb08f205b882b2a915ef580584e466d183683e01ff8d4e0a609",
+      "config/._v4_fiber_config.json": "2f631c87ca409666120019d0fbf9780b46b275a38d03aeb69e9b3b5f0fb8c349",
+      "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+      "config/v4_scenario.json": "b9027d4acd26252ace34d129b9dff10d6c68a1e0ba2912c3b2a7e4510e70bedd",
+      "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "truth/v4_observation_requests.jsonl": "b1f4f0fc61402da40e6a13f0d70ecd929a6373e3c2fab033520cd2fcb9f1c8fd",
+      "truth/v4_events.csv": "6ae25757056c2b8258bb392d02040e8c0a2161fd65ca8e879ec50a60c6e2f022",
+      "truth/v4_weather_truth.csv": "5268a17e6a966a40d9f304e450e63d4b08dd243ffa8c85d254e7d6dbdb1c1022",
+      "truth/v4_earthquake_effects.csv": "d166afe77973cf1ea14bec45b436c06d4c3a5bb758b3b9e0b548598381987f64",
+      "truth/v4_slots.csv": "e6848c0d1c8b17a12776247547a0b620cbc3b667fc03da0b403e068d92b4cf2a",
+      "public/v4_forecasts.jsonl": "41ce85cc78afa51b9d9919aba7cf6fb7d2fab7c954ef6bebdbf3c5b4677cafdc",
+      "public/v4_night_calendar.csv": "e6149422d04de96c469aaaa18b9116c7c11ce1b976c0a42ad983208fcdd89484",
+      "public/v4_bulletins.jsonl": "46339be44bfffe02c3f3481561978e093f2f6e362f33c11b1a290102f962b136",
+      "public/targets.csv": "a85d6f8571be0e1f06c11a34943f786e21feccb32b240f8a17c5d68744ed39db",
+      "public/footprint.csv": "d0913d994cacd3200ce7a9d2036ab43ba3d1934e52dcd8bc1c9e193c2c6b04c9"
+    },
+    "L3": {
+      "card.md": "33bf4f11d02dc982ffc2a4c87bb6991dcb51cb643e8390c566a0f7b673d2941c",
+      "config/._v4_fiber_config.json": "2f631c87ca409666120019d0fbf9780b46b275a38d03aeb69e9b3b5f0fb8c349",
+      "config/v4_fiber_config.json": "85fc175cb198b1c65d33a123cfbc8b6c1deb10778eef0dbfa659156918e23c8f",
+      "config/v4_scenario.json": "8f6ed8404147282a48bd3b7bf8d2df5bbbbff147f7e3e06f37065a75a2414a32",
+      "config/v4_score_config.json": "8b2dd879a684e8dc51e2a3f33dfe6301c277b7f0ee95415c6649498d3a8784cd",
+      "truth/v4_observation_requests.jsonl": "13dd8743ac832770de5dbc3599167fff24ad35c86aca707d715fb6ec3d3241ca",
+      "truth/v4_events.csv": "2568aea2fdc1410c7cd31d3a8d9d0c6654db6adbf13639d7bc3ea4a7cf402f9a",
+      "truth/v4_stress_events.csv": "a1a4e9b184b6f20a7a7b8d22a24bfedb5d62817f17f4e712ea5d7aded70277a3",
+      "truth/v4_weather_truth.csv": "6d91ac3e1869f23bf9a6b86aa666cbbc738dd85ff32a2e8b00f06c815f865643",
+      "truth/v4_earthquake_effects.csv": "9f28d1546ca9f77003fd251b4ea01effab794ea8df93e344c53447941d2f25f3",
+      "truth/v4_slots.csv": "26e15e0c9a91b0333b0639fdc85a2af1e9c200a179f3db8cc49d8ff7a33222f6",
+      "public/v4_forecasts.jsonl": "803924d45e2598daa3fce857d90e6bb33a395b16262c7d49c8f2a2f568853b18",
+      "public/v4_night_calendar.csv": "e552565d9e309ceeadccd3cfac8179847d41eaf1b8c17bfcbd1ba875c0f198ba",
+      "public/v4_bulletins.jsonl": "4e96e05cbd2104bf81fae71167e20456854d012428e17b54ee890578d18e8ef7",
+      "public/targets.csv": "cb0114de562a9199167e8ad4fd3fb030afcffe498cda58021f3a6ce336bd5ffc",
+      "public/footprint.csv": "021aace550aa0ad5cd6afa4a7cd0f09d772c6ca0151bc90e2861d7510c153027"
+    }
+  },
+  "participant_mounts": [
+    "readonly own package",
+    "readonly numpy"
+  ],
+  "actor_reads_truth": false,
+  "teacher_labels_used": false,
+  "controls": "existing exact29file full L1/L2/L3 control"
+}

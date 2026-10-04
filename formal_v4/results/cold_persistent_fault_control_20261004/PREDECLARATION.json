@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-04",
+  "reference": "observer_request_exact_cache.zip original 29 files",
+  "allowed_inputs": ["initialize public targets, scoring and observing nights", "emitted public actions", "last_result hit target_id and score", "published bulletin and forecast notices", "public report results", "public state_resync"],
+  "forbidden_inputs": ["truth", "factor", "quality", "prog_mult", "teacher labels", "fault date or parameter", "retrospective fabricated wallclock"],
+  "model": "A one-sided persistent anomaly detector on unconditional score-derived C*E intervals. Announced non-earthquake ALL weather effects censor evidence. Earthquake is an independent nuisance and reduces reliability, but does not logically rule out instrument fault. One public negative report is an intervention identifying nonrepairability at that time.",
+  "parameters": {
+    "normal_efficiency_reference": 0.95,
+    "product_ratio_threshold": 0.60,
+    "minimum_unsaturated_hits_per_exposure": 3,
+    "distinct_public_slots": 8,
+    "minimum_low_slots": 6,
+    "minimum_nights": 2,
+    "minimum_field_sectors": 2,
+    "minimum_observing_span_seconds": 5400,
+    "maximum_recent_nights": 3,
+    "free_quota_reserve": 1,
+    "minimum_wallclock_seconds": 15,
+    "exclude_direction_distance_deg": 60,
+    "new_level_after_false_ratio": 0.60,
+    "cooldown_observing_seconds": 14400
+  },
+  "basis": "The 0.60 threshold exceeds the full <=1.2 program multiplier ambiguity and usual modest reference weather fluctuations; 8 distinct 900-second slots plus 2 nights avoid treating many same-slot targets as independent evidence. Diversified field sectors reject single direction losses. Reserving one public free report protects original witness opportunity. These are modeling choices frozen before public trajectory inspection, not calibrated fault labels.",
+  "report_interface": "Choose the unchanged science action first, freeze pending. If extra diagnostic is false, keep C/E, belief timestamp, ledger, pending science action and return exact cached action without actor.ingest(report). Synchronize quota only. If true, discard frozen action, install normal report pending and let unchanged actor ingest(true) then replan. No simulation time or observe rank changes. Diagnostic does not run without live wallclock, except explicitly named analytical replay mode that only outputs would-fire features."
+}

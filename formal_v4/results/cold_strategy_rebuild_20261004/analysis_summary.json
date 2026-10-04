@@ -1,0 +1,603 @@
+{
+  "all_actor_modes_correct": true,
+  "all_past_actions_equal": true,
+  "public_score_sums_match": true,
+  "all_same_prefix_per_card": true,
+  "no_traceback": true,
+  "all_reached_short_stop": true,
+  "results": [
+    {
+      "card": "L1",
+      "mode": "control",
+      "total": 3110.195514,
+      "delta_vs_control": 0.0,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 0.0,
+        "uniformity_penalty": 0.0
+      },
+      "initial_public_scores": 2782.17638,
+      "initial_prefix_score": 2782.176379999994,
+      "prefix_official_rows_sha256": "2390af9435481359dff2777285fb901b0747ef7dd661b133869c06dc20c946ae",
+      "past_actions_match": true,
+      "first_mode": "control",
+      "first_now": "2026-11-09T00:30:00Z",
+      "first_rank": 376,
+      "first_price": 0.0,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 61.933125,
+          "az_deg": 70.1467634
+        },
+        "assignments": {
+          "0": "V4T004758",
+          "1": "V4T006469",
+          "2": "V4T002555",
+          "4": "V4T001207",
+          "7": "V4T000708",
+          "8": "V4T004534",
+          "9": "V4T004835",
+          "10": "V4T002974",
+          "11": "V4T000510",
+          "12": "V4T000458",
+          "13": "V4T004361",
+          "14": "V4T007627",
+          "15": "V4T007471"
+        },
+        "duration_seconds": 150,
+        "program": "DARK"
+      },
+      "first_action_matches_historical": true,
+      "first_actual_science_gain": 2.8338579999999998,
+      "first_actual_science_rate": 0.018892386666666663,
+      "night_science_increment": 330.4740479999923,
+      "night_observe_seconds": 25778.0,
+      "night_realized_science_per_observe_second": 0.012820003413763376,
+      "night_observes": 58,
+      "duration_median": 349.0,
+      "duration_mean": 444.44827586206895,
+      "changed_local_controls": 0,
+      "price_range": [
+        0.0,
+        0.0
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 71.871394,
+          "new_saturated": 66,
+          "new_factor_half": 163,
+          "new_covered": 116
+        },
+        {
+          "class": "ELG",
+          "science_increment": 134.82232100000007,
+          "new_saturated": 29,
+          "new_factor_half": 125,
+          "new_covered": 129
+        },
+        {
+          "class": "LRG",
+          "science_increment": 53.277862999999996,
+          "new_saturated": 6,
+          "new_factor_half": 37,
+          "new_covered": 90
+        },
+        {
+          "class": "QSO",
+          "science_increment": 59.365499999999976,
+          "new_saturated": 7,
+          "new_factor_half": 24,
+          "new_covered": 78
+        },
+        {
+          "class": "Star",
+          "science_increment": 11.13697,
+          "new_saturated": 20,
+          "new_factor_half": 37,
+          "new_covered": 34
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    },
+    {
+      "card": "L1",
+      "mode": "surplus",
+      "total": 3033.253085,
+      "delta_vs_control": -76.94242900000017,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": -50.0,
+        "sum_best_scores": -26.6916540000002,
+        "uniformity_penalty": -0.25077399999999983
+      },
+      "initial_public_scores": 2782.17638,
+      "initial_prefix_score": 2782.176379999994,
+      "prefix_official_rows_sha256": "2390af9435481359dff2777285fb901b0747ef7dd661b133869c06dc20c946ae",
+      "past_actions_match": true,
+      "first_mode": "surplus",
+      "first_now": "2026-11-09T00:30:00Z",
+      "first_rank": 376,
+      "first_price": 0.006774131666783844,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 79.0966844,
+          "az_deg": 96.410976
+        },
+        "assignments": {
+          "0": "V4T006614",
+          "1": "V4T007497",
+          "2": "V4T002156",
+          "3": "V4T004347",
+          "4": "V4T003437",
+          "5": "V4T005232",
+          "6": "V4T006850",
+          "8": "V4T006444",
+          "9": "V4T003779",
+          "10": "V4T006660",
+          "11": "V4T002859",
+          "12": "V4T002912",
+          "13": "V4T004893",
+          "14": "V4T007174",
+          "15": "V4T006707"
+        },
+        "duration_seconds": 1210,
+        "program": "DARK"
+      },
+      "first_action_matches_historical": false,
+      "first_actual_science_gain": 15.415951999999997,
+      "first_actual_science_rate": 0.012740456198347105,
+      "night_science_increment": 303.78239899998334,
+      "night_observe_seconds": 26992.0,
+      "night_realized_science_per_observe_second": 0.011254534639892684,
+      "night_observes": 25,
+      "duration_median": 1077,
+      "duration_mean": 1079.68,
+      "changed_local_controls": 25,
+      "price_range": [
+        0.006774131666783844,
+        0.009616047962262031
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 15.852822999999999,
+          "new_saturated": 35,
+          "new_factor_half": 30,
+          "new_covered": 14
+        },
+        {
+          "class": "ELG",
+          "science_increment": 150.774559,
+          "new_saturated": 81,
+          "new_factor_half": 148,
+          "new_covered": 81
+        },
+        {
+          "class": "LRG",
+          "science_increment": 67.97306300000001,
+          "new_saturated": 18,
+          "new_factor_half": 68,
+          "new_covered": 47
+        },
+        {
+          "class": "QSO",
+          "science_increment": 67.58009700000001,
+          "new_saturated": 6,
+          "new_factor_half": 38,
+          "new_covered": 39
+        },
+        {
+          "class": "Star",
+          "science_increment": 1.6018569999999999,
+          "new_saturated": 6,
+          "new_factor_half": 4,
+          "new_covered": 2
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    },
+    {
+      "card": "L1",
+      "mode": "debias",
+      "total": 3132.251001,
+      "delta_vs_control": 22.055487000000085,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 21.79379999999992,
+        "uniformity_penalty": 0.2616879999999999
+      },
+      "initial_public_scores": 2782.17638,
+      "initial_prefix_score": 2782.176379999994,
+      "prefix_official_rows_sha256": "2390af9435481359dff2777285fb901b0747ef7dd661b133869c06dc20c946ae",
+      "past_actions_match": true,
+      "first_mode": "debias",
+      "first_now": "2026-11-09T00:30:00Z",
+      "first_rank": 376,
+      "first_price": 0.0,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 66.4983557,
+          "az_deg": 81.2490957
+        },
+        "assignments": {
+          "0": "V4T001514",
+          "2": "V4T004610",
+          "3": "V4T000681",
+          "4": "V4T003716",
+          "5": "V4T001426",
+          "6": "V4T002613",
+          "8": "V4T002112",
+          "9": "V4T001974",
+          "10": "V4T004841",
+          "11": "V4T004085",
+          "12": "V4T004548",
+          "13": "V4T007548",
+          "14": "V4T005342",
+          "15": "V4T007154"
+        },
+        "duration_seconds": 327,
+        "program": "DARK"
+      },
+      "first_action_matches_historical": false,
+      "first_actual_science_gain": 6.471148000000001,
+      "first_actual_science_rate": 0.019789443425076457,
+      "night_science_increment": 352.26784699999644,
+      "night_observe_seconds": 27114.0,
+      "night_realized_science_per_observe_second": 0.012992101755550507,
+      "night_observes": 62,
+      "duration_median": 356.0,
+      "duration_mean": 437.3225806451613,
+      "changed_local_controls": 32,
+      "price_range": [
+        0.0,
+        0.0
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 74.863418,
+          "new_saturated": 57,
+          "new_factor_half": 168,
+          "new_covered": 128
+        },
+        {
+          "class": "ELG",
+          "science_increment": 147.606501,
+          "new_saturated": 25,
+          "new_factor_half": 136,
+          "new_covered": 160
+        },
+        {
+          "class": "LRG",
+          "science_increment": 55.67542100000002,
+          "new_saturated": 5,
+          "new_factor_half": 34,
+          "new_covered": 104
+        },
+        {
+          "class": "QSO",
+          "science_increment": 60.129482,
+          "new_saturated": 9,
+          "new_factor_half": 22,
+          "new_covered": 93
+        },
+        {
+          "class": "Star",
+          "science_increment": 13.993025,
+          "new_saturated": 24,
+          "new_factor_half": 48,
+          "new_covered": 35
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    },
+    {
+      "card": "L2",
+      "mode": "control",
+      "total": 1633.807533,
+      "delta_vs_control": 0.0,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 0.0,
+        "uniformity_penalty": 0.0
+      },
+      "initial_public_scores": 2169.6573359999998,
+      "initial_prefix_score": 2169.6573359999948,
+      "prefix_official_rows_sha256": "b1fdceadecfbf2180dec9ae639978f4d0111ece98f9e53220ae20a37db7c8286",
+      "past_actions_match": true,
+      "first_mode": "control",
+      "first_now": "2026-11-16T00:30:00Z",
+      "first_rank": 252,
+      "first_price": 0.0,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 61.9991237,
+          "az_deg": 63.6933058
+        },
+        "assignments": {
+          "0": "V4T003105",
+          "1": "V4T003418",
+          "3": "V4T005007",
+          "4": "V4T008458",
+          "5": "V4T007589",
+          "6": "V4T001751",
+          "8": "V4T006934",
+          "9": "V4T001219",
+          "11": "V4T006496",
+          "13": "V4T000433",
+          "14": "V4T001542",
+          "15": "V4T003504"
+        },
+        "duration_seconds": 1872,
+        "program": "DARK"
+      },
+      "first_action_matches_historical": true,
+      "first_actual_science_gain": 10.717078,
+      "first_actual_science_rate": 0.00572493482905983,
+      "night_science_increment": 217.97774999998774,
+      "night_observe_seconds": 27854.0,
+      "night_realized_science_per_observe_second": 0.007825725210023254,
+      "night_observes": 23,
+      "duration_median": 575,
+      "duration_mean": 1211.0434782608695,
+      "changed_local_controls": 0,
+      "price_range": [
+        0.0,
+        0.0
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 13.020808,
+          "new_saturated": 8,
+          "new_factor_half": 20,
+          "new_covered": 61
+        },
+        {
+          "class": "ELG",
+          "science_increment": 74.93656300000006,
+          "new_saturated": 53,
+          "new_factor_half": 60,
+          "new_covered": 102
+        },
+        {
+          "class": "LRG",
+          "science_increment": 44.25455699999998,
+          "new_saturated": 27,
+          "new_factor_half": 40,
+          "new_covered": 46
+        },
+        {
+          "class": "QSO",
+          "science_increment": 79.73593500000003,
+          "new_saturated": 11,
+          "new_factor_half": 48,
+          "new_covered": 52
+        },
+        {
+          "class": "Star",
+          "science_increment": 6.0298869999999996,
+          "new_saturated": 5,
+          "new_factor_half": 17,
+          "new_covered": 28
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    },
+    {
+      "card": "L2",
+      "mode": "surplus",
+      "total": 1573.024885,
+      "delta_vs_control": -60.78264799999988,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": -50.0,
+        "sum_best_scores": -10.201892000000043,
+        "uniformity_penalty": -0.5807560000000005
+      },
+      "initial_public_scores": 2169.6573359999998,
+      "initial_prefix_score": 2169.6573359999948,
+      "prefix_official_rows_sha256": "b1fdceadecfbf2180dec9ae639978f4d0111ece98f9e53220ae20a37db7c8286",
+      "past_actions_match": true,
+      "first_mode": "surplus",
+      "first_now": "2026-11-16T00:30:00Z",
+      "first_rank": 252,
+      "first_price": 0.006620169093104942,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 55.9745478,
+          "az_deg": 99.7328911
+        },
+        "assignments": {
+          "0": "V4T007038",
+          "1": "V4T002560",
+          "2": "V4T001690",
+          "3": "V4T003345",
+          "4": "V4T008406",
+          "5": "V4T000312",
+          "6": "V4T002952",
+          "7": "V4T006298",
+          "8": "V4T002782",
+          "9": "V4T002007",
+          "10": "V4T000762",
+          "11": "V4T006358",
+          "12": "V4T003974",
+          "13": "V4T001172",
+          "14": "V4T006990",
+          "15": "V4T004958"
+        },
+        "duration_seconds": 2497,
+        "program": "DARK"
+      },
+      "first_action_matches_historical": false,
+      "first_actual_science_gain": 20.669033999999996,
+      "first_actual_science_rate": 0.008277546655987183,
+      "night_science_increment": 207.7758589999885,
+      "night_observe_seconds": 27900.0,
+      "night_realized_science_per_observe_second": 0.007447163405017509,
+      "night_observes": 13,
+      "duration_median": 2300,
+      "duration_mean": 2146.153846153846,
+      "changed_local_controls": 11,
+      "price_range": [
+        0.006620169093104942,
+        0.0071478879261475
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 5.125971,
+          "new_saturated": 9,
+          "new_factor_half": 11,
+          "new_covered": 10
+        },
+        {
+          "class": "ELG",
+          "science_increment": 78.13517200000005,
+          "new_saturated": 60,
+          "new_factor_half": 75,
+          "new_covered": 58
+        },
+        {
+          "class": "LRG",
+          "science_increment": 42.891175,
+          "new_saturated": 26,
+          "new_factor_half": 41,
+          "new_covered": 37
+        },
+        {
+          "class": "QSO",
+          "science_increment": 80.903541,
+          "new_saturated": 12,
+          "new_factor_half": 49,
+          "new_covered": 49
+        },
+        {
+          "class": "Star",
+          "science_increment": 0.72,
+          "new_saturated": 2,
+          "new_factor_half": 2,
+          "new_covered": 2
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    },
+    {
+      "card": "L2",
+      "mode": "debias",
+      "total": 1627.71194,
+      "delta_vs_control": -6.095593000000008,
+      "component_deltas": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": -5.842259000000013,
+        "uniformity_penalty": -0.2533350000000003
+      },
+      "initial_public_scores": 2169.6573359999998,
+      "initial_prefix_score": 2169.6573359999948,
+      "prefix_official_rows_sha256": "b1fdceadecfbf2180dec9ae639978f4d0111ece98f9e53220ae20a37db7c8286",
+      "past_actions_match": true,
+      "first_mode": "debias",
+      "first_now": "2026-11-16T00:30:00Z",
+      "first_rank": 252,
+      "first_price": 0.0,
+      "first_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 61.9991237,
+          "az_deg": 63.6933058
+        },
+        "duration_seconds": 1872,
+        "program": "DARK",
+        "assignments": {
+          "0": "V4T003105",
+          "1": "V4T003418",
+          "3": "V4T005007",
+          "4": "V4T008458",
+          "5": "V4T007589",
+          "6": "V4T001751",
+          "8": "V4T006934",
+          "9": "V4T001219",
+          "11": "V4T006496",
+          "13": "V4T000433",
+          "14": "V4T001542",
+          "15": "V4T003504"
+        }
+      },
+      "first_action_matches_historical": true,
+      "first_actual_science_gain": 10.717078,
+      "first_actual_science_rate": 0.00572493482905983,
+      "night_science_increment": 212.1354849999866,
+      "night_observe_seconds": 27847.0,
+      "night_realized_science_per_observe_second": 0.007617893668976429,
+      "night_observes": 19,
+      "duration_median": 2197,
+      "duration_mean": 1465.6315789473683,
+      "changed_local_controls": 10,
+      "price_range": [
+        0.0,
+        0.0
+      ],
+      "class_rows": [
+        {
+          "class": "BGS",
+          "science_increment": 12.690323000000001,
+          "new_saturated": 9,
+          "new_factor_half": 23,
+          "new_covered": 50
+        },
+        {
+          "class": "ELG",
+          "science_increment": 72.68898100000001,
+          "new_saturated": 55,
+          "new_factor_half": 61,
+          "new_covered": 76
+        },
+        {
+          "class": "LRG",
+          "science_increment": 37.920061999999994,
+          "new_saturated": 27,
+          "new_factor_half": 34,
+          "new_covered": 37
+        },
+        {
+          "class": "QSO",
+          "science_increment": 84.19825400000003,
+          "new_saturated": 9,
+          "new_factor_half": 53,
+          "new_covered": 53
+        },
+        {
+          "class": "Star",
+          "science_increment": 4.637865,
+          "new_saturated": 3,
+          "new_factor_half": 12,
+          "new_covered": 22
+        }
+      ],
+      "traceback": false,
+      "termination": "agent_finished"
+    }
+  ],
+  "decision": "Surplus rejected: both short paired branches lose science and one required. No lambda tuning or full paired seasons. Debias has mixed results; no stable gain criterion met."
+}

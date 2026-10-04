@@ -1,0 +1,39 @@
+{
+  "status": "research full pair authorized by root; no deployment or adoption",
+  "candidate_package": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/debias_package",
+  "candidate_zip": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/observer_science_seed_debias_20261004.zip",
+  "entry": [
+    "python3",
+    "-u",
+    "debias_entry.py"
+  ],
+  "enabled_default": true,
+  "disabled_env": "DEBIAS_ENABLED=0",
+  "cards": [
+    "L1",
+    "L2"
+  ],
+  "limits": {
+    "cpu": 2,
+    "memory_bytes": 2147483648,
+    "wallclock_seconds": 900
+  },
+  "controls": {
+    "L1": {
+      "directory": "formal_v4/results/request_geometry_integration_20261004/seasons/control/L1",
+      "total": 6267.103017
+    },
+    "L2": {
+      "directory": "formal_v4/results/request_geometry_integration_20261004/seasons/control/L2",
+      "total": 6723.359693
+    }
+  },
+  "parameter_search": false,
+  "decision_basis": "mixed one-night micro gains may have positive mean; a single negative world is not automatic rejection; full exact fit determines outcome",
+  "short_results_unchanged": true,
+  "algorithm": "same strong RequestCache ordinary baseline retained; new seed family removes extra flux*900 factor; inherited best-only gain/duration utility; field/program/duration/assignment change permitted; REQ and feedback remain original owner",
+  "control_original_zip_sha256": "e55becb74bbf2a707aeb893fb054a857610312c81d815181a28bfcf5e5ff092a",
+  "receipt_file": "DEBIAS_PACKAGE_RECEIPT.json",
+  "parity_file": "debias_parity_result.json",
+  "actor_input_restrictions": "initialize and currently reached public snapshots only; no cut/prefix/stop/price or truth in full package"
+}

@@ -1,0 +1,24 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/spatial_candidates.py:201: RuntimeWarning: invalid value encountered in cast
+  row = np.clip(np.floor(north_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/spatial_candidates.py:202: RuntimeWarning: invalid value encountered in cast
+  col = np.clip(np.floor(east_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:302: RuntimeWarning: divide by zero encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:302: RuntimeWarning: overflow encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:302: RuntimeWarning: invalid value encountered in matmul
+  ((self.eq_vectors@self.eq_vectors[anchor])>=math.cos(2*self.fov*DEG)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:119: RuntimeWarning: divide by zero encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:119: RuntimeWarning: overflow encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:119: RuntimeWarning: invalid value encountered in matmul
+  sep = np.arccos(np.clip(self.eq_vectors[idx]@moon,-1,1))/DEG
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:334: RuntimeWarning: divide by zero encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:334: RuntimeWarning: overflow encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_strategy_rebuild_20261004/package/research/request_deadline_common.py:334: RuntimeWarning: invalid value encountered in matmul
+  pool = np.flatnonzero((alt>=self.min_alt+.04)&((vectors@cvec)>=math.cos(self.fov*DEG)))
+{"decisions":785,"exposures":692,"reports":1,"correct_reports":1,"best_science_sum":5969.509913,"required_missing_bound":2,"planning_seconds":261.967,"C":0.7822,"E":0.941,"remote_check":{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0},"remote_calls":0,"remote_seconds":0,"remote_budget":null,"cpu_phase":{"choose_calls":696,"phase_calls":696,"phase_candidates":8870953,"phase_exact_evaluations":11136,"phase_emergency_count":0,"phase_improvements":566},"terrain":{"schema":"terrain-positive-version-space-v1","directions":["SW","SE"],"width_range":[30.0,70.0],"altitude_range":[35.0,50.0],"boxes_per_family":540,"remaining_boxes":{"SW":323,"SE":239},"positive_count":8913,"zero_feedback_ignored":297,"conditional_domain_conflicts":[],"prediction_assumption":"independent one sector per deduplicated direction; midpoint quadrature"},"terrain_feedback_exposures":692,"request_dp":{"builds":7,"build_seconds":43.481001250911504,"dp_solves":46,"dp_seconds":0.28645366383716464,"request_observes":2,"boundary_waits":0,"clipped_baselines":3,"rejected_by_cost":0,"infeasible":0,"forecast_failures":0,"cached_requests":2,"model":"full-deadline finite columns; frozen same-duration scientific regret"},"distributed_request":{"remote_baselines":0,"cpu_baselines":696,"forced_cpu_crops":3,"transport_failures":0,"cpu_baseline_seconds":139.8011709251441,"remote_baseline_seconds":0.0,"budget":{"accepted":0,"skipped":0,"initialization_seconds":0.0,"observed_remote_seconds":0.0,"failed_initializations":0},"cpu_sample_scope":"actual baseline search only; excludes transport, REQ pool and DP"},"request_exact_cache":{"midpoint_hits":42889,"midpoint_misses":15078,"midpoint_peak_bytes":4617600},"request_exact_cache_class":"ServicePlanner","service_controller":{"calls":666,"changed":657,"model_seconds":7.687321421224624,"nominal_exposures":127,"actual_science_gain":5969.509913,"actual_exposure_seconds":834876.0},"prefix_steps":785,"mode":"surplus"}

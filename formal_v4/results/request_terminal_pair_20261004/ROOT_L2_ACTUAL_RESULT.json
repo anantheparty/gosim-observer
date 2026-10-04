@@ -1,0 +1,167 @@
+{
+  "schema": "root-actual-request-terminal-pair-review-v1",
+  "passed": true,
+  "gates": {
+    "control_protocol_passed": true,
+    "control_all_output_hashes_match": true,
+    "control_frozen_actor_sources": true,
+    "terminal_protocol_passed": true,
+    "terminal_all_output_hashes_match": true,
+    "terminal_frozen_actor_sources": true,
+    "exactly_one_extra_action": true,
+    "one_frozen_event": true,
+    "one_released_event": true,
+    "one_report_result_event": true,
+    "inserted_action_is_only_report": true,
+    "all_actions_after_removing_that_report_equal_reference": true,
+    "report_immediately_precedes_final_reference_action": true,
+    "entire_prefix_digest_matches_reference": true,
+    "predecessor_action_hash_matches_reference": true,
+    "frozen_final_action_hash_matches_reference": true,
+    "frozen_final_action_is_reference_and_actual": true,
+    "released_hash_matches_frozen": true,
+    "actor_report_belief_ingestion_suppressed": true,
+    "report_public_time_and_rank_unchanged": true,
+    "terminal_events_match_summary": true,
+    "one_official_report_result": true,
+    "other_public_messages_unchanged": true,
+    "old_invalidation_plan_unchanged": true,
+    "report_precedes_final_committed_decision": true,
+    "all_original_decision_fields_unchanged": true,
+    "report_does_not_advance_time": true,
+    "science_required_request_not_reduced": true,
+    "observations_and_observe_rank_unchanged": true,
+    "false_terminal_report_has_zero_settlement": true,
+    "false_result_total_and_all_components_unchanged": true,
+    "official_report_matches_guard": true,
+    "decision_requests_accounted": true
+  },
+  "card": "L2",
+  "control_total": 6723.359693,
+  "terminal_total": 6723.359693,
+  "actual_full_season_delta": 0.0,
+  "component_delta": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 0.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": 0.0,
+    "uniformity_penalty": 0.0
+  },
+  "action_intervention_audit": {
+    "inserted_report_action_position": 1213,
+    "prefix_sha256": "6d168f5774dbcab76e74a5ce424a50012a583386e57a1158202b1071d8a12b8e",
+    "reference_prefix_sha256": "6d168f5774dbcab76e74a5ce424a50012a583386e57a1158202b1071d8a12b8e",
+    "predecessor_action_sha256": "afeb60dc7b88fa0e93b79e518366a8ea75f40214369da1b3c8728a9b80606041",
+    "reference_predecessor_action_sha256": "afeb60dc7b88fa0e93b79e518366a8ea75f40214369da1b3c8728a9b80606041",
+    "frozen": {
+      "event": "terminal_report_frozen",
+      "now_utc": "2026-12-14T08:13:58Z",
+      "observe_action_index": 1087,
+      "terminal_kind": "observe",
+      "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+      "frozen_action": {
+        "action": "observe",
+        "pointing": {
+          "alt_deg": 72.0301839,
+          "az_deg": 283.2863306
+        },
+        "assignments": {
+          "3": "V4T007172",
+          "9": "V4T000287",
+          "12": "V4T007027",
+          "13": "V4T005505",
+          "14": "V4T008353"
+        },
+        "duration_seconds": 62,
+        "program": "DARK"
+      },
+      "free_reports_remaining": 2,
+      "consecutive_reports": 0,
+      "worst_jain_harm": 0.3326639710746254,
+      "conditional_correct_gain_lower": 99.66733602892538,
+      "wallclock_remaining": 192.5579159879526,
+      "selection_elapsed_seconds": 0.17408401204738766,
+      "ledger_bound": {
+        "valid_feedback_ranks": 1087,
+        "invalidated_feedback_ranks": [],
+        "request_certificate_targets": 13,
+        "bands": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "lower_ratios": [
+          0.725050916496945,
+          0.7362525458248472,
+          0.8157389635316699,
+          0.8386075949367089,
+          0.8181818181818182,
+          0.7503852080123267,
+          0.8492462311557789,
+          0.856301531213192,
+          0.6792452830188679,
+          0.8254649499284692,
+          0.8645484949832776,
+          0.8170731707317073
+        ],
+        "upper_ratios": [
+          0.7657841140529531,
+          0.7861507128309573,
+          0.8464491362763915,
+          0.8670886075949367,
+          0.8181818181818182,
+          0.7904468412942989,
+          0.8815506101938263,
+          0.889281507656066,
+          0.7169811320754716,
+          0.8755364806866953,
+          0.8971571906354515,
+          0.8617886178861789
+        ],
+        "possible_final_increments": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.006775067750677507
+        ],
+        "q_min": 7.681249523724452
+      }
+    },
+    "released": {
+      "event": "terminal_report_frozen_action_released",
+      "frozen_action_hash": "4e04ae4e11d3ef6c1b0844fb01776e619cce1ef7c369dcf58b209522e8249ad5",
+      "actor_belief_update_suppressed": true
+    },
+    "report_result": {
+      "event": "terminal_report_result",
+      "correct": false,
+      "score_delta": 0.0,
+      "now_utc": "2026-12-14T08:13:58Z",
+      "observe_action_index": 1087
+    }
+  },
+  "formal_online_gain": null,
+  "source_lock_sha256": "aec7816610d81951d92e733403690d85a1d7e50fed12881cb5f378e076073a50",
+  "local_run_limits": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "wallclock_seconds": 900
+  }
+}

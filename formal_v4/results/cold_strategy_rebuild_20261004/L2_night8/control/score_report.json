@@ -1,0 +1,85 @@
+{
+  "by_class": {
+    "BGS": 272.249394,
+    "ELG": 1188.16451,
+    "LRG": 396.464478,
+    "QSO": 432.187398,
+    "Star": 98.569307
+  },
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 0.0,
+    "required_penalty": -850.0,
+    "sum_best_scores": 2387.635088,
+    "uniformity_penalty": -3.827555
+  },
+  "counts": {
+    "decisions": 407,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 1,
+    "observations": 4083,
+    "observe_actions": 275,
+    "required_missing": 17,
+    "targets_observed": 3654
+  },
+  "invalidations": [],
+  "observation_requests": [
+    {
+      "completed": true,
+      "completed_count": 6,
+      "completed_target_ids": [
+        "V4T004900",
+        "V4T007983",
+        "V4T008375",
+        "V4T005579",
+        "V4T008591",
+        "V4T007097"
+      ],
+      "completion_factor_threshold": 0.5,
+      "completion_reward": 100.0,
+      "deadline_utc": "2026-11-11T08:15:00Z",
+      "issued_at_utc": "2026-11-10T00:30:00Z",
+      "minimum_completed": 6,
+      "request_id": "V4RQ0001",
+      "reward": 100.0,
+      "target_ids": [
+        "V4T008449",
+        "V4T007102",
+        "V4T004900",
+        "V4T007983",
+        "V4T008375",
+        "V4T005579",
+        "V4T008591",
+        "V4T007097"
+      ]
+    }
+  ],
+  "scenario": "v4-l2",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "17616c3e1d8e2c7eea4e4123c6a9feb3cdc542ae8db17a704686a8ef6b340edc",
+    "messages": "cedf570a1534a62d268a0e7a3cd21363a4be34b1a2235be1799666046375fa57",
+    "observations": "6b8b79d78ed51fbcaebf927a8ff35c8b4a3f1c99b6ed7777a0630ed097cf140d",
+    "scenario": "b9027d4acd26252ace34d129b9dff10d6c68a1e0ba2912c3b2a7e4510e70bedd"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "agent_finished"
+  },
+  "total": 1633.807533,
+  "uniformity_bands": {
+    "ra_0_10": 0.266802,
+    "ra_100_110": 0.288462,
+    "ra_10_20": 0.244399,
+    "ra_110_120": 0.344173,
+    "ra_20_30": 0.296545,
+    "ra_30_40": 0.246835,
+    "ra_40_50": 0.272727,
+    "ra_50_60": 0.300462,
+    "ra_60_70": 0.312994,
+    "ra_70_80": 0.299176,
+    "ra_80_90": 0.183962,
+    "ra_90_100": 0.281831
+  }
+}

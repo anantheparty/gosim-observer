@@ -1,0 +1,99 @@
+{
+  "accounted_wallclock_seconds": 15.781,
+  "agent_wallclock_seconds": 14.261,
+  "committed_action_count": 536,
+  "decision_requests": 428,
+  "global_wallclock_seconds": 900.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 428,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "v4-l1",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 446.842453,
+      "ELG": 1522.026617,
+      "LRG": 486.64574,
+      "QSO": 491.903752,
+      "Star": 138.540198
+    },
+    "components": {
+      "observation_request_reward": 100.0,
+      "report_settlement": 0.0,
+      "required_penalty": -150.0,
+      "sum_best_scores": 3085.95876,
+      "uniformity_penalty": -2.705675
+    },
+    "counts": {
+      "decisions": 536,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 1,
+      "observation_requests_issued": 1,
+      "observations": 5951,
+      "observe_actions": 401,
+      "required_missing": 3,
+      "targets_observed": 4915
+    },
+    "invalidations": [],
+    "observation_requests": [
+      {
+        "completed": true,
+        "completed_count": 6,
+        "completed_target_ids": [
+          "V4T000594",
+          "V4T003544",
+          "V4T007219",
+          "V4T004700",
+          "V4T001127",
+          "V4T001995"
+        ],
+        "completion_factor_threshold": 0.5,
+        "completion_reward": 100.0,
+        "deadline_utc": "2026-11-04T08:30:00Z",
+        "issued_at_utc": "2026-11-03T00:30:00Z",
+        "minimum_completed": 6,
+        "request_id": "V4RQ0001",
+        "reward": 100.0,
+        "target_ids": [
+          "V4T000594",
+          "V4T003544",
+          "V4T007198",
+          "V4T007219",
+          "V4T004700",
+          "V4T001127",
+          "V4T001995",
+          "V4T000983"
+        ]
+      }
+    ],
+    "scenario": "v4-l1",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "8fc6ec90c9471462bd9674c7a7b1e36b7886152729684bb483277bb818c4be0d",
+      "messages": "12f2526cdd01651c5a223c5cc471671135afc3b47267b76b71bb544e28519eb4",
+      "observations": "bc265f419e4e2c18cd5469df4b32fd74d69aaede905b548e858f4a2ddbce9dcc",
+      "scenario": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "agent_finished"
+    },
+    "total": 3033.253085,
+    "uniformity_bands": {
+      "ra_0_10": 0.415765,
+      "ra_100_110": 0.379341,
+      "ra_10_20": 0.427509,
+      "ra_110_120": 0.415896,
+      "ra_20_30": 0.331967,
+      "ra_30_40": 0.420732,
+      "ra_350_360": 0.448687,
+      "ra_40_50": 0.482158,
+      "ra_50_60": 0.402802,
+      "ra_60_70": 0.323661,
+      "ra_70_80": 0.338843,
+      "ra_90_100": 0.434156
+    }
+  },
+  "termination_detail": "",
+  "termination_reason": "agent_finished"
+}

@@ -1,0 +1,31 @@
+{
+  "card": "L2",
+  "mode": "debias",
+  "elapsed": 11.204827332869172,
+  "exit_code": 0,
+  "total": 1627.71194,
+  "components": {
+    "observation_request_reward": 100.0,
+    "report_settlement": 0.0,
+    "required_penalty": -850.0,
+    "sum_best_scores": 2381.792829,
+    "uniformity_penalty": -4.08089
+  },
+  "counts": {
+    "decisions": 403,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 1,
+    "observation_requests_issued": 1,
+    "observations": 4032,
+    "observe_actions": 271,
+    "required_missing": 17,
+    "targets_observed": 3603
+  },
+  "termination": {
+    "detail": "",
+    "reason": "agent_finished"
+  },
+  "actor_input": "initialize, currently reached public snapshot, public past action prefix",
+  "host_only": "official scenario/truth and score outputs",
+  "wallclock": "fresh clock, historical planning bypassed; not historical snapshot parity"
+}

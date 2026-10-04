@@ -1,0 +1,186 @@
+{
+  "L1": {
+    "first_qualified_public_diagnostic": {
+      "features": {
+        "distinct_slots": 8,
+        "earthquake_samples": 4,
+        "evidence_ranks": [
+          894,
+          895,
+          896,
+          897,
+          900,
+          901
+        ],
+        "field_sectors": 2,
+        "low_slots": 6,
+        "median_ratio_upper": 0.5170492455571454,
+        "nights": 2,
+        "observing_span_seconds": 16562.0,
+        "programs": [
+          "BRIGHT",
+          "DARK"
+        ],
+        "qualified": true
+      },
+      "now_utc": "2026-11-29T02:44:05Z",
+      "observe_action_index": 902
+    },
+    "firstentry_equal_input_fixture": {
+      "exact_equal": true,
+      "historical_wallclock_claim": false,
+      "responses": 3,
+      "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/public_entry/L1/public_input.jsonl"
+    },
+    "history_mode": "observational features only; no planning replay or simulated diagnostic outcomes",
+    "metadata": {
+      "actions": 1093,
+      "card": "L1",
+      "includes_terminal_observation_feedback": false,
+      "last_feedback_rank": 983,
+      "projected_observation_fields": [
+        "observe_index",
+        "target_id",
+        "score"
+      ],
+      "sources": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L1_initialize_public.json": "c257b6b9b13b29faf5f79116c2494989f113ba6a6256b99d3212b15e767acd11",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/actions.jsonl": "2cd70cded91a8de7c57ed2496e72951cf223494c0291b6aa88946b8a97d61339",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/decisions.csv": "d9da2d51c461de9c0f7c564bf7866e43b36104ea331bf0b37f22a52a047263a7",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/messages.jsonl": "68280558c661c7fcab3137159e929ac5d90e7ca5d256e6dbdd7573ee34c28bfb",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L1/observations.csv": "b8b7f92177b818e7b6e8a4d0da959761b60040bdae4d2ec542ab7d282fc94325"
+      },
+      "terminal_action_rank": 984,
+      "terminal_end": "2026-12-03T08:15:00Z",
+      "terminal_kind": "wait",
+      "terminal_start": "2026-12-03T08:14:29Z",
+      "unrecoverable_fields": [
+        "original wallclock elapsed/remaining",
+        "active_requests completed_target_ids before settlement",
+        "any original snapshot fields outside the documented v4 runner contract"
+      ]
+    },
+    "observations_with_clean_product": 696,
+    "original_report_public_results": [
+      {
+        "correct": true,
+        "issued_at_utc": "2026-11-29T06:05:40Z",
+        "record_type": "report_result",
+        "repaired": true,
+        "score_delta": 100.0
+      }
+    ],
+    "qualified_count": 3,
+    "wallclock": "not recoverable and deleted; actual candidate requires live wallclock"
+  },
+  "L2": {
+    "first_qualified_public_diagnostic": null,
+    "firstentry_equal_input_fixture": {
+      "exact_equal": true,
+      "historical_wallclock_claim": false,
+      "responses": 3,
+      "source": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_adaptation_20261004/public_entry/L2/public_input.jsonl"
+    },
+    "history_mode": "observational features only; no planning replay or simulated diagnostic outcomes",
+    "metadata": {
+      "actions": 1214,
+      "card": "L2",
+      "includes_terminal_observation_feedback": false,
+      "last_feedback_rank": 1086,
+      "projected_observation_fields": [
+        "observe_index",
+        "target_id",
+        "score"
+      ],
+      "sources": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L2_initialize_public.json": "24c220b90ab3f76bc83100b0d90a154efe0a05f4127a77c3bb337bacdb0b149a",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/actions.jsonl": "6645ff564a24abe5474e9faffd88447234cc9caba6b010ab3bcebec9eb69618f",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/decisions.csv": "226aa3b71277ccc43c389536dd4d27b31fc21cee00313f93a92f709ce993a94d",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/messages.jsonl": "466c78b829db778a4b848d8677b892210f06ccb3bdd3f9759d3d046fcb94574a",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_geometry_integration_20261004/seasons/control/L2/observations.csv": "73bc2a058b308c6eaf27d190b95a6004423a1f91d5582d63e4d1c07fd2122236"
+      },
+      "terminal_action_rank": 1087,
+      "terminal_end": "2026-12-14T08:15:00Z",
+      "terminal_kind": "observe",
+      "terminal_start": "2026-12-14T08:13:58Z",
+      "unrecoverable_fields": [
+        "original wallclock elapsed/remaining",
+        "active_requests completed_target_ids before settlement",
+        "any original snapshot fields outside the documented v4 runner contract"
+      ]
+    },
+    "observations_with_clean_product": 773,
+    "original_report_public_results": [
+      {
+        "correct": true,
+        "issued_at_utc": "2026-11-21T05:44:43Z",
+        "record_type": "report_result",
+        "repaired": true,
+        "score_delta": 100.0
+      }
+    ],
+    "qualified_count": 0,
+    "wallclock": "not recoverable and deleted; actual candidate requires live wallclock"
+  },
+  "L3": {
+    "first_qualified_public_diagnostic": {
+      "features": {
+        "distinct_slots": 8,
+        "earthquake_samples": 8,
+        "evidence_ranks": [
+          953,
+          954,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960
+        ],
+        "field_sectors": 3,
+        "low_slots": 8,
+        "median_ratio_upper": 0.4107326416827979,
+        "nights": 2,
+        "observing_span_seconds": 19604.0,
+        "programs": [
+          "DARK"
+        ],
+        "qualified": true
+      },
+      "now_utc": "2026-12-19T02:00:00Z",
+      "observe_action_index": 961
+    },
+    "history_mode": "observational features only; no planning replay or simulated diagnostic outcomes",
+    "metadata": {
+      "actions": 1169,
+      "card": "L3",
+      "includes_terminal_observation_feedback": false,
+      "last_feedback_rank": 1004,
+      "projected_observation_fields": [
+        "observe_index",
+        "target_id",
+        "score"
+      ],
+      "sources": {
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/policy_iteration_20261004/L3_initialize_public.json": "f27b124cf446ced40ebc17b3fd3bbde5c063bb2710df0d5a3f3f47fc169a52a7",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/actions.jsonl": "4e216a743c91406b970251ad55bd52e2e0b7331db2be7cdaa4a5d001597b2b14",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/decisions.csv": "2b9cefd270edd23ccc9a81dec167e7bef13ea7d0336ad664cbbf0cd6c3658a24",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/messages.jsonl": "e8c583299dfd6649e63c732dbc390fc4bf8d62965ad757d07c0664473845efbe",
+        "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/request_terminal_pair_20261004/seasons/control/L3/observations.csv": "151727d8bb597afffb95d36937d9dfdc652405ecd18a7acafb0ad8537f05c43d"
+      },
+      "terminal_action_rank": 1005,
+      "terminal_end": "2026-12-22T08:15:00Z",
+      "terminal_kind": "observe",
+      "terminal_start": "2026-12-22T08:08:33Z",
+      "unrecoverable_fields": [
+        "original wallclock elapsed/remaining",
+        "active_requests completed_target_ids before settlement",
+        "any original snapshot fields outside the documented v4 runner contract"
+      ]
+    },
+    "observations_with_clean_product": 544,
+    "original_report_public_results": [],
+    "qualified_count": 34,
+    "wallclock": "not recoverable and deleted; actual candidate requires live wallclock"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "accounted_wallclock_seconds": 1.055,
+  "agent_wallclock_seconds": 1.045,
+  "committed_action_count": 3,
+  "decision_requests": 4,
+  "global_wallclock_seconds": 900.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 4,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "v4-l1",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 5.410258,
+      "ELG": 3.183241,
+      "LRG": 0.057593,
+      "QSO": 0.165478,
+      "Star": 1.551466
+    },
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -19150.0,
+      "sum_best_scores": 10.368036,
+      "uniformity_penalty": -175.709314
+    },
+    "counts": {
+      "decisions": 3,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 44,
+      "observe_actions": 3,
+      "required_missing": 383,
+      "targets_observed": 44
+    },
+    "invalidations": [],
+    "observation_requests": [],
+    "scenario": "v4-l1",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "1d27645d8af48c306c9866f59ecbda04047702c7fe002b9345bc4ace71eb46e3",
+      "messages": "8ef8d281af212e2669e2f26c681ef179decafc1ac1e519d3e04ce810850cd382",
+      "observations": "7f09d5c3e85fda2c0666d7a4bb6a97cf0e78b3056c88425399cff5f4f13a1685",
+      "scenario": "c8d1a8676e4a283b55bdaa59c40f0ae53396e05a93095e6364573ad536c68c43"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "agent_finished"
+    },
+    "total": -19315.341278,
+    "uniformity_bands": {
+      "ra_0_10": 0.000773,
+      "ra_100_110": 0.0,
+      "ra_10_20": 0.013941,
+      "ra_110_120": 0.0,
+      "ra_20_30": 0.0,
+      "ra_30_40": 0.0,
+      "ra_350_360": 0.002387,
+      "ra_40_50": 0.0,
+      "ra_50_60": 0.0,
+      "ra_60_70": 0.0,
+      "ra_70_80": 0.0,
+      "ra_90_100": 0.0
+    }
+  },
+  "termination_detail": "",
+  "termination_reason": "agent_finished"
+}
