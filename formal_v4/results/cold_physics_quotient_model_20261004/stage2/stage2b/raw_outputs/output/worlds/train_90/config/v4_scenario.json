@@ -1,0 +1,34 @@
+{
+  "schema_version": "v4-scenario-v1",
+  "name": "physics-quotient-train-90",
+  "site": {
+    "name": "Paranal, Chile (virtual)",
+    "latitude_deg": -24.6157,
+    "longitude_deg": -70.3976,
+    "utc_offset_hours": -4.0
+  },
+  "minimum_altitude_deg": 30.0,
+  "fiber_config": "v4_fiber_config.json",
+  "score_config": "v4_score_config.json",
+  "products": {
+    "targets_csv": "../public/targets.csv",
+    "footprint_csv": "../public/footprint.csv",
+    "night_calendar_csv": "../public/v4_night_calendar.csv",
+    "slots_csv": "../truth/v4_slots.csv",
+    "weather_truth_csv": "../truth/v4_weather_truth.csv",
+    "events_csv": "../truth/v4_events.csv",
+    "earthquake_effects_csv": "../truth/v4_earthquake_effects.csv",
+    "bulletins_jsonl": "../public/v4_bulletins.jsonl",
+    "forecasts_jsonl": "../public/v4_forecasts.jsonl",
+    "observation_requests_jsonl": "../truth/v4_observation_requests.jsonl"
+  },
+  "stress": {
+    "enabled": true,
+    "stress_events_csv": "../truth/v4_stress_events.csv"
+  },
+  "task_card": {
+    "card_id": "fresh-physics-quotient-train-90",
+    "phase": "stage2b-independent",
+    "scenario_slug": "physics-quotient-train-90"
+  }
+}

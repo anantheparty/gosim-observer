@@ -1,0 +1,46 @@
+{
+  "status": "PASS_COMPLETE_EXISTING_RAW_ARCHIVE_5170_BYTE_SHA_AND_RESTORE_MAPPING",
+  "utc": "2026-10-04T09:54:33.340857+00:00",
+  "reviewed_by": "/root/cold_physics_quotient_model, root-delegated archival review, not an independent model test",
+  "git_head_before_staging": "f5d9cc891bf7aa9e79db6196753165c96ceacac4",
+  "archive": {
+    "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/ALL_OUTPUTS.tar.gz",
+    "bytes": 290405561,
+    "sha256": "8ed699b5d2127acf1d3809e527bf6dfed32e486a36d41a7221b99e5abb909af2"
+  },
+  "manifest": {
+    "path": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/ALL_OUTPUT_MANIFEST.json",
+    "sha256": "7a78cff3a6d931fba79788048ae99d8ad59e81e9e6a36b25ffc9a7bd72a5d793",
+    "file_count": 5170
+  },
+  "raw_directory": "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_physics_quotient_model_20261004/stage2/stage2b/raw_outputs/output",
+  "all_files_byte_sha_match": true,
+  "no_extra_or_missing_files": true,
+  "total_raw_path_bytes": 765788740,
+  "unique_raw_sha256_count": 2969,
+  "unique_raw_content_bytes": 647855524,
+  "raw_relationship_counts": {
+    "new_raw_content": 2411,
+    "existing_private_tracked_identical": 1981,
+    "other_raw_identical": 778
+  },
+  "new_unique_content_count_after_prior_private_files": 2411,
+  "new_unique_content_bytes_after_prior_private_files": 425203488,
+  "largest_raw_file_bytes": 1553789,
+  "parent_stage2A_351_hashes_unchanged": true,
+  "source9_hashes_unchanged": true,
+  "restore_map_sha256": "b9d05ab88897b0f4b6155507f98309e9a6cb13cf74f57a90f96d61e0d3c49c6b",
+  "root_token_path_count": 0,
+  "secret_pattern_match_counts_only": {
+    "github_token": 0,
+    "openai_secret": 0,
+    "private_key_header": 0
+  },
+  "secret_values_printed": false,
+  "fit_started": false,
+  "CUDA_child_pid": null,
+  "new_world_or_model_compute": false,
+  "new_test": false,
+  "deployment": false,
+  "staging_policy": "raw directory and archival metadata/stop files only; no commit/push; no duplicate archive/chunk staging"
+}

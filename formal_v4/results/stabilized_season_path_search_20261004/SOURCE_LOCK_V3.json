@@ -1,0 +1,83 @@
+{
+  "entry": "python run_search_v3.py --output <absolute new directory>/run_L2_night08_v3 --seconds 480",
+  "files": {
+    "CONTRACTS.json": {
+      "sha256": "9783bfeb9e9a8dfcaf16397ce3eadc11e6fb355847219b7be5033701afee4dec",
+      "size_bytes": 785
+    },
+    "DTYPE_CONTRACT_V2.json": {
+      "sha256": "cfeaebd073519d9b94a4d43688b6abe5162c98ad95d381379553fad56480f62f",
+      "size_bytes": 737
+    },
+    "INPUT_RECEIPT.json": {
+      "sha256": "379affacfb7878d8aad89ddf4ce17ee74001dcff5d1c054d5efd7215784bd7a8",
+      "size_bytes": 3078
+    },
+    "LOG_CONTRACT_V3.json": {
+      "sha256": "884220435e2af163d5ea468aabd2617f8db39d70e01270608b6ba41215a950be",
+      "size_bytes": 298
+    },
+    "README.md": {
+      "sha256": "0a0e013e4e4504ef910f0f8ccece5bd7c1ae468d6577cc31c20673dd9a0c8679",
+      "size_bytes": 1293
+    },
+    "RESEARCH_PLAN.json": {
+      "sha256": "de23e1b5329d8864b59e18a4afa22b3c991c9a03d2d028abf1d232ff7fa64c9a",
+      "size_bytes": 1375
+    },
+    "SOURCE_LOCK.json": {
+      "sha256": "867c33fb27c164f73ccc28ee33138a8cf8914c78ee1b851a2d48ba6aee537032",
+      "size_bytes": 2044
+    },
+    "SOURCE_LOCK_V2.json": {
+      "sha256": "a9ec06c0c6adb37d1094ae5de4a4af83c7130a315c2db5d0fb68cfaa1f645565",
+      "size_bytes": 3397
+    },
+    "build_native.py": {
+      "sha256": "02c0f0e7f7bf500f6ff565162baec7388caf9dc12d3dd0eb8e55bfb2edbcf5cf",
+      "size_bytes": 486
+    },
+    "bundle_search.py": {
+      "sha256": "99a36c888897eaf0b7a740557ae7c0388be544f6e2695b20e5a6bd1590534488",
+      "size_bytes": 6217
+    },
+    "contracts.py": {
+      "sha256": "ee18049537ea13e1da78620bdf40d20308d87427b0dc5358d6b9d154103573aa",
+      "size_bytes": 3849
+    },
+    "dtype_contract_v2.py": {
+      "sha256": "3d95e5b46a3569ef65be4ed9e9b22d776ed164867223368a75287aa98719353b",
+      "size_bytes": 1518
+    },
+    "fixed_graph.py": {
+      "sha256": "7f3535acbd340de3939dc01f59662b82686fa1fae0e45b0010340cf191939b66",
+      "size_bytes": 9462
+    },
+    "fixed_graph_v2.py": {
+      "sha256": "b1c45e7f3b768014c85fda1765f36d933e19433d8334193b4f91bed2a4a3d943",
+      "size_bytes": 9479
+    },
+    "oracle.cpp": {
+      "sha256": "ee2fc55267988cd82c9f58098c1093a8a58e61ab834303c44f2b43b8945bcbcb",
+      "size_bytes": 1701
+    },
+    "run_search.py": {
+      "sha256": "bdbf1647c61908cb226df2b131bafc557ba0b0ad06451c816de7bdb65b6cc1f8",
+      "size_bytes": 13051
+    },
+    "run_search_v2.py": {
+      "sha256": "f694c3dbcc89998a42cb77a0178a69a51b2284de9dc27e87af232ab8d5c8afcc",
+      "size_bytes": 13054
+    },
+    "run_search_v3.py": {
+      "sha256": "6c8dfdfa6c58203ae63bb644b93307aa1c1969ced3d9c00b52b2981322dc8f4b",
+      "size_bytes": 13062
+    }
+  },
+  "minimal_diff": "run_search_v3.py is byte identical to v2 except progress dict total seconds keyword becomes elapsed_seconds; no algorithm/model/budget change",
+  "status": "frozen_pending_root_v3_backup",
+  "v2_failed_result_sha256": "0e8dfdf462133d55d6f020a46fd240682735da3ff7c4bc66b2d675ff99e9c00c",
+  "v2_source_unchanged": true,
+  "v2_stdout_sha256": "f17db1b7b76d189695628dcb2a0471f6eaca12b2141eedb92e5e7cc4be93c42c",
+  "version": 3
+}

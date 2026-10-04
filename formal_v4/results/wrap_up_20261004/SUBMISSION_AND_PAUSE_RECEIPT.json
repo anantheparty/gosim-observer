@@ -1,0 +1,58 @@
+{
+  "schema": "user-requested-pause-and-submission-receipt-v1",
+  "as_of_utc": "2026-10-04T09:52:12.402743+00:00",
+  "user_request": "提交一下然后收尾吧，我感觉大方向有问题，写个报告，我思考一下再继续",
+  "project": "Observer Sparse Exact",
+  "zip": "formal_v4/results/cold_sparse_science_runtime_20261004/observer_sparse_exact_fault_20261004.zip",
+  "zip_sha256": "5b00e6a33cbacc167cdf9255531c5209b0ab36cab7c52ce13d395942e672cf29",
+  "upload": {
+    "evidence": "normal Chrome native CUA AX transcription",
+    "status": "confirmed",
+    "display_created_at": "2026/10/04 18:46",
+    "remarks": "",
+    "practice_daily_limit": 40,
+    "practice_remaining_before_evaluation": 40,
+    "display_confirmed_at": "2026/10/04 18:51",
+    "public_test": "passed",
+    "source_fingerprint": "965657690a2a497dfe9553f17203af83438f9862d10c448066be7ef5da753e98",
+    "adapter_files": "none; own JSON-Lines interface",
+    "run": [
+      "python3",
+      "-u",
+      "sparse_entry.py"
+    ],
+    "image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016"
+  },
+  "evaluation_started": true,
+  "new_online_score": null,
+  "old_best_online_mean": 6735.09,
+  "research_stopped": true,
+  "heartbeat": {
+    "id": "gosim",
+    "status": "PAUSED",
+    "tool_result": "Updated automation in the app"
+  },
+  "quotient_gpu_fit_count": 0,
+  "source_of_private_release_status": "gh release view --json isDraft,tagName,assets",
+  "private_release": {
+    "tag": "research-data-20261004-quotient",
+    "isDraft": true,
+    "assets": [],
+    "upload_error": "Post https://api.github.com/graphql: EOF",
+    "all_545_dataset_files_already_in_private_commit": "f5d9cc891bf7aa9e79db6196753165c96ceacac4"
+  },
+  "note": "One authorized ordinary practice batch has been queued. Scoring pending; highest-score goal paused after wrap-up, not complete.",
+  "evaluation": {
+    "status": "queued",
+    "display_submitted_at": "2026/10/04 18:51",
+    "type": "single ordinary practice batch",
+    "cards": {
+      "alpha": "queued",
+      "beta": "queued",
+      "gamma": "queued",
+      "delta": "queued"
+    },
+    "practice_remaining_after": 39,
+    "visible_confirmation": "已加入评测队列"
+  }
+}

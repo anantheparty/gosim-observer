@@ -1,0 +1,241 @@
+[
+    {
+        "Id": "ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74",
+        "Created": "2026-10-04T07:27:35.408951148Z",
+        "Path": "python",
+        "Args": [
+            "stage2b/dataset_driver.py",
+            "--index",
+            "26"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-04T07:27:35.447093944Z",
+            "FinishedAt": "2026-10-04T07:28:13.578362882Z"
+        },
+        "Image": "sha256:414a398990af718f018ff9c23cea0e7489b7986eb54f2b1d7cc874c99ebc7364",
+        "ResolvConfPath": "/var/lib/docker/containers/ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74/hostname",
+        "HostsPath": "/var/lib/docker/containers/ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74/hosts",
+        "LogPath": "/var/lib/docker/containers/ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74/ace343bb225e3cec74c92b18f68335349e8eae24611ecf2a129646b71a196a74-json.log",
+        "Name": "/physics-quotient-stage2b-20261004-train-26",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/tmp/physics_quotient_stage2b_20261004/source:/work:ro",
+                "/tmp/physics_quotient_stage2b_20261004/output:/output",
+                "/tmp/geometry_native_20261003/.deps:/deps:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 2147483648,
+            "NanoCpus": 2000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 4294967296,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/02966c540e9f8308ccb2644c1b4e1581c9a744850abb4088543bc87970a41f69-init/diff:/var/lib/docker/overlay2/be1f7c4f62d4f8f7d4fcc055f059db7a8e46e85f66aaf00e0993940dd90b7b1e/diff:/var/lib/docker/overlay2/014dd9fd62aed57dc1c0f962d7f9739dad3058c8553181942b624659ae538446/diff:/var/lib/docker/overlay2/4663f38563e5017c582dbdc27dc4986a5dd20c50731a34f76b9e5348956282ac/diff:/var/lib/docker/overlay2/1dd58e154603931d1e4ec5ec1a372f3bfad029401bf3214544512cbab7c1e5a7/diff",
+                "MergedDir": "/var/lib/docker/overlay2/02966c540e9f8308ccb2644c1b4e1581c9a744850abb4088543bc87970a41f69/merged",
+                "UpperDir": "/var/lib/docker/overlay2/02966c540e9f8308ccb2644c1b4e1581c9a744850abb4088543bc87970a41f69/diff",
+                "WorkDir": "/var/lib/docker/overlay2/02966c540e9f8308ccb2644c1b4e1581c9a744850abb4088543bc87970a41f69/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/tmp/physics_quotient_stage2b_20261004/source",
+                "Destination": "/work",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/tmp/physics_quotient_stage2b_20261004/output",
+                "Destination": "/output",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/tmp/geometry_native_20261003/.deps",
+                "Destination": "/deps",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ace343bb225e",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "OPENBLAS_NUM_THREADS=1",
+                "OMP_NUM_THREADS=1",
+                "QUOTIENT_OUTPUT=/output",
+                "QUOTIENT_SPLIT=train",
+                "PYTHONPATH=/deps",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.15",
+                "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a"
+            ],
+            "Cmd": [
+                "python",
+                "stage2b/dataset_driver.py",
+                "--index",
+                "26"
+            ],
+            "Image": "python@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016",
+            "Volumes": null,
+            "WorkingDir": "/work",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "",
+                    "DriverOpts": null,
+                    "NetworkID": "7a4ec77675c8425eb1c66a963e14882240a97d145f0350724027da7f4d59f7ad",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]

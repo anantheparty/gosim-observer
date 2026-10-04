@@ -1,0 +1,106 @@
+{
+  "allocator_contribution_B": 29.07635999706622,
+  "bundle_rounds": {
+    "B": 20,
+    "priced0": 19,
+    "priced1": 19
+  },
+  "common_pool": {
+    "all_paths": 114,
+    "new_unique_paths": 57,
+    "old_paths": 57
+  },
+  "cost": {
+    "cpu_seconds": 20.936338,
+    "environment": {
+      "numpy": "2.4.4",
+      "platform": "macOS-15.5-arm64-arm-64bit",
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "scipy": "1.17.0",
+      "threads": 1
+    },
+    "peak_rss_bytes": 467025920,
+    "wall_seconds": 21.130014459136873
+  },
+  "final_schedule_validation_executed": false,
+  "independent_postrun_audit_executed": false,
+  "last_improvement": {
+    "B": {
+      "branch": "B",
+      "delta": 28.54145621506359,
+      "joint": 2252.838948943948,
+      "origin": "prox_B",
+      "pool": 114,
+      "seconds": 21.10839758394286
+    },
+    "priced0": {
+      "branch": "priced0",
+      "delta": 8.685048812684727,
+      "joint": 2237.947912362796,
+      "origin": "prox_B",
+      "pool": 114,
+      "seconds": 21.108640249818563
+    },
+    "priced1": {
+      "branch": "priced1",
+      "delta": 2.1953943112425804,
+      "joint": 2239.1228280620944,
+      "origin": "prox_B",
+      "pool": 114,
+      "seconds": 21.10874054208398
+    }
+  },
+  "matched_old57": {
+    "B": 1565.9169328292878,
+    "priced0": 1544.1303047488066,
+    "priced1": 1544.130304748807
+  },
+  "new_best_assignment_schedule_saved": false,
+  "newpath_contribution_B": 686.92201611466,
+  "no_v3_or_further_search_executed": true,
+  "official_score_or_deployment_claim": false,
+  "old57_baseline_full_schedules_saved": true,
+  "old_chronological_joint": {
+    "B": 1536.8405728322216,
+    "priced0": 1515.0624315707598,
+    "priced1": 1515.5939447517405
+  },
+  "owned_processes": {
+    "62930": "exec exit1; ps absent",
+    "64389": "exec exit1; ps absent",
+    "ps_check_exit_code": 1,
+    "ps_check_stdout": ""
+  },
+  "partial_joint_from_saved_incumbent_trace": {
+    "B": 2252.838948943948,
+    "priced0": 2237.947912362796,
+    "priced1": 2239.1228280620944
+  },
+  "partial_newpath_delta_vs_same_allocator_old57": {
+    "B": 686.92201611466,
+    "priced0": 693.8176076139896,
+    "priced1": 694.9925233132874
+  },
+  "partial_result_only": true,
+  "partial_total_delta_vs_original_B": 715.9983761117262,
+  "raw_evidence": {
+    "LAUNCH_RECEIPT_V2.json": "ee061d9aab62509205edfd5dbd91c2210f0771f6dbae4c9ee441a80771e46274",
+    "RUN_V2_STDOUT.log": "f17db1b7b76d189695628dcb2a0471f6eaca12b2141eedb92e5e7cc4be93c42c",
+    "SOURCE_AFTER_V2.json": "154ca014d74470676eed8609649ae76689dc37be172ce96be05e428042be2d0b",
+    "run_L2_night08_v2/BUNDLE_TRACE.json": "d9b99e887421fa9f5ae32b73c0943e3681e5b6d1fbe6e6e6558b6a10f6ee90b0",
+    "run_L2_night08_v2/COMMON_PATH_POOL.json": "a6086d69f86cad8ca4fcdbc54663fdcb7b88afa44fecfc8ee53202d7a249ebc1",
+    "run_L2_night08_v2/INCUMBENT_TRACE.json": "2506671e93d184779667da2c6eb827d05af872182039d17dad195af2cfd52156",
+    "run_L2_night08_v2/PATH_PROVENANCE.json": "95f590b39ad6db8ec1ac83ccbc5a2f142ea9d87199eb24d473e40fa4a7904b0d",
+    "run_L2_night08_v2/RESULT.json": "0e8dfdf462133d55d6f020a46fd240682735da3ff7c4bc66b2d675ff99e9c00c"
+  },
+  "rebuild_phase_executed": false,
+  "report": "formal_v4/research/stabilized_season_path_search_20261004.md",
+  "source_v2_after_unchanged": true,
+  "status": "stopped_by_user_after_v2_partial_error",
+  "v2_failure_reason": "dict() got multiple values for keyword argument 'seconds'",
+  "v3_draft": {
+    "entry_sha256": "6c8dfdfa6c58203ae63bb644b93307aa1c1969ced3d9c00b52b2981322dc8f4b",
+    "executed": false,
+    "source_lock_sha256": "7b6bd947f9bbaeacf95e26be0ef4e690a946e43d41fcb52d7139c0a55f6d7e3a"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "by_class": {
+    "BGS": 88.627308,
+    "ELG": 273.049067,
+    "LRG": 98.903543,
+    "QSO": 135.606106,
+    "Star": 38.333345
+  },
+  "components": {
+    "observation_request_reward": 0,
+    "report_settlement": 0.0,
+    "required_penalty": -17400.0,
+    "sum_best_scores": 634.519369,
+    "uniformity_penalty": -35.271218
+  },
+  "counts": {
+    "decisions": 1119,
+    "invalidated_observations": 0,
+    "observation_requests_completed": 0,
+    "observation_requests_issued": 0,
+    "observations": 3253,
+    "observe_actions": 286,
+    "required_missing": 348,
+    "targets_observed": 2419
+  },
+  "invalidations": [
+    {
+      "event_id": "V4ST0001",
+      "invalidated_observations": 0,
+      "window": [
+        30,
+        30
+      ]
+    }
+  ],
+  "observation_requests": [],
+  "scenario": "physics-quotient-train-9",
+  "schema_version": "v4-score-report-v1",
+  "sha256": {
+    "decisions": "7bd13a4a8f36a171296914a0bdb8b9b91a8cbd4ded1b6046423e23cf8a6d4532",
+    "messages": "4540b0208c522115e7241cfc1d40ae30160215481c43aaba65cf7f4f891148ae",
+    "observations": "06de0190041094f41df5ae71b9afd812423c7e3c2ed398039c2c1f5f19bbe21e",
+    "scenario": "5b6551aeaddcafc8c6fa2787b8662aeefa8f6c3e95fb6e4ef0881603a4c25368"
+  },
+  "termination": {
+    "detail": "",
+    "reason": "agent_finished"
+  },
+  "total": -16800.751848,
+  "uniformity_bands": {
+    "ra_0_10": 0.09165,
+    "ra_100_110": 0.031773,
+    "ra_10_20": 0.063136,
+    "ra_110_120": 0.067751,
+    "ra_20_30": 0.077735,
+    "ra_30_40": 0.101266,
+    "ra_40_50": 0.0,
+    "ra_50_60": 0.041602,
+    "ra_60_70": 0.063173,
+    "ra_70_80": 0.060071,
+    "ra_80_90": 0.066038,
+    "ra_90_100": 0.031474
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "events": {
+    "by_type": {
+      "cold_wave": 1,
+      "earthquake": 2,
+      "rainy": 1,
+      "rocket_launch": 1,
+      "smoggy": 2,
+      "terrain_obstruction": 3,
+      "tornado": 1
+    },
+    "earthquakes": [
+      {
+        "affected_nights": 13,
+        "event_id": "V4EV0007",
+        "initial_degradation": 0.201071,
+        "magnitude": 4.661
+      },
+      {
+        "affected_nights": 16,
+        "event_id": "V4EV0008",
+        "initial_degradation": 0.457403,
+        "magnitude": 5.757
+      }
+    ],
+    "rocket_launch_count": 1,
+    "terrain_sectors": [
+      {
+        "azimuth_end_deg": 107.314,
+        "azimuth_start_deg": 49.829,
+        "direction": "E",
+        "event_id": "V4EV0009",
+        "max_altitude_deg": 49.715
+      },
+      {
+        "azimuth_end_deg": 206.22,
+        "azimuth_start_deg": 147.314,
+        "direction": "S",
+        "event_id": "V4EV0010",
+        "max_altitude_deg": 44.857
+      },
+      {
+        "azimuth_end_deg": 334.311,
+        "azimuth_start_deg": 292.17,
+        "direction": "NW",
+        "event_id": "V4EV0011",
+        "max_altitude_deg": 41.734
+      }
+    ],
+    "total": 11
+  },
+  "generator": "challenge/v4_weather_simulator.py",
+  "publications": {
+    "bulletin_count": 1076,
+    "contract": "notices carry only coarse event_kind plus an 8-point compass direction (or ALL); no numeric weather quantities; earthquakes and instrument faults are never forecast; instrument faults are never published",
+    "forecast_count": 6
+  },
+  "schema_version": "v4-weather-summary-v1",
+  "sha256": {
+    "bulletins": "efcd84f39baa9a979dd27936bb839b123784bcbc60010e8cf26d713d9e777ba3",
+    "config": "6ef397ac627ab22ea5c71ce83f0e876620cd13f9145fcc1a9724a59cba1dbaab",
+    "earthquake_effects": "2abfc2e0397a8f843a40cbce6f68ff35e7b540ee55157f940cee6261257568ec",
+    "events": "584b7315d4d2e11d37f9db21b6464eca998aceff5bce905534f6eab5a372ce45",
+    "forecasts": "5dc4ddde3f5b53374db1936dcf67ea6368dfae1ea72f72f34ea0883bae085b28",
+    "night_calendar": "e6149422d04de96c469aaaa18b9116c7c11ce1b976c0a42ad983208fcdd89484",
+    "slots": "e6848c0d1c8b17a12776247547a0b620cbc3b667fc03da0b403e068d92b4cf2a",
+    "state_resync_schema": "8af77a1e355093fac41f15da8c097863ca076095e7676efded8b0676ac452eea",
+    "stress_events": "356f3dfc8bef86c34ebca2ccbf5f695102205b85c6e3220d30c29d443f71e064",
+    "weather_truth": "2d19898c8a5e1cb71e158eed5c6d19dc9911496e24a1f2c3d0564346729ef7a4"
+  },
+  "stress_tests": {
+    "enabled": true,
+    "events": [
+      {
+        "alt_offset_rad": "",
+        "az_offset_rad": "",
+        "event_id": "V4ST0001",
+        "event_type": "data_loss",
+        "trigger_mode": "after_earthquake",
+        "trigger_ref": "V4EV0007",
+        "window_end_fraction": "0.506589",
+        "window_max_fraction": "0.050000",
+        "window_start_fraction": "0.484245"
+      },
+      {
+        "alt_offset_rad": "-0.00180572",
+        "az_offset_rad": "0.00080774",
+        "event_id": "V4ST0002",
+        "event_type": "pointing_offset",
+        "trigger_mode": "at_survey_start",
+        "trigger_ref": "",
+        "window_end_fraction": "",
+        "window_max_fraction": "",
+        "window_start_fraction": ""
+      }
+    ],
+    "state_resync_schema": "v4_state_resync_schema.json",
+    "window_convention": "0-based indices over observe actions only (wait excluded); invalidated window [floor(i*N), floor(j*N)); width floor(j*N)-floor(i*N) <= ceil(x*N)"
+  },
+  "survey": {
+    "end_date": "2026-12-14",
+    "night_count": 36,
+    "slot_count": 1076,
+    "slot_seconds": 900,
+    "start_date": "2026-11-08"
+  },
+  "weather": {
+    "closed_slot_count": 68
+  }
+}
