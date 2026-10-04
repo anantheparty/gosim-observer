@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "gates": {
+    "original_and_candidate_protocol_complete": true,
+    "all_raw_hashes": true,
+    "frozen_candidate_sources": true,
+    "original_source_bytes_except_run_manifests": true,
+    "same_scenario_hash": true,
+    "old_loss_plan_unchanged": true,
+    "required_and_request_components_unchanged": true,
+    "participant_no_truth_mount_network_none": true,
+    "same_cpu_memory_budget": true,
+    "first_intervention_report_after_equal_public_prefix": true,
+    "every_guard_has_correct_official_response": true,
+    "component_delta_sum_matches_total": true
+  },
+  "control_directory": "request_geometry_integration_20261004/seasons/control/L1",
+  "control_total": 6267.103017,
+  "candidate_total": 6272.923354,
+  "actual_total_delta": 5.820337,
+  "component_delta": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 0.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": 5.884817,
+    "uniformity_penalty": -0.06448
+  },
+  "accounted_seconds": 623.466,
+  "first_divergence_actor_action_position": 1004,
+  "guard_reports": [
+    {
+      "event": "persistent_diagnostic_report",
+      "now_utc": "2026-11-29T02:44:05Z",
+      "observe_action_index": 902,
+      "free_reports_remaining": 2,
+      "quota_reserve": 1,
+      "features": {
+        "distinct_slots": 8,
+        "low_slots": 6,
+        "nights": 2,
+        "field_sectors": 2,
+        "programs": [
+          "BRIGHT",
+          "DARK"
+        ],
+        "observing_span_seconds": 16562.0,
+        "median_ratio_upper": 0.5170492455571454,
+        "earthquake_samples": 4,
+        "evidence_ranks": [
+          894,
+          895,
+          896,
+          897,
+          900,
+          901
+        ],
+        "qualified": true
+      },
+      "analytical_only": false
+    }
+  ],
+  "official_report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-11-29T02:44:05Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ]
+}

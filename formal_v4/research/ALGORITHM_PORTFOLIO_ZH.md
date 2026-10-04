@@ -218,3 +218,31 @@ RequestCache terminal其余卡已完整结束且源/output/动作插入/旧loss/
 fault v1独立冻结后完整public forecast遮蔽修正了分析记录的最早would-fire：L1 rank902；L2无；L3 rank961。早期未遮forecast的L3 rank790不是最终ZIP规则，不改ZIP、不参考实际fault日期。v2单列false后背景level+新下降的条件value控制，ZIP 2a2ab533099c36c32d25a46d532bac8f8c27cbb39b1194c73928d8a4e8ea6412，当前未开整季；其Normal change/prior/value外推未经实际标定，不能将参数choice当保证。v1五任务实际结果需回收完整组件/首次真实触发/协议后再判断，不能把host科学潜力438当candidate收益。
 
 预测world模型已生成192独立官方seed，train44579/val11719/test10936历史；普通MLP1306→128→128→196输出4component×4slot joint(logC,logZ)+16closure模式。初稿synthetic16fiber独立H造成band过度泄漏，在验标前停止own进程，改同field共同H±2%重新冻结；首GPU epoch0因NumPy int64日志JSON失败，未选checkpoint/test，仅修日志重跑同data/seed/config，失败保留。质量模型部署首版保留原强field/duration/REQ/rate域，先同动作重评分program/expected science；训练有限synthetic比较中的λ不可直接部署。当前没有模型整季得分结论。
+
+### 持续故障策略获得完整实测改善（2026-10-04 10:20 JST）
+
+原五条受限闭环批次 PID1950907 已结束；`five_case_complete.json`保留5/5终态，各卡全部raw SHA已经本地复核。原29-file完整同源control未重复运行，actor没有truth挂载。fault v1仍为原冻结ZIP `bd461164340f4adf490ace91003d49f7205a6ea631f712e9767f3527ec9549ba`，没有按这次结果改阈值。
+
+| 实际本地卡 | 原强策略 | 持续故障 v1 | 总差 | science差 | report差 |
+|---|---:|---:|---:|---:|---:|
+| L1 | 6267.103017 | 6272.923354 | +5.820337 | +5.884817 | 0 |
+| L2 | 6723.359693 | 6723.359693 | 0 | 0 | 0 |
+| L3 | 6141.421958 | 6553.045588 | +411.623630 | +311.584980 | +100 |
+
+三卡均`survey_complete`，实际accounted623.466/721.531/713.941秒；required/REQ分不变，L3 Jain另改善.038650。L1/L3第一个动作分歧确为新report，此前所有公开动作前缀相同，真实官方report结果正确、旧loss计划不变；L2无guard事件，全部动作及组件相同。根复核`ROOT_FAULT_THREE_CARD_RESULT.json`全部门检通过。这是可执行公开控制的真实整季改善，不再只是host故障科学潜力；仍不是线上提分或正式隐藏卡保证。相对先前terminal L3 6242.640810，此版实际再高310.404778。
+
+同ZIP的一次正常L4验证于2026-10-04 01:08:36.239965UTC启动，PID1999548，2CPU/2GiB/900秒，核16,17。`remaining_L4_job.json`/`remaining_fault_L4_cases.json`锁来源；引用已有strong control6080.269014，不重跑control、不读封存L4 teacher、不据L4救参。实际01:17UTC仍为owned运行容器，待完整输出。
+
+debias当前实现完整L1 6010.923915、L2 5185.892596，均900秒`global_wallclock_expired`，protocol_passed=false；这是预算下的实际失败，不能称完整赛季科学改善，当前包不部署。新forknone `cold_sparse_science_runtime`对原强和debias的冻结工作负载作profile；12个状态9,776细候选与155,724phase候选值/动作一致。`np.maximum.at`仅约8%，简单sorted reduceat反而慢，因此在保持候选域/原评分/参数/最终tie的前提下研究native融合中间score矩阵与fiber max，而不是扩大搜索池或更改预算。尚无可上线加速包。
+
+质量NN已真实完成PRO6000训练85.9104秒、CUDA峰386,113,024B。最终改正后的192-world manifest为train45022/val11514/test11001；上段44579/11719/10936为早期数据计数，不是最终产物。4component full covariance ordinaryMLP的独立1024候选regret .1235935265，比同NN先均值.1333836822及人工point.1878051302低；不是生产整季分。原33-file包`ae8b963c32770975a50aa368e204914a7057f7ea3fe121ec46b1116ede49176c`，原27source逐字不变，模型只改支持域中的program。public强前缀L1/L2/L3实际改动1/3/0次，scope很窄。报告、算子4800对照、NumPy导出、192-world数据及失败日志、模型/ZIP/源manifest全部保存；根`ROOT_ARTIFACT_RECEIPT.json`核对产物及全部源SHA通过，仍没有该策略的完整得分证据。
+
+另一个forknone `cold_report_value_model`建立公共fault posterior+report quota有限Bellman：真正report−wait价值是到下一次证据的science损失、奖励延迟与quota/信息价值之差，不是把全部剩余修复收益都视作立即report相对wait的收益。独立官方世界train/cal/val/test与普通NN在PRO6000，当前验证world已完成，test/真实strong组合包尚待完成；不将fixedsensor子题收益称整季改善。新的forknone `cold_calendar_binding_implementation`接续已完成calendar审计，研究pre-night binding/clip动作域与rank/loss后效的安全控制，尚未交付生产包。
+
+#### 同冻结L4完整结果与四卡确认（10:26 JST）
+
+PID1999548已正常结束，L4 `survey_complete`、accounted744.222秒：6080.269014→7084.531835（+1004.262821），science +1004.051719，Jain +.211102；report/required/REQ三个组件都完全不变。旧control在12月29日才正确报修，新公共持续证据于12月10日01:03:49UTC、observe rank571正确报修；这两个时间仅为已经发生的结果审计，actor没有日期触发。第一个动作分歧为新report，此前621个actor动作完全一致；旧loss `[191,216]`及370条实际失效不变。这个冻结L4没有用于训练、阈值选择或teacher输入。
+
+`review_actual_results.py`复核四卡完整协议、raw/actor源SHA、原27source保留、同场景hash、旧loss/REQ/required、首次插入report和官方正确结果、组件差之和，全通过。`ROOT_FAULT_FOUR_CARD_RESULT.json`给出本地同四卡mean6303.0384205→6658.4651175（+355.4266970）。这是新最佳完整本地四卡方案；没有计算正式alpha–delta增益。10:27JST正常CUA访问Chrome仍返回Mac locked，原manual unlock请求待处理，不能绕过或声称线上已提交。
+
+report quota DP的第一次独立test后发现稀疏kernel回退可能使public correct_count下降（违反状态合同）；原test/旧实现保留并排除部署结论。修复必须保持wait/false计数不变、true严格+1，先穷举小状态/官方分支门检，冻结模型calibration，不用test调参。新test域若需要仅预先锁定一次，不能把此前sensor正结果冒充生产强闭环改善。sparse exact加速已在Mac冻结输入逐rate/动作完全相等，约2倍profile速度；Linux生产Py3.12.15/NumPy2.2.6及quota合同门检未结束，不称可部署。优先交原strong+fault v1的同域算术加速组合，另列debias变域候选，root负责完整900秒验证。

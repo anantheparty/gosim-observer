@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "gates": {
+    "original_and_candidate_protocol_complete": true,
+    "all_raw_hashes": true,
+    "frozen_candidate_sources": true,
+    "original_source_bytes_except_run_manifests": true,
+    "same_scenario_hash": true,
+    "old_loss_plan_unchanged": true,
+    "required_and_request_components_unchanged": true,
+    "participant_no_truth_mount_network_none": true,
+    "same_cpu_memory_budget": true,
+    "first_intervention_report_after_equal_public_prefix": true,
+    "every_guard_has_correct_official_response": true,
+    "component_delta_sum_matches_total": true
+  },
+  "control_directory": "request_terminal_pair_20261004/seasons/control/L4",
+  "control_total": 6080.269014,
+  "candidate_total": 7084.531835,
+  "actual_total_delta": 1004.262821,
+  "component_delta": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 0.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": 1004.051719,
+    "uniformity_penalty": 0.211102
+  },
+  "accounted_seconds": 744.222,
+  "first_divergence_actor_action_position": 621,
+  "guard_reports": [
+    {
+      "event": "persistent_diagnostic_report",
+      "now_utc": "2026-12-10T01:03:49Z",
+      "observe_action_index": 571,
+      "free_reports_remaining": 2,
+      "quota_reserve": 1,
+      "features": {
+        "distinct_slots": 8,
+        "low_slots": 8,
+        "nights": 2,
+        "field_sectors": 4,
+        "programs": [
+          "BRIGHT",
+          "DARK"
+        ],
+        "observing_span_seconds": 11929.0,
+        "median_ratio_upper": 0.5447593086229057,
+        "earthquake_samples": 12,
+        "evidence_ranks": [
+          559,
+          560,
+          561,
+          562,
+          563,
+          564,
+          565,
+          566,
+          567,
+          568,
+          569,
+          570
+        ],
+        "qualified": true
+      },
+      "analytical_only": false
+    }
+  ],
+  "official_report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-12-10T01:03:49Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ]
+}

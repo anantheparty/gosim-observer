@@ -1,0 +1,25 @@
+{
+  "schema": "root-frozen-v1-actual-L4-launch-v1",
+  "pid": 1999548,
+  "started_utc": "2026-10-04T01:08:36.239965+00:00",
+  "cases_file_sha256": "89877360e94e8106605385eeb455642f36d50aac8ab7a2ebf0f36b4bcd4a5bea",
+  "harness_sha256": "481612511c05a68d07cf5112bf281944cd0a644f71975605091aec08981d00d3",
+  "source_lock_sha256": "963a5c632b096e48dea80e85ae3d095c8e97aebae766542410fa8ed84ad2df4f",
+  "control_reference": "request_terminal_pair_20261004/seasons/control/L4",
+  "case": {
+    "variant": "fault",
+    "card": "L4",
+    "package": "fault_package",
+    "entry_argv": [
+      "wrapper.py"
+    ],
+    "cpus": "16,17"
+  },
+  "limits": {
+    "cpu": 2,
+    "memory_gib": 2,
+    "wallclock_seconds": 900
+  },
+  "no_teacher_labels_read": true,
+  "actor_truth_mount": false
+}

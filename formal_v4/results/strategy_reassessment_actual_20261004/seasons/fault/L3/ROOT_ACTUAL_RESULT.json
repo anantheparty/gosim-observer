@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "gates": {
+    "original_and_candidate_protocol_complete": true,
+    "all_raw_hashes": true,
+    "frozen_candidate_sources": true,
+    "original_source_bytes_except_run_manifests": true,
+    "same_scenario_hash": true,
+    "old_loss_plan_unchanged": true,
+    "required_and_request_components_unchanged": true,
+    "participant_no_truth_mount_network_none": true,
+    "same_cpu_memory_budget": true,
+    "first_intervention_report_after_equal_public_prefix": true,
+    "every_guard_has_correct_official_response": true,
+    "component_delta_sum_matches_total": true
+  },
+  "control_directory": "request_terminal_pair_20261004/seasons/control/L3",
+  "control_total": 6141.421958,
+  "candidate_total": 6553.045588,
+  "actual_total_delta": 411.62363,
+  "component_delta": {
+    "observation_request_reward": 0.0,
+    "report_settlement": 100.0,
+    "required_penalty": 0.0,
+    "sum_best_scores": 311.58498,
+    "uniformity_penalty": 0.03865
+  },
+  "accounted_seconds": 713.941,
+  "first_divergence_actor_action_position": 1119,
+  "guard_reports": [
+    {
+      "event": "persistent_diagnostic_report",
+      "now_utc": "2026-12-19T02:00:00Z",
+      "observe_action_index": 961,
+      "free_reports_remaining": 2,
+      "quota_reserve": 1,
+      "features": {
+        "distinct_slots": 8,
+        "low_slots": 8,
+        "nights": 2,
+        "field_sectors": 3,
+        "programs": [
+          "DARK"
+        ],
+        "observing_span_seconds": 19604.0,
+        "median_ratio_upper": 0.4107326416827979,
+        "earthquake_samples": 8,
+        "evidence_ranks": [
+          953,
+          954,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960
+        ],
+        "qualified": true
+      },
+      "analytical_only": false
+    }
+  ],
+  "official_report_results": [
+    {
+      "correct": true,
+      "issued_at_utc": "2026-12-19T02:00:00Z",
+      "record_type": "report_result",
+      "repaired": true,
+      "score_delta": 100.0
+    }
+  ]
+}

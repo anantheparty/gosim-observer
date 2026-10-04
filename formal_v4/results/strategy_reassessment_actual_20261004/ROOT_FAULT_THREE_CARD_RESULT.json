@@ -1,0 +1,199 @@
+{
+  "schema": "root-three-complete-fault-source-and-result-review-v1",
+  "source_zip_sha256": "bd461164340f4adf490ace91003d49f7205a6ea631f712e9767f3527ec9549ba",
+  "cards": {
+    "L1": {
+      "passed": true,
+      "gates": {
+        "official_protocol_complete": true,
+        "all_output_hashes_match": true,
+        "actor_sources_equal_frozen_package": true,
+        "same_scenario_hash": true,
+        "old_loss_plan_unchanged": true,
+        "old_required_and_request_no_worse": true,
+        "actor_has_no_truth_mount": true,
+        "first_intervention_is_report_after_equal_public_prefix": true,
+        "first_report_before_changed_science_action": true,
+        "new_diagnostic_official_result_received": true
+      },
+      "control_total": 6267.103017,
+      "candidate_total": 6272.923354,
+      "actual_total_delta": 5.820337,
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 5.884817,
+        "uniformity_penalty": -0.06448
+      },
+      "accounted_seconds": 623.466,
+      "first_divergence_actor_action_position": 1004,
+      "guard_reports": [
+        {
+          "event": "persistent_diagnostic_report",
+          "now_utc": "2026-11-29T02:44:05Z",
+          "observe_action_index": 902,
+          "free_reports_remaining": 2,
+          "quota_reserve": 1,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 6,
+            "nights": 2,
+            "field_sectors": 2,
+            "programs": [
+              "BRIGHT",
+              "DARK"
+            ],
+            "observing_span_seconds": 16562.0,
+            "median_ratio_upper": 0.5170492455571454,
+            "earthquake_samples": 4,
+            "evidence_ranks": [
+              894,
+              895,
+              896,
+              897,
+              900,
+              901
+            ],
+            "qualified": true
+          },
+          "analytical_only": false
+        }
+      ],
+      "official_report_results": [
+        {
+          "correct": true,
+          "issued_at_utc": "2026-11-29T02:44:05Z",
+          "record_type": "report_result",
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "summary": [],
+      "comparison": {
+        "complete_control": true,
+        "complete_candidate": true
+      }
+    },
+    "L2": {
+      "passed": true,
+      "gates": {
+        "official_protocol_complete": true,
+        "all_output_hashes_match": true,
+        "actor_sources_equal_frozen_package": true,
+        "same_scenario_hash": true,
+        "old_loss_plan_unchanged": true,
+        "old_required_and_request_no_worse": true,
+        "actor_has_no_truth_mount": true,
+        "no_guard_event_all_actions_identical": true,
+        "no_guard_event_all_components_identical": true
+      },
+      "control_total": 6723.359693,
+      "candidate_total": 6723.359693,
+      "actual_total_delta": 0.0,
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 0.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 0.0,
+        "uniformity_penalty": 0.0
+      },
+      "accounted_seconds": 721.531,
+      "first_divergence_actor_action_position": null,
+      "guard_reports": [],
+      "official_report_results": [
+        {
+          "correct": true,
+          "issued_at_utc": "2026-11-21T05:44:43Z",
+          "record_type": "report_result",
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "summary": [],
+      "comparison": {
+        "complete_control": true,
+        "complete_candidate": true
+      }
+    },
+    "L3": {
+      "passed": true,
+      "gates": {
+        "official_protocol_complete": true,
+        "all_output_hashes_match": true,
+        "actor_sources_equal_frozen_package": true,
+        "same_scenario_hash": true,
+        "old_loss_plan_unchanged": true,
+        "old_required_and_request_no_worse": true,
+        "actor_has_no_truth_mount": true,
+        "first_intervention_is_report_after_equal_public_prefix": true,
+        "first_report_before_changed_science_action": true,
+        "new_diagnostic_official_result_received": true
+      },
+      "control_total": 6141.421958,
+      "candidate_total": 6553.045588,
+      "actual_total_delta": 411.62363,
+      "component_delta": {
+        "observation_request_reward": 0.0,
+        "report_settlement": 100.0,
+        "required_penalty": 0.0,
+        "sum_best_scores": 311.58498,
+        "uniformity_penalty": 0.03865
+      },
+      "accounted_seconds": 713.941,
+      "first_divergence_actor_action_position": 1119,
+      "guard_reports": [
+        {
+          "event": "persistent_diagnostic_report",
+          "now_utc": "2026-12-19T02:00:00Z",
+          "observe_action_index": 961,
+          "free_reports_remaining": 2,
+          "quota_reserve": 1,
+          "features": {
+            "distinct_slots": 8,
+            "low_slots": 8,
+            "nights": 2,
+            "field_sectors": 3,
+            "programs": [
+              "DARK"
+            ],
+            "observing_span_seconds": 19604.0,
+            "median_ratio_upper": 0.4107326416827979,
+            "earthquake_samples": 8,
+            "evidence_ranks": [
+              953,
+              954,
+              955,
+              956,
+              957,
+              958,
+              959,
+              960
+            ],
+            "qualified": true
+          },
+          "analytical_only": false
+        }
+      ],
+      "official_report_results": [
+        {
+          "correct": true,
+          "issued_at_utc": "2026-12-19T02:00:00Z",
+          "record_type": "report_result",
+          "repaired": true,
+          "score_delta": 100.0
+        }
+      ],
+      "summary": [],
+      "comparison": {
+        "complete_control": true,
+        "complete_candidate": true
+      }
+    }
+  },
+  "actual_full_season": true,
+  "formal_online_submission": false,
+  "formal_online_gain": null,
+  "all_reviews_passed": true,
+  "three_card_mean_delta": "139.147989"
+}
