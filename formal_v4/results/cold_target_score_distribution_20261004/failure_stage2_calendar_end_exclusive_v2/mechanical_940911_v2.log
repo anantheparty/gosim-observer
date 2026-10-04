@@ -1,0 +1,7 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 213, in <module>
+    build(seed,args.split,verify=args.split=='mechanical')
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 143, in build
+    assert [(s.start_utc,s.end_utc) for s in scenario.slots]==[(utc(n['observing_start_utc'])+timedelta(seconds=j*initial['survey']['slot_seconds']),min(utc(n['observing_start_utc'])+timedelta(seconds=(j+1)*initial['survey']['slot_seconds']),utc(n['observing_end_utc']))) for n in initial['survey']['nights'] for j in range(n['slot_count'])]
+AssertionError

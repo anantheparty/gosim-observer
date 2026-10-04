@@ -1,0 +1,8 @@
+{
+  "reason": "Runtime pilot actor closed over loaded host Scenario although it accessed only public target/config/time fields. Strengthen isolation to a whitelisted public initializer context and public calendar; no result used for model selection.",
+  "source_sha256": {
+    "pilot.py": "2ced4401fa60200f1983a2b9f100be52a350d20c58203ddb81e9149f16015158",
+    "PILOT_RESULT.json": "2d75e24103e139e395ea27091110bf233d4018eb06beb831e85bb1757d28ab00",
+    "pilot.log": "4adc90c3b476f5ef40ec09f940861efae3e251d3921dec3731bc89e4c44e06e1"
+  }
+}

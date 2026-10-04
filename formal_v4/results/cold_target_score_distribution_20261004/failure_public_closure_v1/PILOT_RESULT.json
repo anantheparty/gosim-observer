@@ -1,0 +1,116 @@
+{
+  "schema": "direct-target-distribution-stage1-result-v1",
+  "worlds": [
+    {
+      "seed": 940901,
+      "build_seconds": 0.2530877497047186,
+      "label_rows": 778,
+      "events": 36,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "SE"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "SW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 98,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true
+      }
+    },
+    {
+      "seed": 940902,
+      "build_seconds": 0.25585966696962714,
+      "label_rows": 1052,
+      "events": 35,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NE"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 76,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true
+      }
+    },
+    {
+      "seed": 940903,
+      "build_seconds": 0.238689792342484,
+      "label_rows": 835,
+      "events": 36,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "W"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NE"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 110,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true
+      }
+    },
+    {
+      "seed": 940904,
+      "build_seconds": 0.2522783330641687,
+      "label_rows": 1019,
+      "events": 34,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 96,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true
+      }
+    }
+  ],
+  "counts": {
+    "assigned": 4247,
+    "hit": 3684,
+    "miss": 563,
+    "interior": 2398,
+    "band_BRIGHT": 1068,
+    "zero": 704,
+    "band_BACKUP": 1009,
+    "band_DARK": 1607,
+    "saturated": 582
+  },
+  "official_scalar_label_seconds": 0.34663262823596597,
+  "label_rows": 3684,
+  "first_best_exact_moment_max_error": 2.220446049250313e-16,
+  "hinge_quantization_max_error": 0.006356745409900786,
+  "hinge_quantization_negative_cases": 0.0,
+  "analytic_normalized_gain_bound": 0.0046875,
+  "six_decimal_public_score_max_rounding_error": 4.997805464757032e-07,
+  "official_report_repair_cases": 3,
+  "loss_best_vs_measurement_contract": true,
+  "public_miss_vs_zero_contract": true,
+  "elapsed_seconds": 7.613599916920066,
+  "no_fit_no_old_cal_test_no_actual_truth": true
+}

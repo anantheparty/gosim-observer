@@ -1,0 +1,42 @@
+{
+  "seed": 940912,
+  "card": "L1",
+  "split": "mechanical",
+  "states": 128,
+  "valid_future_rows": 29068,
+  "past_observations": 984,
+  "past_actual_hits": 13398,
+  "past_misses": 6,
+  "past_zero_hits": 1486,
+  "past_saturated_hits": 2189,
+  "reports": 2,
+  "loss_resyncs": 1,
+  "fresh_generation_seconds": 0.0,
+  "future_label_seconds": 0.7291313852183521,
+  "total_world_seconds": 20.233556292019784,
+  "npz_bytes": 2397290,
+  "npz_sha256": "a76da03b6f3aca2c1448aae7fe180fda00b54b963af47d741a338f20360fb71d",
+  "official_scalar_labels_checked": 1827,
+  "max_official_factor_difference": 4.440892098500626e-16,
+  "max_original_public_H_cache_difference": 3.3306690738754696e-16,
+  "pointstate_uncached_reference_checks": 984,
+  "pointstate_uncached_max_difference": 4.440892098500626e-16,
+  "shared_public_wait_states": 16,
+  "actor_inputs": [
+    "ht",
+    "hn",
+    "hm",
+    "cn",
+    "cm",
+    "q"
+  ],
+  "host_only_arrays": [
+    "F",
+    "b",
+    "effective",
+    "truebest"
+  ],
+  "public_validity_cutoff": "resync processed chronologically, never final run valid columns",
+  "past_repair_measurements_frozen": true,
+  "no_old_factor_quality_offsets_or_test": true
+}

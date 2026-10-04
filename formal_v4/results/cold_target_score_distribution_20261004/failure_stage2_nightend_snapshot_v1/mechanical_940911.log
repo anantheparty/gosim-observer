@@ -1,0 +1,14 @@
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/strong_original/research/spatial_candidates.py:201: RuntimeWarning: invalid value encountered in cast
+  row = np.clip(np.floor(north_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/strong_original/research/spatial_candidates.py:202: RuntimeWarning: invalid value encountered in cast
+  col = np.clip(np.floor(east_offset / self.pitch + self.side / 2).astype(np.int32), 0, self.side - 1)
+{"remote_check":"disabled","transport":"offline-request-exact-cache","seconds":0.0}
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 210, in <module>
+    build(seed,args.split,verify=args.split=='mechanical')
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 198, in build
+    s=snapshot(initial,seen,now+timedelta(seconds=d),dict(action='observe',observe_index=ai,hits=hits));s['new_messages']=[];pol._ingest_result(s)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 126, in snapshot
+    state=publication_state(initial,seen,now,next(n['night_date'] for n in initial['survey']['nights'] if utc(n['observing_start_utc'])<=now<utc(n['observing_end_utc'])))
+StopIteration

@@ -1,0 +1,80 @@
+{
+  "schema": "direct-target-joint-stage2-pre-fit-lock-v2",
+  "authorization": "ROOT_STAGE2_REVIEW.json: implementation, fresh four-world mechanical gates, then conditional PRO6000 fit; no production adoption or full-season run",
+  "split_world_seeds": {
+    "train": [
+      961000,
+      961095
+    ],
+    "cal": [
+      962000,
+      962015
+    ],
+    "val": [
+      963000,
+      963023
+    ],
+    "test": [
+      964000,
+      964023
+    ],
+    "mechanical": [
+      940911,
+      940914
+    ]
+  },
+  "query_states_per_world": 128,
+  "history_exposures": 8,
+  "physical_label": "F,b; effective_I_hit_F stored only as host evaluation, never future input",
+  "query_dimensions": 51,
+  "query_exclusions": [
+    "requested duration after canonical clipping",
+    "pointing center",
+    "fiber",
+    "tangent offsets",
+    "science weight",
+    "best",
+    "declared program",
+    "future actual hit",
+    "future offset",
+    "future notices not issued"
+  ],
+  "canonical_duration": "min(requested, current-night-end-start, survey-end-start) integer seconds",
+  "history": "fresh public actual-hit IDs and six-decimal score; nominal pointing offsets retained only historically; valid mask reflects losses published by query cutoff; past labels never recalculated after later repair",
+  "public_context": "129 current terrain/bulletin/forecast(report available_until and coverage enforced) plus 16 current metadata; full-history additionally past8 tokens/notice/meta",
+  "public_geometry_cache_key": "public-initializer hash,target_id,start,canonical-duration; independent of pointing/program/weight/best",
+  "prediction_cache_key": "geometry-key plus model/version/temperature hash AND complete public context hash; invalidate upon same-UTC report/resync/new message/history change",
+  "architecture": {
+    "full_history": "24->32->32 token, masked mean/max64; (64+129+16)*8+129+16=1817 ->64->32 context; context32+query51=83->32->195 joint logits",
+    "current_public_only": "current129+meta16=145->64->32 context; context32+query51=83->32->195 joint logits"
+  },
+  "optimization": {
+    "epochs": 12,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "clip_grad_norm": 5,
+    "dtype": "float32",
+    "seed": 949200,
+    "batch_states": 8,
+    "loss": "equal-world/equal-state soft-label joint CE: valid query mean per state then mean states, band fixed adjacent F knots K64"
+  },
+  "calibration": {
+    "temperature_grid": [
+      0.8,
+      1,
+      1.2,
+      1.5,
+      2
+    ],
+    "per_checkpoint": "minimize equal-world/equal-state soft-label CE, temperature tie nearest1 then smaller"
+  },
+  "finite_selection_objective": "expected additive science gain / canonical actual seconds; same legal geometry, same field/duration/program family, same assignment, science-only all models/control; no REQ/Jain/scarcity bonus",
+  "realized_evaluation": "host actualeffective I_hit*F contribution minus true pre-action best, positive part, divided by actual seconds; predictor chooses assignment/field/duration/program before truth evaluation",
+  "validation_selection": "aggregate all validation-world mean realized rate selects ONE full-history or current-public-only checkpoint+cal-temperature; deterministic tie earlier epoch then current-public-only; report world-paired deltas against original frozen strong public point scoring and against other model; NN-minus-best both controls reported",
+  "test_launch_gate": "selected fixed model versus original frozen strongpoint: validation worldmean delta>0 and paired 95% world-bootstrap lower>0; history incremental value separately reported, not a prerequisite for current-only advancement",
+  "test_once": "only selected fixed model; generate/read fresh24 test worlds once after source/model/checkpoint/temperature freeze; never swap model or rescue parameters after test; old test/L4/teacher not read",
+  "truth_prior": "independent official sha256-v1 seed streams; counts rainy0..2 cloudy0..3 smoggy0..2 cold_wave0..2 tornado0..1 rocket0..2 quake0..3 fault0..3 from seed+20000000, reference continuous parameters and terrain1..3",
+  "scope": "Finite additive science-rate mechanism experiment. Does not prove full-season score, required/REQ/Jain joint completion or production CPU2/2GiB gate. Joint knot tail is not threshold-event guarantee. Original production source/ZIP unchanged.",
+  "finite_shared_outer_gate": "Original public ALL rain/storm closure or original last_closed feedback forces same wait=0 for both learned variants and original point; same original .008 glass margin/startalt min+.04/up-to-limit minus1s gate, nominal calibration correction."
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "direct-target-distribution-stage1-result-v1",
+  "worlds": [
+    {
+      "seed": 940901,
+      "build_seconds": 1.3499986380338669e-05,
+      "label_rows": 926,
+      "events": 36,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "SE"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "SW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 98,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true,
+        "actor_context_is_whitelisted_public_initializer": true
+      }
+    },
+    {
+      "seed": 940902,
+      "build_seconds": 1.0333023965358734e-05,
+      "label_rows": 1224,
+      "events": 35,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NE"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 76,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true,
+        "actor_context_is_whitelisted_public_initializer": true
+      }
+    },
+    {
+      "seed": 940903,
+      "build_seconds": 1.1208001524209976e-05,
+      "label_rows": 948,
+      "events": 36,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "W"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NE"
+        },
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 110,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true,
+        "actor_context_is_whitelisted_public_initializer": true
+      }
+    },
+    {
+      "seed": 940904,
+      "build_seconds": 1.4124903827905655e-05,
+      "label_rows": 1149,
+      "events": 34,
+      "terrain_directions": [
+        {
+          "event_kind": "terrain_obstruction",
+          "direction": "NW"
+        }
+      ],
+      "runtime": {
+        "observations": 12,
+        "public_hit_tokens": 96,
+        "public_report_results": 3,
+        "public_score_matches_csv_six_decimals": true,
+        "small_termination": true,
+        "actor_context_is_whitelisted_public_initializer": true
+      }
+    }
+  ],
+  "counts": {
+    "assigned": 4247,
+    "hit": 3684,
+    "miss": 563,
+    "physical_zero": 812,
+    "physical_saturated": 685,
+    "miss_with_positive_physical_factor": 455,
+    "actual_hit_zero": 704,
+    "interior": 2398,
+    "band_BRIGHT": 1248,
+    "zero": 1267,
+    "band_BACKUP": 1160,
+    "band_DARK": 1839,
+    "saturated": 582
+  },
+  "official_scalar_label_seconds": 0.38328862842172384,
+  "label_rows": 4247,
+  "first_best_exact_moment_max_error": 2.220446049250313e-16,
+  "hinge_quantization_max_error": 0.006356745409900786,
+  "hinge_quantization_negative_cases": 0.0,
+  "analytic_normalized_gain_bound": 0.0046875,
+  "six_decimal_public_score_max_rounding_error": 4.997805464757032e-07,
+  "official_report_repair_cases": 3,
+  "loss_best_vs_measurement_contract": true,
+  "pilot_g_definition": "g_effective=I_actual_hit*physical_factor_F. Expected hinge formula holds for this effective action contribution. Next training uses physical F with original geometry external.",
+  "public_miss_vs_zero_contract": true,
+  "elapsed_seconds": 6.779149040579796,
+  "no_fit_no_old_cal_test_no_actual_truth": true
+}

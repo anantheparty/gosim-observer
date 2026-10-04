@@ -1,0 +1,4 @@
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/data_pipeline.py", line 140
+    data={k:np.zeros(shape,np.float32) for k,shape in [('ht',(S,8,16,24)),('hn',(S,8,129)),('hm',(S,8,16)),('cn',(S,129)),('cm',(S,16)),('F',(S,Q)),('effective',(S,Q)),('best',(S,Q)),('truebest',(S,Q)),('point',(S,Q,3))]};for key in ['effective','best','truebest','point']:data[key]=data[key].astype(np.float64)
+                                                                                                                                                                                                                              ^^^
+SyntaxError: invalid syntax

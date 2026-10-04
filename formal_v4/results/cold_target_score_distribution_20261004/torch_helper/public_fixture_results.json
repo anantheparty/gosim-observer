@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "trained": false,
+  "device": "cpu",
+  "public_fixture_seed": 949200,
+  "torch_version": "2.5.1",
+  "numpy_version": "2.0.2",
+  "tolerance": 1e-05,
+  "modes": {
+    "fullhistory": {
+      "parameter_count": 129411,
+      "output_shape": [
+        3,
+        320,
+        195
+      ],
+      "max_errors": {
+        "logits": 1.1920928955078125e-07,
+        "pmf_T0.7": 2.7939677238464355e-09,
+        "band_probability_T0.7": 1.1920928955078125e-07,
+        "mu_b_T0.7": 5.960464477539063e-08,
+        "joint_first_moment_by_band_T0.7": 5.960464477539063e-08,
+        "conditional_mean_b_T0.7": 1.7881393432617188e-07,
+        "mean_T0.7": 1.7881393432617188e-07,
+        "hinge_by_band_T0.7": 2.2351741790771484e-08,
+        "conditional_hinge_by_band_T0.7": 8.940696716308594e-08,
+        "hinge_T0.7": 5.960464477539063e-08,
+        "pmf_T1.0": 2.3283064365386963e-09,
+        "band_probability_T1.0": 1.4901161193847656e-07,
+        "mu_b_T1.0": 5.960464477539063e-08,
+        "joint_first_moment_by_band_T1.0": 5.960464477539063e-08,
+        "conditional_mean_b_T1.0": 1.7881393432617188e-07,
+        "mean_T1.0": 1.7881393432617188e-07,
+        "hinge_by_band_T1.0": 2.9802322387695312e-08,
+        "conditional_hinge_by_band_T1.0": 7.450580596923828e-08,
+        "hinge_T1.0": 7.450580596923828e-08,
+        "pmf_T1.9": 1.862645149230957e-09,
+        "band_probability_T1.9": 1.4901161193847656e-07,
+        "mu_b_T1.9": 5.960464477539063e-08,
+        "joint_first_moment_by_band_T1.9": 5.960464477539063e-08,
+        "conditional_mean_b_T1.9": 1.7881393432617188e-07,
+        "mean_T1.9": 1.7881393432617188e-07,
+        "hinge_by_band_T1.9": 2.9802322387695312e-08,
+        "conditional_hinge_by_band_T1.9": 7.450580596923828e-08,
+        "hinge_T1.9": 8.940696716308594e-08,
+        "padding_invariance": 0.0
+      },
+      "overall_maxerr": 1.7881393432617188e-07
+    },
+    "current-public-only": {
+      "parameter_count": 20547,
+      "output_shape": [
+        3,
+        320,
+        195
+      ],
+      "max_errors": {
+        "logits": 1.4901161193847656e-07,
+        "pmf_T0.7": 2.7939677238464355e-09,
+        "band_probability_T0.7": 1.1920928955078125e-07,
+        "mu_b_T0.7": 5.960464477539063e-08,
+        "joint_first_moment_by_band_T0.7": 5.960464477539063e-08,
+        "conditional_mean_b_T0.7": 1.7881393432617188e-07,
+        "mean_T0.7": 1.7881393432617188e-07,
+        "hinge_by_band_T0.7": 2.2351741790771484e-08,
+        "conditional_hinge_by_band_T0.7": 7.450580596923828e-08,
+        "hinge_T0.7": 5.960464477539063e-08,
+        "pmf_T1.0": 2.3283064365386963e-09,
+        "band_probability_T1.0": 1.1920928955078125e-07,
+        "mu_b_T1.0": 7.450580596923828e-08,
+        "joint_first_moment_by_band_T1.0": 7.450580596923828e-08,
+        "conditional_mean_b_T1.0": 1.7881393432617188e-07,
+        "mean_T1.0": 1.7881393432617188e-07,
+        "hinge_by_band_T1.0": 2.2351741790771484e-08,
+        "conditional_hinge_by_band_T1.0": 7.450580596923828e-08,
+        "hinge_T1.0": 5.960464477539063e-08,
+        "pmf_T1.9": 1.862645149230957e-09,
+        "band_probability_T1.9": 1.1920928955078125e-07,
+        "mu_b_T1.9": 5.960464477539063e-08,
+        "joint_first_moment_by_band_T1.9": 5.960464477539063e-08,
+        "conditional_mean_b_T1.9": 1.7881393432617188e-07,
+        "mean_T1.9": 1.4901161193847656e-07,
+        "hinge_by_band_T1.9": 2.2351741790771484e-08,
+        "conditional_hinge_by_band_T1.9": 7.450580596923828e-08,
+        "hinge_T1.9": 5.960464477539063e-08,
+        "history_invariance": 0.0
+      },
+      "overall_maxerr": 1.7881393432617188e-07
+    }
+  },
+  "loss_maxerr": 0.0,
+  "state_balanced_loss_maxerr": 0.0,
+  "state_balanced_gradient_maxerr": 5.820766091346741e-11,
+  "mu_b_definition": "E[F * 1{band=b}]",
+  "source_sha256": {
+    "__init__.py": "3e9ec9890aff0920d674cf93cf090d23ecb61b9bfb2d34f50810ee34f398fe5c",
+    "check_public_random_fixture.py": "a1d21b6c3031f387f45209176ef903669f9d231a6333712c60f594401bda8be0",
+    "numpy_score_distribution.py": "22c23ace5ce00aea062c301c107a557b685f0af91528b887575ffdcb24241188",
+    "score_distribution_model.py": "892dfb1e1452a039b59fdc02188b8aab99533eab4c82efb7aaaf357de073b558",
+    "train_helper.py": "80eb7dc6286f50556ae6182bc946e83952c5462bdae47476e41174c6b3d6b4d3"
+  }
+}

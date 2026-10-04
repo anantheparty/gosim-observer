@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/pilot.py", line 253, in <module>
+    if __name__=='__main__':main()
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/pilot.py", line 193, in main
+    action=design(public,slot.start_utc,duration,rng)
+  File "/Users/kamico/work/GOSIM/OBSERVER/formal_v4/results/cold_target_score_distribution_20261004/pilot.py", line 81, in design
+    lat,lon=float(scenario.site['latitude_deg']),float(scenario.site['longitude_deg'])
+AttributeError: 'float' object has no attribute 'site'

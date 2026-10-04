@@ -1,0 +1,52 @@
+{
+  "runtime": "Unfitted random-weight float32 cost only; no accuracy claim",
+  "machine": "macOS-15.5-arm64-arm-64bit",
+  "numpy": "2.0.2",
+  "blas_threads": "1",
+  "results": [
+    {
+      "rows": 512,
+      "shared_stem_median_seconds": 0.0001722089946269989,
+      "joint_histogram_and_derived_moments_median_seconds": 0.0004047499969601631,
+      "macs_per_query_stem": 2816,
+      "additional_macs_per_query_joint_head": 6240,
+      "float64_reference_max_abs_error": 8.699977847512197e-10,
+      "histogram_temporary_bytes": 399360
+    },
+    {
+      "rows": 4096,
+      "shared_stem_median_seconds": 0.001433833036571741,
+      "joint_histogram_and_derived_moments_median_seconds": 0.003573209047317505,
+      "macs_per_query_stem": 2816,
+      "additional_macs_per_query_joint_head": 6240,
+      "float64_reference_max_abs_error": 9.061142712887826e-10,
+      "histogram_temporary_bytes": 3194880
+    },
+    {
+      "rows": 16384,
+      "shared_stem_median_seconds": 0.005940916948020458,
+      "joint_histogram_and_derived_moments_median_seconds": 0.014163707848638296,
+      "macs_per_query_stem": 2816,
+      "additional_macs_per_query_joint_head": 6240,
+      "float64_reference_max_abs_error": 8.232587753870257e-10,
+      "histogram_temporary_bytes": 12779520
+    },
+    {
+      "rows": 65536,
+      "shared_stem_median_seconds": 0.024068625178188086,
+      "joint_histogram_and_derived_moments_median_seconds": 0.06446500029414892,
+      "macs_per_query_stem": 2816,
+      "additional_macs_per_query_joint_head": 6240,
+      "float64_reference_max_abs_error": 9.688260827270256e-10,
+      "histogram_temporary_bytes": 51118080
+    }
+  ],
+  "official_scalar_seconds_per_label": 9.024926499216479e-05,
+  "proposed_train_rows_upper": 3932160,
+  "proposed_cal_val_test_rows_upper": 2621440,
+  "scalar_label_seconds_extrapolation": 591.4575830526512,
+  "prototype_query_float32_storage_bytes": 1468006400,
+  "shared_history_storage_bytes": 251658240,
+  "architecture": "One joint195 head; all first moments and revisit hinge gains derived from its same PMF.",
+  "validity": "Mac one BLAS thread; not 2CPU Linux production gate. Exact geometry and history encoding cost still need measurement. Label cost extrapolation excludes world generation and geometry/cache creation; cached bundle lookup is not generation timing."
+}
