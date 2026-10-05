@@ -1,0 +1,708 @@
+{
+  "schema": "gosim-formal-card-download-v1",
+  "downloaded_at_utc": "20261004T172822Z",
+  "account_user_id": "7afaf76f-63f4-4173-8f78-439d9ed3bbe6",
+  "source": "Supabase Storage bucket 'scenarios' (same requests as the website task-card download)",
+  "cards": {
+    "A": {
+      "slug": "v4-a",
+      "released": true,
+      "archive": {
+        "path": "A/taskcard-a.zip",
+        "bytes": 614775,
+        "sha256": "5d299ffdb6dccac7e4bef07b2baaa2f488081f15dbfbaa6d3a5674d8c86116f6",
+        "members": [
+          "a/config/v4_fiber_config.json",
+          "a/config/v4_score_config.json",
+          "a/public/footprint.csv",
+          "a/public/targets.csv",
+          "a/public/taskcard.en.md",
+          "a/public/taskcard.zh.md",
+          "a/public/v4_night_calendar.csv"
+        ],
+        "note": "deterministic re-pack (fixed 1980-01-01 timestamps, sorted, deflate-6) of the website ZIP layout"
+      },
+      "files": {
+        "config/v4_fiber_config.json": {
+          "server_size": 357,
+          "server_etag": "\"d9ee3f7430d4155b8514eb0afad4a18d\"",
+          "server_updated_at": "2026-10-02T05:36:22.874Z",
+          "server_mimetype": "application/json",
+          "bytes": 357,
+          "sha256": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165"
+        },
+        "config/v4_score_config.json": {
+          "server_size": 869,
+          "server_etag": "\"370d718db96a994182306fe2baeea292\"",
+          "server_updated_at": "2026-10-02T05:36:24.025Z",
+          "server_mimetype": "application/json",
+          "bytes": 869,
+          "sha256": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521"
+        },
+        "public/footprint.csv": {
+          "server_size": 3401,
+          "server_etag": "\"d66dedf418b8a3434d1eb421c9a38fc3\"",
+          "server_updated_at": "2026-10-02T05:36:31.821Z",
+          "server_mimetype": "text/csv",
+          "bytes": 3401,
+          "sha256": "8436949cb09f7c27f64b1abd31ee96eaae5d95d1da9b60ec24d480bafe29797e"
+        },
+        "public/targets.csv": {
+          "server_size": 1782705,
+          "server_etag": "\"39a8c37bf765a89333ec8ddd0bc7afe8\"",
+          "server_updated_at": "2026-10-02T05:36:30.537Z",
+          "server_mimetype": "text/csv",
+          "bytes": 1782705,
+          "sha256": "05dc5357fad3b12e3ede1d7aeb7eb59ec5f9b666980ba0cbc409f74c3697f736"
+        },
+        "public/taskcard.en.md": {
+          "server_size": 5152,
+          "server_etag": "\"daec585b6343ba8b4dbcbf91c800a16f\"",
+          "server_updated_at": "2026-10-02T05:52:40.974Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 5152,
+          "sha256": "59cdd93c8d349a9f44c2afef016edce9351cbbbe33c80340715f1ba7ab36efc2"
+        },
+        "public/taskcard.zh.md": {
+          "server_size": 4799,
+          "server_etag": "\"5a63206ae73334611903ad624f0543f1\"",
+          "server_updated_at": "2026-10-02T05:52:36.025Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 4799,
+          "sha256": "0c7da00bd034bcec15f43a8d28ae7dd4a561dde240ae759dd75240bc1277125c"
+        },
+        "public/v4_night_calendar.csv": {
+          "server_size": 14135,
+          "server_etag": "\"076e7efd12d67123dbfcbec92f83d5c8\"",
+          "server_updated_at": "2026-10-02T05:36:33.244Z",
+          "server_mimetype": "text/csv",
+          "bytes": 14135,
+          "sha256": "12ac0149f781dc4a207e85ab448b1e07f5eb3b477ff327c0a3f8a45d212344a5"
+        }
+      },
+      "stats": {
+        "targets": {
+          "count": 30000,
+          "science_weight_sum": 27300.0,
+          "required_count": 1500,
+          "required_science_weight_sum": 1356.9,
+          "classes": {
+            "BGS": 7200,
+            "ELG": 10200,
+            "LRG": 6000,
+            "QSO": 4200,
+            "Star": 2400
+          },
+          "feature_flux_min": 0.02751424,
+          "feature_flux_max": 9.07525038,
+          "ra_range_deg": [
+            0.005745,
+            359.985674
+          ],
+          "dec_range_deg": [
+            -78.716529,
+            6.675463
+          ],
+          "nonempty_10deg_ra_bands": 23
+        },
+        "calendar": {
+          "nights": 123,
+          "first_night": "2026-10-01",
+          "last_night": "2027-01-31",
+          "observing_seconds_total": 3399300,
+          "slot_count_total": 3777
+        },
+        "footprint": {
+          "vertices": 120,
+          "components": 3
+        },
+        "fiber_config": {
+          "exposure": {
+            "max_duration_seconds": 3600,
+            "min_duration_seconds": 60
+          },
+          "field": {
+            "fiber_area_deg2": 0.4,
+            "gap_deg": 0.0,
+            "n_fibers": 16
+          },
+          "schema_version": "v4-fiber-map-v1",
+          "site": {
+            "latitude_deg": -24.6157,
+            "longitude_deg": -70.3976,
+            "name": "VISTA/Paranal (4MOST)",
+            "utc_offset_hours": -4.0
+          }
+        },
+        "score_config": {
+          "schema_version": "v4-score-v1",
+          "q0": 0.68,
+          "flux_zero_point": 0.5,
+          "exposure_zero_point_seconds": 900,
+          "airmass_exponent": 0.6,
+          "lunar_model": {
+            "angular_decay_scale_deg": 35.0,
+            "altitude_exponent": 1.0,
+            "maximum_penalty": 0.75
+          },
+          "program": {
+            "bands": {
+              "DARK": 0.65,
+              "BRIGHT": 0.4
+            },
+            "multipliers": {
+              "DARK": 1.2,
+              "BRIGHT": 1.12,
+              "BACKUP": 1.06
+            },
+            "mismatch_multiplier": 1.0
+          },
+          "required": {
+            "penalty_per_missing": 50,
+            "observed_factor_threshold": 0.5
+          },
+          "uniformity": {
+            "weight": 200.0,
+            "ra_band_width_deg": 10.0,
+            "observed_factor_threshold": 0.5
+          },
+          "reporting": {
+            "correct_reward": 100,
+            "false_penalty": -150,
+            "false_report_free_allowance": 2,
+            "max_consecutive_reports": 32
+          },
+          "observation_requests": {
+            "completion_factor_threshold": 0.5,
+            "miss_penalty": 0
+          }
+        }
+      }
+    },
+    "B": {
+      "slug": "v4-b",
+      "released": true,
+      "archive": {
+        "path": "B/taskcard-b.zip",
+        "bytes": 1026830,
+        "sha256": "a5c32cb86449e880c7527b2fa706d4e232ab9d1f9028b5b640958624789a032a",
+        "members": [
+          "b/config/v4_fiber_config.json",
+          "b/config/v4_score_config.json",
+          "b/public/footprint.csv",
+          "b/public/targets.csv",
+          "b/public/taskcard.en.md",
+          "b/public/taskcard.zh.md",
+          "b/public/v4_night_calendar.csv"
+        ],
+        "note": "deterministic re-pack (fixed 1980-01-01 timestamps, sorted, deflate-6) of the website ZIP layout"
+      },
+      "files": {
+        "config/v4_fiber_config.json": {
+          "server_size": 369,
+          "server_etag": "\"35ad24e660fd37205bfdeafab64fc2ca\"",
+          "server_updated_at": "2026-10-02T05:36:55.984Z",
+          "server_mimetype": "application/json",
+          "bytes": 369,
+          "sha256": "de599d5f177a6f7088fa980ea1e8211887496eeaf90cb956f92a1469f07fbbed"
+        },
+        "config/v4_score_config.json": {
+          "server_size": 870,
+          "server_etag": "\"aab83c2fa6d3048ff60509bf79cb6322\"",
+          "server_updated_at": "2026-10-02T05:36:57.042Z",
+          "server_mimetype": "application/json",
+          "bytes": 870,
+          "sha256": "37ba53bbf40e1407aebe58bcf611417d2ad5b23bc852e7878e11bdb439fbb007"
+        },
+        "public/footprint.csv": {
+          "server_size": 11472,
+          "server_etag": "\"c928c8a662bc3ba8d693fa15231a86ba\"",
+          "server_updated_at": "2026-10-02T05:37:12.070Z",
+          "server_mimetype": "text/csv",
+          "bytes": 11472,
+          "sha256": "482f9fb1b8881512a9531210d415de5c9e66b05dc58239a9da71cf979b482fd1"
+        },
+        "public/targets.csv": {
+          "server_size": 2969689,
+          "server_etag": "\"51a7a7afca04e37de8c825f13fff2934\"",
+          "server_updated_at": "2026-10-02T05:37:10.804Z",
+          "server_mimetype": "text/csv",
+          "bytes": 2969689,
+          "sha256": "ab8089a285fcf4890dc1cf82ea50ae6fa5b8e60da6c68a44473967910298dccb"
+        },
+        "public/taskcard.en.md": {
+          "server_size": 5187,
+          "server_etag": "\"772d4be79170e090ba9075feca81c19e\"",
+          "server_updated_at": "2026-10-02T05:52:49.117Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 5187,
+          "sha256": "bde4e9a73f44c2fe2f11b4f663acbbdad0fd7923c9f0d3b898b78de789053d16"
+        },
+        "public/taskcard.zh.md": {
+          "server_size": 4810,
+          "server_etag": "\"076687462b5f7273eb3a3baa516301a6\"",
+          "server_updated_at": "2026-10-02T05:52:45.686Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 4810,
+          "sha256": "911401a3ea2bb04d1529e7a619cde1e29eb46c7ea1af1e838bce865f7985fe6a"
+        },
+        "public/v4_night_calendar.csv": {
+          "server_size": 20975,
+          "server_etag": "\"6b61b58f340771daa7d55c1008ec1f27\"",
+          "server_updated_at": "2026-10-02T05:37:14.227Z",
+          "server_mimetype": "text/csv",
+          "bytes": 20975,
+          "sha256": "0fa59747bf19906fccc8d4d2319e2eb6dc288de7c663547c4193e13b33e78984"
+        }
+      },
+      "stats": {
+        "targets": {
+          "count": 50000,
+          "science_weight_sum": 45500.0,
+          "required_count": 2500,
+          "required_science_weight_sum": 2237.9,
+          "classes": {
+            "BGS": 12000,
+            "ELG": 17000,
+            "LRG": 10000,
+            "QSO": 7000,
+            "Star": 4000
+          },
+          "feature_flux_min": 0.11808417,
+          "feature_flux_max": 17.83976956,
+          "ra_range_deg": [
+            0.000335,
+            359.997959
+          ],
+          "dec_range_deg": [
+            -81.169264,
+            8.479624
+          ],
+          "nonempty_10deg_ra_bands": 22
+        },
+        "calendar": {
+          "nights": 183,
+          "first_night": "2027-06-01",
+          "last_night": "2027-11-30",
+          "observing_seconds_total": 6070500,
+          "slot_count_total": 6745
+        },
+        "footprint": {
+          "vertices": 400,
+          "components": 2
+        },
+        "fiber_config": {
+          "exposure": {
+            "max_duration_seconds": 3600,
+            "min_duration_seconds": 60
+          },
+          "field": {
+            "fiber_area_deg2": 0.064,
+            "gap_deg": 0.0,
+            "n_fibers": 25
+          },
+          "schema_version": "v4-fiber-map-v1",
+          "site": {
+            "latitude_deg": -33.9249,
+            "longitude_deg": 18.4241,
+            "name": "Cape Town, South Africa (virtual)",
+            "utc_offset_hours": 2.0
+          }
+        },
+        "score_config": {
+          "schema_version": "v4-score-v1",
+          "q0": 0.68,
+          "flux_zero_point": 0.8,
+          "exposure_zero_point_seconds": 1000,
+          "airmass_exponent": 0.6,
+          "lunar_model": {
+            "angular_decay_scale_deg": 35.0,
+            "altitude_exponent": 1.0,
+            "maximum_penalty": 0.75
+          },
+          "program": {
+            "bands": {
+              "DARK": 0.65,
+              "BRIGHT": 0.4
+            },
+            "multipliers": {
+              "DARK": 1.2,
+              "BRIGHT": 1.12,
+              "BACKUP": 1.06
+            },
+            "mismatch_multiplier": 1.0
+          },
+          "required": {
+            "penalty_per_missing": 50,
+            "observed_factor_threshold": 0.5
+          },
+          "uniformity": {
+            "weight": 200.0,
+            "ra_band_width_deg": 10.0,
+            "observed_factor_threshold": 0.5
+          },
+          "reporting": {
+            "correct_reward": 100,
+            "false_penalty": -150,
+            "false_report_free_allowance": 2,
+            "max_consecutive_reports": 32
+          },
+          "observation_requests": {
+            "completion_factor_threshold": 0.5,
+            "miss_penalty": 0
+          }
+        }
+      }
+    },
+    "C": {
+      "slug": "v4-c",
+      "released": true,
+      "archive": {
+        "path": "C/taskcard-c.zip",
+        "bytes": 607167,
+        "sha256": "592abb512527c431d56acbae3af2edd675a7a88eccbf1f8660758731b8a14ed6",
+        "members": [
+          "c/config/v4_fiber_config.json",
+          "c/config/v4_score_config.json",
+          "c/public/footprint.csv",
+          "c/public/targets.csv",
+          "c/public/taskcard.en.md",
+          "c/public/taskcard.zh.md",
+          "c/public/v4_night_calendar.csv"
+        ],
+        "note": "deterministic re-pack (fixed 1980-01-01 timestamps, sorted, deflate-6) of the website ZIP layout"
+      },
+      "files": {
+        "config/v4_fiber_config.json": {
+          "server_size": 363,
+          "server_etag": "\"60c1e0882f29a6384678a721a8ce01af\"",
+          "server_updated_at": "2026-10-02T05:38:03.350Z",
+          "server_mimetype": "application/json",
+          "bytes": 363,
+          "sha256": "791d4523807b4debd391015532a4c75788da7f929279d8ff359be673062992d5"
+        },
+        "config/v4_score_config.json": {
+          "server_size": 869,
+          "server_etag": "\"370d718db96a994182306fe2baeea292\"",
+          "server_updated_at": "2026-10-02T05:38:04.650Z",
+          "server_mimetype": "application/json",
+          "bytes": 869,
+          "sha256": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521"
+        },
+        "public/footprint.csv": {
+          "server_size": 4409,
+          "server_etag": "\"e72631f9340645908d1dfad81a581cd4\"",
+          "server_updated_at": "2026-10-02T05:38:14.942Z",
+          "server_mimetype": "text/csv",
+          "bytes": 4409,
+          "sha256": "c61d12727e306b86c91dc0342f6bf56ce28a0a9aed89657aa82973b1ead6a90a"
+        },
+        "public/targets.csv": {
+          "server_size": 1757073,
+          "server_etag": "\"1747ebdd0489fd3610910168ff184602\"",
+          "server_updated_at": "2026-10-02T05:38:11.178Z",
+          "server_mimetype": "text/csv",
+          "bytes": 1757073,
+          "sha256": "d33d443675f3f6621d41902822c6fc8ceb450a1453593a7781e68db8d6cfa416"
+        },
+        "public/taskcard.en.md": {
+          "server_size": 5167,
+          "server_etag": "\"5d2f0d34ca2ead4a9da8d158bad46058\"",
+          "server_updated_at": "2026-10-02T05:52:58.991Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 5167,
+          "sha256": "5b91bc5cbd639f42a6097397838bdec5792b76f47e37c73c2597d32ca3bfa9bd"
+        },
+        "public/taskcard.zh.md": {
+          "server_size": 4822,
+          "server_etag": "\"fbd0b56a02d91836d9030887a4f9d7c3\"",
+          "server_updated_at": "2026-10-02T05:52:55.152Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 4822,
+          "sha256": "460e4957c36204b18f96cfe6fb06d2065384fecf750fb48f8aebbe43999822ac"
+        },
+        "public/v4_night_calendar.csv": {
+          "server_size": 13907,
+          "server_etag": "\"7462dbcf1a5cc33d0e5dc84a3d561964\"",
+          "server_updated_at": "2026-10-02T05:38:20.491Z",
+          "server_mimetype": "text/csv",
+          "bytes": 13907,
+          "sha256": "af226b5b88e26f92487a26f635d4ccf053f943efda9df23191c4088c8dd150d8"
+        }
+      },
+      "stats": {
+        "targets": {
+          "count": 30000,
+          "science_weight_sum": 27300.0,
+          "required_count": 1500,
+          "required_science_weight_sum": 1373.4,
+          "classes": {
+            "BGS": 7200,
+            "ELG": 10200,
+            "LRG": 6000,
+            "QSO": 4200,
+            "Star": 2400
+          },
+          "feature_flux_min": 0.03693723,
+          "feature_flux_max": 11.63671364,
+          "ra_range_deg": [
+            56.886571,
+            204.932328
+          ],
+          "dec_range_deg": [
+            -5.224896,
+            65.632392
+          ],
+          "nonempty_10deg_ra_bands": 16
+        },
+        "calendar": {
+          "nights": 121,
+          "first_night": "2026-12-01",
+          "last_night": "2027-03-31",
+          "observing_seconds_total": 4268700,
+          "slot_count_total": 4743
+        },
+        "footprint": {
+          "vertices": 160,
+          "components": 4
+        },
+        "fiber_config": {
+          "exposure": {
+            "max_duration_seconds": 3600,
+            "min_duration_seconds": 60
+          },
+          "field": {
+            "fiber_area_deg2": 0.7,
+            "gap_deg": 0.0,
+            "n_fibers": 9
+          },
+          "schema_version": "v4-fiber-map-v1",
+          "site": {
+            "latitude_deg": 19.8207,
+            "longitude_deg": -155.4681,
+            "name": "Mauna Kea, Hawaii (virtual)",
+            "utc_offset_hours": -10.0
+          }
+        },
+        "score_config": {
+          "schema_version": "v4-score-v1",
+          "q0": 0.68,
+          "flux_zero_point": 0.5,
+          "exposure_zero_point_seconds": 900,
+          "airmass_exponent": 0.6,
+          "lunar_model": {
+            "angular_decay_scale_deg": 35.0,
+            "altitude_exponent": 1.0,
+            "maximum_penalty": 0.75
+          },
+          "program": {
+            "bands": {
+              "DARK": 0.65,
+              "BRIGHT": 0.4
+            },
+            "multipliers": {
+              "DARK": 1.2,
+              "BRIGHT": 1.12,
+              "BACKUP": 1.06
+            },
+            "mismatch_multiplier": 1.0
+          },
+          "required": {
+            "penalty_per_missing": 50,
+            "observed_factor_threshold": 0.5
+          },
+          "uniformity": {
+            "weight": 200.0,
+            "ra_band_width_deg": 10.0,
+            "observed_factor_threshold": 0.5
+          },
+          "reporting": {
+            "correct_reward": 100,
+            "false_penalty": -150,
+            "false_report_free_allowance": 2,
+            "max_consecutive_reports": 32
+          },
+          "observation_requests": {
+            "completion_factor_threshold": 0.5,
+            "miss_penalty": 0
+          }
+        }
+      }
+    },
+    "D": {
+      "slug": "v4-d",
+      "released": true,
+      "archive": {
+        "path": "D/taskcard-d.zip",
+        "bytes": 619761,
+        "sha256": "df2aa463765ce3ad54f62745c8fb1a14775e37e042e56dfd06d345b337589bf5",
+        "members": [
+          "d/config/v4_fiber_config.json",
+          "d/config/v4_score_config.json",
+          "d/public/footprint.csv",
+          "d/public/targets.csv",
+          "d/public/taskcard.en.md",
+          "d/public/taskcard.zh.md",
+          "d/public/v4_night_calendar.csv"
+        ],
+        "note": "deterministic re-pack (fixed 1980-01-01 timestamps, sorted, deflate-6) of the website ZIP layout"
+      },
+      "files": {
+        "config/v4_fiber_config.json": {
+          "server_size": 376,
+          "server_etag": "\"9d30338836c0da0453c41032317d3e4d\"",
+          "server_updated_at": "2026-10-02T05:39:33.275Z",
+          "server_mimetype": "application/json",
+          "bytes": 376,
+          "sha256": "c5ab48f95d5aa2c9f974326afef8f3abe73a8367ff5ecea5dd44b5eb9d66637d"
+        },
+        "config/v4_score_config.json": {
+          "server_size": 869,
+          "server_etag": "\"370d718db96a994182306fe2baeea292\"",
+          "server_updated_at": "2026-10-02T05:39:37.709Z",
+          "server_mimetype": "application/json",
+          "bytes": 869,
+          "sha256": "4d96429e2219f96e4f882d177f69673d112f89ba2e473ac0bd628651ca087521"
+        },
+        "public/footprint.csv": {
+          "server_size": 3441,
+          "server_etag": "\"5fa8efc693f6a3121a3a06260fba94f4\"",
+          "server_updated_at": "2026-10-02T05:40:13.453Z",
+          "server_mimetype": "text/csv",
+          "bytes": 3441,
+          "sha256": "d39a36ec06eefea05a573189ab30e5f9dd4781ced495cc8aa905269ab2c5ab4b"
+        },
+        "public/targets.csv": {
+          "server_size": 1787436,
+          "server_etag": "\"ba6e48bf5894f1351233df8ed81670bf\"",
+          "server_updated_at": "2026-10-02T05:40:09.501Z",
+          "server_mimetype": "text/csv",
+          "bytes": 1787436,
+          "sha256": "656e63f7ea6f5dafb382eb96287bd511f792a690d43bcbfab39ef93907cce89c"
+        },
+        "public/taskcard.en.md": {
+          "server_size": 5432,
+          "server_etag": "\"b0db9e93d3dbfa86d8b8e5f570ff2fa5\"",
+          "server_updated_at": "2026-10-02T05:53:09.033Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 5432,
+          "sha256": "d6aa9aeaf98d4e3c2f3c4f626a551659258f8d69fdf073d8d8997bde031879bd"
+        },
+        "public/taskcard.zh.md": {
+          "server_size": 5084,
+          "server_etag": "\"62654eae428cb75486349c9d22ff3afe\"",
+          "server_updated_at": "2026-10-02T05:53:04.868Z",
+          "server_mimetype": "text/markdown; charset=utf-8",
+          "bytes": 5084,
+          "sha256": "c5736f96f3176040cd88dbd4ce97536254dd49c31d09fd5de2faf58fbc748483"
+        },
+        "public/v4_night_calendar.csv": {
+          "server_size": 41723,
+          "server_etag": "\"b9e7d9e4048bcb303f062b42bf85d00a\"",
+          "server_updated_at": "2026-10-02T05:40:17.049Z",
+          "server_mimetype": "text/csv",
+          "bytes": 41723,
+          "sha256": "31a751081cdbf14a8979092dd84a384df160999c53bc85996b11c5ec2b73334e"
+        }
+      },
+      "stats": {
+        "targets": {
+          "count": 30000,
+          "science_weight_sum": 27300.0,
+          "required_count": 1500,
+          "required_science_weight_sum": 1365.4,
+          "classes": {
+            "BGS": 7200,
+            "ELG": 10200,
+            "LRG": 6000,
+            "QSO": 4200,
+            "Star": 2400
+          },
+          "feature_flux_min": 0.03078973,
+          "feature_flux_max": 10.33778092,
+          "ra_range_deg": [
+            5.1e-05,
+            359.997558
+          ],
+          "dec_range_deg": [
+            -70.946811,
+            -3.591464
+          ],
+          "nonempty_10deg_ra_bands": 24
+        },
+        "calendar": {
+          "nights": 365,
+          "first_night": "2027-01-01",
+          "last_night": "2027-12-31",
+          "observing_seconds_total": 10382400,
+          "slot_count_total": 11536
+        },
+        "footprint": {
+          "vertices": 120,
+          "components": 3
+        },
+        "fiber_config": {
+          "exposure": {
+            "max_duration_seconds": 3600,
+            "min_duration_seconds": 60
+          },
+          "field": {
+            "fiber_area_deg2": 0.06,
+            "gap_deg": 0.0,
+            "n_fibers": 100
+          },
+          "schema_version": "v4-fiber-map-v1",
+          "site": {
+            "latitude_deg": -45.0,
+            "longitude_deg": -135.0,
+            "name": "Nemo Observatory, South Pacific (fictional)",
+            "utc_offset_hours": -9.0
+          }
+        },
+        "score_config": {
+          "schema_version": "v4-score-v1",
+          "q0": 0.68,
+          "flux_zero_point": 0.5,
+          "exposure_zero_point_seconds": 900,
+          "airmass_exponent": 0.6,
+          "lunar_model": {
+            "angular_decay_scale_deg": 35.0,
+            "altitude_exponent": 1.0,
+            "maximum_penalty": 0.75
+          },
+          "program": {
+            "bands": {
+              "DARK": 0.65,
+              "BRIGHT": 0.4
+            },
+            "multipliers": {
+              "DARK": 1.2,
+              "BRIGHT": 1.12,
+              "BACKUP": 1.06
+            },
+            "mismatch_multiplier": 1.0
+          },
+          "required": {
+            "penalty_per_missing": 50,
+            "observed_factor_threshold": 0.5
+          },
+          "uniformity": {
+            "weight": 200.0,
+            "ra_band_width_deg": 10.0,
+            "observed_factor_threshold": 0.5
+          },
+          "reporting": {
+            "correct_reward": 100,
+            "false_penalty": -150,
+            "false_report_free_allowance": 2,
+            "max_consecutive_reports": 32
+          },
+          "observation_requests": {
+            "completion_factor_threshold": 0.5,
+            "miss_penalty": 0
+          }
+        }
+      }
+    }
+  }
+}

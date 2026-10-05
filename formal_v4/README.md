@@ -1,5 +1,9 @@
 # Formal v4 observer research
 
+**Current final version (online mean 33494.59):** see [`pleiades/README_ZH.md`](pleiades/README_ZH.md).
+The agent in `pleiades/agent/` is byte-identical to the submitted package `o4e_c17w5`. The rest of this
+file describes the team's earlier exact-optimization line (`agent.py` / `policy.py` in this directory).
+
 The executable entry point is `agent.py`. It consumes the sequential v4 protocol
 and retains an exposure ledger, conservative completion bounds, weather belief,
 public requests and fixed-pointing calibration. Future evaluator input is not
