@@ -14,11 +14,16 @@ import math
 import os
 import sys
 import time
+from collections import deque
 from pathlib import Path
 
 import numpy as np
 
 from astro import DEG, SID, airmass, fmt_utc, lst_deg, moon_state, parse_utc
+try:
+    import sophon_probe
+except Exception:  # optional easter-egg hook
+    sophon_probe = None
 
 PROGRAMS = ('DARK', 'BRIGHT', 'BACKUP')
 CLOSE_KINDS = ('rain', 'storm', 'rainy', 'tornado')
@@ -84,7 +89,15 @@ DEFAULTS = {
     'omega_mid': 0,        # 1: the closure likelihood also allows closed whole slots inside an exposure
     'rep_streak': 2,       # belief updates with an elevated fault posterior needed before a free report
     'rep_streak_paid': 2,  # ... before a paid report
+    'sophon_probe': 0,     # >0: Sophon easter-egg hook, only when the platform provides SOPHON_RUN_TOKEN
     'rq_rich': 0.0,        # >0: request bonuses x (1 + rq_rich * richness): requests are cheap when time-rich
+    'rq_norho': 0,         # 1: request bonuses are not discounted by the season timing factor rho (a request
+                           #    expires within days, so there is no better later geometry to wait for)
+    'off_wide': 0.0,       # >0: once pointing misses appear, also fit offsets up to max(0.5 deg, off_wide x cell pitch)
+                           #    on a coarse grid and move the fine grid (+-0.16 deg) to its best fit
+    'unif_bonus': 0.0,     # >0: add the RA-band uniformity term to target values (scale x marginal penalty reduction)
+    'rep_cost_scale': 0,   # 1: the cap on penalised fault reports scales with 150 / |false_penalty|, their evidence
+                           #    streak with |false_penalty| / 150 (at most x4)
     'refine_scale': 0,     # 1: refinement starts shrink with the budget-capped anchor count
     'front_gate': 0,       # 1: the early-season budget boost applies only while spending is at or below
                            #    the linear pace (remaining budget fraction >= remaining dark-time fraction)
@@ -712,12 +725,24 @@ class Policy:
         mult = pr.get('multipliers', {})
         self.mult = np.array([float(mult.get('DARK', 1.2)), float(mult.get('BRIGHT', 1.12)), float(mult.get('BACKUP', 1.06))])
         self.mismatch = float(pr.get('mismatch_multiplier', 1.0))
+        self.mult_max = float(np.max(self.mult))   # best attainable program multiplier (DARK on the standard cards)
         rq = sc.get('required', {})
         self.req_pen = float(rq.get('penalty_per_missing', 50))
         self.req_thr = float(rq.get('observed_factor_threshold', 0.5))
         rep = sc.get('reporting', {})
         self.free_reports = int(rep.get('false_report_free_allowance', 2))
         self.max_consec = int(rep.get('max_consecutive_reports', 32))
+        try:
+            self.false_pen = abs(float(rep.get('false_penalty', -150)))
+        except (TypeError, ValueError):
+            self.false_pen = 150.0
+        un = sc.get('uniformity', {}) or {}
+        try:
+            self.unif_w = max(0.0, float(un.get('weight', 0.0)))
+            self.unif_bw = max(1e-3, float(un.get('ra_band_width_deg', 10.0)))
+            self.unif_thr = min(1.0, max(1e-3, float(un.get('observed_factor_threshold', 0.5))))
+        except (TypeError, ValueError):
+            self.unif_w, self.unif_bw, self.unif_thr = 0.0, 10.0, 0.5
         surv = init['survey']
         self.slot = int(surv.get('slot_seconds', 900))
         self.nights = [(parse_utc(n['observing_start_utc']), parse_utc(n['observing_end_utc'])) for n in surv['nights']]
@@ -740,6 +765,10 @@ class Policy:
         self.sdec, self.cdec = np.sin(self.dec * DEG), np.cos(self.dec * DEG)
         self.eqv = np.column_stack((self.cdec * np.cos(self.ra * DEG), self.cdec * np.sin(self.ra * DEG), self.sdec))
         self.transit_alt = 90.0 - np.abs(self.dec - self.lat)
+        # RA bands of the uniformity term (the scorer bins every catalogue target by floor(ra / width))
+        self.unif_band = np.floor(self.ra / self.unif_bw).astype(int)
+        self.unif_band -= int(self.unif_band.min()) if self.n else 0
+        self.unif_cnt = np.bincount(self.unif_band).astype(float) if self.n else np.zeros(1)
         # state
         self.best = np.zeros(self.n)          # realised best score
         self.gl = np.zeros(self.n)            # lower bound on max raw factor
@@ -783,6 +812,10 @@ class Policy:
         self.off_confident = False
         self.off_obs = 0
         self.misses_total = 0
+        self.off_c = (0.0, 0.0)                 # centre of the fine offset grid
+        self.off_hist = deque(maxlen=2000)      # (cmd_alt, cmd_az, tv, fib, hit) of recent calibrations
+        self.offw_alt = self.offw_az = self.offw_ll = None
+        self.offw_n = 0
         # timing
         self.avg_T = 900.0
         self.fill_ema = float(self.nfib) * 0.5
@@ -825,6 +858,13 @@ class Policy:
                 import traceback
                 traceback.print_exc(file=sys.stderr)
                 self.strategist = None
+        self.sprobe = None
+        if (self.p.get('sophon_probe', 0) > 0 and sophon_probe is not None
+                and os.environ.get('SOPHON_RUN_TOKEN')):
+            try:
+                self.sprobe = sophon_probe.Probe(init, self)
+            except Exception:
+                self.sprobe = None
         self.init_cpu = time.process_time() - self.cpu0
 
     # ------------------------------------------------------------------ geometry
@@ -1185,6 +1225,11 @@ class Policy:
         assigned = pend['idx']
         hits = [(self.index[h['target_id']], float(h.get('score', 0.0))) for h in res.get('hits', []) if h.get('target_id') in self.index]
         hit_set = {i for i, _ in hits}
+        if self.sprobe is not None:
+            try:
+                self.sprobe.on_result(pend, hits, self._night_index(start), fmt_utc(start))
+            except Exception:
+                pass
         # pointing calibration evidence
         if len(assigned):
             hitv = np.array([1 if i in hit_set else 0 for i in assigned], dtype=np.int32)
@@ -1320,6 +1365,8 @@ class Policy:
             return
         tv = pend['tv']
         fib = pend['fib']
+        if self.p['off_wide'] > 0:
+            self.off_hist.append((pend['cmd_alt'], pend['cmd_az'], tv, fib, hitv))
         agree = self.kern.offset_agree(self.off_alt, self.off_az, pend['cmd_alt'], pend['cmd_az'], tv, fib, hitv,
                                        self.side, self.pitch)
         n = len(hitv)
@@ -1330,6 +1377,8 @@ class Policy:
             self._stress_signal(pend['t'], 'pointing')
         if self.misses_total == 0:
             return
+        if self.p['off_wide'] > 0:
+            self._calib_wide(pend, tv, fib, hitv)
         best = int(np.argmax(self.off_ll))
         top = self.off_ll[best]
         # confidence: all offsets within 3 log-units lie in a compact region
@@ -1341,6 +1390,72 @@ class Policy:
         self.off_confident = spread <= 0.05 or self.off_obs >= 12
         if self.off_obs % 10 == 1:
             _log({'event': 'calib', 'est': [round(est[0], 4), round(est[1], 4)], 'spread': round(spread, 3), 'obs': self.off_obs})
+
+    def _offset_ll(self, oalt, oaz, last=300):
+        """Log-likelihood of each candidate offset over the most recent stored calibrations."""
+        ll = np.zeros(len(oalt))
+        hist = list(self.off_hist)[-last:]
+        for ca, cz, tv, fib, hit in hist:
+            ag = self.kern.offset_agree(oalt, oaz, ca, cz, tv, fib, hit, self.side, self.pitch)
+            ll += -2.5 * (len(hit) - ag)
+        return ll
+
+    def _calib_wide(self, pend, tv, fib, hitv):
+        """Coarse offset fit over max(0.5 deg, off_wide x pitch): when its best fit lies outside the fine grid and
+        is clearly better than the fit near the current estimate, move the fine grid there (the reference stress
+        config draws offsets within +-0.11 deg, but the bound is a card parameter)."""
+        if self.offw_ll is None:
+            R = max(0.5, float(self.p['off_wide']) * self.pitch)
+            g = np.linspace(-R, R, 41)
+            self.offw_alt, self.offw_az = [a.ravel() for a in np.meshgrid(g, g, indexing='ij')]
+            self.offw_ll = self._offset_ll(self.offw_alt, self.offw_az)
+        else:
+            ag = self.kern.offset_agree(self.offw_alt, self.offw_az, pend['cmd_alt'], pend['cmd_az'], tv, fib, hitv,
+                                        self.side, self.pitch)
+            self.offw_ll += -2.5 * (len(hitv) - ag)
+        self.offw_n += 1
+        if self.offw_n % 4 != 1:
+            return
+        bw = int(np.argmax(self.offw_ll))
+        wa, wz = float(self.offw_alt[bw]), float(self.offw_az[bw])
+        ea, ez = self.off_est
+        kn = int(np.argmin((self.offw_alt - ea) ** 2 + (self.offw_az - ez) ** 2))
+        ca, cz = self.off_c
+        if (abs(wa - ca) > 0.12 or abs(wz - cz) > 0.12) and self.offw_ll[bw] > self.offw_ll[kn] + 6.0:
+            ca, cz = round(wa, 3), round(wz, 3)
+            g = np.linspace(-0.16, 0.16, 33)
+            oa, oz = [a.ravel() for a in np.meshgrid(ca + g, cz + g, indexing='ij')]
+            self.off_alt, self.off_az, self.off_c = oa, oz, (ca, cz)
+            self.off_ll = self._offset_ll(oa, oz)
+            self.off_confident = False
+            _log({'event': 'calib_move', 'centre': [ca, cz], 'gain': round(float(self.offw_ll[bw] - self.offw_ll[kn]), 1),
+                  'obs': self.off_obs})
+
+    def _unif_gain(self):
+        """Reduction of the uniformity penalty weight x (1 - Jain index of the per-RA-band completed fractions)
+        from completing one more target in each band (as if the season ended now; gains only)."""
+        done = np.bincount(self.unif_band[self.gl >= self.unif_thr], minlength=len(self.unif_cnt)).astype(float)
+        ok = self.unif_cnt > 0
+        K = float(ok.sum())
+        if K <= 0:
+            return np.zeros(len(self.unif_cnt))
+        r = np.where(ok, done / np.maximum(self.unif_cnt, 1.0), 0.0)
+        S1, S2 = float(r.sum()), float((r * r).sum())
+        J = S1 * S1 / (K * S2) if S2 > 0 else 0.0
+        d = np.where(ok, 1.0 / np.maximum(self.unif_cnt, 1.0), 0.0)
+        S1n = S1 + d
+        S2n = S2 + 2.0 * r * d + d * d
+        Jn = S1n * S1n / (K * np.maximum(S2n, 1e-12))
+        return np.where(ok, np.maximum(0.0, self.unif_w * (Jn - J)), 0.0)
+
+    def _max_paid(self):
+        """Cap on penalised fault reports, scaled by the card's false-report penalty when rep_cost_scale is on."""
+        mp = int(self.p['max_paid'])
+        if self.p['rep_cost_scale'] > 0:
+            if self.false_pen <= 1e-9:
+                return 3 * mp
+            return int(min(3 * mp, max(1, round(mp * 150.0 / self.false_pen))))
+        return mp
 
     # ------------------------------------------------------------------ decision
     def decide(self, snap):
@@ -1460,6 +1575,11 @@ class Policy:
     def _decide(self, snap):
         now = parse_utc(snap['now_utc'])
         self._messages(snap)
+        if self.sprobe is not None:
+            try:
+                self.sprobe.on_snap(snap, snap.get('now_utc'))
+            except Exception:
+                pass
         self._ingest(snap, now)
         if self._weekly_due:
             self._weekly_due = False
@@ -1537,17 +1657,21 @@ class Policy:
         if pf < thr:
             return False
         k = int(self.p['rep_streak'] if free else self.p['rep_streak_paid'])
+        if not free and self.p['rep_cost_scale'] > 0:
+            # a costlier false report asks for a longer run of evidence (a real fault persists, a dip does not)
+            k = int(round(k * min(4.0, max(1.0, self.false_pen / 150.0))))
         # each false report since the last correct one asks for a longer run of evidence: a real fault
         # persists for the rest of the season, a directional cloud or a weather dip does not
         k += int(round(self.p['rep_esc'] * self.false_since_correct))
         if len(hist) < max(2, k) or any(h < 0.5 * thr for h in hist[-max(2, k):-1]):
             return False
         if not free:
-            if self.paid_reports >= self.p['max_paid']:
+            mp = self._max_paid()
+            if self.paid_reports >= mp:
                 # the paid budget is spent: only a long run of near-certain evidence (a real fault persists
                 # for the rest of the season) still gets reported
                 ko = int(self.p['rep_override'])
-                if (ko <= 0 or self.paid_reports >= self.p['max_paid'] + 2 or len(hist) < ko
+                if (ko <= 0 or self.paid_reports >= mp + 2 or len(hist) < ko
                         or min(hist[-ko:]) < 0.9):
                     return False
             left = float(np.sum(np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now))))
@@ -1621,7 +1745,7 @@ class Policy:
         at the recent fill) against the remaining dark time; cached for 25 decisions."""
         if self.decisions % 25 != 0 and hasattr(self, '_rich_cache'):
             return self._rich_cache
-        inc = self.best < self.w * self.mult[0] * 0.98
+        inc = self.best < self.w * self.mult_max * 0.98
         q = math.exp(self.bel.clim(night) + self.bel.leta_plan(now, night)) / self.q0 * 0.85
         tneed = np.minimum(self.tmax, self.f0t0 / np.maximum(self.flux[inc] * q, 1e-9))
         demand = float(tneed.sum()) / max(1.0, self.fill_ema)
@@ -1666,7 +1790,7 @@ class Policy:
         sig = math.sqrt(vc + 0.03 ** 2)
         # candidate pool
         vis = altall >= self.min_alt + 0.3
-        maxval = self.w * self.mult[0]
+        maxval = self.w * self.mult_max
         incomplete_req = self.req & (self.gl < self.req_thr)
         reqbonus_active = np.zeros(self.n)
         req_deadline = np.full(self.n, np.inf)
@@ -1695,7 +1819,13 @@ class Policy:
                 req_thr[cand] = np.maximum(req_thr[cand], float(r.get('completion_factor_threshold', 0.5)))
             except Exception:
                 continue
+        ub_all = None
+        if self.p['unif_bonus'] > 0 and self.unif_w > 0:
+            ub_all = self.p['unif_bonus'] * self._unif_gain()[self.unif_band]
+            ub_all = np.where(self.gl < self.unif_thr, ub_all, 0.0)
         potential = (self.best < maxval * 0.999) | incomplete_req | (reqbonus_active > 0)
+        if ub_all is not None:
+            potential |= ub_all > 0
         pool = np.flatnonzero(vis & potential)
         if self.probe > 0:
             hp = pool[altall[pool] >= 56.0]
@@ -1723,8 +1853,10 @@ class Policy:
         # coarse priority to cap the pool size
         hnow_air = self._hfac(alt_now)
         kk = self.flux[pool] * Zp * hnow_air / (self.q0 * self.f0t0)
-        quick = self.w[pool] * self.mult[0] * np.minimum(1.0, kk * 1800) - self.best[pool]
+        quick = self.w[pool] * self.mult_max * np.minimum(1.0, kk * 1800) - self.best[pool]
         quick = np.maximum(quick, 0) + incomplete_req[pool] * self.req_pen * np.minimum(1.0, kk * 3600 / self.req_thr) ** 4 + reqbonus_active[pool]
+        if ub_all is not None:
+            quick = quick + ub_all[pool] * np.minimum(1.0, kk * 3600 / self.unif_thr) ** 4
         pool_cap = int(self.p['pool_max'] * self.pool_scale)
         if emergency:
             pool_cap = min(pool_cap, 300)
@@ -1828,6 +1960,8 @@ class Policy:
         pd = np.empty((nt, n)) if dbg else None
         sqrt2 = math.sqrt(2.0)
 
+        ubon = ub_all[pool] if ub_all is not None else None
+
         def values(a, b):
             p_ = pool[a:b]
             m_ = b - a
@@ -1884,6 +2018,11 @@ class Policy:
                 rv[:, jr_] = p_req * self.req_pen * self.p['req_bonus_scale']
             if scrit is not None:
                 rv *= scrit[a:b][None, :]
+            if ubon is not None:
+                ju = np.flatnonzero(ubon[a:b] > 0)
+                if len(ju):
+                    p_u = 0.5 * (1 + _erf((lg[:, ju] - math.log(self.unif_thr) - math.log(self.p['req_safety'])) / (sg * sqrt2)))
+                    rv[:, ju] += p_u * ubon[a:b][ju][None, :]
             rqb_ = rqb[a:b]
             extra_r = np.zeros((nt, m_))
             jq = np.flatnonzero(rqb_ > 0)
@@ -1895,7 +2034,7 @@ class Policy:
             if wopt > 0:
                 # only the best exposure counts: a repeat has an upside from the scatter of the realised quality
                 # (expected improvement of a lognormal outcome over the current best, as a call option)
-                jo = np.flatnonzero((best_ > 1e-9) & (best_ < self.w[p_] * self.mult[0] * 0.995))
+                jo = np.flatnonzero((best_ > 1e-9) & (best_ < self.w[p_] * self.mult_max * 0.995))
                 so = max(sg, 0.05)
             urg_ = urg[a:b]
             vl = val[a:b]
@@ -1910,7 +2049,10 @@ class Policy:
                     cap = np.maximum(0.0, self.w[p_][jo][None, :] * self.mult[P] - K)
                     call = np.clip(call, sci[:, jo], np.maximum(cap, sci[:, jo]))
                     sci[:, jo] = sci[:, jo] + wopt * (call - sci[:, jo])
-                v = ((sci + rv) * urg_[None, :] + extra_r) * rho_[None, :]
+                if self.p['rq_norho'] > 0:
+                    v = (sci + rv) * urg_[None, :] * rho_[None, :] + extra_r
+                else:
+                    v = ((sci + rv) * urg_[None, :] + extra_r) * rho_[None, :]
                 v = np.where(vd, v, 0.0)
                 vl[:, :, P] = v.T
             solo[a:b] = (vl.max(axis=2) / tg[None, :]).max(axis=1)
@@ -2315,7 +2457,7 @@ class Policy:
                 cpu_left = round(float(wc.get('remaining_seconds')) / max(1.0, self.budget_total), 3)
             except (TypeError, ValueError):
                 cpu_left = None
-            sci = float(np.sum(self.best)) / max(1e-9, float(np.sum(self.w * self.mult[0])))
+            sci = float(np.sum(self.best)) / max(1e-9, float(np.sum(self.w * self.mult_max)))
             brief = {'date': fmt_utc(now)[:10],
                      'season': {'night': night + 1, 'nights': N, 'fraction_elapsed': round(night / max(1, N), 3)},
                      'science_fraction_of_maximum': round(sci, 3),
@@ -2332,6 +2474,11 @@ class Policy:
             traceback.print_exc(file=sys.stderr)
 
     def summary(self):
+        if getattr(self, 'sprobe', None) is not None:
+            try:
+                self.sprobe.final()
+            except Exception:
+                pass
         return {'decisions': self.decisions, 'observes': self.observes, 'reports': self.reports,
                 'correct_reports': self.correct_reports, 'false_reports': self.reports - self.correct_reports,
                 'dec_cpu': round(self.dec_cpu, 2), 'init_cpu': round(self.init_cpu, 2),

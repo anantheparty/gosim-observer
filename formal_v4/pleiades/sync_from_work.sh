@@ -4,7 +4,7 @@
 #   lab/   <- harness, job runner, world generators, packers, analysis tools, world specs
 # Run outputs, generated worlds, online downloads and credentials are never copied.
 set -euo pipefail
-PKG=${1:-o4e_c17w5}
+PKG=${1:-o4h_c21b}
 WORK=/home/shu/kamico/observer/work
 HERE=$(cd "$(dirname "$0")" && pwd)
 [ -d "$WORK/packages/$PKG" ] || { echo "no package $WORK/packages/$PKG" >&2; exit 1; }
@@ -22,7 +22,7 @@ for d in "$WORK"/pkgs/*/; do
 done
 if [ -n "$src" ]; then cp "$src/harness_entry.py" "$HERE/agent/"; fi
 for f in harness.py qrun3.py mkjobs.py pack.sh dockertest.sh dockertest2.sh dockertest3.sh dockertest4.sh batch.sh rbatch.sh rstat.sh rfetch.sh \
-         lstat.sh runcard.sh sweep.sh genworld.py gen_formal_like.py gen_hidden_like.py gen_hidden_like2.py gen_weird.py \
+         lstat.sh runcard.sh sweep.sh genworld.py gen_formal_like.py gen_hidden_like.py gen_hidden_like2.py gen_weird.py gen_event.py mkred.py \
          analyze_run.py table.py table2.py table3.py; do
   cp "$WORK/$f" "$HERE/lab/"
 done
