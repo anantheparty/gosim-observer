@@ -10,7 +10,14 @@ usage:
   submit_tool.py status  [--batch ID]                        -> batches and card scores
   submit_tool.py fetch   --batch ID --out DIR                -> per-card result ZIPs + agent logs
   submit_tool.py full    --zip FILE --title TITLE            -> upload + wait + approve + evaluate
+  submit_tool.py env                                         -> team variables: names, flags and hints only
+  submit_tool.py evidence --revision ID --notes-file FILE    -> architecture / reproduction notes on the submission
+  submit_tool.py setvar  --name NAME --from-env VAR [--plain] -> save a team variable (value read from the
+                                                                environment, never from the command line);
+                                                                tagged as a model variable
+Evaluations run without the team's model variables (no_model) unless --with-model is given.
 """
+import os
 import argparse
 import json
 import sys
@@ -96,13 +103,46 @@ def cmd_approve(c, rid):
     print(json.dumps(res)[:500])
 
 
-def cmd_evaluate(c, rid, repeat=False, phase=None):
-    fields = {'phase_id': phase or ONLINE_PHASE, 'revision_id': rid, 'no_model': True}
+def cmd_evaluate(c, rid, repeat=False, phase=None, with_model=False):
+    fields = {'phase_id': phase or ONLINE_PHASE, 'revision_id': rid}
+    if not with_model:
+        fields['no_model'] = True
     if repeat:
         fields['confirm_repeat'] = True
     res = c.portal_w('evaluate', **fields)
     print(json.dumps(res))
     return res.get('batch_id')
+
+
+def _env_view(te):
+    """Team environment without any value: names, flags, hints, mode."""
+    def strip(o):
+        if isinstance(o, dict):
+            return {k: ('<hidden>' if k in ('value', 'plain', 'encrypted', 'ciphertext') else strip(v)) for k, v in o.items()}
+        if isinstance(o, list):
+            return [strip(x) for x in o]
+        return o
+    return strip(te)
+
+
+def cmd_env(c):
+    print(json.dumps(_env_view(c.portal_w('team_environment')), ensure_ascii=False, indent=1, default=str))
+
+
+def cmd_setvar(c, name, from_env, plain=False):
+    value = os.environ.get(from_env or '', '')
+    if not value:
+        raise SystemExit(f'environment variable {from_env!r} is empty')
+    res = c.portal_w('save_team_variable', name=name, value=value, secret=not plain, model=True)
+    value = ''
+    print(json.dumps(_env_view(res), ensure_ascii=False, indent=1, default=str)[:3000])
+
+
+def cmd_evidence(c, rid, notes_file):
+    notes = Path(notes_file).read_text(encoding='utf-8').strip()
+    if not notes or len(notes) > 8000:
+        raise SystemExit('notes must be 1..8000 characters')
+    print(json.dumps(c.portal_w('evidence', revision_id=rid, notes=notes, code_url='')))
 
 
 def cmd_status(c, batch=None, limit=6):
@@ -167,6 +207,11 @@ def main():
     ap.add_argument('--out')
     ap.add_argument('--repeat', action='store_true')
     ap.add_argument('--phase', default=ONLINE_PHASE, help='phase id (default: online)')
+    ap.add_argument('--with-model', action='store_true', help='evaluate with the team model variables')
+    ap.add_argument('--name')
+    ap.add_argument('--from-env')
+    ap.add_argument('--plain', action='store_true', help='store the variable as plain text (not secret)')
+    ap.add_argument('--notes-file')
     a = ap.parse_args()
     c = WriteClient()
     c.login()
@@ -178,7 +223,13 @@ def main():
     elif a.cmd == 'approve':
         cmd_approve(c, a.revision)
     elif a.cmd == 'evaluate':
-        cmd_evaluate(c, a.revision, a.repeat, a.phase)
+        cmd_evaluate(c, a.revision, a.repeat, a.phase, a.with_model)
+    elif a.cmd == 'evidence':
+        cmd_evidence(c, a.revision, a.notes_file)
+    elif a.cmd == 'env':
+        cmd_env(c)
+    elif a.cmd == 'setvar':
+        cmd_setvar(c, a.name, a.from_env, a.plain)
     elif a.cmd == 'status':
         cmd_status(c, a.batch)
     elif a.cmd == 'fetch':
@@ -190,7 +241,7 @@ def main():
             print(json.dumps(r, default=str)[:1500])
             raise SystemExit('preparation failed')
         cmd_approve(c, rid)
-        print('batch', cmd_evaluate(c, rid))
+        print('batch', cmd_evaluate(c, rid, with_model=a.with_model))
     else:
         raise SystemExit('unknown command')
 

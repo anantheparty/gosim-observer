@@ -4,6 +4,7 @@ SRC=$1; NAME=$2
 OUT=/home/shu/kamico/observer/work/packages/$NAME
 rm -rf $OUT $OUT.zip; mkdir -p $OUT
 cp $SRC/agent.py $SRC/policy.py $SRC/astro.py $SRC/kern.c $SRC/libkern_linux_x86_64.so $SRC/observer.project.json $OUT/
+[ -f $SRC/llm_strategist.py ] && cp $SRC/llm_strategist.py $OUT/
 [ -f $SRC/policy_params.json ] && cp $SRC/policy_params.json $OUT/
 echo "numpy==2.2.6" > $OUT/requirements.txt
 python3 - "$OUT" <<'PY'

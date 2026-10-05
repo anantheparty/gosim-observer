@@ -21,7 +21,7 @@ for d in "$WORK"/pkgs/*/; do
   fi
 done
 if [ -n "$src" ]; then cp "$src/harness_entry.py" "$HERE/agent/"; fi
-for f in harness.py qrun3.py mkjobs.py pack.sh dockertest.sh dockertest2.sh batch.sh rbatch.sh rstat.sh rfetch.sh \
+for f in harness.py qrun3.py mkjobs.py pack.sh dockertest.sh dockertest2.sh dockertest3.sh dockertest4.sh batch.sh rbatch.sh rstat.sh rfetch.sh \
          lstat.sh runcard.sh sweep.sh genworld.py gen_formal_like.py gen_hidden_like.py gen_hidden_like2.py gen_weird.py \
          analyze_run.py table.py table2.py table3.py; do
   cp "$WORK/$f" "$HERE/lab/"

@@ -95,6 +95,8 @@ DEFAULTS = {
                            #     a turn's CPU of all threads, at most the turn's real time; the container has 2 cores)
     'rep_override': 0,     # >0: past max_paid, still report (at most twice) after this many consecutive updates
                            #     with p_fault >= 0.9
+    'llm': 1,              # 1: a language model plans the season strategy (llm_strategist.py: mission analysis at
+                           #    initialisation, weekly plan review); 0: the rule-based default strategy only
 }
 
 TGRID = np.array([60, 120, 180, 240, 300, 420, 540, 660, 780, 900, 1080, 1260, 1500, 1800,
@@ -103,7 +105,9 @@ TGRID = np.array([60, 120, 180, 240, 300, 420, 540, 660, 780, 900, 1080, 1260, 1
 
 def _log(obj):
     try:
-        print(json.dumps(obj, separators=(',', ':'), default=str), file=sys.stderr, flush=True)
+        # one write per line: the LLM strategist logs from its own thread
+        sys.stderr.write(json.dumps(obj, separators=(',', ':'), default=str) + '\n')
+        sys.stderr.flush()
     except Exception:
         pass
 
@@ -799,8 +803,28 @@ class Policy:
         self._hf_tab = np.append(airmass(grid) ** (-self.beta), airmass(90.0) ** (-self.beta))
         self._precompute_best_geometry()
         self._precompute_hours()
-        if self.p['req_moon'] > 0:
+        if self.p['req_moon'] > 0 or self.p['llm'] > 0:
             self._precompute_req_moon()
+        # season strategist (language model): mission analysis now, plan review with every weekly forecast
+        self.strategist = None
+        self._safe = False
+        self._forecast = None
+        self._weekly_due = False
+        if self.p['llm'] > 0:
+            try:
+                from llm_strategist import Strategist
+                self.strategist = Strategist()
+                brief = self._mission_brief(init)
+                self.strategist.set_rule_default((brief.get('capacity') or {}).get('demand_over_supply'))
+                self._apply_strategy()
+                if self.strategist.enabled:
+                    self.strategist.submit('mission', brief)
+                _log({'event': 'llm_init', 'enabled': self.strategist.enabled, 'model': self.strategist.client.model,
+                      'mock': self.strategist.mock, 'strategy': self.strategist.strategy})
+            except Exception:
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+                self.strategist = None
         self.init_cpu = time.process_time() - self.cpu0
 
     # ------------------------------------------------------------------ geometry
@@ -1336,6 +1360,7 @@ class Policy:
                 # persistent failure: switch the optional planning features off
                 for k, v in (('req_moon', 0), ('req_urg', 0.0), ('opt_value', 0.0), ('season_rho', 0.0)):
                     self.p[k] = v
+                self._safe = True
                 _log({'event': 'safe_mode'})
         self.decisions += 1
         wdt = time.perf_counter() - w0
@@ -1412,7 +1437,10 @@ class Policy:
     def _messages(self, snap):
         for m in snap.get('new_messages', []) or []:
             rt = m.get('record_type')
-            if rt == 'state_resync':
+            if rt == 'forecast':
+                self._forecast = m
+                self._weekly_due = True
+            elif rt == 'state_resync':
                 self._apply_resync(m)
             elif rt == 'bulletin' and m.get('initial'):
                 for n in m.get('notices', []) or []:
@@ -1433,6 +1461,9 @@ class Policy:
         now = parse_utc(snap['now_utc'])
         self._messages(snap)
         self._ingest(snap, now)
+        if self._weekly_due:
+            self._weekly_due = False
+            self._submit_weekly(snap, now)
         if now >= self.survey_end - 1:
             return {'action': 'finish'}
         night = self._night_index(now)
@@ -1617,6 +1648,7 @@ class Policy:
         return np.maximum(later, tonight * self.mseason_rel[night])
 
     def _plan(self, snap, now, night, left, notices):
+        self._apply_strategy()
         per_dec, remaining = self._budget_scale(snap, now, night)
         # budget emergency (e.g. a much slower machine): minimal search and long exposures, so that the
         # remaining decisions fit into what is left of the global wall clock
@@ -2037,8 +2069,9 @@ class Policy:
             _log({'d': fmt_utc(now), 'Zp': round(Zp, 3), 'Cp': round(Cp, 3), 'sig': round(sig, 3), 'P': PROGRAMS[Pi], 'T': T,
                   'n': len(chosen), 'B': [round(float(B[ti, j]), 3) for j in chosen[:5]], 'pd': [round(float(pd[ti, j]), 2) for j in chosen[:5]],
                   'rate': round(float(rate[best_k]), 5), 'pf': round(self.bel.p_fault(), 3), 'zmean': round(self.logZ_mean, 3)})
+        src = 'optimizer+llm-strategy' if self.strategist is not None and self.strategist.source == 'llm' else 'optimizer'
         return {'action': 'observe', 'pointing': {'alt_deg': round(cmd_alt, 6), 'az_deg': round(cmd_az % 360.0, 6)},
-                'assignments': assignments, 'duration_seconds': T, 'program': PROGRAMS[Pi]}
+                'assignments': assignments, 'duration_seconds': T, 'program': PROGRAMS[Pi], 'decision_source': src}
 
     def _request_feasible(self, cand, now, deadline, need=1, thr=0.5, night=None):
         """Number of request targets that can reach the completion threshold before the deadline
@@ -2194,6 +2227,110 @@ class Policy:
         v /= np.linalg.norm(v)
         return math.asin(max(-1.0, min(1.0, v[2]))) / DEG, (math.atan2(v[1], v[0]) / DEG) % 360.0
 
+    # ------------------------------------------------------------------ season strategist (language model)
+    def _apply_strategy(self):
+        """Set the policy parameters of the season strategy currently chosen by the strategist."""
+        st = self.strategist
+        if st is None or self._safe:
+            return
+        from llm_strategist import STRATEGIES
+        for k, v in STRATEGIES.get(st.strategy, {}).items():
+            self.p[k] = v
+
+    def _mission_brief(self, init):
+        """Task card digest for the strategist's mission analysis: the free-text descriptions, the rules,
+        and catalogue, visibility and capacity statistics."""
+        brief = {'date': fmt_utc(self.night_starts[0])[:10] if len(self.night_starts) else None}
+        try:
+            site = init.get('site', {}) or {}
+            ins = init.get('instrument', {}) or {}
+            sc = init.get('scoring', {}) or {}
+            tg = init.get('targets', {}) or {}
+            cols = {c: k for k, c in enumerate(tg.get('columns', []))}
+            classes = {}
+            if 'target_class' in cols:
+                for r in tg.get('rows', []):
+                    c = str(r[cols['target_class']])
+                    classes[c] = classes.get(c, 0) + 1
+            dark_h = float(np.sum(self.night_ends - self.night_starts)) / 3600.0
+            ridx = np.flatnonzero(self.req)
+            req = {'count': int(len(ridx))}
+            if len(ridx) and hasattr(self, 'rq_pos'):
+                S = self._req_dark_hours(float(self.night_starts[0]), 0, self.rq_pos[ridx])
+                req.update({'season_hours_in_which_one_exposure_completes_them': {
+                    'median': round(float(np.median(S)), 1), 'targets_below_1h': int(np.sum(S < 1)),
+                    'below_5h': int(np.sum(S < 5)), 'below_20h': int(np.sum(S < 20))},
+                    'flux_quantiles_10_50_90': [round(float(x), 3) for x in np.percentile(self.flux[ridx], [10, 50, 90])]})
+            q = math.exp(self.bel.clim(0) + self.bel.leta_plan(float(self.night_starts[0]), 0)) / self.q0 * 0.85
+            tneed = np.minimum(self.tmax, self.f0t0 / np.maximum(self.flux * q, 1e-9))
+            demand_h = float(tneed.sum()) / max(1.0, 0.5 * self.nfib) / 3600.0
+            lim = init.get('limits', {}) or {}
+            brief.update({
+                'task_card': init.get('task_card'),
+                'site': {'name': site.get('name'), 'latitude_deg': self.lat, 'longitude_deg': self.lon,
+                         'minimum_altitude_deg': self.min_alt},
+                'survey': {'start_utc': (init.get('survey') or {}).get('start_utc'), 'end_utc': fmt_utc(self.survey_end),
+                           'nights': len(self.nights), 'dark_hours_total': round(dark_h)},
+                'instrument': {'n_fibers': self.nfib, 'grid_side': self.side, 'field_of_view_deg': round(self.fov, 3),
+                               'layout': ins.get('layout'), 'exposure_seconds_min_max': [self.tmin, self.tmax]},
+                'limits': {k: lim.get(k) for k in ('global_wallclock_seconds', 'decision_timeout', 'max_consecutive_reports')},
+                'scoring': {k: sc.get(k) for k in ('required', 'reporting', 'program', 'observation_requests', 'uniformity')},
+                'catalogue': {'targets': self.n, 'classes': classes,
+                              'flux_quantiles_10_50_90': [round(float(x), 3) for x in np.percentile(self.flux, [10, 50, 90])],
+                              'required': req},
+                'capacity': {'telescope_hours_to_complete_every_target_at_typical_sky': round(demand_h),
+                             'dark_hours_available': round(dark_h),
+                             'demand_over_supply': round(demand_h / max(1.0, 0.85 * dark_h), 2),
+                             'note': 'above ~0.6 capacity-limited, below ~0.2 time-rich'}})
+        except Exception as e:
+            brief['error'] = type(e).__name__
+        return brief
+
+    def _submit_weekly(self, snap, now):
+        """Weekly plan review: forecast, Moon and progress for the strategist (asynchronous)."""
+        st = self.strategist
+        if st is None or not st.enabled or self._safe:
+            return
+        try:
+            N = len(self.nights)
+            night = int(np.searchsorted(self.night_starts, now, side='right')) - 1
+            night = min(max(night, 0), N - 1)
+            inc = np.flatnonzero(self.req & (self.gl < self.req_thr))
+            req = {'total': int(self.req.sum()), 'completed': int(self.req.sum()) - int(len(inc)), 'remaining': int(len(inc))}
+            if len(inc) and hasattr(self, 'rq_pos'):
+                S = self._req_dark_hours(now, night, self.rq_pos[inc])
+                req['remaining_by_completion_hours_left'] = {'below_1h': int(np.sum(S < 1)), 'below_5h': int(np.sum(S < 5)),
+                                                             'below_20h': int(np.sum(S < 20))}
+            fc = self._forecast or {}
+            notices = [{'event': n.get('event_kind'), 'direction': n.get('direction'), 'nights': n.get('nights')}
+                       for n in (fc.get('notices') or [])][:40]
+            moon = []
+            for k in range(night, min(N, night + 7)):
+                a, b = self.nights[k]
+                ms = [moon_state(a + (b - a) * (j + 0.5) / 6.0, self.lat, self.lon) for j in range(6)]
+                moon.append({'night': fmt_utc(a)[:10], 'illumination': round(float(np.mean([m[1] for m in ms])), 2),
+                             'fraction_of_night_moon_up': round(sum(1 for m in ms if m[2] > 0) / 6.0, 2)})
+            wc = snap.get('wallclock') or {}
+            try:
+                cpu_left = round(float(wc.get('remaining_seconds')) / max(1.0, self.budget_total), 3)
+            except (TypeError, ValueError):
+                cpu_left = None
+            sci = float(np.sum(self.best)) / max(1e-9, float(np.sum(self.w * self.mult[0])))
+            brief = {'date': fmt_utc(now)[:10],
+                     'season': {'night': night + 1, 'nights': N, 'fraction_elapsed': round(night / max(1, N), 3)},
+                     'science_fraction_of_maximum': round(sci, 3),
+                     'required_targets': req,
+                     'observation_requests_active': len(snap.get('active_requests') or []),
+                     'instrument_faults': {'reports': self.reports, 'correct': self.correct_reports,
+                                           'fault_probability_now': round(self.bel.p_fault(), 3)},
+                     'time_budget': {'cpu_budget_left_fraction': cpu_left,
+                                     'real_time_left_s': wc.get('wall_remaining_seconds')},
+                     'forecast_next_7_nights': notices, 'moon_next_7_nights': moon}
+            st.submit('weekly', brief, wall_left=wc.get('wall_remaining_seconds'))
+        except Exception:
+            import traceback
+            traceback.print_exc(file=sys.stderr)
+
     def summary(self):
         return {'decisions': self.decisions, 'observes': self.observes, 'reports': self.reports,
                 'correct_reports': self.correct_reports, 'false_reports': self.reports - self.correct_reports,
@@ -2201,7 +2338,8 @@ class Policy:
                 'charge_ratio': round(self._charge_ratio, 3), 'turn_wall': round(self.turn_wall, 1),
                 'offset_est': [round(self.off_est[0], 4), round(self.off_est[1], 4)], 'offset_obs': self.off_obs,
                 'misses': self.misses_total, 'logZ_mean': round(self.logZ_mean, 3), 'kernel': self.kern.lib is not None,
-                'pf': round(self.bel.p_fault(), 4), 'quakes': [round(self.bel._d0_hat(q), 3) for q in self.bel.quakes], 'bad': getattr(self.bel, 'n_bad', 0), 'cap': None if self.cap_ratio is None else round(self.cap_ratio, 3), 't0': round(getattr(self, '_t0_cache', 0.0), 1), 'rich': round(getattr(self, '_rich_cache', 0.0), 3), 'pool_scale': round(self.pool_scale, 3), 'nfault': self.bel.nfault, 'pc': [round(float(x), 3) for x in self.bel.pc], 'stress': self.stress_seen, 'anchor_cost': None if self.anchor_cost is None else [round(self.anchor_cost[0], 4), round(self.anchor_cost[1], 5)]}
+                'pf': round(self.bel.p_fault(), 4), 'quakes': [round(self.bel._d0_hat(q), 3) for q in self.bel.quakes], 'bad': getattr(self.bel, 'n_bad', 0), 'cap': None if self.cap_ratio is None else round(self.cap_ratio, 3), 't0': round(getattr(self, '_t0_cache', 0.0), 1), 'rich': round(getattr(self, '_rich_cache', 0.0), 3), 'pool_scale': round(self.pool_scale, 3), 'nfault': self.bel.nfault, 'pc': [round(float(x), 3) for x in self.bel.pc], 'stress': self.stress_seen, 'anchor_cost': None if self.anchor_cost is None else [round(self.anchor_cost[0], 4), round(self.anchor_cost[1], 5)],
+                'llm': self.strategist.summary() if self.strategist is not None else None}
 
 
 def _erf(x):

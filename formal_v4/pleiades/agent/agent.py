@@ -17,7 +17,7 @@ from policy import Policy  # noqa: E402
 
 PROTO = 'participant-agent-protocol-v4'
 SAFE_PARAMS = {'req_moon': 0, 'req_urg': 0.0, 'opt_value': 0.0, 'season_rho': 0.0, 'fault_counts': [],
-               'fault_counts_stress': [], 'pool_max': 5000}
+               'fault_counts_stress': [], 'pool_max': 5000, 'llm': 0}
 
 
 def main():

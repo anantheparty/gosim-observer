@@ -1,0 +1,94 @@
+{
+ "schema_version": "v4-catalog-v2",
+ "seed": 34006,
+ "site": {
+  "latitude_deg": -33.9249,
+  "longitude_deg": 18.4241,
+  "name": "Cape Town, South Africa (virtual)",
+  "utc_offset_hours": 2.0
+ },
+ "footprint": {
+  "total_area_deg2": 8000.0,
+  "area_tolerance_fraction": 0.02,
+  "n_components": 3,
+  "component_area_weights": [
+   0.25,
+   0.414,
+   0.336
+  ],
+  "component_centers": [
+   [
+    296.6,
+    -33.8
+   ],
+   [
+    14.8,
+    -19.7
+   ],
+   [
+    89.4,
+    -19.6
+   ]
+  ],
+  "component_gap_deg": 2.0,
+  "pole_margin_deg": 5.0,
+  "vertices_per_component": 40,
+  "harmonic_amplitude_ranges": [
+   0.16,
+   0.1,
+   0.06
+  ]
+ },
+ "targets": {
+  "total_count": 50000,
+  "required_fraction": 0.05,
+  "class_fractions": {
+   "ELG": 0.34,
+   "BGS": 0.24,
+   "LRG": 0.2,
+   "QSO": 0.14,
+   "Star": 0.08
+  },
+  "clustered_fraction": 0.25,
+  "n_cluster_centers": 150,
+  "cluster_sigma_deg": 0.5,
+  "models": {
+   "ELG": {
+    "flux_median": 0.586,
+    "flux_log_sigma": 0.4,
+    "science_weight": 1.0
+   },
+   "BGS": {
+    "flux_median": 1.055,
+    "flux_log_sigma": 0.3,
+    "science_weight": 0.45
+   },
+   "LRG": {
+    "flux_median": 0.652,
+    "flux_log_sigma": 0.35,
+    "science_weight": 1.0
+   },
+   "QSO": {
+    "flux_median": 2.964,
+    "flux_log_sigma": 0.5,
+    "science_weight": 1.7
+   },
+   "Star": {
+    "flux_median": 4.559,
+    "flux_log_sigma": 0.25,
+    "science_weight": 0.3
+   }
+  }
+ },
+ "observability": {
+  "start_date": "2027-07-01",
+  "end_date": "2027-12-31",
+  "sun_altitude_limit_deg": -18.0,
+  "minimum_altitude_deg": 30.0,
+  "minimum_window_seconds": 900,
+  "max_position_attempts": 64
+ },
+ "output": {
+  "directory": "products"
+ }
+}
