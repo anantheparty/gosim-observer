@@ -268,6 +268,54 @@ W.update({
                                 'background_closure.reopen_probability_per_closed_slot': 0.05}, 4)),
 })
 
+# ---- E-H-like cards (organiser, 2026-10-06: E-H are close to real observing, with "a moderate number" of requests and a
+# more balanced design than A1-D1): base 6 x 100 plus 8-18 extra requests (mostly small or unrewarded, a few 200-400),
+# moderately more weather events, 2-4 faults; one with unannounced closures.
+W.update({
+    'VMA': (('A', 8401, 0), v5(8, [(2, 2, 300.0), (1, 2, 200.0)],
+                              {'weather_events.conditions.cloudy.count': 10, 'weather_events.conditions.smoggy.count': 6}, 3)),
+    'VMB': (('B', 8402, 0), v5(10, [(2, 2, 300.0), (2, 2, 200.0)],
+                              {'weather_events.conditions.cloudy.count': 10, 'weather_events.conditions.smoggy.count': 6,
+                               'weather_events.conditions.rainy.count': 4}, 3)),
+    'VMC': (('C', 8403, 0), v5(10, [(2, 2, 300.0), (1, 2, 400.0)],
+                              {'weather_events.conditions.cloudy.count': 10, 'weather_events.conditions.smoggy.count': 5,
+                               'weather_events.conditions.rainy.count': 6}, 3)),
+    'VMD': (('D', 8404, 0), v5(12, [(2, 2, 300.0), (2, 2, 250.0)],
+                              {'weather_events.conditions.cloudy.count': 14, 'weather_events.conditions.smoggy.count': 8,
+                               'weather_events.conditions.rainy.count': 4}, 3)),
+    'VMA2': (('A', 8411, 1), v5(14, [(2, 2, 250.0), (2, 3, 300.0)],
+                               {'weather_events.conditions.cloudy.count': 12, 'weather_events.conditions.smoggy.count': 8}, 4)),
+    'VMB2': (('B', 8412, 1), v5(12, [(3, 2, 300.0), (1, 2, 400.0)],
+                               {'weather_events.conditions.cloudy.count': 12, 'weather_events.conditions.smoggy.count': 6,
+                                'weather_events.conditions.rainy.count': 6}, 2)),
+    'VMC2': (('C', 8413, 0), v5(10, [(2, 2, 300.0), (2, 2, 200.0)],
+                               {'weather_events.conditions.cloudy.count': 10, 'weather_events.conditions.smoggy.count': 6,
+                                'weather_events.conditions.rainy.count': 6,
+                                'background_closure.start_probability_per_open_slot': 0.01,
+                                'background_closure.reopen_probability_per_closed_slot': 0.08}, 3)),
+    'VMD2': (('D', 8414, 2), v5(16, [(2, 2, 300.0), (2, 2, 350.0)],
+                               {'weather_events.conditions.cloudy.count': 16, 'weather_events.conditions.smoggy.count': 8,
+                                'weather_events.conditions.rainy.count': 6}, 4)),
+})
+
+# ---- seasonal-phase misfit (the policy's seasonal prior is the generator default: phase 210, amplitudes 0.15/0.07/0.12)
+W.update({
+    'SPD': (('D', 8504, 0), ev({'quality.seasonal_phase_day': 30})),
+    'SPD2': (('D', 8514, 0), ev({'quality.seasonal_phase_day': 120})),
+    'SPD3': (('D', 8524, 0), ev({'quality.seasonal_phase_day': 30, 'quality.seeing_arcsec.seasonal_amplitude': 0.3,
+                                 'quality.transparency.seasonal_amplitude': 0.14, 'quality.sky_quality.seasonal_amplitude': 0.24})),
+    'SPA': (('A', 8501, 0), ev({'quality.seasonal_phase_day': 30})),
+    'SPB': (('B', 8502, 0), ev({'quality.seasonal_phase_day': 30})),
+    'SPC': (('C', 8503, 0), ev({'quality.seasonal_phase_day': 30})),
+})
+
+# ---- D-like cards with 2-3 faults: the generator puts the later onsets (k*N/(c+1)) into the idle second half
+W.update({
+    'DF2': (('D', 8604, 0), ev({'instrument_fault.count': 2})),
+    'DF3': (('D', 8614, 0), ev({'instrument_fault.count': 3})),
+    'DF3b': (('D', 8624, 0), ev({'instrument_fault.count': 3})),
+})
+
 if __name__ == '__main__':
     import sys
     for n in (sys.argv[1:] or W):

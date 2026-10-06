@@ -112,6 +112,26 @@ DEFAULTS = {
                            #    and, when the rest of the season would not fit the hard real-time cap, use longer
                            #    exposures and closure waits (fewer engine steps and records)
     'eng_share': 0.7,      # share of the remaining real time the projected engine time may take before that
+    'quick_long': 0.0,     # >0: the pool screen also keeps targets that only the longest exposure can improve (their
+                           #    best came from a long exposure, so 1800 s at the current quality gains nothing);
+                           #    they rank below every target an 1800 s exposure improves
+    'quick_long_fill': 1.0,  # quick_long only while the recent exposures use fewer than this share of the fibres
+                           #    (idle fibres: the survey has run out of targets an ordinary exposure improves)
+    'quick_long_ps': 0.0,  # quick_long only while the pool is not shrunk for the time budget (pool_scale >= this):
+                           #    the extra pool members cost planning time that a budget-bound run cannot spare
+    'log_faults': 0,       # 1: read the handover log some cards put in observation requests (log_reader.py) and report
+                           #    an instrument fault the log announces (engineering works on the guide camera at a given
+                           #    time) or confirms (throughput fell, not the sky, call engineering) without waiting for
+                           #    the efficiency evidence -- an earthquake at the same time can hide the drop for days
+    'log_delay': 1200.0,   # report an announced fault this long after its announced start (s)
+    'log_retry': 5400.0,   # a false report on an announced fault is retried once this long after the start (s)
+    'log_false_max': 3,    # stop log-driven reports after this many of them were false (the log is not understood)
+    'log_occ_win': 108000.0,  # a confirmed fault without a time: skip it if a report was correct this recently (s)
+    'log_stale': 864000.0,    # forget a logged fault not reported this long after it was due (s)
+    'log_llm': 0,          # 1: log lines that look fault-related but match no parser pattern go to the language model
+                           #    (llm_strategist.LogAnalyst); its items count only if their quote occurs in the log and
+                           #    an announced time also occurs in that quote; one false report switches it off
+    'log_llm_calls': 40,   # at most this many log questions per run
     'ev_wide': 0.0,        # >0: prior sd floor of an announced all-sky event's log effect (the event multipliers are
                            #    card parameters), shrinking with the episodes seen; its mean is learned across episodes
     'sector_freeze': 0,    # 1: no fault evidence while an announced directional weather event is in force (its
@@ -989,6 +1009,31 @@ class Policy:
                 self.sprobe = sophon_probe.Probe(init, self)
             except Exception:
                 self.sprobe = None
+        # handover log: faults it announces or confirms
+        self.logr = None
+        self.log_q = []
+        self.log_false = 0
+        self.log_err = False
+        self.last_correct_t = -1e18
+        self.log_llm = None
+        self.log_llm_meta = {}
+        self.log_llm_off = False
+        if self.p['log_faults'] > 0:
+            try:
+                from log_reader import LogReader
+                self.logr = LogReader(float(site.get('utc_offset_hours', 0.0) or 0.0),
+                                      float(self.night_starts[0]) if len(self.night_starts) else None, self.survey_end)
+                self.log_off_s = float(site.get('utc_offset_hours', 0.0) or 0.0) * 3600.0
+                if self.p['log_llm'] > 0:
+                    from llm_strategist import LogAnalyst
+                    self.log_llm = LogAnalyst(max_calls=int(self.p['log_llm_calls']))
+                    if not self.log_llm.enabled:
+                        self.log_llm = None
+            except Exception:
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+                self.logr = None
+                self.log_llm = None
         self.init_cpu = time.process_time() - self.cpu0
 
     # ------------------------------------------------------------------ geometry
@@ -1361,10 +1406,15 @@ class Policy:
         kind = res.get('action')
         if kind == 'report':
             self.consec_reports += 1
+            lq = pend.get('log') if pend else None
+            if lq is not None:
+                self._log_outcome(lq, bool(res.get('correct')), now)
             if res.get('correct'):
                 self.correct_reports += 1
                 self.false_since_correct = 0
-                self.bel.fault_found(self.drop_t if self.drop_t else now, now)
+                self.last_correct_t = now
+                onset = lq['t'] if lq is not None and lq['t'] is not None else None
+                self.bel.fault_found(onset if onset else (self.drop_t if self.drop_t else now), now)
                 self.bel.report_result(True)
                 self.drop_t = None
                 if self.bel.multi:
@@ -1887,6 +1937,8 @@ class Policy:
                 self._weekly_due = True
             elif rt == 'state_resync':
                 self._apply_resync(m)
+            elif rt == 'observation_request' and self.logr is not None and len(m.get('reason') or '') > 30:
+                self._log_read(m)
             elif rt == 'bulletin' and m.get('initial'):
                 for n in m.get('notices', []) or []:
                     if n.get('event_kind') == 'terrain_obstruction' and n.get('direction'):
@@ -1930,6 +1982,12 @@ class Policy:
             if not len(nxt):
                 return {'action': 'finish'}
             return {'action': 'wait', 'until_utc': fmt_utc(float(nxt[0]))}
+        if self.log_llm is not None and not self.log_llm_off:
+            self._log_llm_poll()
+        if self.logr is not None and self.log_q:
+            act = self._log_report(now)
+            if act is not None:
+                return act
         left = self.night_ends[night] - now
         if left < self.tmin:
             nxt = self.night_starts[self.night_starts > now]
@@ -1978,6 +2036,130 @@ class Policy:
         if act is None:
             return {'action': 'wait', 'duration_seconds': int(min(max(self.tmin, 600), max(self.tmin, left)))}
         return act
+
+    # ------------------------------------------------------------------ handover log
+    def _log_read(self, m):
+        """Feed one request's log text to the reader; queue the faults it announces or confirms."""
+        try:
+            issued = parse_utc(m['issued_at_utc']) if m.get('issued_at_utc') else (self.prev_decide_t or 0.0)
+            evs = self.logr.read(m.get('reason') or '', issued)
+            if self.log_llm is not None and not self.log_llm_off and self.logr.last_unread and m.get('request_id') \
+                    and issued < self.survey_end - 86400.0:
+                loc = time.strftime('%Y-%m-%d %H:%M', time.gmtime(issued + self.log_off_s))
+                if self.log_llm.submit(m['request_id'], self.logr.last_unread[:8], loc):
+                    self.log_llm_meta[m['request_id']] = (issued, list(self.logr.last_unread[:8]))
+            for ev in evs:
+                t = ev['t']
+                if ev['kind'] == 'occurred' and t is not None:
+                    # a confirmed drop happens in the dark: an onset outside every night is a misread time
+                    j = int(np.searchsorted(self.night_starts, t + 3600.0, side='right')) - 1
+                    if j < 0 or t > self.night_ends[j] + 3600.0:
+                        t = None
+                due = t + self.p['log_delay'] if ev['kind'] == 'planned' else issued
+                self.log_q.append({'t': t, 'kind': ev['kind'], 'due': due, 'seen': issued, 'tries': 0,
+                                   'done': False, 'ev': ev})
+                _log({'event': 'log_fault', 'kind': ev['kind'], 'onset': fmt_utc(t) if t is not None else None,
+                      'seen': fmt_utc(issued)})
+        except Exception:
+            if not self.log_err:
+                self.log_err = True
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+
+    def _log_llm_poll(self):
+        """Fault items the language model found in log lines the parser left unread, checked against the text."""
+        try:
+            from log_reader import quote_in, normalise, TIME, DATE
+            for key, items in self.log_llm.results():
+                meta = self.log_llm_meta.pop(key, None)
+                if meta is None or self.log_llm_off:
+                    continue
+                issued, lines = meta
+                for it in items:
+                    kind = it.get('kind')
+                    if kind not in ('planned', 'occurred') or not quote_in(it.get('quote'), lines):
+                        continue
+                    t = None
+                    if kind == 'planned':
+                        qn = normalise(it['quote'])
+                        tm = TIME.search(normalise(it.get('time') or ''))
+                        if not tm or (int(tm.group(1)), int(tm.group(2))) not in {
+                                (int(a), int(b)) for a, b in TIME.findall(qn)}:
+                            continue        # the announced time must be written in the quoted words
+                        dm = DATE.search(normalise(it.get('date') or ''))
+                        qd = {(int(a), int(b)) for a, b in DATE.findall(qn)}
+                        if qd and (not dm or (int(dm.group(1)), int(dm.group(2))) not in qd):
+                            continue
+                        t = self.logr.onset_from_parts('planned', '' if not qd else it.get('date'), it.get('time'), issued,
+                                                       it['quote'])
+                        if t is None or not (issued - 6 * 3600 <= t <= issued + 20 * 86400) or any(
+                                q['kind'] == 'planned' and q['t'] is not None and abs(q['t'] - t) < 7200
+                                for q in self.log_q):
+                            continue
+                    due = t + self.p['log_delay'] if kind == 'planned' else issued
+                    ev = {'t': t, 'kind': kind, 'src': str(it.get('quote'))[:120], 'seen': issued}
+                    self.log_q.append({'t': t, 'kind': kind, 'due': due, 'seen': issued, 'tries': 0, 'done': False,
+                                       'ev': ev, 'llm': True})
+                    _log({'event': 'log_fault', 'kind': kind, 'llm': True,
+                          'onset': fmt_utc(t) if t is not None else None, 'seen': fmt_utc(issued)})
+        except Exception:
+            if not self.log_err:
+                self.log_err = True
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+
+    def _log_report(self, now):
+        """A fault the log announced (now past its start) or confirmed, not yet repaired by a correct report."""
+        try:
+            if self.log_false >= int(self.p['log_false_max']) or now >= self.survey_end - 60:
+                return None
+            if self.consec_reports >= min(3, max(1, self.max_consec - 1)):
+                return None
+            for q in self.log_q:
+                if q['done'] or now < q['due']:
+                    continue
+                if q['ev'].get('void'):
+                    q['done'] = True
+                    continue
+                ref = q['t'] - 2700.0 if q['t'] is not None else q['seen'] - self.p['log_occ_win']
+                if self.last_correct_t >= ref:
+                    q['done'] = True        # repaired since it began
+                    continue
+                if now - q['due'] > self.p['log_stale']:
+                    q['done'] = True
+                    continue
+                q['tries'] += 1
+                q['done'] = True            # a false planned report re-arms it once (_log_outcome)
+                self.reports += 1
+                if self.false_since_correct >= self.free_reports:
+                    self.paid_reports += 1
+                self.last_report_t = now
+                self.pending = {'kind': 'report', 'log': q}
+                _log({'event': 'report', 'why': 'log', 't': fmt_utc(now), 'kind': q['kind'],
+                      'onset': fmt_utc(q['t']) if q['t'] is not None else None, 'pf': round(self.bel.p_fault(), 3)})
+                return {'action': 'report'}
+        except Exception:
+            if not self.log_err:
+                self.log_err = True
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+        return None
+
+    def _log_outcome(self, q, correct, now):
+        if correct:
+            return
+        self.log_false += 1
+        if q.get('llm'):
+            # the model's reading was wrong once: rely on the parser alone from now on
+            self.log_llm_off = True
+            for o in self.log_q:
+                if o.get('llm'):
+                    o['done'] = True
+            return
+        if q['kind'] == 'planned' and q['tries'] < 2 and q['t'] is not None:
+            # the work may have started a little late: try once more
+            q['done'] = False
+            q['due'] = max(now + 1800.0, q['t'] + self.p['log_retry'])
 
     def _track_events(self, notices, now):
         """Onset window and end of each announced weather event (kind, direction) seen in the bulletins."""
@@ -2453,6 +2635,13 @@ class Policy:
         hnow_air = self._hfac(alt_now)
         kk = self.flux[pool] * Zp * hnow_air / (self.q0 * self.f0t0)
         quick = self.w[pool] * self.mult_max * np.minimum(1.0, kk * 1800) - self.best[pool]
+        if (self.p['quick_long'] > 0 and float(tg[-1]) > 1800 and self.pool_scale >= self.p['quick_long_ps']
+                and self.fill_ema < max(self.p['quick_long_fill'] * self.nfib, 1.5)):
+            if not getattr(self, '_ql_logged', False):
+                self._ql_logged = True
+                _log({'event': 'quick_long_on', 't': fmt_utc(now), 'fill': round(self.fill_ema, 2)})
+            qlong = self.w[pool] * self.mult_max * np.minimum(1.0, kk * float(tg[-1]) * self.p['quick_long']) - self.best[pool]
+            quick = np.where(quick > 1e-9, quick, 1e-3 * np.maximum(qlong, 0.0))
         quick = np.maximum(quick, 0) + incomplete_req[pool] * self.req_pen * np.minimum(1.0, kk * 3600 / self.req_thr) ** 4 + reqbonus_active[pool]
         if ub_all is not None:
             quick = quick + ub_all[pool] * np.minimum(1.0, kk * 3600 / self.unif_thr) ** 4

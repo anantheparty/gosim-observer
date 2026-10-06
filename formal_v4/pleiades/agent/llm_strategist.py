@@ -311,3 +311,93 @@ class Strategist:
             brief = dict(brief, mission_profile=self.profile, current_strategy=self.strategy)
         return json.dumps({'task': task, 'strategies': STRATEGY_TEXT, 'input': brief, 'reply_format': reply},
                           separators=(',', ':'), default=str)
+
+
+LOG_SYSTEM_PROMPT = (
+    'You read the free-text handover log of an observatory night shift. Lines may be Chinese, Japanese or English; '
+    'English lines may be Caesar-shifted by the day of the month; times may be hummed in solfege (do=1 re=2 mi=3 '
+    'fa=4 sol=5 la=6 si=7, 高音do=8, 高音re=9, 休止=0, so "re : fa sol" is 2:45) or written in Chinese numerals. '
+    'Find ONLY instrument-fault items: (a) "planned": engineering work announced for a given local date and time, '
+    'after which the instrument efficiency or throughput will drop (not because of the sky); (b) "occurred": a '
+    'confirmed sudden throughput drop that is neither weather nor an earthquake, together with a request to call '
+    'engineering or file a ticket. Ignore rumours, other observatories, conditional guesses ("if it ever drops, it is '
+    'probably ..."), weather, terrain, earthquakes, and scheduled full stops or shutdowns (those are closures). '
+    'Most logs contain no such item: then reply {"faults": []}. Reply with JSON only.')
+
+
+class LogAnalyst:
+    """Language-model reader for handover-log lines the deterministic parser (log_reader.py) did not recognise:
+    asynchronous, at most max_calls questions, answers checked by the caller (quote must occur in the log)."""
+
+    def __init__(self, max_calls=40, attempt_timeout=30.0, question_deadline=60.0):
+        self.client = ChatClient()
+        self.enabled = (bool(self.client.key) and os.environ.get('OBSERVER_MODEL_DISABLED') != '1'
+                        and os.environ.get('OBS_LLM_MOCK') != '1')
+        self.max_calls = int(max_calls)
+        self.attempt_timeout, self.question_deadline = float(attempt_timeout), float(question_deadline)
+        self.calls = self.ok = self.failed = 0
+        self._cv = threading.Condition()
+        self._q = []
+        self._out = []
+        self._thread = None
+        self._dead = False
+
+    def submit(self, key, lines, issued_local):
+        if not self.enabled or self._dead:
+            return False
+        with self._cv:
+            if self.calls + len(self._q) >= self.max_calls:
+                return False
+            self._q.append((key, lines, issued_local))
+            if self._thread is None:
+                self._thread = threading.Thread(target=self._run, name='llm-log', daemon=True)
+                self._thread.start()
+            self._cv.notify()
+        return True
+
+    def results(self):
+        with self._cv:
+            out, self._out = self._out, []
+        return out
+
+    def _run(self):
+        while True:
+            with self._cv:
+                while not self._q:
+                    self._cv.wait()
+                key, lines, issued_local = self._q.pop(0)
+            try:
+                self._ask(key, lines, issued_local)
+            except Exception as e:
+                _emit({'event': 'llm', 'stage': 'log', 'ok': False, 'error': type(e).__name__})
+
+    def _ask(self, key, lines, issued_local):
+        if self._dead or self.calls >= self.max_calls:
+            return
+        self.calls += 1
+        t0 = time.monotonic()
+        user = json.dumps({'task': 'Extract the instrument-fault items from these handover-log lines.',
+                           'log_written_local_time': issued_local, 'log_lines': lines,
+                           'reply_format': {'faults': [{'kind': 'planned | occurred',
+                                                        'local_date': 'M/D, or empty if not given',
+                                                        'local_time': 'H:MM (24 h, local), or empty if not given',
+                                                        'quote': 'the words of the log line that state it (copy)'}]}},
+                          ensure_ascii=False, separators=(',', ':'))
+        answer, info = self.client.ask(LOG_SYSTEM_PROMPT, user, self.attempt_timeout, t0 + self.question_deadline)
+        if info.get('fatal'):
+            self._dead = True
+        dt = round(time.monotonic() - t0, 2)
+        items = answer.get('faults') if isinstance(answer, dict) else None
+        if not isinstance(items, list):
+            self.failed += 1
+            _emit({'event': 'llm', 'stage': 'log', 'ok': False, 'latency': dt, 'error': info.get('error', 'bad answer')})
+            return
+        self.ok += 1
+        out = []
+        for f in items[:6]:
+            if isinstance(f, dict):
+                out.append({'kind': str(f.get('kind', '')).strip().lower(), 'date': str(f.get('local_date') or '')[:12],
+                            'time': str(f.get('local_time') or '')[:12], 'quote': str(f.get('quote') or '')[:80]})
+        with self._cv:
+            self._out.append((key, out))
+        _emit({'event': 'llm', 'stage': 'log', 'ok': True, 'latency': dt, 'n': len(out), 'tokens': info.get('usage')})
