@@ -95,6 +95,34 @@ DEFAULTS = {
                            #    expires within days, so there is no better later geometry to wait for)
     'off_wide': 0.0,       # >0: once pointing misses appear, also fit offsets up to max(0.5 deg, off_wide x cell pitch)
                            #    on a coarse grid and move the fine grid (+-0.16 deg) to its best fit
+    'rq_commit': 0.0,      # >0: a request with completed targets stays pursued while its remaining exposures fit into
+                           #    this fraction of the dark time left before its deadline (default 0.5 for all)
+    'rq_big': 0,           # 1: the fraction grows to 0.9 when the reward per needed hour exceeds 8x the science
+                           #    value rate (all-or-nothing rewards that dwarf the science of the same time)
+    'terr_hi': 0,          # 1: terrain may reach any altitude (a card parameter; reference 35-50 deg): zeros on an
+                           #    open site outside announced closing events teach the terrain at any altitude, the
+                           #    height prior is learned per announced direction, and a closure is only inferred
+                           #    when a probe away from the announced terrain also scores zero
+    'wx_adapt': 0.0,       # >0: weather process noise x clip(median normalised innovation / wx_adapt, 1, 8), learned
+                           #    online (the weather variability is a card parameter); 0: fixed generator values
+    'rq_urg_intra': 0.0,   # >0: request bonus x clip((1.5 h / hours the target stays observable before the
+                           #    request deadline tonight) ** this, 1, 3): the members about to set go first
+    'eng_aware': 0,        # 1: model the engine's time between turns (it grows with requests issued x observations
+                           #    recorded, the engine re-checks every request against every observation each step)
+                           #    and, when the rest of the season would not fit the hard real-time cap, use longer
+                           #    exposures and closure waits (fewer engine steps and records)
+    'eng_share': 0.7,      # share of the remaining real time the projected engine time may take before that
+    'ev_wide': 0.0,        # >0: prior sd floor of an announced all-sky event's log effect (the event multipliers are
+                           #    card parameters), shrinking with the episodes seen; its mean is learned across episodes
+    'sector_freeze': 0,    # 1: no fault evidence while an announced directional weather event is in force (its
+                           #    width and height are card parameters, so 'unaffected' targets may be affected)
+    'quake_tau': 0,        # 1: learn the earthquake recovery time (decay_nights, a hidden card parameter; reference 4)
+                           #    from the efficiency on the nights after each shock instead of assuming 4 nights
+    'ev_excuse': 0,        # 1: no fault report while an announced weather event that began with the efficiency drop
+                           #    is still active (event effects are card parameters; a fault outlasts the event)
+    'off_search': 0,       # 1: when nearly every assigned target misses its fibre (a pointing offset beyond the
+                           #    fitted range), test many offset hypotheses per short exposure over the full legal
+                           #    range (|offset| < 0.1 rad), one hypothesis per group of fibres
     'unif_bonus': 0.0,     # >0: add the RA-band uniformity term to target values (scale x marginal penalty reduction)
     'rep_cost_scale': 0,   # 1: the cap on penalised fault reports scales with 150 / |false_penalty|, their evidence
                            #    streak with |false_penalty| / 150 (at most x4)
@@ -251,6 +279,9 @@ EV_ALIAS = {'cloudy': 'overcast', 'overcast': 'overcast', 'smoggy': 'haze', 'haz
 EV_PRIOR = {'overcast': (-0.92, 0.22), 'haze': (-0.64, 0.15), 'cold_snap': (-0.085, 0.03)}
 MU_GRID = np.array([1.0, 0.30, 0.36, 0.43, 0.51, 0.61, 0.73])
 D0_GRID = np.exp(np.linspace(math.log(0.17), math.log(0.95), 17))
+D0_GRID_WIDE = np.concatenate((D0_GRID, [0.97, 0.985, 0.995]))   # quake_tau: shocks that also hit the sky
+TAU_GRID = np.array([1.5, 2.0, 3.0, 4.0, 5.5, 7.5, 10.0, 14.0, 20.0])
+TAU_LW0 = -0.5 * (np.log(TAU_GRID / 4.0) / 0.6) ** 2      # prior: the reference 4 nights, x/1.8
 CM_NODES = np.array([-math.sqrt(3.0), 0.0, math.sqrt(3.0)])     # 3-point Gauss-Hermite
 CM_LW = np.log(np.array([1.0 / 6.0, 2.0 / 3.0, 1.0 / 6.0]))
 
@@ -307,6 +338,16 @@ class Belief:
         self.multi = False
         self._build_prior(0)
         self.quakes = []          # dicts: t, night, lw (D0_GRID log-weights)
+        self.tau_learn = False
+        self.tau_lw = TAU_LW0.copy()
+        self.d0_grid = D0_GRID
+        self.ev_sd_floor = 0.0         # >0: ev_wide
+        self.ev_sum = {k: 0.0 for k in EV_KEYS}
+        self.ev_cnt = {k: 0 for k in EV_KEYS}
+        self.nu = deque(maxlen=300)    # normalised innovations of the most probable branch
+        self.nu_ref = 0.0              # >0: adapt the process noise to their median (wx_adapt)
+        self.noise_f = 1.0
+        self.sn2_0, self.ss2_0 = self.sn2, self.ss2
         eps = 0.04
         self.l_in = math.log(1.0 - eps) - math.log(0.012 * math.sqrt(2.0 * math.pi))
         self.l_out = math.log(eps) - math.log(4.0)
@@ -412,16 +453,37 @@ class Belief:
             k = math.floor(max(0.0, t - self.night_start[night]) / self.slot) + 1
             P[:, 2, 2] = self.ss2 * (1.0 - PHI_S ** (2 * k))
 
+    def ev_prior(self, key):
+        """(mean, sd) of an announced all-sky event's log effect: the generator reference, or (ev_wide) a wide prior
+        whose mean is pooled with the effects learned in earlier episodes."""
+        m0, s0 = EV_PRIOR[key]
+        if self.ev_sd_floor <= 0:
+            return m0, s0
+        n = self.ev_cnt[key]
+        m = (m0 + self.ev_sum[key]) / (1.0 + n)
+        # episodes differ in severity: a learned effect far from the reference keeps a proportionally wide prior
+        return m, max(s0, self.ev_sd_floor / math.sqrt(1.0 + n), 0.3 * abs(m - m0))
+
     def _set_events(self, act):
         for j, key in enumerate(EV_KEYS):
             c = 3 + j
             on = act[j] > 0
             if on and not self.ev_on[j]:
-                self.x[:, c] = EV_PRIOR[key][0]
+                m0, s0 = self.ev_prior(key)
+                self.x[:, c] = m0
                 self.P[:, c, :] = 0.0
                 self.P[:, :, c] = 0.0
-                self.P[:, c, c] = EV_PRIOR[key][1] ** 2
+                self.P[:, c, c] = s0 ** 2
+                self.ev_sd0 = getattr(self, 'ev_sd0', {})
+                self.ev_sd0[key] = s0
             elif not on and self.ev_on[j]:
+                if self.ev_sd_floor > 0:
+                    k = int(np.argmax(self.w))
+                    s0 = getattr(self, 'ev_sd0', {}).get(key, EV_PRIOR[key][1])
+                    if self.P[k, c, c] < 0.25 * s0 * s0:
+                        # the episode's effect was measured: pool it into the next episode's prior mean
+                        self.ev_sum[key] += float(self.x[k, c])
+                        self.ev_cnt[key] += 1
                 self.x[:, c] = 0.0
                 self.P[:, c, :] = 0.0
                 self.P[:, :, c] = 0.0
@@ -463,29 +525,37 @@ class Belief:
 
     # ---------------------------------------------------------------- quakes
     def add_quake(self, t, night):
-        lw = np.zeros(len(D0_GRID))
+        lw = np.zeros(len(self.d0_grid))
         self.quakes.append({'t': t, 'night': night, 'lw': lw})
 
     def _d0_hat(self, q):
         w = np.exp(q['lw'] - q['lw'].max())
-        return float(np.sum(w * D0_GRID) / w.sum())
+        return float(np.sum(w * self.d0_grid) / w.sum())
 
-    def quake_factor(self, start, T, night, override=None):
+    def tau_hat(self):
+        if not self.tau_learn:
+            return 4.0
+        w = np.exp(self.tau_lw - self.tau_lw.max())
+        return float(np.exp(np.sum(w * np.log(TAU_GRID)) / w.sum()))
+
+    def quake_factor(self, start, T, night, override=None, tau=None):
         """Exposure-average efficiency factor of all known quakes; override=(quake, d0) for one quake."""
         f = 1.0
         end = start + T
+        tau = self.tau_hat() if tau is None else tau
         for q in self.quakes:
             if end <= q['t'] or night < q['night']:
                 continue
             d0 = override[1] if override is not None and override[0] is q else self._d0_hat(q)
             frac = min(1.0, (end - max(start, q['t'])) / max(1.0, T))
-            f *= 1.0 - frac * d0 * math.exp(-(night - q['night']) / 4.0)
-        return max(0.03, f)
+            f *= 1.0 - frac * d0 * math.exp(-(night - q['night']) / tau)
+        return max(0.003 if self.tau_learn else 0.03, f)
 
     def learning_quake(self, night):
-        """Fault evidence is frozen while a fresh shock's degradation is still being learned."""
+        """Fault evidence is frozen while a fresh shock's degradation is still being learned (with tau learning: the
+        shock night and the whole next night, which first shows the recovery rate)."""
         for q in self.quakes:
-            if night == q['night'] or (night == q['night'] + 1 and q.get('n', 0) < 3):
+            if night == q['night'] or (night == q['night'] + 1 and (q.get('n', 0) < 3 or self.tau_learn)):
                 return True
         return False
 
@@ -557,7 +627,7 @@ class Belief:
         for q in self.quakes:
             if 0 <= night - q['night'] <= 1 and start + T > q['t']:
                 le = np.array([self.leta + self.lmu[kmap] + math.log(self.quake_factor(start, T, night, (q, d)))
-                               for d in D0_GRID])
+                               for d in self.d0_grid])
                 ll = self._loglik(X, le, lk0, lH, ly, P, lom, lwo)
                 lp = -0.5 * (X - mx[kmap]) ** 2 / vx[kmap]
                 lz = ll + lp[None, :]
@@ -565,6 +635,16 @@ class Belief:
                 q['lw'] = q['lw'] + (mm[:, 0] + np.log(np.exp(lz - mm).sum(axis=1)))
                 q['lw'] -= q['lw'].max()
                 q['n'] = q.get('n', 0) + 1
+        if self.tau_learn and any(1 <= night - q['night'] <= 30 and q.get('n', 0) >= 3 for q in self.quakes):
+            # recovery time: the shocks' learned strengths fix the first nights, the following nights the decay
+            le = np.array([self.leta + self.lmu[kmap] + math.log(self.quake_factor(start, T, night, tau=tc))
+                           for tc in TAU_GRID])
+            ll = self._loglik(X, le, lk0, lH, ly, P, lom, lwo)
+            lp = -0.5 * (X - mx[kmap]) ** 2 / vx[kmap]
+            lz = ll + lp[None, :]
+            mm = lz.max(axis=1, keepdims=True)
+            self.tau_lw = self.tau_lw + 0.3 * (mm[:, 0] + np.log(np.exp(lz - mm).sum(axis=1)))
+            self.tau_lw -= self.tau_lw.max()
         qf = self.quake_factor(start, T, night)
         leta = self.leta + math.log(qf) + self.lmu
         ll = self._loglik(X, leta, lk0, lH, ly, P, lom, lwo)              # K,G
@@ -584,6 +664,19 @@ class Belief:
             self.n_bad = getattr(self, 'n_bad', 0) + 1
             return {'mx': [round(float(v), 3) for v in mx[:1]], 'post': round(float(pmean[0]), 3),
                     'pf': round(self.p_fault(), 4), 'kmap': self.kmap(), 'qf': round(qf, 3), 'bad': round(ofrac, 2)}
+        kb0 = int(np.argmax(self.w))
+        if pvar[kb0] < vx[kb0] * 0.995:
+            R0 = 1.0 / (1.0 / pvar[kb0] - 1.0 / vx[kb0])
+            z0 = R0 * (pmean[kb0] / pvar[kb0] - mx[kb0] / vx[kb0])
+            self.nu.append(min(25.0, (z0 - mx[kb0]) ** 2 / (vx[kb0] + R0)))
+            if len(self.nu) >= 100 and self.n_upd % 25 == 0:
+                med = float(np.median(self.nu))
+                if self.nu_ref > 0:
+                    fn = float(np.clip(med / self.nu_ref, 1.0, 8.0))
+                    self.noise_f = 0.7 * self.noise_f + 0.3 * fn
+                    self.sn2, self.ss2 = self.sn2_0 * self.noise_f, self.ss2_0 * self.noise_f
+                if os.environ.get('OBS2_DEBUG_NU') or (self.n_upd % 400 == 0):
+                    _log({'event': 'nu', 'med': round(med, 3), 'f': round(self.noise_f, 2), 'n': self.n_upd})
         for k in range(self.K):
             if pvar[k] >= vx[k] * 0.995:
                 continue
@@ -624,13 +717,15 @@ class Belief:
         var = P[0, 0, 0] + P[0, 1, 1] + P[0, 2, 2] + 2 * (P[0, 0, 1] + P[0, 0, 2] + P[0, 1, 2])
         for j, key in enumerate(EV_KEYS):
             if act[j] > 0:
+                a = act[j] if self.ev_sd_floor > 0 else 1.0     # ev_wide: overlapping events of one kind compound
                 if self.ev_on[j]:
                     c = 3 + j
-                    mean += x[0, c]
-                    var += P[0, c, c] + 2 * (P[0, c, 0] + P[0, c, 1] + P[0, c, 2])
+                    mean += a * x[0, c]
+                    var += a * a * P[0, c, c] + 2 * a * (P[0, c, 0] + P[0, c, 1] + P[0, c, 2])
                 else:
-                    mean += EV_PRIOR[key][0]
-                    var += EV_PRIOR[key][1] ** 2
+                    m0, s0 = self.ev_prior(key)
+                    mean += a * m0
+                    var += (a * s0) ** 2
         return float(mean), float(max(var, 1e-6))
 
     def leta_plan(self, t, night):
@@ -777,7 +872,7 @@ class Policy:
         self.req_done_ids = set()
         self.terrain_dirs = set()
         self.blocked = []                     # (time, alt, az, kind)
-        self.last_closed_until = -1.0
+        self.last_closed_until = -1e18          # (not -1: seasons before 1970 have negative timestamps)
         # weather / instrument belief
         self.eta_nom = 0.95
         self.mseason = np.array([self._season_mean(a) for a, _ in self.nights] + [0.0])
@@ -785,6 +880,11 @@ class Policy:
                           self.band_bright, self.mseason, eta_nom=self.eta_nom, infl=self.p['wx_infl'],
                           p_window=self.p['fault_window_mass'])
         self.bel.absorb_false = bool(self.p['false_absorb'])
+        self.bel.tau_learn = bool(self.p['quake_tau'])
+        if self.bel.tau_learn:
+            self.bel.d0_grid = D0_GRID_WIDE
+        self.bel.nu_ref = float(self.p['wx_adapt'])
+        self.bel.ev_sd_floor = float(self.p['ev_wide'])
         self.upd_at_false = -10 ** 9
         self.stress_seen = False
         if self.p['fault_counts']:
@@ -792,10 +892,14 @@ class Policy:
         self.logZ_mean = float(self.mseason[0])
         self.probe = 0                        # >0: short probe exposures after a closure
         self.zero_pending = []
+        self.thmax = {d: 50.0 for d in DIR_AZ}  # learned terrain top per announced direction (prior 50 deg)
+        self.probe_fail = 0
         self.pf_prev = 0.0
         self.bul_t = 0.0
         self.quake_notice = False
         self.drop_t = None
+        self.ev_onset = {}                      # (kind, direction) -> [onset_lo, onset_hi, end or None]
+        self.prev_decide_t = None
         # reports
         self.false_since_correct = 0
         self.correct_reports = 0
@@ -816,6 +920,9 @@ class Policy:
         self.off_hist = deque(maxlen=2000)      # (cmd_alt, cmd_az, tv, fib, hit) of recent calibrations
         self.offw_alt = self.offw_az = self.offw_ll = None
         self.offw_n = 0
+        self.hitrec = deque(maxlen=12)          # (assigned, hit) of recent observes
+        self.off_big = False                    # the wide grid spans the full legal offset range
+        self.searches = 0
         # timing
         self.avg_T = 900.0
         self.fill_ema = float(self.nfib) * 0.5
@@ -828,6 +935,23 @@ class Policy:
         self.observes = 0
         self.dec_cpu = 0.0
         self.turn_wall = 0.0      # real seconds spent inside decide()
+        # engine-time model: steps x a + k x (requests checked x ledger records), fitted from the real time
+        # between our turns; S holds the forgetting sums [n2, nX, X2, n dt, X dt] (seeded with a weak prior)
+        self.rq_seen = set()
+        self.n_entries = 0
+        self._eng = {'wr': None, 'tau': 0.0, 'chunks': 0, 'n': 0,
+                     'S': np.array([40.0, 4.0e7, 8.0e13, 40.0 * 0.03 + 4.0e7 * 1.5e-7, 4.0e7 * 0.03 + 8.0e13 * 1.5e-7])}
+        self._eng_obsT = deque(maxlen=400)
+        self._eng_wait = deque(maxlen=400)
+        self._eng_tobs, self._eng_twait = 0.0, 0.0
+        self._eng_hits = 12.0
+        self._eng_level = 0
+        self.eng_floor, self.eng_wait_k = 0.0, 1
+        self._eng_left = None
+        self._eng_err = False
+        self._probe_now = False
+        self._eng_hist = []          # (dark fraction elapsed, records, observes) every 25 decisions
+        self._eng_nwait = 0          # in-night wait steps so far
         self._charge_ratio = 1.0  # platform charge / own cost estimate of recent turns
         self._last_el, self._last_pred = None, 0.0
         self._wall0 = None        # (wall remaining, dark time left, turn_wall) at the first planning decision
@@ -935,6 +1059,18 @@ class Policy:
         hau = np.where(tr < self.min_alt + 0.5, 0.0, hau)
         ha0 = (lst_deg(a, self.lon) - ra + 180.0) % 360.0 - 180.0
         span = SID * max(0.0, b - a) / 86400.0
+        ov = np.maximum(0.0, np.minimum(ha0 + span, hau) - np.maximum(ha0, -hau))
+        ov += np.maximum(0.0, np.minimum(ha0 + span, 360.0 + hau) - np.maximum(ha0, 360.0 - hau))
+        return ov * 24.0 / SID
+
+    def _vis_hours(self, a, b, idx):
+        """Hours in [a, b_i] (per-target end times) that each target spends above the altitude limit."""
+        sd, cd, ra, tr = self.sdec[idx], self.cdec[idx], self.ra[idx], self.transit_alt[idx]
+        c = (np.sin((self.min_alt + 1.0) * DEG) - self.sin_lat * sd) / np.maximum(self.cos_lat * cd, 1e-9)
+        hau = np.where(c <= -1.0, 180.0, np.where(c >= 1.0, 0.0, np.arccos(np.clip(c, -1.0, 1.0)) / DEG))
+        hau = np.where(tr < self.min_alt + 1.0, 0.0, hau)
+        ha0 = (lst_deg(a, self.lon) - ra + 180.0) % 360.0 - 180.0
+        span = SID * np.maximum(0.0, b - a) / 86400.0
         ov = np.maximum(0.0, np.minimum(ha0 + span, hau) - np.maximum(ha0, -hau))
         ov += np.maximum(0.0, np.minimum(ha0 + span, 360.0 + hau) - np.maximum(ha0, 360.0 - hau))
         return ov * 24.0 / SID
@@ -1099,12 +1235,10 @@ class Policy:
         if not self.terrain_dirs:
             return np.zeros(len(alt))
         azb = np.floor(az).astype(int) % 360
-        pt = np.zeros(len(alt))
+        pb = np.zeros(len(alt))
         for d in self.terrain_dirs:
             if d in DIR_AZ:
-                pt = np.maximum(pt, self._dir_prob(az, d, self._tab_terrain))
-        ph = np.clip((50.0 - alt) / 15.0, 0.0, 1.0)
-        pb = pt * ph
+                pb = np.maximum(pb, self._dir_prob(az, d, self._tab_terrain) * np.clip((self.thmax[d] - alt) / 15.0, 0.0, 1.0))
         pb = np.where(alt >= self.tclear[azb] - 0.5, 0.0, pb)
         pb = np.where(alt <= self.tblock[azb] + 0.5, 1.0, pb)
         return pb
@@ -1115,11 +1249,11 @@ class Policy:
         if not self.terrain_dirs:
             return np.zeros_like(alts)
         azb = np.floor(az).astype(int) % 360
-        pt = np.zeros(len(az))
+        pb = np.zeros_like(alts)
         for d in self.terrain_dirs:
             if d in DIR_AZ:
-                pt = np.maximum(pt, self._dir_prob(az, d, self._tab_terrain))
-        pb = pt[None, :] * np.clip((50.0 - alts) / 15.0, 0.0, 1.0)
+                pb = np.maximum(pb, self._dir_prob(az, d, self._tab_terrain)[None, :]
+                                * np.clip((self.thmax[d] - alts) / 15.0, 0.0, 1.0))
         pb = np.where(alts >= self.tclear[azb][None, :] - 0.5, 0.0, pb)
         pb = np.where(alts <= self.tblock[azb][None, :] + 0.5, 1.0, pb)
         return pb
@@ -1154,8 +1288,9 @@ class Policy:
         self.blocked = keep[-200:]
         return f
 
-    def _learn_terrain(self, alt, az, scored):
-        """Update the static terrain map from one hit: scored>0 -> clear at (az, >=alt); 0 -> blocked at (az, <=alt)."""
+    def _learn_terrain(self, alt, az, scored, force=False):
+        """Update the static terrain map from one hit: scored>0 -> clear at (az, >=alt); 0 -> blocked at (az, <=alt).
+        force: a zero that only terrain explains (open site, no announced closing event there), at any altitude."""
         if not hasattr(self, 'tclear'):
             return
         b = int(math.floor(az)) % 360
@@ -1164,8 +1299,39 @@ class Policy:
                 j = (b + k) % 360
                 self.tclear[j] = min(self.tclear[j], alt)
         else:
-            if alt < 55.0:
+            if alt < 55.0 or force:
                 self.tblock[b] = max(self.tblock[b], alt)
+            if force:
+                for d in self.terrain_dirs:
+                    if d in DIR_AZ and float(self._dir_prob(np.array([az]), d, self._tab_terrain)[0]) >= 0.5:
+                        self.thmax[d] = max(self.thmax[d], min(89.0, alt + 2.0))
+
+    def _terr_away(self, alt, az):
+        """(alt, az) lies outside the announced terrain directions or above their learned height."""
+        self._init_tables()
+        for d in self.terrain_dirs:
+            if d in DIR_AZ and float(self._dir_prob(np.array([az]), d, self._tab_terrain)[0]) >= 0.3 \
+                    and alt < self.thmax[d] + 3.0:
+                return False
+        return True
+
+    def _terr_away_vec(self, alts, azs):
+        self._init_tables()
+        ok = np.ones(len(alts), dtype=bool)
+        for d in self.terrain_dirs:
+            if d in DIR_AZ:
+                ok &= ~((self._dir_prob(azs, d, self._tab_terrain) >= 0.3) & (alts < self.thmax[d] + 3.0))
+        return ok
+
+    @staticmethod
+    def _zero_event(az, notices):
+        """An announced event that zeroes targets (rocket launch, rain, storm) may cover azimuth az."""
+        for n in notices:
+            if n.get('event_kind') in ('rocket_launch', 'rocket', 'rain', 'storm', 'rainy', 'tornado'):
+                d = n.get('direction')
+                if d not in DIR_AZ or abs((az - DIR_AZ[d] + 180.0) % 360.0 - 180.0) <= 100.0:
+                    return True
+        return False
 
     # ------------------------------------------------------------------ messages/results
     def _apply_resync(self, msg):
@@ -1252,23 +1418,35 @@ class Policy:
         alt_s, az_s = pend['alt'], pend['az']
         alt_e = pend.get('alt_end', alt_s)
         amap = {i: (max(alt_s[k], alt_e[k]), az_s[k]) for k, i in enumerate(assigned)}
+        th = self.p['terr_hi'] > 0
+        notes = list(pend.get('notices', []) or []) + list((snap.get('latest_bulletin') or {}).get('notices', []) or [])
+        s0, s1 = int(start // self.slot), int((start + T - 1e-6) // self.slot)
         if np.all(zero):
             if len(idx) >= 1:
                 high = all(amap.get(int(i), (90, 0))[0] >= 55.0 for i in idx)
-                if self.probe > 0 and high:
-                    # a high-altitude probe also failed: the site is closed
+                away = (not th) or self.probe_fail >= 2 or all(self._terr_away(*amap[int(i)]) for i in idx if int(i) in amap)
+                if self.probe > 0 and high and away:
+                    # a high-altitude probe (away from the announced terrain) also failed: the site is closed
                     self.last_closed_until = (math.floor(now / self.slot) + 1) * self.slot
                     self.zero_pending = []
                     self.probe = 2
+                    self.probe_fail = 0
                 else:
-                    self.zero_pending = [amap[int(i)] for i in idx if int(i) in amap]
+                    if self.probe > 0:
+                        self.probe_fail += 1
+                    new = [(amap[int(i)][0], amap[int(i)][1], s0, s1, int(i)) for i in idx if int(i) in amap]
+                    self.zero_pending = (self.zero_pending + new)[-300:] if th else new
                     self.probe = 2
             return
+        self.probe_fail = 0
         if self.zero_pending:
             # the site is open: the previous all-zero field was obstructed terrain
-            for (a0, z0) in self.zero_pending:
+            for (a0, z0, p0, p1, i0) in self.zero_pending:
                 if a0 < 52.0:
                     self._learn_terrain(a0, z0, False)
+                elif th and p0 <= s1 and s0 <= p1 and self.w[i0] * self.flux[i0] > 0 and not self._zero_event(z0, notes):
+                    # open within the same weather slot: only terrain explains those zeros
+                    self._learn_terrain(a0, z0, False, force=True)
             self.zero_pending = []
         if self.probe > 0:
             self.probe = 0
@@ -1276,7 +1454,8 @@ class Policy:
             a, z = amap.get(int(i), (None, None))
             if a is None:
                 continue
-            self._learn_terrain(a, z, not zflag)
+            force = th and bool(zflag) and self.w[i] * self.flux[i] > 0 and not self._zero_event(z, notes)
+            self._learn_terrain(a, z, not zflag, force=force)
             if zflag and a >= 55.0:
                 self.blocked.append((now, a, z, 'temp'))
         # weather / efficiency belief update from the unobstructed hits
@@ -1298,6 +1477,12 @@ class Policy:
         act = self._event_activity(pend, snap, start, T)
         omegas, wprior = self._omega_options(start, T)
         freeze = self.bel.learning_quake(night)
+        if self.p['sector_freeze'] > 0 and not freeze:
+            # a directional weather event of unknown extent may affect the 'unaffected' targets
+            for n_ in list(pend.get('notices', []) or []) + list((snap.get('latest_bulletin') or {}).get('notices', []) or []):
+                if n_.get('event_kind') in WEATHER_KINDS and n_.get('direction') in DIR_AZ:
+                    freeze = True
+                    break
         pf0 = self.bel.p_fault()
         info = self.bel.observe(mid, night, start, self.flux[idx[sel]], H, y[sel], T, P, omegas, wprior, act, freeze=freeze)
         if pf0 < 0.2 <= self.bel.p_fault():
@@ -1327,7 +1512,8 @@ class Policy:
                 key = EV_ALIAS.get(n.get('event_kind'))
                 if key is not None and n.get('direction') in (None, 'ALL'):
                     act[EV_KEYS.index(key)] += (b - a) / T
-        return [min(1.0, v) for v in act]
+        # overlapping events of one kind compound (multiplicative truth -> additive log effect)
+        return [min(3.0 if self.p['ev_wide'] > 0 else 1.0, v) for v in act]
 
     def _omega_options(self, start, T):
         """Open fractions for a closure covering a head or tail run of whole weather slots."""
@@ -1361,6 +1547,7 @@ class Policy:
             _log({'event': 'stress', 'why': why, 't': fmt_utc(t)})
 
     def _calibrate(self, pend, hitv):
+        self.hitrec.append((len(hitv), int(hitv.sum())))
         if self.off_confident and np.all(hitv == 1):
             return
         tv = pend['tv']
@@ -1414,22 +1601,150 @@ class Policy:
                                         self.side, self.pitch)
             self.offw_ll += -2.5 * (len(hitv) - ag)
         self.offw_n += 1
-        if self.offw_n % 4 != 1:
+        if self.offw_n % 4 != 1 and not self.off_big:
             return
-        bw = int(np.argmax(self.offw_ll))
+        sc = self.offw_ll
+        if self.off_big:
+            sc = sc - 1e-3 * np.hypot(self.offw_alt, self.offw_az)   # untested ties: the smallest offset first
+        bw = int(np.argmax(sc))
         wa, wz = float(self.offw_alt[bw]), float(self.offw_az[bw])
         ea, ez = self.off_est
         kn = int(np.argmin((self.offw_alt - ea) ** 2 + (self.offw_az - ez) ** 2))
         ca, cz = self.off_c
-        if (abs(wa - ca) > 0.12 or abs(wz - cz) > 0.12) and self.offw_ll[bw] > self.offw_ll[kn] + 6.0:
-            ca, cz = round(wa, 3), round(wz, 3)
-            g = np.linspace(-0.16, 0.16, 33)
-            oa, oz = [a.ravel() for a in np.meshgrid(ca + g, cz + g, indexing='ij')]
-            self.off_alt, self.off_az, self.off_c = oa, oz, (ca, cz)
-            self.off_ll = self._offset_ll(oa, oz)
-            self.off_confident = False
-            _log({'event': 'calib_move', 'centre': [ca, cz], 'gain': round(float(self.offw_ll[bw] - self.offw_ll[kn]), 1),
-                  'obs': self.off_obs})
+        thr = 4.0 if self.off_big else 6.0
+        if (abs(wa - ca) > 0.12 or abs(wz - cz) > 0.12) and self.offw_ll[bw] > self.offw_ll[kn] + thr:
+            self._move_fine(round(wa, 3), round(wz, 3), float(self.offw_ll[bw] - self.offw_ll[kn]))
+
+    def _move_fine(self, ca, cz, gain):
+        """Re-centre the fine offset grid (+-0.16 deg, or +-0.6 cell pitch after a full-range search)."""
+        S = max(0.16, 0.6 * self.pitch) if self.off_big else 0.16
+        g = np.linspace(-S, S, 33)
+        oa, oz = [a.ravel() for a in np.meshgrid(ca + g, cz + g, indexing='ij')]
+        self.off_alt, self.off_az, self.off_c = oa, oz, (ca, cz)
+        self.off_ll = self._offset_ll(oa, oz)
+        self.off_confident = False
+        _log({'event': 'calib_move', 'centre': [ca, cz], 'gain': round(gain, 1), 'obs': self.off_obs})
+
+    def _lost(self):
+        """Nearly every recently assigned target missed its fibre: the offset lies outside the fitted range."""
+        if self.misses_total == 0 or len(self.hitrec) < 4:
+            return False
+        rec = list(self.hitrec)[-6:]
+        na = sum(a for a, _ in rec)
+        nh = sum(h for _, h in rec)
+        if na < min(12, 4 * self.nfib) or nh > 0.05 * na:
+            return False
+        if self.off_big and nh > 0:
+            ll = self.offw_ll
+            near = ll >= ll.max() - 1.0
+            if np.count_nonzero(near) <= 36 and max(np.ptp(self.offw_alt[near]), np.ptp(self.offw_az[near])) <= 1.5 * self.pitch:
+                # the hits pin the offset down: resume normal pointing with the fine grid there
+                wa, wz = float(np.mean(self.offw_alt[near])), float(np.mean(self.offw_az[near]))
+                if max(abs(wa - self.off_c[0]), abs(wz - self.off_c[1])) > 0.25 * self.pitch:
+                    self._move_fine(round(wa, 3), round(wz, 3), float(ll.max() - np.median(ll)))
+                self.hitrec.clear()
+                _log({'event': 'offset_found', 'centre': [round(wa, 3), round(wz, 3)], 'searches': self.searches})
+                return False
+        return True
+
+    def _offset_search(self, now, left, tvall, altall, notices):
+        """Lost pointing: one short exposure whose fibre pairs each test a different offset hypothesis (actual
+        centre = commanded + offset), drawn from the untested part of the full legal range, smallest first."""
+        if not self.off_big:
+            R = math.degrees(0.1) + 0.05
+            step = max(0.5 * self.pitch, 2.0 * R / 120.0)
+            K = int(math.ceil(R / step))
+            g = step * np.arange(-K, K + 1)
+            self.offw_alt, self.offw_az = [a.ravel() for a in np.meshgrid(g, g, indexing='ij')]
+            self.offw_ll = self._offset_ll(self.offw_alt, self.offw_az)
+            self.off_big = True
+            _log({'event': 'offset_search', 't': fmt_utc(now), 'grid': len(g), 'step': round(step, 4)})
+        T = int(min(self.tmax, max(self.tmin, 60), int(left)))
+        if T < self.tmin:
+            return None
+        vis = np.flatnonzero(altall >= self.min_alt + 1.0)
+        if len(vis) < 2:
+            return None
+        pool = vis[self.best[vis] < self.w[vis] * self.mult_max * 0.999]
+        if len(pool) < max(2, self.nfib):
+            pool = vis
+        tv = np.ascontiguousarray(tvall[pool])
+        alt_p = altall[pool]
+        # hypotheses: untested (maximum-likelihood) offsets, smallest first, at least ~one cell apart
+        ll = self.offw_ll
+        cand = np.flatnonzero(ll >= float(ll.max()) - 1.0)
+        cand = cand[np.argsort(np.hypot(self.offw_alt[cand], self.offw_az[cand]), kind='stable')]
+        fpm = 2 if self.nfib >= 4 else 1
+        M = max(1, self.nfib // fpm)
+        sep = 0.9 * self.pitch
+        H = np.zeros((0, 2))
+        for k in cand:
+            h = np.array([self.offw_alt[k], self.offw_az[k]])
+            if len(H) == 0 or np.min(np.max(np.abs(H - h), axis=1)) >= sep:
+                H = np.vstack([H, h])
+                if len(H) >= 3 * M:
+                    break
+        # commanded pointing: the densest of a few visible targets, low enough for the hypotheses to stay below 90
+        rng = np.random.default_rng(self.searches + 7)
+        bidx = rng.choice(len(pool), min(40, len(pool)), replace=False)
+        okb = bidx[(alt_p[bidx] <= 84.0) & (alt_p[bidx] >= self.min_alt + 3.0)]
+        if len(okb) == 0:
+            okb = bidx
+        cosr = math.cos(math.radians(min(60.0, self.fov / 2.0 + 6.0)))
+        dens = (tv[okb] @ tv.T >= cosr).sum(axis=1)
+        b = int(okb[int(np.argmax(dens))])
+        base_alt = float(alt_p[b])
+        base_az = float(np.degrees(np.arctan2(tv[b, 1], tv[b, 0])) % 360.0)
+        ones = np.ones((len(pool), 1, 3), dtype=np.float32)
+        margin = 0.2 * self.pitch + 0.5 * self.gap
+        cos_r = math.cos((self.fov * 0.75 + 0.05) * DEG)
+        groups = []
+        for ha, hz in H:
+            if not 0.0 <= base_alt + ha <= 89.5:
+                continue
+            out_t, _ = self.kern.assign(base_alt + ha, (base_az + hz) % 360.0, tv, ones, self.side, self.pitch,
+                                        margin, cos_r, 0, 0)
+            cells = np.flatnonzero(out_t >= 0)
+            if len(cells):
+                groups.append([(int(f), int(out_t[f])) for f in cells])
+        used, used_t, got = {}, set(), []
+        for gi, grp in enumerate(groups):          # round 1: one fibre for each of the first M hypotheses
+            if len(got) >= M:
+                break
+            for f, t in grp:
+                if f not in used and t not in used_t:
+                    used[f] = t; used_t.add(t); got.append(gi)
+                    break
+        for _r in range(fpm - 1):                  # further rounds: a second fibre for the same hypotheses
+            for gi in got:
+                for f, t in groups[gi]:
+                    if f not in used and t not in used_t:
+                        used[f] = t; used_t.add(t)
+                        break
+        for gi in range(len(groups)):              # leftover fibres: more hypotheses, one fibre each
+            if gi in got:
+                continue
+            for f, t in groups[gi]:
+                if f not in used and t not in used_t:
+                    used[f] = t; used_t.add(t)
+                    break
+        if not used:
+            return None
+        cells = np.array(sorted(used), dtype=np.int32)
+        tsel = np.array([used[f] for f in cells], dtype=int)
+        idx = pool[tsel]
+        az_t = np.degrees(np.arctan2(tv[tsel, 1], tv[tsel, 0])) % 360.0
+        self.pending = {'kind': 'observe', 't': now, 'T': float(T), 'P': 0, 'idx': idx, 'fib': cells,
+                        'tv': tv[tsel], 'calt': base_alt, 'caz': base_az, 'cmd_alt': base_alt, 'cmd_az': base_az,
+                        'alt': altall[idx], 'alt_end': altall[idx], 'az': az_t, 'notices': list(notices),
+                        'bul_t': self.bul_t, 'dirf': None}
+        self.searches += 1
+        if self.searches % 10 == 1:
+            _log({'event': 'search', 't': fmt_utc(now), 'n': self.searches, 'hyps': len(groups), 'fibres': len(used),
+                  'nearest': [round(float(H[0, 0]), 3), round(float(H[0, 1]), 3)] if len(H) else None})
+        return {'action': 'observe', 'pointing': {'alt_deg': round(base_alt, 6), 'az_deg': round(base_az, 6)},
+                'assignments': {str(int(f)): self.ids[int(i)] for f, i in zip(cells, idx)}, 'duration_seconds': T,
+                'program': PROGRAMS[0], 'decision_source': 'optimizer'}
 
     def _unif_gain(self):
         """Reduction of the uniformity penalty weight x (1 - Jain index of the per-RA-band completed fractions)
@@ -1473,13 +1788,28 @@ class Policy:
             self._fails = getattr(self, '_fails', 0) + 1
             if self._fails == 3:
                 # persistent failure: switch the optional planning features off
-                for k, v in (('req_moon', 0), ('req_urg', 0.0), ('opt_value', 0.0), ('season_rho', 0.0)):
+                for k, v in (('req_moon', 0), ('req_urg', 0.0), ('opt_value', 0.0), ('season_rho', 0.0),
+                             ('off_search', 0), ('terr_hi', 0), ('ev_excuse', 0), ('rq_commit', 0.0), ('rq_big', 0)):
                     self.p[k] = v
+                try:
+                    self.bel.tau_learn = False
+                    self.bel.nu_ref = 0.0
+                    self.bel.sn2, self.bel.ss2 = self.bel.sn2_0, self.bel.ss2_0
+                except Exception:
+                    pass
                 self._safe = True
                 _log({'event': 'safe_mode'})
         self.decisions += 1
         wdt = time.perf_counter() - w0
         self.turn_wall += wdt
+        if self.p['eng_aware'] > 0:
+            try:
+                self._eng_note(act, snap, wdt)
+            except Exception:
+                if not self._eng_err:
+                    self._eng_err = True
+                    import traceback
+                    traceback.print_exc(file=sys.stderr)
         dt = min(time.process_time() - t0, wdt)
         # the budget is in charged seconds (this machine's seconds / speed factor): cost the decision the same way,
         # scaled by what the platform actually charged for recent turns (transport overhead, and how it counts
@@ -1581,6 +1911,14 @@ class Policy:
             except Exception:
                 pass
         self._ingest(snap, now)
+        if self.p['eng_aware'] > 0:
+            try:
+                self._eng_measure(snap, now)
+            except Exception:
+                if not self._eng_err:
+                    self._eng_err = True
+                    import traceback
+                    traceback.print_exc(file=sys.stderr)
         if self._weekly_due:
             self._weekly_due = False
             self._submit_weekly(snap, now)
@@ -1604,10 +1942,15 @@ class Policy:
             self.bul_t = parse_utc(lb['issued_at_utc']) if lb.get('issued_at_utc') else now
         except Exception:
             self.bul_t = now
+        if self.p['ev_excuse'] > 0:
+            self._track_events(notices, now)
+        self.prev_decide_t = now
         if any(n.get('event_kind') in CLOSE_KINDS and n.get('direction') in (None, 'ALL') for n in notices) or now < self.last_closed_until:
             nxt = (math.floor(now / self.slot) + 1) * self.slot
             if nxt - now < self.tmin:
                 nxt += self.slot
+            if self.eng_wait_k > 1:
+                nxt += (self.eng_wait_k - 1) * self.slot
             nxt = min(nxt, self.night_ends[night])
             if nxt - now < self.tmin:
                 return {'action': 'wait', 'duration_seconds': int(self.tmin)}
@@ -1636,8 +1979,37 @@ class Policy:
             return {'action': 'wait', 'duration_seconds': int(min(max(self.tmin, 600), max(self.tmin, left)))}
         return act
 
+    def _track_events(self, notices, now):
+        """Onset window and end of each announced weather event (kind, direction) seen in the bulletins."""
+        cur = set()
+        lo = self.prev_decide_t if self.prev_decide_t is not None else now
+        for n in notices:
+            k = n.get('event_kind')
+            if k in WEATHER_KINDS:
+                key = (k, n.get('direction') or 'ALL')
+                cur.add(key)
+                e = self.ev_onset.get(key)
+                if e is None or e[2] is not None:
+                    self.ev_onset[key] = [min(lo, now), now, None]
+        for key, e in list(self.ev_onset.items()):
+            if key not in cur and e[2] is None:
+                e[2] = now
+            if e[2] is not None and now - e[2] > 6 * 3600:
+                del self.ev_onset[key]
+
+    def _excused(self, now):
+        """The efficiency drop began with an announced weather event that is still active or ended < 3 h ago."""
+        if self.drop_t is None:
+            return False
+        for lo, hi, end in self.ev_onset.values():
+            if lo - 3600 <= self.drop_t <= hi + 7200 and (end is None or now - end < 3 * 3600):
+                return True
+        return False
+
     def _should_report(self, now, night):
-        if self.consec_reports >= min(3, self.max_consec - 1):
+        if self.consec_reports >= min(3, max(1, self.max_consec - 1)):
+            return False
+        if self.p['ev_excuse'] > 0 and self._excused(now):
             return False
         if self.bel.learning_quake(night):
             return False
@@ -1733,12 +2105,226 @@ class Policy:
             # dominate it); the cap cannot bind this early anyway
             return float('inf')
         eng_left = 1.1 * engine * obs_left / done
+        if self.p['eng_aware'] > 0 and self._eng_left is not None:
+            eng_left = max(eng_left, 1.05 * self._eng_left)
         lim = max(0.0, (wr - eng_left - 0.05 * wr0) / f)
         if lim < float(wc.get('remaining_seconds', lim)) and not getattr(self, '_wall_logged', False):
             self._wall_logged = True
             _log({'event': 'wall_bound', 'wall_remaining': round(wr, 1), 'engine': round(engine, 1),
                   'eng_left': round(eng_left, 1), 'limit': round(lim, 1)})
         return lim
+
+    def _eng_measure(self, snap, now):
+        """Fit the engine's real time between our turns: each runner step re-checks every expired request (and,
+        before a decision, every active one and the best-score table) against every ledger record."""
+        res = snap.get('last_result') or {}
+        if res.get('action') == 'observe':
+            nh = int(res.get('hit_count', len(res.get('hits', []) or [])))
+            self.n_entries += nh
+            self._eng_hits = 0.97 * self._eng_hits + 0.03 * nh
+        act = snap.get('active_requests') or []
+        for r in act:
+            rid = r.get('request_id')
+            if rid:
+                self.rq_seen.add(rid)
+        for m in snap.get('new_messages', []) or []:
+            if m.get('record_type') == 'observation_request' and m.get('request_id'):
+                self.rq_seen.add(m['request_id'])
+        wr = (snap.get('wallclock') or {}).get('wall_remaining_seconds')
+        if wr is None:
+            return
+        wr = float(wr)
+        e = self._eng
+        R, Ra = len(self.rq_seen), len(act)
+        if e['wr'] is not None:
+            dt = (e['wr'] - wr) - e['tau']
+            if 0.0 <= dt < 300.0:
+                n_it = e['chunks'] + 1.0
+                X = (e['chunks'] * max(0, R - Ra) + R + 1.0) * float(self.n_entries)
+                S = e['S']
+                S *= 0.997
+                S += np.array([n_it * n_it, n_it * X, X * X, n_it * dt, X * dt])
+                e['n'] += 1
+        e['wr'] = wr
+        if self._wall_total is None:
+            self._wall_total = wr
+        if self.decisions % 25 == 0:
+            obs_left = float(np.sum(np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now))))
+            obs_total = float(np.sum(self.night_ends - self.night_starts))
+            tau = 1.0 - obs_left / max(obs_total, 1.0)
+            if tau > 0.0:
+                self._eng_hist.append((tau, float(self.n_entries), float(self.observes)))
+            # early exposures are short (bright targets first) and the record count grows concavely: wait until
+            # 15% of the dark time has passed before extrapolating it over the season
+            if e['n'] >= 40 and tau >= 0.15:
+                self._eng_update(now, wr, R, Ra)
+
+    _wall_total = None
+
+    def _eng_note(self, act, snap, wdt):
+        """Remember what our action implies for the runner: wait-until is expanded in steps of at most the
+        longest exposure, each a full engine step."""
+        e = self._eng
+        e['tau'] = wdt
+        e['chunks'] = 0
+        try:
+            now = parse_utc(snap['now_utc'])
+        except Exception:
+            return
+        kind = act.get('action')
+        night = self._night_index(now)
+        if kind == 'observe':
+            T = float(act.get('duration_seconds', 0) or 0)
+            if T > 0:
+                if self._eng_level == 0:
+                    # the planner's own choice (a raised floor would bias the projection of the lower levels)
+                    self._eng_obsT.append(T)
+                self._eng_tobs = 0.995 * self._eng_tobs + T
+        elif kind == 'wait':
+            if 'until_utc' in act:
+                u = parse_utc(act['until_utc'])
+                e['chunks'] = max(0, int(math.ceil((u - now) / max(float(self.tmax), 60.0) - 1e-9)))
+                adv = u - now
+            else:
+                adv = float(act.get('duration_seconds', 0) or 0)
+            if night >= 0 and adv > 0:
+                adv = min(adv, self.night_ends[night] - now)
+                if adv > 0:
+                    self._eng_wait.append(adv)
+                    self._eng_twait = 0.995 * self._eng_twait + adv
+                    self._eng_nwait += 1
+
+    def _eng_coef(self):
+        # a persistent weak prior of 0.02 s per step at no request load keeps the per-step constant from being
+        # absorbed into the request x record term when the request load hardly varies
+        S = self._eng['S'] + np.array([30.0, 0.0, 0.0, 30.0 * 0.02, 0.0])
+        det = S[0] * S[2] - S[1] * S[1]
+        a = k = None
+        if det > 1e-9 * S[0] * S[2]:
+            a = (S[2] * S[3] - S[1] * S[4]) / det
+            k = (S[0] * S[4] - S[1] * S[3]) / det
+        if a is None or a < 0 or k is None or k < 0:
+            if a is not None and a < 0:
+                a, k = 0.0, S[4] / max(S[2], 1e-30)
+            else:
+                k = 0.0 if k is None or k < 0 else k
+                a = (S[3] - k * S[1]) / max(S[0], 1e-9)
+        return max(0.0, a), max(0.0, k)
+
+    ENG_LEVELS = ((0.0, 1), (300.0, 1), (600.0, 2), (900.0, 2), (1200.0, 3), (1800.0, 3), (2700.0, 4), (3600.0, 4))
+
+    def _eng_growth(self, tau_now):
+        """Local exponents of records and observes against the elapsed dark fraction (both grow concavely:
+        bright targets first, longer exposures later), blended with a prior of 0.6 until 30% of the season."""
+        out = []
+        pts = [h for h in self._eng_hist if h[0] >= max(0.02, 0.5 * tau_now)]
+        for col in (1, 2):
+            g = None
+            if len(pts) >= 4:
+                x = np.log([h[0] for h in pts])
+                y = np.log([max(h[col], 1.0) for h in pts])
+                vx = float(np.var(x))
+                if vx > 1e-6:
+                    g = float(np.mean((x - x.mean()) * (y - y.mean())) / vx)
+            w = min(1.0, tau_now / 0.3) if g is not None else 0.0
+            out.append(float(np.clip(w * (g if g is not None else 0.6) + (1.0 - w) * 0.6, 0.3, 1.0)))
+        return out
+
+    def _eng_project(self, now, R, Ra, a, k, level):
+        """Engine seconds for the rest of the season if exposures last at least the level's floor and closure
+        waits span its number of slots."""
+        floor, wk = self.ENG_LEVELS[level]
+        ot = np.array(self._eng_obsT) if self._eng_obsT else np.array([600.0])
+        wt = np.array(self._eng_wait) if self._eng_wait else np.array([float(self.slot)])
+        mo0 = float(np.mean(np.minimum(ot, self.tmax)))
+        moL = float(np.mean(np.maximum(np.minimum(ot, self.tmax), min(floor, self.tmax))))
+        sc = mo0 / max(moL, 1.0)                                     # observes (and records) kept at this level
+        mw0 = float(np.mean(wt))
+        sw = mw0 / max(mw0 + (wk - 1) * float(self.slot), 1.0)      # closure wait steps kept
+        dark = np.maximum(0.0, self.night_ends - self.night_starts)
+        obs_total = float(np.sum(dark))
+        left_n = np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now))
+        tau_now = max(1e-3, 1.0 - float(np.sum(left_n)) / max(obs_total, 1.0))
+        alpha, beta = self._eng_growth(tau_now)
+        season = float(self.night_ends[-1]) - float(self.night_starts[0])
+        rho = (R + 0.6) / (max(now - float(self.night_starts[0]), 0.0) + 0.1 * season)   # prior: 6 per season
+        E0, N0, W0 = float(self.n_entries), float(max(self.observes, 1)), float(self._eng_nwait)
+        E = E0
+        tot = 0.0
+        prev_end = now
+        stepmax = max(float(self.tmax), 60.0)
+        tau_s = tau_now
+        for s_, e_, ln in zip(self.night_starts, self.night_ends, left_n):
+            if e_ <= now or ln <= 0:
+                continue
+            a0 = max(s_, now)
+            Rg = R + rho * (a0 - now)
+            if s_ > prev_end:
+                ch = math.ceil((s_ - prev_end) / stepmax)
+                tot += ch * (a + k * max(0.0, Rg - Ra) * E) + a + k * (Rg + 1.0) * E
+            tau_e = tau_s + ln / max(obs_total, 1.0)
+            dE = E0 * ((tau_e / tau_now) ** alpha - (tau_s / tau_now) ** alpha) * sc
+            dN = N0 * ((tau_e / tau_now) ** beta - (tau_s / tau_now) ** beta) * sc
+            dW = W0 * (tau_e - tau_s) / tau_now * sw
+            Rm = R + rho * (0.5 * (a0 + e_) - now)
+            tot += (dN + dW) * (a + k * (Rm + 1.0) * (E + 0.5 * dE))
+            E += dE
+            tau_s = tau_e
+            prev_end = e_
+        return tot
+
+    def _eng_update(self, now, wr, R, Ra):
+        if R < 12:
+            # few requests (the A-D cards have 6): the engine's per-step time hardly grows, the c26 rules apply
+            self._eng_left = None
+            if self._eng_level:
+                _log({'event': 'eng_level', 't': fmt_utc(now), 'level': 0, 'R': R})
+            self._eng_level = 0
+            self.eng_floor, self.eng_wait_k = self.ENG_LEVELS[0]
+            return
+        a, k = self._eng_coef()
+        lim = self.p['eng_share'] * max(0.0, wr - 0.03 * (self._wall_total or wr) - 20.0)
+        cur = self._eng_level
+        proj = [None] * len(self.ENG_LEVELS)
+        proj[0] = self._eng_project(now, R, Ra, a, k, 0)
+        lev = 0
+        if proj[0] > lim:
+            lev = len(self.ENG_LEVELS) - 1
+            for L in range(1, len(self.ENG_LEVELS)):
+                proj[L] = self._eng_project(now, R, Ra, a, k, L)
+                if proj[L] <= lim:
+                    lev = L
+                    break
+        obs_left = float(np.sum(np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now))))
+        tau = 1.0 - obs_left / max(float(np.sum(self.night_ends - self.night_starts)), 1.0)
+        # the engine's time concentrates late in the season (records and requests accumulate): early levels buy
+        # little and cost science, so cap them while the projection is still uncertain
+        lev = min(lev, 2 if tau < 0.3 else 4 if tau < 0.5 else len(self.ENG_LEVELS) - 1)
+        if lev > cur:
+            # step up gradually and only on a repeated finding (the projection is noisy)
+            self._eng_up = getattr(self, '_eng_up', 0) + 1
+            lev = min(lev, cur + 2) if self._eng_up >= 2 else cur
+        else:
+            self._eng_up = 0
+        if lev < cur:
+            # relax one level at a time, on a repeated finding with a clear margin (no flapping)
+            if proj[cur - 1] is None:
+                proj[cur - 1] = self._eng_project(now, R, Ra, a, k, cur - 1)
+            self._eng_down = getattr(self, '_eng_down', 0) + 1
+            lev = cur - 1 if (self._eng_down >= 2 and proj[cur - 1] <= 0.75 * lim) else cur
+            if lev < cur:
+                self._eng_down = 0
+        else:
+            self._eng_down = 0
+        if proj[lev] is None:
+            proj[lev] = self._eng_project(now, R, Ra, a, k, lev)
+        self._eng_left = proj[lev]
+        if lev != cur:
+            _log({'event': 'eng_level', 't': fmt_utc(now), 'level': lev, 'floor': self.ENG_LEVELS[lev][0],
+                  'wait_k': self.ENG_LEVELS[lev][1], 'proj0': round(proj[0], 1), 'proj': round(proj[lev], 1),
+                  'lim': round(lim, 1), 'a': round(a, 4), 'k': float('%.3g' % k), 'R': R, 'E': self.n_entries})
+        self._eng_level = lev
+        self.eng_floor, self.eng_wait_k = self.ENG_LEVELS[lev]
 
     def _richness(self, now, night):
         """0 (capacity-limited) .. 1 (time-rich): remaining demand of fibre time (incomplete targets,
@@ -1788,6 +2374,10 @@ class Policy:
         Cp = math.exp(lc)
         Zp = Cp * math.exp(self.bel.leta_plan(now, night))
         sig = math.sqrt(vc + 0.03 ** 2)
+        if self.p['off_search'] > 0 and self._lost():
+            act = self._offset_search(now, left, tvall, altall, notices)
+            if act is not None:
+                return act
         # candidate pool
         vis = altall >= self.min_alt + 0.3
         maxval = self.w * self.mult_max
@@ -1808,7 +2398,8 @@ class Policy:
                 if not cand:
                     continue
                 cand = np.array(cand, dtype=int)
-                feas = self._request_feasible(cand, now, dl, remaining_n, float(r.get('completion_factor_threshold', 0.5)), night)
+                feas = self._request_feasible(cand, now, dl, remaining_n, float(r.get('completion_factor_threshold', 0.5)), night,
+                                              reward=float(r.get('completion_reward', 0.0)), committed=len(done) > 0)
                 if feas < remaining_n:
                     continue
                 bonus = float(r.get('completion_reward', 0.0)) / remaining_n * self.p['request_scale']
@@ -1829,6 +2420,11 @@ class Policy:
         pool = np.flatnonzero(vis & potential)
         if self.probe > 0:
             hp = pool[altall[pool] >= 56.0]
+            if self.p['terr_hi'] > 0 and len(hp) and self.terrain_dirs:
+                azp = np.degrees(np.arctan2(tvall[hp, 1], tvall[hp, 0])) % 360.0
+                aw = self._terr_away_vec(altall[hp], azp)
+                if aw.any():
+                    hp = hp[aw]
             if len(hp):
                 pool = hp
         if len(pool) == 0:
@@ -1840,12 +2436,15 @@ class Policy:
         if len(tg) == 0 or tg[-1] < min(left, self.tmax) - 30:
             tg = np.append(tg, float(int(min(left, self.tmax))))
         tg = np.unique(np.clip(tg, self.tmin, min(self.tmax, int(left))))
+        if self.eng_floor > 0 and len(tg) > 1 and not self.probe:
+            tg = tg[tg >= min(self.eng_floor, float(tg[-1]))]
         if emergency and len(tg) > 1:
             # spread the decisions the remaining budget affords over the remaining dark time
             obs_left = float(np.sum(np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now))))
             n_aff = 0.8 * remaining / max(getattr(self, '_cost_ema', 0.02), 1e-3)
             t_floor = min(float(tg[-1]), max(600.0, obs_left / max(n_aff, 1.0)))
             tg = tg[tg >= t_floor]
+        self._probe_now = self.probe > 0
         if self.probe > 0:
             tg = tg[tg <= 180] if np.any(tg <= 180) else tg[:1]
             self.probe -= 1
@@ -1942,6 +2541,13 @@ class Policy:
         rqb = reqbonus_active[pool]
         thr_rq = np.maximum(req_thr[pool], 1e-3)
         dl_rq = req_deadline[pool]
+        if self.p['rq_urg_intra'] > 0:
+            jq0 = np.flatnonzero(rqb > 0)
+            if len(jq0):
+                # request members that leave the sky (or the request window) soonest go first
+                hl = self._vis_hours(now, np.minimum(dl_rq[jq0], self.night_ends[night]), pool[jq0])
+                rqb = rqb.copy()
+                rqb[jq0] *= np.clip((1.5 / np.maximum(hl, 0.2)) ** self.p['rq_urg_intra'], 1.0, 3.0)
         sigb = max(self.p['band_sigma'], sig)
         sg = math.sqrt(sig * sig + self.p['g_sigma'] ** 2)
         wopt = self.p['opt_value'] * rich
@@ -2188,6 +2794,12 @@ class Policy:
         if len(cells) == 0:
             return None
         chosen = out_t[cells]
+        if self._probe_now and self.p['eng_aware'] > 0 and len(cells) > 4 and self._eng_level > 0:
+            # a closure probe only has to show whether the site reopened: with many requests every ledger
+            # record slows each later engine step, so probe with the four best fibres
+            keep = np.sort(np.argsort(-out_v[cells])[:4])
+            cells = cells[keep]
+            chosen = out_t[cells]
         T = int(tg[ti])
         assignments = {str(int(f)): self.ids[int(pool[j])] for f, j in zip(cells, chosen)}
         oa, oz = self.off_est if self.off_confident or self.misses_total > 0 else (0.0, 0.0)
@@ -2215,7 +2827,16 @@ class Policy:
         return {'action': 'observe', 'pointing': {'alt_deg': round(cmd_alt, 6), 'az_deg': round(cmd_az % 360.0, 6)},
                 'assignments': assignments, 'duration_seconds': T, 'program': PROGRAMS[Pi], 'decision_source': src}
 
-    def _request_feasible(self, cand, now, deadline, need=1, thr=0.5, night=None):
+    def _sci_rate(self, now):
+        """Remaining attainable science per remaining dark hour (an upper bound, cached per decision)."""
+        if getattr(self, '_sr_t', None) == now:
+            return self._sr_v
+        pot = float(np.sum(np.maximum(0.0, self.w * self.mult_max - self.best)))
+        hrs = float(np.sum(np.maximum(0.0, self.night_ends - np.maximum(self.night_starts, now)))) / 3600.0
+        self._sr_t, self._sr_v = now, pot / max(hrs, 1.0)
+        return self._sr_v
+
+    def _request_feasible(self, cand, now, deadline, need=1, thr=0.5, night=None, reward=0.0, committed=False):
         """Number of request targets that can reach the completion threshold before the deadline
         (above the altitude limit, and a single exposure <= tmax suffices at climatological quality);
         returns 0 when the cheapest `need` exposures do not fit into half of the remaining dark time."""
@@ -2244,7 +2865,13 @@ class Policy:
         if int(ok.sum()) < need:
             return int(ok.sum())
         tsum = float(np.sum(np.sort(np.maximum(tneed[ok], self.tmin))[:need]))
-        if tsum > 0.5 * avail:
+        frac = 0.5
+        if self.p['rq_big'] > 0 and reward > 0:
+            ratio = reward / max(tsum / 3600.0, 0.1) / max(self._sci_rate(now), 1e-6)
+            frac = 0.5 + 0.4 * float(np.clip((math.log2(max(ratio, 1e-9)) - 3.0) / 3.0, 0.0, 1.0))
+        if committed and self.p['rq_commit'] > 0:
+            frac = max(frac, float(self.p['rq_commit']))
+        if tsum > frac * avail:
             return 0
         return int(ok.sum())
 
@@ -2486,7 +3113,10 @@ class Policy:
                 'offset_est': [round(self.off_est[0], 4), round(self.off_est[1], 4)], 'offset_obs': self.off_obs,
                 'misses': self.misses_total, 'logZ_mean': round(self.logZ_mean, 3), 'kernel': self.kern.lib is not None,
                 'pf': round(self.bel.p_fault(), 4), 'quakes': [round(self.bel._d0_hat(q), 3) for q in self.bel.quakes], 'bad': getattr(self.bel, 'n_bad', 0), 'cap': None if self.cap_ratio is None else round(self.cap_ratio, 3), 't0': round(getattr(self, '_t0_cache', 0.0), 1), 'rich': round(getattr(self, '_rich_cache', 0.0), 3), 'pool_scale': round(self.pool_scale, 3), 'nfault': self.bel.nfault, 'pc': [round(float(x), 3) for x in self.bel.pc], 'stress': self.stress_seen, 'anchor_cost': None if self.anchor_cost is None else [round(self.anchor_cost[0], 4), round(self.anchor_cost[1], 5)],
-                'llm': self.strategist.summary() if self.strategist is not None else None}
+                'llm': self.strategist.summary() if self.strategist is not None else None,
+                'eng': {'level': self._eng_level, 'entries': self.n_entries, 'requests': len(self.rq_seen),
+                        'coef': [float('%.4g' % c) for c in self._eng_coef()],
+                        'left': None if self._eng_left is None else round(self._eng_left, 1)}}
 
 
 def _erf(x):

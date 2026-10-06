@@ -23,9 +23,12 @@ done
 if [ -n "$src" ]; then cp "$src/harness_entry.py" "$HERE/agent/"; fi
 for f in harness.py qrun3.py mkjobs.py pack.sh dockertest.sh dockertest2.sh dockertest3.sh dockertest4.sh batch.sh rbatch.sh rstat.sh rfetch.sh \
          lstat.sh runcard.sh sweep.sh genworld.py gen_formal_like.py gen_hidden_like.py gen_hidden_like2.py gen_weird.py gen_event.py mkred.py \
-         analyze_run.py table.py table2.py table3.py; do
+         analyze_run.py table.py table2.py table3.py gen_adv.py anaonline.py cmpv5.py cmpfinal.py mk_final_jobs.sh; do
   cp "$WORK/$f" "$HERE/lab/"
 done
+# round-2/3 red-team battery (world specs for gen_adv.py) and its parallel builder
+mkdir -p "$HERE/lab/adv2"
+cp "$WORK"/adv2/battery.py "$WORK"/adv2/build.py "$HERE/lab/adv2/"
 cp "$WORK"/tools/*.py "$HERE/lab/tools/"
 cp -r "$WORK"/hspec/* "$HERE/lab/hspec/"
 (cd "$HERE/agent" && sha256sum ./* > ../agent.sha256)

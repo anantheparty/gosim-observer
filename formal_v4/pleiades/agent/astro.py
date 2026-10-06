@@ -13,7 +13,9 @@ def parse_utc(s):
 
 
 def fmt_utc(t):
-    return datetime.fromtimestamp(round(t), tz=timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    # explicit 4-digit year: strftime('%Y') does not zero-pad years before 1000 on glibc
+    d = datetime.fromtimestamp(round(t), tz=timezone.utc)
+    return f'{d.year:04d}-{d.month:02d}-{d.day:02d}T{d.hour:02d}:{d.minute:02d}:{d.second:02d}Z'
 
 
 def days_j2000(t):

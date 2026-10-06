@@ -41,7 +41,7 @@ DEFAULT_PROXY = "http://127.0.0.1:7890"
 READ_RPCS = frozenset({
     "me", "current_competition", "my_observer_phase", "team_members", "team_capacity",
     "observer_evaluation_quota", "observer_final_versions", "observer_quota_reset_notice",
-    "observer_board", "observer_card_board", "leaderboard", "queue_position", "sophon_solvers",
+    "observer_board", "observer_card_board", "leaderboard", "queue_position", "sophon_solvers", "observer_card_files",
 })
 # Read-only observer-portal actions. NOT allowed (writes / quota): upload, submit_zip, submit_repository, approve,
 # evaluate, set_final_version, withdraw, evidence, save_*/delete_*/set_* (team variables, domains, egress, model),
