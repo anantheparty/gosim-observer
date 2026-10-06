@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "variants": {
+    "original": "Unmodified source control; same oracle labels as all variants.",
+    "names_tone": "Lossless speaker/name and conversational filler changes.",
+    "canonical": "Control for state-based rewrites: familiar date/time, status and flat-window syntax.",
+    "clock_styles": "Canonical replay with AM/PM, h/min, compact, English, Japanese and Chinese clocks.",
+    "timezone_dates": "Fixed offsets +1/-10/-13/+5:30/+9; ISO, English month and Chinese dates; explicit interval endpoints.",
+    "equipment_aliases": "Canonical replay with new fault-device and non-fault calibration names and explicit semantics.",
+    "status_rewrites": "Familiar dates/clocks/windows; new withdrawn/gossip/correction/postponement/rain wording only.",
+    "status_relative": "Withdrawn/superseded/held-back wording, correction/postponement relationships, calibration-relative times, weekday dates.",
+    "cipher_words": "ROT13 and Caesar +7/+19, explicit per-line keys; English time numbers and month names.",
+    "mixed": "Combined multilingual clocks, zones, dates, devices, encoding, relative times and revised statuses.",
+    "engineering_table": "New Chinese engineering/calibration task types in a rolling plan table with dates, clocks, status and class in separate columns.",
+    "bullet_workorders": "New Chinese task types in multiline work-order lists; date/clock/status/impact must be assembled across lines."
+  },
+  "cards": {
+    "A1": {
+      "entries": 40,
+      "faults": 102,
+      "alternatives": 0,
+      "flats": 294
+    },
+    "B1": {
+      "entries": 51,
+      "faults": 113,
+      "alternatives": 29,
+      "flats": 373
+    },
+    "C1": {
+      "entries": 48,
+      "faults": 46,
+      "alternatives": 12,
+      "flats": 144
+    },
+    "D1": {
+      "entries": 81,
+      "faults": 251,
+      "alternatives": 15,
+      "flats": 782
+    }
+  },
+  "controls_validated_in_this_run": [],
+  "limitations": [
+    "Synthetic format stress tests, not sampled hidden cards and not a prediction of hidden-card scores.",
+    "Fault truth is c31 due(); alternatives are unresolved schedule candidates, not simulator-confirmed faults.",
+    "Relative-to-another-day notices that c31 labels alt retain that oracle classification, even if their natural wording sounds official.",
+    "Large variants reconstruct schedule-state changes, removing duplicate restatements; background weather/terrain/chatter is retained.",
+    "Unresolved original conditional/relative clauses are retained in several variants; status variants rewrite their wording.",
+    "Confirmed-start precision counts unmatched alternatives as errors; candidate_fp excludes labelled alternatives and alternatives_as_due reports the distinction."
+  ]
+}

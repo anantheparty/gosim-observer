@@ -1,0 +1,184 @@
+c32 robustness review -- offline snapshot, 2026-10-06
+
+Deliverables:
+  work/logtest/fuzz_llm.py
+  work/logtest/variants/c32_hardening.patch
+  work/logtest/variants/c32_fuzz_baseline.json
+  work/logtest/variants/c32_fuzz_patched.json
+  /tmp/c32_fuzz/baseline/        untouched snapshot
+  /tmp/c32_fuzz/patched/         suggested changes only
+
+Result: 463 checks; baseline 272 pass / 191 fail; patched 463 pass / 0 fail.
+Multiple cases exercise the same defect; 191 is NOT a count of independent bugs.
+One suite invocation takes under one second on this machine. The tests use 100
+seeded mutations, malformed JSON-like values, 5000-entry/key batches, tiny policy
+stubs and a 0.20-second local blocking client. No engine, model or platform calls.
+No Policy/ChatClient constructor is invoked. A Python audit hook blocks network
+connections and credential-file reads. Model-related environment values are
+neither inspected nor printed. The original package and run directories were
+not changed.
+
+Scope and severity:
+Most raised exceptions below are caught by policy._duty_read, the local guider
+guards, or Policy.decide. No tested malformed model answer was shown to escape
+those boundaries as agent_error. The practical effects are missed records,
+partial merges, disabled probes, wasted fallback decisions, or an unbounded
+synchronous wait. The latter can threaten the wallclock budget despite the
+exception guards. Defensive extreme-state policy tests are distinguished from
+ordinary model-output defects below.
+
+Reproduce all checks (exit 1 intentionally means the original has failures):
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c32_fuzz/baseline --json /tmp/c32_fuzz/baseline.json
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c32_fuzz/patched --json /tmp/c32_fuzz/patched.json
+
+Minimal examples below use this common setup, without credentials or clients:
+  import sys
+  sys.path.insert(0, '/tmp/c32_fuzz/baseline')
+  from guider_log import GuiderLog
+  from llm_strategist import DutyReader
+  t = 1790899200.0  # 2026-10-02T00:00:00Z
+  f = {'date':'10/2', 'time':'22:30', 'clock':'local',
+       'status':'confirmed', 'quote':'signed equipment work'}
+
+1. High: model-only faults do not enable the guider path.
+   Locations: guider_log.py add_llm (~537); policy.py _guider_step (~2156),
+   and the _guider_obs call guard (~1580).
+   Repro:
+     g = GuiderLog(-4)
+     g.add_llm({'fault_starts':[f]}, t)
+     print(g.active, len(g.probes()), len(g.flats))  # False, 1, 0
+   With new device vocabulary and no parsed loss window, both action and
+   observation guards skip the candidate. The intended short-exposure probe
+   never runs. Patch: activate on accepted confirmed/conditional and evidenced
+   active faults. Unit test follows this through probe -> low throughput -> report.
+
+2. High: socket timeout does not enforce the synchronous question deadline.
+   Locations: llm_strategist.py ChatClient._post (~124), DutyReader.read (~518).
+   _post uses urlopen(timeout=...) then an unbounded resp.read(). A slow response
+   that continues producing data can outlive that socket timeout; the caller
+   checks the deadline only between attempts. This is a source-based network
+   risk; no real HTTP request was made. Local minimal demonstration:
+     construct DutyReader via __new__, inject a client.ask that sleeps 0.20 s,
+     set question_deadline=0.04, call read: baseline takes the whole 0.20 s.
+   See duty/hard_deadline in fuzz_llm.py for the exact self-contained fake state.
+   Patch: one daemon worker per question, queue.get with the remaining total
+   budget, count elapsed time, permanently disable this reader on hard timeout.
+   At most one stalled worker can remain after timeout. This does not cancel
+   an in-progress socket; the daemon cannot keep the process alive at exit.
+   The guard is for blocked I/O, not a process-isolation guarantee against
+   arbitrary native code that holds the Python GIL indefinitely.
+
+3. High: non-finite numeric strings survive _clean and abort a merge.
+   Location: guider_log.py _int (~461), llm_time (~474).
+   Repro:
+     g = GuiderLog(-4)
+     r = DutyReader._clean({'fault_starts':[{**f,'shift_minutes':'1e309'}, f]})
+     g.add_llm(r, t)  # OverflowError: cannot convert float infinity to integer
+   'inf' and an infinite relative window index also fail. The outer catch
+   suppresses the rest of the answer, including the later valid record.
+   Patch: finite/integer/bounded numeric validation; reject the malformed item,
+   preserve later valid items. _clean bounds known fields before stringifying.
+
+4. Medium-high: events beyond season end cause a KeyError after _add rejects them.
+   Location: guider_log.py add_llm new-candidate branch (~581).
+   Repro:
+     g = GuiderLog(-4, t, t + 86400)
+     g.add_llm({'fault_starts':[{**f,'date':'10/5'}]}, t)  # KeyError
+   The 12-day merge horizon admits it, _add rejects > season_end + one day,
+   then add_llm unconditionally indexes cands. Values slightly past season end
+   are accepted instead. Patch: apply the season boundary before _add and use
+   guarded lookup. Loss windows are clipped to the same end boundary.
+
+5. Medium: invalid times/clock/index silently turn into actionable real times.
+   Locations: _clock, _md, _hm, llm_time, llm_window (~437-528).
+   Repro:
+     g = GuiderLog(-4)
+     g.llm_time({**f,'time':'-1:30'}, t)  # regex ignores the minus
+     g.llm_time({**f,'clock':'UTC+99:99'}, t)  # unsupported offset accepted
+     g.llm_window({'night':'10/2','start':'25:90','end':'26:45'}, t)
+       # timedelta normalizes impossible clocks into a valid 15-minute window
+   A zero/negative/non-numeric relative index becomes window 1; bad shift text
+   becomes zero; a relative_to string or unknown kind falls back to absolute.
+   _md/_hm can extract dates/times from stringified lists/dictionaries.
+   Patch: full-match schema formats, real calendar/day and clock bounds,
+   explicit supported clock names/offsets (including UTC-13 and UTC+05:30),
+   positive integer indexes, and reject unsupported relative objects/kinds.
+   This intentionally rejects non-schema strings instead of guessing local time.
+
+6. Medium: empty active_faults item creates an immediate probe with no evidence.
+   Repro:
+     g = GuiderLog(-4)
+     g.add_llm(DutyReader._clean({'active_faults':[{}]}), t)
+     print(g.probes())  # one candidate at t
+   _clean retains {}; add_llm replaces missing/invalid date/time with issued.
+   Patch: drop empty cleaned objects and require a nonempty string quotation for
+   active-fault entries. An active-fault quote without a date remains supported.
+   These are probes, not immediate reports; the false-positive risk is indirect.
+
+7. Medium: rule windows hide newly extracted windows on the same night.
+   Location: _night_windows (~467).
+   Repro:
+     g = GuiderLog(-4)
+     g.read('10/2 当晚平场灯测试 20:00到20:15，不是故障。', t)
+     g.add_llm({'lost_windows':[{'night':'10/2','start':'21:00','end':'21:15'}]}, t)
+     g.llm_time({'relative_to':{'kind':'window_end','date':'10/2','index':2}}, t)
+       # baseline None, although there are two windows
+   Patch: sorted union of deterministic and LLM windows. A fresh object's
+   relative helper can also raise AttributeError before _llm_nights is created;
+   guarded access fixes that direct-helper issue. Ordinary add_llm initializes it.
+
+8. Medium: remembered rules are silently lost or discarded on prefix collision.
+   Location: DutyReader._remember_rules (~488).
+   Keep 20 distinct short '从今天起规则N＝含义N' lines: rules keeps 12 but keys
+   keeps 20. Reintroducing an evicted rule will never add it back. Different
+   definitions with the same first 40 normalized characters also collide.
+   Patch: use the full bounded normalized text, retain recency ordering, and
+   rebuild keys from the retained 12 rules. More recent redefinitions therefore
+   remain available rather than being silently discarded.
+
+9. Medium/defensive: no direct add_llm shape guard or input cap.
+   Repro: g.add_llm(None,t), g.add_llm({'fault_starts':[None]},t),
+   g.add_llm({'lost_windows':None},t) all raise. A 5000-item list is fully scanned.
+   Production _clean prevents most of these shapes; direct callers are exposed.
+   _clean also raises when asked to str() a >4300-digit Python integer. That
+   integer case is a direct-interface test, not normal json.loads output.
+   Patch: dict/list guards, maximum 60 records per collection (matching _clean),
+   whitelist bounded scalar fields, and avoid converting oversized/nested values.
+
+10. Low/defensive: extreme accumulated policy state raises or yields NaN.
+    _g_outcome: g_dead_false=1024 -> 2.0**1024 raises before min(8h,...) can cap it.
+    _obs_ratio: fake belief mean=1000 -> math.exp overflow; all-NaN observations
+    yield NaN. These are explicit stress states, not proven outputs of the normal
+    engine. Patch: bound the exponent before exponentiation; ignore non-finite
+    observation ratios and invalid normalization. Normal numeric paths retain
+    behavior in the focused report, wait, probe, and detector regression checks.
+
+11. Unpatched operational limit: _duty_read truncates to the first 120 lines.
+    Location: policy.py ~2123. Existing original/mixed/clock/status/table logs
+    have <=91 nonempty lines. bullet_workorders has 85/220 blocks over 120,
+    maximum 289. Later work orders can disappear before the model sees them.
+    This is not an exception. Recommended follow-up: chunk at complete work-order
+    boundaries and share context, or explicitly budget a larger input section.
+    The patch does not change this limit because chunking affects call count and
+    wall/model budget. The original 10 variant files were not regenerated here.
+
+Normal-path validation and remaining limits:
+  - All 220 original A1-D1 blocks replayed on baseline and patched readers;
+    every checkpoint has identical cands, due, probes and flats. Totals remain
+    512 due, 56 alternatives, 1593 loss windows.
+  - Valid UTC/local/Tokyo/UTC-13/UTC+05:30, a shifted fault, valid windows,
+    record isolation after bad entries, short-exposure probe -> report,
+    correct-report state reset, advancing flat wait, and two-exposure dead
+    detection are checked without an engine.
+  - _duty_read and known_summary have trusted caller inputs/formatters. The
+    latter is exercised after each mutated merge to detect bad stored times.
+    _g_report receives internal dictionaries; no extra generic object wrapper
+    was added. _night_index excludes the exact night end, so the ordinary flat
+    wait path advances; no infinite loop was reproduced.
+  - No model quality, simulator score, network-service behavior, or arbitrary
+    Python object with hostile special methods was evaluated.
+
+Patch application is intentionally left to the main session. The unified diff
+has a/guider_log.py, a/llm_strategist.py, a/policy.py paths and corresponding b/.
+Its baseline source hashes are recorded in c32_fuzz_baseline.json. Review against
+that snapshot before merging into any concurrently edited package.

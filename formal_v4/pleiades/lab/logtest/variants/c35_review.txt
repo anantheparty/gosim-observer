@@ -1,0 +1,136 @@
+c35 相对 c34 审查（任务 5，2026-10-06）
+
+交付
+  work/logtest/variants/c35_review.patch       建议 diff；2文件，74行
+  work/logtest/fuzz_llm.py                     扩展后的离线测试
+  work/logtest/variants/c35_review_baseline.json
+  work/logtest/variants/c35_review_patched.json
+  work/readme_tests_draft.md                  中文 README 草稿；结果数字待填
+  /tmp/c35_review/{baseline,patched}/          审查快照与补丁副本
+
+结果
+  当前 c35 快照：680项，663通过 / 17失败。
+  补丁副本：680项全部通过；每次运行约1秒，无引擎、模型或真实网络请求。
+  17个失败用例归为6类问题：11个畸形配置用例，以及6个其他回归用例
+  （其中两项复现同一类“近零连续性”问题）。不要按失败用例数统计漏洞数。
+  旧 c33 补丁副本以 --deadline-policy disable 验证兼容，635/635通过。
+  原 c35 四个受检源码 SHA-256 未变；patch --dry-run 通过。
+
+复现命令
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c35_review/baseline --json /tmp/c35_review/baseline.json
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c35_review/patched --json /tmp/c35_review/patched.json
+
+范围与正常路径结论
+实际 diff -ru（忽略 __pycache__）仅涉及 llm_strategist.py 和 policy.py，
+与主会话列出的三部分一致。正常配置和初始化下，新门控本身没有发现
+agent_error 或死循环；_g_many 的 7 次普通正确报修阈值可打开静默日志
+的 ingest/guider_step 路径，且能解除原信念故障数量上限。glog=None
+保持关闭。g_correct 不加入 correct_reports，符合本次明确指定的门控，
+本补丁没有改变该计数语义。
+
+新前兆规则正确要求20分钟内最近两次都在[0.1,0.55]；单次、过旧数据、
+最近一次恢复正常、边界外值以及 NaN/Inf 都有负向用例。含区间端点的
+两次低吞吐有正向用例。旧“只有一次0.3前兆”的测试已调整为两次，
+测试桩补齐 correct_reports，避免把旧测试桩缺字段误记成生产漏洞。
+
+超时保持用户指定的新语义：一次失败不停用；成功清空 fail_run；第四次
+连续失败或三个真正仍活着的超时线程才停用。Budget、HTTP致命错误和
+线程创建失败仍是其他停止条件。已验证晚回答不改变失败/成功计数，
+结束的线程不积累为未完成线程。最多一个同步主调用加上此前超时线程，
+调用方等待受总截止约束；线程是daemon，超时不等于取消其底层socket。
+
+以下异常多数仍由 _duty_read / _guider_obs / Policy.decide 外层捕获；
+没有证明它们会逃逸为整卡 agent_error。误报复现直接执行轻量策略方法，
+未证明实际比赛中的发生频率；不能据此计算补丁分数提升。
+
+1. 中高：修复前的旧曝光可能成为新测试窗口的“故障前兆”
+位置：policy._g_precursor；配合 _g_outcome / _guider_obs。
+_g_outcome 正确修复会更新 last_correct_t，但 g_hist 保留。新 _g_precursor
+仅检查20分钟和最近两次，没有排除修复之前的曝光。
+最小 helper 复现：
+  from types import SimpleNamespace
+  from policy import Policy
+  t = 1790899200.0
+  p = SimpleNamespace(g_hist=[(t-240,t-180,.3),(t-120,t-60,.3)],
+                      last_correct_t=t-30)
+  Policy._g_precursor(p,t)     # 基线 True；修复已切断之前的故障状态
+完整用例 c35/precursor_excludes_pre_repair 调用 _g_outcome(True)，随后
+两次60秒的0.01曝光；基线错误产生 g_report={'why':'dead',...}。
+补丁：前兆曝光的开始时刻必须 >= last_correct_t，同时保留最近两次/
+20分钟门槛。这样旧故障的 dim 阶段不能替修复后的新事件作证。
+
+2. 中高：非近零数据/已知平场没有切断近零连续计时（继承路径）
+位置：policy._guider_obs 的 g_dead_since/g_dead_n 更新。
+原代码仅在 r>=0.3 时清零；0.03<=r<0.3 的观测不会清零，已知平场
+内的 r<0.03 也不清零。c35 _g_many 放开静默入口后，这条原有路径
+适用于更多日志缺失场景。
+最小观测序列（本地方法调用，不需要真的等待）：
+  t:      r=.01，60秒
+  t+60:   r=.10，60秒（或已知平场 r=.005）
+  t+2100: r=.01，60秒
+基线把两次分开的暗段当作连续35分钟，产生 dead 报修。
+用例：c35/dead_streak_interrupted、c35/known_flat_breaks_dead_streak。
+补丁：已知平场或 r>=g_dead 均中断“未解释的连续近零”计数/计时。
+取舍：真实故障的测量噪声偶尔跨越0.03时也会重新计时，可能延迟兜底
+报修；需由主会话端到端比较漏报/误报与总分，不能只看单位用例。
+
+3. 中：截止处理把刚完成的本次线程也算入未完成数量
+位置：DutyReader._read1 的 except queue.Empty。
+旧线程列表用 is_alive() 过滤，但本次 worker 无条件追加。当 Queue.get
+刚超时而线程紧接着完成，旧线程仍有2个时，会错误触发第3个未完成，
+从而停用。用例 c35/completed_worker_at_deadline 用本地可控 Queue
+还原“get已超时、进入handler时本次worker已退出”的时间序；无网络。
+补丁：旧线程与本次线程合在一起再统一过滤 is_alive()。不改变 3/4
+阈值，不把一次慢回答改回立即停用。极窄竞争仍按采样时刻的活跃状态
+作决定；不是线程数量的全局原子快照。
+
+4. 中低：Thread 构造移到了 try 外
+位置：DutyReader._read1 创建 worker。
+c34 的 Thread(...).start() 位于 try 内；c35 为保存引用把构造移到
+try 外。构造失败会抛出，失去 reader 的 failed/wall/dead 记账，外层
+通常仍捕获但下一段可能再次尝试。不是正常模型回答会触发的异常。
+用例 c35/thread_constructor_failure 用本地工厂抛 RuntimeError；
+补丁只把 Thread(...) 构造移回 try 内，保留 worker 引用供超时计数。
+
+5. 中：共享 ChatClient.json_mode 的并发降级竞争
+位置：ChatClient._post 的 HTTP 400 分支；由可恢复超时后的重叠请求引出。
+复现时间序：
+  A 和 B 已按 JSON mode 构造/发送；A超时后B开始，A仍未完成。
+  A 的400处理把 self.json_mode=False，并允许重试plain mode。
+  B 的400处理读到全局False，直接当作 _Fatal，尽管B实际也带着同样的
+  response_format/temperature。可能由一次可重试的格式拒绝停用reader。
+用例 c35/inflight_json_mode_fallback：跳过 ChatClient 构造、用空假key，
+urlopen 替换为本地 HTTPError(400)，依次执行两个已发送请求的处理器。
+没有读取环境密钥或访问任何URL。plain_http_400_still_fatal 验证真正的
+plain-mode 400 仍按致命错误处理。
+补丁：根据出错请求的 body 是否实际带 response_format/temperature
+判断可否降级，不根据另一线程可能已经改变的全局标志。
+条件：需要重叠请求且服务返回400；本次未验证真实服务上发生概率。
+
+6. 低/防御性：g_many_correct 非法配置可能抛异常或过早打开门控
+位置：policy._g_many。
+int(None/容器/坏字符串/NaN/Inf)抛出，缺key则KeyError，0/负数/True
+可能立即放开忙卡逻辑。参数来自本地/环境配置，不是模型回答；正常
+DEFAULTS 和当前正式配置不会遇到此问题。_ingest 中调用 _g_many 位于
+_guider_obs 的局部 try 之前，但外层 decide 仍会转为安全等待，故风险
+主要是持续回退/策略失效，不是已证实的整卡崩溃。
+补丁：只接受正有限整数，无效时用 DEFAULTS 的7；保留普通计数门槛。
+用例 c35/many_bad_threshold_* 和 many_missing_threshold。
+
+未改的策略边界/仍需仿真验证
+- g_dead_wait 使用两次数据之间的墙上时间，长空档不证明持续变黑；
+  本补丁只中断已有相反证据/已知平场的连续性，没有新增采样间隔参数。
+- 连续两次天气减光也可能落入[0.1,0.55]；未知平场恰接在其后仍可能误报。
+  更严格前兆减少这种风险但不能消除，不应把阈值测试当作物理分类保证。
+- 无日志忙卡模式要先积累7次普通正确报修。若另行把原信念报修上限调到
+  低于7，这个自动入口可能不可达；本补丁不改原故障数量先验/上限。
+- 新补丁涉及数据兜底策略，必须对 noflat/silent 等世界比较总分和错误
+  报修；本任务未跑仿真。主会话提供的 c31→c34 世界结果是既有背景，
+  不是本补丁的成绩，未写入 README 草稿的空白结果表。
+
+草稿说明
+work/readme_tests_draft.md 以表格组织三层方法、12组含义、真值与哈希、
+指标公式、世界构建和 silent/noflat 的信息缺失、fuzz契约与边界。结果
+数量/分数均留“待填”；±120秒、3/4次超时、事件倍率等协议常量保留。
+回放命令显式列12组，因为 variants目录还含仅有A1的silent/noflat，
+直接不加 --variants 的四卡扫描会尝试读取不存在的其他卡文件。

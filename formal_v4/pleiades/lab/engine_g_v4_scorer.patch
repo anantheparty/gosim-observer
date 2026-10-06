@@ -1,0 +1,16 @@
+--- a/runner/challenge/v4_scorer.py	2026-10-04 17:18:12.949023669 +0000
++++ b/runner/challenge/v4_scorer.py	2026-10-06 13:41:54.298732491 +0000
+@@ -235,6 +235,13 @@
+         efficiency = truth.instrument_efficiency
+         fault = self.active_fault(moment)
+         repair_at = self.fault_repairs.get(fault.event_id) if fault is not None else None
++        if fault is not None and fault.event_id.startswith('V4GF'):
++            # local test model of the guider-camera faults (cards A1-D1 after 2026-10-06): not baked into the
++            # slot truth; x0.3 for the first hour, then x0.005, until a correct report repairs it
++            if repair_at is not None and moment >= repair_at:
++                return efficiency
++            age = (moment - fault.actual_start_utc).total_seconds()
++            return efficiency * (0.3 if age < 3600.0 else 0.005)
+         if (
+             fault is not None
+             and repair_at is not None

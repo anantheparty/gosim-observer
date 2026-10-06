@@ -1,0 +1,827 @@
+--- a/guider_log.py
++++ b/guider_log.py
+@@ -17,6 +17,7 @@
+ from __future__ import annotations
+ 
+ import bisect
++import math
+ import re
+ from datetime import datetime, timedelta, timezone
+ 
+@@ -441,39 +442,71 @@
+     # ------------------------------------------------------------------ language-model schedule
+     def _clock(self, clock):
+         """Hours east of UTC of a clock named by the model ('local', 'UTC', 'UTC+9', 'Tokyo', 'UTC-13')."""
+-        c = str(clock or '').strip()
++        if clock is None or clock == '':
++            return self.off
++        if not isinstance(clock, str) or len(clock) > 160:
++            return None
++        c = clock.strip()
+         m = TZ_OFF.search(c)
+         if m:
+             h = int(m.group(2)) + (int(m.group(3)) / 60.0 if m.group(3) else 0.0)
++            if h > 14 or (m.group(3) and int(m.group(3)) >= 60) or m.end() < len(c) and c[m.end()].isdigit():
++                return None
+             return -h if m.group(1) in '-−－' else h
+-        if TZ_TOKYO.search(c):
++        if TZ_TOKYO.fullmatch(c):
+             return 9.0
+-        if re.search(r'\bUTC\b|GMT|世界时|協定世界時', c, re.I):
++        if re.fullmatch(r'UTC|GMT|世界时|協定世界時', c, re.I):
+             return 0.0
+-        return self.off
++        return self.off if re.fullmatch(r'local(?: time)?|本地|本站|当地|當地|現地', c, re.I) else None
+ 
+     @staticmethod
+     def _md(v):
+-        m = re.search(r'(\d{1,2})\s*/\s*(\d{1,2})', str(v or ''))
+-        return (int(m.group(1)), int(m.group(2))) if m else None
++        if not isinstance(v, str) or len(v) > 32:
++            return None
++        m = re.fullmatch(r'\s*(\d{1,2})\s*/\s*(\d{1,2})\s*', v)
++        if m:
++            mo, da = map(int, m.groups())
++            try:
++                datetime(2000, mo, da)  # permit Feb 29; _year_for checks the actual year
++                return mo, da
++            except ValueError:
++                pass
++        return None
+ 
+     @staticmethod
+     def _hm(v):
+-        m = re.search(r'(\d{1,2})\s*:\s*(\d{2})', str(v or ''))
+-        return (int(m.group(1)), int(m.group(2))) if m else None
++        if not isinstance(v, str) or len(v) > 32:
++            return None
++        m = re.fullmatch(r'\s*(\d{1,2})\s*:\s*(\d{2})\s*', v)
++        if m:
++            hh, mi = map(int, m.groups())
++            if (0 <= hh < 24 and 0 <= mi < 60) or (hh, mi) == (24, 0):
++                return hh, mi
++        return None
+ 
+     @staticmethod
+     def _int(v, default=0):
++        if v is None or v == '':
++            return default
++        if isinstance(v, bool) or not isinstance(v, (str, int, float)):
++            return None
++        if isinstance(v, str) and len(v) > 64 or isinstance(v, int) and v.bit_length() > 32:
++            return None
+         try:
+-            return int(round(float(str(v).strip())))
+-        except (TypeError, ValueError):
+-            return default
++            value = float(v)
++            return int(value) if math.isfinite(value) and value.is_integer() else None
++        except (TypeError, ValueError, OverflowError):
++            return None
+ 
+     def _night_windows(self, nd):
+-        return self.flat_nights.get(nd) or sorted(self._llm_nights.get(nd, []))
++        if not isinstance(nd, tuple) or len(nd) != 3 or not all(type(x) is int for x in nd):
++            return []
++        return sorted(set(self.flat_nights.get(nd, [])) | set(getattr(self, '_llm_nights', {}).get(nd, [])))
+ 
+     @staticmethod
+     def _label(v):
++        if not isinstance(v, str) or len(v) > 160:
++            return ''
+         k = re.sub(r'[\s\-‐－—_·.#№:：/()（）\[\]【】「」"\'“”]+', '', str(v or '')).upper()
+         return k if 2 <= len(k) <= 40 else ''
+ 
+@@ -492,6 +525,8 @@
+ 
+     def _date_of(self, f, issued, key='date'):
+         """(month, day) of an item: the verbatim date_text read by code when possible, else the model's M/D."""
++        if not isinstance(f, dict):
++            return None
+         md = self._md(f.get(key))
+         txt = f.get('date_text')
+         if date_from_text is not None and isinstance(txt, str) and txt.strip():
+@@ -506,6 +541,8 @@
+         return md
+ 
+     def _time_of(self, f, key='time', text_key='time_text'):
++        if not isinstance(f, dict):
++            return None
+         hm = self._hm(f.get(key))
+         txt = f.get(text_key)
+         if time_from_text is not None and isinstance(txt, str) and txt.strip():
+@@ -521,19 +558,31 @@
+ 
+     @staticmethod
+     def _src_line(quote, lines):
+-        """The log line a model quote was copied from (None if it cannot be found)."""
+-        q = re.sub(r'\s+', '', str(quote or ''))
+-        if not lines or len(q) < 4:
+-            return None
+-        for k in (q[:16], q[-16:]):
+-            for ln in lines:
+-                if k in re.sub(r'\s+', '', ln):
+-                    return ln
+-        return None
++        """Prefer a unique complete quote; ambiguous short prefixes give no evidence."""
++        if not isinstance(quote, str) or not isinstance(lines, list) or len(quote) > 4096:
++            return None
++        q = re.sub(r'\s+', '', quote)
++        if len(q) < 4:
++            return None
++        source = [(ln, re.sub(r'\s+', '', ln)) for ln in lines[:400]
++                  if isinstance(ln, str) and len(ln) <= 12000]
++        hits = {ln for ln, normalized in source if q in normalized}
++        if len(hits) == 1:
++            return next(iter(hits))
++        if hits:
++            return None
++        hits = {ln for ln, normalized in source if q[:16] in normalized and q[-16:] in normalized}
++        return next(iter(hits)) if len(hits) == 1 else None
+ 
+     def _when(self, f, hm, tz, issued, lines=None):
+         """UTC epoch of an as-written time: calendar date `date`, or `night` (after-midnight times on the next day)."""
+-        txt = str(f.get('date_text') or '')
++        if not isinstance(f, dict) or not isinstance(hm, tuple) or len(hm) != 2 or tz is None:
++            return None
++        if not all(type(x) is int for x in hm) or not (0 <= hm[0] < 24 and 0 <= hm[1] < 60 or hm == (24, 0)):
++            return None
++        if isinstance(tz, bool) or not isinstance(tz, (int, float)) or not math.isfinite(tz) or abs(tz) > 14:
++            return None
++        txt = f.get('date_text') if isinstance(f.get('date_text'), str) else ''
+         nm = self._md(f.get('night'))
+         md = self._date_of(f, issued)
+         night = nm is not None and (md is None or (md == nm and self._NIGHT_W.search(txt)))
+@@ -550,10 +599,21 @@
+ 
+     def llm_time(self, f, issued, lines=None):
+         """UTC epoch of a model fault item from its as-written parts (the model does no clock arithmetic)."""
+-        rel = f.get('relative_to') if isinstance(f.get('relative_to'), dict) else {}
+-        kind = str(rel.get('kind', 'none')).strip().lower()
++        if not isinstance(f, dict):
++            return None
++        rel = f.get('relative_to')
++        if rel is None:
++            rel = {}
++        if not isinstance(rel, dict):
++            return None
++        kind = rel.get('kind', 'none')
++        if not isinstance(kind, str):
++            return None
++        kind = kind.strip().lower()
++        if kind not in ('none', 'window_end', 'window_start', 'job'):
++            return None
+         shift = self._int(f.get('shift_minutes'), 0)
+-        if abs(shift) > 24 * 60:
++        if shift is None or abs(shift) > 24 * 60:
+             return None
+         if kind in ('window_end', 'window_start'):
+             w = self._label_window(rel.get('label'), issued)
+@@ -563,8 +623,8 @@
+                     return None
+                 nd = self._night_date(md[0], md[1], issued)
+                 wins = self._night_windows(nd)
+-                idx = max(1, self._int(rel.get('index'), 1))
+-                if not wins or len(wins) < idx:
++                idx = self._int(rel.get('index'), 1)
++                if idx is None or idx < 1 or not wins or len(wins) < idx:
+                     return None
+                 w = wins[idx - 1]
+             base = w[1] if kind == 'window_end' else w[0]
+@@ -594,12 +654,16 @@
+ 
+     def llm_window(self, w, issued, lines=None):
+         """(start, end, local night date) of a model window: calendar `date` (+ `end_date`) or `night` semantics."""
++        if not isinstance(w, dict):
++            return None
+         a, b = self._hm(w.get('start')), self._hm(w.get('end'))
+         if a is None or b is None:
+             return None
+         tz = self._clock(w.get('clock'))
++        if tz is None:
++            return None
+         md = self._date_of(w, issued) or self._md(w.get('start_date'))
+-        if md is not None and self._md(w.get('night')) is not None and self._NIGHT_W.search(str(w.get('date_text') or '')):
++        if md is not None and self._md(w.get('night')) is not None and self._NIGHT_W.search(w.get('date_text') if isinstance(w.get('date_text'), str) else ''):
+             src = self._src_line(w.get('quote'), lines)
+             if src is None or self._NIGHT_W.search(src):
+                 md = None             # "10/4 当晚 01:15": a night, not a calendar date
+@@ -608,7 +672,11 @@
+             if ta is None:
+                 return None
+             ed = self._md(w.get('end_date'))
++            if w.get('end_date') not in (None, '') and ed is None:
++                return None
+             tb = self._utc(ed[0], ed[1], b[0], b[1], tz, issued) if ed is not None else None
++            if ed is not None and tb is None:
++                return None
+             if tb is None:
+                 tb = ta + ((b[0] * 60 + b[1]) - (a[0] * 60 + a[1])) * 60.0
+                 if tb <= ta:
+@@ -652,17 +720,40 @@
+         if not hasattr(self, '_llm_nights'):
+             self._llm_nights = {}
+         n = {'agree': 0, 'new': 0, 'withdrawn': 0, 'win': 0, 'active': 0, 'bad': 0}
++        keys = ('fault_starts', 'lost_windows', 'closures', 'active_faults')
++        if not isinstance(res, dict) or not any(k in res for k in keys):
++            n['bad'] = 1
++            return n
++        upper = min(issued + horizon, self.t1 if self.t1 is not None else float('inf'))
++        strict = strict and res.get('_complete', True) is True
++        prepared = {}
++        for key in keys:
++            values = res.get(key, [])
++            if not isinstance(values, list):
++                n['bad'] += 1
++                strict = False
++                values = []
++            if len(values) > 480:
++                strict = False
++            prepared[key] = []
++            for value in values[:480]:
++                if isinstance(value, dict):
++                    prepared[key].append(value)
++                else:
++                    n['bad'] += 1
++                    strict = False
+         self.ver += 1
+         if not hasattr(self, '_labels'):
+             self._labels = {}
+-        groups = {}       # (date, clock) -> [first start was in the evening, an evening start was seen]
+-        for w in list(res.get('lost_windows', [])):      # closures (rain, maintenance) are left to the weather logic
++        groups = {}       # A midnight roll is scoped to one quoted source line.
++        for w in prepared['lost_windows']:      # closures (rain, maintenance) are left to the weather logic
+             if not isinstance(w, dict):
+                 continue
+             roll = False
+             hm0 = self._hm(w.get('start'))
+-            if hm0 is not None and self._md(w.get('date')) is not None and not self._md(w.get('night')):
+-                g = groups.setdefault((str(w.get('date')).strip(), str(w.get('clock', '')).strip().lower()),
++            src = self._src_line(w.get('quote'), lines)
++            if src is not None and hm0 is not None and self._md(w.get('date')) is not None and not self._md(w.get('night')):
++                g = groups.setdefault((self._md(w.get('date')), self._clock(w.get('clock')), src),
+                                       [hm0[0] >= 12, False])
+                 if hm0[0] >= 12:
+                     g[1] = True
+@@ -677,8 +768,9 @@
+                 a, b = a + 86400.0, b + 86400.0
+                 lt = datetime.fromtimestamp(a + self.off * 3600.0 - 12 * 3600.0, tz=timezone.utc)
+                 nd = (lt.year, lt.month, lt.day)
+-            if not (issued - 86400 <= a <= issued + horizon):
+-                continue
++            if not (issued - 86400 <= a < upper):
++                continue
++            b = min(b, upper)
+             same = [(x, y) for (x, y) in self.flats if x < b and a < y]
+             if not same:
+                 pn = self.flat_nights.get(nd, [])
+@@ -687,7 +779,8 @@
+                 if len(pn) >= 2 or day_off:
+                     n['bad'] += 1      # the parser read that night's list (or this is a day-shifted copy)
+                     continue
+-            self._llm_nights.setdefault(nd, set()).add((a, b))
++            if not same:
++                self._llm_nights.setdefault(nd, set()).add((a, b))
+             k = self._label(w.get('label'))
+             if k:
+                 ab = min(same, key=lambda xy: abs(xy[0] - a)) if same else (a, b)
+@@ -700,20 +793,30 @@
+             self.flats[(a, b)] = 'llm'
+             n['win'] += 1
+         items = []
+-        for f in res.get('fault_starts', []):
++        for f in prepared['fault_starts']:
+             if not isinstance(f, dict):
+                 continue
+             t = self.llm_time(f, issued, lines)
+             if t is None:
+                 n['bad'] += 1
+-                continue
+-            if not (issued - 2 * 86400 <= t <= issued + horizon):
+-                continue
+-            items.append((t, str(f.get('status', '')).strip().lower(), f))
++                strict = False
++                continue
++            if not (issued - 2 * 86400 <= t < upper):
++                continue
++            status = f.get('status')
++            if not isinstance(status, str):
++                n['bad'] += 1
++                strict = False
++                continue
++            status = status.strip().lower()
++            if status not in ('confirmed', 'conditional', 'cancelled', 'wrong', 'rumour', 'rumor', 'uncertain'):
++                strict = False
++            items.append((t, status, f))
+         confirmed = set()
+         for (t, st, f) in items:               # confirmations first: a slip in a withdrawal cannot undo them
+             if st not in ('confirmed', 'conditional'):
+                 continue
++            self.active = True
+             k = self._key(t)
+             confirmed.update(range(k - 2, k + 3))
+             near = [self.cands[kk] for kk in (k - 2, k - 1, k, k + 1, k + 2) if kk in self.cands]
+@@ -726,9 +829,12 @@
+                             c['st'], c['dg'] = 'official', False     # confirmed after all: report on time
+                 n['agree'] += 1
+             elif not any(c['void'] for c in near):
+-                self._add(t, 'llm', issued, 'LLM: ' + str(f.get('quote', ''))[:80])
+-                self.cands[self._key(t)]['llm_ok'] = True
+-                n['new'] += 1
++                quote = f.get('quote') if isinstance(f.get('quote'), str) else ''
++                self._add(t, 'llm', issued, 'LLM: ' + quote[:80])
++                candidate = self.cands.get(self._key(t))
++                if candidate is not None:
++                    candidate['llm_ok'] = st == 'confirmed'
++                    n['new'] += 1
+         if strict:
+             # a time the parser takes as stated but the model, reading the same section, does not confirm
+             # (rumour, condition, withdrawal, or a different reading): confirm it on the data before reporting
+@@ -745,18 +851,29 @@
+                 continue
+             for kk in (k - 2, k - 1, k, k + 1, k + 2):
+                 c = self.cands.get(kk)
+-                if c is not None and c['st'] == 'official' and not c['void'] and not c.get('llm_ok'):
++                if c is not None and c['st'] == 'official' and not c['void']:
++                    c['llm_ok'], c['dg'] = False, True
+                     c['st'] = 'alt'          # the parser and the model disagree: look before reporting
+                     n['withdrawn'] += 1
+-        for f in res.get('active_faults', []):
++        for f in prepared['active_faults']:
++            if not isinstance(f.get('quote'), str) or not f['quote'].strip():
++                n['bad'] += 1
++                continue
++            tz = self._clock(f.get('clock'))
++            if tz is None:
++                n['bad'] += 1
++                continue
+             md, hm = self._md(f.get('date')), self._hm(f.get('time'))
+             t = None
+             if md is not None and hm is not None:
+-                t = self._utc(md[0], md[1], hm[0], hm[1], self._clock(f.get('clock')), issued)
++                t = self._utc(md[0], md[1], hm[0], hm[1], tz, issued)
+             t = issued if t is None or t > issued + 1800 or t < issued - 2 * 86400 else t
+             k = self._key(t)
++            if max(t, issued) >= upper:
++                continue
+             if not any(kk in self.cands and not self.cands[kk]['void'] for kk in range(k - 30, k + 31)):
+                 self._add(max(t, issued), 'llm', issued, 'LLM active: ' + str(f.get('quote', ''))[:80])
++                self.active = True
+                 n['active'] += 1
+         return n
+ 
+--- a/llm_strategist.py
++++ b/llm_strategist.py
+@@ -34,6 +34,8 @@
+ from __future__ import annotations
+ 
+ import json
++import math
++import queue
+ import os
+ import random
+ import re
+@@ -486,13 +488,25 @@
+ 
+ 
+ def duty_calendar(issued, utc_offset, before=7, after=21):
+-    """Local dates around the handover day for the model to look relative dates and weekdays up (no arithmetic)."""
++    """Bounded local calendar; malformed anchors cannot interrupt the rule reader."""
+     import datetime as _dt
+-    d0 = _dt.datetime.fromtimestamp(float(issued) + float(utc_offset) * 3600.0, tz=_dt.timezone.utc).date()
++    try:
++        if isinstance(issued, bool) or isinstance(utc_offset, bool):
++            return []
++        stamp, offset = float(issued), float(utc_offset)
++        if not math.isfinite(stamp) or not math.isfinite(offset) or abs(offset) > 14:
++            return []
++        d0 = _dt.datetime.fromtimestamp(stamp + offset * 3600.0, tz=_dt.timezone.utc).date()
++        before, after = min(60, max(0, int(before))), min(60, max(0, int(after)))
++    except (TypeError, ValueError, OverflowError, OSError):
++        return []
+     rel = {-2: ' 前天', -1: ' 昨天', 0: ' 今天 handover day', 1: ' 明天', 2: ' 后天'}
+     out = []
+     for k in range(-before, after + 1):
+-        d = d0 + _dt.timedelta(days=k)
++        try:
++            d = d0 + _dt.timedelta(days=k)
++        except OverflowError:
++            continue
+         out.append('D%+d %d/%d %s 周%s%s' % (k, d.month, d.day, d.strftime('%a'), '一二三四五六日'[d.weekday()],
+                                             rel.get(k, '')))
+     return out
+@@ -525,14 +539,25 @@
+     _NOT_RULE = re.compile(r'英文按约定凯撒|老规矩，凯撒|シーザー暗号|加密了|凯撒，偏移|凯撒过了|凱撒')
+ 
+     def _remember_rules(self, lines, hints):
+-        for i, ln in enumerate(lines):
++        if not isinstance(lines, list):
++            return
++        hints = hints if isinstance(hints, dict) else {}
++
++        def key(txt):
++            return re.sub(r'[^\u4e00-\u9fffA-Za-z0-9]+', '', txt.replace('報', '报').replace('後', '后'))
++
++        for i, ln in enumerate(lines[:400]):
++            if not isinstance(ln, str):
++                continue
+             txt = hints.get(str(i)) or ln
+-            key = re.sub(r'[^\u4e00-\u9fffA-Za-z0-9]+', '', txt.replace('報', '报').replace('後', '后'))[:40]
+-            if len(txt) < 400 and self._RULE.search(ln) and not self._NOT_RULE.search(ln) and key not in self._rule_keys:
+-                self._rule_keys.add(key)
+-                self.rules.append(txt[:400])
+-        if len(self.rules) > 12:
+-            self.rules = self.rules[-12:]
++            if not isinstance(txt, str):
++                continue
++            if len(txt) < 400 and self._RULE.search(ln) and not self._NOT_RULE.search(ln):
++                k = key(txt)
++                self.rules = [rule for rule in self.rules if key(rule) != k]
++                self.rules.append(txt)
++                self.rules = self.rules[-12:]
++        self._rule_keys = {key(rule) for rule in self.rules}
+ 
+     def usable(self, real_left=None):
+         if not self.enabled or self.dead or self.calls >= self.max_calls or self.wall >= self.wall_cap:
+@@ -540,29 +565,60 @@
+         return real_left is None or real_left > self.question_deadline + 120.0
+ 
+     def read(self, lines, hints, local_now, utc_offset, known, real_left=None, issued=None, chunk_chars=12000):
+-        """Read one log section; a long section is asked in overlapping chunks (answers are concatenated)."""
+-        spans, lo, n = [], 0, len(lines)
+-        while lo < n:
++        """Read up to four bounded overlapping chunks; flag lost coverage before a strict merge."""
++        if not isinstance(lines, list) or not lines or not self.usable(real_left):
++            return None
++        t0 = time.monotonic()
++        if isinstance(chunk_chars, bool) or not isinstance(chunk_chars, int):
++            chunk_chars = 12000
++        budget = min(12000, max(256, chunk_chars))
++        complete = len(lines) <= 400
++        entries = []
++        for i, ln in enumerate(lines[:400]):
++            if not isinstance(ln, str):
++                complete = False
++                continue
++            if len(ln) >= budget:
++                complete = False
++            entries.append((i, ln[:budget - 1]))
++        if not entries:
++            return None
++        safe_hints = {}
++        if isinstance(hints, dict):
++            for count, (key, value) in enumerate(hints.items()):
++                if count >= 400:
++                    break
++                if isinstance(key, int) and not isinstance(key, bool) and 0 <= key < 400:
++                    key = str(key)
++                if isinstance(key, str) and re.fullmatch(r'[0-9]{1,3}', key) and isinstance(value, str):
++                    safe_hints[int(key)] = value[:12000]
++        cal = duty_calendar(issued, utc_offset) if issued is not None else None
++        keys = ('fault_starts', 'lost_windows', 'closures', 'active_faults')
++        out, lo, n = None, 0, len(entries)
++        for _ in range(4):
++            if lo >= n:
++                break
+             hi, size = lo, 0
+-            while hi < n and (hi == lo or size + len(lines[hi]) <= chunk_chars):
+-                size += len(lines[hi]) + 1
++            while hi < n and size + len(entries[hi][1]) + 1 <= budget:
++                size += len(entries[hi][1]) + 1
+                 hi += 1
+-            spans.append((lo, hi))
++            sub = {str(j): safe_hints[i] for j, (i, _) in enumerate(entries[lo:hi]) if i in safe_hints}
++            remaining = None if real_left is None else real_left - (time.monotonic() - t0)
++            res = self._read1([ln for _, ln in entries[lo:hi]], sub, local_now, utc_offset, known, remaining, cal)
++            if res is None:
++                complete = False
++            else:
++                complete = complete and res.get('_complete', False)
++                if out is None:
++                    out = {k: [] for k in keys}
++                for k in keys:
++                    out[k].extend(res[k])
+             if hi >= n:
++                lo = n
+                 break
+             lo = max(lo + 1, hi - 6)
+-        out = None
+-        cal = duty_calendar(issued, utc_offset) if issued is not None else None
+-        for (lo, hi) in spans[:4]:
+-            sub = {str(int(k) - lo): v for k, v in hints.items() if str(k).isdigit() and lo <= int(k) < hi}
+-            res = self._read1(lines[lo:hi], sub, local_now, utc_offset, known, real_left, cal)
+-            if res is None:
+-                continue
+-            if out is None:
+-                out = res
+-            else:
+-                for k in out:
+-                    out[k] = out[k] + res.get(k, [])
++        if out is not None:
++            out['_complete'] = bool(complete and lo >= n)
+         return out
+ 
+     def _read1(self, lines, hints, local_now, utc_offset, known, real_left, cal):
+@@ -582,9 +638,27 @@
+             payload['calendar'] = cal
+         user = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
+         self._remember_rules(lines, hints)
+-        deadline = t0 + min(self.question_deadline, max(10.0, self.wall_cap - self.wall))
+-        answer, info = self.client.ask(DUTY_SYSTEM_PROMPT, user, self.attempt_timeout, deadline, max_attempts=4,
+-                                       max_tokens=8000)
++        deadline = t0 + min(self.question_deadline, max(0.0, self.wall_cap - self.wall))
++        # urllib's socket timeout is not a total response deadline (a trickling
++        # body can keep resetting it). Bound the synchronous caller as well.
++        result = queue.Queue(maxsize=1)
++        client, attempt_timeout = self.client, self.attempt_timeout
++
++        def ask_bounded():
++            try:
++                answer, info = client.ask(DUTY_SYSTEM_PROMPT, user, attempt_timeout, deadline,
++                                          max_attempts=4, max_tokens=8000)
++                result.put((answer, info if isinstance(info, dict) else {}))
++            except Exception as exc:
++                result.put((None, {'error': type(exc).__name__}))
++
++        try:
++            threading.Thread(target=ask_bounded, daemon=True, name='duty-reader').start()
++            answer, info = result.get(timeout=max(0.0, deadline - time.monotonic()))
++        except queue.Empty:
++            answer, info = None, {'error': 'hard deadline', 'fatal': True}
++        except Exception as exc:
++            answer, info = None, {'error': type(exc).__name__, 'fatal': True}
+         dt = time.monotonic() - t0
+         self.wall += dt
+         if info.get('fatal'):
+@@ -606,19 +680,50 @@
+ 
+     @staticmethod
+     def _clean(answer):
+-        if not isinstance(answer, dict):
++        keys = ('fault_starts', 'lost_windows', 'closures', 'active_faults')
++        if not isinstance(answer, dict) or not any(k in answer for k in keys):
+             return None
+         out = {}
++        complete = all(isinstance(answer.get(k), list) for k in keys)
++        allowed = ('date', 'time', 'clock', 'shift_minutes', 'status', 'condition', 'quote',
++                   'night', 'start_date', 'start', 'end', 'what', 'date_text', 'time_text', 'label', 'end_date')
++
++        def scalar(value, limit):
++            if isinstance(value, str):
++                return value[:limit]
++            if isinstance(value, bool) or not isinstance(value, (int, float)):
++                return '__invalid__'
++            if isinstance(value, int) and value.bit_length() > 512:
++                return '__invalid__'
++            if isinstance(value, float) and not math.isfinite(value):
++                return '__invalid__'
++            return str(value)[:limit]
++
+         for k in ('fault_starts', 'lost_windows', 'closures', 'active_faults'):
+             v = answer.get(k)
+             items = []
+             if isinstance(v, list):
++                if len(v) > 120:
++                    complete = False
+                 for it in v[:120]:
+                     if isinstance(it, dict):
+-                        d = {kk: str(vv)[:160] for kk, vv in it.items() if isinstance(vv, (str, int, float))}
+-                        if isinstance(it.get('relative_to'), dict):
+-                            d['relative_to'] = {kk: str(vv)[:40] for kk, vv in it['relative_to'].items()
+-                                                if isinstance(vv, (str, int, float))}
+-                        items.append(d)
++                        d = {kk: scalar(it[kk], 160) for kk in allowed if kk in it}
++                        if 'quote' in it and not isinstance(it['quote'], str):
++                            d['quote'] = ''
++                        if 'relative_to' in it:
++                            rel = it['relative_to']
++                            if isinstance(rel, dict):
++                                d['relative_to'] = {kk: scalar(rel[kk], 40) for kk in ('kind', 'date', 'index', 'label') if kk in rel}
++                            elif rel is not None:
++                                d['relative_to'] = '__invalid__'
++                        if d:
++                            items.append(d)
++                            if any(value == '__invalid__' for value in d.values() if isinstance(value, str)):
++                                complete = False
++                        else:
++                            complete = False
++                    else:
++                        complete = False
+             out[k] = items
++        out['_complete'] = complete
+         return out
+--- a/policy.py
++++ b/policy.py
+@@ -2121,11 +2121,16 @@
+         try:
+             from guider_log import prep
+             from log_reader import decode_english, _INVIS, _FW
+-            lines = [ln.strip() for ln in text.split('\n') if ln.strip()][:400]
++            all_lines = [ln.strip() for ln in text.split('\n') if ln.strip()]
++            complete = len(all_lines) <= 400
++            lines = all_lines[:400]
+             if not lines:
+                 return
+             hints = {}
+             for i, raw in enumerate(lines):
++                if len(raw) > 12000:
++                    complete = False
++                    continue
+                 r0 = raw.translate(_INVIS).translate(_FW)
+                 e = prep(raw)
+                 if decode_english(r0) != r0 or re.findall(r'\d{1,2}:\d{2}', e) != re.findall(r'\d{1,2}:\d{2}', r0):
+@@ -2139,6 +2144,8 @@
+             res = self.dlm.read(lines, hints, time.strftime('%Y-%m-%d %H:%M (%A)', time.gmtime(issued + off_s)),
+                                 off_s / 3600.0, known, real_left=real_left, issued=issued)
+             if res:
++                if not complete:
++                    res = dict(res, _complete=False)
+                 n = self.glog.add_llm(res, issued, lines=lines)
+                 _log(dict({'event': 'duty', 't': fmt_utc(issued)}, **n))
+         except Exception:
+@@ -2237,7 +2244,7 @@
+             self.g_false += 1
+             self.false_since_correct += 1
+             if why.get('why') == 'dead':
+-                self.g_dead_hold = now + min(8 * 3600.0, self.p['g_dead_wait'] * 2.0 ** self.g_dead_false)
++                self.g_dead_hold = now + min(8 * 3600.0, self.p['g_dead_wait'] * 2.0 ** min(1023, self.g_dead_false))
+                 self.g_dead_false += 1
+                 self.g_dead_since = None
+                 self.g_dead_n = 0
+@@ -2258,14 +2265,21 @@
+         mid = start + 0.5 * T
+         m, _ = self.bel.peek(mid, night, act)
+         leta = self.bel.leta + math.log(max(1e-6, self.bel.quake_factor(mid, 1.0, night)))
++        if not math.isfinite(m + leta) or m + leta > 700:
++            return None
+         k0 = self.flux[idx] * T * H / (self.q0 * self.f0t0)
+         pred = np.minimum(1.0, k0 * math.exp(m + leta))
+-        ok = (pred > 1e-3) & (pred < 0.9)
++        finite = np.isfinite(pred) & np.isfinite(y) & (y >= 0)
++        if not math.isfinite(self.mult[P]) or self.mult[P] <= 0:
++            return None
++        ok = finite & (pred > 1e-3) & (pred < 0.9)
+         if np.count_nonzero(ok) < 2:
+-            ok = pred > 1e-3
++            ok = finite & (pred > 1e-3)
+         if not np.any(ok):
+             return None
+-        return float(np.median(y[ok] / (self.mult[P] * pred[ok])))
++        ratios = y[ok] / (self.mult[P] * pred[ok])
++        ratios = ratios[np.isfinite(ratios)]
++        return float(np.median(ratios)) if len(ratios) else None
+ 
+     def _guider_obs(self, start, T, now, night, idx, y, H, P, act):
+         """Probe verdicts and the near-zero check for one exposure; True keeps it out of the belief."""
+--- a/when_text.py
++++ b/when_text.py
+@@ -30,10 +30,12 @@
+ 
+ def _num(tok):
+     """1-59 from digits, English words ('forty-five', 'twenty one', 'third') or Chinese numerals; else None."""
+-    s = str(tok or '').strip().lower().replace('–', '-')
++    if not isinstance(tok, str) or len(tok) > 64:
++        return None
++    s = tok.strip().lower().replace('–', '-')
+     if not s:
+         return None
+-    if s.isdigit():
++    if re.fullmatch(r'[0-9]{1,2}', s):
+         return int(s)
+     if s in _WORD:
+         return _WORD[s]
+@@ -56,16 +58,16 @@
+ 
+ def date_from_text(txt, d0):
+     """(month, day) of an as-written date; relative words count from d0 (the handover day, a datetime.date)."""
+-    if not txt or not isinstance(txt, str):
++    if not isinstance(txt, str) or not txt or len(txt) > 1024:
+         return None
+     e = normalise(txt.translate(_INVIS)).lower()
+     m = re.search(r'(\d{4})\s*[-/.]\s*(\d{1,2})\s*[-/.]\s*(\d{1,2})', e)
+     if m:
+-        return _ok(int(m.group(2)), int(m.group(3)))
++        return _ok(int(m.group(2)), int(m.group(3)), int(m.group(1)))
+     m = re.search(r'(\d{1,2})\s*月\s*(\d{1,2})\s*[日号號]', e)
+     if m:
+         return _ok(int(m.group(1)), int(m.group(2)))
+-    m = re.search(r'(?<![\d.:])(\d{1,2})\s*/\s*(\d{1,2})(?![\d/:])', e)
++    m = re.search(r'(?<![\d.:+-])(\d{1,2})\s*/\s*(\d{1,2})(?![\d/:])', e)
+     if m:
+         return _ok(int(m.group(1)), int(m.group(2)))
+     m = re.search(r'\b' + _MON + r'\s+(?:the\s+)?' + _NUMW + r'\b', e)
+@@ -82,7 +84,7 @@
+             d = _num(m.group(1).split()[-1])
+         if d is not None:
+             return _ok(_MONTHS[m.group(2)[:3]], d)
+-    if d0 is None:
++    if not isinstance(d0, date):
+         return None
+     m = re.search(r'(?:之|以)?[后後]\s*第\s*([\d一二两三四五六七八九十]+)\s*[天日]', e) or \
+         re.search(r'([\d一二两三四五六七八九十]+)\s*[天日]\s*(?:之|以)?[后後]', e) or \
+@@ -90,47 +92,60 @@
+     if m:
+         k = _num(m.group(1))
+         if k is not None and 0 <= k <= 40:
+-            d = d0 + timedelta(days=k)
+-            return d.month, d.day
++            return _relative(d0, k)
+     m = re.search(r'(?:之|以)?前\s*第\s*([\d一二两三四五六七八九十]+)\s*[天日]', e) or \
+         re.search(r'([\d一二两三四五六七八九十]+)\s*days?\s+before', e)
+     if m:
+         k = _num(m.group(1))
+         if k is not None and 0 <= k <= 40:
+-            d = d0 - timedelta(days=k)
+-            return d.month, d.day
++            return _relative(d0, -k)
+     for pat, k in _REL:
+         if re.search(pat, e):
+-            d = d0 + timedelta(days=k)
+-            return d.month, d.day
++            return _relative(d0, k)
+     return None
+ 
+ 
+-def _ok(mo, da):
+-    return (mo, da) if 1 <= mo <= 12 and 1 <= da <= 31 else None
+-
+-
+-_PM = r'(p\.?\s?m\.?|\bpm\b|in the (?:afternoon|evening)|午後|下午|晚上|傍晚)'
+-_AM = r'(a\.?\s?m\.?|\bam\b|in the morning|午前|上午|凌晨|早上|清晨|早晨)'
++def _ok(mo, da, year=2000):
++    try:
++        date(year, mo, da)
++        return mo, da
++    except (ValueError, TypeError, OverflowError):
++        return None
++
++
++def _relative(d0, days):
++    try:
++        d = d0 + timedelta(days=days)
++        return d.month, d.day
++    except (ValueError, TypeError, OverflowError):
++        return None
++
++
++_PM = r'(\bp\.?\s?m\.?\b|\bpm\b|in the (?:afternoon|evening)|午後|下午|晚上|傍晚)'
++_AM = r'(\ba\.?\s?m\.?\b|\bam\b|in the morning|午前|上午|凌晨|早上|清晨|早晨)'
+ 
+ 
+ def time_from_text(txt):
+     """(hour, minute) 24 h of an as-written time: H:MM (+ a.m./p.m./午後/晚上), '2130 hours', '21h30', English
+     words ('quarter to eleven p.m.', 'half past ten', 'ten forty-five'), noon / midnight; else None."""
+-    if not txt or not isinstance(txt, str):
++    if not isinstance(txt, str) or not txt or len(txt) > 1024:
+         return None
+     e = normalise(txt.translate(_INVIS)).lower().strip()
+     pm, am = re.search(_PM, e), re.search(_AM, e)
++    if pm and am:
++        return None
+ 
+     def ampm(h, mi):
+         if not (0 <= h <= 24 and 0 <= mi <= 59):
+             return None
++        if h == 24:
++            return (24, 0) if mi == 0 and not (am or pm) else None
+         if pm and not am and h < 12:
+             h += 12
+         elif am and not pm and h == 12:
+             h = 0
+-        return (h % 24, mi)
+-    m = re.search(r'(?<![\d/])(\d{1,2})\s*[:：]\s*(\d{2})(?!\d)', e)
++        return (h, mi)
++    m = re.search(r'(?<![\d/+-])(\d{1,2})\s*[:：]\s*(\d{2})(?!\d)', e)
+     if m:
+         return ampm(int(m.group(1)), int(m.group(2)))
+     m = re.search(r'(\d{1,2})\s*時\s*(\d{1,2})\s*分', e)
+@@ -151,6 +166,13 @@
+     if re.search(r'\bnoon\b|正午|中午十二点', e):
+         return (11, 45) if 'quarter to noon' in e else (12, 0)
+     w = r'([a-z]+(?:-[a-z]+)?)'
++
++    def before_hour(h, mi):
++        target = ampm(h, 0)
++        if target is None or not 0 < mi < 60:
++            return None
++        total = (target[0] * 60 - mi) % 1440
++        return divmod(total, 60)
+     m = re.search(r'quarter past ' + w, e) or re.search(r'quarter after ' + w, e)
+     if m and _num(m.group(1)) is not None:
+         return ampm(_num(m.group(1)), 15)
+@@ -159,13 +181,13 @@
+         return ampm(_num(m.group(1)), 30)
+     m = re.search(r'quarter to ' + w, e)
+     if m and _num(m.group(1)) is not None:
+-        return ampm((_num(m.group(1)) - 1) % 12 or 12, 45)
++        return before_hour(_num(m.group(1)), 15)
+     m = re.search(w + r' (?:minutes? )?past ' + w, e)
+     if m and _num(m.group(1)) is not None and _num(m.group(2)) is not None:
+         return ampm(_num(m.group(2)), _num(m.group(1)))
+     m = re.search(w + r' (?:minutes? )?to ' + w, e)
+     if m and _num(m.group(1)) is not None and _num(m.group(2)) is not None:
+-        return ampm((_num(m.group(2)) - 1) % 12 or 12, 60 - _num(m.group(1)))
++        return before_hour(_num(m.group(2)), _num(m.group(1)))
+     m = re.search(w + r" o'?clock", e)
+     if m and _num(m.group(1)) is not None:
+         return ampm(_num(m.group(1)), 0)

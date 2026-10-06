@@ -9,6 +9,7 @@ Field (centre, T, P) maximises sum over fibre cells of the best target value, di
 from __future__ import annotations
 
 import ctypes
+import re
 import json
 import math
 import os
@@ -132,6 +133,28 @@ DEFAULTS = {
                            #    (llm_strategist.LogAnalyst); its items count only if their quote occurs in the log and
                            #    an announced time also occurs in that quote; one false report switches it off
     'log_llm_calls': 40,   # at most this many log questions per run
+    'anchor_sep': 0.3,     # minimum anchor spacing as a fraction of the field width (0.3 keeps at least one fibre
+                           #    pitch; smaller values allow closer anchors, 0 none): on crowded cards with sparse fibre
+                           #    fill the best field is often anchored on a lower-ranked target near a better one
+    'guider': 0,           # 1: read guider-camera jobs and flat-lamp tests from the log (guider_log.GuiderLog): report a
+                           #    stated job g_delay s after its time, probe unsure / rain-postponed times with a short
+                           #    exposure, wait out the flat-lamp windows, keep fault / test data out of the belief, and
+                           #    report a run of near-zero throughput that no test window explains
+    'g_delay': 120.0,      # report a stated guider job this long after its time (s)
+    'g_probe_T': 120,      # exposure cap while probing a candidate time or watching near-zero data (s)
+    'g_low': 0.6,          # probe: throughput ratio below this confirms the job
+    'g_low_llm': 0.5,      # the same for a time only the language model reported (precursors, code words: be stricter)
+    'g_dead': 0.03,        # throughput ratio below this is 'dead' (a guider fault past its first hour, or a test;
+                           # thick cloud leaves 0.03-0.1, a fault ~0.005)
+    'g_step': 0.6,         # probe: the drop must also be this deep against the hour before the candidate time
+    'g_many_correct': 7,   # this many correct reports mark a fault-rich card even if its log says nothing
+                           # (the original cards had at most 6 faults a season; the belief caps at 8)
+    'g_dead_wait': 2100.0, # with no free false report left, report dead data only after it lasted this long (s)
+    'duty_llm': 0,         # 1: a language model reads every duty-log section when it arrives (llm_strategist.DutyReader,
+                           #    synchronous: waiting for the model does not count against the CPU budget); its fault
+                           #    times are cross-checked with guider_log and confirmed on the throughput before a report
+    'duty_wall': 2700.0,   # real seconds the duty-log model may take in total on one card
+    'real_cap': 7200.0,    # the card's real-time safety limit (s); no model question starts close to it
     'ev_wide': 0.0,        # >0: prior sd floor of an announced all-sky event's log effect (the event multipliers are
                            #    card parameters), shrinking with the episodes seen; its mean is learned across episodes
     'sector_freeze': 0,    # 1: no fault evidence while an announced directional weather event is in force (its
@@ -1018,12 +1041,38 @@ class Policy:
         self.log_llm = None
         self.log_llm_meta = {}
         self.log_llm_off = False
+        self.glog = None
+        self.g_done = set()           # guider candidate keys handled (reported or dismissed)
+        self.g_probe = {}             # key -> candidate being probed (time passed, no verdict yet)
+        self.g_report = None          # report requested by the probe / dead-data check
+        self.g_dead_since = None
+        self.g_dead_hold = -1e18      # no dead-data report before this time (after a false one)
+        self.g_dead_false = 0         # false dead-data reports since the last correct report (the hold doubles)
+        self.g_dead_n = 0             # consecutive near-zero exposures (an all-zero closure exposure resets it)
+        self.g_hist = []              # recent (start, end, ratio) of exposures outside known test windows
+        self.g_correct = 0
+        self.g_false = 0
+        self.g_err = False
+        self.g_skip = 0
+        self.dlm = None
+        self.t_real0 = time.monotonic()
         if self.p['log_faults'] > 0:
             try:
                 from log_reader import LogReader
                 self.logr = LogReader(float(site.get('utc_offset_hours', 0.0) or 0.0),
                                       float(self.night_starts[0]) if len(self.night_starts) else None, self.survey_end)
                 self.log_off_s = float(site.get('utc_offset_hours', 0.0) or 0.0) * 3600.0
+                if self.p['guider'] > 0:
+                    from guider_log import GuiderLog
+                    self.glog = GuiderLog(float(site.get('utc_offset_hours', 0.0) or 0.0),
+                                          float(self.night_starts[0]) if len(self.night_starts) else None,
+                                          self.survey_end)
+                    self.logr.skip_new = True
+                    if self.p['duty_llm'] > 0:
+                        from llm_strategist import DutyReader
+                        self.dlm = DutyReader(wall_cap=float(self.p['duty_wall']))
+                        if not self.dlm.enabled:
+                            self.dlm = None
                 if self.p['log_llm'] > 0:
                     from llm_strategist import LogAnalyst
                     self.log_llm = LogAnalyst(max_calls=int(self.p['log_llm_calls']))
@@ -1406,6 +1455,12 @@ class Policy:
         kind = res.get('action')
         if kind == 'report':
             self.consec_reports += 1
+            gq = pend.get('guider') if pend else None
+            if gq is not None:
+                self._g_outcome(gq, bool(res.get('correct')), now)
+                self.pf_prev = 0.0
+                _log({'event': 'report_result', 'correct': res.get('correct'), 't': fmt_utc(now), 'g': gq.get('why')})
+                return
             lq = pend.get('log') if pend else None
             if lq is not None:
                 self._log_outcome(lq, bool(res.get('correct')), now)
@@ -1472,6 +1527,8 @@ class Policy:
         notes = list(pend.get('notices', []) or []) + list((snap.get('latest_bulletin') or {}).get('notices', []) or [])
         s0, s1 = int(start // self.slot), int((start + T - 1e-6) // self.slot)
         if np.all(zero):
+            self.g_dead_n = 0           # a closed site, not an instrument fault
+            self.g_dead_since = None
             if len(idx) >= 1:
                 high = all(amap.get(int(i), (90, 0))[0] >= 55.0 for i in idx)
                 away = (not th) or self.probe_fail >= 2 or all(self._terr_away(*amap[int(i)]) for i in idx if int(i) in amap)
@@ -1525,6 +1582,15 @@ class Policy:
             return
         mid = start + T / 2.0
         act = self._event_activity(pend, snap, start, T)
+        if self.glog is not None and (self.glog.active or self.glog.flats or self._g_many()):
+            try:
+                if self._guider_obs(start, T, now, night, idx[sel], y[sel], H, P, act):
+                    return          # guider-fault or flat-lamp data: keep it out of the belief
+            except Exception:
+                if not self.g_err:
+                    self.g_err = True
+                    import traceback
+                    traceback.print_exc(file=sys.stderr)
         omegas, wprior = self._omega_options(start, T)
         freeze = self.bel.learning_quake(night)
         if self.p['sector_freeze'] > 0 and not freeze:
@@ -1984,11 +2050,28 @@ class Policy:
             return {'action': 'wait', 'until_utc': fmt_utc(float(nxt[0]))}
         if self.log_llm is not None and not self.log_llm_off:
             self._log_llm_poll()
+        g_cap = None
+        if self.glog is not None:
+            try:
+                act, g_cap = self._guider_step(now, night)
+            except Exception:
+                act, g_cap = None, None
+                if not self.g_err:
+                    self.g_err = True
+                    import traceback
+                    traceback.print_exc(file=sys.stderr)
+            if act is not None:
+                return act
         if self.logr is not None and self.log_q:
             act = self._log_report(now)
             if act is not None:
                 return act
         left = self.night_ends[night] - now
+        if g_cap is not None and g_cap < left:
+            if g_cap < self.tmin:
+                # waits by duration must last 60-3600 s; a wait until a later moment has no minimum
+                return {'action': 'wait', 'until_utc': fmt_utc(now + max(1.0, math.ceil(g_cap)))}
+            left = g_cap
         if left < self.tmin:
             nxt = self.night_starts[self.night_starts > now]
             target = float(nxt[0]) if len(nxt) else self.survey_end
@@ -2037,12 +2120,275 @@ class Policy:
             return {'action': 'wait', 'duration_seconds': int(min(max(self.tmin, 600), max(self.tmin, left)))}
         return act
 
+    # ------------------------------------------------------------------ duty log read by the language model
+    def _duty_read(self, text, issued):
+        try:
+            from guider_log import prep
+            from log_reader import decode_english, _INVIS, _FW
+            all_lines = [ln.strip() for ln in text.split('\n') if ln.strip()]
+            complete = len(all_lines) <= 400
+            lines = all_lines[:400]
+            if not lines:
+                return
+            hints = {}
+            for i, raw in enumerate(lines):
+                if len(raw) > 12000:
+                    complete = False
+                    continue
+                r0 = raw.translate(_INVIS).translate(_FW)
+                e = prep(raw)
+                if decode_english(r0) != r0 or re.findall(r'\d{1,2}:\d{2}', e) != re.findall(r'\d{1,2}:\d{2}', r0):
+                    hints[str(i)] = re.sub(r'^\s*【[^】]{1,8}】', '', e)[:300]
+            off_s = self.log_off_s
+
+            def loc(t):
+                return time.strftime('%m/%d %H:%M', time.gmtime(t + off_s))
+            known = self.glog.known_summary(issued, loc)
+            real_left = float(self.p['real_cap']) - (time.monotonic() - self.t_real0)
+            res = self.dlm.read(lines, hints, time.strftime('%Y-%m-%d %H:%M (%A)', time.gmtime(issued + off_s)),
+                                off_s / 3600.0, known, real_left=real_left, issued=issued)
+            if res:
+                if not complete:
+                    res = dict(res, _complete=False)
+                n = self.glog.add_llm(res, issued, lines=lines)
+                _log(dict({'event': 'duty', 't': fmt_utc(issued)}, **n))
+        except Exception:
+            if not self.g_err:
+                self.g_err = True
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+
+    # ------------------------------------------------------------------ guider-camera jobs (guider_log)
+    def _g_key(self, c):
+        return int(round(c['t'] / 60.0))
+
+    def _guider_step(self, now, night):
+        """Report due guider jobs, arm probes, wait out flat-lamp windows; returns (action or None, exposure cap)."""
+        gl = self.glog
+        if not (gl.active or gl.flats or self._g_many()):
+            return None, None
+        if self.g_report is not None:
+            why, self.g_report = self.g_report, None
+            if self.consec_reports < 2:
+                return self._g_report(now, why), None
+        for c in gl.due():
+            k = self._g_key(c)
+            if k in self.g_done or c['t'] + self.p['g_delay'] > now:
+                continue
+            self.g_done.add(k)
+            self.g_probe.pop(k, None)
+            if self.last_correct_t >= c['t'] - 60.0:
+                continue            # repaired since by another report
+            return self._g_report(now, {'why': 'job', 'job_t': fmt_utc(c['t']), 'src': c['src'][:48]}), None
+        for c in gl.probes():
+            k = self._g_key(c)
+            if k in self.g_done or k in self.g_probe or c['t'] > now:
+                continue
+            if now - c['t'] > 3 * 86400.0:
+                self.g_done.add(k)
+                continue
+            self.g_probe[k] = c
+        for k, c in list(self.g_probe.items()):
+            if c.get('void') or self.last_correct_t >= c['t'] - 60.0 or (
+                    now - c['t'] > 3 * 3600.0 and c.get('looks', 0) >= 6):
+                self.g_probe.pop(k, None)
+                self.g_done.add(k)
+        w = gl.in_flat(now)
+        if w is not None:
+            return {'action': 'wait', 'until_utc': fmt_utc(min(w[1] + 1.0, float(self.night_ends[night])))}, None
+        cap = None
+        nf = gl.next_flat_start(now)
+        if nf is not None:
+            cap = nf - now
+        for c in gl.due() + gl.probes():
+            if self._g_key(c) in self.g_done:
+                continue
+            if c['t'] > now:
+                lim = c['t'] - now
+            elif c['st'] == 'official' and now < c['t'] + self.p['g_delay']:
+                lim = c['t'] + self.p['g_delay'] - now
+            else:
+                continue
+            cap = lim if cap is None else min(cap, lim)
+        if self.g_probe or self.g_dead_since is not None:
+            cap = float(self.p['g_probe_T']) if cap is None else min(cap, float(self.p['g_probe_T']))
+        return None, cap
+
+    def _g_report(self, now, why):
+        self.reports += 1
+        if self.false_since_correct >= self.free_reports:
+            self.paid_reports += 1
+        self.last_report_t = now
+        self.pending = {'kind': 'report', 'guider': why}
+        _log(dict({'event': 'report', 'why': 'guider', 't': fmt_utc(now)}, **{('g_' + k): v for k, v in why.items()}))
+        return {'action': 'report'}
+
+    def _g_outcome(self, why, correct, now):
+        if correct:
+            self.g_correct += 1
+            self.false_since_correct = 0
+            self.last_correct_t = now
+            if self.bel.w[1:].sum() > 0.5:
+                self.bel.report_result(True)
+            else:
+                # the fault's data never reached the belief: keep its no-fault branch
+                self.bel.x[:] = self.bel.x[0]
+                self.bel.P[:] = self.bel.P[0]
+                self.bel.w[:] = 0.0
+                self.bel.w[0] = 1.0
+            self.drop_t = None
+            self.g_dead_since = None
+            self.g_dead_n = 0
+            self.g_dead_false = 0
+            for k, c in list(self.g_probe.items()):
+                if c['t'] <= now:
+                    self.g_probe.pop(k, None)
+                    self.g_done.add(k)
+        else:
+            self.g_false += 1
+            self.false_since_correct += 1
+            if why.get('why') == 'probe':
+                # the probed time was not a fault: never report it again (the same dim data would repeat it)
+                k = why.get('key')
+                if k is None and why.get('job_t'):
+                    try:
+                        k = int(round(parse_utc(why['job_t']) / 60.0))
+                    except Exception:
+                        k = None
+                if k is not None:
+                    self.g_probe.pop(k, None)
+                    self.g_done.add(k)
+            if why.get('why') == 'dead':
+                self.g_dead_hold = now + min(8 * 3600.0, self.p['g_dead_wait'] * 2.0 ** min(1023, self.g_dead_false))
+                self.g_dead_false += 1
+                self.g_dead_since = None
+                self.g_dead_n = 0
+
+    def _g_many(self):
+        """Faults are frequent on this card: the duty log announces many jobs or test windows, or the data has
+        already shown more real faults than a season of the original cards ever had (a silent log)."""
+        if self.glog is None:
+            return False
+        if self.glog.busy:
+            return True
+        try:
+            raw = self.p.get('g_many_correct', DEFAULTS['g_many_correct'])
+            threshold = float(raw)
+            if isinstance(raw, bool) or not math.isfinite(threshold) or threshold < 1 or not threshold.is_integer():
+                raise ValueError('g_many_correct must be a positive integer')
+            threshold = int(threshold)
+        except (TypeError, ValueError, OverflowError):
+            threshold = DEFAULTS['g_many_correct']
+        return self.correct_reports >= threshold
+
+    def _g_precursor(self, since):
+        """The exposures just before a near-zero run show the dimmed (~0.3) first hour of a fault: the two
+        exposures that ended in the 20 minutes before it are both dimmed (a cloud dip an hour earlier is not)."""
+        pre = [r for (a, b, r) in self.g_hist
+               if self.last_correct_t <= a < since and since - 1200.0 <= b <= since + 1.0]
+        return len(pre) >= 2 and all(0.1 <= r <= 0.55 for r in pre[-2:])
+
+    def _g_sudden_dark(self, now):
+        """A near-zero run that began less than g_dead_wait ago without the dimmed first hour of a fault
+        (an unannounced test window looks like this): not evidence for a fault report yet."""
+        return (self._g_many() and self.g_dead_since is not None
+                and now - self.g_dead_since < self.p['g_dead_wait'] and not self._g_precursor(self.g_dead_since))
+
+    def _obs_ratio(self, start, T, night, idx, y, H, P, act):
+        """Median observed / expected score of the hits under the no-fault efficiency (1 = as predicted)."""
+        mid = start + 0.5 * T
+        m, _ = self.bel.peek(mid, night, act)
+        leta = self.bel.leta + math.log(max(1e-6, self.bel.quake_factor(mid, 1.0, night)))
+        if not math.isfinite(m + leta) or m + leta > 700:
+            return None
+        k0 = self.flux[idx] * T * H / (self.q0 * self.f0t0)
+        pred = np.minimum(1.0, k0 * math.exp(m + leta))
+        finite = np.isfinite(pred) & np.isfinite(y) & (y >= 0)
+        if not math.isfinite(self.mult[P]) or self.mult[P] <= 0:
+            return None
+        ok = finite & (pred > 1e-3) & (pred < 0.9)
+        if np.count_nonzero(ok) < 2:
+            ok = finite & (pred > 1e-3)
+        if not np.any(ok):
+            return None
+        ratios = y[ok] / (self.mult[P] * pred[ok])
+        ratios = ratios[np.isfinite(ratios)]
+        return float(np.median(ratios)) if len(ratios) else None
+
+    def _guider_obs(self, start, T, now, night, idx, y, H, P, act):
+        """Probe verdicts and the near-zero check for one exposure; True keeps it out of the belief."""
+        gl = self.glog
+        end = start + T
+        flat = gl.overlaps_flat(start, end)
+        skip = flat
+        for c in gl.due():
+            if c['t'] < end and start < c['t'] + self.p['g_delay'] + 600.0 and self.last_correct_t < c['t'] - 60.0:
+                skip = True
+        r = self._obs_ratio(start, T, night, idx, y, H, P, act)
+        if r is None:
+            return skip
+        if not flat:
+            self.g_hist.append((start, end, r))
+            if len(self.g_hist) > 60:
+                del self.g_hist[:-60]
+            for k, c in list(self.g_probe.items()):
+                if c['t'] > start + 1.0:
+                    continue
+                c['looks'] = c.get('looks', 0) + 1
+                # a fault is a step at the candidate time (x0.3, then x0.005); cloud dims the data before it too:
+                # compare with the exposures of the hour before the candidate when there are any
+                ref = c.get('ref')
+                if ref is None and 'ref' not in c:
+                    pre = [x for (a, b, x) in self.g_hist if c['t'] - 3600.0 <= b <= c['t'] + 1.0]
+                    ref = c['ref'] = float(np.median(pre)) if pre else None
+                low = self.p['g_low_llm'] if c['st'] == 'llm' else self.p['g_low']
+                if r < low and (ref is None or r < self.p['g_step'] * ref):
+                    skip = True
+                    if self.g_report is None:
+                        self.g_report = {'why': 'probe', 'job_t': fmt_utc(c['t']), 'st': c['st'], 'r': round(r, 3),
+                                         'key': k}
+                elif r > 0.8 or (ref is not None and r >= 0.75 * ref and c['looks'] >= 2):
+                    self.g_probe.pop(k, None)
+                    self.g_done.add(k)
+                    _log({'event': 'g_probe', 'verdict': 'none', 'job_t': fmt_utc(c['t']), 'r': round(r, 3),
+                          'ref': None if ref is None else round(ref, 3)})
+        if r < self.p['g_dead'] and not flat and self._g_many():
+            skip = True
+            if self.g_dead_since is None:
+                self.g_dead_since = start
+            self.g_dead_n += 1
+            free = self.false_since_correct < self.free_reports
+            # two near-zero exposures in a row (an exposure running into a closed slot is near zero only once)
+            # a guider fault dims the data to ~0.3 for an hour before it goes dark; a test lamp or a closed
+            # cover goes dark at once and is over within half an hour: report a sudden darkness only if it lasts
+            if self.g_report is None and now >= self.g_dead_hold and self.g_dead_n >= 2 and (
+                    self._g_precursor(self.g_dead_since) or end - self.g_dead_since >= self.p['g_dead_wait']):
+                self.g_report = {'why': 'dead', 'since': fmt_utc(self.g_dead_since), 'r': round(r, 4)}
+        elif flat or r >= self.p['g_dead']:
+            # A test window or a non-dead measurement breaks the consecutive
+            # unexplained near-zero run; do not join separate dark dips.
+            self.g_dead_since = None
+            self.g_dead_n = 0
+        if skip:
+            self.g_skip += 1
+        return skip
+
     # ------------------------------------------------------------------ handover log
     def _log_read(self, m):
         """Feed one request's log text to the reader; queue the faults it announces or confirms."""
         try:
             issued = parse_utc(m['issued_at_utc']) if m.get('issued_at_utc') else (self.prev_decide_t or 0.0)
             evs = self.logr.read(m.get('reason') or '', issued)
+            if self.glog is not None:
+                try:
+                    self.glog.read(m.get('reason') or '', issued)
+                except Exception:
+                    if not self.g_err:
+                        self.g_err = True
+                        import traceback
+                        traceback.print_exc(file=sys.stderr)
+                if self.dlm is not None and issued < self.survey_end - 3600.0:
+                    self._duty_read(m.get('reason') or '', issued)
             if self.log_llm is not None and not self.log_llm_off and self.logr.last_unread and m.get('request_id') \
                     and issued < self.survey_end - 86400.0:
                 loc = time.strftime('%Y-%m-%d %H:%M', time.gmtime(issued + self.log_off_s))
@@ -2191,12 +2537,15 @@ class Policy:
     def _should_report(self, now, night):
         if self.consec_reports >= min(3, max(1, self.max_consec - 1)):
             return False
+        if self._g_sudden_dark(now):
+            return False
         if self.p['ev_excuse'] > 0 and self._excused(now):
             return False
         if self.bel.learning_quake(night):
             return False
         pf = self.bel.p_fault()
-        if self.correct_reports >= (len(self.bel.pc) if self.bel.multi else self.p['max_faults']):
+        if self.correct_reports >= (len(self.bel.pc) if self.bel.multi else self.p['max_faults']) and not \
+                self._g_many():
             if pf > 0.9 and self.quake_notice:
                 self.bel.absorb_as_quake(self.drop_t if self.drop_t else now, night)
                 _log({'event': 'quake_merged', 't': fmt_utc(now)})
@@ -2891,10 +3240,13 @@ class Policy:
         self._anchors_used = anchors_n
         tv = tvall[pool]
         anchors = []
-        min_sep = math.cos(max(0.3 * self.fov, self.pitch) * DEG)
+        sep = self.p['anchor_sep']
+        min_sep = math.cos(max(sep * self.fov, self.pitch if sep >= 0.3 else sep * self.fov) * DEG) if sep > 0 else 2.0
         cand_a = order[: max(200, anchors_n * 8)]
         cand_a = cand_a[solo[cand_a] > 0]
-        if len(cand_a):
+        if len(cand_a) and min_sep > 1.0:
+            anchors = [int(a) for a in cand_a[:anchors_n]]
+        elif len(cand_a):
             Ua = np.ascontiguousarray(tv[cand_a])
             blocked = np.zeros(len(cand_a), dtype=bool)
             for i in range(len(cand_a)):
@@ -3295,8 +3647,15 @@ class Policy:
                 self.sprobe.final()
             except Exception:
                 pass
-        return {'decisions': self.decisions, 'observes': self.observes, 'reports': self.reports,
-                'correct_reports': self.correct_reports, 'false_reports': self.reports - self.correct_reports,
+        g = {}
+        if getattr(self, 'glog', None) is not None:
+            gl = self.glog
+            g = {'g_correct': self.g_correct, 'g_false': self.g_false, 'g_skip': self.g_skip,
+                 'g_jobs': len(gl.due()), 'g_probes': len(gl.probes()), 'g_flats': len(gl.flats),
+                 'g_void': sum(1 for c in gl.cands.values() if c['void']), 'g_unparsed': len(gl.unparsed)}
+        return {'decisions': self.decisions, 'observes': self.observes, 'reports': self.reports, **g,
+                'correct_reports': self.correct_reports + self.g_correct,
+                'false_reports': self.reports - self.correct_reports - self.g_correct,
                 'dec_cpu': round(self.dec_cpu, 2), 'init_cpu': round(self.init_cpu, 2),
                 'charge_ratio': round(self._charge_ratio, 3), 'turn_wall': round(self.turn_wall, 1),
                 'offset_est': [round(self.off_est[0], 4), round(self.off_est[1], 4)], 'offset_obs': self.off_obs,

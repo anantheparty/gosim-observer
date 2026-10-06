@@ -54,6 +54,8 @@ FIX = re.compile(r'更正|纠正|糾正|以此为准|以此為準|以这个为�
 CANCEL = re.compile(r'取消|改期|推迟|推遲|延期|不动了|不動了|不来了|不來了|cancel|postpone')
 FAULTISH = re.compile(r'[导導]星|ガイド|工程|效率|効率|吞吐|スループット|故障|报修|報修|提[单單]|throughput|efficiency|engineer|'
                       r'guide|fault|camera')
+SKIP_NEW = re.compile(r'[导導]星相[机機]|[导導]星カメラ|ガイダー|ガイドカメラ|guider|guide camera|平[场場][灯燈]|[镜鏡][盖蓋]|'
+                      r'フラット|flat[- ]lamp|test window', re.I)
 _QSTRIP = re.compile(r'[\s，。、,.;；:：!！?？…()（）「」『』【】\-—~～*]+')
 
 
@@ -187,6 +189,7 @@ class LogReader:
         self.cancelled = []       # planned events withdrawn by a later entry
         self.n_msgs = self.n_entries = 0
         self._seen_txt = set()
+        self.skip_new = False
 
     def _local(self, t):
         return datetime.fromtimestamp(t + self.off, tz=timezone.utc)
@@ -296,6 +299,8 @@ class LogReader:
             n_before = len(new)
             if RUMOR.search(low):
                 continue
+            if self.skip_new and SKIP_NEW.search(e):
+                continue          # guider-camera jobs and flat-lamp tests: guider_log.GuiderLog reads them
             self._classify(e, low, raw, issued, new)
             if len(new) == n_before and FAULTISH.search(low) and not STOP.search(low):
                 self.last_unread.append(e[:300])

@@ -1,0 +1,74 @@
+--- a/llm_strategist.py
++++ b/llm_strategist.py
+@@ -140,8 +140,9 @@
+                 except (TypeError, ValueError):
+                     pass
+                 raise _Retryable(f'http {e.code}', ra) from None
+-            if e.code == 400 and self.json_mode:
+-                # some endpoints reject response_format / temperature: retry once in plain mode
++            if e.code == 400 and ('response_format' in body or 'temperature' in body):
++                # Judge the request that actually failed: another in-flight
++                # timeout worker may already have switched self.json_mode off.
+                 self.json_mode = False
+                 raise _Retryable('http 400 (json mode off)', 0.0) from None
+             raise _Fatal(f'http {e.code}') from None
+@@ -652,14 +653,16 @@
+             except Exception as exc:
+                 result.put((None, {'error': type(exc).__name__}))
+ 
+-        worker = threading.Thread(target=ask_bounded, daemon=True, name='duty-reader')
+         try:
++            worker = threading.Thread(target=ask_bounded, daemon=True, name='duty-reader')
+             worker.start()
+             answer, info = result.get(timeout=max(0.0, deadline - time.monotonic()))
+         except queue.Empty:
+             # a slow answer (the service streams keep-alive blank lines while it queues the request) is a failure
+             # like any other (four in a row end the model reading); so is leaving three questions unfinished
+-            hung = [w for w in getattr(self, '_hung', []) if w.is_alive()] + [worker]
++            # The current worker can finish between Queue.get timing out and
++            # this handler. Count live threads consistently, including that one.
++            hung = [w for w in [*getattr(self, '_hung', []), worker] if w.is_alive()]
+             self._hung = hung
+             answer, info = None, {'error': 'hard deadline', 'fatal': len(hung) >= 3}
+         except Exception as exc:
+--- a/policy.py
++++ b/policy.py
+@@ -2255,12 +2255,25 @@
+     def _g_many(self):
+         """Faults are frequent on this card: the duty log announces many jobs or test windows, or the data has
+         already shown more real faults than a season of the original cards ever had (a silent log)."""
+-        return self.glog is not None and (self.glog.busy or self.correct_reports >= int(self.p['g_many_correct']))
++        if self.glog is None:
++            return False
++        if self.glog.busy:
++            return True
++        try:
++            raw = self.p.get('g_many_correct', DEFAULTS['g_many_correct'])
++            threshold = float(raw)
++            if isinstance(raw, bool) or not math.isfinite(threshold) or threshold < 1 or not threshold.is_integer():
++                raise ValueError('g_many_correct must be a positive integer')
++            threshold = int(threshold)
++        except (TypeError, ValueError, OverflowError):
++            threshold = DEFAULTS['g_many_correct']
++        return self.correct_reports >= threshold
+ 
+     def _g_precursor(self, since):
+         """The exposures just before a near-zero run show the dimmed (~0.3) first hour of a fault: the two
+         exposures that ended in the 20 minutes before it are both dimmed (a cloud dip an hour earlier is not)."""
+-        pre = [r for (a, b, r) in self.g_hist if since - 1200.0 <= b <= since + 1.0 and a < since]
++        pre = [r for (a, b, r) in self.g_hist
++               if self.last_correct_t <= a < since and since - 1200.0 <= b <= since + 1.0]
+         return len(pre) >= 2 and all(0.1 <= r <= 0.55 for r in pre[-2:])
+ 
+     def _g_sudden_dark(self, now):
+@@ -2330,7 +2343,9 @@
+             if self.g_report is None and now >= self.g_dead_hold and self.g_dead_n >= 2 and (
+                     self._g_precursor(self.g_dead_since) or end - self.g_dead_since >= self.p['g_dead_wait']):
+                 self.g_report = {'why': 'dead', 'since': fmt_utc(self.g_dead_since), 'r': round(r, 4)}
+-        elif r >= 0.3:
++        elif flat or r >= self.p['g_dead']:
++            # A test window or a non-dead measurement breaks the consecutive
++            # unexplained near-zero run; do not join separate dark dips.
+             self.g_dead_since = None
+             self.g_dead_n = 0
+         if skip:

@@ -7,6 +7,8 @@ cp $SRC/agent.py $SRC/policy.py $SRC/astro.py $SRC/kern.c $SRC/libkern_linux_x86
 [ -f $SRC/llm_strategist.py ] && cp $SRC/llm_strategist.py $OUT/
 [ -f $SRC/sophon_probe.py ] && cp $SRC/sophon_probe.py $OUT/
 [ -f $SRC/log_reader.py ] && cp $SRC/log_reader.py $OUT/
+[ -f $SRC/guider_log.py ] && cp $SRC/guider_log.py $OUT/
+[ -f $SRC/when_text.py ] && cp $SRC/when_text.py $OUT/
 [ -f $SRC/policy_params.json ] && cp $SRC/policy_params.json $OUT/
 echo "numpy==2.2.6" > $OUT/requirements.txt
 python3 - "$OUT" <<'PY'

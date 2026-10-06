@@ -1,0 +1,173 @@
+c33 robustness review -- offline snapshot, 2026-10-06
+
+交付与结果
+  work/logtest/fuzz_llm.py                 可直接运行的离线测试，自动识别 c32/c33
+  work/logtest/variants/c33_hardening.patch  4 个文件的建议 unified diff（827 行）
+  work/logtest/variants/c33_fuzz_baseline.json
+  work/logtest/variants/c33_fuzz_patched.json
+  work/logtest/variants/c33_fuzz_current_patched.json
+  work/logtest/variants/c33_replay.json
+  /tmp/c33_fuzz/baseline/                 审查开始时的原样快照
+  /tmp/c33_fuzz/patched/                  在快照上的补丁验证副本
+  /tmp/c33_fuzz/current_patched/          当前原包复制后应用 diff 的兼容性验证副本
+
+最终 635 项：快照基线 450 通过 / 185 失败；补丁副本 635 通过 / 0 失败。
+185 是失败用例数，多个用例复现同一问题，不是独立缺陷数。新增 c33 类别
+172 项，其中基线 82 项失败；其余为继承的 c32 输入/策略检查。补丁后每次
+脚本运行约 0.5 秒，基线含 1 秒单例超时测试，约 3 秒；没有引擎仿真。
+100 个固定种子的 JSON-like 变异；5000 条记录、5000 位整数、5 万字符、
+None/容器/非有限数，以及 mock DutyReader、轻量 Policy 状态均有覆盖。
+脚本通过 audit hook 阻止网络连接和凭据文件读取；不构造真实 ChatClient、
+Policy，也不访问模型/平台。没有修改 work/pkgs 或 runs，没有提交 git。
+
+A1/B1/C1/D1 共 220 个真实日志块逐条回放，cands/flats/due()/probes()
+在 c33 快照和补丁间完全相同（512 个正式时刻、56 个候选、1593 个窗口）。
+这是规则解析回归，不代表大模型准确率或端到端比赛成绩已验证。
+patch --dry-run 在快照上通过；当前 c33 的副本应用补丁并再测也是 635/635。
+审查期间原包 policy.py 的 _g_precursor 从 pre[-3:] 改为 pre；此并发改动
+不在建议 diff 内，current_patched 保留了它。不要用整个 patched 目录覆盖
+主会话当前包；合入 diff 即可。各 JSON 内有审查源文件的 SHA256。
+
+风险边界
+_duty_read、_guider_step 调用点、_guider_obs 调用点和 Policy.decide 有异常
+边界。没有在本次测试中证明畸形模型回答能够逃逸为 agent_error。更现实的
+结果是丢失本条回答后半段、半合并状态、漏探测、误降级、误读时间，或阻塞
+同步决策直至 wallclock 耗尽。把下面的真实语义问题与直接 helper 压力用例
+区别看待：生产 _clean 会截短模型字段，因此 5 万字 time_text、超大 Python
+整数等主要检验直接入口；'1e309' 等字符串仍可穿过 _clean，实际影响合并。
+
+运行方法（基线 exit 1 表示发现问题；补丁版应 exit 0）
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c33_fuzz/baseline --json /tmp/c33_fuzz/baseline.json
+  PYTHONDONTWRITEBYTECODE=1 python work/logtest/fuzz_llm.py --pkg /tmp/c33_fuzz/patched --json /tmp/c33_fuzz/patched.json
+
+下述最小复现公共 setup（无需密钥）：
+  import sys
+  sys.path.insert(0, '/tmp/c33_fuzz/baseline')
+  from guider_log import GuiderLog
+  from llm_strategist import DutyReader
+  from when_text import date_from_text, time_from_text
+  from datetime import date
+  t = 1790899200.0  # 2026-10-02T00:00:00Z
+  f = {'date':'10/2','time':'22:30','clock':'local',
+       'status':'confirmed','quote':'signed equipment work'}
+
+优先 1：不完整回答被当作“所有工单均已读过”做 strict 降级
+位置：llm_strategist.py read:542、_clean:608；guider_log.py add_llm:648；
+      policy.py _duty_read:2120。
+read 只消费 spans[:4]，后续块不读；任一块失败则 continue；结果没有完整性
+信息。_clean({}) 产生全空合法形状；add_llm strict 还接受非 schema 的 dict。
+_duty_read 先截 400 行，也不会告知 reader 有尾部被丢弃。
+最小合并复现：
+  g = GuiderLog(-4)
+  g.read('10/2 22:30 动导星相机，到点报修。', t)
+  g.add_llm({'unrelated':'garbage'}, t)
+  assert len(g.due()) == 1   # baseline 失败，原工单变为 alt
+分块复现见 c33/chunk_partial_coverage、chunk_failed_coverage：用完全本地
+client 返回全空 schema，输入 8 行、每行 11000 字，或令第二块返回 None，
+返回值仍没有“未读完”标识。
+补丁：内部 _complete 元数据；截断、非法根形状、失败块、非法记录均不得
+靠遗漏降级规则。仍可采用有效记录，并保留完整回答时的 strict 行为。
+按 4×120 限制每字段合并量 480；不完整时不是把所有模型信息都扔掉。
+
+优先 1：已确认工单后来明确取消仍留在 due()
+位置：guider_log.py add_llm 撤回阶段约 749 行。
+  g = GuiderLog(-4)
+  g.read('10/2 22:30 动导星相机，到点报修。', t)
+  g.add_llm({'fault_starts':[f]}, t)
+  g.add_llm({'fault_starts':[{**f,'status':'cancelled'}]}, t+3600)
+  assert not g.due()        # baseline 失败，旧 llm_ok 阻止撤回
+补丁：仅同一回答中的确认压过撤回；后续明确撤回可以把 official 降为探测，
+清 llm_ok 并记 dg，以便未来再次确认时恢复。保留规则/模型分歧时先拍照再
+报修的策略。新增 conditional 工单不再标成 llm_ok=True。
+
+优先 1：LLM-only 故障未激活 guider 路径（继承 c32）
+  g = GuiderLog(-4)
+  g.add_llm({'fault_starts':[f]}, t)
+  print(g.active, len(g.probes()))  # baseline False, 1
+无规则识别出的设备关键词且无平场时，policy 的 action/observation 两个
+guard 都忽略这个候选。补丁对有效 confirmed/conditional/有证据 active
+设置 active=True。测试覆盖“加入工单 -> 短曝光 -> 吞吐低 -> report”。
+
+优先 1：同步问答无真正总截止时间；分块复用旧 real_left
+位置：DutyReader._read1:568 与 ChatClient._post 的 urlopen/resp.read。
+socket timeout 是一次阻塞读取的限制，不保证整段响应总时长。mock ask
+睡 0.20 秒，而 question_deadline=0.04，基线仍等完整 0.20 秒。
+精确复现见 duty/hard_deadline（全本地），没有做真实网络请求。
+补丁：daemon worker + queue.get(剩余总预算)，硬超时后停用 DutyReader，
+累计 wall/failed；后续 chunk 按 elapsed 扣除 real_left。最多留下一个
+已超时的后台问答，进程退出不会等它；没有取消正在进行的 socket，也不是
+对任意持有 GIL 的恶意扩展代码做进程隔离。正常 client 异常也计入失败。
+
+优先 2：日历日期窗口被无关工单滚动一天；引用匹配错行
+位置：guider_log.py add_llm groups:661；_src_line:523。
+两个独立工单同为 date='10/2', date_text='2026-10-02'，先读 23:00-23:15，
+后读 01:00-01:15，原 groups 按(date,clock)合并，使后一窗口变为 10/3。
+见 c33/calendar_rollover_scope 的两条最小完整记录与期望 UTC。
+  lines=['common engineering notice: OLD start',
+         'common engineering notice: NEW start']
+  assert GuiderLog._src_line(lines[1], lines) == lines[1]  # baseline 返回第一条
+补丁：午夜滚动局限于同一匹配到的原文行；完整引用优先且要求唯一，再尝试
+同时满足首尾锚点；歧义返回 None。保留单行夜间列表滚动的正向控制。
+显式非法 end_date（如 2/30）不再静默当作缺省结束日。
+
+优先 2：原文时间转换有可确定的错值
+位置：when_text.py date_from_text:57、time_from_text:117。
+  time_from_text('quarter to twelve a.m.')  # baseline (11,45)，应 (23,45)
+  time_from_text('quarter to twelve p.m.')  # baseline (23,45)，应 (11,45)
+  time_from_text('ten minutes to twelve a.m.') # 同类 12h 边界错误
+  time_from_text('24:00')                   # baseline (0,0)，丢失次日信息
+  time_from_text('24:30')                   # baseline (0,30)，应 None
+  time_from_text('-1:30')                   # baseline (1,30)，应 None
+  time_from_text('sample: 9:30 PM')         # baseline (9,30)，sample 内 am 误命中
+  time_from_text('9:30 AM PM')              # baseline 接受，应拒绝矛盾标记
+  date_from_text('2/30', date(2026,10,1))    # baseline (2,30)
+  date_from_text('2026-02-29', date(2026,10,1)) # 非闰年仍接受
+补丁：先把目标小时按 AM/PM 转成 24h，再减“差几分”；保留 (24,0)，拒绝
+24:非零分钟/负号；AM/PM 用单词边界；真实日期校验（显式年参与验证）。
+日期锚点类型/边界和 _num 位数有检查，超出 1024 字的复制字段直接 None。
+当前格式只输出月日，仍不保留显式年份到 GuiderLog 的最近年份推断；本次
+不改变整个日期协议。模糊自然语言无法穷尽，None 仍按 c33 设计使用数字
+字段回退，这不是“所有原文都已理解”的保证。
+
+优先 2：畸形模型数值穿过 _clean；越季节 _add 后直接索引
+  g = GuiderLog(-4)
+  g.add_llm(DutyReader._clean({'fault_starts':[
+      {**f,'shift_minutes':'1e309'},f]}), t)  # baseline OverflowError，后面的 f 丢失
+  g = GuiderLog(-4,t,t+86400)
+  g.add_llm({'fault_starts':[{**f,'date':'10/5'}]},t) # baseline KeyError
+_clock 未识别的字符串默认为本地；_hm/_md 从 list/dict 字符串中截取日期时间；
+非法 25:90 窗口被 timedelta 自动归一化，index<=0 被夹到 1，非法 shift
+回退 0。补丁校验字段类型、有限整数、日期时钟范围、支持的时区、正索引，
+把异常记录丢弃但继续后面的合法记录；时刻受 horizon 和 season_end 双重
+约束。保留 UTC-13、UTC+05:30、Tokyo/JST 等合法时钟的正向用例。
+
+优先 2/3：空 active、窗口引用、规则记忆
+- {'active_faults':[{}]} 原来立即造出 issued 候选。现在要求非空字符串引用。
+- _night_windows 原用规则窗口 OR 模型窗口，规则已知一段时隐藏模型补充的
+  第二段。改为去重并集，重叠别名不插入额外窗口，避免改变“第N段”索引；仍保留 c33“规则已懂一晚 >=2 段就不新增模型时段”
+  的防重逻辑、label 对已有重叠窗口的映射、同名多窗口的歧义返回 None。
+  closures 仍不进入平场表；覆盖 control_known_night_label_closure。
+- _remember_rules 只按前40个规范字符去重，且淘汰规则后不删除 key。不同
+  定义前缀相同就丢失；被淘汰规则重现也无法再记。补丁保留全文有界 key，
+  按最近出现更新，并从实际12条记忆重建 key 集。
+
+防御性输入和长等待测试
+add_llm(None/[]/数字)、字段非列表、列表项非 dict、quote 数字/容器、巨大
+label/date_text、relative_to 字符串、_when 非法 tuple、_night_windows
+嵌套 key 都有测试。直接 API 不再抛异常；_clean 只复制 schema 允许的
+有界字段，保留 date_text/time_text/night/label/end_date 与 relative label。
+read 现在过滤坏 lines/hints，限制单行预算；单行 50000 字原可绕过
+chunk_chars，现在截断并标记 incomplete。duty_calendar 对非法 timestamp/
+offset/天数返回有限列表（最多121项），不会循环十亿天。
+when_text.time_from_text('x'*50000) 原超过1秒 alarm；补丁立即返回 None。
+上面这些很多是直接入口压力，而生产 _clean 已把时间字段截到160字。
+
+policy 边界与保留行为
+_g_outcome 的 g_dead_false=1024 在 min(8h,...) 执行前先做 2.0**1024，
+原会 OverflowError；_obs_ratio 的 belief mean=1000 会 exp overflow，
+全NaN观测会给NaN。补丁在运算前限指数、过滤非有限值和非法归一化。
+这是极端内部状态测试，不是已证实的引擎正常输出。
+验证正常 report 计费/正确修复复位、平场 wait 前进、有效故障短曝探测，
+以及 c33 新 g_hist/precursor/sudden-dark 路径：有约0.3前兆可两次低曝光报修；
+无前兆骤暗则等 g_dead_wait；健康观测清空 dead 计数。_g_precursor 的判断
+策略不在本补丁中更改；无实际引擎压力测试或隐藏卡召回率承诺。

@@ -1,0 +1,159 @@
+{
+  "created_utc": "2026-10-06T15:40:28.596025+00:00",
+  "worlds": {
+    "engineering_table": {
+      "world": "/home/shu/kamico/observer/work/worlds/V_engineering_table_A1",
+      "reference": "/home/shu/kamico/observer/work/worlds/GA1",
+      "passed": true,
+      "fault_events": 102,
+      "flat_windows_in_truth": 294,
+      "weather_truth_byte_identical": true,
+      "event_columns_equal": true,
+      "events_byte_identical": false,
+      "event_differences": [
+        {
+          "event_id": "V4GF0102",
+          "field": "actual_end_utc",
+          "GA1": "2027-02-01T09:30:00Z",
+          "world": "2027-02-01T08:45:00Z"
+        }
+      ],
+      "other_world_files_byte_identical": true,
+      "request_schema_and_metadata_equal": true,
+      "base_requests_unchanged": 6,
+      "log_requests": 40,
+      "parser_diagnostic_not_physical_truth": null,
+      "flat_weather_slots": 348
+    },
+    "bullet_workorders": {
+      "world": "/home/shu/kamico/observer/work/worlds/V_bullet_workorders_A1",
+      "reference": "/home/shu/kamico/observer/work/worlds/GA1",
+      "passed": true,
+      "fault_events": 102,
+      "flat_windows_in_truth": 294,
+      "weather_truth_byte_identical": true,
+      "event_columns_equal": true,
+      "events_byte_identical": false,
+      "event_differences": [
+        {
+          "event_id": "V4GF0102",
+          "field": "actual_end_utc",
+          "GA1": "2027-02-01T09:30:00Z",
+          "world": "2027-02-01T08:45:00Z"
+        }
+      ],
+      "other_world_files_byte_identical": true,
+      "request_schema_and_metadata_equal": true,
+      "base_requests_unchanged": 6,
+      "log_requests": 40,
+      "parser_diagnostic_not_physical_truth": null,
+      "flat_weather_slots": 348
+    },
+    "cipher_words": {
+      "world": "/home/shu/kamico/observer/work/worlds/V_cipher_words_A1",
+      "reference": "/home/shu/kamico/observer/work/worlds/GA1",
+      "passed": true,
+      "fault_events": 102,
+      "flat_windows_in_truth": 294,
+      "weather_truth_byte_identical": true,
+      "event_columns_equal": true,
+      "events_byte_identical": false,
+      "event_differences": [
+        {
+          "event_id": "V4GF0102",
+          "field": "actual_end_utc",
+          "GA1": "2027-02-01T09:30:00Z",
+          "world": "2027-02-01T08:45:00Z"
+        }
+      ],
+      "other_world_files_byte_identical": true,
+      "request_schema_and_metadata_equal": true,
+      "base_requests_unchanged": 6,
+      "log_requests": 40,
+      "parser_diagnostic_not_physical_truth": null,
+      "flat_weather_slots": 348
+    },
+    "silent": {
+      "world": "/home/shu/kamico/observer/work/worlds/V_silent_A1",
+      "reference": "/home/shu/kamico/observer/work/worlds/GA1",
+      "passed": true,
+      "fault_events": 102,
+      "flat_windows_in_truth": 294,
+      "weather_truth_byte_identical": true,
+      "event_columns_equal": true,
+      "events_byte_identical": true,
+      "event_differences": [],
+      "other_world_files_byte_identical": true,
+      "request_schema_and_metadata_equal": true,
+      "base_requests_unchanged": 6,
+      "log_requests": 40,
+      "parser_diagnostic_not_physical_truth": {
+        "active": false,
+        "faults_due": 0,
+        "probes": 0,
+        "flat_windows": 0,
+        "pending_relative_flat_references": 0
+      },
+      "flat_weather_slots": 348
+    },
+    "noflat": {
+      "world": "/home/shu/kamico/observer/work/worlds/V_noflat_A1",
+      "reference": "/home/shu/kamico/observer/work/worlds/GA1",
+      "passed": true,
+      "fault_events": 102,
+      "flat_windows_in_truth": 294,
+      "weather_truth_byte_identical": true,
+      "event_columns_equal": true,
+      "events_byte_identical": true,
+      "event_differences": [],
+      "other_world_files_byte_identical": true,
+      "request_schema_and_metadata_equal": true,
+      "base_requests_unchanged": 6,
+      "log_requests": 40,
+      "parser_diagnostic_not_physical_truth": {
+        "active": true,
+        "faults_due": 99,
+        "probes": 0,
+        "flat_windows": 0,
+        "pending_relative_flat_references": 0
+      },
+      "flat_weather_slots": 348
+    }
+  },
+  "input_world_hashes": {
+    "FA1": {
+      "config/v4_fiber_config.json": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165",
+      "config/v4_scenario.json": "65bb34d5344f1dce9b8c4edb7f71c5d74e4fa5befb808a417fa6509e7acdfba6",
+      "config/v4_score_config.json": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40",
+      "public/footprint.csv": "8436949cb09f7c27f64b1abd31ee96eaae5d95d1da9b60ec24d480bafe29797e",
+      "public/targets.csv": "05dc5357fad3b12e3ede1d7aeb7eb59ec5f9b666980ba0cbc409f74c3697f736",
+      "public/v4_bulletins.jsonl": "f3faebd30f8e1de90abcbbd2cfaaad8fbffe6e268ff36350792a718f20a55c8e",
+      "public/v4_forecasts.jsonl": "2000bb876f89ac5307b2bea79eec3a5c90c2b857f66ff4b76fa6f126733e5b5e",
+      "public/v4_night_calendar.csv": "12ac0149f781dc4a207e85ab448b1e07f5eb3b477ff327c0a3f8a45d212344a5",
+      "truth/v4_earthquake_effects.csv": "b40d08d7702a93ca0fc75ac738053a3da2af7f59b6390c661d5a4d63208bf279",
+      "truth/v4_events.csv": "f2d15ef2c0d9048fc8a86b42e6e84443124925964176542616fabb152e4ccdd5",
+      "truth/v4_observation_requests.jsonl": "36f1867d1042c6c01749018a0416ccd2234a9fee688c045a2df0abf12d3241ac",
+      "truth/v4_slots.csv": "6da5dbd19bebb80a394c4a070510d99a369cd48132989d6e5551414cdce739fd",
+      "truth/v4_weather_truth.csv": "08040d5241032f47ef4a683d0399acc8ef7d238ba9f4dbe53c898d7b988094e2"
+    },
+    "GA1": {
+      "config/v4_fiber_config.json": "2f82c01de00f7bd88db9b58a976e602bba60793f0b9f7386c2a84abbddeb7165",
+      "config/v4_scenario.json": "65bb34d5344f1dce9b8c4edb7f71c5d74e4fa5befb808a417fa6509e7acdfba6",
+      "config/v4_score_config.json": "f80bdee93998a67c19f9495a9abbcdc1d4ed2f31ad37b122fed432d340a89c40",
+      "public/footprint.csv": "8436949cb09f7c27f64b1abd31ee96eaae5d95d1da9b60ec24d480bafe29797e",
+      "public/targets.csv": "05dc5357fad3b12e3ede1d7aeb7eb59ec5f9b666980ba0cbc409f74c3697f736",
+      "public/v4_bulletins.jsonl": "f3faebd30f8e1de90abcbbd2cfaaad8fbffe6e268ff36350792a718f20a55c8e",
+      "public/v4_forecasts.jsonl": "2000bb876f89ac5307b2bea79eec3a5c90c2b857f66ff4b76fa6f126733e5b5e",
+      "public/v4_night_calendar.csv": "12ac0149f781dc4a207e85ab448b1e07f5eb3b477ff327c0a3f8a45d212344a5",
+      "truth/v4_earthquake_effects.csv": "b40d08d7702a93ca0fc75ac738053a3da2af7f59b6390c661d5a4d63208bf279",
+      "truth/v4_events.csv": "3a78674bfd0176b538c32067e8fef81fd8407cd39918a4e5408c128632c476b6",
+      "truth/v4_observation_requests.jsonl": "068cc88b0ecb73e72820b856958c3a4a8657800d265ccf7bd9b875dbde27cdaf",
+      "truth/v4_slots.csv": "6da5dbd19bebb80a394c4a070510d99a369cd48132989d6e5551414cdce739fd",
+      "truth/v4_weather_truth.csv": "78eea09b6aec2f71877184765c99b216f0b623ba807fcd1562c646951cb6b9c8"
+    }
+  },
+  "input_worlds_unchanged": true,
+  "input_variants_unchanged": true,
+  "source_parser_sha256": "690deea4507e029c45678909f0d32d16adead25fbd3de21c00ab77282abc0f6f",
+  "no_model_or_engine": true
+}
