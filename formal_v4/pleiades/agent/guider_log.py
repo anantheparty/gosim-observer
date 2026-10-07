@@ -568,6 +568,20 @@ class GuiderLog:
                 return c
         return md
 
+    _AM_WORD = re.compile(r'\ba\.?\s?m\b|\bam\b|morning|午前|上午|凌晨|早上|清晨|早晨|明早|오전|새벽|matin|morgens|'
+                          r'mañana|madrugada|утр', re.I)
+    _EVE_WORD = re.compile(r'晚|夜|夕方|tonight|evening|night|저녁|밤|오후|soir|nuit|abend|nacht|noche|tarde|вечер|ноч', re.I)
+    _DIGITAL = re.compile(r'\d{1,2}\s*[:：]\s*\d{2}|\d{3,4}\s*(?:hours|hrs|h\b)|\d{1,2}\s*h\s*\d{2}', re.I)
+
+    @classmethod
+    def _evening_reading(cls, txt, f):
+        """The model's afternoon/evening reading of a clock the text parser took as morning: no morning word in the
+        time or date text, and the clock is in words (or a digital clock with an evening word next to it)."""
+        ctx = '%s %s' % (txt, f.get('date_text') or '')
+        if cls._AM_WORD.search(ctx):
+            return False
+        return not cls._DIGITAL.search(txt) or bool(cls._EVE_WORD.search(ctx))
+
     def _time_of(self, f, key='time', text_key='time_text'):
         if not isinstance(f, dict):
             return None
@@ -580,6 +594,10 @@ class GuiderLog:
                 c = None
             if c is not None:
                 if hm is not None and c != hm:
+                    if c[1] == hm[1] and hm[0] == c[0] + 12 and self._evening_reading(txt, f):
+                        # "十一点一刻" with 今晚 in the date, "eleven fifteen tonight": the words alone read as a
+                        # morning clock, the model saw the evening context
+                        return hm
                     self.llm_fix = getattr(self, 'llm_fix', 0) + 1
                 return c
         return hm
@@ -720,11 +738,14 @@ class GuiderLog:
             return None
         kind = kind.strip().lower()
         if kind not in ('none', 'window_end', 'window_start', 'closure_end', 'closure_start', 'job', 'sunset', 'sunrise',
-                        'dusk', 'dawn', 'moonrise', 'moonset'):
+                        'dusk', 'dawn', 'moonrise', 'moonset', 'now'):
             return None
         shift = self._int(f.get('shift_minutes'), 0)
         if shift is None or abs(shift) > 24 * 60:
             return None
+        if kind == 'now':
+            # "two hours from now", "交接后三个半小时": the moment this section was handed over
+            return issued + shift * 60.0 if shift else None
         if kind in ('closure_end', 'closure_start'):
             w = self._closure_window(rel.get('label'), rel.get('date') or f.get('night') or f.get('date'),
                                      rel.get('index'), issued)

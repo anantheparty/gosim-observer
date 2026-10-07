@@ -490,9 +490,10 @@ DUTY_REPLY_FORMAT = {
         'julian': 'the Julian date exactly as written when the time is given as one ("MJD 61341.875", '
                   '"JD 2461342.375"), else empty',
         'relative_to': {'kind': 'none | window_end | window_start | closure_end | closure_start | job | sunset | '
-                                'sunrise | dusk | dawn | moonrise | moonset (window = a lost-data test window; closure = '
-                                'a stop, dome-closed, wind or launch window; dusk = end of evening twilight, 天黑; dawn = '
-                                'start of morning twilight, 天亮; moonrise 月出, moonset 月落)',
+                                'sunrise | dusk | dawn | moonrise | moonset | now (window = a lost-data test window; '
+                                'closure = a stop, dome-closed, wind or launch window; dusk = end of evening twilight, 天黑; '
+                                'dawn = start of morning twilight, 天亮; moonrise 月出, moonset 月落; now = the time this '
+                                'section was handed over, for "two hours from now", "交接后三小时")',
                         'label': 'label of the referenced window or closure as written (ticket number or name), else '
                                  'empty',
                         'date': 'M/D of the night (window, closure, sunset, dusk, dawn, sunrise, moonrise, moonset) or '
