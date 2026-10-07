@@ -455,7 +455,9 @@ DUTY_SYSTEM_PROMPT = (
     '2. lost_windows: windows in which frames are lost or wasted but which are NOT instrument faults and must NOT be '
     'reported (flat-lamp, mirror-cover, arc-lamp, bias, dark or other calibration tests and similar), one item per '
     'window, with the label the log gives it (ticket number, name or ordinal) so that times relative to it can name '
-    'it in relative_to.label.\n'
+    'it in relative_to.label. A window (or closure) whose start is written relative to something else (dusk, sunset, '
+    'moonrise, another window, a closure): give relative_to and shift_minutes as for fault_starts and leave start '
+    'empty; a duration instead of an end ("for 20 minutes"): give duration_minutes and leave end empty.\n'
     '3. closures: scheduled full stops or dome-closed windows, and windows in which one direction of the sky is '
     'affected (for example closed for strong wind or a launch window; follow the code words the log defines), with '
     'the direction as written ("all" for the whole site or dome) and its effect: "closed" if nothing can be '
@@ -500,10 +502,18 @@ DUTY_REPLY_FORMAT = {
         'condition': 'only for conditional', 'quote': 'a few words copied from the line'})],
     'lost_windows': [dict(_WHEN, **{
         'label': 'ticket number, name or ordinal the log uses for this window, else empty',
-        'start': 'HH:MM', 'end_date': 'M/D written with the end time if it differs, else empty', 'end': 'HH:MM',
+        'start': 'HH:MM (empty if the start is only relative)', 'end_date': 'M/D written with the end time if it '
+        'differs, else empty', 'end': 'HH:MM (empty if only a duration is given)',
+        'duration_minutes': 'length in minutes when the log gives a duration instead of an end, else empty',
+        'relative_to': 'as in fault_starts, only when the start is written relative to another item',
+        'shift_minutes': 'signed minutes from that item to the start; 0 if none',
         'clock': 'local | UTC | UTC+N | UTC-N', 'what': 'short', 'quote': 'a few words'})],
-    'closures': [dict(_WHEN, **{'label': 'name if any, else empty', 'start': 'HH:MM', 'end_date': 'M/D or empty',
-                                'end': 'HH:MM', 'clock': 'local | UTC | UTC+N | UTC-N',
+    'closures': [dict(_WHEN, **{'label': 'name if any, else empty', 'start': 'HH:MM (or relative, as for '
+                                'lost_windows)', 'end_date': 'M/D or empty', 'end': 'HH:MM (or duration_minutes)',
+                                'duration_minutes': 'as for lost_windows',
+                                'relative_to': 'as in fault_starts, only when the start is written relative to another item',
+                                'shift_minutes': 'signed minutes from that item to the start; 0 if none',
+                                'clock': 'local | UTC | UTC+N | UTC-N',
                                 'direction': 'compass range as written, e.g. "SE-SW" for 东南到西南一带, "N-E"; '
                                              '"all" for the whole site or dome',
                                 'effect': 'closed | degraded | observable',
@@ -780,7 +790,7 @@ class DutyReader:
         complete = all(isinstance(answer.get(k), list) for k in keys)
         allowed = ('date', 'time', 'clock', 'shift_minutes', 'status', 'condition', 'quote',
                    'night', 'start_date', 'start', 'end', 'what', 'date_text', 'time_text', 'label', 'end_date',
-                   'direction', 'effect', 'julian')
+                   'direction', 'effect', 'julian', 'duration_minutes')
 
         def scalar(value, limit):
             if isinstance(value, str):

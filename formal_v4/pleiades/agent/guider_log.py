@@ -815,8 +815,16 @@ class GuiderLog:
         if not isinstance(w, dict):
             return None
         a, b = self._hm(w.get('start')), self._hm(w.get('end'))
-        if a is None or b is None:
-            return None
+        dur = self._int(w.get('duration_minutes'), None)
+        if dur is not None and not (0 < dur <= max_h * 60):
+            dur = None
+        if a is None:
+            return self._rel_window(w, issued, lines, b, dur, max_h)
+        if b is None:
+            if dur is None:
+                return None
+            m = a[0] * 60 + a[1] + dur          # "from 23:50 for 20 minutes": the end on the same clock
+            b = ((m // 60) % 24, m % 60)
         tz = self._clock(w.get('clock'))
         if tz is None:
             return None
@@ -852,6 +860,35 @@ class GuiderLog:
             if tb <= ta:
                 tb += timedelta(days=1)
             ta, tb = ta.timestamp() - tz * 3600.0, tb.timestamp() - tz * 3600.0
+        if not (0.0 < tb - ta <= max_h * 3600.0):
+            return None
+        lt = datetime.fromtimestamp(ta + self.off * 3600.0, tz=timezone.utc)
+        if lt.hour < 12:
+            lt -= timedelta(days=1)
+        return ta, tb, (lt.year, lt.month, lt.day)
+
+    def _rel_window(self, w, issued, lines, b, dur, max_h):
+        """A window whose start the log gives relative to another item ("an hour after dusk, for 20 minutes"):
+        the start as for a fault time, the end by its duration or its clock time later that night."""
+        rel = w.get('relative_to')
+        if not isinstance(rel, dict) or str(rel.get('kind', 'none')).strip().lower() in ('', 'none'):
+            return None
+        f = {k: w.get(k) for k in ('relative_to', 'shift_minutes', 'date', 'night', 'date_text', 'quote', 'julian')}
+        ta = self.llm_time(f, issued, lines)
+        if ta is None:
+            return None
+        if dur is not None:
+            tb = ta + dur * 60.0
+        elif b is not None:
+            tz = self._clock(w.get('clock'))
+            tz = self.off if tz is None else tz
+            lt = datetime.fromtimestamp(ta + tz * 3600.0, tz=timezone.utc)
+            end = lt.replace(hour=b[0] % 24, minute=b[1], second=0, microsecond=0)
+            if end <= lt:
+                end += timedelta(days=1)
+            tb = end.timestamp() - tz * 3600.0
+        else:
+            return None
         if not (0.0 < tb - ta <= max_h * 3600.0):
             return None
         lt = datetime.fromtimestamp(ta + self.off * 3600.0, tz=timezone.utc)
