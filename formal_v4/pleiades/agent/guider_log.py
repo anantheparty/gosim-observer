@@ -896,6 +896,8 @@ class GuiderLog:
             return None
         f = {k: w.get(k) for k in ('relative_to', 'shift_minutes', 'date', 'night', 'date_text', 'quote', 'julian')}
         ta = self.llm_time(f, issued, lines)
+        if ta is None and str(rel.get('kind')).strip().lower() == 'now' and not self._int(w.get('shift_minutes'), 0):
+            ta = issued       # "从现在起西北方向关三个小时": from the handover itself
         if ta is None:
             return None
         if dur is not None:

@@ -2655,8 +2655,10 @@ class Policy:
             # the Moon's upper limb at the horizon (refraction, semi-diameter and parallax: about +0.13 deg); of the
             # crossings within 14 h of local midnight the one nearest to it
             from astro import moon_state
+            # moonset with the Sun's -0.833 deg instead: of the usual conventions the later moment, as below
+            hm0 = 0.13 if kind == 'moonrise' else -0.833
             ts = np.arange(mid - 14 * 3600.0, mid + 14 * 3600.0 + 1.0, 300.0)
-            hs = np.array([moon_state(float(t), self.lat, self.lon)[2] for t in ts]) > 0.13
+            hs = np.array([moon_state(float(t), self.lat, self.lon)[2] for t in ts]) > hm0
             want_up = kind == 'moonrise'
             idx = [k for k in range(len(ts) - 1) if hs[k] != hs[k + 1] and bool(hs[k + 1]) == want_up]
             if idx:
@@ -2664,15 +2666,21 @@ class Policy:
                 lo, hi = float(ts[k]), float(ts[k + 1])
                 for _ in range(10):
                     m = 0.5 * (lo + hi)
-                    if (moon_state(m, self.lat, self.lon)[2] > 0.13) == bool(hs[k]):
+                    if (moon_state(m, self.lat, self.lon)[2] > hm0) == bool(hs[k]):
                         lo = m
                     else:
                         hi = m
                 out = 0.5 * (lo + hi)
             cache[key] = out
             return out
-        if out is None:
-            h0 = -0.833 if kind in ('sunset', 'sunrise') else -18.0
+        if out is None or kind == 'dawn':
+            # of the usual conventions always the later moment, so that a fault written relative to these is never
+            # reported before it starts (a few minutes late costs little): sunset with the Sun's centre at -0.833 deg,
+            # sunrise at 0 deg, dawn the later of the observing end (on the calendar's 15-minute grid) and the Sun at
+            # -18 deg (the calendar's solar dawn)
+            nout = out
+            out = None
+            h0 = {'sunset': -0.833, 'sunrise': 0.0}.get(kind, -18.0)
             step = 120.0
             ts = np.arange(mid - 14 * 3600.0, mid + 14 * 3600.0 + 1.0, step)
             hs = np.array([sun_alt(float(t), self.lat, self.lon) for t in ts])
@@ -2692,6 +2700,8 @@ class Policy:
                     else:
                         hi = m
                 out = 0.5 * (lo + hi)
+            if nout is not None:
+                out = nout if out is None or abs(out - nout) > 3600.0 else max(out, nout)
         cache[key] = out
         return out
 

@@ -438,6 +438,8 @@ DUTY_SYSTEM_PROMPT = (
     'subtract, and what it is relative to. The agent does the arithmetic. Dates: give the calendar date M/D written '
     'with the time. Dates written relative to the handover day or as weekdays (今天, 明天, 后天, 昨天, 交接当天之后第 3 '
     '天 = D+3, "next Tuesday", 周二) are looked up in `calendar` (D+0 = the handover day); copy the M/D listed there. '
+    'A weekday with no date and no 上周 / 下周 / last / next (周四, Thursday, 星期六夜里, Friday 21:45) is the first '
+    'such day from D+0 on, never a past one; 下周X is X of the next week (weeks start on Monday), 上周X of the last. '
     'When the log only names the night (the night of 10/4, 10/4 当晚) give that date in `night` and leave `date` '
     'empty; the agent moves after-midnight times to the next calendar day. Also copy the date and the time exactly '
     'as written (after decoding) into date_text and time_text; the agent re-reads them. A time given only relative '
@@ -537,7 +539,7 @@ def duty_calendar(issued, utc_offset, before=7, after=21):
         before, after = min(60, max(0, int(before))), min(60, max(0, int(after)))
     except (TypeError, ValueError, OverflowError, OSError):
         return []
-    rel = {-2: ' 前天', -1: ' 昨天', 0: ' 今天 handover day', 1: ' 明天', 2: ' 后天'}
+    rel = {-2: ' 前天 past', -1: ' 昨天 past', 0: ' 今天 handover day', 1: ' 明天', 2: ' 后天'}
     out = []
     for k in range(-before, after + 1):
         try:
@@ -545,7 +547,7 @@ def duty_calendar(issued, utc_offset, before=7, after=21):
         except OverflowError:
             continue
         out.append('D%+d %d/%d %s 周%s%s' % (k, d.month, d.day, d.strftime('%a'), '一二三四五六日'[d.weekday()],
-                                            rel.get(k, '')))
+                                            rel.get(k, ' past' if k < 0 else '')))
     return out
 
 
