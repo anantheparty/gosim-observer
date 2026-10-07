@@ -145,6 +145,21 @@ DEFAULTS = {
                            # once at its time while fewer than this many false reports were made since the last
                            # correct one (they are free up to the scoring allowance); the probe still watches after
     'g_blind_win': 72000.0,  # ... but only this soon after the candidate time (s)
+    'zf': 1,               # 1: a field that scored zero everywhere while the site was open (an unannounced sector
+                           #    closure, e.g. wind, or unknown terrain) is avoided for a while: near its azimuth and up
+                           #    to zf_up deg above it the expected throughput is scaled by zf_conf once confirmed (a
+                           #    field >= zf_sep deg away scored within zf_win s, in the same weather slot or after a
+                           #    second zero there in another slot); not yet confirmed, by zf_unconf at any altitude
+    'zf_hours': 2.0,       # confirmed zero fields are avoided this long (h); unconfirmed ones zf_hours / 3
+    'zf_az': 20.0,         # azimuth half-width of the avoided zone (deg) ...
+    'zf_az_closure': 35.0,   # ... and of a confirmed sector closure (wind closes 90-135 deg wide sectors)
+    'zf_up': 3.0,          # the zone reaches this far above the zero field (deg) when terrain may explain it ...
+    'zf_closure_alt': 52.0,  # ... but all altitudes when the zero cannot be terrain: the field was this high, or
+                           #    that azimuth scored lower down before (a sector closure, e.g. wind)
+    'zf_conf': 0.05,
+    'zf_unconf': 0.5,
+    'zf_sep': 30.0,
+    'zf_win': 1200.0,
     'g_probe_T': 120,      # exposure cap while probing a candidate time or watching near-zero data (s)
     'g_low': 0.6,          # probe: throughput ratio below this confirms the job
     'g_low_llm': 0.5,      # the same for a time only the language model reported (precursors, code words: be stricter)
@@ -919,6 +934,7 @@ class Policy:
         self.req_done_ids = set()
         self.terrain_dirs = set()
         self.blocked = []                     # (time, alt, az, kind)
+        self.zfields = []                     # all-zero fields: [time, alt, az, confirmed]
         self.last_closed_until = -1e18          # (not -1: seasons before 1970 have negative timestamps)
         # weather / instrument belief
         self.eta_nom = 0.95
@@ -1385,7 +1401,76 @@ class Policy:
                 da = np.abs((az - baz + 180.0) % 360.0 - 180.0)
                 f *= np.where((da <= 15.0) & (np.abs(alt - balt) <= 15.0), 0.3, 1.0)
         self.blocked = keep[-200:]
+        if self.p['zf'] > 0 and self.zfields:
+            life = self.p['zf_hours'] * 3600.0
+            keep = []
+            for z in self.zfields:
+                age = t - z[0]
+                if age < (life if z[3] else life / 3.0):
+                    keep.append(z)
+                    da = np.abs((az - z[2] + 180.0) % 360.0 - 180.0)
+                    # not yet confirmed: steer the next probes to another direction at any altitude
+                    top = (91.0 if z[6] else z[1] + self.p['zf_up']) if z[3] else 91.0
+                    wz = self.p['zf_az_closure'] if (z[3] and z[6]) else self.p['zf_az']
+                    f *= np.where((da <= wz) & (alt <= top),
+                                  self.p['zf_conf'] if z[3] else self.p['zf_unconf'], 1.0)
+                elif age < life:
+                    keep.append(z)          # kept for a late confirmation; it no longer steers
+            self.zfields = keep[-60:]
         return f
+
+    def _zf_update(self, now, calt, caz, all_zero, scored_az, s0, s1):
+        """Book an all-zero field; a scoring field clears the zero fields in its own direction and confirms one in
+        another direction when it shows that the site was open then: it scored inside the same weather slot (an
+        unannounced closure of the whole site lasts whole slots), or that direction scored zero in two different
+        slots. Confirmed fields are avoided (_directional_factor)."""
+        if self.p['zf'] <= 0 or calt is None or caz is None:
+            return
+        if all_zero:
+            closure = calt >= self.p['zf_closure_alt']
+            if not closure and hasattr(self, 'tclear'):
+                b = int(math.floor(float(caz))) % 360
+                closure = min(float(self.tclear[(b + k) % 360]) for k in (-1, 0, 1)) < float(calt) - 1.0
+            self.zfields.append([now, float(calt), float(caz) % 360.0, False, int(s0), int(s1), bool(closure)])
+            return
+        if not self.zfields:
+            return
+        sep, win, wz = self.p['zf_sep'], self.p['zf_win'], self.p['zf_az']
+
+        def apart(a, b):
+            return abs((a - b + 180.0) % 360.0 - 180.0)
+        keep = []
+        for z in self.zfields:
+            da = apart(float(caz), z[2])
+            own = any(apart(a, z[2]) <= wz for a in scored_az)
+            if da <= wz * 0.5 or (own and da <= wz):
+                continue                    # this direction scores again
+            keep.append(z)
+        self.zfields = keep
+        life = self.p['zf_hours'] * 3600.0
+        for z in self.zfields:
+            if z[3] or apart(float(caz), z[2]) < sep or now - z[0] > win:
+                continue
+            same_slot = s0 == s1 and z[4] <= s0 <= z[5]
+            twice = any(y is not z and apart(y[2], z[2]) <= wz and (y[5] < z[4] or y[4] > z[5]) and abs(y[0] - z[0]) <= life
+                        for y in self.zfields)
+            # zeros in two directions far apart at about the same time: the whole site was closed then
+            wide = any(y is not z and not y[3] and abs(y[0] - z[0]) <= win and apart(y[2], z[2]) >= sep
+                       for y in self.zfields)
+            if same_slot or (twice and not wide):
+                z[3] = True
+                self.zf_conf_n = getattr(self, 'zf_conf_n', 0) + 1
+                if self.zf_conf_n <= 60:
+                    _log({'event': 'zf', 't': fmt_utc(now), 'alt': round(z[1], 1), 'az': round(z[2], 1),
+                          'by': round(float(caz), 1), 'slot': bool(same_slot), 'closure': z[6]})
+
+    def _zf_same_dir(self, now, az):
+        """All recent unconfirmed zero fields (before the latest one) lie in the direction az: a failed high probe
+        there does not show a closed site."""
+        if self.p['zf'] <= 0 or az is None:
+            return False
+        prev = [z for z in self.zfields[:-1] if not z[3] and now - z[0] <= self.p['zf_win']]
+        return bool(prev) and all(abs((float(az) - z[2] + 180.0) % 360.0 - 180.0) <= self.p['zf_az'] for z in prev)
 
     def _learn_terrain(self, alt, az, scored, force=False):
         """Update the static terrain map from one hit: scored>0 -> clear at (az, >=alt); 0 -> blocked at (az, <=alt).
@@ -1531,18 +1616,24 @@ class Policy:
         th = self.p['terr_hi'] > 0
         notes = list(pend.get('notices', []) or []) + list((snap.get('latest_bulletin') or {}).get('notices', []) or [])
         s0, s1 = int(start // self.slot), int((start + T - 1e-6) // self.slot)
+        try:
+            self._zf_update(now, pend.get('calt'), pend.get('caz'), bool(np.all(zero)),
+                            [float(amap[int(i)][1]) for i, z in zip(idx, zero) if not z and int(i) in amap], s0, s1)
+        except Exception:
+            pass
         if np.all(zero):
             self.g_dead_n = 0           # a closed site, not an instrument fault
             self.g_dead_since = None
             if len(idx) >= 1:
                 high = all(amap.get(int(i), (90, 0))[0] >= 55.0 for i in idx)
                 away = (not th) or self.probe_fail >= 2 or all(self._terr_away(*amap[int(i)]) for i in idx if int(i) in amap)
-                if self.probe > 0 and high and away:
+                if self.probe > 0 and high and away and not self._zf_same_dir(now, pend.get('caz')):
                     # a high-altitude probe (away from the announced terrain) also failed: the site is closed
                     self.last_closed_until = (math.floor(now / self.slot) + 1) * self.slot
                     self.zero_pending = []
                     self.probe = 2
                     self.probe_fail = 0
+                    self.zfields = [z for z in self.zfields if z[3]]   # the recent zeros were the closed site
                 else:
                     if self.probe > 0:
                         self.probe_fail += 1
@@ -1910,7 +2001,8 @@ class Policy:
             if self._fails == 3:
                 # persistent failure: switch the optional planning features off
                 for k, v in (('req_moon', 0), ('req_urg', 0.0), ('opt_value', 0.0), ('season_rho', 0.0),
-                             ('off_search', 0), ('terr_hi', 0), ('ev_excuse', 0), ('rq_commit', 0.0), ('rq_big', 0)):
+                             ('off_search', 0), ('terr_hi', 0), ('ev_excuse', 0), ('rq_commit', 0.0), ('rq_big', 0),
+                             ('zf', 0)):
                     self.p[k] = v
                 try:
                     self.bel.tau_learn = False
@@ -3679,7 +3771,7 @@ class Policy:
                 'charge_ratio': round(self._charge_ratio, 3), 'turn_wall': round(self.turn_wall, 1),
                 'offset_est': [round(self.off_est[0], 4), round(self.off_est[1], 4)], 'offset_obs': self.off_obs,
                 'misses': self.misses_total, 'logZ_mean': round(self.logZ_mean, 3), 'kernel': self.kern.lib is not None,
-                'pf': round(self.bel.p_fault(), 4), 'quakes': [round(self.bel._d0_hat(q), 3) for q in self.bel.quakes], 'bad': getattr(self.bel, 'n_bad', 0), 'cap': None if self.cap_ratio is None else round(self.cap_ratio, 3), 't0': round(getattr(self, '_t0_cache', 0.0), 1), 'rich': round(getattr(self, '_rich_cache', 0.0), 3), 'pool_scale': round(self.pool_scale, 3), 'nfault': self.bel.nfault, 'pc': [round(float(x), 3) for x in self.bel.pc], 'stress': self.stress_seen, 'anchor_cost': None if self.anchor_cost is None else [round(self.anchor_cost[0], 4), round(self.anchor_cost[1], 5)],
+                'pf': round(self.bel.p_fault(), 4), 'quakes': [round(self.bel._d0_hat(q), 3) for q in self.bel.quakes], 'bad': getattr(self.bel, 'n_bad', 0), 'cap': None if self.cap_ratio is None else round(self.cap_ratio, 3), 't0': round(getattr(self, '_t0_cache', 0.0), 1), 'rich': round(getattr(self, '_rich_cache', 0.0), 3), 'pool_scale': round(self.pool_scale, 3), 'nfault': self.bel.nfault, 'pc': [round(float(x), 3) for x in self.bel.pc], 'stress': self.stress_seen, 'zf_conf': getattr(self, 'zf_conf_n', 0), 'anchor_cost': None if self.anchor_cost is None else [round(self.anchor_cost[0], 4), round(self.anchor_cost[1], 5)],
                 'llm': self.strategist.summary() if self.strategist is not None else None,
                 'eng': {'level': self._eng_level, 'entries': self.n_entries, 'requests': len(self.rq_seen),
                         'coef': [float('%.4g' % c) for c in self._eng_coef()],

@@ -604,6 +604,41 @@ class GuiderLog:
         t = self._utc(nm[0], nm[1], hm[0], hm[1], tz, issued)
         return None if t is None else t + (86400.0 if hm[0] < 12 else 0.0)
 
+    _REL_CJK = re.compile(r'(?:结束|結束|跑完|完了|完成|完毕|完畢|收尾|收工|收束|完事|告一段落|做完|弄完|搞完|终了|終了|'
+                          r'終わ(?:って|った)?|开始|開始|始ま(?:って|った)?)\s*(以后|以後|之后|之後|后|後|から|あと|之前|以前|前)')
+    _REL_EN = re.compile(r'\b(after|before)\b', re.I)
+
+    def _rel_shift(self, f, lines):
+        """Minutes the source line puts between a test window and the job ("第一段平场灯测试结束以后，隔一小时": 60,
+        "two hours after the first test window ends": 120), read by code when the model named the window but gave
+        no shift; 0 when the line states none."""
+        src = self._src_line(f.get('quote'), lines)
+        if src is None:
+            src = f.get('quote') if isinstance(f.get('quote'), str) else ''
+        if not src or len(src) > 4000:
+            return 0
+        try:
+            e = prep(src)
+        except Exception:
+            return 0
+        e = re.sub(r'\d{1,2}:\d{2}', ' ', DATE.sub(' ', e))
+        m = self._REL_CJK.search(e)
+        if m:
+            seg = re.split(r'[。；;！!\n]', e[m.end():m.end() + 40])[0]
+            sgn = -1 if '前' in m.group(1) else 1
+        else:
+            m = self._REL_EN.search(e)
+            if m is None:
+                return 0
+            seg = re.split(r'[。；;!\n]|\.\s', e[max(0, m.start() - 40):m.start()])[-1]
+            sgn = -1 if m.group(1).lower() == 'before' else 1
+        dm = re.search(r'(\d+[.,]\d+)\s*(?:hours?|hrs?\b|h\b|小[时時]|钟头|鐘頭|時間)', seg, re.I)
+        mins = int(round(float(dm.group(1).replace(',', '.')) * 60)) if dm else duration_minutes(seg)
+        if mins is None or not (0 < mins <= 12 * 60):
+            return 0
+        self.llm_fix = getattr(self, 'llm_fix', 0) + 1
+        return sgn * mins
+
     def llm_time(self, f, issued, lines=None):
         """UTC epoch of a model fault item from its as-written parts (the model does no clock arithmetic)."""
         if not isinstance(f, dict):
@@ -635,6 +670,8 @@ class GuiderLog:
                     return None
                 w = wins[idx - 1]
             base = w[1] if kind == 'window_end' else w[0]
+            if shift == 0:
+                shift = self._rel_shift(f, lines)
             return base + shift * 60.0
         if kind == 'job':
             ref, tgt = self._md(rel.get('date')), self._md(f.get('date')) or self._md(f.get('night'))
