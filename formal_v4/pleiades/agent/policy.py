@@ -141,6 +141,10 @@ DEFAULTS = {
                            #    exposure, wait out the flat-lamp windows, keep fault / test data out of the belief, and
                            #    report a run of near-zero throughput that no test window explains
     'g_delay': 120.0,      # report a stated guider job this long after its time (s)
+    'g_blind': 1,          # report an uncertain guider time (rain postponement, relative to another job, model only)
+                           # once at its time while fewer than this many false reports were made since the last
+                           # correct one (they are free up to the scoring allowance); the probe still watches after
+    'g_blind_win': 72000.0,  # ... but only this soon after the candidate time (s)
     'g_probe_T': 120,      # exposure cap while probing a candidate time or watching near-zero data (s)
     'g_low': 0.6,          # probe: throughput ratio below this confirms the job
     'g_low_llm': 0.5,      # the same for a time only the language model reported (precursors, code words: be stricter)
@@ -1044,6 +1048,7 @@ class Policy:
         self.glog = None
         self.g_done = set()           # guider candidate keys handled (reported or dismissed)
         self.g_probe = {}             # key -> candidate being probed (time passed, no verdict yet)
+        self.g_blind = set()          # uncertain candidate keys already reported once without looking
         self.g_report = None          # report requested by the probe / dead-data check
         self.g_dead_since = None
         self.g_dead_hold = -1e18      # no dead-data report before this time (after a false one)
@@ -2180,6 +2185,18 @@ class Policy:
             if self.last_correct_t >= c['t'] - 60.0:
                 continue            # repaired since by another report
             return self._g_report(now, {'why': 'job', 'job_t': fmt_utc(c['t']), 'src': c['src'][:48]}), None
+        if self.p['g_blind'] > 0 and self.consec_reports < 2 and \
+                self.false_since_correct < min(self.free_reports, int(self.p['g_blind'])):
+            # an uncertain job time costs nothing to report while a free false report is left: a probe needs usable
+            # data after the time (clouds, closures and dawn often deny it), the report does not
+            for c in gl.probes():
+                k = self._g_key(c)
+                if k in self.g_done or k in self.g_blind or c['t'] + self.p['g_delay'] > now:
+                    continue
+                if now - c['t'] > self.p['g_blind_win'] or self.last_correct_t >= c['t'] - 60.0:
+                    continue
+                self.g_blind.add(k)
+                return self._g_report(now, {'why': 'blind', 'job_t': fmt_utc(c['t']), 'st': c['st'], 'key': k}), None
         for c in gl.probes():
             k = self._g_key(c)
             if k in self.g_done or k in self.g_probe or c['t'] > now:
@@ -2205,7 +2222,7 @@ class Policy:
                 continue
             if c['t'] > now:
                 lim = c['t'] - now
-            elif c['st'] == 'official' and now < c['t'] + self.p['g_delay']:
+            elif (c['st'] == 'official' or self.p['g_blind'] > 0) and now < c['t'] + self.p['g_delay']:
                 lim = c['t'] + self.p['g_delay'] - now
             else:
                 continue
@@ -2244,6 +2261,8 @@ class Policy:
                 if c['t'] <= now:
                     self.g_probe.pop(k, None)
                     self.g_done.add(k)
+            if why.get('why') == 'blind' and why.get('key') is not None:
+                self.g_done.add(why['key'])
         else:
             self.g_false += 1
             self.false_since_correct += 1
