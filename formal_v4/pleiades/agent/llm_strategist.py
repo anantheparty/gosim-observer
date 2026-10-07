@@ -426,7 +426,9 @@ DUTY_SYSTEM_PROMPT = (
     'UTC+N / UTC-N, ISO 8601 with an offset such as 2026-10-01T15:30:00-10:00 = clock UTC-10); corrections ("X is '
     'wrong, it is Y"); cancellations and withdrawn tickets; postponements ("planned for X, postponed by an hour and a '
     'half"); times relative to other items ("two hours after the first test window of the night of 10/6 ends", '
-    '"60 minutes after calibration ticket C001-09 ends", "15 minutes earlier by the clock than the 2/23 job"); '
+    '"60 minutes after calibration ticket C001-09 ends", "15 minutes earlier by the clock than the 2/23 job", '
+    '"two hours after sunset", "an hour before dawn", "an hour after moonrise", "half an hour after the launch window '
+    'closes"); Julian dates ("MJD 61341.875", "JD 2461342.375": copy them into `julian`, do not convert); '
     'conditional plans ("if it rains that night, one day later at the same time"); and rumours or uncertain '
     'recollections (questions, "I heard", gossip, unsigned drafts, "unconfirmed", "don\'t take it seriously"). When '
     'the log defines which kinds of work cause instrument faults and which only void frames, follow its '
@@ -454,13 +456,21 @@ DUTY_SYSTEM_PROMPT = (
     'reported (flat-lamp, mirror-cover, arc-lamp, bias, dark or other calibration tests and similar), one item per '
     'window, with the label the log gives it (ticket number, name or ordinal) so that times relative to it can name '
     'it in relative_to.label.\n'
-    '3. closures: scheduled full stops or dome-closed windows (same fields as lost_windows).\n'
+    '3. closures: scheduled full stops or dome-closed windows, and windows in which one direction of the sky is '
+    'affected (for example closed for strong wind or a launch window; follow the code words the log defines), with '
+    'the direction as written ("all" for the whole site or dome) and its effect: "closed" if nothing can be '
+    'observed there, "degraded" if it stays open with reduced efficiency, "observable" if the log says to observe '
+    'as usual (same fields as lost_windows plus direction and effect).\n'
     '4. active_faults: statements that a fault has ALREADY happened and is still unrepaired (throughput dropped and '
     'has not recovered, not the sky, call engineering or file a ticket).\n'
+    '5. standing_rules: lines of THIS section that later sections will rely on, copied as written (after decoding): '
+    'definitions of code words and what they mean, which kinds of work cause instrument faults and which only void '
+    'frames, whose entries are reliable or to be ignored, cipher keys, conventions for dates, clocks or labels. Not '
+    'events, observations or schedule items (nothing with a date or a time of day); at most 6.\n'
     'Not faults: warnings that something may fail later or advice to watch the throughput (precursors); weather, '
     'including code words the log defines for weather; scheduled stops or shutdowns, even for work on the same '
     'equipment (those are closures). Standing rules and code words defined in earlier sections are given as '
-    'context.\n'
+    'context; apply them to this section, but take items only from log_lines (a standing rule is never an item).\n'
     'Use only the log. Do not invent items; a section may contain none of some kinds. Reply with one JSON object only.')
 
 _WHEN = {'date_text': 'the date exactly as written for this item, e.g. "10/5（周一）", "后天（星期六）", '
@@ -475,10 +485,17 @@ DUTY_REPLY_FORMAT = {
         'time': 'HH:MM 24 h as written (empty if the time is only relative)',
         'clock': 'local | UTC | UTC+N | UTC-N (the clock the written time is on)',
         'shift_minutes': 'signed minutes to add (postponement, later/earlier than a reference); 0 if none',
-        'relative_to': {'kind': 'none | window_end | window_start | job',
-                        'label': 'label of the referenced window as written (ticket number or name), else empty',
-                        'date': 'M/D of the night (window) or of the referenced job',
-                        'index': 'which window of that night, 1 = first'},
+        'julian': 'the Julian date exactly as written when the time is given as one ("MJD 61341.875", '
+                  '"JD 2461342.375"), else empty',
+        'relative_to': {'kind': 'none | window_end | window_start | closure_end | closure_start | job | sunset | '
+                                'sunrise | dusk | dawn | moonrise | moonset (window = a lost-data test window; closure = '
+                                'a stop, dome-closed, wind or launch window; dusk = end of evening twilight, 天黑; dawn = '
+                                'start of morning twilight, 天亮; moonrise 月出, moonset 月落)',
+                        'label': 'label of the referenced window or closure as written (ticket number or name), else '
+                                 'empty',
+                        'date': 'M/D of the night (window, closure, sunset, dusk, dawn, sunrise, moonrise, moonset) or '
+                                'of the referenced job',
+                        'index': 'which window (or closure) of that night, 1 = first'},
         'status': 'confirmed | conditional | uncertain | cancelled | wrong',
         'condition': 'only for conditional', 'quote': 'a few words copied from the line'})],
     'lost_windows': [dict(_WHEN, **{
@@ -486,9 +503,14 @@ DUTY_REPLY_FORMAT = {
         'start': 'HH:MM', 'end_date': 'M/D written with the end time if it differs, else empty', 'end': 'HH:MM',
         'clock': 'local | UTC | UTC+N | UTC-N', 'what': 'short', 'quote': 'a few words'})],
     'closures': [dict(_WHEN, **{'label': 'name if any, else empty', 'start': 'HH:MM', 'end_date': 'M/D or empty',
-                                'end': 'HH:MM', 'clock': 'local | UTC | UTC+N | UTC-N', 'quote': 'a few words'})],
+                                'end': 'HH:MM', 'clock': 'local | UTC | UTC+N | UTC-N',
+                                'direction': 'compass range as written, e.g. "SE-SW" for 东南到西南一带, "N-E"; '
+                                             '"all" for the whole site or dome',
+                                'effect': 'closed | degraded | observable',
+                                'quote': 'a few words'})],
     'active_faults': [{'date': 'M/D or empty', 'time': 'HH:MM or empty', 'clock': 'local | UTC | UTC+N | UTC-N',
-                       'quote': 'a few words'}]}
+                       'quote': 'a few words'}],
+    'standing_rules': ['a definition or convention line of this section, as written']}
 
 
 def duty_calendar(issued, utc_offset, before=7, after=21):
@@ -537,6 +559,7 @@ class DutyReader:
         self.t_start = time.monotonic()
         self.rules = []          # lines that define code words, keys or standing rules (kept for later sections)
         self._rule_keys = set()
+        self.mrules = []         # the same, as the model marked them (any wording, any language)
 
     _RULE = re.compile(r'＝|从今天起|從今天起|记好|記好|规矩再讲|規矩再講|规矩不变|規矩不變|交接时请注意|交接時請注意|'
                        r'code ?words?|from now on|standing rule', re.I)
@@ -562,6 +585,44 @@ class DutyReader:
                 self.rules.append(txt)
                 self.rules = self.rules[-12:]
         self._rule_keys = {key(rule) for rule in self.rules}
+
+    _EVENT_LIKE = re.compile(r'\d{1,2}\s*[:：]\s*\d{2}|\d{1,2}\s*/\s*\d{1,2}|\d{1,2}\s*[点點時时]|[点點]半|'
+                             r'[〇零一二两兩三四五六七八九十]{1,3}\s*[点點時]|\d{1,2}\s*(?:a\.?m\.?|p\.?m\.?|h\b|hours?\b)|'
+                             r'\b(?:yesterday|today|tonight|tomorrow)\b|今天|今晚|昨天|昨晚|明天|明晚|后天|後天|今夜|昨夜|明日', re.I)
+
+    @staticmethod
+    def _rkey(txt):
+        return re.sub(r'[^\u4e00-\u9fff\u3040-\u30ffA-Za-z0-9]+', '', txt.replace('報', '报').replace('後', '后')).lower()
+
+    def _remember_model_rules(self, rules, lines, hints):
+        """Definitions the model marked in this section (code words, which work is a fault, cipher keys, whom to
+        trust) are kept for later sections when they are found in the section's text and name no date or time."""
+        if not isinstance(rules, list):
+            return
+        src = ''.join(self._rkey(x) for x in lines if isinstance(x, str))
+        if isinstance(hints, dict):
+            src += ''.join(self._rkey(v) for v in hints.values() if isinstance(v, str))
+        for r in rules[:6]:
+            if not isinstance(r, str):
+                continue
+            r = r.strip()[:300]
+            k = self._rkey(r)
+            if len(k) < 6 or self._EVENT_LIKE.search(r):
+                continue              # a dated or timed line is an event, not a rule (the known schedule carries it)
+            grams = {k[i:i + 3] for i in range(len(k) - 2)}
+            if not grams or sum(1 for g in grams if g in src) < 0.6 * len(grams):
+                continue              # not in this section (a paraphrase or an invention)
+            kept = [x for x in getattr(self, 'mrules', []) if self._rkey(x) != k]
+            self.mrules = (kept + [r])[-12:]
+
+    def standing_rules(self):
+        out, seen = [], set()
+        for x in list(getattr(self, 'rules', []))[-12:] + list(getattr(self, 'mrules', []))[-12:]:
+            k = self._rkey(x)
+            if k and k not in seen:
+                seen.add(k)
+                out.append(x)
+        return out
 
     def usable(self, real_left=None):
         if not self.enabled or self.dead or self.calls >= self.max_calls or self.wall >= self.wall_cap:
@@ -633,7 +694,7 @@ class DutyReader:
         site = {'utc_offset_hours': utc_offset, 'local_time_now': local_now}
         payload = {'task': 'Extract the operational schedule from this new duty-log section.',
                    'site': site,
-                   'standing_rules_from_earlier_sections': list(self.rules)[-12:],
+                   'standing_rules_from_earlier_sections': self.standing_rules(),
                    'known_schedule_from_earlier_sections': known,
                    'log_lines': lines,
                    'decoded_hints': hints,
@@ -687,8 +748,27 @@ class DutyReader:
             return None
         self.fail_run = 0
         self.ok += 1
+        try:
+            # an item quoting a standing rule of an earlier section rather than this section is that rule, re-read
+            rk = [self._rkey(x) for x in self.standing_rules()]
+            if rk:
+                src = ''.join(self._rkey(x) for x in lines if isinstance(x, str))
+                if isinstance(hints, dict):
+                    src += ''.join(self._rkey(v) for v in hints.values() if isinstance(v, str))
+                for k in ('fault_starts', 'lost_windows', 'closures', 'active_faults'):
+                    keep = []
+                    for it in out[k]:
+                        q = self._rkey(it.get('quote')) if isinstance(it.get('quote'), str) else ''
+                        if len(q) >= 4 and q not in src and any(q in r for r in rk):
+                            continue
+                        keep.append(it)
+                    out[k] = keep
+            self._remember_model_rules(out.get('standing_rules'), lines, hints)
+        except Exception:
+            pass
         _emit({'event': 'llm', 'stage': 'duty', 'ok': True, 'latency': round(dt, 2), 'tokens': info.get('usage'),
-               'n': [len(out[k]) for k in ('fault_starts', 'lost_windows', 'closures', 'active_faults')]})
+               'n': [len(out[k]) for k in ('fault_starts', 'lost_windows', 'closures', 'active_faults')],
+               'rules': len(getattr(self, 'mrules', []))})
         return out
 
     @staticmethod
@@ -699,7 +779,8 @@ class DutyReader:
         out = {}
         complete = all(isinstance(answer.get(k), list) for k in keys)
         allowed = ('date', 'time', 'clock', 'shift_minutes', 'status', 'condition', 'quote',
-                   'night', 'start_date', 'start', 'end', 'what', 'date_text', 'time_text', 'label', 'end_date')
+                   'night', 'start_date', 'start', 'end', 'what', 'date_text', 'time_text', 'label', 'end_date',
+                   'direction', 'effect', 'julian')
 
         def scalar(value, limit):
             if isinstance(value, str):
@@ -738,5 +819,7 @@ class DutyReader:
                     else:
                         complete = False
             out[k] = items
+        sr = answer.get('standing_rules')
+        out['standing_rules'] = [x[:300] for x in sr[:6] if isinstance(x, str)] if isinstance(sr, list) else []
         out['_complete'] = complete
         return out

@@ -525,6 +525,27 @@ class GuiderLog:
         hits = {(a, b) for (a, b, seen) in getattr(self, '_labels', {}).get(k, []) if abs(a - issued) < 14 * 86400}
         return next(iter(hits)) if len(hits) == 1 else None
 
+    def _closure_window(self, label, date, index, issued, by_index=True):
+        """(start, end) of a closure the model read (stop, dome closed, wind or launch window): by its label (on the
+        given night when the label repeats), else by its order among that night's closures."""
+        md = self._md(date)
+        nd = self._night_date(md[0], md[1], issued) if md is not None else None
+        k = self._label(label)
+        if k:
+            hits = [(a, b, n) for (a, b, n) in getattr(self, '_clabels', {}).get(k, []) if abs(a - issued) < 14 * 86400]
+            if nd is not None and any(n == nd for (_a, _b, n) in hits):
+                hits = [h for h in hits if h[2] == nd]
+            uniq = {(a, b) for (a, b, _n) in hits}
+            if len(uniq) == 1:
+                return next(iter(uniq))
+        if not by_index or nd is None:
+            return None
+        wins = sorted(getattr(self, '_cwins', {}).get(nd, []))
+        idx = self._int(index, 1)
+        if idx is None or idx < 1 or len(wins) < idx:
+            return None
+        return wins[idx - 1]
+
     _NIGHT_W = re.compile(r'当晚|當晚|那晚|那天晚上|晚上|夜|night|evening|tonight', re.I)
 
     def _d0(self, issued):
@@ -604,7 +625,53 @@ class GuiderLog:
         t = self._utc(nm[0], nm[1], hm[0], hm[1], tz, issued)
         return None if t is None else t + (86400.0 if hm[0] < 12 else 0.0)
 
-    _REL_CJK = re.compile(r'(?:结束|結束|跑完|完了|完成|完毕|完畢|收尾|收工|收束|完事|告一段落|做完|弄完|搞完|终了|終了|'
+    _COMPASS = [('north-east', 45.0), ('northeast', 45.0), ('south-east', 135.0), ('southeast', 135.0),
+                ('south-west', 225.0), ('southwest', 225.0), ('north-west', 315.0), ('northwest', 315.0),
+                ('north', 0.0), ('east', 90.0), ('south', 180.0), ('west', 270.0),
+                ('东北', 45.0), ('東北', 45.0), ('东南', 135.0), ('東南', 135.0), ('西南', 225.0), ('西北', 315.0),
+                ('北', 0.0), ('东', 90.0), ('東', 90.0), ('南', 180.0), ('西', 270.0),
+                ('NNE', 22.5), ('ENE', 67.5), ('ESE', 112.5), ('SSE', 157.5), ('SSW', 202.5), ('WSW', 247.5),
+                ('WNW', 292.5), ('NNW', 337.5), ('NE', 45.0), ('SE', 135.0), ('SW', 225.0), ('NW', 315.0),
+                ('N', 0.0), ('E', 90.0), ('S', 180.0), ('W', 270.0)]
+    _POINTS = (('N', 0.0), ('NE', 45.0), ('E', 90.0), ('SE', 135.0), ('S', 180.0), ('SW', 225.0), ('W', 270.0),
+               ('NW', 315.0))
+
+    @classmethod
+    def compass_range(cls, v):
+        """8-point compass directions covered by a written direction or range ("SE-SW", "东南到西南", "N to E");
+        None for the whole site, an unknown direction, or more than half the sky."""
+        if not isinstance(v, str) or not v.strip() or len(v) > 60:
+            return None
+        txt = v.strip()
+        if re.search(r'\ball\b|whole|entire|全|整个|整個|所有', txt, re.I):
+            return None
+        azs = []
+        i = 0
+        while i < len(txt) and len(azs) < 3:
+            for name, az in cls._COMPASS:
+                seg = txt[i:i + len(name)]
+                if (seg.lower() == name if name.isascii() and name.islower() else seg == name) and \
+                        not (name.isascii() and i + len(name) < len(txt) and txt[i + len(name)].isalpha()) and \
+                        not (name.isascii() and i > 0 and txt[i - 1].isalpha()):
+                    azs.append(az)
+                    i += len(name)
+                    break
+            else:
+                i += 1
+        if not azs or len(azs) > 2:
+            return None
+        a0 = azs[0]
+        a1 = azs[-1]
+        span = (a1 - a0) % 360.0
+        if span > 180.0:                  # the shorter way round
+            a0, span = a1, 360.0 - span
+        if span > 180.0 - 1e-6 and len(azs) == 2:
+            return None
+        out = tuple(n for n, az in cls._POINTS if ((az - a0) % 360.0) <= span + 1e-6 or
+                    ((a0 - az) % 360.0) <= 1e-6)
+        return out or None
+
+    _REL_CJK = re.compile(r'(?:结束|結束|跑完|完了|完成|完毕|完畢|收尾|收工|收束|完事|告一段落|做完|弄完|搞完|终了|終了|日落|日出|天黑|天亮|黄昏|黃昏|入夜|日の入り|日の出|解封|开顶|開頂|恢复|恢復|月出|月落|升起|落下|下山|月の出|月の入り|'
                           r'終わ(?:って|った)?|开始|開始|始ま(?:って|った)?)\s*(以后|以後|之后|之後|后|後|から|あと|之前|以前|前)')
     _REL_EN = re.compile(r'\b(after|before)\b', re.I)
 
@@ -652,13 +719,26 @@ class GuiderLog:
         if not isinstance(kind, str):
             return None
         kind = kind.strip().lower()
-        if kind not in ('none', 'window_end', 'window_start', 'job'):
+        if kind not in ('none', 'window_end', 'window_start', 'closure_end', 'closure_start', 'job', 'sunset', 'sunrise',
+                        'dusk', 'dawn', 'moonrise', 'moonset'):
             return None
         shift = self._int(f.get('shift_minutes'), 0)
         if shift is None or abs(shift) > 24 * 60:
             return None
+        if kind in ('closure_end', 'closure_start'):
+            w = self._closure_window(rel.get('label'), rel.get('date') or f.get('night') or f.get('date'),
+                                     rel.get('index'), issued)
+            if w is None:
+                return None
+            if shift == 0:
+                shift = self._rel_shift(f, lines)
+            return (w[1] if kind == 'closure_end' else w[0]) + shift * 60.0
         if kind in ('window_end', 'window_start'):
             w = self._label_window(rel.get('label'), issued)
+            if w is None:
+                # "after the launch window ends" given as a test window: a closure the log named that way
+                w = self._closure_window(rel.get('label'), rel.get('date') or f.get('night') or f.get('date'), None,
+                                         issued, by_index=False)
             if w is None:
                 md = self._md(rel.get('date')) or self._md(f.get('night')) or self._md(f.get('date'))
                 if md is None:
@@ -670,6 +750,23 @@ class GuiderLog:
                     return None
                 w = wins[idx - 1]
             base = w[1] if kind == 'window_end' else w[0]
+            if shift == 0:
+                shift = self._rel_shift(f, lines)
+            return base + shift * 60.0
+        if kind in ('sunset', 'sunrise', 'dusk', 'dawn', 'moonrise', 'moonset'):
+            cb = getattr(self, 'sun_cb', None)
+            md = self._md(rel.get('date')) or self._md(f.get('night')) or self._md(f.get('date'))
+            if cb is None or md is None:
+                return None
+            nd = self._night_date(md[0], md[1], issued)
+            if nd is None:
+                return None
+            try:
+                base = cb(kind, nd)
+            except Exception:
+                base = None
+            if base is None or not math.isfinite(base):
+                return None
             if shift == 0:
                 shift = self._rel_shift(f, lines)
             return base + shift * 60.0
@@ -690,13 +787,30 @@ class GuiderLog:
             lt = datetime.fromtimestamp(c['t'] + self.off * 3600.0, tz=timezone.utc)
             t = self._utc(tgt[0], tgt[1], lt.hour, lt.minute, self.off, issued)
             return None if t is None else t + shift * 60.0
+        jt = self._julian(f.get('julian'), issued)
+        if jt is not None:
+            return jt + shift * 60.0
         hm = self._time_of(f)
         if hm is None:
             return None
         t = self._when(f, hm, self._clock(f.get('clock')), issued, lines)
         return None if t is None else t + shift * 60.0
 
-    def llm_window(self, w, issued, lines=None):
+    _JULIAN = re.compile(r'\b(M?JD)\s*[:=]?\s*(\d{5,7}(?:\.\d+)?)', re.I)
+
+    @classmethod
+    def _julian(cls, v, issued):
+        """UTC epoch of a Julian date copied by the model ("MJD 61341.875", "JD 2461342.375"); None if absent."""
+        if not isinstance(v, str) or not v.strip():
+            return None
+        m = cls._JULIAN.search(v.replace(',', '.'))
+        if m is None:
+            return None
+        x = float(m.group(2))
+        t = (x - 40587.0) * 86400.0 if m.group(1).upper() == 'MJD' else (x - 2440587.5) * 86400.0
+        return t if math.isfinite(t) and abs(t - issued) < 60 * 86400.0 else None
+
+    def llm_window(self, w, issued, lines=None, max_h=4.0):
         """(start, end, local night date) of a model window: calendar `date` (+ `end_date`) or `night` semantics."""
         if not isinstance(w, dict):
             return None
@@ -738,7 +852,7 @@ class GuiderLog:
             if tb <= ta:
                 tb += timedelta(days=1)
             ta, tb = ta.timestamp() - tz * 3600.0, tb.timestamp() - tz * 3600.0
-        if not (0.0 < tb - ta <= 4 * 3600.0):
+        if not (0.0 < tb - ta <= max_h * 3600.0):
             return None
         lt = datetime.fromtimestamp(ta + self.off * 3600.0, tz=timezone.utc)
         if lt.hour < 12:
@@ -835,25 +949,72 @@ class GuiderLog:
                 continue
             self.flats[(a, b)] = 'llm'
             n['win'] += 1
+        if not hasattr(self, 'sector_closures'):
+            self.sector_closures = []
+        if not hasattr(self, '_cwins'):
+            self._cwins, self._clabels = {}, {}
+        for w in prepared['closures']:
+            r = self.llm_window(w, issued, lines, max_h=16.0)
+            if r is not None and issued - 86400 <= r[0] < upper:
+                # every closure the model read can anchor a time written relative to it ("after the launch window")
+                a, b, nd = r
+                lst = self._cwins.setdefault(nd, [])
+                if not any(abs(x - a) < 900 and abs(y - b) < 900 for (x, y) in lst):
+                    lst.append((a, b))
+                k = self._label(w.get('label'))
+                if k:
+                    cl = self._clabels.setdefault(k, [])
+                    if not any(abs(x - a) < 900 and abs(y - b) < 900 for (x, y, _n) in cl):
+                        cl.append((a, b, nd))
+                        del cl[:-12]
+        for w in prepared['closures']:       # one direction closed (wind etc.); whole-site closures stay with the weather logic
+            eff = w.get('effect')
+            if not isinstance(eff, str) or eff.strip().lower() != 'closed':
+                continue
+            ds = self.compass_range(w.get('direction'))
+            if ds is None:
+                continue
+            r = self.llm_window(w, issued, lines, max_h=16.0)
+            if r is None:
+                n['bad'] += 1
+                continue
+            a, b, _nd = r
+            if not (issued - 86400 <= a < upper) or b <= issued:
+                continue
+            if not any(abs(x - a) < 900 and abs(y - b) < 900 and z == ds for (x, y, z, _s) in self.sector_closures):
+                self.sector_closures.append((a, min(b, upper), ds, str(w.get('quote', ''))[:60]))
+                del self.sector_closures[:-60]
+                n['sector'] = n.get('sector', 0) + 1
         items = []
+        unread = set()      # source lines of model items the code could not use: their parser times stay as read
+
+        def skip(f):
+            # one unusable item does not void the model's reading of the rest of the section: only the line it
+            # quotes keeps the parser's reading (a quote not found in the section leaves the parser in charge)
+            src = self._src_line(f.get('quote'), lines)
+            if src is None:
+                return False
+            unread.add(re.sub(r'\s+', '', src)[:60])
+            return True
+
         for f in prepared['fault_starts']:
             if not isinstance(f, dict):
                 continue
             t = self.llm_time(f, issued, lines)
             if t is None:
                 n['bad'] += 1
-                strict = False
+                strict = strict and skip(f)
                 continue
             if not (issued - 2 * 86400 <= t < upper):
                 continue
             status = f.get('status')
             if not isinstance(status, str):
                 n['bad'] += 1
-                strict = False
+                strict = strict and skip(f)
                 continue
             status = status.strip().lower()
             if status not in ('confirmed', 'conditional', 'cancelled', 'wrong', 'rumour', 'rumor', 'uncertain'):
-                strict = False
+                strict = strict and skip(f)
             items.append((t, status, f))
         confirmed = set()
         for (t, st, f) in items:               # confirmations first: a slip in a withdrawal cannot undo them
@@ -884,6 +1045,8 @@ class GuiderLog:
             for c in self.cands.values():
                 if c['st'] == 'official' and not c['void'] and not c.get('llm_ok') and c.get('last') == issued \
                         and issued - 86400 <= c['t'] <= issued + horizon:
+                    if unread and re.sub(r'\s+', '', c.get('src') or '')[:60] in unread:
+                        continue
                     c['st'], c['dg'] = 'alt', True
                     n['unconfirmed'] = n.get('unconfirmed', 0) + 1
         for (t, st, f) in items:

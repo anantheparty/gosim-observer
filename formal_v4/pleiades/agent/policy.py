@@ -156,6 +156,9 @@ DEFAULTS = {
     'zf_up': 3.0,          # the zone reaches this far above the zero field (deg) when terrain may explain it ...
     'zf_closure_alt': 52.0,  # ... but all altitudes when the zero cannot be terrain: the field was this high, or
                            #    that azimuth scored lower down before (a sector closure, e.g. wind)
+    'log_sector': 1,       # 1: a direction the duty log says will be closed (wind etc.; read by the model, code words
+                           #    included) is avoided like an announced rocket-launch closure, from 20 min before
+                           #    the written start to its end; whole-site closures stay with the weather logic
     'zf_conf': 0.05,
     'zf_unconf': 0.5,
     'zf_sep': 30.0,
@@ -173,6 +176,7 @@ DEFAULTS = {
                            #    synchronous: waiting for the model does not count against the CPU budget); its fault
                            #    times are cross-checked with guider_log and confirmed on the throughput before a report
     'duty_wall': 2700.0,   # real seconds the duty-log model may take in total on one card
+    'duty_calls': 400,     # model questions the duty log may take on one card (a long log is read to the end)
     'real_cap': 7200.0,    # the card's real-time safety limit (s); no model question starts close to it
     'ev_wide': 0.0,        # >0: prior sd floor of an announced all-sky event's log effect (the event multipliers are
                            #    card parameters), shrinking with the episodes seen; its mean is learned across episodes
@@ -1088,10 +1092,11 @@ class Policy:
                     self.glog = GuiderLog(float(site.get('utc_offset_hours', 0.0) or 0.0),
                                           float(self.night_starts[0]) if len(self.night_starts) else None,
                                           self.survey_end)
+                    self.glog.sun_cb = self._sun_event
                     self.logr.skip_new = True
                     if self.p['duty_llm'] > 0:
                         from llm_strategist import DutyReader
-                        self.dlm = DutyReader(wall_cap=float(self.p['duty_wall']))
+                        self.dlm = DutyReader(wall_cap=float(self.p['duty_wall']), max_calls=int(self.p['duty_calls']))
                         if not self.dlm.enabled:
                             self.dlm = None
                 if self.p['log_llm'] > 0:
@@ -2002,7 +2007,7 @@ class Policy:
                 # persistent failure: switch the optional planning features off
                 for k, v in (('req_moon', 0), ('req_urg', 0.0), ('opt_value', 0.0), ('season_rho', 0.0),
                              ('off_search', 0), ('terr_hi', 0), ('ev_excuse', 0), ('rq_commit', 0.0), ('rq_big', 0),
-                             ('zf', 0)):
+                             ('zf', 0), ('log_sector', 0)):
                     self.p[k] = v
                 try:
                     self.bel.tau_learn = False
@@ -2176,6 +2181,10 @@ class Policy:
         lb = snap.get('latest_bulletin') or {}
         notices = lb.get('notices', []) or []
         self.quake_notice = any(n.get('event_kind') == 'earthquake' for n in notices)
+        try:
+            notices = list(notices) + self._log_sector_notices(now)
+        except Exception:
+            pass
         try:
             self.bul_t = parse_utc(lb['issued_at_utc']) if lb.get('issued_at_utc') else now
         except Exception:
@@ -2604,19 +2613,107 @@ class Policy:
 
     def _log_outcome(self, q, correct, now):
         if correct:
+            if q.get('llm'):
+                self.log_llm_false = 0
             return
         self.log_false += 1
         if q.get('llm'):
-            # the model's reading was wrong once: rely on the parser alone from now on
-            self.log_llm_off = True
-            for o in self.log_q:
-                if o.get('llm'):
-                    o['done'] = True
+            # one wrong model reading costs that item only; only a run of three wrong ones stops its reports
+            self.log_llm_false = getattr(self, 'log_llm_false', 0) + 1
+            if self.log_llm_false >= 3:
+                self.log_llm_off = True
+                for o in self.log_q:
+                    if o.get('llm'):
+                        o['done'] = True
             return
         if q['kind'] == 'planned' and q['tries'] < 2 and q['t'] is not None:
             # the work may have started a little late: try once more
             q['done'] = False
             q['due'] = max(now + 1800.0, q['t'] + self.p['log_retry'])
+
+    def _sun_event(self, kind, nd):
+        """UTC epoch of sunset / dusk / dawn / sunrise of the local night nd = (y, m, d), for duty-log times written
+        relative to them: dusk and dawn are the night's observing start and end, sunset and sunrise the moments the
+        Sun's centre crosses -0.833 deg; None when the Sun does not cross (polar day or night)."""
+        cache = getattr(self, '_sun_cache', None)
+        if cache is None:
+            cache = self._sun_cache = {}
+        key = (kind, tuple(nd))
+        if key in cache:
+            return cache[key]
+        import calendar
+        from astro import sun_alt
+        off = float(getattr(self, 'log_off_s', 0.0))
+        mid = calendar.timegm((int(nd[0]), int(nd[1]), int(nd[2]), 0, 0, 0)) + 86400.0 - off   # local midnight after
+        out = None
+        if kind in ('dusk', 'dawn'):
+            for (a, b) in self.nights:
+                if abs(a - mid) < 14 * 3600.0 and abs(b - mid) < 14 * 3600.0 and a < b:
+                    out = a if kind == 'dusk' else b
+                    break
+        if kind in ('moonrise', 'moonset'):
+            # the Moon's upper limb at the horizon (refraction, semi-diameter and parallax: about +0.13 deg); of the
+            # crossings within 14 h of local midnight the one nearest to it
+            from astro import moon_state
+            ts = np.arange(mid - 14 * 3600.0, mid + 14 * 3600.0 + 1.0, 300.0)
+            hs = np.array([moon_state(float(t), self.lat, self.lon)[2] for t in ts]) > 0.13
+            want_up = kind == 'moonrise'
+            idx = [k for k in range(len(ts) - 1) if hs[k] != hs[k + 1] and bool(hs[k + 1]) == want_up]
+            if idx:
+                k = min(idx, key=lambda k: abs(ts[k] - mid))
+                lo, hi = float(ts[k]), float(ts[k + 1])
+                for _ in range(10):
+                    m = 0.5 * (lo + hi)
+                    if (moon_state(m, self.lat, self.lon)[2] > 0.13) == bool(hs[k]):
+                        lo = m
+                    else:
+                        hi = m
+                out = 0.5 * (lo + hi)
+            cache[key] = out
+            return out
+        if out is None:
+            h0 = -0.833 if kind in ('sunset', 'sunrise') else -18.0
+            step = 120.0
+            ts = np.arange(mid - 14 * 3600.0, mid + 14 * 3600.0 + 1.0, step)
+            hs = np.array([sun_alt(float(t), self.lat, self.lon) for t in ts])
+            above = hs > h0
+            if kind in ('sunset', 'dusk'):
+                idx = [k for k in range(len(ts) - 1) if above[k] and not above[k + 1] and ts[k] <= mid]
+                k = idx[-1] if idx else None
+            else:
+                idx = [k for k in range(len(ts) - 1) if not above[k] and above[k + 1] and ts[k + 1] >= mid]
+                k = idx[0] if idx else None
+            if k is not None:
+                lo, hi = float(ts[k]), float(ts[k + 1])
+                for _ in range(12):
+                    m = 0.5 * (lo + hi)
+                    if (sun_alt(m, self.lat, self.lon) > h0) == bool(above[k]):
+                        lo = m
+                    else:
+                        hi = m
+                out = 0.5 * (lo + hi)
+        cache[key] = out
+        return out
+
+    def _log_sector_notices(self, now):
+        """Rocket-launch-like notices for the directions the duty log closes now (or within 20 min)."""
+        gl = self.glog
+        if self.p['log_sector'] <= 0 or gl is None or not getattr(gl, 'sector_closures', None):
+            return []
+        out, seen = [], set()
+        for (a, b, ds, src) in gl.sector_closures[-60:]:
+            if a - 1200.0 <= now <= b:
+                key = (a, b, ds)
+                if key not in getattr(self, '_ls_logged', set()):
+                    self._ls_logged = getattr(self, '_ls_logged', set()) | {key}
+                    if len(self._ls_logged) <= 40:
+                        _log({'event': 'log_sector', 't': fmt_utc(now), 'from': fmt_utc(a), 'to': fmt_utc(b),
+                              'dirs': list(ds), 'src': src})
+                for d in ds:
+                    if d in DIR_AZ and d not in seen:
+                        seen.add(d)
+                        out.append({'event_kind': 'rocket_launch', 'direction': d, 'source': 'duty_log'})
+        return out
 
     def _track_events(self, notices, now):
         """Onset window and end of each announced weather event (kind, direction) seen in the bulletins."""
