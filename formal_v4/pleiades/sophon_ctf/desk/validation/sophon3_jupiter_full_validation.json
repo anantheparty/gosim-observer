@@ -1,0 +1,132 @@
+{
+  "normal": {
+    "termination": "survey_complete",
+    "charged_seconds": 4.571,
+    "decision_requests": 1996,
+    "prior_decisions_identical": true,
+    "observations_byte_identical": true,
+    "last_decisions": [
+      {
+        "decision_id": "2898",
+        "observe_index": "1758",
+        "action": "observe",
+        "start_utc": "2026-11-30T07:30:00Z",
+        "end_utc": "2026-11-30T07:45:00Z",
+        "duration_seconds": "900",
+        "alt_deg": "46.5032",
+        "az_deg": "236.0270",
+        "program": "DARK",
+        "assigned_count": "18",
+        "hit_count": "18",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      {
+        "decision_id": "2899",
+        "observe_index": "1759",
+        "action": "observe",
+        "start_utc": "2026-11-30T07:45:00Z",
+        "end_utc": "2026-11-30T08:00:00Z",
+        "duration_seconds": "900",
+        "alt_deg": "47.5229",
+        "az_deg": "230.3930",
+        "program": "DARK",
+        "assigned_count": "18",
+        "hit_count": "18",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      {
+        "decision_id": "2900",
+        "observe_index": "1760",
+        "action": "observe",
+        "start_utc": "2026-11-30T08:00:00Z",
+        "end_utc": "2026-11-30T08:13:00Z",
+        "duration_seconds": "780",
+        "alt_deg": "49.1382",
+        "az_deg": "228.0128",
+        "program": "DARK",
+        "assigned_count": "19",
+        "hit_count": "19",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      {
+        "decision_id": "2901",
+        "observe_index": "1761",
+        "action": "observe",
+        "start_utc": "2026-11-30T08:13:00Z",
+        "end_utc": "2026-11-30T08:14:00Z",
+        "duration_seconds": "60",
+        "alt_deg": "43.6853",
+        "az_deg": "37.9369",
+        "program": "BACKUP",
+        "assigned_count": "0",
+        "hit_count": "0",
+        "valid": "true",
+        "invalidated_by": ""
+      },
+      {
+        "decision_id": "2902",
+        "observe_index": "",
+        "action": "wait",
+        "start_utc": "2026-11-30T08:14:00Z",
+        "end_utc": "2026-11-30T08:15:00Z",
+        "duration_seconds": "60",
+        "alt_deg": "",
+        "az_deg": "",
+        "program": "",
+        "assigned_count": "0",
+        "hit_count": "0",
+        "valid": "true",
+        "invalidated_by": ""
+      }
+    ],
+    "last_action": {
+      "action": "wait",
+      "until_utc": "2026-11-30T08:15:00Z"
+    }
+  },
+  "budget": {
+    "termination": "survey_complete",
+    "budget_seconds": 5,
+    "charged_seconds": 0.003,
+    "elapsed_seconds": 1.411422454053536,
+    "decision_requests": 3,
+    "expanded_decision_rows": 1427,
+    "calls": [
+      {
+        "now_utc": "2026-10-02T00:00:00Z",
+        "remaining": 5.0,
+        "action": {
+          "action": "wait",
+          "until_utc": "2026-10-02T08:05:00Z"
+        }
+      },
+      {
+        "now_utc": "2026-10-02T08:05:00Z",
+        "remaining": 4.998,
+        "action": {
+          "action": "observe",
+          "pointing": {
+            "alt_deg": 1.912518867418398,
+            "az_deg": 72.04817396953632
+          },
+          "assignments": {},
+          "duration_seconds": 60,
+          "program": "BACKUP",
+          "decision_source": "sophon3-planet",
+          "reason": "Deliberate final exposure: jupiter"
+        }
+      },
+      {
+        "now_utc": "2026-10-02T08:06:00Z",
+        "remaining": 4.997,
+        "action": {
+          "action": "wait",
+          "until_utc": "2026-11-30T08:15:00Z"
+        }
+      }
+    ]
+  }
+}

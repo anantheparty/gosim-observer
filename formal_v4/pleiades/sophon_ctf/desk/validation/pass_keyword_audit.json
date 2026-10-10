@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-07T13:32:26.902268+00:00",
+  "source_sha256": "83cf864054fcddf165ec9bfa10d477ed69ae3702a9ba0aac01c69e7a62ef7e95",
+  "source_lines": 465,
+  "last_record_at": "2026-10-07T12:34:00Z",
+  "exact_bar_posts": 237,
+  "word_coverage": {
+    "fake": [],
+    "false": [],
+    "liar": [],
+    "lie": [],
+    "lying": [],
+    "forged": [],
+    "forgery": [],
+    "real pass": []
+  },
+  "literal_coverage": {
+    "no": [],
+    "no.": [
+      396
+    ],
+    "pass": [],
+    "fake": [],
+    "that pass was never real.": [
+      274,
+      419
+    ]
+  },
+  "candidate": {
+    "method": "POST",
+    "path": "/desk/bar",
+    "body": {
+      "say": "fake"
+    },
+    "status": "approved_once_executed_ordinary_gossip",
+    "evidence": [
+      "L25 server-issued pass",
+      "L254 explicit fooled / never real verdict",
+      "no prior say contains fake or other listed forgery words"
+    ],
+    "limits": [
+      "single request only with fresh approval",
+      "no new door route",
+      "no upload/evaluation",
+      "ordinary gossip does not authorize synonyms or additional requests"
+    ],
+    "result": {
+      "desk_line": 466,
+      "at": "2026-10-07T13:33:21Z",
+      "http_status": 200,
+      "flag_returned": false,
+      "new_contract": false,
+      "later_scheduled_watch_root_line": 468,
+      "later_found_count": 21,
+      "later_missing": [
+        4
+      ]
+    }
+  }
+}

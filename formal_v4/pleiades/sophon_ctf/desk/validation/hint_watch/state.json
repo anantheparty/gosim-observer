@@ -1,0 +1,154 @@
+{
+  "baseline": {
+    "/desk/hint": {
+      "ok": true,
+      "johnny": "Johnny has nothing to add right now.",
+      "hints": [],
+      "message": "Johnny has nothing to add right now."
+    },
+    "/desk": {
+      "ok": true,
+      "johnny": "Johnny looks up from the desk. \"Back again? The Overlook is open all night.\"",
+      "board": "debug",
+      "doors": {
+        "bar": "POST /desk/bar {\"say\": \"...\"}",
+        "kitchen": "GET /desk/kitchen",
+        "rooms": "GET /desk/rooms",
+        "typewriter": "GET /desk/typewriter",
+        "hall": "GET /desk/hall",
+        "novel": "GET /desk/novel",
+        "hedge maze": "GET /desk/hedge",
+        "the house": "POST /desk/house {\"line\": \"...\"}",
+        "house entrance": "POST /desk/house/enter",
+        "ballroom": "GET /desk/ballroom",
+        "photograph": "GET /desk/photo",
+        "front desk": "GET /desk/frontdesk"
+      },
+      "found": [
+        {
+          "no": 1,
+          "name": "宇宙为你闪烁",
+          "at": "2026-10-06T18:53:13.958124+00:00"
+        },
+        {
+          "no": 2,
+          "name": "Here's Johnny",
+          "at": "2026-10-06T18:53:42.023279+00:00"
+        },
+        {
+          "no": 3,
+          "name": "喝醉的 Johnny",
+          "at": "2026-10-06T19:50:54.385513+00:00"
+        },
+        {
+          "no": 5,
+          "name": "Jack 的打字稿",
+          "at": "2026-10-06T19:52:02.041611+00:00"
+        },
+        {
+          "no": 6,
+          "name": "在天上写 REDRUM",
+          "at": "2026-10-06T20:38:46.210787+00:00"
+        },
+        {
+          "no": 7,
+          "name": "Sakurai 老师的作业",
+          "at": "2026-10-06T19:53:00.02994+00:00"
+        },
+        {
+          "no": 8,
+          "name": "被改过的名著",
+          "at": "2026-10-06T19:53:01.844699+00:00"
+        },
+        {
+          "no": 9,
+          "name": "无尽的房子",
+          "at": "2026-10-06T19:59:43.34546+00:00"
+        },
+        {
+          "no": 10,
+          "name": "五分半的走廊",
+          "at": "2026-10-06T20:04:21.301557+00:00"
+        },
+        {
+          "no": 11,
+          "name": "树篱迷宫",
+          "at": "2026-10-06T19:53:03.583331+00:00"
+        },
+        {
+          "no": 12,
+          "name": "双胞胎",
+          "at": "2026-10-06T20:20:42.663022+00:00"
+        },
+        {
+          "no": 13,
+          "name": "金色舞厅的宾客名单",
+          "at": "2026-10-06T20:04:49.090792+00:00"
+        },
+        {
+          "no": 14,
+          "name": "退房",
+          "at": "2026-10-06T20:11:04.689798+00:00"
+        },
+        {
+          "no": 15,
+          "name": "1921 年的照片",
+          "at": "2026-10-06T20:08:25.138582+00:00"
+        },
+        {
+          "no": 16,
+          "name": "Navidson 的卷尺",
+          "at": "2026-10-06T20:03:39.454638+00:00"
+        },
+        {
+          "no": 17,
+          "name": "镜子里是你自己",
+          "at": "2026-10-07T05:14:27.736325+00:00"
+        },
+        {
+          "no": 18,
+          "name": "Room 217",
+          "at": "2026-10-06T19:02:38.376538+00:00"
+        },
+        {
+          "no": 19,
+          "name": "Hallorann 的闪灵",
+          "at": "2026-10-06T18:55:14.574076+00:00"
+        },
+        {
+          "no": 20,
+          "name": "人列计算机",
+          "at": "2026-10-06T19:53:51.556115+00:00"
+        },
+        {
+          "no": 21,
+          "name": "智子的倒计时",
+          "at": "2026-10-06T20:09:00.512943+00:00"
+        },
+        {
+          "no": 22,
+          "name": "Grand Finale",
+          "at": "2026-10-06T20:11:06.353973+00:00"
+        }
+      ],
+      "pending": [],
+      "submit": "POST /desk/flag {\"flag\": \"SOPHON{...}\"}",
+      "receipts": "GET /desk/receipts",
+      "hints": "GET /desk/hint",
+      "message": "Johnny looks up from the desk. \"Back again? The Overlook is open all night.\""
+    }
+  },
+  "baseline_time": {
+    "/desk/hint": "2026-10-07T15:33:58Z",
+    "/desk": "2026-10-07T15:34:00Z"
+  },
+  "next_poll_epoch": 1791390836.0024095,
+  "next_poll_utc": "2026-10-07T16:33:56Z",
+  "cycles": 11,
+  "alerts": [],
+  "pid": 1638624,
+  "status": "stopped",
+  "started_utc": "2026-10-07T04:37:24Z",
+  "errors": {},
+  "stopped_utc": "2026-10-07T16:00:00Z"
+}

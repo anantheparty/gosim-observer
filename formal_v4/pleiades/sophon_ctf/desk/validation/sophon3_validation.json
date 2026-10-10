@@ -1,0 +1,54 @@
+{
+  "johnny_mock": "PASS: local guard, exact body, timeout, two-call cap, response redaction; network mocked",
+  "budget_and_dive": "PASS: sub-minimum time to dive waits exactly; final exposure terminates; budget reserve skips to visible planet",
+  "runs": {
+    "jupiter": {
+      "checker_output": "anomalous returns: 6480  ->  SOPHON{local-sky-ok}\nlast exposure 2026-11-30T08:13:00Z: 0.000 deg from jupiter  ->  SOPHON{local-dive-ok}",
+      "glyphs_matched": 30,
+      "glyphs_scheduled": 30,
+      "termination": "agent_finished",
+      "observe_actions": 1762,
+      "last_start_utc": "2026-11-30T08:13:00Z",
+      "last_alt_deg": 43.68525608302418,
+      "last_assigned_count": "0",
+      "accounted_wallclock_seconds": 4.737,
+      "agent_wallclock_seconds": 9.853
+    },
+    "saturn": {
+      "checker_output": "anomalous returns: 6480  ->  SOPHON{local-sky-ok}\nlast exposure 2026-11-30T06:28:00Z: 0.000 deg from saturn  ->  SOPHON{local-dive-ok}",
+      "glyphs_matched": 30,
+      "glyphs_scheduled": 30,
+      "termination": "agent_finished",
+      "observe_actions": 1755,
+      "last_start_utc": "2026-11-30T06:28:00Z",
+      "last_alt_deg": 2.0697604597972865,
+      "last_assigned_count": "0",
+      "accounted_wallclock_seconds": 4.701,
+      "agent_wallclock_seconds": 9.826
+    },
+    "mars": {
+      "checker_output": "anomalous returns: 6480  ->  SOPHON{local-sky-ok}\nlast exposure 2026-11-30T08:13:00Z: 0.000 deg from mars  ->  SOPHON{local-dive-ok}",
+      "glyphs_matched": 30,
+      "glyphs_scheduled": 30,
+      "termination": "agent_finished",
+      "observe_actions": 1762,
+      "last_start_utc": "2026-11-30T08:13:00Z",
+      "last_alt_deg": 40.80657247383031,
+      "last_assigned_count": "0",
+      "accounted_wallclock_seconds": 4.62,
+      "agent_wallclock_seconds": 9.777
+    },
+    "venus": {
+      "checker_output": "anomalous returns: 6480  ->  SOPHON{local-sky-ok}\nlast exposure 2026-11-30T08:13:00Z: 0.000 deg from venus  ->  SOPHON{local-dive-ok}",
+      "glyphs_matched": 30,
+      "glyphs_scheduled": 30,
+      "termination": "agent_finished",
+      "observe_actions": 1762,
+      "last_start_utc": "2026-11-30T08:13:00Z",
+      "last_alt_deg": 9.217420563162442,
+      "last_assigned_count": "0",
+      "accounted_wallclock_seconds": 4.685,
+      "agent_wallclock_seconds": 9.835
+    }
+  }
+}

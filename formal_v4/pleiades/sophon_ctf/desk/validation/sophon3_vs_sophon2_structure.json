@@ -1,0 +1,531 @@
+{
+  "comparisons": {
+    "run.json": {
+      "added_paths": [],
+      "changed_values": {
+        "$.batch_id": {
+          "new": "2d79ab4b-3b0c-40cc-b2fb-42e92db5e636",
+          "old": "f5995cb0-cc61-453c-bedf-aef75f0d4411"
+        },
+        "$.created_at": {
+          "new": "2026-10-06T18:13:24.854395+00:00",
+          "old": "2026-10-05T22:57:45.312153+00:00"
+        },
+        "$.decisions_digest": {
+          "new": "b837764556856ec92b5e25bfeaaa0cec0013d59f30acd1a7465241edd8f070c2",
+          "old": "92ae22bef92ac9aa3df2aea71ef6c5eb5ec7c924d15c632f04a9af8ec6cf79a6"
+        },
+        "$.finished_at": {
+          "new": "2026-10-06T18:15:20.085787+00:00",
+          "old": "2026-10-05T22:59:17.515727+00:00"
+        },
+        "$.id": {
+          "new": "d76dd617-37cb-4d25-a604-654ed77239c3",
+          "old": "2dd4bcc3-78ae-4162-b1c9-ce12b452596b"
+        },
+        "$.result_path": {
+          "new": "github:AGENTIC-OBSERVER26-runner-1/participant-7afaf76f63f441738f78439d9ed3bbe6@47a21a0eeda2708aa2be5acbfbfd21904e063afc",
+          "old": "github:AGENTIC-OBSERVER26-runner-10/participant-7afaf76f63f441738f78439d9ed3bbe6@6a65feb7395bb65ec2c2a435f46b11242dd2723c"
+        },
+        "$.score": {
+          "new": -2882.489535,
+          "old": 8007.175154
+        },
+        "$.score_summary.accounted_wallclock_seconds": {
+          "new": 6.185,
+          "old": 26.206
+        },
+        "$.score_summary.committed_action_count": {
+          "new": 2901,
+          "old": 2104
+        },
+        "$.score_summary.observe_actions": {
+          "new": 1717,
+          "old": 719
+        },
+        "$.score_summary.required_missing": {
+          "new": 161,
+          "old": 1
+        },
+        "$.score_summary.score.report_settlement": {
+          "new": 0,
+          "old": 100
+        },
+        "$.score_summary.score.required_penalty": {
+          "new": -8050,
+          "old": -50
+        },
+        "$.score_summary.score.sum_best_scores": {
+          "new": 5234.183924,
+          "old": 7961.850175
+        },
+        "$.score_summary.score.total": {
+          "new": -2882.489535,
+          "old": 8007.175154
+        },
+        "$.score_summary.score.uniformity_penalty": {
+          "new": -66.673459,
+          "old": -4.67502
+        },
+        "$.score_summary.targets_observed": {
+          "new": 3108,
+          "old": 5701
+        },
+        "$.score_summary.termination_reason": {
+          "new": "agent_finished",
+          "old": "survey_complete"
+        },
+        "$.started_at": {
+          "new": "2026-10-06T18:14:38.056898+00:00",
+          "old": "2026-10-05T22:58:42.884734+00:00"
+        }
+      },
+      "removed_paths": [],
+      "schema_path_count_new": 32,
+      "schema_path_count_old": 32,
+      "type_changes": {}
+    },
+    "score_report.json": {
+      "added_paths": [],
+      "changed_values": {
+        "$.by_class.BGS": {
+          "new": 1005.028031,
+          "old": 1036.169853
+        },
+        "$.by_class.ELG": {
+          "new": 2361.202872,
+          "old": 3117.245763
+        },
+        "$.by_class.LRG": {
+          "new": 1026.842515,
+          "old": 1835.763563
+        },
+        "$.by_class.QSO": {
+          "new": 607.817088,
+          "old": 1738.345073
+        },
+        "$.by_class.Star": {
+          "new": 233.293418,
+          "old": 234.325923
+        },
+        "$.components.report_settlement": {
+          "new": 0.0,
+          "old": 100.0
+        },
+        "$.components.required_penalty": {
+          "new": -8050.0,
+          "old": -50.0
+        },
+        "$.components.sum_best_scores": {
+          "new": 5234.183924,
+          "old": 7961.850175
+        },
+        "$.components.uniformity_penalty": {
+          "new": -66.673459,
+          "old": -4.67502
+        },
+        "$.counts.decisions": {
+          "new": 2901,
+          "old": 2104
+        },
+        "$.counts.observations": {
+          "new": 37368,
+          "old": 8067
+        },
+        "$.counts.observe_actions": {
+          "new": 1717,
+          "old": 719
+        },
+        "$.counts.required_missing": {
+          "new": 161,
+          "old": 1
+        },
+        "$.counts.targets_observed": {
+          "new": 3108,
+          "old": 5701
+        },
+        "$.sha256.decisions": {
+          "new": "b837764556856ec92b5e25bfeaaa0cec0013d59f30acd1a7465241edd8f070c2",
+          "old": "92ae22bef92ac9aa3df2aea71ef6c5eb5ec7c924d15c632f04a9af8ec6cf79a6"
+        },
+        "$.sha256.messages": {
+          "new": "49e3056dfcb22ec868f1ee69bf9e62b9399a64465b9ee05a81b2e4a5f58fddd4",
+          "old": "03e4389799be1ce915ee9cb5498c9f5b70b2499186afb36a28ad46a4431dc28c"
+        },
+        "$.sha256.observations": {
+          "new": "c34e4ecdcece42a5c765eaf30df1da04fac3bc899190daedbaa7f47be2d95578",
+          "old": "ba22729dc7fbb7709d6d318068e94794cbd6ce76208a148ad769c652531b3e22"
+        },
+        "$.termination.reason": {
+          "new": "agent_finished",
+          "old": "survey_complete"
+        },
+        "$.total": {
+          "new": -2882.489535,
+          "old": 8007.175154
+        },
+        "$.uniformity_bands.ra_120_130": {
+          "new": 0.0,
+          "old": 1.0
+        },
+        "$.uniformity_bands.ra_130_140": {
+          "new": 0.23049,
+          "old": 0.862069
+        },
+        "$.uniformity_bands.ra_140_150": {
+          "new": 0.070312,
+          "old": 0.7
+        },
+        "$.uniformity_bands.ra_150_160": {
+          "new": 0.082531,
+          "old": 0.683631
+        },
+        "$.uniformity_bands.ra_160_170": {
+          "new": 0.0,
+          "old": 0.610738
+        },
+        "$.uniformity_bands.ra_30_40": {
+          "new": 0.655172,
+          "old": 0.984674
+        },
+        "$.uniformity_bands.ra_40_50": {
+          "new": 0.494407,
+          "old": 0.982103
+        },
+        "$.uniformity_bands.ra_50_60": {
+          "new": 0.613314,
+          "old": 0.983003
+        },
+        "$.uniformity_bands.ra_60_70": {
+          "new": 0.629076,
+          "old": 0.982337
+        },
+        "$.uniformity_bands.ra_70_80": {
+          "new": 0.539528,
+          "old": 0.987517
+        },
+        "$.uniformity_bands.ra_80_90": {
+          "new": 0.674515,
+          "old": 0.98338
+        },
+        "$.uniformity_bands.ra_90_100": {
+          "new": 0.429878,
+          "old": 0.978659
+        }
+      },
+      "removed_paths": [],
+      "schema_path_count_new": 48,
+      "schema_path_count_old": 48,
+      "type_changes": {}
+    },
+    "workflow_result.json": {
+      "added_paths": [],
+      "changed_values": {
+        "$.accounted_wallclock_seconds": {
+          "new": 6.185,
+          "old": 26.206
+        },
+        "$.agent_wallclock_seconds": {
+          "new": 8.955,
+          "old": 21.527
+        },
+        "$.committed_action_count": {
+          "new": 2901,
+          "old": 2104
+        },
+        "$.decision_requests": {
+          "new": 1996,
+          "old": 1198
+        },
+        "$.fair_clock.charged_seconds": {
+          "new": 6.185,
+          "old": 26.206
+        },
+        "$.fair_clock.cpu_seconds": {
+          "new": 7.363,
+          "old": 20.834
+        },
+        "$.fair_clock.hard_cap_seconds": {
+          "new": 10800.0,
+          "old": 3600.0
+        },
+        "$.fair_clock.run_wall_seconds": {
+          "new": 32.102,
+          "old": 26.828
+        },
+        "$.fair_clock.speed_factor": {
+          "new": 1.1904,
+          "old": 0.795
+        },
+        "$.fair_clock.speed_factor_max": {
+          "new": 1.1904,
+          "old": 0.795
+        },
+        "$.fair_clock.speed_factor_min": {
+          "new": 1.1904,
+          "old": 0.795
+        },
+        "$.fair_clock.wait_seconds": {
+          "new": 1.592,
+          "old": 0.693
+        },
+        "$.fair_clock.window_seconds": {
+          "new": 8.955,
+          "old": 21.527
+        },
+        "$.last_decision_sequence": {
+          "new": 1996,
+          "old": 1198
+        },
+        "$.score_report.by_class.BGS": {
+          "new": 1005.028031,
+          "old": 1036.169853
+        },
+        "$.score_report.by_class.ELG": {
+          "new": 2361.202872,
+          "old": 3117.245763
+        },
+        "$.score_report.by_class.LRG": {
+          "new": 1026.842515,
+          "old": 1835.763563
+        },
+        "$.score_report.by_class.QSO": {
+          "new": 607.817088,
+          "old": 1738.345073
+        },
+        "$.score_report.by_class.Star": {
+          "new": 233.293418,
+          "old": 234.325923
+        },
+        "$.score_report.components.report_settlement": {
+          "new": 0.0,
+          "old": 100.0
+        },
+        "$.score_report.components.required_penalty": {
+          "new": -8050.0,
+          "old": -50.0
+        },
+        "$.score_report.components.sum_best_scores": {
+          "new": 5234.183924,
+          "old": 7961.850175
+        },
+        "$.score_report.components.uniformity_penalty": {
+          "new": -66.673459,
+          "old": -4.67502
+        },
+        "$.score_report.counts.decisions": {
+          "new": 2901,
+          "old": 2104
+        },
+        "$.score_report.counts.observations": {
+          "new": 37368,
+          "old": 8067
+        },
+        "$.score_report.counts.observe_actions": {
+          "new": 1717,
+          "old": 719
+        },
+        "$.score_report.counts.required_missing": {
+          "new": 161,
+          "old": 1
+        },
+        "$.score_report.counts.targets_observed": {
+          "new": 3108,
+          "old": 5701
+        },
+        "$.score_report.sha256.decisions": {
+          "new": "b837764556856ec92b5e25bfeaaa0cec0013d59f30acd1a7465241edd8f070c2",
+          "old": "92ae22bef92ac9aa3df2aea71ef6c5eb5ec7c924d15c632f04a9af8ec6cf79a6"
+        },
+        "$.score_report.sha256.messages": {
+          "new": "49e3056dfcb22ec868f1ee69bf9e62b9399a64465b9ee05a81b2e4a5f58fddd4",
+          "old": "03e4389799be1ce915ee9cb5498c9f5b70b2499186afb36a28ad46a4431dc28c"
+        },
+        "$.score_report.sha256.observations": {
+          "new": "c34e4ecdcece42a5c765eaf30df1da04fac3bc899190daedbaa7f47be2d95578",
+          "old": "ba22729dc7fbb7709d6d318068e94794cbd6ce76208a148ad769c652531b3e22"
+        },
+        "$.score_report.termination.reason": {
+          "new": "agent_finished",
+          "old": "survey_complete"
+        },
+        "$.score_report.total": {
+          "new": -2882.489535,
+          "old": 8007.175154
+        },
+        "$.score_report.uniformity_bands.ra_120_130": {
+          "new": 0.0,
+          "old": 1.0
+        },
+        "$.score_report.uniformity_bands.ra_130_140": {
+          "new": 0.23049,
+          "old": 0.862069
+        },
+        "$.score_report.uniformity_bands.ra_140_150": {
+          "new": 0.070312,
+          "old": 0.7
+        },
+        "$.score_report.uniformity_bands.ra_150_160": {
+          "new": 0.082531,
+          "old": 0.683631
+        },
+        "$.score_report.uniformity_bands.ra_160_170": {
+          "new": 0.0,
+          "old": 0.610738
+        },
+        "$.score_report.uniformity_bands.ra_30_40": {
+          "new": 0.655172,
+          "old": 0.984674
+        },
+        "$.score_report.uniformity_bands.ra_40_50": {
+          "new": 0.494407,
+          "old": 0.982103
+        },
+        "$.score_report.uniformity_bands.ra_50_60": {
+          "new": 0.613314,
+          "old": 0.983003
+        },
+        "$.score_report.uniformity_bands.ra_60_70": {
+          "new": 0.629076,
+          "old": 0.982337
+        },
+        "$.score_report.uniformity_bands.ra_70_80": {
+          "new": 0.539528,
+          "old": 0.987517
+        },
+        "$.score_report.uniformity_bands.ra_80_90": {
+          "new": 0.674515,
+          "old": 0.98338
+        },
+        "$.score_report.uniformity_bands.ra_90_100": {
+          "new": 0.429878,
+          "old": 0.978659
+        },
+        "$.speed_factor": {
+          "new": 1.1904,
+          "old": 0.795
+        },
+        "$.termination_reason": {
+          "new": "agent_finished",
+          "old": "survey_complete"
+        }
+      },
+      "removed_paths": [],
+      "schema_path_count_new": 78,
+      "schema_path_count_old": 78,
+      "type_changes": {}
+    }
+  },
+  "details": {
+    "new": {
+      "agent_log_meta": {
+        "available": true,
+        "bytes": 553413,
+        "truncated": false
+      },
+      "agent_log_shape": {
+        "$": [
+          "dict"
+        ],
+        "$.available": [
+          "bool"
+        ],
+        "$.bytes": [
+          "int"
+        ],
+        "$.log": [
+          "str"
+        ],
+        "$.truncated": [
+          "bool"
+        ]
+      },
+      "egress": [],
+      "message_types": {
+        "bulletin": 1935,
+        "forecast": 9
+      },
+      "sophon_finish": [
+        {
+          "event": "sophon_finish_message",
+          "payload": {
+            "decisions": 2901,
+            "grace_seconds": 30,
+            "last_decision_sequence": 1996,
+            "observe_actions": 1717,
+            "schema_version": "v4-finish-v1",
+            "termination_reason": "agent_finished"
+          }
+        }
+      ],
+      "sophon_init": [
+        {
+          "credential_present": false,
+          "event": "sophon_init",
+          "fibers": 25,
+          "network_allowed": true,
+          "nights": 60,
+          "targets": 6000
+        }
+      ],
+      "zip_comment_length": 40,
+      "zip_members": [
+        "actions.jsonl",
+        "agent.log",
+        "decisions.csv",
+        "egress.json",
+        "messages.jsonl",
+        "observations.csv",
+        "score_report.json",
+        "workflow_result.json"
+      ]
+    },
+    "old": {
+      "agent_log_meta": {
+        "available": true,
+        "bytes": 82217,
+        "truncated": false
+      },
+      "agent_log_shape": {
+        "$": [
+          "dict"
+        ],
+        "$.available": [
+          "bool"
+        ],
+        "$.bytes": [
+          "int"
+        ],
+        "$.log": [
+          "str"
+        ],
+        "$.truncated": [
+          "bool"
+        ]
+      },
+      "egress": [],
+      "message_types": {
+        "bulletin": 1935,
+        "forecast": 9,
+        "report_result": 2
+      },
+      "sophon_finish": [],
+      "sophon_init": [
+        {
+          "event": "sophon_init"
+        }
+      ],
+      "zip_comment_length": 40,
+      "zip_members": [
+        "actions.jsonl",
+        "agent.log",
+        "decisions.csv",
+        "egress.json",
+        "messages.jsonl",
+        "observations.csv",
+        "score_report.json",
+        "workflow_result.json"
+      ]
+    }
+  }
+}

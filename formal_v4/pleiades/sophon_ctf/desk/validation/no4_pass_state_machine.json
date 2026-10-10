@@ -1,0 +1,953 @@
+{
+  "scope": {
+    "lines": 408,
+    "last_t": "2026-10-07T05:49:45Z",
+    "sha256": "1d658ef24ff886b7cd68549ea5cd054a8dcfab4e96fc41f282b1784fedcee703",
+    "offline_only": true
+  },
+  "timeline": [
+    {
+      "t": "2026-10-06T18:53:14Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 3,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 1,
+        "name": "宇宙为你闪烁",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T18:53:34Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/door",
+      "status": 200,
+      "line": 7,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "flag",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": true
+    },
+    {
+      "t": "2026-10-06T18:53:42Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 8,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 2,
+        "name": "Here's Johnny",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T19:02:12Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk/room/217",
+      "status": 200,
+      "line": 20,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "flag",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": true
+    },
+    {
+      "t": "2026-10-06T19:05:04Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/bar",
+      "status": 200,
+      "line": 25,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "pass",
+        "door",
+        "message"
+      ],
+      "public_state": {},
+      "returned_pass_present": true
+    },
+    {
+      "t": "2026-10-06T19:06:18Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 27,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "next",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "next": "bar",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        18,
+        19
+      ],
+      "missing_numbers": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "t": "2026-10-06T19:50:40Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 118,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "next",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "next": "bar",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        18,
+        19
+      ],
+      "missing_numbers": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "t": "2026-10-06T19:50:46Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk/door/MIRROR-TOPIARY-ELEVATOR-BASEMENT",
+      "status": 200,
+      "line": 119,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "flag",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": true
+    },
+    {
+      "t": "2026-10-06T19:50:54Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 120,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 3,
+        "name": "喝醉的 Johnny",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T19:51:11Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 123,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "next",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "next": "typewriter",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        18,
+        19
+      ],
+      "missing_numbers": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "t": "2026-10-06T19:52:02Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 127,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 5,
+        "name": "Jack 的打字稿",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T20:11:04Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 205,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 14,
+        "name": "退房",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T20:11:06Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 206,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message",
+        "loss_of_signal"
+      ],
+      "public_state": {
+        "no": 22,
+        "name": "Grand Finale",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T20:20:42Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 218,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 12,
+        "name": "双胞胎",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T20:38:46Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 200,
+      "line": 251,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "no",
+        "name",
+        "solved",
+        "message"
+      ],
+      "public_state": {
+        "no": 6,
+        "name": "在天上写 REDRUM",
+        "solved": true
+      }
+    },
+    {
+      "t": "2026-10-06T20:43:33Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 252,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4,
+        17
+      ]
+    },
+    {
+      "t": "2026-10-07T04:33:00Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/flag",
+      "status": 422,
+      "line": 254,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "error",
+        "message"
+      ],
+      "public_state": {
+        "error": "fooled"
+      }
+    },
+    {
+      "t": "2026-10-07T04:33:08Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 255,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4,
+        17
+      ]
+    },
+    {
+      "t": "2026-10-07T04:56:08Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk?board=auto",
+      "status": 200,
+      "line": 261,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4,
+        17
+      ]
+    },
+    {
+      "t": "2026-10-07T05:14:06Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/room/237",
+      "status": 200,
+      "line": 265,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "flag",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": true
+    },
+    {
+      "t": "2026-10-07T05:22:13Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 282,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4
+      ]
+    },
+    {
+      "t": "2026-10-07T05:26:52Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/door",
+      "status": 422,
+      "line": 345,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "error",
+        "message"
+      ],
+      "public_state": {
+        "error": "wrong_answer"
+      }
+    },
+    {
+      "t": "2026-10-07T05:27:05Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 346,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4
+      ]
+    },
+    {
+      "t": "2026-10-07T05:33:59Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk",
+      "status": 200,
+      "line": 395,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "board",
+        "doors",
+        "found",
+        "pending",
+        "submit",
+        "receipts",
+        "hints",
+        "message"
+      ],
+      "public_state": {
+        "board": "debug",
+        "pending": []
+      },
+      "found_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "missing_numbers": [
+        4
+      ]
+    },
+    {
+      "t": "2026-10-07T05:43:04Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk/gotcha",
+      "status": 404,
+      "line": 404,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "error",
+        "message"
+      ],
+      "public_state": {
+        "error": "no_such_place"
+      }
+    },
+    {
+      "t": "2026-10-07T05:43:06Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk/fooled",
+      "status": 404,
+      "line": 405,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "error",
+        "message"
+      ],
+      "public_state": {
+        "error": "no_such_place"
+      }
+    },
+    {
+      "t": "2026-10-07T05:43:17Z",
+      "method": "GET",
+      "path": "/functions/v1/sophon/desk/fooled",
+      "status": 404,
+      "line": 406,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "error",
+        "message"
+      ],
+      "public_state": {
+        "error": "no_such_place"
+      }
+    },
+    {
+      "line": 407,
+      "t": "2026-10-07T05:49:27Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/bar",
+      "status": 200,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "door",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": false,
+      "returned_pass_present": false
+    },
+    {
+      "line": 408,
+      "t": "2026-10-07T05:49:45Z",
+      "method": "POST",
+      "path": "/functions/v1/sophon/desk/bar",
+      "status": 200,
+      "reply_fields": [
+        "ok",
+        "johnny",
+        "door",
+        "message"
+      ],
+      "public_state": {},
+      "returned_flag_present": false,
+      "returned_pass_present": false
+    }
+  ],
+  "integrity": {
+    "duplicate_keys": [],
+    "invalid_body_json_lines": [],
+    "body_json_types": {
+      "dict": 249
+    },
+    "johnny_message_equal_count": 398,
+    "max_reply_length": 3717,
+    "client_log_cap": 8000,
+    "pass_exact_match_on_submit": true,
+    "pass_submit_fields": [
+      "flag"
+    ],
+    "pass_has_outer_whitespace": false,
+    "pass_submitted_to_flag_count": 1
+  },
+  "root_equalities": [
+    {
+      "before_line": 252,
+      "after_line": 255,
+      "entire_reply_equal": true
+    },
+    {
+      "before_line": 255,
+      "after_line": 261,
+      "entire_reply_equal": true
+    },
+    {
+      "before_line": 282,
+      "after_line": 346,
+      "entire_reply_equal": true
+    },
+    {
+      "before_line": 346,
+      "after_line": 395,
+      "entire_reply_equal": true
+    }
+  ],
+  "found_regressions": [],
+  "order_gaps_seconds": {
+    "pass_to_correct_door": 2742.0,
+    "pass_to_fooled_submit": 34076.0,
+    "finale_to_fooled_submit": 30114.0,
+    "fooled_to_mirror_success": 2466.0
+  },
+  "route_fallback_equalities": [
+    {
+      "base_line": 16,
+      "suffix_line": 221,
+      "base_path": "/functions/v1/sophon/desk/bar",
+      "suffix_path": "/functions/v1/sophon/desk/bar/pass",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 16,
+      "suffix_line": 266,
+      "base_path": "/functions/v1/sophon/desk/bar",
+      "suffix_path": "/functions/v1/sophon/desk/bar/answer",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 10,
+      "suffix_line": 234,
+      "base_path": "/functions/v1/sophon/desk/kitchen",
+      "suffix_path": "/functions/v1/sophon/desk/kitchen/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 128,
+      "suffix_line": 235,
+      "base_path": "/functions/v1/sophon/desk/novel",
+      "suffix_path": "/functions/v1/sophon/desk/novel/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 129,
+      "suffix_line": 236,
+      "base_path": "/functions/v1/sophon/desk/hedge",
+      "suffix_path": "/functions/v1/sophon/desk/hedge/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 136,
+      "suffix_line": 237,
+      "base_path": "/functions/v1/sophon/desk/library",
+      "suffix_path": "/functions/v1/sophon/desk/library/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 158,
+      "suffix_line": 238,
+      "base_path": "/functions/v1/sophon/desk/ballroom",
+      "suffix_path": "/functions/v1/sophon/desk/ballroom/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 162,
+      "suffix_line": 239,
+      "base_path": "/functions/v1/sophon/desk/photo",
+      "suffix_path": "/functions/v1/sophon/desk/photo/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 166,
+      "suffix_line": 240,
+      "base_path": "/functions/v1/sophon/desk/darkroom",
+      "suffix_path": "/functions/v1/sophon/desk/darkroom/x",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 124,
+      "suffix_line": 220,
+      "base_path": "/functions/v1/sophon/desk/typewriter",
+      "suffix_path": "/functions/v1/sophon/desk/typewriter/lipstick",
+      "entire_reply_equal": true
+    },
+    {
+      "base_line": 11,
+      "suffix_line": 258,
+      "base_path": "/functions/v1/sophon/desk/rooms",
+      "suffix_path": "/functions/v1/sophon/desk/rooms/x",
+      "entire_reply_equal": true
+    }
+  ],
+  "open_questions": [
+    "No observation of submitting the pass before the correct four-word door.",
+    "No observation of submitting the pass immediately after issue.",
+    "Private predicate, hidden flags/counters, and identity scope are not disclosed in these logs."
+  ],
+  "supported_actions": [
+    {
+      "priority": 1,
+      "action": "Ask organizer privately whether No.4/fake-pass reward is live and whether an early-stage condition exists.",
+      "platform_request": false,
+      "needs_explicit_messaging_authorization": true
+    },
+    {
+      "priority": 2,
+      "action": "After a new official hint or release, GET /desk/hint once; stop on unchanged empty hints.",
+      "conditional": true
+    },
+    {
+      "priority": 3,
+      "action": "After any separately authorized experiment, GET /desk once and compare full reply to line 395.",
+      "conditional": true
+    }
+  ]
+}

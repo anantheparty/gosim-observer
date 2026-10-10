@@ -21,6 +21,7 @@
   运行输出、生成的世界数据（约 250 MB）、线上下载结果和任何凭据都不进入仓库。
 - `evidence/`：各版本的提交说明（c18–c48，共 25 份）。
 - `FINAL_RESULTS_ZH.md`、`final_analysis/`、`figures/`：隐藏卡决赛复盘、脚本和图。
+- `sophon_ctf/`：Sophon 彩蛋（Johnny 的前台，不计奖）的解题记录、工具和探测包源码，22 题解出 21 题。
 
 ## 0. 隐藏卡决赛
 

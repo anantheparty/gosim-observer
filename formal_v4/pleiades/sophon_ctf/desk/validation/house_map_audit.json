@@ -1,0 +1,154 @@
+{
+  "source": "work/sophon_desk/house_map.jsonl",
+  "sha256": "96bce8643caf175a2ed8303a6c1af3b5184d4ec1a17d9b086bd1ba95c41469ee",
+  "records": 124,
+  "statuses": {
+    "200": 124
+  },
+  "root": "c5fe27d",
+  "unique_rooms": 123,
+  "duplicates": [
+    {
+      "room": "c5fe27xe2",
+      "lines": [
+        122,
+        123
+      ]
+    }
+  ],
+  "changed_door_snapshots": [],
+  "directed_doors": 278,
+  "unread_targets": [],
+  "reachable_rooms": 123,
+  "unreachable_rooms": [],
+  "nonreciprocal_doors": [],
+  "door_types": {
+    "a crack in the wall": 20,
+    "a low arch": 20,
+    "a spiral staircase": 18,
+    "ahead": 22,
+    "back": 26,
+    "left": 17,
+    "right": 13,
+    "service corridor": 17,
+    "stairs down": 19,
+    "stairs up": 14,
+    "the closet": 25,
+    "the far door": 17,
+    "the long hallway": 24,
+    "the red door": 26
+  },
+  "bfs_discovery_door_types": {
+    "a crack in the wall": 9,
+    "a low arch": 11,
+    "a spiral staircase": 6,
+    "ahead": 8,
+    "back": 10,
+    "left": 5,
+    "right": 7,
+    "service corridor": 7,
+    "stairs down": 7,
+    "stairs up": 8,
+    "the closet": 10,
+    "the far door": 5,
+    "the long hallway": 14,
+    "the red door": 15
+  },
+  "special_rooms": [
+    {
+      "room": "c5fe27jip6",
+      "line": 120,
+      "kind": "note",
+      "path": [
+        {
+          "from": "c5fe27d",
+          "door": "ahead",
+          "to": "c5fe2764c"
+        },
+        {
+          "from": "c5fe2764c",
+          "door": "the long hallway",
+          "to": "c5fe27c8b"
+        },
+        {
+          "from": "c5fe27c8b",
+          "door": "the red door",
+          "to": "c5fe277t33"
+        },
+        {
+          "from": "c5fe277t33",
+          "door": "right",
+          "to": "c5fe27deq6"
+        },
+        {
+          "from": "c5fe27deq6",
+          "door": "the far door",
+          "to": "c5fe27galp"
+        },
+        {
+          "from": "c5fe27galp",
+          "door": "the long hallway",
+          "to": "c5fe27jip6"
+        }
+      ]
+    },
+    {
+      "room": "c5fe27xe3",
+      "line": 124,
+      "kind": "flag",
+      "path": [
+        {
+          "from": "c5fe27d",
+          "door": "ahead",
+          "to": "c5fe2764c"
+        },
+        {
+          "from": "c5fe2764c",
+          "door": "the long hallway",
+          "to": "c5fe27c8b"
+        },
+        {
+          "from": "c5fe27c8b",
+          "door": "right",
+          "to": "c5fe2710o7"
+        },
+        {
+          "from": "c5fe2710o7",
+          "door": "ahead",
+          "to": "c5fe271v82"
+        },
+        {
+          "from": "c5fe271v82",
+          "door": "ahead",
+          "to": "c5fe273e7t"
+        },
+        {
+          "from": "c5fe273e7t",
+          "door": "right",
+          "to": "c5fe274evn"
+        },
+        {
+          "from": "c5fe274evn",
+          "door": "ahead",
+          "to": "c5fe279i6t"
+        },
+        {
+          "from": "c5fe279i6t",
+          "door": "a crack in the wall",
+          "to": "c5fe27xe1"
+        },
+        {
+          "from": "c5fe27xe1",
+          "door": "the red door",
+          "to": "c5fe27xe2"
+        },
+        {
+          "from": "c5fe27xe2",
+          "door": "left",
+          "to": "c5fe27xe3"
+        }
+      ]
+    }
+  ],
+  "scope": "Snapshot graph coverage, not evidence that every directed edge was traversed; applies only to this saved instance."
+}

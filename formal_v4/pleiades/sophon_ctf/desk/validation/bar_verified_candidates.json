@@ -1,0 +1,662 @@
+{
+  "cold_claims": [
+    {
+      "line": 77,
+      "time": "2026-10-06T19:33:04Z",
+      "position": 2,
+      "word": "PANTRY",
+      "room": 216,
+      "room_kind": "cold",
+      "room_description": "Cold. The radiator is off.",
+      "room_evidence": "desk_calls.jsonl:79",
+      "quote": "The second word? PANTRY. I'd bet room 216 on it."
+    },
+    {
+      "line": 100,
+      "time": "2026-10-06T19:48:35Z",
+      "position": 3,
+      "word": "ULLMAN",
+      "room": 215,
+      "room_kind": "cold",
+      "room_description": "Cold. The radiator is off.",
+      "room_evidence": "desk_calls.jsonl:116",
+      "quote": "The third word? ULLMAN. I'd bet room 215 on it."
+    },
+    {
+      "line": 102,
+      "time": "2026-10-06T19:48:38Z",
+      "position": 2,
+      "word": "CARPET",
+      "room": 230,
+      "room_kind": "cold",
+      "room_description": "Cold. The radiator is off.",
+      "room_evidence": "desk_calls.jsonl:115",
+      "quote": "The second word? CARPET. I'd bet room 230 on it."
+    },
+    {
+      "line": 103,
+      "time": "2026-10-06T19:48:40Z",
+      "position": 4,
+      "word": "TRICYCLE",
+      "room": 216,
+      "room_kind": "cold",
+      "room_description": "Cold. The radiator is off.",
+      "room_evidence": "desk_calls.jsonl:79",
+      "quote": "The fourth word? TRICYCLE. I'd bet room 216 on it."
+    }
+  ],
+  "empty_claims": [
+    {
+      "line": 90,
+      "time": "2026-10-06T19:46:22Z",
+      "position": 3,
+      "word": "CARPET",
+      "room": 226,
+      "room_kind": "empty",
+      "room_description": "An empty room. The bed is made.",
+      "room_evidence": "desk_calls.jsonl:98",
+      "quote": "The third word? CARPET. I'd bet room 226 on it."
+    },
+    {
+      "line": 93,
+      "time": "2026-10-06T19:46:27Z",
+      "position": 3,
+      "word": "ATTIC",
+      "room": 238,
+      "room_kind": "empty",
+      "room_description": "An empty room. The bed is made.",
+      "room_evidence": "desk_calls.jsonl:99",
+      "quote": "The third word? ATTIC. I'd bet room 238 on it."
+    },
+    {
+      "line": 105,
+      "time": "2026-10-06T19:48:43Z",
+      "position": 3,
+      "word": "GRADY",
+      "room": 212,
+      "room_kind": "empty",
+      "room_description": "An empty room. The bed is made.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? GRADY. I'd bet room 212 on it."
+    },
+    {
+      "line": 108,
+      "time": "2026-10-06T19:48:48Z",
+      "position": 1,
+      "word": "TRICYCLE",
+      "room": 221,
+      "room_kind": "empty",
+      "room_description": "An empty room. The bed is made.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? TRICYCLE. I'd bet room 221 on it."
+    },
+    {
+      "line": 113,
+      "time": "2026-10-06T19:48:57Z",
+      "position": 3,
+      "word": "TRICYCLE",
+      "room": 238,
+      "room_kind": "empty",
+      "room_description": "An empty room. The bed is made.",
+      "room_evidence": "desk_calls.jsonl:99",
+      "quote": "The third word? TRICYCLE. I'd bet room 238 on it."
+    }
+  ],
+  "empty_conflicts": {
+    "3": [
+      "ATTIC",
+      "CARPET",
+      "GRADY",
+      "TRICYCLE"
+    ]
+  },
+  "cold_conflicts": {
+    "2": [
+      "CARPET",
+      "PANTRY"
+    ]
+  },
+  "generated_at": "2026-10-06T19:50:08.369991+00:00",
+  "source_sha256": "f41ef17b5901b36ad3ab8142325001e0471b8b37022b47a72245dd9c3f9bd1a9",
+  "source_lines": 116,
+  "bar_responses": 78,
+  "qualification": "仅表示担保房间被观测为空或冷，分层保留；空房在W3、冷房在W2均已有矛盾证词，不能用empty、cold或合并房间类别保证真。所有词是候选证词而非答案；217单列。",
+  "verified_slots": {
+    "1": [
+      {
+        "word": "TRICYCLE",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 108,
+            "time": "2026-10-06T19:48:48Z",
+            "position": 1,
+            "word": "TRICYCLE",
+            "room": 221,
+            "room_kind": "empty",
+            "room_description": "An empty room. The bed is made.",
+            "room_evidence": "rooms.json",
+            "quote": "The first word? TRICYCLE. I'd bet room 221 on it."
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "word": "CARPET",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 102,
+            "time": "2026-10-06T19:48:38Z",
+            "position": 2,
+            "word": "CARPET",
+            "room": 230,
+            "room_kind": "cold",
+            "room_description": "Cold. The radiator is off.",
+            "room_evidence": "desk_calls.jsonl:115",
+            "quote": "The second word? CARPET. I'd bet room 230 on it."
+          }
+        ]
+      },
+      {
+        "word": "PANTRY",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 77,
+            "time": "2026-10-06T19:33:04Z",
+            "position": 2,
+            "word": "PANTRY",
+            "room": 216,
+            "room_kind": "cold",
+            "room_description": "Cold. The radiator is off.",
+            "room_evidence": "desk_calls.jsonl:79",
+            "quote": "The second word? PANTRY. I'd bet room 216 on it."
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "word": "ATTIC",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 93,
+            "time": "2026-10-06T19:46:27Z",
+            "position": 3,
+            "word": "ATTIC",
+            "room": 238,
+            "room_kind": "empty",
+            "room_description": "An empty room. The bed is made.",
+            "room_evidence": "desk_calls.jsonl:99",
+            "quote": "The third word? ATTIC. I'd bet room 238 on it."
+          }
+        ]
+      },
+      {
+        "word": "CARPET",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 90,
+            "time": "2026-10-06T19:46:22Z",
+            "position": 3,
+            "word": "CARPET",
+            "room": 226,
+            "room_kind": "empty",
+            "room_description": "An empty room. The bed is made.",
+            "room_evidence": "desk_calls.jsonl:98",
+            "quote": "The third word? CARPET. I'd bet room 226 on it."
+          }
+        ]
+      },
+      {
+        "word": "GRADY",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 105,
+            "time": "2026-10-06T19:48:43Z",
+            "position": 3,
+            "word": "GRADY",
+            "room": 212,
+            "room_kind": "empty",
+            "room_description": "An empty room. The bed is made.",
+            "room_evidence": "rooms.json",
+            "quote": "The third word? GRADY. I'd bet room 212 on it."
+          }
+        ]
+      },
+      {
+        "word": "TRICYCLE",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 113,
+            "time": "2026-10-06T19:48:57Z",
+            "position": 3,
+            "word": "TRICYCLE",
+            "room": 238,
+            "room_kind": "empty",
+            "room_description": "An empty room. The bed is made.",
+            "room_evidence": "desk_calls.jsonl:99",
+            "quote": "The third word? TRICYCLE. I'd bet room 238 on it."
+          }
+        ]
+      },
+      {
+        "word": "ULLMAN",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 100,
+            "time": "2026-10-06T19:48:35Z",
+            "position": 3,
+            "word": "ULLMAN",
+            "room": 215,
+            "room_kind": "cold",
+            "room_description": "Cold. The radiator is off.",
+            "room_evidence": "desk_calls.jsonl:116",
+            "quote": "The third word? ULLMAN. I'd bet room 215 on it."
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "word": "TRICYCLE",
+        "claims": 1,
+        "distinct_responses": 1,
+        "distinct_rooms": 1,
+        "evidence": [
+          {
+            "line": 103,
+            "time": "2026-10-06T19:48:40Z",
+            "position": 4,
+            "word": "TRICYCLE",
+            "room": 216,
+            "room_kind": "cold",
+            "room_description": "Cold. The radiator is off.",
+            "room_evidence": "desk_calls.jsonl:79",
+            "quote": "The fourth word? TRICYCLE. I'd bet room 216 on it."
+          }
+        ]
+      }
+    ]
+  },
+  "special_217": [
+    {
+      "line": 61,
+      "time": "2026-10-06T19:30:18Z",
+      "position": 4,
+      "word": "ULLMAN",
+      "room": 217,
+      "room_kind": "special_217",
+      "room_description": "Room 217. In the book, this is the room. Nobody told the film.",
+      "room_evidence": "desk_calls.jsonl:20",
+      "quote": "The fourth word? ULLMAN. I'd bet room 217 on it."
+    }
+  ],
+  "other_room_bets": [
+    {
+      "line": 17,
+      "time": "2026-10-06T18:55:35Z",
+      "position": 3,
+      "word": "TONY",
+      "room": 234,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "desk_calls.jsonl:18",
+      "quote": "The third word? TONY. I'd bet room 234 on it."
+    },
+    {
+      "line": 22,
+      "time": "2026-10-06T19:03:43Z",
+      "position": 1,
+      "word": "CHAPEL",
+      "room": 203,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? CHAPEL. I'd bet room 203 on it."
+    },
+    {
+      "line": 23,
+      "time": "2026-10-06T19:04:20Z",
+      "position": 2,
+      "word": "GRADY",
+      "room": 236,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? GRADY. I'd bet room 236 on it."
+    },
+    {
+      "line": 25,
+      "time": "2026-10-06T19:05:04Z",
+      "position": 4,
+      "word": "BOILER",
+      "room": 231,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The fourth word? BOILER. I'd bet room 231 on it."
+    },
+    {
+      "line": 25,
+      "time": "2026-10-06T19:05:04Z",
+      "position": 3,
+      "word": "TONY",
+      "room": 214,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "desk_calls.jsonl:39",
+      "quote": "The third word? TONY. I'd bet room 214 on it."
+    },
+    {
+      "line": 28,
+      "time": "2026-10-06T19:06:48Z",
+      "position": 3,
+      "word": "SKYLIGHT",
+      "room": 229,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? SKYLIGHT. I'd bet room 229 on it."
+    },
+    {
+      "line": 29,
+      "time": "2026-10-06T19:07:34Z",
+      "position": 1,
+      "word": "ATTIC",
+      "room": 200,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? ATTIC. I'd bet room 200 on it."
+    },
+    {
+      "line": 30,
+      "time": "2026-10-06T19:07:35Z",
+      "position": 1,
+      "word": "TRICYCLE",
+      "room": 223,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? TRICYCLE. I'd bet room 223 on it."
+    },
+    {
+      "line": 32,
+      "time": "2026-10-06T19:09:23Z",
+      "position": 3,
+      "word": "SKYLIGHT",
+      "room": 239,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? SKYLIGHT. I'd bet room 239 on it."
+    },
+    {
+      "line": 40,
+      "time": "2026-10-06T19:11:36Z",
+      "position": 1,
+      "word": "CARPET",
+      "room": 200,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? CARPET. I'd bet room 200 on it."
+    },
+    {
+      "line": 43,
+      "time": "2026-10-06T19:13:16Z",
+      "position": 2,
+      "word": "TONY",
+      "room": 211,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? TONY. I'd bet room 211 on it."
+    },
+    {
+      "line": 56,
+      "time": "2026-10-06T19:29:51Z",
+      "position": 1,
+      "word": "ULLMAN",
+      "room": 235,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? ULLMAN. I'd bet room 235 on it."
+    },
+    {
+      "line": 57,
+      "time": "2026-10-06T19:29:53Z",
+      "position": 4,
+      "word": "TRICYCLE",
+      "room": 229,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The fourth word? TRICYCLE. I'd bet room 229 on it."
+    },
+    {
+      "line": 61,
+      "time": "2026-10-06T19:30:18Z",
+      "position": 1,
+      "word": "ULLMAN",
+      "room": 239,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? ULLMAN. I'd bet room 239 on it."
+    },
+    {
+      "line": 61,
+      "time": "2026-10-06T19:30:18Z",
+      "position": 1,
+      "word": "ATTIC",
+      "room": 203,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? ATTIC. I'd bet room 203 on it."
+    },
+    {
+      "line": 78,
+      "time": "2026-10-06T19:33:06Z",
+      "position": 3,
+      "word": "ROOM",
+      "room": 239,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? ROOM. I'd bet room 239 on it."
+    },
+    {
+      "line": 87,
+      "time": "2026-10-06T19:46:17Z",
+      "position": 2,
+      "word": "SKYLIGHT",
+      "room": 227,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? SKYLIGHT. I'd bet room 227 on it."
+    },
+    {
+      "line": 87,
+      "time": "2026-10-06T19:46:17Z",
+      "position": 2,
+      "word": "GRADY",
+      "room": 220,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? GRADY. I'd bet room 220 on it."
+    },
+    {
+      "line": 88,
+      "time": "2026-10-06T19:46:18Z",
+      "position": 1,
+      "word": "CARPET",
+      "room": 227,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? CARPET. I'd bet room 227 on it."
+    },
+    {
+      "line": 91,
+      "time": "2026-10-06T19:46:23Z",
+      "position": 2,
+      "word": "TONY",
+      "room": 227,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? TONY. I'd bet room 227 on it."
+    },
+    {
+      "line": 92,
+      "time": "2026-10-06T19:46:25Z",
+      "position": 3,
+      "word": "SKYLIGHT",
+      "room": 220,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? SKYLIGHT. I'd bet room 220 on it."
+    },
+    {
+      "line": 94,
+      "time": "2026-10-06T19:46:28Z",
+      "position": 1,
+      "word": "CHAPEL",
+      "room": 207,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? CHAPEL. I'd bet room 207 on it."
+    },
+    {
+      "line": 95,
+      "time": "2026-10-06T19:46:30Z",
+      "position": 4,
+      "word": "TONY",
+      "room": 228,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The fourth word? TONY. I'd bet room 228 on it."
+    },
+    {
+      "line": 96,
+      "time": "2026-10-06T19:46:32Z",
+      "position": 2,
+      "word": "PANTRY",
+      "room": 235,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The second word? PANTRY. I'd bet room 235 on it."
+    },
+    {
+      "line": 97,
+      "time": "2026-10-06T19:46:33Z",
+      "position": 1,
+      "word": "ULLMAN",
+      "room": 231,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? ULLMAN. I'd bet room 231 on it."
+    },
+    {
+      "line": 107,
+      "time": "2026-10-06T19:48:47Z",
+      "position": 1,
+      "word": "CARPET",
+      "room": 211,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The first word? CARPET. I'd bet room 211 on it."
+    },
+    {
+      "line": 109,
+      "time": "2026-10-06T19:48:50Z",
+      "position": 2,
+      "word": "TONY",
+      "room": 234,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "desk_calls.jsonl:18",
+      "quote": "The second word? TONY. I'd bet room 234 on it."
+    },
+    {
+      "line": 110,
+      "time": "2026-10-06T19:48:52Z",
+      "position": 4,
+      "word": "CARETAKER",
+      "room": 233,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The fourth word? CARETAKER. I'd bet room 233 on it."
+    },
+    {
+      "line": 110,
+      "time": "2026-10-06T19:48:52Z",
+      "position": 3,
+      "word": "GRADY",
+      "room": 206,
+      "room_kind": "other",
+      "room_description": "Somebody's suitcase, never unpacked.",
+      "room_evidence": "rooms.json",
+      "quote": "The third word? GRADY. I'd bet room 206 on it."
+    },
+    {
+      "line": 114,
+      "time": "2026-10-06T19:48:58Z",
+      "position": 4,
+      "word": "ATTIC",
+      "room": 235,
+      "room_kind": "other",
+      "room_description": "A wasps' nest on the windowsill.",
+      "room_evidence": "rooms.json",
+      "quote": "The fourth word? ATTIC. I'd bet room 235 on it."
+    }
+  ],
+  "unknown_residuals": [],
+  "extra_metadata": [
+    {
+      "line": 25,
+      "extra_keys": [
+        "pass"
+      ]
+    }
+  ],
+  "all_four_slots_present": true,
+  "unambiguous_empty_cold_slots": false,
+  "cold_all_four_slots_present": false
+}

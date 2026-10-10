@@ -1,0 +1,80 @@
+{
+  "accounted_wallclock_seconds": 0.003,
+  "agent_wallclock_seconds": 0.003,
+  "committed_action_count": 1427,
+  "decision_requests": 3,
+  "fair_clock": {
+    "budget_seconds": 5.0,
+    "charged_seconds": 0.003,
+    "cpu_meter": "none",
+    "cpu_seconds": 0.003,
+    "hard_cap_reached": false,
+    "hard_cap_seconds": 10.0,
+    "mode": "cpu",
+    "run_wall_seconds": 0.033,
+    "schema_version": "fair-clock-v1",
+    "speed_factor": 1.0049,
+    "speed_factor_max": 1.0049,
+    "speed_factor_min": 1.0049,
+    "speed_samples": 1,
+    "wait_seconds": 0.0,
+    "window_seconds": 0.003
+  },
+  "global_wallclock_seconds": 5.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 3,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "sophon-local",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {},
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -10000.0,
+      "sum_best_scores": 0,
+      "uniformity_penalty": -200.0
+    },
+    "counts": {
+      "decisions": 1427,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 0,
+      "observe_actions": 1,
+      "required_missing": 200,
+      "targets_observed": 0
+    },
+    "invalidations": [],
+    "observation_requests": [],
+    "scenario": "sophon-local",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "d9870ddce4844ed3553944a0738647f9482bbf9a4e348a319d1f34f9261e0db6",
+      "messages": "43870f1c7e5ff50d459d4f75c71cbf3395c27044befdc02040e21e4da9f94b6b",
+      "observations": "b73414b2c006969ad5d6ff5df23666e573786008ca1f1f7959fc3ac98df99c2f",
+      "scenario": "35da6b6d467631dbafd8db8433df63a85f2fe309a6327de99f5cdf6bd191478d"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": -10200.0,
+    "uniformity_bands": {
+      "ra_30_40": 0.0,
+      "ra_310_320": 0.0,
+      "ra_320_330": 0.0,
+      "ra_330_340": 0.0,
+      "ra_340_350": 0.0,
+      "ra_350_360": 0.0,
+      "ra_40_50": 0.0,
+      "ra_50_60": 0.0,
+      "ra_60_70": 0.0,
+      "ra_70_80": 0.0,
+      "ra_80_90": 0.0
+    }
+  },
+  "speed_factor": 1.0049,
+  "termination_detail": "",
+  "termination_reason": "survey_complete"
+}

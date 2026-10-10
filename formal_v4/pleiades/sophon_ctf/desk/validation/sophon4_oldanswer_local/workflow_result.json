@@ -1,0 +1,86 @@
+{
+  "accounted_wallclock_seconds": 0.298,
+  "agent_wallclock_seconds": 0.33,
+  "committed_action_count": 1428,
+  "decision_requests": 5,
+  "fair_clock": {
+    "budget_seconds": 900.0,
+    "charged_seconds": 0.298,
+    "cpu_meter": "cpu",
+    "cpu_seconds": 0.319,
+    "hard_cap_reached": false,
+    "hard_cap_seconds": 1800.0,
+    "mode": "cpu",
+    "run_wall_seconds": 0.376,
+    "schema_version": "fair-clock-v1",
+    "speed_factor": 1.0713,
+    "speed_factor_max": 1.0713,
+    "speed_factor_min": 1.0713,
+    "speed_samples": 1,
+    "wait_seconds": 0.011,
+    "window_seconds": 0.33
+  },
+  "global_wallclock_seconds": 900.0,
+  "ignored_in_flight_response": false,
+  "last_decision_sequence": 5,
+  "protocol_version": "participant-agent-protocol-v4",
+  "scenario": "sophon-local",
+  "schema_version": "v4-workflow-result-v1",
+  "score_report": {
+    "by_class": {
+      "BGS": 2.7,
+      "ELG": 9.573846,
+      "LRG": 3.588374,
+      "QSO": 1.733792,
+      "Star": 0.72
+    },
+    "components": {
+      "observation_request_reward": 0,
+      "report_settlement": 0.0,
+      "required_penalty": -10000.0,
+      "sum_best_scores": 18.316012,
+      "uniformity_penalty": -145.900808
+    },
+    "counts": {
+      "decisions": 1428,
+      "invalidated_observations": 0,
+      "observation_requests_completed": 0,
+      "observation_requests_issued": 0,
+      "observations": 39,
+      "observe_actions": 3,
+      "required_missing": 200,
+      "targets_observed": 34
+    },
+    "invalidations": [],
+    "observation_requests": [],
+    "scenario": "sophon-local",
+    "schema_version": "v4-score-report-v1",
+    "sha256": {
+      "decisions": "872a25c7f9d15da6cf42fd4c4e15721b4e04ae6eaf44552d37de70b43d3dd1a5",
+      "messages": "43870f1c7e5ff50d459d4f75c71cbf3395c27044befdc02040e21e4da9f94b6b",
+      "observations": "47cfba0928a5e2217c2d3b7d7e796028420368f3ce9c2f8ca4fce3007b307bcf",
+      "scenario": "35da6b6d467631dbafd8db8433df63a85f2fe309a6327de99f5cdf6bd191478d"
+    },
+    "termination": {
+      "detail": "",
+      "reason": "survey_complete"
+    },
+    "total": -10127.584796,
+    "uniformity_bands": {
+      "ra_30_40": 0.0,
+      "ra_310_320": 0.0,
+      "ra_320_330": 0.011364,
+      "ra_330_340": 0.0,
+      "ra_340_350": 0.009245,
+      "ra_350_360": 0.009662,
+      "ra_40_50": 0.0,
+      "ra_50_60": 0.0,
+      "ra_60_70": 0.0,
+      "ra_70_80": 0.0,
+      "ra_80_90": 0.0
+    }
+  },
+  "speed_factor": 1.0713,
+  "termination_detail": "",
+  "termination_reason": "survey_complete"
+}

@@ -1,0 +1,233 @@
+{
+  "hypothesis": "20 symbols of 5 bits encode four 5x5 glyphs",
+  "source": "desk_calls.jsonl L25 reply.pass; online observed THESHINING glyphs",
+  "font": {
+    "T": [
+      "#####",
+      "..#..",
+      "..#..",
+      "..#..",
+      "..#.."
+    ],
+    "H": [
+      "#...#",
+      "#...#",
+      "#####",
+      "#...#",
+      "#...#"
+    ],
+    "E": [
+      "#####",
+      "#....",
+      "####.",
+      "#....",
+      "#####"
+    ],
+    "S": [
+      ".####",
+      "#....",
+      ".###.",
+      "....#",
+      "####."
+    ],
+    "I": [
+      "#####",
+      "..#..",
+      "..#..",
+      "..#..",
+      "#####"
+    ],
+    "N": [
+      "#...#",
+      "##..#",
+      "#.#.#",
+      "#..##",
+      "#...#"
+    ],
+    "G": [
+      ".####",
+      "#....",
+      "#.###",
+      "#...#",
+      ".###."
+    ]
+  },
+  "symbol_multiplicities": [
+    3,
+    3,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "tested": 2048,
+  "positive_controls": 4,
+  "max_exact_observed_glyphs_in_one_decode": 0,
+  "fully_readable": [],
+  "examples": [
+    {
+      "alphabet": "public_invite_alphabet",
+      "layout": "consecutive",
+      "offset": 0,
+      "rotation": 0,
+      "mirror": false,
+      "invert": false,
+      "exact_observed_glyphs": "????",
+      "tiles": [
+        [
+          "#....",
+          "#.#..",
+          "##..#",
+          ".....",
+          "##.#."
+        ],
+        [
+          "#....",
+          ".##.#",
+          ".##..",
+          "#.#..",
+          ".#..#"
+        ],
+        [
+          ".###.",
+          "##.#.",
+          "...##",
+          ".###.",
+          "#####"
+        ],
+        [
+          "#..#.",
+          "#..##",
+          "#....",
+          "##..#",
+          "##.#."
+        ]
+      ]
+    },
+    {
+      "alphabet": "public_invite_alphabet",
+      "layout": "consecutive",
+      "offset": 0,
+      "rotation": 0,
+      "mirror": false,
+      "invert": true,
+      "exact_observed_glyphs": "????",
+      "tiles": [
+        [
+          ".####",
+          ".#.##",
+          "..##.",
+          "#####",
+          "..#.#"
+        ],
+        [
+          ".####",
+          "#..#.",
+          "#..##",
+          ".#.##",
+          "#.##."
+        ],
+        [
+          "#...#",
+          "..#.#",
+          "###..",
+          "#...#",
+          "....."
+        ],
+        [
+          ".##.#",
+          ".##..",
+          ".####",
+          "..##.",
+          "..#.#"
+        ]
+      ]
+    },
+    {
+      "alphabet": "public_invite_alphabet",
+      "layout": "consecutive",
+      "offset": 0,
+      "rotation": 0,
+      "mirror": true,
+      "invert": false,
+      "exact_observed_glyphs": "????",
+      "tiles": [
+        [
+          "....#",
+          "..#.#",
+          "#..##",
+          ".....",
+          ".#.##"
+        ],
+        [
+          "....#",
+          "#.##.",
+          "..##.",
+          "..#.#",
+          "#..#."
+        ],
+        [
+          ".###.",
+          ".#.##",
+          "##...",
+          ".###.",
+          "#####"
+        ],
+        [
+          ".#..#",
+          "##..#",
+          "....#",
+          "#..##",
+          ".#.##"
+        ]
+      ]
+    },
+    {
+      "alphabet": "public_invite_alphabet",
+      "layout": "consecutive",
+      "offset": 0,
+      "rotation": 0,
+      "mirror": true,
+      "invert": true,
+      "exact_observed_glyphs": "????",
+      "tiles": [
+        [
+          "####.",
+          "##.#.",
+          ".##..",
+          "#####",
+          "#.#.."
+        ],
+        [
+          "####.",
+          ".#..#",
+          "##..#",
+          "##.#.",
+          ".##.#"
+        ],
+        [
+          "#...#",
+          "#.#..",
+          "..###",
+          "#...#",
+          "....."
+        ],
+        [
+          "#.##.",
+          "..##.",
+          "####.",
+          ".##..",
+          "#.#.."
+        ]
+      ]
+    }
+  ],
+  "limit": "No inference about unknown alphabets, fonts, arbitrary permutations, or cryptographic encodings."
+}

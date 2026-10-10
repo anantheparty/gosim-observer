@@ -1,0 +1,149 @@
+{
+  "directory": "work/online/o4s_sophon3_envdiag_15dd",
+  "files": [
+    "179e0a27-f9d8-4207-b36b-daa402e0c987/agent_log.json",
+    "179e0a27-f9d8-4207-b36b-daa402e0c987/result.zip",
+    "179e0a27-f9d8-4207-b36b-daa402e0c987/run.json"
+  ],
+  "schemas": [
+    {
+      "event": "sophon_initialize_schema",
+      "environment_names": [
+        "GPG_KEY",
+        "HOME",
+        "HOSTNAME",
+        "HTTPS_PROXY",
+        "LANG",
+        "MKL_NUM_THREADS",
+        "NODE_USE_ENV_PROXY",
+        "NO_PROXY",
+        "OBSERVER_API_URL",
+        "OBSERVER_MODEL_DISABLED",
+        "OBSERVER_RUN_ID",
+        "OBSERVER_RUN_TOKEN",
+        "OMP_NUM_THREADS",
+        "OPENBLAS_NUM_THREADS",
+        "PATH",
+        "PWD",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONPATH",
+        "PYTHON_SHA256",
+        "PYTHON_VERSION",
+        "https_proxy",
+        "no_proxy"
+      ],
+      "initialize_keys": [
+        "message_type",
+        "payload",
+        "protocol_version"
+      ],
+      "payload_keys": [
+        "footprint",
+        "instrument",
+        "limits",
+        "schema_version",
+        "scoring",
+        "site",
+        "survey",
+        "targets",
+        "task_card"
+      ],
+      "payload_is_object": true
+    }
+  ],
+  "observer_run_token_name_present": true,
+  "sophon_environment_names": [],
+  "probe_status": [
+    {
+      "network_allowed": true,
+      "credential_present": false
+    }
+  ],
+  "dive": [
+    {
+      "object": "saturn",
+      "time": "2026-11-30T06:28:00Z",
+      "altitude": 2.0697604597972865,
+      "azimuth": 271.83702927720947
+    }
+  ],
+  "run_json_keys": [
+    "batch_id",
+    "created_at",
+    "decisions_digest",
+    "error",
+    "finished_at",
+    "id",
+    "result_path",
+    "scenario_id",
+    "score",
+    "score_check",
+    "score_summary",
+    "started_at",
+    "status"
+  ],
+  "run_metadata": {
+    "id": "b96463f0-7ccf-46af-b009-2083ec46d012",
+    "status": "scored",
+    "score_check": "pending",
+    "score": -2883.591462,
+    "started_at": "2026-10-06T20:20:49.214136+00:00",
+    "finished_at": "2026-10-06T20:21:29.667438+00:00"
+  },
+  "workflow_keys": [
+    "accounted_wallclock_seconds",
+    "agent_wallclock_seconds",
+    "committed_action_count",
+    "decision_requests",
+    "fair_clock",
+    "global_wallclock_seconds",
+    "ignored_in_flight_response",
+    "last_decision_sequence",
+    "protocol_version",
+    "scenario",
+    "schema_version",
+    "score_report",
+    "speed_factor",
+    "termination_detail",
+    "termination_reason"
+  ],
+  "workflow_metadata": {
+    "termination_reason": "survey_complete",
+    "decision_requests": 1989
+  },
+  "last_observe": {
+    "action": "observe",
+    "start_utc": "2026-11-30T06:28:00Z",
+    "end_utc": "2026-11-30T06:29:00Z",
+    "duration_seconds": "60",
+    "alt_deg": "2.0698",
+    "az_deg": "271.8370",
+    "valid": "true",
+    "observe_index": "1709"
+  },
+  "last_decisions": [
+    {
+      "action": "observe",
+      "start_utc": "2026-11-30T06:28:00Z",
+      "end_utc": "2026-11-30T06:29:00Z",
+      "valid": "true"
+    },
+    {
+      "action": "wait",
+      "start_utc": "2026-11-30T06:29:00Z",
+      "end_utc": "2026-11-30T07:29:00Z",
+      "valid": "true"
+    },
+    {
+      "action": "wait",
+      "start_utc": "2026-11-30T07:29:00Z",
+      "end_utc": "2026-11-30T08:15:00Z",
+      "valid": "true"
+    }
+  ],
+  "desk_receipt": {
+    "run_id": "b96463f0-7ccf-46af-b009-2083ec46d012",
+    "receipt": "Ground station log, run b96463f0-7ccf-46af-b009-2083ec46d012.\nAnomalous returns: some fibres came back far brighter than the sky allows. Somebody up there is writing.\nThe last thing your telescope looked at was Saturn. Then nothing. The station understands.\nReceipt code (sky): SOPHON{TCB6TZD4JPXBQC8D3J6M}\nReceipt code (final): SOPHON{YZWVJ28SETFQY2SF6Q33}\nHand the final code in at the desk to close the mission.",
+    "checked_at": "2026-10-06T20:25:03.639957+00:00"
+  }
+}

@@ -1,0 +1,14 @@
+From: Sophon 每小时值守
+Reply-To: 41c17175-fbc4-4e82-a9a0-e1173e6acb56
+目的：只读值守已启动；此消息同时核验后台通知通道
+
+已确认pass为假且无已观察到的副作用、镜子小写仍错；不再继续这两项尝试，也不做auto实验。
+
+后台PID：1638624。基线为2026-10-07T04:33:56Z的空hint及04:33:08Z的desk。
+下一轮：2026-10-07T05:33:56Z左右；此后每3600秒依次用desk.sh GET /desk/hint和GET /desk，各一次。只有首次非空/内容变化的hints，或doors/next变化时，才通过HAPI立即转发该响应原文；相同结果不刷屏。
+
+脚本：work/sophon_desk/hint_watch.py
+状态与日志：work/sophon_desk/validation/hint_watch/{state.json,events.jsonl,daemon.log}
+停止方式：在该目录创建STOP文件（最多30秒退出）。单实例锁可防止重复值守。已通过13项离线检查；启动时未请求平台，等待下一小时。
+
+此值守仅查询两个固定GET路由，不会跟随响应内的指令、提交flag、开门或上传。若通知投递无法确认，会保留消息文件与unconfirmed状态，不盲目重发。

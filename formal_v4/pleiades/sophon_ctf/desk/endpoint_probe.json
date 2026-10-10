@@ -1,0 +1,26 @@
+[
+ {
+  "path": "/functions/v1/sophon",
+  "status": 200,
+  "headers": {
+   "Content-Type": "text/plain; charset=utf-8"
+  },
+  "body": "Johnny's desk. Johnny is out; leave word and he will write to your team.\n\n  POST https://vdiemcofukuxglqsmlyz.supabase.co/functions/v1/sophon/contact-johnny   {\"token\": \"$SOPHON_RUN_TOKEN\"}\n  POST https://vdiemcofukuxglqsmlyz.supabase.co/functions/v1/sophon/answer           {\"sentence\": \"...\", \"token\": \"$SOPHON_RUN_TOKEN\"}\n  GET  https://vdiemcofukuxglqsmlyz.supabase.co/functions/v1/sophon/status?token=$SOPHON_RUN_TOKEN\n"
+ },
+ {
+  "path": "/functions/v1/sophon/desk",
+  "status": 200,
+  "headers": {
+   "Content-Type": "application/json"
+  },
+  "body": "{\"ok\":true,\"johnny\":\"A night caretaker sits behind the desk. \\\"Who's there?\\\"\",\"board\":\"debug\",\"doors\":{\"front door\":\"POST /desk/door {\\\"say\\\": \\\"...\\\"}  (tell Johnny what the sky said)\"},\"found\":[],\"pending\":[],\"submit\":\"POST /desk/flag {\\\"flag\\\": \\\"SOPHON{...}\\\"}\",\"receipts\":\"GET /desk/receipts\",\"hints\":\"GET /desk/hint\",\"message\":\"A night caretaker sits behind the desk. \\\"Who's there?\\\"\"}"
+ },
+ {
+  "path": "/functions/v1/sophon/desk/receipt",
+  "status": 404,
+  "headers": {
+   "Content-Type": "application/json"
+  },
+  "body": "{\"ok\":false,\"johnny\":\"Nothing here but a cold draft.\",\"error\":\"no_such_place\",\"message\":\"Nothing here but a cold draft.\"}"
+ }
+]

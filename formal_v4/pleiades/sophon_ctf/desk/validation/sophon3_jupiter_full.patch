@@ -1,0 +1,21 @@
+--- o4s_sophon3/sophon_policy.py
++++ o4s_sophon3_jupiter_full/sophon_policy.py
+@@ -1,6 +1,6 @@
+ """Bounded coverage probe based on sophon2 geometry and fibre evidence.
+ 
+-Consumes public initialize/snapshots only. Finish after one deliberate planet exposure.
++Consumes public initialize/snapshots only. After the planet exposure, wait to season end.
+ """
+ import json
+ import math
+@@ -89,7 +89,9 @@
+         self.pending = None
+         if self.dove:
+             self.probe.final()
+-            return {'action': 'finish', 'reason': 'Final exposure was the deliberate planet dive.'}
++            # One wait-until is expanded inside the engine without further agent turns.
++            # This also drains the season after an early, budget-triggered dive.
++            return self.wait(self.end)
+         remaining = float((snap.get('wallclock') or {}).get('remaining_seconds', 900))
+         if remaining < 45 and not self.emergency:
+             self.emergency = True
