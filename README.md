@@ -1,7 +1,8 @@
-# Agent Observer — starter kit (challenge v3)
+# Pleiades 队 · Agentic Observer 实验仓库
 
 > **Pleiades 队**：这是我们参加 GOSIM 2026 Agentic Observer 时的实验仓库。参赛智能体（最终版本 c48）、各版本提交说明和决赛复盘在 [formal_v4/pleiades/](formal_v4/pleiades/README_ZH.md)。
 > 下文"不追求奖项、程序不使用大模型"是 2026-10-03 时的研究目标，后来改变了：最终版本在数值优化执行层之上，用大模型（DeepSeek）通读值班日志，由代码换算时刻并确认后报修。本页其余内容是 v3 入门套件和早期研究的记录。
+> 我们写的代码采用 MIT 许可证（[LICENSE](LICENSE)）；仓库里来自主办方的材料（v3 入门套件、官方示例、卡片与赛题数据等，见 [formal_v4/ATTRIBUTION.md](formal_v4/ATTRIBUTION.md)）仍按主办方的 CC BY-NC 4.0。
 
 ## 正式赛 v4（2026-10-03 核实）
 
