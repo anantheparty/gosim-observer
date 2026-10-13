@@ -1,0 +1,20 @@
+[package]
+name = "kern_rs"
+version = "0.1.0"
+edition = "2021"
+description = "Rust port of the Pleiades v4 observer field-evaluation kernel (agent/kern.c), same C ABI"
+license = "MIT"
+publish = false
+
+[lib]
+# libkern.so: the agent's loader (agent/policy.py, class Kernel) also looks for this name
+name = "kern"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

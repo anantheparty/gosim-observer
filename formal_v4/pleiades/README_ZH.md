@@ -22,6 +22,7 @@
 - `evidence/`：各版本的提交说明（c18–c48，共 25 份）。
 - `FINAL_RESULTS_ZH.md`、`final_analysis/`、`figures/`：隐藏卡决赛复盘、脚本和图。
 - `sophon_ctf/`：Sophon 彩蛋（Johnny 的前台，不计奖）的解题记录、工具和探测包源码，22 题解出 21 题。
+- `kern_rs/`：天区搜索内核的 Rust 版，赛后（10-13）从 `agent/kern.c` 移植。接口相同，可以直接替换；输出与 C 版逐位相同。决赛提交的 c48 用的是 C 内核。
 
 ## 0. 隐藏卡决赛
 
